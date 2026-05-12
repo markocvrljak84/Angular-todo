@@ -66,6 +66,11 @@ export type Messages = {
   gallery: {
     title: string;
     intro: string;
+    lightboxClose: string;
+    lightboxPrev: string;
+    lightboxNext: string;
+    lightboxAria: string;
+    lightboxOpenThumb: string;
     images: { alt: string; caption: string }[];
   };
   contact: {
@@ -85,6 +90,9 @@ export type Messages = {
     detailsHeading: string;
     messageHeading: string;
     mockToast: string;
+    mapHeading: string;
+    mapIframeTitle: string;
+    mapOpenGoogle: string;
   };
   a11y: { scrollToTop: string };
 };
@@ -217,22 +225,29 @@ const en: Messages = {
   gallery: {
     title: "Gallery",
     intro:
-      "Placeholder photos from Picsum. Seed-based URLs stay stable between builds — replace with your own shots in /public or your CDN.",
+      "Eight square tiles in a seamless grid — click any photo for a larger carousel. Use arrow keys or the side buttons to browse.",
+    lightboxClose: "Close gallery",
+    lightboxPrev: "Previous image",
+    lightboxNext: "Next image",
+    lightboxAria: "Enlarged photo gallery",
+    lightboxOpenThumb: "Open larger view",
     images: [
-      { alt: "Mock exterior of a wooden cabin", caption: "South facade — replace" },
-      { alt: "Mock living room with sofa", caption: "Living area — replace" },
-      { alt: "Mock bedroom with window", caption: "Main bedroom — replace" },
-      { alt: "Mock kitchen counter", caption: "Kitchen — replace" },
-      { alt: "Mock deck with chairs", caption: "Deck — replace" },
-      { alt: "Mock mountain landscape", caption: "View from plot — replace" },
+      { alt: "Placeholder ridge and forest from above", caption: "Ridge trail — replace" },
+      { alt: "Placeholder mist over the valley", caption: "Morning valley — replace" },
+      { alt: "Placeholder stone wall and path", caption: "Approach path — replace" },
+      { alt: "Placeholder interior window seat", caption: "Window nook — replace" },
+      { alt: "Placeholder wood stove corner", caption: "Evening warmth — replace" },
+      { alt: "Placeholder deck with mountain view", caption: "Deck view — replace" },
+      { alt: "Placeholder wildflowers meadow", caption: "Meadow nearby — replace" },
+      { alt: "Placeholder starry sky over peaks", caption: "Night sky — replace" },
     ],
   },
   contact: {
     title: "Contact",
     intro:
       "This form does not send mail yet — wire it to your inbox or a form service later. Details below are fake.",
-    addressLabel: "Address (mock)",
-    addressMock: "123 Ridge Road, Fictional Village, HR-00000",
+    addressLabel: "Address",
+    addressMock: "Došen Dabar 1, Croatia",
     phoneLabel: "Phone (mock)",
     phoneMock: "+385 99 000 0000",
     emailLabel: "Email (mock)",
@@ -245,6 +260,9 @@ const en: Messages = {
     detailsHeading: "Details",
     messageHeading: "Message",
     mockToast: "Demo only — connect this form to email or a provider later.",
+    mapHeading: "Map",
+    mapIframeTitle: "Google Map — Došen Dabar 1, Croatia",
+    mapOpenGoogle: "Open in Google Maps",
   },
   a11y: { scrollToTop: "Back to top" },
 };
@@ -377,22 +395,29 @@ const hr: Messages = {
   gallery: {
     title: "Galerija",
     intro:
-      "Probne slike s Picsuma. URL-ovi po seedu ostaju stabilni — zamijenite vlastitim u /public ili na CDN-u.",
+      "Osam kvadrata u mozaiku bez razmaka — dodirnite bilo koju sliku za veći pregled i carousel. Strelicama na tipkovnici ili gumbima listate dalje.",
+    lightboxClose: "Zatvori galeriju",
+    lightboxPrev: "Prethodna slika",
+    lightboxNext: "Sljedeća slika",
+    lightboxAria: "Povećani prikaz galerije",
+    lightboxOpenThumb: "Otvori veći prikaz",
     images: [
-      { alt: "Mock vanjski izgled drvene kolibe", caption: "Južna strana — zamijeniti" },
-      { alt: "Mock dnevni boravak s kaučem", caption: "Dnevni boravak — zamijeniti" },
-      { alt: "Mock spavaća soba s prozorom", caption: "Glavna soba — zamijeniti" },
-      { alt: "Mock kuhinja", caption: "Kuhinja — zamijeniti" },
-      { alt: "Mock terasa sa stolicama", caption: "Terasa — zamijeniti" },
-      { alt: "Mock planinski krajolik", caption: "Pogled s parcele — zamijeniti" },
+      { alt: "Probni pogled na greben i šumu odozgo", caption: "Staza na grebenu — zamijeniti" },
+      { alt: "Probna magla iznad doline u zoru", caption: "Jutarnja dolina — zamijeniti" },
+      { alt: "Probni kameni zid i staza", caption: "Staza do ulaza — zamijeniti" },
+      { alt: "Probni kutak uz prozor", caption: "Kut uz prozor — zamijeniti" },
+      { alt: "Probni kutak s peć na drva", caption: "Večer uz kamin — zamijeniti" },
+      { alt: "Probna terasa s planinskim pogledom", caption: "Pogled s terase — zamijeniti" },
+      { alt: "Probna livada s cvijećem", caption: "Livada u blizini — zamijeniti" },
+      { alt: "Probno zvjezdano nebo iznad vrhova", caption: "Noćno nebo — zamijeniti" },
     ],
   },
   contact: {
     title: "Kontakt",
     intro:
       "Formular još ne šalje e-poštu — kasnije povežite s inboxom ili servisom. Podaci su izmišljeni.",
-    addressLabel: "Adresa (mock)",
-    addressMock: "Primorska 123, Izmišljeno Selo, HR-00000",
+    addressLabel: "Adresa",
+    addressMock: "Došen Dabar 1, Hrvatska",
     phoneLabel: "Telefon (mock)",
     phoneMock: "+385 99 000 0000",
     emailLabel: "E-pošta (mock)",
@@ -405,6 +430,9 @@ const hr: Messages = {
     detailsHeading: "Podaci",
     messageHeading: "Poruka",
     mockToast: "Samo demo — kasnije povežite formular s e-poštom ili servisom.",
+    mapHeading: "Karta",
+    mapIframeTitle: "Google karta — Došen Dabar 1, Hrvatska",
+    mapOpenGoogle: "Otvori u Google Kartama",
   },
   a11y: { scrollToTop: "Natrag na vrh" },
 };
@@ -537,22 +565,29 @@ const de: Messages = {
   gallery: {
     title: "Galerie",
     intro:
-      "Platzhalterbilder von Picsum. Seed-URLs bleiben stabil — eigene Fotos in /public oder CDN einbinden.",
+      "Acht quadratische Kacheln ohne Zwischenraum — Foto antippen für Vollbild-Carousel. Pfeiltasten oder Seitenknöpfe zum Blättern.",
+    lightboxClose: "Galerie schließen",
+    lightboxPrev: "Vorheriges Bild",
+    lightboxNext: "Nächstes Bild",
+    lightboxAria: "Vergrößerte Galerie",
+    lightboxOpenThumb: "Größere Ansicht öffnen",
     images: [
-      { alt: "Mock Außenansicht Holzhütte", caption: "Südseite — ersetzen" },
-      { alt: "Mock Wohnzimmer mit Sofa", caption: "Wohnbereich — ersetzen" },
-      { alt: "Mock Schlafzimmer mit Fenster", caption: "Hauptschlafzimmer — ersetzen" },
-      { alt: "Mock Küche", caption: "Küche — ersetzen" },
-      { alt: "Mock Terrasse mit Stühlen", caption: "Terrasse — ersetzen" },
-      { alt: "Mock Berglandschaft", caption: "Blick vom Grundstück — ersetzen" },
+      { alt: "Platzhalter Grat und Wald von oben", caption: "Gratweg — ersetzen" },
+      { alt: "Platzhalter Morgennebel im Tal", caption: "Morgental — ersetzen" },
+      { alt: "Platzhalter Steinmauer und Pfad", caption: "Zugangspfad — ersetzen" },
+      { alt: "Platzhalter Fensterecke innen", caption: "Leseecke — ersetzen" },
+      { alt: "Platzhalter Ofenecke", caption: "Abend am Ofen — ersetzen" },
+      { alt: "Platzhalter Terrasse mit Aussicht", caption: "Terrassenblick — ersetzen" },
+      { alt: "Platzhalter Blumenwiese", caption: "Wiese in der Nähe — ersetzen" },
+      { alt: "Platzhalter Sternenhimmel über Gipfeln", caption: "Nachthimmel — ersetzen" },
     ],
   },
   contact: {
     title: "Kontakt",
     intro:
       "Dieses Formular sendet noch keine E-Mails — später anbinden. Angaben sind erfunden.",
-    addressLabel: "Adresse (Mock)",
-    addressMock: "Waldweg 123, Musterdorf, HR-00000",
+    addressLabel: "Adresse",
+    addressMock: "Došen Dabar 1, Kroatien",
     phoneLabel: "Telefon (Mock)",
     phoneMock: "+385 99 000 0000",
     emailLabel: "E-Mail (Mock)",
@@ -565,6 +600,9 @@ const de: Messages = {
     detailsHeading: "Kontaktdaten",
     messageHeading: "Nachricht",
     mockToast: "Nur Demo — Formular später mit E-Mail oder Dienst verbinden.",
+    mapHeading: "Karte",
+    mapIframeTitle: "Google Karte — Došen Dabar 1, Kroatien",
+    mapOpenGoogle: "In Google Maps öffnen",
   },
   a11y: { scrollToTop: "Nach oben" },
 };

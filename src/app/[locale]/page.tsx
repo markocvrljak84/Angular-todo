@@ -5,6 +5,7 @@ import { getMessages } from "@/i18n/messages";
 import { ContactForm } from "@/components/contact-form";
 import { HeroFullscreenCarousel } from "@/components/hero-fullscreen-carousel";
 import { ScrollTopArrow } from "@/components/scroll-top-arrow";
+import { GalleryGridLightbox } from "@/components/gallery-grid-lightbox";
 import { VideoViewportSection } from "@/components/video-viewport-section";
 
 export const dynamic = "force-static";
@@ -18,12 +19,14 @@ const HERO_FS_SEEDS = [
 ] as const;
 
 const GALLERY_SEEDS = [
-  "starspeak-exterior",
-  "starspeak-living",
-  "starspeak-bed",
-  "starspeak-kitchen",
-  "starspeak-deck",
-  "starspeak-view",
+  "starspeak-gal-1",
+  "starspeak-gal-2",
+  "starspeak-gal-3",
+  "starspeak-gal-4",
+  "starspeak-gal-5",
+  "starspeak-gal-6",
+  "starspeak-gal-7",
+  "starspeak-gal-8",
 ] as const;
 
 const ITINERARY_SEEDS = [
@@ -36,6 +39,9 @@ const FILM_VIDEO =
   "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" as const;
 const FILM_POSTER_SEED = "starspeak-film-poster" as const;
 
+/** Geocoding query for Google Maps (embed + external link) */
+const CONTACT_MAP_QUERY = "Došen Dabar 1, Croatia";
+
 type Props = { params: Promise<{ locale: string }> };
 
 export default async function HomePage({ params }: Props) {
@@ -43,6 +49,10 @@ export default async function HomePage({ params }: Props) {
   if (!isLocale(l)) notFound();
   const locale = l as Locale;
   const t = getMessages(locale);
+
+  const mapHl = locale === "hr" ? "hr" : locale === "de" ? "de" : "en";
+  const googleMapEmbedSrc = `https://www.google.com/maps?q=${encodeURIComponent(CONTACT_MAP_QUERY)}&hl=${mapHl}&z=16&output=embed`;
+  const googleMapOpenHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(CONTACT_MAP_QUERY)}`;
 
   const heroSlides = HERO_FS_SEEDS.map((seed, i) => ({
     src: `https://picsum.photos/seed/${seed}/1920/1080`,
@@ -169,28 +179,24 @@ export default async function HomePage({ params }: Props) {
             {t.gallery.title}
           </h2>
           <p className="flat-section__intro">{t.gallery.intro}</p>
-          <div className="flat-gallery">
-            {t.gallery.images.map((img, i) => {
-              const seed = GALLERY_SEEDS[i] ?? `starspeak-${i}`;
-              return (
-                <figure key={seed} className="flat-gallery__cell">
-                  <div className="flat-gallery__frame">
-                    <Image
-                      src={`https://picsum.photos/seed/${seed}/900/600`}
-                      alt={img.alt}
-                      width={900}
-                      height={600}
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className="flat-gallery__img"
-                    />
-                  </div>
-                  <figcaption className="flat-gallery__cap">
-                    {img.caption}
-                  </figcaption>
-                </figure>
-              );
+          <GalleryGridLightbox
+            slides={GALLERY_SEEDS.map((seed, i) => {
+              const meta = t.gallery.images[i];
+              return {
+                srcThumb: `https://picsum.photos/seed/${seed}/800/800`,
+                srcLarge: `https://picsum.photos/seed/${seed}/1600/1600`,
+                alt: meta?.alt ?? "",
+                caption: meta?.caption ?? "",
+              };
             })}
-          </div>
+            labels={{
+              close: t.gallery.lightboxClose,
+              prev: t.gallery.lightboxPrev,
+              next: t.gallery.lightboxNext,
+              dialog: t.gallery.lightboxAria,
+              openThumb: t.gallery.lightboxOpenThumb,
+            }}
+          />
         </div>
       </section>
 
@@ -282,6 +288,30 @@ export default async function HomePage({ params }: Props) {
                 mockToast={t.contact.mockToast}
               />
             </div>
+          </div>
+
+          <div className="flat-contact-map" aria-labelledby="contact-map-heading">
+            <h3 id="contact-map-heading" className="flat-contact-map__title">
+              {t.contact.mapHeading}
+            </h3>
+            <div className="flat-contact-map__frame">
+              <iframe
+                title={t.contact.mapIframeTitle}
+                src={googleMapEmbedSrc}
+                className="flat-contact-map__iframe"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
+            </div>
+            <a
+              className="flat-contact-map__link"
+              href={googleMapOpenHref}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {t.contact.mapOpenGoogle}
+            </a>
           </div>
         </div>
       </section>
