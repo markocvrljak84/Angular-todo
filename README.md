@@ -1,17 +1,23 @@
-# Next.js (SSG)
+# Stars Peak — holiday home (demo)
 
-Basic [Next.js](https://nextjs.org) App Router project with a statically prerendered home route (`force-static` — HTML produced at build time).
+Next.js App Router site with **three locales**: `/en`, `/hr`, `/de`. Visiting `/` redirects to **`/en`** (default).
+
+## Pages
+
+| Path | |
+|------|---|
+| `/{locale}` | Home |
+| `/{locale}/about` | About |
+| `/{locale}/gallery` | Gallery (mock images via Picsum) |
+| `/{locale}/contact` | Contact (mock form + fake address) |
+
+Copy and images live in `src/i18n/messages.ts` (per language). Replace gallery `Image` `src` with files under `public/` when you have real photos.
 
 ## Scripts
 
-- `npm run dev` — local dev server ([http://localhost:3000](http://localhost:3000))
-- `npm run build` — production build
-- `npm run start` — run production build locally
+- `npm run dev` — http://localhost:3000 → redirects to `/en`
+- `npm run build` / `npm run start`
 
 ## Vercel
 
-This repo keeps Vercel-oriented ignores (`.vercel`, `.env*.local`) and includes `vercel.json` with `"framework": "nextjs"`. Link or redeploy the same Vercel project you used before; the framework preset matches Next.js defaults.
-
-## TypeScript
-
-Path alias: `@/*` → `./src/*`.
+`vercel.json` keeps `"framework": "nextjs"`. `.vercel` and `.env*.local` stay gitignored.
