@@ -4,10 +4,9 @@ export const dynamic = "force-static";
 export default function Home() {
   return (
     <>
-      <h1>Next.js SSG boilerplate</h1>
+      <h1>Stars Peak</h1>
       <p>
-        This HTML is generated when you run <code>next build</code> and reused
-        for every request. Redeploy to change the timestamp below.
+        This unique property lies in the heart of the Velebit mountain range.
       </p>
     </>
   );
