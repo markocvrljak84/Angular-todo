@@ -1,23 +1,20 @@
 # Stars Peak — holiday home (demo)
 
-Next.js App Router site with **three locales**: `/en`, `/hr`, `/de`. Visiting `/` redirects to **`/en`** (default).
+Next.js App Router **one-pager** with **three locales**: `/en`, `/hr`, `/de`. Visiting `/` redirects to **`/en`**.
 
-## Pages
+## Structure
 
-| Path | |
-|------|---|
-| `/{locale}` | Home |
-| `/{locale}/about` | About |
-| `/{locale}/gallery` | Gallery (mock images via Picsum) |
-| `/{locale}/contact` | Contact (mock form + fake address) |
+Single scroll page: **hero banner** (full-width image + CTA panel) → **gallery** grid → **about** → **contact** (details + form). Anchors: `#top`, `#gallery`, `#about`, `#contact`.
 
-Copy and images live in `src/i18n/messages.ts` (per language). Replace gallery `Image` `src` with files under `public/` when you have real photos.
+Legacy URLs `/{locale}/about`, `/gallery`, `/contact` redirect to `/{locale}#…`.
+
+Copy lives in `src/i18n/messages.ts`. Hero and gallery use Picsum placeholders — swap for images in `public/` when ready.
 
 ## Scripts
 
-- `npm run dev` — http://localhost:3000 → redirects to `/en`
+- `npm run dev` — http://localhost:3000 → `/en`
 - `npm run build` / `npm run start`
 
 ## Vercel
 
-`vercel.json` keeps `"framework": "nextjs"`. `.vercel` and `.env*.local` stay gitignored.
+`vercel.json` uses `"framework": "nextjs"`. `.vercel` and `.env*.local` stay gitignored.

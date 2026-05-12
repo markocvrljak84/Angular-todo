@@ -2,13 +2,28 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { defaultLocale, isLocale } from "@/i18n/config";
 
+const LEGACY_SECTIONS = new Set(["about", "gallery", "contact", "things", "itinerary", "film"]);
+
 export function middleware(request: NextRequest) {
-  const first = request.nextUrl.pathname.split("/")[1];
+  const path = request.nextUrl.pathname;
+  const segments = path.split("/").filter(Boolean);
+
+  if (segments.length >= 2 && isLocale(segments[0])) {
+    const section = segments[1];
+    if (section && LEGACY_SECTIONS.has(section)) {
+      const u = request.nextUrl.clone();
+      u.pathname = `/${segments[0]}`;
+      u.hash = section;
+      return NextResponse.redirect(u);
+    }
+  }
+
+  const first = segments[0];
   if (first && isLocale(first)) {
     return NextResponse.next();
   }
+
   const url = request.nextUrl.clone();
-  const path = request.nextUrl.pathname;
   url.pathname = `/${defaultLocale}${path === "/" ? "" : path}`;
   return NextResponse.redirect(url);
 }

@@ -2,15 +2,53 @@ import type { Locale } from "./config";
 
 export type Messages = {
   meta: { siteName: string; siteDescription: string };
-  nav: { home: string; about: string; gallery: string; contact: string };
+  header: { bookCta: string };
+  nav: { home: string; things: string; about: string; gallery: string; contact: string };
   langSwitcher: { aria: string };
-  footer: { tagline: string; rights: string };
+  footer: {
+    tagline: string;
+    rights: string;
+    exploreTitle: string;
+    contactTitle: string;
+  };
   home: {
     heroBadge: string;
     heroTitle: string;
     heroLead: string;
+    /** Large script-style headline on fullscreen hero */
+    heroScriptTitle: string;
+    /** Italic serif line under headline */
+    heroCenterLine: string;
+    /** Pill CTA under hero text (e.g. price teaser) */
+    heroCtaPill: string;
+    /** Alt text for each fullscreen slide (same order as seeds in page) */
+    heroSlideAlts: string[];
+    /** Sans line under script (e.g. newsletter teaser) */
+    heroSubscribeLine: string;
+    heroEmailPlaceholder: string;
+    heroSubscribeButton: string;
+    heroSubscribeNote: string;
+    heroSubscribeThanks: string;
+    thingsTitle: string;
+    thingsHeadBefore: string;
+    thingsHeadAccent: string;
+    thingsHeadAfter: string;
+    /** Checkerboard “days” grid (3×2) below Things intro */
+    itineraryTitle: string;
+    itineraryImageAlts: string[];
+    itineraryDays: { label: string; headline: string; body: string }[];
+    /** Full-viewport film strip (#film) */
+    filmTitle: string;
+    filmHint: string;
+    filmUnmute: string;
+    statsLine: string;
+    heroImageAlt: string;
     ctaPrimary: string;
     ctaSecondary: string;
+    amenities: { label: string }[];
+    amenitiesLabel: string;
+    welcomeTitle: string;
+    welcomeBody: string;
     featuresSectionLabel: string;
     features: { title: string; body: string }[];
     quote: string;
@@ -48,6 +86,7 @@ export type Messages = {
     messageHeading: string;
     mockToast: string;
   };
+  a11y: { scrollToTop: string };
 };
 
 const en: Messages = {
@@ -56,8 +95,12 @@ const en: Messages = {
     siteDescription:
       "A quiet mountain retreat — mock brochure site. Replace text and images anytime.",
   },
+  header: {
+    bookCta: "Check availability",
+  },
   nav: {
     home: "Home",
+    things: "Things to do",
     about: "About",
     gallery: "Gallery",
     contact: "Contact",
@@ -66,14 +109,75 @@ const en: Messages = {
   footer: {
     tagline: "Mock vacation rental site — swap copy & photos when ready.",
     rights: "© Stars Peak — placeholder",
+    exploreTitle: "Explore",
+    contactTitle: "Contact us",
   },
   home: {
     heroBadge: "Velebit · Croatia (mock)",
     heroTitle: "Your hideaway above the treeline",
     heroLead:
       "Wake up to pine-scented air and wide skies. This mock homepage describes a fictional cabin so you can preview layout, typography, and navigation before adding your real story.",
+    heroScriptTitle: "Stars Peak",
+    heroCenterLine:
+      "You will always have quiet trails to walk and a warm house to return to — your base in the Velebit hills.",
+    heroSubscribeLine: "Get the special offers directly in your email.",
+    heroEmailPlaceholder: "Enter email address",
+    heroSubscribeButton: "Subscribe",
+    heroSubscribeNote: "Demo only — wire this field to your newsletter or CRM.",
+    heroSubscribeThanks: "Thanks — demo only. Connect to your newsletter tool.",
+    thingsTitle: "Things to do",
+    thingsHeadBefore: "DISCOVER WHAT",
+    thingsHeadAccent: "Velebit dawn",
+    thingsHeadAfter: "LOOKS LIKE",
+    itineraryTitle: "Your long weekend — mock itinerary",
+    itineraryImageAlts: [
+      "Garden path near the house — placeholder",
+      "Sunset over the valley — placeholder",
+      "Local table setting — placeholder",
+    ],
+    itineraryDays: [
+      {
+        label: "Day 1",
+        headline: "TRAIL TO THE RIDGE AT DAWN",
+        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mock copy — replace with your real route and timing.",
+      },
+      {
+        label: "Day 2",
+        headline: "COFFEE ON THE DECK, THEN HIKE",
+        body: "Sed do eiusmod tempor incididunt ut labore. Placeholder text for day two highlights and rest stops.",
+      },
+      {
+        label: "Day 3",
+        headline: "FIREPLACE AND QUIET EVENING",
+        body: "Ut enim ad minim veniam quis nostrud. Swap for checkout day, markets, or one last viewpoint.",
+      },
+    ],
+    filmTitle: "A moment on the trail",
+    filmHint:
+      "The clip starts when this block is on screen. Many browsers mute autoplay until you interact — tap Enable sound if you do not hear audio.",
+    filmUnmute: "Enable sound",
+    heroCtaPill: "From €129 / night · mock rate",
+    heroSlideAlts: [
+      "Mountain ridge at dusk — placeholder",
+      "Forest path in morning mist — placeholder",
+      "Wooden cabin exterior — placeholder",
+      "Valley view from elevation — placeholder",
+      "Lake and peaks panorama — placeholder",
+    ],
+    statsLine: "Entire home · Sleeps 6 · 3 bedrooms · 2 bathrooms",
+    heroImageAlt: "Placeholder exterior photo of the holiday home",
     ctaPrimary: "View gallery",
     ctaSecondary: "Get in touch",
+    amenitiesLabel: "At a glance",
+    amenities: [
+      { label: "Up to 6 guests" },
+      { label: "Full kitchen" },
+      { label: "Free parking" },
+      { label: "Wi‑Fi" },
+    ],
+    welcomeTitle: "Why book direct",
+    welcomeBody:
+      "Independent holiday homes like this one often offer better flexibility and clearer house rules when you message the owner directly. Replace this block with your own story, seasonal offers, or a link to your live calendar when you connect a booking tool.",
     featuresSectionLabel: "What to expect",
     features: [
       {
@@ -142,6 +246,7 @@ const en: Messages = {
     messageHeading: "Message",
     mockToast: "Demo only — connect this form to email or a provider later.",
   },
+  a11y: { scrollToTop: "Back to top" },
 };
 
 const hr: Messages = {
@@ -150,8 +255,12 @@ const hr: Messages = {
     siteDescription:
       "Tihi planinski boravak — probna stranica. Kasnije zamijenite tekst i slike.",
   },
+  header: {
+    bookCta: "Provjeri dostupnost",
+  },
   nav: {
     home: "Početna",
+    things: "Što raditi",
     about: "O nama",
     gallery: "Galerija",
     contact: "Kontakt",
@@ -160,14 +269,75 @@ const hr: Messages = {
   footer: {
     tagline: "Probna stranica za najam — zamijenite tekst i fotografije.",
     rights: "© Stars Peak — placeholder",
+    exploreTitle: "Poveznice",
+    contactTitle: "Kontakt",
   },
   home: {
     heroBadge: "Velebit · Hrvatska (mock)",
     heroTitle: "Skriveno mjesto iznad krošnji",
     heroLead:
       "Probudite se uz miris bora i široko nebo. Ovaj mock opisuje izmišljenu kolibu kako biste vidjeli raspored i tipografiju prije pravog sadržaja.",
+    heroScriptTitle: "Stars Peak",
+    heroCenterLine:
+      "Uvijek imate tihe staze za šetnju i topli dom za povratak — vaša baza u velebitskim bregima.",
+    heroCtaPill: "Od 129 € / noć · mock cijena",
+    heroSlideAlts: [
+      "Planinski greben u sumrak — probna slika",
+      "Šumski put u jutarnjoj magli — probna slika",
+      "Drvena kuća, vanjski izgled — probna slika",
+      "Pogled na dolinu s visine — probna slika",
+      "Jezero i planinski vijenac — probna slika",
+    ],
+    heroSubscribeLine: "Posebne ponude stižu izravno na vašu e-poštu.",
+    heroEmailPlaceholder: "Unesite e-adresu",
+    heroSubscribeButton: "Pretplati se",
+    heroSubscribeNote: "Samo demo — kasnije povežite s newsletter servisom.",
+    heroSubscribeThanks: "Hvala — samo demo. Povežite s alatom za newsletter.",
+    thingsTitle: "Što raditi",
+    thingsHeadBefore: "OTKRIJTE KAKO",
+    thingsHeadAccent: "zora na velebitu",
+    thingsHeadAfter: "IZGLEDA",
+    itineraryTitle: "Predloženi vikend — probni raspored",
+    itineraryImageAlts: [
+      "Staza uz kuću — probna slika",
+      "Zalazak iznad doline — probna slika",
+      "Stol s lokalnim jelima — probna slika",
+    ],
+    itineraryDays: [
+      {
+        label: "1. dan",
+        headline: "STAZA NA GREBEN U ZORU",
+        body: "Lorem ipsum — zamijenite stvarnim opisom prve etape, udaljenostima i vremenom polaska.",
+      },
+      {
+        label: "2. dan",
+        headline: "KAVA NA TERASI, PA PLANINARENJE",
+        body: "Mock tekst za drugi dan: odmor, ručak, druga staza — prilagodite svom području.",
+      },
+      {
+        label: "3. dan",
+        headline: "KAMIN I TIHA VEČER",
+        body: "Zadnji dan: odjava, suvenir ili još jedan kratki izlet — probni sadržaj za zamjenu.",
+      },
+    ],
+    filmTitle: "Trenutak na stazi",
+    filmHint:
+      "Video kreće kad je ovaj blok u kadru. Preglednici često utišaju automatsku reprodukciju dok ne dodirnete zaslon — dodirnite Uključi zvuk ako ne čujete ton.",
+    filmUnmute: "Uključi zvuk",
+    statsLine: "Cijela kuća · Do 6 osoba · 3 spavaće sobe · 2 kupaonice",
+    heroImageAlt: "Probna vanjska fotografija kuće za odmor",
     ctaPrimary: "Galerija",
     ctaSecondary: "Kontakt",
+    amenitiesLabel: "Ukratko",
+    amenities: [
+      { label: "Do 6 gostiju" },
+      { label: "Puna kuhinja" },
+      { label: "Besplatan parking" },
+      { label: "Wi‑Fi" },
+    ],
+    welcomeTitle: "Zašto izravno kod vlasnika",
+    welcomeBody:
+      "Često dobijete jasnija pravila i fleksibilnije dogovore kad pišete vlasniku izravno. Ovaj tekst zamijenite svojom pričom, sezonskim ponudama ili poveznicom na kalendar kad ga povežete.",
     featuresSectionLabel: "Što vas čeka",
     features: [
       {
@@ -236,6 +406,7 @@ const hr: Messages = {
     messageHeading: "Poruka",
     mockToast: "Samo demo — kasnije povežite formular s e-poštom ili servisom.",
   },
+  a11y: { scrollToTop: "Natrag na vrh" },
 };
 
 const de: Messages = {
@@ -244,8 +415,12 @@ const de: Messages = {
     siteDescription:
       "Ruhiger Bergurlaub — Demoseite. Texte und Bilder später austauschen.",
   },
+  header: {
+    bookCta: "Verfügbarkeit prüfen",
+  },
   nav: {
     home: "Start",
+    things: "Aktivitäten",
     about: "Über uns",
     gallery: "Galerie",
     contact: "Kontakt",
@@ -254,14 +429,75 @@ const de: Messages = {
   footer: {
     tagline: "Demo-Ferienhaus-Website — Inhalte und Fotos ersetzen.",
     rights: "© Stars Peak — Platzhalter",
+    exploreTitle: "Navigation",
+    contactTitle: "Kontakt",
   },
   home: {
     heroBadge: "Velebit · Kroatien (Mock)",
     heroTitle: "Ihr Rückzugsort über den Baumwipfeln",
     heroLead:
       "Wachen Sie auf mit Kiefernduft und weitem Himmel. Diese Demo-Startseite beschreibt eine fiktive Hütte, damit Sie Layout und Navigation testen können.",
+    heroScriptTitle: "Stars Peak",
+    heroCenterLine:
+      "Immer ruhige Wege zum Wandern und ein warmes Haus zum Zurückkehren — Ihre Basis in den Velebit-Hügeln.",
+    heroCtaPill: "Ab 129 € / Nacht · Platzhalterpreis",
+    heroSlideAlts: [
+      "Gebirgskamm in der Dämmerung — Platzhalter",
+      "Waldpfad im Morgennebel — Platzhalter",
+      "Holzhaus Außenansicht — Platzhalter",
+      "Talblick von oben — Platzhalter",
+      "See und Gipfelpanorama — Platzhalter",
+    ],
+    heroSubscribeLine: "Spezialangebote direkt in Ihrer E-Mail.",
+    heroEmailPlaceholder: "E-Mail-Adresse eingeben",
+    heroSubscribeButton: "Abonnieren",
+    heroSubscribeNote: "Nur Demo — später mit Newsletter-Tool verbinden.",
+    heroSubscribeThanks: "Danke — nur Demo. Mit Newsletter-Tool verbinden.",
+    thingsTitle: "Aktivitäten",
+    thingsHeadBefore: "ENTDECKEN SIE",
+    thingsHeadAccent: "Velebit-Morgen",
+    thingsHeadAfter: "AUSSIEHT",
+    itineraryTitle: "Langes Wochenende — Beispielplan",
+    itineraryImageAlts: [
+      "Weg im Garten — Platzhalter",
+      "Sonnenuntergang über dem Tal — Platzhalter",
+      "Gedeckter Tisch — Platzhalter",
+    ],
+    itineraryDays: [
+      {
+        label: "Tag 1",
+        headline: "PFAD ZUM KAMM BEI SONNENAUFGANG",
+        body: "Lorem ipsum — ersetzen Sie durch echte Route, Dauer und Startzeit.",
+      },
+      {
+        label: "Tag 2",
+        headline: "KAFFEE AUF DER TERRASSE, DANN WANDERN",
+        body: "Platzhalter für Tag zwei: Pausen, Einkehr, zweite Etappe — anpassen.",
+      },
+      {
+        label: "Tag 3",
+        headline: "KAMIN UND RUHIGER ABEND",
+        body: "Abreisetag: Markt, Souvenir oder letzter Ausblick — Mock-Text zum Ersetzen.",
+      },
+    ],
+    filmTitle: "Ein Moment auf dem Weg",
+    filmHint:
+      "Das Video startet, wenn dieser Block sichtbar ist. Viele Browser stellen Autoplay stumm, bis Sie tippen — auf Ton aktivieren tippen, falls Sie nichts hören.",
+    filmUnmute: "Ton aktivieren",
+    statsLine: "Gesamtes Haus · 6 Gäste · 3 Schlafzimmer · 2 Bäder",
+    heroImageAlt: "Platzhalter-Außenfoto des Ferienhauses",
     ctaPrimary: "Zur Galerie",
     ctaSecondary: "Kontakt",
+    amenitiesLabel: "Kurzinfo",
+    amenities: [
+      { label: "Bis zu 6 Gäste" },
+      { label: "Voll ausgestattete Küche" },
+      { label: "Gratis Parkplatz" },
+      { label: "WLAN" },
+    ],
+    welcomeTitle: "Direkt beim Gastgeber buchen",
+    welcomeBody:
+      "Oft erhalten Sie persönliche Antworten und klarere Hausregeln, wenn Sie direkt beim Eigentümer anfragen. Ersetzen Sie diesen Text durch Ihre Geschichte, Saisonangebote oder einen Kalender-Link.",
     featuresSectionLabel: "Das erwartet Sie",
     features: [
       {
@@ -330,6 +566,7 @@ const de: Messages = {
     messageHeading: "Nachricht",
     mockToast: "Nur Demo — Formular später mit E-Mail oder Dienst verbinden.",
   },
+  a11y: { scrollToTop: "Nach oben" },
 };
 
 export const messages: Record<Locale, Messages> = { en, hr, de };

@@ -42,7 +42,7 @@ export default async function LocaleLayout({
       <div className="page-shell">
         <SiteHeader locale={locale} t={messages} />
         <main className="page-main">{children}</main>
-        <SiteFooter t={messages} />
+        <SiteFooter t={messages} locale={locale} />
       </div>
     </>
   );
