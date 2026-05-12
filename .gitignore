@@ -1,15 +1,21 @@
 # See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
 
-# Compiled output
+# Dependencies
+/node_modules
+
+# Next.js
+/.next/
+/out/
+
+# Build / tooling
 /dist
 /tmp
-/out-tsc
-/bazel-out
+/coverage
 
-# Node
-/node_modules
-npm-debug.log
-yarn-error.log
+# Logs
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
 # IDEs and editors
 .idea/
@@ -28,14 +34,11 @@ yarn-error.log
 !.vscode/extensions.json
 .history/*
 
-# Miscellaneous
-/.angular/cache
-.sass-cache/
-/connect.lock
-/coverage
-/libpeerconnection.log
-testem.log
-/typings
+# Vercel
+.vercel
+
+# Env (local secrets)
+.env*.local
 
 # System files
 .DS_Store

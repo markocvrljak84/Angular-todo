@@ -1,0 +1,87 @@
+:root {
+  --background: #0a0a0a;
+  --foreground: #fafafa;
+  --muted: #a3a3a3;
+  --accent: #38bdf8;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    Ubuntu,
+    Cantarell,
+    "Noto Sans",
+    sans-serif;
+  background: var(--background);
+  color: var(--foreground);
+  line-height: 1.6;
+}
+
+main {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.5rem;
+}
+
+p {
+  margin: 0 0 1rem;
+  color: var(--muted);
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+  font-size: 0.9em;
+  padding: 0.15em 0.4em;
+  border-radius: 0.25rem;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+dl {
+  margin: 1.5rem 0 0;
+  padding: 1rem 1.25rem;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+dt {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin-top: 0.75rem;
+}
+
+dt:first-child {
+  margin-top: 0;
+}
+
+dd {
+  margin: 0.25rem 0 0;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+  font-size: 0.8125rem;
+  word-break: break-all;
+  color: var(--accent);
+}
