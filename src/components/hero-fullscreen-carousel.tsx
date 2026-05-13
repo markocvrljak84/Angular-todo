@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 export type HeroSlide = { src: string; alt: string };
 
@@ -14,10 +14,9 @@ type Props = {
   subscribeButton: string;
   subscribeNote: string;
   subscribeThanks: string;
-  intervalMs?: number;
+  carouselPrevLabel: string;
+  carouselNextLabel: string;
 };
-
-const DEFAULT_INTERVAL = 3200;
 
 export function HeroFullscreenCarousel({
   slides,
@@ -28,23 +27,35 @@ export function HeroFullscreenCarousel({
   subscribeButton,
   subscribeNote,
   subscribeThanks,
-  intervalMs = DEFAULT_INTERVAL,
+  carouselPrevLabel,
+  carouselNextLabel,
 }: Props) {
   const [index, setIndex] = useState(0);
-  const [reduceMotion, setReduceMotion] = useState(false);
   const [toast, setToast] = useState<string | null>(null);
 
-  useEffect(() => {
-    setReduceMotion(window.matchMedia("(prefers-reduced-motion: reduce)").matches);
-  }, []);
+  const goPrev = useCallback(() => {
+    setIndex((i) => (i - 1 + slides.length) % slides.length);
+  }, [slides.length]);
+
+  const goNext = useCallback(() => {
+    setIndex((i) => (i + 1) % slides.length);
+  }, [slides.length]);
 
   useEffect(() => {
-    if (slides.length <= 1 || reduceMotion) return;
-    const id = window.setInterval(() => {
-      setIndex((i) => (i + 1) % slides.length);
-    }, intervalMs);
-    return () => window.clearInterval(id);
-  }, [slides.length, intervalMs, reduceMotion]);
+    function onKey(e: KeyboardEvent) {
+      const t = e.target as HTMLElement | null;
+      if (t?.closest?.("input, textarea, select, [contenteditable=true]")) return;
+      if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        goPrev();
+      } else if (e.key === "ArrowRight") {
+        e.preventDefault();
+        goNext();
+      }
+    }
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [goPrev, goNext]);
 
   function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -52,8 +63,13 @@ export function HeroFullscreenCarousel({
   }
 
   return (
-    <section id="top" className="hero-fs" aria-labelledby="hero-fs-title">
-      <div className="hero-fs__slides">
+    <section
+      id="top"
+      className="hero-fs"
+      aria-labelledby="hero-fs-title"
+      aria-roledescription="carousel"
+    >
+      <div className="hero-fs__slides" aria-live="polite" aria-atomic="true">
         {slides.map((slide, i) => (
           <div
             key={slide.src}
@@ -72,6 +88,39 @@ export function HeroFullscreenCarousel({
         ))}
         <div className="hero-fs__scrim" aria-hidden="true" />
       </div>
+
+      {slides.length > 1 ? (
+        <div className="hero-fs__nav" role="group" aria-label="Carousel">
+          <button
+            type="button"
+            className="hero-fs__nav-btn hero-fs__nav-btn--prev"
+            onClick={goPrev}
+            aria-label={carouselPrevLabel}
+          >
+            <span aria-hidden="true">‹</span>
+          </button>
+          <div className="hero-fs__dots">
+            {slides.map((slide, i) => (
+              <button
+                key={slide.src}
+                type="button"
+                className={`hero-fs__dot${i === index ? " hero-fs__dot--active" : ""}`}
+                onClick={() => setIndex(i)}
+                aria-label={`${i + 1} / ${slides.length}`}
+                aria-current={i === index}
+              />
+            ))}
+          </div>
+          <button
+            type="button"
+            className="hero-fs__nav-btn hero-fs__nav-btn--next"
+            onClick={goNext}
+            aria-label={carouselNextLabel}
+          >
+            <span aria-hidden="true">›</span>
+          </button>
+        </div>
+      ) : null}
 
       <div className="hero-fs__content">
         <p className="hero-fs__kicker">{kicker}</p>

@@ -6,26 +6,16 @@ import { HeroFullscreenCarousel } from "@/components/hero-fullscreen-carousel";
 import { GalleryGridLightbox } from "@/components/gallery-grid-lightbox";
 import { FilmYoutubeSection } from "@/components/film-youtube-section";
 import { getGoogleMapsUrls } from "@/config/contact-map";
+import { ABOUT_US_IMAGE, GALLERY_FILES } from "@/config/site-images";
 
 export const dynamic = "force-static";
 
-/** Hero carousel — images in /public/img/main-carousel */
+/** Hero carousel — images in /public/img/main-carousel (first = initial slide) */
 const MAIN_CAROUSEL_IMAGES = [
+  "581480514_122107015833084437_6966149935686680015_n.jpg",
   "571275863_122102378865084437_4800487342368999167_n.jpg",
   "578265540_122104807869084437_5111680495021054907_n.jpg",
-  "581480514_122107015833084437_6966149935686680015_n.jpg",
   "585009655_122107017075084437_1671659401079838438_n.jpg",
-] as const;
-
-const GALLERY_SEEDS = [
-  "starspeak-gal-1",
-  "starspeak-gal-2",
-  "starspeak-gal-3",
-  "starspeak-gal-4",
-  "starspeak-gal-5",
-  "starspeak-gal-6",
-  "starspeak-gal-7",
-  "starspeak-gal-8",
 ] as const;
 
 const ITINERARY_SEEDS = [
@@ -35,8 +25,6 @@ const ITINERARY_SEEDS = [
   "starspeak-itin-premuzic",
   "starspeak-itin-ridge",
 ] as const;
-
-const ABOUT_SIDE_SEED = "starspeak-about-column" as const;
 
 /** YouTube video for #film section */
 const FILM_YOUTUBE_ID = "QNfDBgtFSdc" as const;
@@ -48,6 +36,12 @@ export default async function HomePage({ params }: Props) {
   if (!isLocale(l)) notFound();
   const locale = l as Locale;
   const t = getMessages(locale);
+
+  if (t.gallery.images.length !== GALLERY_FILES.length) {
+    throw new Error(
+      "gallery.images length must match GALLERY_FILES in src/config/site-images.ts (and Array.from length in messages.ts).",
+    );
+  }
 
   const mapHl =
     locale === "hr" ? "hr" : locale === "de" ? "de" : locale === "fr" ? "fr" : locale === "it" ? "it" : "en";
@@ -69,6 +63,8 @@ export default async function HomePage({ params }: Props) {
         subscribeButton={t.home.heroSubscribeButton}
         subscribeNote={t.home.heroSubscribeNote}
         subscribeThanks={t.home.heroSubscribeThanks}
+        carouselPrevLabel={t.home.heroCarouselPrev}
+        carouselNextLabel={t.home.heroCarouselNext}
       />
 
       <section
@@ -96,7 +92,7 @@ export default async function HomePage({ params }: Props) {
             <aside className="flat-about__side" aria-label={t.about.sideImageAlt}>
               <div className="flat-about__side-media">
                 <Image
-                  src={`https://picsum.photos/seed/${ABOUT_SIDE_SEED}/1200/675`}
+                  src={`/img/about-us/${ABOUT_US_IMAGE}`}
                   alt={t.about.sideImageAlt}
                   fill
                   className="flat-about__side-img"
@@ -130,11 +126,12 @@ export default async function HomePage({ params }: Props) {
           </h2>
           <p className="flat-section__intro">{t.gallery.intro}</p>
           <GalleryGridLightbox
-            slides={GALLERY_SEEDS.map((seed, i) => {
+            slides={GALLERY_FILES.map((file, i) => {
               const meta = t.gallery.images[i];
+              const base = `/img/gallery/${file}`;
               return {
-                srcThumb: `https://picsum.photos/seed/${seed}/800/800`,
-                srcLarge: `https://picsum.photos/seed/${seed}/1600/1600`,
+                srcThumb: base,
+                srcLarge: base,
                 alt: meta?.alt ?? "",
                 caption: meta?.caption ?? "",
               };

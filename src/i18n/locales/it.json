@@ -69,11 +69,13 @@
     "filmCaption": "Breve clip dalla zona — avvia la riproduzione con i controlli del player.",
     "heroCtaPill": "Da 129 € / notte · tariffa demo",
     "heroSlideAlts": [
+      "Casa vacanze — foto 3",
       "Casa vacanze — foto 1",
       "Casa vacanze — foto 2",
-      "Casa vacanze — foto 3",
       "Casa vacanze — foto 4"
     ],
+    "heroCarouselPrev": "Immagine precedente",
+    "heroCarouselNext": "Immagine successiva",
     "statsLine": "Intera casa · 6 posti letto · 3 camere · 2 bagni",
     "heroImageAlt": "Foto esterna dimostrativa della casa vacanze",
     "ctaPrimary": "Apri galleria",
@@ -124,11 +126,11 @@
       "Starlink / Wi-Fi — indica solo se vero"
     ],
     "highlightsTitle": "In sintesi",
-    "sideImageAlt": "Casa vacanze e paesaggio montano — foto dimostrativa"
+    "sideImageAlt": "Casa vacanze Stars Peak — vista della struttura e del contesto"
   },
   "gallery": {
     "title": "Galleria",
-    "intro": "Otto quadrati senza spazi — tocca una foto per ingrandire e scorrere. Frecce della tastiera o pulsanti laterali.",
+    "intro": "Foto della struttura in una griglia continua — tocca per ingrandire. Frecce della tastiera o pulsanti laterali.",
     "lightboxClose": "Chiudi galleria",
     "lightboxPrev": "Immagine precedente",
     "lightboxNext": "Immagine successiva",
@@ -136,36 +138,68 @@
     "lightboxOpenThumb": "Apri vista grande",
     "images": [
       {
-        "alt": "Placeholder ridge and forest from above",
-        "caption": "Ridge trail — replace"
+        "alt": "Casa vacanze Stars Peak — foto 1",
+        "caption": "Galleria — 1"
       },
       {
-        "alt": "Placeholder mist over the valley",
-        "caption": "Morning valley — replace"
+        "alt": "Casa vacanze Stars Peak — foto 2",
+        "caption": "Galleria — 2"
       },
       {
-        "alt": "Placeholder stone wall and path",
-        "caption": "Approach path — replace"
+        "alt": "Casa vacanze Stars Peak — foto 3",
+        "caption": "Galleria — 3"
       },
       {
-        "alt": "Placeholder interior window seat",
-        "caption": "Window nook — replace"
+        "alt": "Casa vacanze Stars Peak — foto 4",
+        "caption": "Galleria — 4"
       },
       {
-        "alt": "Placeholder wood stove corner",
-        "caption": "Evening warmth — replace"
+        "alt": "Casa vacanze Stars Peak — foto 5",
+        "caption": "Galleria — 5"
       },
       {
-        "alt": "Placeholder deck with mountain view",
-        "caption": "Deck view — replace"
+        "alt": "Casa vacanze Stars Peak — foto 6",
+        "caption": "Galleria — 6"
       },
       {
-        "alt": "Placeholder wildflowers meadow",
-        "caption": "Meadow nearby — replace"
+        "alt": "Casa vacanze Stars Peak — foto 7",
+        "caption": "Galleria — 7"
       },
       {
-        "alt": "Placeholder starry sky over peaks",
-        "caption": "Night sky — replace"
+        "alt": "Casa vacanze Stars Peak — foto 8",
+        "caption": "Galleria — 8"
+      },
+      {
+        "alt": "Casa vacanze Stars Peak — foto 9",
+        "caption": "Galleria — 9"
+      },
+      {
+        "alt": "Casa vacanze Stars Peak — foto 10",
+        "caption": "Galleria — 10"
+      },
+      {
+        "alt": "Casa vacanze Stars Peak — foto 11",
+        "caption": "Galleria — 11"
+      },
+      {
+        "alt": "Casa vacanze Stars Peak — foto 12",
+        "caption": "Galleria — 12"
+      },
+      {
+        "alt": "Casa vacanze Stars Peak — foto 13",
+        "caption": "Galleria — 13"
+      },
+      {
+        "alt": "Casa vacanze Stars Peak — foto 14",
+        "caption": "Galleria — 14"
+      },
+      {
+        "alt": "Casa vacanze Stars Peak — foto 15",
+        "caption": "Galleria — 15"
+      },
+      {
+        "alt": "Casa vacanze Stars Peak — foto 16",
+        "caption": "Galleria — 16"
       }
     ]
   },

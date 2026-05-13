@@ -221,7 +221,7 @@ body {
   outline-offset: 2px;
 }
 
-/* —— Fullscreen hero + autoplay slides —— */
+/* —— Fullscreen hero + manual slide controls —— */
 .hero-fs {
   position: relative;
   width: 100%;
@@ -271,6 +271,87 @@ body {
     rgba(0, 0, 0, 0.55) 100%
   );
   pointer-events: none;
+}
+
+.hero-fs__nav {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: clamp(5.5rem, 14vh, 8.5rem);
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0 1rem;
+  pointer-events: none;
+}
+
+.hero-fs__nav > * {
+  pointer-events: auto;
+}
+
+.hero-fs__nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 999px;
+  font-size: 1.35rem;
+  line-height: 1;
+  font-weight: 700;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.hero-fs__nav-btn:hover {
+  background: rgba(0, 0, 0, 0.55);
+  border-color: rgba(255, 255, 255, 0.75);
+}
+
+.hero-fs__nav-btn:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.hero-fs__dots {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.hero-fs__dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  padding: 0;
+  border: none;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.hero-fs__dot:hover {
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.hero-fs__dot--active {
+  background: #fff;
+  transform: scale(1.25);
+}
+
+.hero-fs__dot:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
 }
 
 .hero-fs__content {

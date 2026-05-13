@@ -32,6 +32,8 @@ export type Messages = {
     heroCtaPill: string;
     /** Alt text for each fullscreen slide (same order as seeds in page) */
     heroSlideAlts: string[];
+    heroCarouselPrev: string;
+    heroCarouselNext: string;
     /** Sans line under script (e.g. newsletter teaser) */
     heroSubscribeLine: string;
     heroEmailPlaceholder: string;
@@ -172,11 +174,13 @@ const en: Messages = {
     filmCaption: "Short clip from the area — play with the controls below.",
     heroCtaPill: "From €129 / night · mock rate",
     heroSlideAlts: [
+      "Holiday home — photo 3",
       "Holiday home — photo 1",
       "Holiday home — photo 2",
-      "Holiday home — photo 3",
       "Holiday home — photo 4",
     ],
+    heroCarouselPrev: "Previous slide",
+    heroCarouselNext: "Next slide",
     statsLine: "Entire home · Sleeps 6 · 3 bedrooms · 2 bathrooms",
     heroImageAlt: "Placeholder exterior photo of the holiday home",
     ctaPrimary: "View gallery",
@@ -223,27 +227,21 @@ const en: Messages = {
       "Starlink / Wi-Fi — mention only if true",
     ],
     highlightsTitle: "Highlights",
-    sideImageAlt: "Holiday home and mountain surroundings — placeholder photo",
+    sideImageAlt: "Stars Peak holiday home — view of the house and setting",
   },
   gallery: {
     title: "Gallery",
     intro:
-      "Eight square tiles in a seamless grid — click any photo for a larger carousel. Use arrow keys or the side buttons to browse.",
+      "Photos from the property in one seamless grid — open any picture to view it larger. Use the arrow keys or the side buttons to browse.",
     lightboxClose: "Close gallery",
     lightboxPrev: "Previous image",
     lightboxNext: "Next image",
     lightboxAria: "Enlarged photo gallery",
     lightboxOpenThumb: "Open larger view",
-    images: [
-      { alt: "Placeholder ridge and forest from above", caption: "Ridge trail — replace" },
-      { alt: "Placeholder mist over the valley", caption: "Morning valley — replace" },
-      { alt: "Placeholder stone wall and path", caption: "Approach path — replace" },
-      { alt: "Placeholder interior window seat", caption: "Window nook — replace" },
-      { alt: "Placeholder wood stove corner", caption: "Evening warmth — replace" },
-      { alt: "Placeholder deck with mountain view", caption: "Deck view — replace" },
-      { alt: "Placeholder wildflowers meadow", caption: "Meadow nearby — replace" },
-      { alt: "Placeholder starry sky over peaks", caption: "Night sky — replace" },
-    ],
+    images: Array.from({ length: 16 }, (_, i) => ({
+      alt: `Stars Peak holiday home — gallery photo ${i + 1}`,
+      caption: `Gallery — ${i + 1}`,
+    })),
   },
   contact: {
     title: "Contact",
@@ -298,11 +296,13 @@ const hr: Messages = {
       "Uvijek imate tihe staze za šetnju i topli dom za povratak — vaša baza u velebitskim bregima.",
     heroCtaPill: "Od 129 € / noć · mock cijena",
     heroSlideAlts: [
+      "Kuća za odmor — fotografija 3",
       "Kuća za odmor — fotografija 1",
       "Kuća za odmor — fotografija 2",
-      "Kuća za odmor — fotografija 3",
       "Kuća za odmor — fotografija 4",
     ],
+    heroCarouselPrev: "Prethodna slika",
+    heroCarouselNext: "Sljedeća slika",
     heroSubscribeLine: "Posebne ponude stižu izravno na vašu e-poštu.",
     heroEmailPlaceholder: "Unesite e-adresu",
     heroSubscribeButton: "Pretplati se",
@@ -392,27 +392,21 @@ const hr: Messages = {
       "Starlink / Wi-Fi — navedite samo ako vrijedi",
     ],
     highlightsTitle: "Sažeto",
-    sideImageAlt: "Kuća za odmor i planinski krajolik — probna fotografija",
+    sideImageAlt: "Kuća Stars Peak — pogled na objekt i okruženje",
   },
   gallery: {
     title: "Galerija",
     intro:
-      "Osam kvadrata u mozaiku bez razmaka — dodirnite bilo koju sliku za veći pregled i carousel. Strelicama na tipkovnici ili gumbima listate dalje.",
+      "Fotografije objekta u jednom mozaiku — dodirnite sliku za veći prikaz. Strelicama na tipkovnici ili gumbima listate dalje.",
     lightboxClose: "Zatvori galeriju",
     lightboxPrev: "Prethodna slika",
     lightboxNext: "Sljedeća slika",
     lightboxAria: "Povećani prikaz galerije",
     lightboxOpenThumb: "Otvori veći prikaz",
-    images: [
-      { alt: "Probni pogled na greben i šumu odozgo", caption: "Staza na grebenu — zamijeniti" },
-      { alt: "Probna magla iznad doline u zoru", caption: "Jutarnja dolina — zamijeniti" },
-      { alt: "Probni kameni zid i staza", caption: "Staza do ulaza — zamijeniti" },
-      { alt: "Probni kutak uz prozor", caption: "Kut uz prozor — zamijeniti" },
-      { alt: "Probni kutak s peć na drva", caption: "Večer uz kamin — zamijeniti" },
-      { alt: "Probna terasa s planinskim pogledom", caption: "Pogled s terase — zamijeniti" },
-      { alt: "Probna livada s cvijećem", caption: "Livada u blizini — zamijeniti" },
-      { alt: "Probno zvjezdano nebo iznad vrhova", caption: "Noćno nebo — zamijeniti" },
-    ],
+    images: Array.from({ length: 16 }, (_, i) => ({
+      alt: `Kuća za odmor Stars Peak — galerija, fotografija ${i + 1}`,
+      caption: `Galerija — ${i + 1}`,
+    })),
   },
   contact: {
     title: "Kontakt",
@@ -467,11 +461,13 @@ const de: Messages = {
       "Immer ruhige Wege zum Wandern und ein warmes Haus zum Zurückkehren — Ihre Basis in den Velebit-Hügeln.",
     heroCtaPill: "Ab 129 € / Nacht · Platzhalterpreis",
     heroSlideAlts: [
+      "Ferienhaus — Foto 3",
       "Ferienhaus — Foto 1",
       "Ferienhaus — Foto 2",
-      "Ferienhaus — Foto 3",
       "Ferienhaus — Foto 4",
     ],
+    heroCarouselPrev: "Vorheriges Bild",
+    heroCarouselNext: "Nächstes Bild",
     heroSubscribeLine: "Spezialangebote direkt in Ihrer E-Mail.",
     heroEmailPlaceholder: "E-Mail-Adresse eingeben",
     heroSubscribeButton: "Abonnieren",
@@ -561,27 +557,21 @@ const de: Messages = {
       "Starlink / WLAN — nur wenn vorhanden",
     ],
     highlightsTitle: "Auf einen Blick",
-    sideImageAlt: "Ferienhaus und Berglandschaft — Platzhalterfoto",
+    sideImageAlt: "Ferienhaus Stars Peak — Haus und Umgebung",
   },
   gallery: {
     title: "Galerie",
     intro:
-      "Acht quadratische Kacheln ohne Zwischenraum — Foto antippen für Vollbild-Carousel. Pfeiltasten oder Seitenknöpfe zum Blättern.",
+      "Fotos vom Objekt in einem nahtlosen Raster — antippen für die Großansicht. Pfeiltasten oder Seitenknöpfe zum Blättern.",
     lightboxClose: "Galerie schließen",
     lightboxPrev: "Vorheriges Bild",
     lightboxNext: "Nächstes Bild",
     lightboxAria: "Vergrößerte Galerie",
     lightboxOpenThumb: "Größere Ansicht öffnen",
-    images: [
-      { alt: "Platzhalter Grat und Wald von oben", caption: "Gratweg — ersetzen" },
-      { alt: "Platzhalter Morgennebel im Tal", caption: "Morgental — ersetzen" },
-      { alt: "Platzhalter Steinmauer und Pfad", caption: "Zugangspfad — ersetzen" },
-      { alt: "Platzhalter Fensterecke innen", caption: "Leseecke — ersetzen" },
-      { alt: "Platzhalter Ofenecke", caption: "Abend am Ofen — ersetzen" },
-      { alt: "Platzhalter Terrasse mit Aussicht", caption: "Terrassenblick — ersetzen" },
-      { alt: "Platzhalter Blumenwiese", caption: "Wiese in der Nähe — ersetzen" },
-      { alt: "Platzhalter Sternenhimmel über Gipfeln", caption: "Nachthimmel — ersetzen" },
-    ],
+    images: Array.from({ length: 16 }, (_, i) => ({
+      alt: `Ferienhaus Stars Peak — Galeriefoto ${i + 1}`,
+      caption: `Galerie — ${i + 1}`,
+    })),
   },
   contact: {
     title: "Kontakt",

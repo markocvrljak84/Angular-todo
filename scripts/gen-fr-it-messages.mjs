@@ -97,11 +97,13 @@ fr.home.filmCaption =
   "Court extrait de la région — lancez la lecture avec les commandes du lecteur.";
 fr.home.heroCtaPill = "À partir de 129 € / nuit · tarif démo";
 fr.home.heroSlideAlts = [
+  "Maison de vacances — photo 3",
   "Maison de vacances — photo 1",
   "Maison de vacances — photo 2",
-  "Maison de vacances — photo 3",
   "Maison de vacances — photo 4",
 ];
+fr.home.heroCarouselPrev = "Image précédente";
+fr.home.heroCarouselNext = "Image suivante";
 fr.home.statsLine = "Logement entier · 6 couchages · 3 chambres · 2 salles de bain";
 fr.home.heroImageAlt = "Photo extérieure de démonstration de la maison";
 fr.home.ctaPrimary = "Voir la galerie";
@@ -147,19 +149,23 @@ fr.about = {
     "Starlink / Wi-Fi — indiquez seulement si c’est vrai",
   ],
   highlightsTitle: "Points forts",
-  sideImageAlt: "Maison de vacances et paysage de montagne — photo de démonstration",
+  sideImageAlt: "Maison de vacances Stars Peak — vue du logement et du site",
 };
 fr.gallery = {
   ...fr.gallery,
   title: "Galerie",
   intro:
-    "Huit carrés sans espace — cliquez une photo pour l’agrandir et faire défiler. Flèches du clavier ou boutons latéraux.",
+    "Photos du logement dans une grille continue — ouvrez une image pour l’agrandir. Flèches du clavier ou boutons latéraux.",
   lightboxClose: "Fermer la galerie",
   lightboxPrev: "Image précédente",
   lightboxNext: "Image suivante",
   lightboxAria: "Galerie agrandie",
   lightboxOpenThumb: "Ouvrir en grand",
 };
+fr.gallery.images = Array.from({ length: 16 }, (_, i) => ({
+  alt: `Maison de vacances Stars Peak — photo ${i + 1}`,
+  caption: `Galerie — ${i + 1}`,
+}));
 fr.contact = {
   title: "Contact",
   intro: "Joignez-nous par téléphone ou e-mail, ou rendez-vous à l’adresse ci-dessous.",
@@ -252,11 +258,13 @@ it.home.filmCaption =
   "Breve clip dalla zona — avvia la riproduzione con i controlli del player.";
 it.home.heroCtaPill = "Da 129 € / notte · tariffa demo";
 it.home.heroSlideAlts = [
+  "Casa vacanze — foto 3",
   "Casa vacanze — foto 1",
   "Casa vacanze — foto 2",
-  "Casa vacanze — foto 3",
   "Casa vacanze — foto 4",
 ];
+it.home.heroCarouselPrev = "Immagine precedente";
+it.home.heroCarouselNext = "Immagine successiva";
 it.home.statsLine = "Intera casa · 6 posti letto · 3 camere · 2 bagni";
 it.home.heroImageAlt = "Foto esterna dimostrativa della casa vacanze";
 it.home.ctaPrimary = "Apri galleria";
@@ -302,19 +310,23 @@ it.about = {
     "Starlink / Wi-Fi — indica solo se vero",
   ],
   highlightsTitle: "In sintesi",
-  sideImageAlt: "Casa vacanze e paesaggio montano — foto dimostrativa",
+  sideImageAlt: "Casa vacanze Stars Peak — vista della struttura e del contesto",
 };
 it.gallery = {
   ...it.gallery,
   title: "Galleria",
   intro:
-    "Otto quadrati senza spazi — tocca una foto per ingrandire e scorrere. Frecce della tastiera o pulsanti laterali.",
+    "Foto della struttura in una griglia continua — tocca per ingrandire. Frecce della tastiera o pulsanti laterali.",
   lightboxClose: "Chiudi galleria",
   lightboxPrev: "Immagine precedente",
   lightboxNext: "Immagine successiva",
   lightboxAria: "Galleria ingrandita",
   lightboxOpenThumb: "Apri vista grande",
 };
+it.gallery.images = Array.from({ length: 16 }, (_, i) => ({
+  alt: `Casa vacanze Stars Peak — foto ${i + 1}`,
+  caption: `Galleria — ${i + 1}`,
+}));
 it.contact = {
   title: "Contatti",
   intro: "Contattaci per telefono o e-mail, oppure visitaci all’indirizzo sotto.",

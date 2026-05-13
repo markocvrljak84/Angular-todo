@@ -69,11 +69,13 @@
     "filmCaption": "Court extrait de la région — lancez la lecture avec les commandes du lecteur.",
     "heroCtaPill": "À partir de 129 € / nuit · tarif démo",
     "heroSlideAlts": [
+      "Maison de vacances — photo 3",
       "Maison de vacances — photo 1",
       "Maison de vacances — photo 2",
-      "Maison de vacances — photo 3",
       "Maison de vacances — photo 4"
     ],
+    "heroCarouselPrev": "Image précédente",
+    "heroCarouselNext": "Image suivante",
     "statsLine": "Logement entier · 6 couchages · 3 chambres · 2 salles de bain",
     "heroImageAlt": "Photo extérieure de démonstration de la maison",
     "ctaPrimary": "Voir la galerie",
@@ -124,11 +126,11 @@
       "Starlink / Wi-Fi — indiquez seulement si c’est vrai"
     ],
     "highlightsTitle": "Points forts",
-    "sideImageAlt": "Maison de vacances et paysage de montagne — photo de démonstration"
+    "sideImageAlt": "Maison de vacances Stars Peak — vue du logement et du site"
   },
   "gallery": {
     "title": "Galerie",
-    "intro": "Huit carrés sans espace — cliquez une photo pour l’agrandir et faire défiler. Flèches du clavier ou boutons latéraux.",
+    "intro": "Photos du logement dans une grille continue — ouvrez une image pour l’agrandir. Flèches du clavier ou boutons latéraux.",
     "lightboxClose": "Fermer la galerie",
     "lightboxPrev": "Image précédente",
     "lightboxNext": "Image suivante",
@@ -136,36 +138,68 @@
     "lightboxOpenThumb": "Ouvrir en grand",
     "images": [
       {
-        "alt": "Placeholder ridge and forest from above",
-        "caption": "Ridge trail — replace"
+        "alt": "Maison de vacances Stars Peak — photo 1",
+        "caption": "Galerie — 1"
       },
       {
-        "alt": "Placeholder mist over the valley",
-        "caption": "Morning valley — replace"
+        "alt": "Maison de vacances Stars Peak — photo 2",
+        "caption": "Galerie — 2"
       },
       {
-        "alt": "Placeholder stone wall and path",
-        "caption": "Approach path — replace"
+        "alt": "Maison de vacances Stars Peak — photo 3",
+        "caption": "Galerie — 3"
       },
       {
-        "alt": "Placeholder interior window seat",
-        "caption": "Window nook — replace"
+        "alt": "Maison de vacances Stars Peak — photo 4",
+        "caption": "Galerie — 4"
       },
       {
-        "alt": "Placeholder wood stove corner",
-        "caption": "Evening warmth — replace"
+        "alt": "Maison de vacances Stars Peak — photo 5",
+        "caption": "Galerie — 5"
       },
       {
-        "alt": "Placeholder deck with mountain view",
-        "caption": "Deck view — replace"
+        "alt": "Maison de vacances Stars Peak — photo 6",
+        "caption": "Galerie — 6"
       },
       {
-        "alt": "Placeholder wildflowers meadow",
-        "caption": "Meadow nearby — replace"
+        "alt": "Maison de vacances Stars Peak — photo 7",
+        "caption": "Galerie — 7"
       },
       {
-        "alt": "Placeholder starry sky over peaks",
-        "caption": "Night sky — replace"
+        "alt": "Maison de vacances Stars Peak — photo 8",
+        "caption": "Galerie — 8"
+      },
+      {
+        "alt": "Maison de vacances Stars Peak — photo 9",
+        "caption": "Galerie — 9"
+      },
+      {
+        "alt": "Maison de vacances Stars Peak — photo 10",
+        "caption": "Galerie — 10"
+      },
+      {
+        "alt": "Maison de vacances Stars Peak — photo 11",
+        "caption": "Galerie — 11"
+      },
+      {
+        "alt": "Maison de vacances Stars Peak — photo 12",
+        "caption": "Galerie — 12"
+      },
+      {
+        "alt": "Maison de vacances Stars Peak — photo 13",
+        "caption": "Galerie — 13"
+      },
+      {
+        "alt": "Maison de vacances Stars Peak — photo 14",
+        "caption": "Galerie — 14"
+      },
+      {
+        "alt": "Maison de vacances Stars Peak — photo 15",
+        "caption": "Galerie — 15"
+      },
+      {
+        "alt": "Maison de vacances Stars Peak — photo 16",
+        "caption": "Galerie — 16"
       }
     ]
   },
