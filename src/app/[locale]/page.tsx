@@ -5,7 +5,8 @@ import { getMessages } from "@/i18n/messages";
 import { HeroFullscreenCarousel } from "@/components/hero-fullscreen-carousel";
 import { ScrollTopArrow } from "@/components/scroll-top-arrow";
 import { GalleryGridLightbox } from "@/components/gallery-grid-lightbox";
-import { VideoViewportSection } from "@/components/video-viewport-section";
+import { FilmYoutubeSection } from "@/components/film-youtube-section";
+import { getGoogleMapsUrls } from "@/config/contact-map";
 
 export const dynamic = "force-static";
 
@@ -34,12 +35,8 @@ const ITINERARY_SEEDS = [
   "starspeak-itin-3",
 ] as const;
 
-const FILM_VIDEO =
-  "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" as const;
-const FILM_POSTER_SEED = "starspeak-film-poster" as const;
-
-/** Geocoding query for Google Maps (embed + external link) */
-const CONTACT_MAP_QUERY = "Došen Dabar 1, Croatia";
+/** YouTube video for #film section */
+const FILM_YOUTUBE_ID = "QNfDBgtFSdc" as const;
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -50,8 +47,7 @@ export default async function HomePage({ params }: Props) {
   const t = getMessages(locale);
 
   const mapHl = locale === "hr" ? "hr" : locale === "de" ? "de" : "en";
-  const googleMapEmbedSrc = `https://www.google.com/maps?q=${encodeURIComponent(CONTACT_MAP_QUERY)}&hl=${mapHl}&z=16&output=embed`;
-  const googleMapOpenHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(CONTACT_MAP_QUERY)}`;
+  const { embedSrc: googleMapEmbedSrc, openHref: googleMapOpenHref } = getGoogleMapsUrls(mapHl);
 
   const heroSlides = MAIN_CAROUSEL_IMAGES.map((file, i) => ({
     src: `/img/main-carousel/${file}`,
@@ -160,12 +156,10 @@ export default async function HomePage({ params }: Props) {
         </div>
       </section>
 
-      <VideoViewportSection
-        videoSrc={FILM_VIDEO}
-        posterSrc={`https://picsum.photos/seed/${FILM_POSTER_SEED}/1920/1080`}
+      <FilmYoutubeSection
+        videoId={FILM_YOUTUBE_ID}
         title={t.home.filmTitle}
-        hint={t.home.filmHint}
-        unmuteLabel={t.home.filmUnmute}
+        caption={t.home.filmCaption}
       />
 
       <section

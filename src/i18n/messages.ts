@@ -37,10 +37,9 @@ export type Messages = {
     itineraryTitle: string;
     itineraryImageAlts: string[];
     itineraryDays: { label: string; headline: string; body: string }[];
-    /** Full-viewport film strip (#film) */
+    /** YouTube block (#film) */
     filmTitle: string;
-    filmHint: string;
-    filmUnmute: string;
+    filmCaption: string;
     statsLine: string;
     heroImageAlt: string;
     ctaPrimary: string;
@@ -156,9 +155,7 @@ const en: Messages = {
       },
     ],
     filmTitle: "A moment on the trail",
-    filmHint:
-      "The clip starts when this block is on screen. Many browsers mute autoplay until you interact — tap Enable sound if you do not hear audio.",
-    filmUnmute: "Enable sound",
+    filmCaption: "Short clip from the area — play with the controls below.",
     heroCtaPill: "From €129 / night · mock rate",
     heroSlideAlts: [
       "Holiday home — photo 1",
@@ -326,9 +323,7 @@ const hr: Messages = {
       },
     ],
     filmTitle: "Trenutak na stazi",
-    filmHint:
-      "Video kreće kad je ovaj blok u kadru. Preglednici često utišaju automatsku reprodukciju dok ne dodirnete zaslon — dodirnite Uključi zvuk ako ne čujete ton.",
-    filmUnmute: "Uključi zvuk",
+    filmCaption: "Kratki video područja — reproduciraj kontrolama u playeru.",
     statsLine: "Cijela kuća · Do 6 osoba · 3 spavaće sobe · 2 kupaonice",
     heroImageAlt: "Probna vanjska fotografija kuće za odmor",
     ctaPrimary: "Galerija",
@@ -489,9 +484,7 @@ const de: Messages = {
       },
     ],
     filmTitle: "Ein Moment auf dem Weg",
-    filmHint:
-      "Das Video startet, wenn dieser Block sichtbar ist. Viele Browser stellen Autoplay stumm, bis Sie tippen — auf Ton aktivieren tippen, falls Sie nichts hören.",
-    filmUnmute: "Ton aktivieren",
+    filmCaption: "Kurzer Clip aus der Umgebung — mit den Player-Steuerungen abspielen.",
     statsLine: "Gesamtes Haus · 6 Gäste · 3 Schlafzimmer · 2 Bäder",
     heroImageAlt: "Platzhalter-Außenfoto des Ferienhauses",
     ctaPrimary: "Zur Galerie",
