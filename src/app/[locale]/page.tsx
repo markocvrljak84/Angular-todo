@@ -2,7 +2,6 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { isLocale, type Locale } from "@/i18n/config";
 import { getMessages } from "@/i18n/messages";
-import { ContactForm } from "@/components/contact-form";
 import { HeroFullscreenCarousel } from "@/components/hero-fullscreen-carousel";
 import { ScrollTopArrow } from "@/components/scroll-top-arrow";
 import { GalleryGridLightbox } from "@/components/gallery-grid-lightbox";
@@ -10,12 +9,12 @@ import { VideoViewportSection } from "@/components/video-viewport-section";
 
 export const dynamic = "force-static";
 
-const HERO_FS_SEEDS = [
-  "starspeak-fs-1",
-  "starspeak-fs-2",
-  "starspeak-fs-3",
-  "starspeak-fs-4",
-  "starspeak-fs-5",
+/** Hero carousel — images in /public/img/main-carousel */
+const MAIN_CAROUSEL_IMAGES = [
+  "571275863_122102378865084437_4800487342368999167_n.jpg",
+  "578265540_122104807869084437_5111680495021054907_n.jpg",
+  "581480514_122107015833084437_6966149935686680015_n.jpg",
+  "585009655_122107017075084437_1671659401079838438_n.jpg",
 ] as const;
 
 const GALLERY_SEEDS = [
@@ -54,8 +53,8 @@ export default async function HomePage({ params }: Props) {
   const googleMapEmbedSrc = `https://www.google.com/maps?q=${encodeURIComponent(CONTACT_MAP_QUERY)}&hl=${mapHl}&z=16&output=embed`;
   const googleMapOpenHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(CONTACT_MAP_QUERY)}`;
 
-  const heroSlides = HERO_FS_SEEDS.map((seed, i) => ({
-    src: `https://picsum.photos/seed/${seed}/1920/1080`,
+  const heroSlides = MAIN_CAROUSEL_IMAGES.map((file, i) => ({
+    src: `/img/main-carousel/${file}`,
     alt: t.home.heroSlideAlts[i] ?? t.home.heroImageAlt,
   }));
 
@@ -261,8 +260,8 @@ export default async function HomePage({ params }: Props) {
             <div className="flat-contact__info">
               <h3 className="flat-contact__h">{t.contact.detailsHeading}</h3>
               <dl className="flat-dl">
-                <dt>{t.contact.addressLabel}</dt>
-                <dd>{t.contact.addressMock}</dd>
+                <dt>{t.contact.nameLabel}</dt>
+                <dd>{t.contact.contactName}</dd>
                 <dt>{t.contact.phoneLabel}</dt>
                 <dd>
                   <a href={`tel:${t.contact.phoneMock.replace(/\s/g, "")}`}>
@@ -275,18 +274,9 @@ export default async function HomePage({ params }: Props) {
                     {t.contact.emailMock}
                   </a>
                 </dd>
+                <dt>{t.contact.addressLabel}</dt>
+                <dd>{t.contact.addressMock}</dd>
               </dl>
-            </div>
-            <div className="flat-contact__form">
-              <h3 className="flat-contact__h">{t.contact.messageHeading}</h3>
-              <ContactForm
-                nameLabel={t.contact.formName}
-                emailLabel={t.contact.formEmail}
-                messageLabel={t.contact.formMessage}
-                submitLabel={t.contact.submit}
-                formNote={t.contact.formNote}
-                mockToast={t.contact.mockToast}
-              />
             </div>
           </div>
 

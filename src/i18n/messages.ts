@@ -76,20 +76,15 @@ export type Messages = {
   contact: {
     title: string;
     intro: string;
+    nameLabel: string;
+    contactName: string;
     addressLabel: string;
     addressMock: string;
     phoneLabel: string;
     phoneMock: string;
     emailLabel: string;
     emailMock: string;
-    formName: string;
-    formEmail: string;
-    formMessage: string;
-    submit: string;
-    formNote: string;
     detailsHeading: string;
-    messageHeading: string;
-    mockToast: string;
     mapHeading: string;
     mapIframeTitle: string;
     mapOpenGoogle: string;
@@ -166,11 +161,10 @@ const en: Messages = {
     filmUnmute: "Enable sound",
     heroCtaPill: "From €129 / night · mock rate",
     heroSlideAlts: [
-      "Mountain ridge at dusk — placeholder",
-      "Forest path in morning mist — placeholder",
-      "Wooden cabin exterior — placeholder",
-      "Valley view from elevation — placeholder",
-      "Lake and peaks panorama — placeholder",
+      "Holiday home — photo 1",
+      "Holiday home — photo 2",
+      "Holiday home — photo 3",
+      "Holiday home — photo 4",
     ],
     statsLine: "Entire home · Sleeps 6 · 3 bedrooms · 2 bathrooms",
     heroImageAlt: "Placeholder exterior photo of the holiday home",
@@ -244,22 +238,16 @@ const en: Messages = {
   },
   contact: {
     title: "Contact",
-    intro:
-      "This form does not send mail yet — wire it to your inbox or a form service later. Details below are fake.",
+    intro: "Reach us by phone or email, or visit us at the address below.",
+    nameLabel: "Name",
+    contactName: "Velebit Stars Peak",
     addressLabel: "Address",
     addressMock: "Došen Dabar 1, Croatia",
-    phoneLabel: "Phone (mock)",
+    phoneLabel: "Phone",
     phoneMock: "+385 99 000 0000",
-    emailLabel: "Email (mock)",
-    emailMock: "hello@starspeak.example",
-    formName: "Name",
-    formEmail: "Email",
-    formMessage: "Message",
-    submit: "Send (mock)",
-    formNote: "Submitting shows a demo alert only.",
+    emailLabel: "Email",
+    emailMock: "info@velebit-starspeak.com",
     detailsHeading: "Details",
-    messageHeading: "Message",
-    mockToast: "Demo only — connect this form to email or a provider later.",
     mapHeading: "Map",
     mapIframeTitle: "Google Map — Došen Dabar 1, Croatia",
     mapOpenGoogle: "Open in Google Maps",
@@ -300,11 +288,10 @@ const hr: Messages = {
       "Uvijek imate tihe staze za šetnju i topli dom za povratak — vaša baza u velebitskim bregima.",
     heroCtaPill: "Od 129 € / noć · mock cijena",
     heroSlideAlts: [
-      "Planinski greben u sumrak — probna slika",
-      "Šumski put u jutarnjoj magli — probna slika",
-      "Drvena kuća, vanjski izgled — probna slika",
-      "Pogled na dolinu s visine — probna slika",
-      "Jezero i planinski vijenac — probna slika",
+      "Kuća za odmor — fotografija 1",
+      "Kuća za odmor — fotografija 2",
+      "Kuća za odmor — fotografija 3",
+      "Kuća za odmor — fotografija 4",
     ],
     heroSubscribeLine: "Posebne ponude stižu izravno na vašu e-poštu.",
     heroEmailPlaceholder: "Unesite e-adresu",
@@ -414,22 +401,16 @@ const hr: Messages = {
   },
   contact: {
     title: "Kontakt",
-    intro:
-      "Formular još ne šalje e-poštu — kasnije povežite s inboxom ili servisom. Podaci su izmišljeni.",
+    intro: "Javite se telefonom ili e-poštom ili nas posjetite na adresi.",
+    nameLabel: "Naziv",
+    contactName: "Velebit Stars Peak",
     addressLabel: "Adresa",
     addressMock: "Došen Dabar 1, Hrvatska",
-    phoneLabel: "Telefon (mock)",
+    phoneLabel: "Telefon",
     phoneMock: "+385 99 000 0000",
-    emailLabel: "E-pošta (mock)",
-    emailMock: "hello@starspeak.example",
-    formName: "Ime",
-    formEmail: "E-pošta",
-    formMessage: "Poruka",
-    submit: "Pošalji (mock)",
-    formNote: "Slanje prikazuje samo demo obavijest.",
+    emailLabel: "E-pošta",
+    emailMock: "info@velebit-starspeak.com",
     detailsHeading: "Podaci",
-    messageHeading: "Poruka",
-    mockToast: "Samo demo — kasnije povežite formular s e-poštom ili servisom.",
     mapHeading: "Karta",
     mapIframeTitle: "Google karta — Došen Dabar 1, Hrvatska",
     mapOpenGoogle: "Otvori u Google Kartama",
@@ -470,11 +451,10 @@ const de: Messages = {
       "Immer ruhige Wege zum Wandern und ein warmes Haus zum Zurückkehren — Ihre Basis in den Velebit-Hügeln.",
     heroCtaPill: "Ab 129 € / Nacht · Platzhalterpreis",
     heroSlideAlts: [
-      "Gebirgskamm in der Dämmerung — Platzhalter",
-      "Waldpfad im Morgennebel — Platzhalter",
-      "Holzhaus Außenansicht — Platzhalter",
-      "Talblick von oben — Platzhalter",
-      "See und Gipfelpanorama — Platzhalter",
+      "Ferienhaus — Foto 1",
+      "Ferienhaus — Foto 2",
+      "Ferienhaus — Foto 3",
+      "Ferienhaus — Foto 4",
     ],
     heroSubscribeLine: "Spezialangebote direkt in Ihrer E-Mail.",
     heroEmailPlaceholder: "E-Mail-Adresse eingeben",
@@ -584,22 +564,16 @@ const de: Messages = {
   },
   contact: {
     title: "Kontakt",
-    intro:
-      "Dieses Formular sendet noch keine E-Mails — später anbinden. Angaben sind erfunden.",
+    intro: "Erreichen Sie uns telefonisch oder per E-Mail, oder besuchen Sie uns vor Ort.",
+    nameLabel: "Name",
+    contactName: "Velebit Stars Peak",
     addressLabel: "Adresse",
     addressMock: "Došen Dabar 1, Kroatien",
-    phoneLabel: "Telefon (Mock)",
+    phoneLabel: "Telefon",
     phoneMock: "+385 99 000 0000",
-    emailLabel: "E-Mail (Mock)",
-    emailMock: "hello@starspeak.example",
-    formName: "Name",
-    formEmail: "E-Mail",
-    formMessage: "Nachricht",
-    submit: "Senden (Mock)",
-    formNote: "Absenden zeigt nur eine Demo-Meldung.",
+    emailLabel: "E-Mail",
+    emailMock: "info@velebit-starspeak.com",
     detailsHeading: "Kontaktdaten",
-    messageHeading: "Nachricht",
-    mockToast: "Nur Demo — Formular später mit E-Mail oder Dienst verbinden.",
     mapHeading: "Karte",
     mapIframeTitle: "Google Karte — Došen Dabar 1, Kroatien",
     mapOpenGoogle: "In Google Maps öffnen",
