@@ -11,7 +11,7 @@ type Props = {
   t: Messages;
 };
 
-const SECTION_IDS = ["top", "things", "gallery", "about", "contact"] as const;
+const SECTION_IDS = ["top", "about", "gallery", "film", "nearby", "contact"] as const;
 
 export function SiteHeader({ locale, t }: Props) {
   const base = `/${locale}`;
@@ -56,9 +56,10 @@ export function SiteHeader({ locale, t }: Props) {
 
   const nav = [
     { id: "top" as const, href: `${base}#top`, label: t.nav.home },
-    { id: "things" as const, href: `${base}#things`, label: t.nav.things },
-    { id: "gallery" as const, href: `${base}#gallery`, label: t.nav.gallery },
     { id: "about" as const, href: `${base}#about`, label: t.nav.about },
+    { id: "gallery" as const, href: `${base}#gallery`, label: t.nav.gallery },
+    { id: "film" as const, href: `${base}#film`, label: t.nav.film },
+    { id: "nearby" as const, href: `${base}#nearby`, label: t.nav.nearby },
     { id: "contact" as const, href: `${base}#contact`, label: t.nav.contact },
   ];
 

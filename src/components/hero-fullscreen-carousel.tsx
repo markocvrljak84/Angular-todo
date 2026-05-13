@@ -17,7 +17,7 @@ type Props = {
   intervalMs?: number;
 };
 
-const DEFAULT_INTERVAL = 5500;
+const DEFAULT_INTERVAL = 3200;
 
 export function HeroFullscreenCarousel({
   slides,

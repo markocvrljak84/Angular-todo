@@ -6,9 +6,10 @@ export function SiteFooter({ t, locale }: { t: Messages; locale: Locale }) {
   const base = `/${locale}`;
   const links = [
     { href: `${base}#top`, label: t.nav.home },
-    { href: `${base}#things`, label: t.nav.things },
-    { href: `${base}#gallery`, label: t.nav.gallery },
     { href: `${base}#about`, label: t.nav.about },
+    { href: `${base}#gallery`, label: t.nav.gallery },
+    { href: `${base}#film`, label: t.nav.film },
+    { href: `${base}#nearby`, label: t.nav.nearby },
     { href: `${base}#contact`, label: t.nav.contact },
   ];
 

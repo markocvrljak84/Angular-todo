@@ -33,9 +33,10 @@ const ITINERARY_SEEDS = [
   "starspeak-itin-2",
   "starspeak-itin-3",
   "starspeak-itin-premuzic",
+  "starspeak-itin-ridge",
 ] as const;
 
-const THINGS_ROW_SEEDS = ["starspeak-things-r1", "starspeak-things-r2"] as const;
+const ABOUT_SIDE_SEED = "starspeak-about-column" as const;
 
 /** YouTube video for #film section */
 const FILM_YOUTUBE_ID = "QNfDBgtFSdc" as const;
@@ -48,7 +49,8 @@ export default async function HomePage({ params }: Props) {
   const locale = l as Locale;
   const t = getMessages(locale);
 
-  const mapHl = locale === "hr" ? "hr" : locale === "de" ? "de" : "en";
+  const mapHl =
+    locale === "hr" ? "hr" : locale === "de" ? "de" : locale === "fr" ? "fr" : locale === "it" ? "it" : "en";
   const { embedSrc: googleMapEmbedSrc, openHref: googleMapOpenHref } = getGoogleMapsUrls(mapHl);
 
   const heroSlides = MAIN_CAROUSEL_IMAGES.map((file, i) => ({
@@ -70,56 +72,101 @@ export default async function HomePage({ params }: Props) {
       />
 
       <section
-        id="things"
-        className="things-intro"
-        aria-labelledby="things-title"
+        id="about"
+        className="flat-section flat-section--tint"
+        aria-labelledby="about-title"
       >
-        <h2 id="things-title" className="things-intro__title">
-          {t.home.thingsTitle}
-        </h2>
-        <p className="things-intro__headline">
-          <span className="things-intro__caps">{t.home.thingsHeadBefore}</span>{" "}
-          <span className="things-intro__accent">
-            {t.home.thingsHeadAccent}
-          </span>{" "}
-          <span className="things-intro__caps">{t.home.thingsHeadAfter}</span>
-        </p>
+        <div className="flat-wrap">
+          <h2 id="about-title" className="flat-section__title">
+            {t.about.title}
+          </h2>
+          <p className="flat-section__intro">{t.about.lead}</p>
 
-        <div className="things-rows">
-          {t.home.thingsRows.map((row, i) => {
-            const seed = THINGS_ROW_SEEDS[i] ?? `starspeak-things-${i}`;
-            return (
-              <article
-                key={row.title}
-                className={`things-row${i % 2 === 1 ? " things-row--reverse" : ""}`}
-              >
-                <div className="things-row__media">
-                  <Image
-                    src={`https://picsum.photos/seed/${seed}/960/720`}
-                    alt={row.imageAlt}
-                    fill
-                    className="things-row__img"
-                    sizes="(max-width: 767px) 100vw, 45vw"
-                  />
-                </div>
-                <div className="things-row__text">
-                  <h3 className="things-row__title">{row.title}</h3>
-                  <p className="things-row__body">{row.body}</p>
-                </div>
-              </article>
-            );
-          })}
+          <div className="flat-about">
+            <div className="flat-about__main">
+              <p>{t.about.p1}</p>
+              <p>{t.about.p2}</p>
+              <h3 className="flat-about__sub">{t.about.highlightsTitle}</h3>
+              <ul className="flat-list">
+                {t.about.highlights.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+            <aside className="flat-about__side" aria-label={t.about.sideImageAlt}>
+              <div className="flat-about__side-media">
+                <Image
+                  src={`https://picsum.photos/seed/${ABOUT_SIDE_SEED}/1200/675`}
+                  alt={t.about.sideImageAlt}
+                  fill
+                  className="flat-about__side-img"
+                  sizes="(max-width: 799px) 100vw, 50vw"
+                />
+              </div>
+            </aside>
+          </div>
+
+          <div className="flat-tiles">
+            {t.home.features.map((f) => (
+              <div key={f.title} className="flat-tile">
+                <h3 className="flat-tile__h">{f.title}</h3>
+                <p>{f.body}</p>
+              </div>
+            ))}
+          </div>
+
+          <blockquote className="flat-quote">{t.home.quote}</blockquote>
         </div>
       </section>
 
       <section
-        id="itinerary"
-        className="itinerary"
-        aria-labelledby="itinerary-title"
+        id="gallery"
+        className="flat-section"
+        aria-labelledby="gallery-title"
       >
-        <h2 id="itinerary-title" className="itinerary__title">
-          {t.home.itineraryTitle}
-        </h2>
+        <div className="flat-wrap">
+          <h2 id="gallery-title" className="flat-section__title">
+            {t.gallery.title}
+          </h2>
+          <p className="flat-section__intro">{t.gallery.intro}</p>
+          <GalleryGridLightbox
+            slides={GALLERY_SEEDS.map((seed, i) => {
+              const meta = t.gallery.images[i];
+              return {
+                srcThumb: `https://picsum.photos/seed/${seed}/800/800`,
+                srcLarge: `https://picsum.photos/seed/${seed}/1600/1600`,
+                alt: meta?.alt ?? "",
+                caption: meta?.caption ?? "",
+              };
+            })}
+            labels={{
+              close: t.gallery.lightboxClose,
+              prev: t.gallery.lightboxPrev,
+              next: t.gallery.lightboxNext,
+              dialog: t.gallery.lightboxAria,
+              openThumb: t.gallery.lightboxOpenThumb,
+            }}
+          />
+        </div>
+      </section>
+
+      <FilmYoutubeSection
+        videoId={FILM_YOUTUBE_ID}
+        title={t.home.filmTitle}
+        caption={t.home.filmCaption}
+      />
+
+      <section
+        id="nearby"
+        className="itinerary"
+        aria-labelledby="nearby-title"
+      >
+        <header className="itinerary__header">
+          <h2 id="nearby-title" className="itinerary__title">
+            {t.home.nearbyTitle}
+          </h2>
+          <p className="itinerary__lead">{t.home.nearbyLead}</p>
+        </header>
         <div className="itinerary__grid">
           <div className="itinerary__cell itinerary__cell--img itinerary__cell--img-1">
             <div className="itinerary__img-wrap">
@@ -205,102 +252,32 @@ export default async function HomePage({ params }: Props) {
             </h3>
             <p className="itinerary__body">{t.home.itineraryDays[3].body}</p>
           </div>
-        </div>
-      </section>
 
-      <FilmYoutubeSection
-        videoId={FILM_YOUTUBE_ID}
-        title={t.home.filmTitle}
-        caption={t.home.filmCaption}
-      />
-
-      <section
-        id="gallery"
-        className="flat-section"
-        aria-labelledby="gallery-title"
-      >
-        <div className="flat-wrap">
-          <h2 id="gallery-title" className="flat-section__title">
-            {t.gallery.title}
-          </h2>
-          <p className="flat-section__intro">{t.gallery.intro}</p>
-          <GalleryGridLightbox
-            slides={GALLERY_SEEDS.map((seed, i) => {
-              const meta = t.gallery.images[i];
-              return {
-                srcThumb: `https://picsum.photos/seed/${seed}/800/800`,
-                srcLarge: `https://picsum.photos/seed/${seed}/1600/1600`,
-                alt: meta?.alt ?? "",
-                caption: meta?.caption ?? "",
-              };
-            })}
-            labels={{
-              close: t.gallery.lightboxClose,
-              prev: t.gallery.lightboxPrev,
-              next: t.gallery.lightboxNext,
-              dialog: t.gallery.lightboxAria,
-              openThumb: t.gallery.lightboxOpenThumb,
-            }}
-          />
-        </div>
-      </section>
-
-      <section
-        id="about"
-        className="flat-section flat-section--tint"
-        aria-labelledby="about-title"
-      >
-        <div className="flat-wrap">
-          <h2 id="about-title" className="flat-section__title">
-            {t.about.title}
-          </h2>
-          <p className="flat-section__intro">{t.about.lead}</p>
-
-          <div className="flat-about">
-            <div className="flat-about__main">
-              <p>{t.about.p1}</p>
-              <p>{t.about.p2}</p>
-              <h3 className="flat-about__sub">{t.about.highlightsTitle}</h3>
-              <ul className="flat-list">
-                {t.about.highlights.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
+          <div className="itinerary__cell itinerary__cell--img itinerary__cell--img-5">
+            <div className="itinerary__img-wrap">
+              <Image
+                src={`https://picsum.photos/seed/${ITINERARY_SEEDS[4]}/1000/1000`}
+                alt={t.home.itineraryImageAlts[4] ?? ""}
+                fill
+                className="itinerary__img"
+                sizes="(max-width: 959px) 100vw, 33vw"
+              />
             </div>
-            <aside className="flat-about__side">
-              <h3 className="flat-about__side-title">{t.about.asideTitle}</h3>
-              <p>{t.about.asideBody}</p>
-            </aside>
+            <span className="itinerary__ptr itinerary__ptr--w" aria-hidden />
           </div>
-
-          <div className="flat-tiles">
-            {t.home.features.map((f) => (
-              <div key={f.title} className="flat-tile">
-                <h3 className="flat-tile__h">{f.title}</h3>
-                <p>{f.body}</p>
-              </div>
-            ))}
-          </div>
-
-          <blockquote className="flat-quote">{t.home.quote}</blockquote>
         </div>
       </section>
 
       <section
         id="contact"
-        className="flat-section flat-section--dark"
+        className="flat-section flat-section--tint"
         aria-labelledby="contact-title"
       >
         <div className="flat-wrap flat-wrap--narrow">
-          <h2
-            id="contact-title"
-            className="flat-section__title flat-section__title--on-dark"
-          >
+          <h2 id="contact-title" className="flat-section__title">
             {t.contact.title}
           </h2>
-          <p className="flat-section__intro flat-section__intro--on-dark">
-            {t.contact.intro}
-          </p>
+          <p className="flat-section__intro">{t.contact.intro}</p>
 
           <div className="flat-contact">
             <div className="flat-contact__info">

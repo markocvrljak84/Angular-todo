@@ -1,9 +1,18 @@
 import type { Locale } from "./config";
+import fr from "./locales/fr.json";
+import it from "./locales/it.json";
 
 export type Messages = {
   meta: { siteName: string; siteDescription: string };
   header: { bookCta: string };
-  nav: { home: string; things: string; about: string; gallery: string; contact: string };
+  nav: {
+    home: string;
+    about: string;
+    gallery: string;
+    film: string;
+    nearby: string;
+    contact: string;
+  };
   langSwitcher: { aria: string };
   footer: {
     tagline: string;
@@ -29,13 +38,8 @@ export type Messages = {
     heroSubscribeButton: string;
     heroSubscribeNote: string;
     heroSubscribeThanks: string;
-    thingsTitle: string;
-    thingsHeadBefore: string;
-    thingsHeadAccent: string;
-    thingsHeadAfter: string;
-    /** Image + text rows under the headline (same order as seeds in page) */
-    thingsRows: { title: string; body: string; imageAlt: string }[];
-    itineraryTitle: string;
+    nearbyTitle: string;
+    nearbyLead: string;
     itineraryImageAlts: string[];
     itineraryDays: { label: string; headline: string; body: string }[];
     /** YouTube block (#film) */
@@ -60,8 +64,7 @@ export type Messages = {
     p2: string;
     highlights: string[];
     highlightsTitle: string;
-    asideTitle: string;
-    asideBody: string;
+    sideImageAlt: string;
   };
   gallery: {
     title: string;
@@ -103,9 +106,10 @@ const en: Messages = {
   },
   nav: {
     home: "Home",
-    things: "Things to do",
     about: "About",
     gallery: "Gallery",
+    film: "Video",
+    nearby: "Near places",
     contact: "Contact",
   },
   langSwitcher: { aria: "Language" },
@@ -128,28 +132,15 @@ const en: Messages = {
     heroSubscribeButton: "Subscribe",
     heroSubscribeNote: "Demo only — wire this field to your newsletter or CRM.",
     heroSubscribeThanks: "Thanks — demo only. Connect to your newsletter tool.",
-    thingsTitle: "Things to do",
-    thingsHeadBefore: "DISCOVER WHAT",
-    thingsHeadAccent: "Velebit dawn",
-    thingsHeadAfter: "LOOKS LIKE",
-    thingsRows: [
-      {
-        title: "Ridge walks at your doorstep",
-        body: "Marked trails lead from quiet roads to open viewpoints — swap this for your favourite local route and distance.",
-        imageAlt: "Forest trail toward the ridge — placeholder",
-      },
-      {
-        title: "Evenings without a schedule",
-        body: "Slow dinners, starry skies, and nowhere to be. Replace with real tips: markets, taverns, or a nearby viewpoint.",
-        imageAlt: "Evening light over hills — placeholder",
-      },
-    ],
-    itineraryTitle: "What's nearby — Paklenica, Pag, Zavratnica & Premužić trail",
+    nearbyTitle: "Near places",
+    nearbyLead:
+      "Paklenica, Pag, Zavratnica and the Premužić trail — day trips from your base in the Velebit hills.",
     itineraryImageAlts: [
       "Paklenica National Park — karst canyons and trails",
       "Pag island — coast and stone landscapes",
       "Zavratnica cove — steep cliffs and turquoise water",
       "Premužić trail — stone path above the Adriatic",
+      "Velebit ridge — forest and sea view near the trail",
     ],
     itineraryDays: [
       {
@@ -232,9 +223,7 @@ const en: Messages = {
       "Starlink / Wi-Fi — mention only if true",
     ],
     highlightsTitle: "Highlights",
-    asideTitle: "House rules (sample)",
-    asideBody:
-      "Quiet hours after 10 p.m., no parties, leave shoes in the mudroom. Replace with your actual rules and local regulations.",
+    sideImageAlt: "Holiday home and mountain surroundings — placeholder photo",
   },
   gallery: {
     title: "Gallery",
@@ -270,7 +259,7 @@ const en: Messages = {
     detailsHeading: "Details",
     mapHeading: "Map",
     mapIframeTitle: "Google Map — Došen Dabar 1, Croatia",
-    mapOpenGoogle: "Open in Google Maps",
+    mapOpenGoogle: "Open in Google Maps to find directions",
   },
   a11y: { scrollToTop: "Back to top" },
 };
@@ -286,9 +275,10 @@ const hr: Messages = {
   },
   nav: {
     home: "Početna",
-    things: "Što raditi",
     about: "O nama",
     gallery: "Galerija",
+    film: "Video",
+    nearby: "U blizini",
     contact: "Kontakt",
   },
   langSwitcher: { aria: "Jezik" },
@@ -318,28 +308,15 @@ const hr: Messages = {
     heroSubscribeButton: "Pretplati se",
     heroSubscribeNote: "Samo demo — kasnije povežite s newsletter servisom.",
     heroSubscribeThanks: "Hvala — samo demo. Povežite s alatom za newsletter.",
-    thingsTitle: "Što raditi",
-    thingsHeadBefore: "OTKRIJTE KAKO",
-    thingsHeadAccent: "zora na velebitu",
-    thingsHeadAfter: "IZGLEDA",
-    thingsRows: [
-      {
-        title: "Šetnje grebenom blizu kuće",
-        body: "Označene staze vode od tihe ceste do otvorenih vidikovaca — zamijenite svojim omiljenim pravcem i udaljenostima.",
-        imageAlt: "Šumska staza prema grebenu — probna slika",
-      },
-      {
-        title: "Večeri bez rasporeda",
-        body: "Spora večera, zvjezdano nebo, nikuda ne žurite. Dodajte stvarne savjete: tržnica, konoba ili vidikovac u blizini.",
-        imageAlt: "Večernje svjetlo iznad brda — probna slika",
-      },
-    ],
-    itineraryTitle: "U blizini — NP Paklenica, Pag, Zavratnica i Premužićeva staza",
+    nearbyTitle: "U blizini",
+    nearbyLead:
+      "NP Paklenica, Pag, Zavratnica i Premužićeva staza — izleti iz vaše baze u velebitskim bregima.",
     itineraryImageAlts: [
       "NP Paklenica — kanjoni i planinarske staze",
       "Otok Pag — obala i kameniti krajolik",
       "Uvala Zavratnica — litice i tirkizna voda",
       "Premužićeva staza — kameni put iznad mora",
+      "Velebitski greben — šuma i pogled prema moru",
     ],
     itineraryDays: [
       {
@@ -415,9 +392,7 @@ const hr: Messages = {
       "Starlink / Wi-Fi — navedite samo ako vrijedi",
     ],
     highlightsTitle: "Sažeto",
-    asideTitle: "Kućni red (primjer)",
-    asideBody:
-      "Tišina nakon 22 h, bez žurki, obuća u predsoblju. Zamijenite stvarnim pravilima i lokalnim propisima.",
+    sideImageAlt: "Kuća za odmor i planinski krajolik — probna fotografija",
   },
   gallery: {
     title: "Galerija",
@@ -453,7 +428,7 @@ const hr: Messages = {
     detailsHeading: "Podaci",
     mapHeading: "Karta",
     mapIframeTitle: "Google karta — Došen Dabar 1, Hrvatska",
-    mapOpenGoogle: "Otvori u Google Kartama",
+    mapOpenGoogle: "Otvori u Google Kartama za upute do lokacije",
   },
   a11y: { scrollToTop: "Natrag na vrh" },
 };
@@ -469,9 +444,10 @@ const de: Messages = {
   },
   nav: {
     home: "Start",
-    things: "Aktivitäten",
     about: "Über uns",
     gallery: "Galerie",
+    film: "Video",
+    nearby: "In der Nähe",
     contact: "Kontakt",
   },
   langSwitcher: { aria: "Sprache" },
@@ -501,28 +477,15 @@ const de: Messages = {
     heroSubscribeButton: "Abonnieren",
     heroSubscribeNote: "Nur Demo — später mit Newsletter-Tool verbinden.",
     heroSubscribeThanks: "Danke — nur Demo. Mit Newsletter-Tool verbinden.",
-    thingsTitle: "Aktivitäten",
-    thingsHeadBefore: "ENTDECKEN SIE",
-    thingsHeadAccent: "Velebit-Morgen",
-    thingsHeadAfter: "AUSSIEHT",
-    thingsRows: [
-      {
-        title: "Gratwanderungen vor der Tür",
-        body: "Markierte Wege führen von ruhigen Straßen zu Aussichtspunkten — ersetzen Sie durch Ihre Lieblingsroute und Distanz.",
-        imageAlt: "Waldpfad zum Grat — Platzhalter",
-      },
-      {
-        title: "Abende ohne Programm",
-        body: "Langsames Essen, Sternenhimmel, nirgendwo hingehetzt. Ersetzen Sie durch echte Tipps: Märkte, Konoba oder Aussichtspunkt.",
-        imageAlt: "Abendlicht über den Hügeln — Platzhalter",
-      },
-    ],
-    itineraryTitle: "In der Nähe — NP Paklenica, Pag, Zavratnica & Premužić-Weg",
+    nearbyTitle: "In der Nähe",
+    nearbyLead:
+      "NP Paklenica, Pag, Zavratnica und der Premužić-Weg — Tagesausflüge von Ihrer Basis in den Velebit-Bergen.",
     itineraryImageAlts: [
       "Nationalpark Paklenica — Karstschluchten und Wanderwege",
       "Insel Pag — Küste und Steinlandschaft",
       "Bucht Zavratnica — Steilwände und türkisfarbenes Wasser",
       "Premužić-Weg — Trockenmauerweg über dem Meer",
+      "Velebit-Kamm — Wald und Blick zur Adria",
     ],
     itineraryDays: [
       {
@@ -598,9 +561,7 @@ const de: Messages = {
       "Starlink / WLAN — nur wenn vorhanden",
     ],
     highlightsTitle: "Auf einen Blick",
-    asideTitle: "Hausregeln (Beispiel)",
-    asideBody:
-      "Ruhe ab 22 Uhr, keine Partys, Schuhe im Hausflur. Durch Ihre echten Regeln ersetzen.",
+    sideImageAlt: "Ferienhaus und Berglandschaft — Platzhalterfoto",
   },
   gallery: {
     title: "Galerie",
@@ -636,12 +597,18 @@ const de: Messages = {
     detailsHeading: "Kontaktdaten",
     mapHeading: "Karte",
     mapIframeTitle: "Google Karte — Došen Dabar 1, Kroatien",
-    mapOpenGoogle: "In Google Maps öffnen",
+    mapOpenGoogle: "In Google Maps öffnen, um die Route zu finden",
   },
   a11y: { scrollToTop: "Nach oben" },
 };
 
-export const messages: Record<Locale, Messages> = { en, hr, de };
+export const messages: Record<Locale, Messages> = {
+  en,
+  hr,
+  de,
+  fr: fr as Messages,
+  it: it as Messages,
+};
 
 export function getMessages(locale: Locale): Messages {
   return messages[locale];

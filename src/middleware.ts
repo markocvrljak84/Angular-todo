@@ -2,7 +2,15 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { defaultLocale, isLocale } from "@/i18n/config";
 
-const LEGACY_SECTIONS = new Set(["about", "gallery", "contact", "things", "itinerary", "film"]);
+const LEGACY_SECTIONS = new Set([
+  "about",
+  "gallery",
+  "contact",
+  "things",
+  "itinerary",
+  "film",
+  "nearby",
+]);
 
 export function middleware(request: NextRequest) {
   const path = request.nextUrl.pathname;
@@ -13,7 +21,12 @@ export function middleware(request: NextRequest) {
     if (section && LEGACY_SECTIONS.has(section)) {
       const u = request.nextUrl.clone();
       u.pathname = `/${segments[0]}`;
-      u.hash = section;
+      u.hash =
+        section === "things"
+          ? "about"
+          : section === "itinerary"
+            ? "nearby"
+            : section;
       return NextResponse.redirect(u);
     }
   }

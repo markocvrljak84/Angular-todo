@@ -1,0 +1,191 @@
+{
+  "meta": {
+    "siteName": "Maison de vacances Stars Peak",
+    "siteDescription": "Une retraite de montagne au calme — site vitrine de démonstration. Remplacez textes et photos quand vous voulez."
+  },
+  "header": {
+    "bookCta": "Voir les disponibilités"
+  },
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "gallery": "Galerie",
+    "film": "Vidéo",
+    "nearby": "À proximité",
+    "contact": "Contact"
+  },
+  "langSwitcher": {
+    "aria": "Langue"
+  },
+  "footer": {
+    "tagline": "Site vitrine de location — remplacez textes et photos lorsque vous êtes prêt.",
+    "rights": "© Stars Peak — placeholder",
+    "exploreTitle": "Explorer",
+    "contactTitle": "Contactez-nous"
+  },
+  "home": {
+    "heroBadge": "Velebit · Croatie (démo)",
+    "heroTitle": "Votre refuge au-dessus des cimes",
+    "heroLead": "Réveillez-vous avec l’air des pins et un grand ciel. Cette page de démonstration décrit un chalet fictif pour prévisualiser mise en page et navigation.",
+    "heroScriptTitle": "Stars Peak",
+    "heroCenterLine": "Toujours des sentiers calmes pour marcher et une maison chaleureuse pour rentrer — votre base dans les collines du Velebit.",
+    "heroSubscribeLine": "Recevez les offres spéciales directement par e-mail.",
+    "heroEmailPlaceholder": "Adresse e-mail",
+    "heroSubscribeButton": "S’abonner",
+    "heroSubscribeNote": "Démo uniquement — connectez ce champ à votre newsletter.",
+    "heroSubscribeThanks": "Merci — démo uniquement. Connectez votre outil newsletter.",
+    "nearbyTitle": "À proximité",
+    "nearbyLead": "Paklenica, Pag, Zavratnica et le sentier Premužić — excursions depuis votre base dans le Velebit.",
+    "itineraryImageAlts": [
+      "Parc national de Paklenica — canyons karstiques et sentiers",
+      "Île de Pag — côte et paysages de pierre",
+      "Crique de Zavratnica — falaises et eau turquoise",
+      "Sentier Premužić — chemin de pierre au-dessus de l’Adriatique",
+      "Crête du Velebit — forêt et vue sur la mer"
+    ],
+    "itineraryDays": [
+      {
+        "label": "NP Paklenica",
+        "headline": "CANYONS ET SENTIERS AU PIED DU VELEBIT",
+        "body": "Paklenica est l’un des fleurons des parcs nationaux croates — gorges étroites, falaises et itinéraires balisés pour tous niveaux. Prévoyez une demi-journée ou une journée et vérifiez les horaires d’ouverture."
+      },
+      {
+        "label": "Île de Pag",
+        "headline": "JOURNÉE ÎLE — MER, VENT ET PIERRE « LUNAIRE »",
+        "body": "Pag est facile d’accès pour les plages, le vélo et les saveurs locales (fromage, agneau). Pont depuis le continent ou route côtière — idéal une belle journée."
+      },
+      {
+        "label": "Crique Zavratnica",
+        "headline": "ANSE ABRITÉE AUX FALAISES DRAMATIQUES",
+        "body": "Zavratnica est une baie célèbre aux falaises abruptes et à l’eau calme — parfait pour une sortie en bateau ou une halte panoramique sur l’Adriatique nord. Vérifiez les règles d’accès et de baignade."
+      },
+      {
+        "label": "Sentier Premužić",
+        "headline": "LE CHEMIN DE PIERRE D’ANTE PREMUŽIĆ SUR LA CRÊTE",
+        "body": "Le sentier Premužić est une icône du Velebit — tracé en pierre sèche à pentes douces avec vue immense sur la mer et les îles du Kvarner. Choisissez un tronçon adapté, emportez de l’eau et surveillez la météo en montagne."
+      }
+    ],
+    "filmTitle": "Un instant sur le sentier",
+    "filmCaption": "Court extrait de la région — lancez la lecture avec les commandes du lecteur.",
+    "heroCtaPill": "À partir de 129 € / nuit · tarif démo",
+    "heroSlideAlts": [
+      "Maison de vacances — photo 1",
+      "Maison de vacances — photo 2",
+      "Maison de vacances — photo 3",
+      "Maison de vacances — photo 4"
+    ],
+    "statsLine": "Logement entier · 6 couchages · 3 chambres · 2 salles de bain",
+    "heroImageAlt": "Photo extérieure de démonstration de la maison",
+    "ctaPrimary": "Voir la galerie",
+    "ctaSecondary": "Nous écrire",
+    "amenitiesLabel": "En bref",
+    "amenities": [
+      {
+        "label": "Jusqu’à 6 personnes"
+      },
+      {
+        "label": "Cuisine équipée"
+      },
+      {
+        "label": "Parking gratuit"
+      },
+      {
+        "label": "Wi‑Fi"
+      }
+    ],
+    "welcomeTitle": "Pourquoi réserver en direct",
+    "welcomeBody": "Les maisons de vacances indépendantes offrent souvent plus de flexibilité et des règles plus claires lorsque vous écrivez directement au propriétaire. Remplacez ce bloc par votre histoire, vos offres saisonnières ou un lien vers votre calendrier.",
+    "featuresSectionLabel": "À quoi vous attendre",
+    "features": [
+      {
+        "title": "6 couchages (démo)",
+        "body": "Trois chambres, deux salles de bain — chiffres indicatifs jusqu’à confirmation."
+      },
+      {
+        "title": "Terrasse extérieure",
+        "body": "Café du matin avec vue de démonstration. Photo à venir."
+      },
+      {
+        "title": "Soirées tranquilles",
+        "body": "Cheminée, jeux de société — texte marketing à réécrire."
+      }
+    ],
+    "quote": "« Nous avons aimé le silence. » — Avis invité de démonstration. Remplacez par un vrai témoignage."
+  },
+  "about": {
+    "title": "À propos de ce lieu",
+    "lead": "Stars Peak est un nom d’exemple pour votre maison de vacances. Le texte ci-dessous est un texte de démonstration.",
+    "p1": "Construite en pierre locale (fictif), la maison est imaginée comme un refuge week-end pour les familles qui randonnent le jour et cuisinent le soir. Remplacez par votre histoire.",
+    "p2": "À dix minutes d’un départ de sentier (fictif), vingt de la boulangerie la plus proche (fictif), loin du stress des e-mails. Mettez à jour distances et accès pour vos hôtes.",
+    "highlights": [
+      "Arrivée autonome avec boîte à clés (exemple — adaptez)",
+      "Parking pour deux voitures sur gravier (démo)",
+      "Animaux acceptés sur demande — définissez votre règle",
+      "Starlink / Wi-Fi — indiquez seulement si c’est vrai"
+    ],
+    "highlightsTitle": "Points forts",
+    "sideImageAlt": "Maison de vacances et paysage de montagne — photo de démonstration"
+  },
+  "gallery": {
+    "title": "Galerie",
+    "intro": "Huit carrés sans espace — cliquez une photo pour l’agrandir et faire défiler. Flèches du clavier ou boutons latéraux.",
+    "lightboxClose": "Fermer la galerie",
+    "lightboxPrev": "Image précédente",
+    "lightboxNext": "Image suivante",
+    "lightboxAria": "Galerie agrandie",
+    "lightboxOpenThumb": "Ouvrir en grand",
+    "images": [
+      {
+        "alt": "Placeholder ridge and forest from above",
+        "caption": "Ridge trail — replace"
+      },
+      {
+        "alt": "Placeholder mist over the valley",
+        "caption": "Morning valley — replace"
+      },
+      {
+        "alt": "Placeholder stone wall and path",
+        "caption": "Approach path — replace"
+      },
+      {
+        "alt": "Placeholder interior window seat",
+        "caption": "Window nook — replace"
+      },
+      {
+        "alt": "Placeholder wood stove corner",
+        "caption": "Evening warmth — replace"
+      },
+      {
+        "alt": "Placeholder deck with mountain view",
+        "caption": "Deck view — replace"
+      },
+      {
+        "alt": "Placeholder wildflowers meadow",
+        "caption": "Meadow nearby — replace"
+      },
+      {
+        "alt": "Placeholder starry sky over peaks",
+        "caption": "Night sky — replace"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "intro": "Joignez-nous par téléphone ou e-mail, ou rendez-vous à l’adresse ci-dessous.",
+    "nameLabel": "Nom",
+    "contactName": "Velebit Stars Peak",
+    "addressLabel": "Adresse",
+    "addressMock": "Došen Dabar 1, Croatie",
+    "phoneLabel": "Téléphone",
+    "phoneMock": "+385 99 000 0000",
+    "emailLabel": "E-mail",
+    "emailMock": "info@velebit-starspeak.com",
+    "detailsHeading": "Coordonnées",
+    "mapHeading": "Carte",
+    "mapIframeTitle": "Google Maps — Došen Dabar 1, Croatie",
+    "mapOpenGoogle": "Ouvrir dans Google Maps pour obtenir l’itinéraire"
+  },
+  "a11y": {
+    "scrollToTop": "Retour en haut"
+  }
+}
