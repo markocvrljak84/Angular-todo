@@ -3,7 +3,6 @@ import { notFound } from "next/navigation";
 import { isLocale, type Locale } from "@/i18n/config";
 import { getMessages } from "@/i18n/messages";
 import { HeroFullscreenCarousel } from "@/components/hero-fullscreen-carousel";
-import { ScrollTopArrow } from "@/components/scroll-top-arrow";
 import { GalleryGridLightbox } from "@/components/gallery-grid-lightbox";
 import { FilmYoutubeSection } from "@/components/film-youtube-section";
 import { getGoogleMapsUrls } from "@/config/contact-map";
@@ -33,7 +32,10 @@ const ITINERARY_SEEDS = [
   "starspeak-itin-1",
   "starspeak-itin-2",
   "starspeak-itin-3",
+  "starspeak-itin-premuzic",
 ] as const;
+
+const THINGS_ROW_SEEDS = ["starspeak-things-r1", "starspeak-things-r2"] as const;
 
 /** YouTube video for #film section */
 const FILM_YOUTUBE_ID = "QNfDBgtFSdc" as const;
@@ -72,6 +74,9 @@ export default async function HomePage({ params }: Props) {
         className="things-intro"
         aria-labelledby="things-title"
       >
+        <h2 id="things-title" className="things-intro__title">
+          {t.home.thingsTitle}
+        </h2>
         <p className="things-intro__headline">
           <span className="things-intro__caps">{t.home.thingsHeadBefore}</span>{" "}
           <span className="things-intro__accent">
@@ -79,6 +84,32 @@ export default async function HomePage({ params }: Props) {
           </span>{" "}
           <span className="things-intro__caps">{t.home.thingsHeadAfter}</span>
         </p>
+
+        <div className="things-rows">
+          {t.home.thingsRows.map((row, i) => {
+            const seed = THINGS_ROW_SEEDS[i] ?? `starspeak-things-${i}`;
+            return (
+              <article
+                key={row.title}
+                className={`things-row${i % 2 === 1 ? " things-row--reverse" : ""}`}
+              >
+                <div className="things-row__media">
+                  <Image
+                    src={`https://picsum.photos/seed/${seed}/960/720`}
+                    alt={row.imageAlt}
+                    fill
+                    className="things-row__img"
+                    sizes="(max-width: 767px) 100vw, 45vw"
+                  />
+                </div>
+                <div className="things-row__text">
+                  <h3 className="things-row__title">{row.title}</h3>
+                  <p className="things-row__body">{row.body}</p>
+                </div>
+              </article>
+            );
+          })}
+        </div>
       </section>
 
       <section
@@ -143,7 +174,7 @@ export default async function HomePage({ params }: Props) {
               />
             </div>
             <span className="itinerary__ptr itinerary__ptr--w" aria-hidden />
-            <span className="itinerary__ptr itinerary__ptr--n" aria-hidden />
+            <span className="itinerary__ptr itinerary__ptr--s" aria-hidden />
           </div>
 
           <div className="itinerary__cell itinerary__cell--txt itinerary__cell--txt-3">
@@ -152,6 +183,27 @@ export default async function HomePage({ params }: Props) {
               {t.home.itineraryDays[2].headline}
             </h3>
             <p className="itinerary__body">{t.home.itineraryDays[2].body}</p>
+          </div>
+
+          <div className="itinerary__cell itinerary__cell--img itinerary__cell--img-4">
+            <div className="itinerary__img-wrap">
+              <Image
+                src={`https://picsum.photos/seed/${ITINERARY_SEEDS[3]}/1000/1000`}
+                alt={t.home.itineraryImageAlts[3] ?? ""}
+                fill
+                className="itinerary__img"
+                sizes="(max-width: 959px) 100vw, 33vw"
+              />
+            </div>
+            <span className="itinerary__ptr itinerary__ptr--e" aria-hidden />
+          </div>
+
+          <div className="itinerary__cell itinerary__cell--txt itinerary__cell--txt-4">
+            <p className="itinerary__label">{t.home.itineraryDays[3].label}</p>
+            <h3 className="itinerary__headline">
+              {t.home.itineraryDays[3].headline}
+            </h3>
+            <p className="itinerary__body">{t.home.itineraryDays[3].body}</p>
           </div>
         </div>
       </section>

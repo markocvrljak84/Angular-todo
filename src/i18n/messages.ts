@@ -33,7 +33,8 @@ export type Messages = {
     thingsHeadBefore: string;
     thingsHeadAccent: string;
     thingsHeadAfter: string;
-    /** Checkerboard “days” grid (3×2) below Things intro */
+    /** Image + text rows under the headline (same order as seeds in page) */
+    thingsRows: { title: string; body: string; imageAlt: string }[];
     itineraryTitle: string;
     itineraryImageAlts: string[];
     itineraryDays: { label: string; headline: string; body: string }[];
@@ -131,27 +132,49 @@ const en: Messages = {
     thingsHeadBefore: "DISCOVER WHAT",
     thingsHeadAccent: "Velebit dawn",
     thingsHeadAfter: "LOOKS LIKE",
-    itineraryTitle: "Your long weekend — mock itinerary",
+    thingsRows: [
+      {
+        title: "Ridge walks at your doorstep",
+        body: "Marked trails lead from quiet roads to open viewpoints — swap this for your favourite local route and distance.",
+        imageAlt: "Forest trail toward the ridge — placeholder",
+      },
+      {
+        title: "Evenings without a schedule",
+        body: "Slow dinners, starry skies, and nowhere to be. Replace with real tips: markets, taverns, or a nearby viewpoint.",
+        imageAlt: "Evening light over hills — placeholder",
+      },
+    ],
+    itineraryTitle: "What's nearby — Paklenica, Pag, Zavratnica & Premužić trail",
     itineraryImageAlts: [
-      "Garden path near the house — placeholder",
-      "Sunset over the valley — placeholder",
-      "Local table setting — placeholder",
+      "Paklenica National Park — karst canyons and trails",
+      "Pag island — coast and stone landscapes",
+      "Zavratnica cove — steep cliffs and turquoise water",
+      "Premužić trail — stone path above the Adriatic",
     ],
     itineraryDays: [
       {
-        label: "Day 1",
-        headline: "TRAIL TO THE RIDGE AT DAWN",
-        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mock copy — replace with your real route and timing.",
+        label: "NP Paklenica",
+        headline: "CANYONS & TRAILS AT THE FOOT OF VELEBIT",
+        body:
+          "Paklenica is one of Croatia’s flagship national parks — narrow gorges, cliffs, and marked routes for every fitness level. Plan a half or full day and check seasonal opening hours before you go.",
       },
       {
-        label: "Day 2",
-        headline: "COFFEE ON THE DECK, THEN HIKE",
-        body: "Sed do eiusmod tempor incididunt ut labore. Placeholder text for day two highlights and rest stops.",
+        label: "Otok Pag",
+        headline: "ISLAND DAY — SEA, WIND & LUNAR STONE",
+        body:
+          "Pag is an easy island hop for beaches, cycling, and local flavours (think cheese and lamb). Cross by bridge from the mainland or combine with a coastal drive — ideal for a sunny day out.",
       },
       {
-        label: "Day 3",
-        headline: "FIREPLACE AND QUIET EVENING",
-        body: "Ut enim ad minim veniam quis nostrud. Swap for checkout day, markets, or one last viewpoint.",
+        label: "Uvala Zavratnica",
+        headline: "A FJORD-LIKE COVE ON THE KVARNER COAST",
+        body:
+          "Zavratnica is a famous sheltered bay with dramatic cliffs and calm water — perfect for a boat trip or a scenic stop if you’re exploring the northern Adriatic. Pair it with a walk along the shore or a swim where allowed.",
+      },
+      {
+        label: "Premužić trail",
+        headline: "ANTE PREMUŽIĆ’S STONE PATH ALONG THE RIDGE",
+        body:
+          "The Premužić trail is one of Velebit’s icons — a drystone hiking route with gentle gradients and huge views over the sea and the Kvarner islands. Choose a section that fits your time and fitness, carry water, and check weather on the mountain.",
       },
     ],
     filmTitle: "A moment on the trail",
@@ -299,27 +322,49 @@ const hr: Messages = {
     thingsHeadBefore: "OTKRIJTE KAKO",
     thingsHeadAccent: "zora na velebitu",
     thingsHeadAfter: "IZGLEDA",
-    itineraryTitle: "Predloženi vikend — probni raspored",
+    thingsRows: [
+      {
+        title: "Šetnje grebenom blizu kuće",
+        body: "Označene staze vode od tihe ceste do otvorenih vidikovaca — zamijenite svojim omiljenim pravcem i udaljenostima.",
+        imageAlt: "Šumska staza prema grebenu — probna slika",
+      },
+      {
+        title: "Večeri bez rasporeda",
+        body: "Spora večera, zvjezdano nebo, nikuda ne žurite. Dodajte stvarne savjete: tržnica, konoba ili vidikovac u blizini.",
+        imageAlt: "Večernje svjetlo iznad brda — probna slika",
+      },
+    ],
+    itineraryTitle: "U blizini — NP Paklenica, Pag, Zavratnica i Premužićeva staza",
     itineraryImageAlts: [
-      "Staza uz kuću — probna slika",
-      "Zalazak iznad doline — probna slika",
-      "Stol s lokalnim jelima — probna slika",
+      "NP Paklenica — kanjoni i planinarske staze",
+      "Otok Pag — obala i kameniti krajolik",
+      "Uvala Zavratnica — litice i tirkizna voda",
+      "Premužićeva staza — kameni put iznad mora",
     ],
     itineraryDays: [
       {
-        label: "1. dan",
-        headline: "STAZA NA GREBEN U ZORU",
-        body: "Lorem ipsum — zamijenite stvarnim opisom prve etape, udaljenostima i vremenom polaska.",
+        label: "NP Paklenica",
+        headline: "KANJONI I STAZE PODNOŽJEM VELEBITA",
+        body:
+          "Paklenica je jedan od najpoznatijih hrvatskih nacionalnih parkova — uski kanjoni, litice i označene rute za različite razine kondicije. Planirajte pola ili cijeli dan i prije polaska provjerite radno vrijeme i ulaz.",
       },
       {
-        label: "2. dan",
-        headline: "KAVA NA TERASI, PA PLANINARENJE",
-        body: "Mock tekst za drugi dan: odmor, ručak, druga staza — prilagodite svom području.",
+        label: "Otok Pag",
+        headline: "IZLET NA OTOK — MORE, VJETAR I „MJESEČEV“ KAMEN",
+        body:
+          "Pag je blizu — plaže, biciklizam i lokalni okusi (sir, janjetina). Most s kopna ili kombinacija obalnom cestom; idealan dan za sunce i more.",
       },
       {
-        label: "3. dan",
-        headline: "KAMIN I TIHA VEČER",
-        body: "Zadnji dan: odjava, suvenir ili još jedan kratki izlet — probni sadržaj za zamjenu.",
+        label: "Uvala Zavratnica",
+        headline: "DRAMATIČNE LITICE I TIRKIZNA VODA",
+        body:
+          "Zavratnica je poznata uvala s liticama i mirnom, tirkiznom vodom — izlet brodom ili zaustavljanje uz obilazak sjevernog Jadrana. Provjerite pravila kupanja i pristup za posjetitelje.",
+      },
+      {
+        label: "Premužićeva staza",
+        headline: "KAMENI PUT ANTUNA PREMUŽIĆA DUŽ GREBENA",
+        body:
+          "Jedna je od najljepših planinarskih staza na Velebitu — suhozidna trasa s blagim usponima i pogledom na more te otoke Kvarnera. Odaberite odcijek prema vremenu i kondiciji, ponesite vodu i provjerite vremensku prognozu za planinu.",
       },
     ],
     filmTitle: "Trenutak na stazi",
@@ -460,27 +505,49 @@ const de: Messages = {
     thingsHeadBefore: "ENTDECKEN SIE",
     thingsHeadAccent: "Velebit-Morgen",
     thingsHeadAfter: "AUSSIEHT",
-    itineraryTitle: "Langes Wochenende — Beispielplan",
+    thingsRows: [
+      {
+        title: "Gratwanderungen vor der Tür",
+        body: "Markierte Wege führen von ruhigen Straßen zu Aussichtspunkten — ersetzen Sie durch Ihre Lieblingsroute und Distanz.",
+        imageAlt: "Waldpfad zum Grat — Platzhalter",
+      },
+      {
+        title: "Abende ohne Programm",
+        body: "Langsames Essen, Sternenhimmel, nirgendwo hingehetzt. Ersetzen Sie durch echte Tipps: Märkte, Konoba oder Aussichtspunkt.",
+        imageAlt: "Abendlicht über den Hügeln — Platzhalter",
+      },
+    ],
+    itineraryTitle: "In der Nähe — NP Paklenica, Pag, Zavratnica & Premužić-Weg",
     itineraryImageAlts: [
-      "Weg im Garten — Platzhalter",
-      "Sonnenuntergang über dem Tal — Platzhalter",
-      "Gedeckter Tisch — Platzhalter",
+      "Nationalpark Paklenica — Karstschluchten und Wanderwege",
+      "Insel Pag — Küste und Steinlandschaft",
+      "Bucht Zavratnica — Steilwände und türkisfarbenes Wasser",
+      "Premužić-Weg — Trockenmauerweg über dem Meer",
     ],
     itineraryDays: [
       {
-        label: "Tag 1",
-        headline: "PFAD ZUM KAMM BEI SONNENAUFGANG",
-        body: "Lorem ipsum — ersetzen Sie durch echte Route, Dauer und Startzeit.",
+        label: "NP Paklenica",
+        headline: "SCHLUCHTEN UND WEGE AM FUß DES VELEBIT",
+        body:
+          "Paklenica ist einer Kroatiens bekanntesten Nationalparks — enge Schluchten, Felswände und markierte Routen für jedes Niveau. Planen Sie einen halben oder ganzen Tag und prüfen Sie Öffnungszeiten vorab.",
       },
       {
-        label: "Tag 2",
-        headline: "KAFFEE AUF DER TERRASSE, DANN WANDERN",
-        body: "Platzhalter für Tag zwei: Pausen, Einkehr, zweite Etappe — anpassen.",
+        label: "Insel Pag",
+        headline: "INSELTAG — MEER, WIND UND „MOND“-STEIN",
+        body:
+          "Pag ist gut erreichbar: Strände, Radfahren und lokale Spezialitäten (Käse, Lamm). Über die Brücke vom Festland oder als Teil einer Küstenfahrt — ideal für einen sonnigen Tag.",
       },
       {
-        label: "Tag 3",
-        headline: "KAMIN UND RUHIGER ABEND",
-        body: "Abreisetag: Markt, Souvenir oder letzter Ausblick — Mock-Text zum Ersetzen.",
+        label: "Bucht Zavratnica",
+        headline: "GESCHÜTZTE BUCHT MIT FJORDARTIGEM CHARAKTER",
+        body:
+          "Zavratnica ist eine berühmte, windgeschützte Bucht mit steilen Klippen und ruhigem Wasser — perfekt für eine Bootstour oder einen Fotostopp an der Kvarner-Küste. Bade- und Zutrittsregeln bitte vor Ort beachten.",
+      },
+      {
+        label: "Premužić-Weg",
+        headline: "ANTE PREMUŽIĆS STEINWEG AM KAMM",
+        body:
+          "Der Premužić-Weg gehört zu Velebits Klassikern — ein trockenmauerwerkter Höhenweg mit sanften Steigungen und Weitblick auf Meer und Kvarner-Inseln. Wählen Sie eine Etappe passend zu Zeit und Kondition, nehmen Sie Wasser mit und beachten Sie das Bergwetter.",
       },
     ],
     filmTitle: "Ein Moment auf dem Weg",
