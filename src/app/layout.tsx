@@ -41,6 +41,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <meta
+          name="google-site-verification"
+          content="5jWshJpXqMtH8plQA-zwKoMh-BbF435MWnOSE49tV2M"
+        />
         <link rel="preconnect" href="https://www.youtube.com" />
         <link rel="preconnect" href="https://www.google.com" />
         <link rel="dns-prefetch" href="https://i.ytimg.com" />
