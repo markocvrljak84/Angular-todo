@@ -28,7 +28,11 @@ fr.meta = {
   siteDescription:
     "Une retraite de montagne au calme — site vitrine de démonstration. Remplacez textes et photos quand vous voulez.",
 };
-fr.header = { bookCta: "Voir les disponibilités" };
+fr.header = {
+  bookCta: "Voir les disponibilités",
+  menuOpen: "Ouvrir le menu",
+  menuClose: "Fermer le menu",
+};
 fr.nav = {
   home: "Accueil",
   about: "À propos",
@@ -60,11 +64,14 @@ fr.home.nearbyTitle = "À proximité";
 fr.home.nearbyLead =
   "Paklenica, Pag, Zavratnica et le sentier Premužić — excursions depuis votre base dans le Velebit.";
 fr.home.itineraryImageAlts = [
-  "Parc national de Paklenica — canyons karstiques et sentiers",
-  "Île de Pag — côte et paysages de pierre",
-  "Crique de Zavratnica — falaises et eau turquoise",
-  "Sentier Premužić — chemin de pierre au-dessus de l’Adriatique",
-  "Crête du Velebit — forêt et vue sur la mer",
+  "Parc national de Paklenica — falaises et forêt de pins",
+  "Île de Pag — côte pierreuse et vue sur l’Adriatique",
+  "Crique de Zavratnica — falaises au-dessus de l’eau calme",
+  "Sentier Premužić — chemin en pierre sèche sur la crête",
+  "Sentier Premužić — mer et îles à l’horizon",
+  "Pag — paysage côtier et pierre « lunaire »",
+  "Sentier Premužić — point de vue le long du parcours",
+  "Paklenica — vue large sur les pentes du canyon",
 ];
 fr.home.itineraryDays = [
   {
@@ -190,7 +197,11 @@ it.meta = {
   siteDescription:
     "Un rifugio di montagna tranquillo — sito dimostrativo. Sostituisci testi e foto quando vuoi.",
 };
-it.header = { bookCta: "Verifica disponibilità" };
+it.header = {
+  bookCta: "Verifica disponibilità",
+  menuOpen: "Apri menu",
+  menuClose: "Chiudi menu",
+};
 it.nav = {
   home: "Home",
   about: "Chi siamo",
@@ -221,11 +232,14 @@ it.home.nearbyTitle = "Nei dintorni";
 it.home.nearbyLead =
   "Paklenica, Pag, Zavratnica e il sentiero Premužić — gite in giornata dalla tua base sul Velebit.";
 it.home.itineraryImageAlts = [
-  "Parco nazionale di Paklenica — canyon carsici e sentieri",
-  "Isola di Pag — costa e paesaggi di pietra",
-  "Baia di Zavratnica — scogliere e acqua turchese",
-  "Sentiero Premužić — percorso in pietra sopra l’Adriatico",
-  "Cresta del Velebit — foresta e vista sul mare",
+  "Parco nazionale di Paklenica — pareti rocciose e pineta",
+  "Isola di Pag — costa di pietra e vista sull’Adriatico",
+  "Baia di Zavratnica — scogliere sull’acqua calma",
+  "Sentiero Premužić — percorso a secco sul crinale",
+  "Sentiero Premužić — mare e isole all’orizzonte",
+  "Pag — paesaggio costiero e pietra «lunare»",
+  "Sentiero Premužić — punto panoramico sul percorso",
+  "Paklenica — ampia vista sui versanti del canyon",
 ];
 it.home.itineraryDays = [
   {

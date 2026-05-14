@@ -4,7 +4,7 @@ import it from "./locales/it.json";
 
 export type Messages = {
   meta: { siteName: string; siteDescription: string };
-  header: { bookCta: string };
+  header: { bookCta: string; menuOpen: string; menuClose: string };
   nav: {
     home: string;
     about: string;
@@ -105,6 +105,8 @@ const en: Messages = {
   },
   header: {
     bookCta: "Check availability",
+    menuOpen: "Open menu",
+    menuClose: "Close menu",
   },
   nav: {
     home: "Home",
@@ -138,11 +140,14 @@ const en: Messages = {
     nearbyLead:
       "Paklenica, Pag, Zavratnica and the Premužić trail — day trips from your base in the Velebit hills.",
     itineraryImageAlts: [
-      "Paklenica National Park — karst canyons and trails",
-      "Pag island — coast and stone landscapes",
-      "Zavratnica cove — steep cliffs and turquoise water",
-      "Premužić trail — stone path above the Adriatic",
-      "Velebit ridge — forest and sea view near the trail",
+      "Paklenica National Park — cliffs and pine forest",
+      "Pag island — stone shore and Adriatic view",
+      "Zavratnica cove — steep cliffs above calm water",
+      "Premužić trail — drystone path along the ridge",
+      "Premužić trail — sea and islands in the distance",
+      "Pag — coastal road and lunar landscape",
+      "Premužić trail — viewpoint along the route",
+      "Paklenica — wide view of the canyon slopes",
     ],
     itineraryDays: [
       {
@@ -270,6 +275,8 @@ const hr: Messages = {
   },
   header: {
     bookCta: "Provjeri dostupnost",
+    menuOpen: "Otvori izbornik",
+    menuClose: "Zatvori izbornik",
   },
   nav: {
     home: "Početna",
@@ -312,11 +319,14 @@ const hr: Messages = {
     nearbyLead:
       "NP Paklenica, Pag, Zavratnica i Premužićeva staza — izleti iz vaše baze u velebitskim bregima.",
     itineraryImageAlts: [
-      "NP Paklenica — kanjoni i planinarske staze",
-      "Otok Pag — obala i kameniti krajolik",
-      "Uvala Zavratnica — litice i tirkizna voda",
-      "Premužićeva staza — kameni put iznad mora",
-      "Velebitski greben — šuma i pogled prema moru",
+      "NP Paklenica — litice i borova šuma",
+      "Otok Pag — kamena obala i pogled na more",
+      "Uvala Zavratnica — litice iznad mirne vode",
+      "Premužićeva staza — suhozidni put duž grebena",
+      "Premužićeva staza — more i otočići u daljini",
+      "Pag — obalni krajolik i „mjesečev“ kamen",
+      "Premužićeva staza — vidikovac uz stazu",
+      "Paklenica — širok pogled na kanjonske strmine",
     ],
     itineraryDays: [
       {
@@ -435,6 +445,8 @@ const de: Messages = {
   },
   header: {
     bookCta: "Verfügbarkeit prüfen",
+    menuOpen: "Menü öffnen",
+    menuClose: "Menü schließen",
   },
   nav: {
     home: "Start",
@@ -477,11 +489,14 @@ const de: Messages = {
     nearbyLead:
       "NP Paklenica, Pag, Zavratnica und der Premužić-Weg — Tagesausflüge von Ihrer Basis in den Velebit-Bergen.",
     itineraryImageAlts: [
-      "Nationalpark Paklenica — Karstschluchten und Wanderwege",
-      "Insel Pag — Küste und Steinlandschaft",
-      "Bucht Zavratnica — Steilwände und türkisfarbenes Wasser",
-      "Premužić-Weg — Trockenmauerweg über dem Meer",
-      "Velebit-Kamm — Wald und Blick zur Adria",
+      "Nationalpark Paklenica — Felswände und Kiefernwald",
+      "Insel Pag — Steinküste und Adria-Panorama",
+      "Bucht Zavratnica — Steilwände über ruhigem Wasser",
+      "Premužić-Weg — Trockenmauerweg am Grat",
+      "Premužić-Weg — Meer und Inseln in der Ferne",
+      "Pag — Küstenlandschaft und „Mond“-Stein",
+      "Premužić-Weg — Aussichtspunkt am Weg",
+      "Paklenica — weiter Blick in die Schluchten",
     ],
     itineraryDays: [
       {

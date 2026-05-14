@@ -6,7 +6,7 @@ import { HeroFullscreenCarousel } from "@/components/hero-fullscreen-carousel";
 import { GalleryGridLightbox } from "@/components/gallery-grid-lightbox";
 import { FilmYoutubeSection } from "@/components/film-youtube-section";
 import { getGoogleMapsUrls } from "@/config/contact-map";
-import { ABOUT_US_IMAGE, GALLERY_FILES } from "@/config/site-images";
+import { ABOUT_US_IMAGE, GALLERY_FILES, NEARBY_GRID_IMAGE_SRCS } from "@/config/site-images";
 
 export const dynamic = "force-static";
 
@@ -16,14 +16,6 @@ const MAIN_CAROUSEL_IMAGES = [
   "571275863_122102378865084437_4800487342368999167_n.jpg",
   "578265540_122104807869084437_5111680495021054907_n.jpg",
   "585009655_122107017075084437_1671659401079838438_n.jpg",
-] as const;
-
-const ITINERARY_SEEDS = [
-  "starspeak-itin-1",
-  "starspeak-itin-2",
-  "starspeak-itin-3",
-  "starspeak-itin-premuzic",
-  "starspeak-itin-ridge",
 ] as const;
 
 /** YouTube video for #film section */
@@ -40,6 +32,12 @@ export default async function HomePage({ params }: Props) {
   if (t.gallery.images.length !== GALLERY_FILES.length) {
     throw new Error(
       "gallery.images length must match GALLERY_FILES in src/config/site-images.ts (and Array.from length in messages.ts).",
+    );
+  }
+
+  if (t.home.itineraryImageAlts.length !== NEARBY_GRID_IMAGE_SRCS.length) {
+    throw new Error(
+      "home.itineraryImageAlts length must match NEARBY_GRID_IMAGE_SRCS in src/config/site-images.ts.",
     );
   }
 
@@ -168,7 +166,7 @@ export default async function HomePage({ params }: Props) {
           <div className="itinerary__cell itinerary__cell--img itinerary__cell--img-1">
             <div className="itinerary__img-wrap">
               <Image
-                src={`https://picsum.photos/seed/${ITINERARY_SEEDS[0]}/1000/1000`}
+                src={NEARBY_GRID_IMAGE_SRCS[0]}
                 alt={t.home.itineraryImageAlts[0] ?? ""}
                 fill
                 className="itinerary__img"
@@ -189,7 +187,7 @@ export default async function HomePage({ params }: Props) {
           <div className="itinerary__cell itinerary__cell--img itinerary__cell--img-2">
             <div className="itinerary__img-wrap">
               <Image
-                src={`https://picsum.photos/seed/${ITINERARY_SEEDS[1]}/1000/1000`}
+                src={NEARBY_GRID_IMAGE_SRCS[1]}
                 alt={t.home.itineraryImageAlts[1] ?? ""}
                 fill
                 className="itinerary__img"
@@ -210,7 +208,7 @@ export default async function HomePage({ params }: Props) {
           <div className="itinerary__cell itinerary__cell--img itinerary__cell--img-3">
             <div className="itinerary__img-wrap">
               <Image
-                src={`https://picsum.photos/seed/${ITINERARY_SEEDS[2]}/1000/1000`}
+                src={NEARBY_GRID_IMAGE_SRCS[2]}
                 alt={t.home.itineraryImageAlts[2] ?? ""}
                 fill
                 className="itinerary__img"
@@ -232,7 +230,7 @@ export default async function HomePage({ params }: Props) {
           <div className="itinerary__cell itinerary__cell--img itinerary__cell--img-4">
             <div className="itinerary__img-wrap">
               <Image
-                src={`https://picsum.photos/seed/${ITINERARY_SEEDS[3]}/1000/1000`}
+                src={NEARBY_GRID_IMAGE_SRCS[3]}
                 alt={t.home.itineraryImageAlts[3] ?? ""}
                 fill
                 className="itinerary__img"
@@ -253,7 +251,7 @@ export default async function HomePage({ params }: Props) {
           <div className="itinerary__cell itinerary__cell--img itinerary__cell--img-5">
             <div className="itinerary__img-wrap">
               <Image
-                src={`https://picsum.photos/seed/${ITINERARY_SEEDS[4]}/1000/1000`}
+                src={NEARBY_GRID_IMAGE_SRCS[4]}
                 alt={t.home.itineraryImageAlts[4] ?? ""}
                 fill
                 className="itinerary__img"
@@ -261,6 +259,42 @@ export default async function HomePage({ params }: Props) {
               />
             </div>
             <span className="itinerary__ptr itinerary__ptr--w" aria-hidden />
+          </div>
+
+          <div className="itinerary__cell itinerary__cell--img itinerary__cell--img-6">
+            <div className="itinerary__img-wrap">
+              <Image
+                src={NEARBY_GRID_IMAGE_SRCS[5]}
+                alt={t.home.itineraryImageAlts[5] ?? ""}
+                fill
+                className="itinerary__img"
+                sizes="(max-width: 959px) 100vw, 33vw"
+              />
+            </div>
+          </div>
+
+          <div className="itinerary__cell itinerary__cell--img itinerary__cell--img-7">
+            <div className="itinerary__img-wrap">
+              <Image
+                src={NEARBY_GRID_IMAGE_SRCS[6]}
+                alt={t.home.itineraryImageAlts[6] ?? ""}
+                fill
+                className="itinerary__img"
+                sizes="(max-width: 959px) 100vw, 33vw"
+              />
+            </div>
+          </div>
+
+          <div className="itinerary__cell itinerary__cell--img itinerary__cell--img-8">
+            <div className="itinerary__img-wrap">
+              <Image
+                src={NEARBY_GRID_IMAGE_SRCS[7]}
+                alt={t.home.itineraryImageAlts[7] ?? ""}
+                fill
+                className="itinerary__img"
+                sizes="(max-width: 959px) 100vw, 33vw"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -270,7 +304,7 @@ export default async function HomePage({ params }: Props) {
         className="flat-section flat-section--tint"
         aria-labelledby="contact-title"
       >
-        <div className="flat-wrap flat-wrap--narrow">
+        <div className="flat-wrap">
           <h2 id="contact-title" className="flat-section__title">
             {t.contact.title}
           </h2>

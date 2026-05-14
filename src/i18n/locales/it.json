@@ -4,7 +4,9 @@
     "siteDescription": "Un rifugio di montagna tranquillo — sito dimostrativo. Sostituisci testi e foto quando vuoi."
   },
   "header": {
-    "bookCta": "Verifica disponibilità"
+    "bookCta": "Verifica disponibilità",
+    "menuOpen": "Apri menu",
+    "menuClose": "Chiudi menu"
   },
   "nav": {
     "home": "Home",
@@ -37,11 +39,14 @@
     "nearbyTitle": "Nei dintorni",
     "nearbyLead": "Paklenica, Pag, Zavratnica e il sentiero Premužić — gite in giornata dalla tua base sul Velebit.",
     "itineraryImageAlts": [
-      "Parco nazionale di Paklenica — canyon carsici e sentieri",
-      "Isola di Pag — costa e paesaggi di pietra",
-      "Baia di Zavratnica — scogliere e acqua turchese",
-      "Sentiero Premužić — percorso in pietra sopra l’Adriatico",
-      "Cresta del Velebit — foresta e vista sul mare"
+      "Parco nazionale di Paklenica — pareti rocciose e pineta",
+      "Isola di Pag — costa di pietra e vista sull’Adriatico",
+      "Baia di Zavratnica — scogliere sull’acqua calma",
+      "Sentiero Premužić — percorso a secco sul crinale",
+      "Sentiero Premužić — mare e isole all’orizzonte",
+      "Pag — paesaggio costiero e pietra «lunare»",
+      "Sentiero Premužić — punto panoramico sul percorso",
+      "Paklenica — ampia vista sui versanti del canyon"
     ],
     "itineraryDays": [
       {

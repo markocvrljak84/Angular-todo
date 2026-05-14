@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { Locale } from "@/i18n/config";
 import type { Messages } from "@/i18n/messages";
 import { LangSwitch } from "./lang-switch";
@@ -12,11 +12,16 @@ type Props = {
 };
 
 const SECTION_IDS = ["top", "about", "gallery", "film", "nearby", "contact"] as const;
+const MOBILE_MENU_QUERY = "(max-width: 879px)";
 
 export function SiteHeader({ locale, t }: Props) {
   const base = `/${locale}`;
   const [solid, setSolid] = useState(false);
   const [active, setActive] = useState<(typeof SECTION_IDS)[number]>("top");
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menuBtnRef = useRef<HTMLButtonElement>(null);
+
+  const toneClass = solid || menuOpen ? "site-header--solid" : "site-header--over-hero";
 
   useEffect(() => {
     const onScroll = () => {
@@ -54,6 +59,28 @@ export function SiteHeader({ locale, t }: Props) {
     };
   }, []);
 
+  useEffect(() => {
+    if (!menuOpen) return;
+    document.body.style.overflow = "hidden";
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setMenuOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [menuOpen]);
+
+  useEffect(() => {
+    const mq = window.matchMedia(MOBILE_MENU_QUERY);
+    const onChange = () => {
+      if (!mq.matches) setMenuOpen(false);
+    };
+    mq.addEventListener("change", onChange);
+    return () => mq.removeEventListener("change", onChange);
+  }, []);
+
   const nav = [
     { id: "top" as const, href: `${base}#top`, label: t.nav.home },
     { id: "about" as const, href: `${base}#about`, label: t.nav.about },
@@ -63,32 +90,86 @@ export function SiteHeader({ locale, t }: Props) {
     { id: "contact" as const, href: `${base}#contact`, label: t.nav.contact },
   ];
 
+  function closeMenu() {
+    setMenuOpen(false);
+    menuBtnRef.current?.focus();
+  }
+
   return (
-    <header
-      className={`site-header ${solid ? "site-header--solid" : "site-header--over-hero"}`}
-    >
+    <header className={`site-header ${toneClass}`}>
       <div className="site-header__inner">
         <Link href={`${base}#top`} className="site-header__brand">
           {t.meta.siteName}
         </Link>
-        <nav className="site-header__nav" aria-label="Main">
-          <ul>
-            {nav.map(({ id, href, label }) => (
-              <li key={href}>
-                <Link
-                  href={href}
-                  className={`site-header__nav-link${active === id ? " site-header__nav-link--active" : ""}`}
-                >
-                  {label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-        <Link href={`${base}#contact`} className="site-header__cta">
-          {t.header.bookCta}
-        </Link>
-        <LangSwitch currentLocale={locale} aria={t.langSwitcher.aria} />
+
+        <div className="site-header__desktop">
+          <nav className="site-header__nav" aria-label="Main">
+            <ul>
+              {nav.map(({ id, href, label }) => (
+                <li key={href}>
+                  <Link
+                    href={href}
+                    className={`site-header__nav-link${active === id ? " site-header__nav-link--active" : ""}`}
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <Link href={`${base}#contact`} className="site-header__cta">
+            {t.header.bookCta}
+          </Link>
+        </div>
+
+        <div className="site-header__tools">
+          <button
+            ref={menuBtnRef}
+            type="button"
+            className="site-header__menu-toggle"
+            aria-expanded={menuOpen}
+            aria-controls="site-header-mobile-menu"
+            onClick={() => setMenuOpen((o) => !o)}
+          >
+            <span className="site-header__menu-bars" aria-hidden="true" />
+            <span className="sr-only">{menuOpen ? t.header.menuClose : t.header.menuOpen}</span>
+          </button>
+          <LangSwitch currentLocale={locale} aria={t.langSwitcher.aria} />
+        </div>
+      </div>
+
+      <div
+        id="site-header-mobile-menu"
+        className={`site-header__mobile-menu${menuOpen ? " site-header__mobile-menu--open" : ""}`}
+        aria-hidden={!menuOpen}
+      >
+        <button
+          type="button"
+          className="site-header__mobile-menu-backdrop"
+          tabIndex={menuOpen ? 0 : -1}
+          aria-label={t.header.menuClose}
+          onClick={closeMenu}
+        />
+        <div className="site-header__mobile-menu-panel">
+          <nav className="site-header__mobile-nav" aria-label="Main">
+            <ul>
+              {nav.map(({ id, href, label }) => (
+                <li key={href}>
+                  <Link
+                    href={href}
+                    className={`site-header__mobile-nav-link${active === id ? " site-header__mobile-nav-link--active" : ""}`}
+                    onClick={closeMenu}
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <Link href={`${base}#contact`} className="site-header__mobile-cta" onClick={closeMenu}>
+            {t.header.bookCta}
+          </Link>
+        </div>
       </div>
     </header>
   );

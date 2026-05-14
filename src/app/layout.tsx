@@ -1,4 +1,6 @@
+import type { Metadata } from "next";
 import { Great_Vibes, Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
+import { getMetadataBase } from "@/lib/site-url";
 import "./globals.css";
 
 const sans = Plus_Jakarta_Sans({
@@ -20,6 +22,16 @@ const serifHero = Playfair_Display({
   variable: "--font-serif-hero",
   display: "swap",
 });
+
+export const metadata: Metadata = {
+  metadataBase: getMetadataBase(),
+  referrer: "origin-when-cross-origin",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+};
 
 export default function RootLayout({
   children,

@@ -15,6 +15,7 @@ const LEGACY_SECTIONS = new Set([
 export function middleware(request: NextRequest) {
   const path = request.nextUrl.pathname;
   const segments = path.split("/").filter(Boolean);
+  const first = segments[0];
 
   if (segments.length >= 2 && isLocale(segments[0])) {
     const section = segments[1];
@@ -31,7 +32,6 @@ export function middleware(request: NextRequest) {
     }
   }
 
-  const first = segments[0];
   if (first && isLocale(first)) {
     return NextResponse.next();
   }

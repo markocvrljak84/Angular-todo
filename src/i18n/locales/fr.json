@@ -4,7 +4,9 @@
     "siteDescription": "Une retraite de montagne au calme — site vitrine de démonstration. Remplacez textes et photos quand vous voulez."
   },
   "header": {
-    "bookCta": "Voir les disponibilités"
+    "bookCta": "Voir les disponibilités",
+    "menuOpen": "Ouvrir le menu",
+    "menuClose": "Fermer le menu"
   },
   "nav": {
     "home": "Accueil",
@@ -37,11 +39,14 @@
     "nearbyTitle": "À proximité",
     "nearbyLead": "Paklenica, Pag, Zavratnica et le sentier Premužić — excursions depuis votre base dans le Velebit.",
     "itineraryImageAlts": [
-      "Parc national de Paklenica — canyons karstiques et sentiers",
-      "Île de Pag — côte et paysages de pierre",
-      "Crique de Zavratnica — falaises et eau turquoise",
-      "Sentier Premužić — chemin de pierre au-dessus de l’Adriatique",
-      "Crête du Velebit — forêt et vue sur la mer"
+      "Parc national de Paklenica — falaises et forêt de pins",
+      "Île de Pag — côte pierreuse et vue sur l’Adriatique",
+      "Crique de Zavratnica — falaises au-dessus de l’eau calme",
+      "Sentier Premužić — chemin en pierre sèche sur la crête",
+      "Sentier Premužić — mer et îles à l’horizon",
+      "Pag — paysage côtier et pierre « lunaire »",
+      "Sentier Premužić — point de vue le long du parcours",
+      "Paklenica — vue large sur les pentes du canyon"
     ],
     "itineraryDays": [
       {
