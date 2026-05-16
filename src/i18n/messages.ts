@@ -119,7 +119,7 @@ const en: Messages = {
       "Wake up to pine-scented air and wide skies. This mock homepage describes a fictional cabin so you can preview layout, typography, and navigation before adding your real story.",
     heroScriptTitle: "Velebit mountain chalet stars peak",
     heroCenterLine:
-      "This unique stay lies in the heart of the Velebit range and offers a beautiful view of the mountains.",
+      "This unique property lies in the heart of the Velebit range and offers a beautiful view of the mountains.",
     nearbyTitle: "Near places",
     nearbyLead:
       "From your mountain base on Velebit you can easily reach the finest destinations of northern Dalmatia — national parks, bays and Adriatic islands. Here are a few favourite day trips nearby.",

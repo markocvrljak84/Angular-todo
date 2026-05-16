@@ -7,6 +7,7 @@ import { FacilitiesGrid } from "@/components/facilities-grid";
 import { HeroFullscreenCarousel } from "@/components/hero-fullscreen-carousel";
 import { GalleryGridLightbox } from "@/components/gallery-grid-lightbox";
 import { FilmYoutubeSection } from "@/components/film-youtube-section";
+import { ItineraryImage } from "@/components/itinerary-image";
 import { getGoogleMapsUrls } from "@/config/contact-map";
 import { SITE_CONTACT, telHref } from "@/config/site-contact";
 import { ABOUT_US_IMAGE, GALLERY_FILES, NEARBY_GRID_IMAGE_SRCS } from "@/config/site-images";
@@ -148,12 +149,9 @@ export default async function HomePage({ params }: Props) {
         <div className="itinerary__grid">
           <div className="itinerary__cell itinerary__cell--img itinerary__cell--img-1">
             <div className="itinerary__img-wrap">
-              <Image
+              <ItineraryImage
                 src={NEARBY_GRID_IMAGE_SRCS[0]}
                 alt={t.home.itineraryImageAlts[0] ?? ""}
-                fill
-                className="itinerary__img"
-                sizes="(max-width: 959px) 100vw, 33vw"
               />
             </div>
             <span className="itinerary__ptr itinerary__ptr--e" aria-hidden />
@@ -169,12 +167,9 @@ export default async function HomePage({ params }: Props) {
 
           <div className="itinerary__cell itinerary__cell--img itinerary__cell--img-2">
             <div className="itinerary__img-wrap">
-              <Image
+              <ItineraryImage
                 src={NEARBY_GRID_IMAGE_SRCS[1]}
                 alt={t.home.itineraryImageAlts[1] ?? ""}
-                fill
-                className="itinerary__img"
-                sizes="(max-width: 959px) 100vw, 33vw"
               />
             </div>
             <span className="itinerary__ptr itinerary__ptr--s" aria-hidden />
@@ -190,12 +185,9 @@ export default async function HomePage({ params }: Props) {
 
           <div className="itinerary__cell itinerary__cell--img itinerary__cell--img-3">
             <div className="itinerary__img-wrap">
-              <Image
+              <ItineraryImage
                 src={NEARBY_GRID_IMAGE_SRCS[2]}
                 alt={t.home.itineraryImageAlts[2] ?? ""}
-                fill
-                className="itinerary__img"
-                sizes="(max-width: 959px) 100vw, 33vw"
               />
             </div>
             <span className="itinerary__ptr itinerary__ptr--w" aria-hidden />
@@ -212,12 +204,9 @@ export default async function HomePage({ params }: Props) {
 
           <div className="itinerary__cell itinerary__cell--img itinerary__cell--img-4">
             <div className="itinerary__img-wrap">
-              <Image
+              <ItineraryImage
                 src={NEARBY_GRID_IMAGE_SRCS[3]}
                 alt={t.home.itineraryImageAlts[3] ?? ""}
-                fill
-                className="itinerary__img"
-                sizes="(max-width: 959px) 100vw, 33vw"
               />
             </div>
             <span className="itinerary__ptr itinerary__ptr--e" aria-hidden />
@@ -233,12 +222,9 @@ export default async function HomePage({ params }: Props) {
 
           <div className="itinerary__cell itinerary__cell--img itinerary__cell--img-5">
             <div className="itinerary__img-wrap">
-              <Image
+              <ItineraryImage
                 src={NEARBY_GRID_IMAGE_SRCS[4]}
                 alt={t.home.itineraryImageAlts[4] ?? ""}
-                fill
-                className="itinerary__img"
-                sizes="(max-width: 959px) 100vw, 33vw"
               />
             </div>
             <span className="itinerary__ptr itinerary__ptr--w" aria-hidden />
@@ -246,36 +232,27 @@ export default async function HomePage({ params }: Props) {
 
           <div className="itinerary__cell itinerary__cell--img itinerary__cell--img-6">
             <div className="itinerary__img-wrap">
-              <Image
+              <ItineraryImage
                 src={NEARBY_GRID_IMAGE_SRCS[5]}
                 alt={t.home.itineraryImageAlts[5] ?? ""}
-                fill
-                className="itinerary__img"
-                sizes="(max-width: 959px) 100vw, 33vw"
               />
             </div>
           </div>
 
           <div className="itinerary__cell itinerary__cell--img itinerary__cell--img-7">
             <div className="itinerary__img-wrap">
-              <Image
+              <ItineraryImage
                 src={NEARBY_GRID_IMAGE_SRCS[6]}
                 alt={t.home.itineraryImageAlts[6] ?? ""}
-                fill
-                className="itinerary__img"
-                sizes="(max-width: 959px) 100vw, 33vw"
               />
             </div>
           </div>
 
           <div className="itinerary__cell itinerary__cell--img itinerary__cell--img-8">
             <div className="itinerary__img-wrap">
-              <Image
+              <ItineraryImage
                 src={NEARBY_GRID_IMAGE_SRCS[7]}
                 alt={t.home.itineraryImageAlts[7] ?? ""}
-                fill
-                className="itinerary__img"
-                sizes="(max-width: 959px) 100vw, 33vw"
               />
             </div>
           </div>

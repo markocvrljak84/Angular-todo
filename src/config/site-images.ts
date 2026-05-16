@@ -32,7 +32,7 @@ const PREMUZIC_DIR = "premužić" as const;
 
 /**
  * Near places checkerboard + extra photo row — order matches `itineraryImageAlts` in messages.
- * Paths under /public/img/{paklenica,pag,zavratnica,premužić}/…
+ * Use ASCII-safe paths only (no encodeURIComponent — breaks Next/Image on deploy).
  */
 export const NEARBY_GRID_IMAGE_SRCS: readonly string[] = [
   "/img/paklenica/shutterstock_1617270832-scaled.jpg",
@@ -41,6 +41,6 @@ export const NEARBY_GRID_IMAGE_SRCS: readonly string[] = [
   `/img/${PREMUZIC_DIR}/681316395_122096686874355213_6869570910689081219_n.jpg`,
   `/img/${PREMUZIC_DIR}/681345586_122096686718355213_276619802998470916_n.jpg`,
   "/img/pag/681604802_122096686880355213_4265220364878636676_n.jpg",
-  `/img/${PREMUZIC_DIR}/${encodeURIComponent("Screenshot 2026-05-14 at 08.41.40.png")}`,
+  `/img/${PREMUZIC_DIR}/velebit.jpg`,
   "/img/paklenica/shutterstock_1617270832-scaled.jpg",
 ] satisfies readonly string[];

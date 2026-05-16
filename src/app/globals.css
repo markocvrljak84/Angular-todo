@@ -79,10 +79,6 @@ body {
   color: #fff;
 }
 
-.site-header--solid .site-header__brand:hover {
-  color: #bbf7d0;
-}
-
 .site-header--solid .site-header__nav-link {
   color: rgba(255, 255, 255, 0.82);
 }
@@ -160,12 +156,17 @@ body {
   color: #fff;
 }
 
-.site-header__brand:hover {
-  color: var(--accent);
+.site-header__brand:hover,
+.site-header__brand:focus-visible {
+  color: var(--ink);
+  text-decoration: none;
 }
 
-.site-header--over-hero .site-header__brand:hover {
-  color: #bbf7d0;
+.site-header--over-hero .site-header__brand:hover,
+.site-header--over-hero .site-header__brand:focus-visible,
+.site-header--solid .site-header__brand:hover,
+.site-header--solid .site-header__brand:focus-visible {
+  color: #fff;
 }
 
 .site-header__nav ul {
@@ -1276,7 +1277,7 @@ body {
 
 .facilities__cat-title {
   margin: 0;
-  font-size: 0.9375rem;
+  font-size: 1.1875rem;
   font-weight: 800;
   line-height: 1.35;
   color: var(--ink);
@@ -1285,8 +1286,8 @@ body {
 .facilities__intro {
   margin: 0;
   padding-left: 2.25rem;
-  font-size: 0.875rem;
-  line-height: 1.55;
+  font-size: 1.0625rem;
+  line-height: 1.6;
   color: var(--muted);
 }
 
@@ -1298,9 +1299,9 @@ body {
 
 .facilities__list li {
   position: relative;
-  padding: 0.15rem 0 0.15rem 1.15rem;
-  font-size: 0.875rem;
-  line-height: 1.45;
+  padding: 0.2rem 0 0.2rem 1.15rem;
+  font-size: 1.0625rem;
+  line-height: 1.5;
   color: var(--muted);
 }
 
