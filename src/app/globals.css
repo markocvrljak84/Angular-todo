@@ -472,6 +472,36 @@ body {
   .site-header__mobile-menu {
     display: none !important;
   }
+
+  .site-header__inner {
+    max-width: 96rem;
+    padding-inline: clamp(1.5rem, 3vw, 3rem);
+  }
+
+  .site-header__brand {
+    max-width: min(19rem, 28vw);
+    flex-shrink: 0;
+  }
+
+  .site-header__desktop {
+    flex: 1;
+    justify-content: flex-end;
+    gap: 1rem 2rem;
+    min-width: 0;
+  }
+
+  .site-header__nav ul {
+    gap: 0.25rem 1.75rem;
+    flex-wrap: nowrap;
+  }
+
+  .site-header__nav-link {
+    white-space: nowrap;
+  }
+
+  .site-header__menu-toggle {
+    display: none;
+  }
 }
 
 /* —— Fullscreen hero + manual slide controls —— */
