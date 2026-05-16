@@ -1,17 +1,25 @@
 import type { Locale } from "@/i18n/config";
 import type { Messages } from "@/i18n/messages";
+import { SITE_CONTACT } from "@/config/site-contact";
+import {
+  SITE_GEO,
+  getPostalAddress,
+  getSiteCoordinates,
+} from "@/config/site-location";
 import { ABOUT_US_IMAGE } from "@/config/site-images";
 import { getSiteUrl } from "@/lib/site-url";
 
 type Props = { locale: Locale; messages: Messages };
 
 /**
- * JSON-LD for homepage (LodgingBusiness + WebSite). Safe for static export.
+ * JSON-LD: WebSite, Place, LodgingBusiness — helps Google map the property to Croatia/Velebit.
  */
 export function SeoJsonLd({ locale, messages: m }: Props) {
   const base = getSiteUrl();
   const pageUrl = `${base}/${locale}`;
   const imageUrl = `${base}/img/about-us/${ABOUT_US_IMAGE}`;
+  const { latitude, longitude } = getSiteCoordinates();
+  const postalAddress = getPostalAddress();
 
   const graph = [
     {
@@ -24,18 +32,47 @@ export function SeoJsonLd({ locale, messages: m }: Props) {
       publisher: { "@id": `${pageUrl}#lodging` },
     },
     {
-      "@type": "LodgingBusiness",
-      "@id": `${pageUrl}#lodging`,
-      name: m.meta.siteName,
+      "@type": "Place",
+      "@id": `${pageUrl}#place`,
+      name: SITE_GEO.brandName,
       description: m.meta.siteDescription,
       url: pageUrl,
       image: imageUrl,
-      telephone: m.contact.phoneMock.replace(/\s/g, ""),
-      email: m.contact.emailMock,
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: m.contact.addressMock.split(",")[0]?.trim() ?? m.contact.addressMock,
-        addressCountry: "HR",
+      address: postalAddress,
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude,
+        longitude,
+      },
+      containedInPlace: {
+        "@type": "Place",
+        name: SITE_GEO.naturePark,
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: SITE_GEO.locality,
+          addressCountry: SITE_GEO.regionCode,
+        },
+      },
+    },
+    {
+      "@type": ["LodgingBusiness", "VacationRental"],
+      "@id": `${pageUrl}#lodging`,
+      name: SITE_CONTACT.businessName,
+      description: m.meta.siteDescription,
+      url: pageUrl,
+      image: imageUrl,
+      telephone: SITE_CONTACT.phone.replace(/\s/g, ""),
+      email: SITE_CONTACT.email,
+      address: postalAddress,
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude,
+        longitude,
+      },
+      containedInPlace: { "@id": `${pageUrl}#place` },
+      areaServed: {
+        "@type": "Country",
+        name: SITE_GEO.countryName,
       },
     },
   ];
@@ -48,7 +85,6 @@ export function SeoJsonLd({ locale, messages: m }: Props) {
   return (
     <script
       type="application/ld+json"
-      // JSON-LD from trusted CMS strings only
       dangerouslySetInnerHTML={{ __html: JSON.stringify(payload) }}
     />
   );

@@ -16,6 +16,7 @@ export type Messages = {
   langSwitcher: { aria: string };
   footer: {
     tagline: string;
+    locationLine: string;
     rights: string;
     exploreTitle: string;
     contactTitle: string;
@@ -35,18 +36,11 @@ export type Messages = {
     heroCarouselPrev: string;
     heroCarouselNext: string;
     /** Sans line under script (e.g. newsletter teaser) */
-    heroSubscribeLine: string;
-    heroEmailPlaceholder: string;
-    heroSubscribeButton: string;
-    heroSubscribeNote: string;
-    heroSubscribeThanks: string;
     nearbyTitle: string;
     nearbyLead: string;
     itineraryImageAlts: string[];
     itineraryDays: { label: string; headline: string; body: string }[];
     /** YouTube block (#film) */
-    filmTitle: string;
-    filmCaption: string;
     statsLine: string;
     heroImageAlt: string;
     ctaPrimary: string;
@@ -55,17 +49,14 @@ export type Messages = {
     amenitiesLabel: string;
     welcomeTitle: string;
     welcomeBody: string;
-    featuresSectionLabel: string;
-    features: { title: string; body: string }[];
-    quote: string;
+    facilitiesTitle: string;
   };
   about: {
     title: string;
     lead: string;
     p1: string;
+    hostsNote: string;
     p2: string;
-    highlights: string[];
-    highlightsTitle: string;
     sideImageAlt: string;
   };
   gallery: {
@@ -82,13 +73,10 @@ export type Messages = {
     title: string;
     intro: string;
     nameLabel: string;
-    contactName: string;
     addressLabel: string;
     addressMock: string;
     phoneLabel: string;
-    phoneMock: string;
     emailLabel: string;
-    emailMock: string;
     detailsHeading: string;
     mapHeading: string;
     mapIframeTitle: string;
@@ -99,9 +87,9 @@ export type Messages = {
 
 const en: Messages = {
   meta: {
-    siteName: "Stars Peak Holiday Home",
+    siteName: "Velebit mountain chalet stars peak – Croatia",
     siteDescription:
-      "A quiet mountain retreat — mock brochure site. Replace text and images anytime.",
+      "Velebit mountain chalet stars peak holiday home in Croatia, on the Velebit mountains. Located in Velebit Nature Park, Došen Dabar — near Karlobag and Baške Oštarije.",
   },
   header: {
     bookCta: "Check availability",
@@ -118,27 +106,23 @@ const en: Messages = {
   },
   langSwitcher: { aria: "Language" },
   footer: {
-    tagline: "Mock vacation rental site — swap copy & photos when ready.",
-    rights: "© Stars Peak — placeholder",
+    tagline: "Mountain holiday home in Croatia",
+    locationLine: "Located in Croatia, Velebit mountains — Došen Dabar, Lika-Senj County",
+    rights: "© Velebit mountain chalet stars peak",
     exploreTitle: "Explore",
     contactTitle: "Contact us",
   },
   home: {
-    heroBadge: "Velebit · Croatia (mock)",
+    heroBadge: "Velebit · Croatia",
     heroTitle: "Your hideaway above the treeline",
     heroLead:
       "Wake up to pine-scented air and wide skies. This mock homepage describes a fictional cabin so you can preview layout, typography, and navigation before adding your real story.",
-    heroScriptTitle: "Stars Peak",
+    heroScriptTitle: "Velebit mountain chalet stars peak",
     heroCenterLine:
-      "You will always have quiet trails to walk and a warm house to return to — your base in the Velebit hills.",
-    heroSubscribeLine: "Get the special offers directly in your email.",
-    heroEmailPlaceholder: "Enter email address",
-    heroSubscribeButton: "Subscribe",
-    heroSubscribeNote: "Demo only — wire this field to your newsletter or CRM.",
-    heroSubscribeThanks: "Thanks — demo only. Connect to your newsletter tool.",
+      "This unique stay lies in the heart of the Velebit range and offers a beautiful view of the mountains.",
     nearbyTitle: "Near places",
     nearbyLead:
-      "Paklenica, Pag, Zavratnica and the Premužić trail — day trips from your base in the Velebit hills.",
+      "From your mountain base on Velebit you can easily reach the finest destinations of northern Dalmatia — national parks, bays and Adriatic islands. Here are a few favourite day trips nearby.",
     itineraryImageAlts: [
       "Paklenica National Park — cliffs and pine forest",
       "Pag island — stone shore and Adriatic view",
@@ -154,29 +138,27 @@ const en: Messages = {
         label: "NP Paklenica",
         headline: "CANYONS & TRAILS AT THE FOOT OF VELEBIT",
         body:
-          "Paklenica is one of Croatia’s flagship national parks — narrow gorges, cliffs, and marked routes for every fitness level. Plan a half or full day and check seasonal opening hours before you go.",
+          "A UNESCO-listed national park with Velika and Mala Paklenica — dramatic canyons cut into the southern slopes of Velebit. Famous among hikers and climbers, with more than 150 km of marked trails.",
       },
       {
         label: "Otok Pag",
         headline: "ISLAND DAY — SEA, WIND & LUNAR STONE",
         body:
-          "Pag is an easy island hop for beaches, cycling, and local flavours (think cheese and lamb). Cross by bridge from the mainland or combine with a coastal drive — ideal for a sunny day out.",
+          "One of Croatia’s sunniest islands, known for stone landscapes, beaches, Pag sheep and cheese. Linked to the mainland by bridge — perfect for a day by the Adriatic.",
       },
       {
         label: "Uvala Zavratnica",
         headline: "A FJORD-LIKE COVE ON THE KVARNER COAST",
         body:
-          "Zavratnica is a famous sheltered bay with dramatic cliffs and calm water — perfect for a boat trip or a scenic stop if you’re exploring the northern Adriatic. Pair it with a walk along the shore or a swim where allowed.",
+          "A protected landscape and bay on the northern Adriatic, often called Croatia’s fjord — steep cliffs, calm turquoise water and boat trips from Jablanac or Senj.",
       },
       {
         label: "Premužić trail",
         headline: "ANTE PREMUŽIĆ’S STONE PATH ALONG THE RIDGE",
         body:
-          "The Premužić trail is one of Velebit’s icons — a drystone hiking route with gentle gradients and huge views over the sea and the Kvarner islands. Choose a section that fits your time and fitness, carry water, and check weather on the mountain.",
+          "A hiking route through Velebit Nature Park, built with dry stone walls in the early 20th century — among Croatia’s finest walks, with views of the sea and Kvarner islands.",
       },
     ],
-    filmTitle: "A moment on the trail",
-    filmCaption: "Short clip from the area — play with the controls below.",
     heroCtaPill: "From €129 / night · mock rate",
     heroSlideAlts: [
       "Holiday home — photo 3",
@@ -200,51 +182,30 @@ const en: Messages = {
     welcomeTitle: "Why book direct",
     welcomeBody:
       "Independent holiday homes like this one often offer better flexibility and clearer house rules when you message the owner directly. Replace this block with your own story, seasonal offers, or a link to your live calendar when you connect a booking tool.",
-    featuresSectionLabel: "What to expect",
-    features: [
-      {
-        title: "Sleeps 6 (mock)",
-        body: "Three bedrooms, two bathrooms — placeholder numbers until you confirm capacity.",
-      },
-      {
-        title: "Outdoor deck",
-        body: "Morning coffee spot with pretend mountain views. Photo coming soon.",
-      },
-      {
-        title: "Slow evenings",
-        body: "Fireplace, board games, and zero itinerary. Marketing fluff you can rewrite.",
-      },
-    ],
-    quote:
-      "“We loved the silence.” — Guest review placeholder. Replace with a real testimonial.",
+    facilitiesTitle: "Facilities & services",
   },
   about: {
     title: "About this place",
-    lead: "Stars Peak is a sample name for your holiday house. The text below is lorem-style vacation copy.",
+    lead:
+      "This unique property lies in the heart of the Velebit mountain range and offers a beautiful view of the mountains. Despite its secluded mountain setting, the property is conveniently close to the Adriatic coast — a half-hour drive brings you to the sea, offering the best of both mountain and coastal living.",
     p1:
-      "Built from local stone (fictional), the house was imagined as a weekend escape for families who hike by day and cook together at night. Swap this paragraph with your history: when you bought the land, what you renovated, and what makes your home special.",
+      "Perfect for nature lovers, the area is a haven for hiking, climbing, and biking. Outside, guests can enjoy a rustic kitchen with a barbecue, along with a cozy fire pit designed for gathering under the stars. From here, the view opens toward the mountains, creating an unforgettable atmosphere for evenings spent outdoors.",
+    hostsNote:
+      "Hello! We are Marko and Ljiljana, from Šibenik, Croatia. In 2021, we bought a small cottage in the woods and took on the rewarding project of renovating it from the ground up.",
     p2:
-      "We are ten minutes from a trailhead (mock distance), twenty from the nearest bakery (also mock), and a world away from inbox stress. Update distances, road type, and parking notes for real guests.",
-    highlights: [
-      "Self check-in with lockbox (example — change if inaccurate)",
-      "Parking for two cars on gravel (mock)",
-      "Pet-friendly on request — set your real policy",
-      "Starlink / Wi-Fi — mention only if true",
-    ],
-    highlightsTitle: "Highlights",
-    sideImageAlt: "Stars Peak holiday home — view of the house and setting",
+      "The property is located within the Velebit Nature Park, close to Karlobag and Baške Oštarije. Nearby are numerous Velebit peaks, the Northern Velebit National Park and Paklenica National Park, as well as the stunning Zavratnica Bay and the island of Pag. The wider area is dotted with other mountain lodges and a small campsite, making it a true meeting point for hikers, climbers, and outdoor enthusiasts from all over the world. This combination of mountain and coastal surroundings makes the location ideal for exploring the diversity of Croatia’s natural beauty in one place.",
+    sideImageAlt: "Velebit mountain chalet stars peak — holiday home",
   },
   gallery: {
     title: "Gallery",
-    intro:
-      "Photos from the property in one seamless grid — open any picture to view it larger. Use the arrow keys or the side buttons to browse.",
+    intro: "Browse our photo gallery.",
     lightboxClose: "Close gallery",
     lightboxPrev: "Previous image",
     lightboxNext: "Next image",
     lightboxAria: "Enlarged photo gallery",
     lightboxOpenThumb: "Open larger view",
     images: Array.from({ length: 16 }, (_, i) => ({
-      alt: `Stars Peak holiday home — gallery photo ${i + 1}`,
+      alt: `Velebit mountain chalet stars peak — gallery photo ${i + 1}`,
       caption: `Gallery — ${i + 1}`,
     })),
   },
@@ -252,13 +213,10 @@ const en: Messages = {
     title: "Contact",
     intro: "Reach us by phone or email, or visit us at the address below.",
     nameLabel: "Name",
-    contactName: "Velebit Stars Peak",
     addressLabel: "Address",
-    addressMock: "Došen Dabar 1, Croatia",
+    addressMock: "Došen Dabar 1, Velebit, Karlobag, Croatia",
     phoneLabel: "Phone",
-    phoneMock: "+385 99 000 0000",
     emailLabel: "Email",
-    emailMock: "info@velebit-starspeak.com",
     detailsHeading: "Details",
     mapHeading: "Map",
     mapIframeTitle: "Google Map — Došen Dabar 1, Croatia",
@@ -269,9 +227,9 @@ const en: Messages = {
 
 const hr: Messages = {
   meta: {
-    siteName: "Kuća za odmor Stars Peak",
+    siteName: "Velebit mountain chalet stars peak – Hrvatska",
     siteDescription:
-      "Tihi planinski boravak — probna stranica. Kasnije zamijenite tekst i slike.",
+      "Velebit mountain chalet stars peak — planinska kuća za odmor u Hrvatskoj, na Velebitu. Smještaj u Parku prirode Velebit, Došen Dabar — blizu Karlobaga i Baških Oštarija.",
   },
   header: {
     bookCta: "Provjeri dostupnost",
@@ -288,19 +246,20 @@ const hr: Messages = {
   },
   langSwitcher: { aria: "Jezik" },
   footer: {
-    tagline: "Probna stranica za najam — zamijenite tekst i fotografije.",
-    rights: "© Stars Peak — placeholder",
+    tagline: "Planinska kuća za odmor u Hrvatskoj",
+    locationLine: "Smještaj u Hrvatskoj, planina Velebit — Došen Dabar, Lika-Senj",
+    rights: "© Velebit mountain chalet stars peak",
     exploreTitle: "Poveznice",
     contactTitle: "Kontakt",
   },
   home: {
-    heroBadge: "Velebit · Hrvatska (mock)",
+    heroBadge: "Velebit · Hrvatska",
     heroTitle: "Skriveno mjesto iznad krošnji",
     heroLead:
       "Probudite se uz miris bora i široko nebo. Ovaj mock opisuje izmišljenu kolibu kako biste vidjeli raspored i tipografiju prije pravog sadržaja.",
-    heroScriptTitle: "Stars Peak",
+    heroScriptTitle: "Velebit mountain chalet stars peak",
     heroCenterLine:
-      "Uvijek imate tihe staze za šetnju i topli dom za povratak — vaša baza u velebitskim bregima.",
+      "Ovaj jedinstveni smještaj leži u srcu velebitskog masiva i nudi prekrasan pogled na planinu.",
     heroCtaPill: "Od 129 € / noć · mock cijena",
     heroSlideAlts: [
       "Kuća za odmor — fotografija 3",
@@ -310,14 +269,9 @@ const hr: Messages = {
     ],
     heroCarouselPrev: "Prethodna slika",
     heroCarouselNext: "Sljedeća slika",
-    heroSubscribeLine: "Posebne ponude stižu izravno na vašu e-poštu.",
-    heroEmailPlaceholder: "Unesite e-adresu",
-    heroSubscribeButton: "Pretplati se",
-    heroSubscribeNote: "Samo demo — kasnije povežite s newsletter servisom.",
-    heroSubscribeThanks: "Hvala — samo demo. Povežite s alatom za newsletter.",
     nearbyTitle: "U blizini",
     nearbyLead:
-      "NP Paklenica, Pag, Zavratnica i Premužićeva staza — izleti iz vaše baze u velebitskim bregima.",
+      "Od vaše planinske baze na Velebitu lako stižete do najljepših odredišta sjeverne Dalmacije — nacionalnih parkova, uvala i jadranskih otoka. Evo nekoliko omiljenih izleta u blizini.",
     itineraryImageAlts: [
       "NP Paklenica — litice i borova šuma",
       "Otok Pag — kamena obala i pogled na more",
@@ -333,29 +287,27 @@ const hr: Messages = {
         label: "NP Paklenica",
         headline: "KANJONI I STAZE PODNOŽJEM VELEBITA",
         body:
-          "Paklenica je jedan od najpoznatijih hrvatskih nacionalnih parkova — uski kanjoni, litice i označene rute za različite razine kondicije. Planirajte pola ili cijeli dan i prije polaska provjerite radno vrijeme i ulaz.",
+          "UNESCO-ov zaštićeni nacionalni park s Velikom i Malom Paklenicom — uskim kanjonima urezanim u južne padine Velebita. Omiljeno odredište planinara i penjača, s više od 150 km označenih staza.",
       },
       {
         label: "Otok Pag",
         headline: "IZLET NA OTOK — MORE, VJETAR I „MJESEČEV“ KAMEN",
         body:
-          "Pag je blizu — plaže, biciklizam i lokalni okusi (sir, janjetina). Most s kopna ili kombinacija obalnom cestom; idealan dan za sunce i more.",
+          "Jedan od najsunčanijih hrvatskih otoka, poznat po kamenitim krajolicima, plažama, paškoj ovci i siru. Mostom ste povezani s kopnom — idealno za jednodnevni izlet do mora.",
       },
       {
         label: "Uvala Zavratnica",
         headline: "DRAMATIČNE LITICE I TIRKIZNA VODA",
         body:
-          "Zavratnica je poznata uvala s liticama i mirnom, tirkiznom vodom — izlet brodom ili zaustavljanje uz obilazak sjevernog Jadrana. Provjerite pravila kupanja i pristup za posjetitelje.",
+          "Zaštićeni krajolik i uvala na sjevernom Jadranu, često nazivana „fjordom“ Hrvatske — strme litice, mirna tirkizna voda i izleti brodom iz Jablanaca ili Senja.",
       },
       {
         label: "Premužićeva staza",
         headline: "KAMENI PUT ANTUNA PREMUŽIĆA DUŽ GREBENA",
         body:
-          "Jedna je od najljepših planinarskih staza na Velebitu — suhozidna trasa s blagim usponima i pogledom na more te otoke Kvarnera. Odaberite odcijek prema vremenu i kondiciji, ponesite vodu i provjerite vremensku prognozu za planinu.",
+          "Pješačka staza kroz Park prirode Velebit, izgrađena suhozidom početkom 20. stoljeća — jedan od najljepših hodova u Hrvatskoj s pogledom na more i Kvarnerske otoke.",
       },
     ],
-    filmTitle: "Trenutak na stazi",
-    filmCaption: "Kratki video područja — reproduciraj kontrolama u playeru.",
     statsLine: "Cijela kuća · Do 6 osoba · 3 spavaće sobe · 2 kupaonice",
     heroImageAlt: "Probna vanjska fotografija kuće za odmor",
     ctaPrimary: "Galerija",
@@ -370,51 +322,30 @@ const hr: Messages = {
     welcomeTitle: "Zašto izravno kod vlasnika",
     welcomeBody:
       "Često dobijete jasnija pravila i fleksibilnije dogovore kad pišete vlasniku izravno. Ovaj tekst zamijenite svojom pričom, sezonskim ponudama ili poveznicom na kalendar kad ga povežete.",
-    featuresSectionLabel: "Što vas čeka",
-    features: [
-      {
-        title: "Do 6 osoba (mock)",
-        body: "Tri spavaće sobe, dvije kupaonice — brojke su primjer dok ne potvrdite kapacitet.",
-      },
-      {
-        title: "Terasa na otvorenom",
-        body: "Jutarnja kava s izmišljenim pogledom. Fotografija dolazi kasnije.",
-      },
-      {
-        title: "Spora večer",
-        body: "Kamin, društvene igre, bez rasporeda — marketing tekst za zamjenu.",
-      },
-    ],
-    quote:
-      "„Voljeli smo tišinu.“ — primjer recenzije. Zamijenite pravim iskustvom gosta.",
+    facilitiesTitle: "Sadržaji objekta",
   },
   about: {
     title: "O ovom mjestu",
-    lead: "Stars Peak je primjer naziva za vašu kuću. Tekst ispod je probni opis za odmor.",
+    lead:
+      "Ovaj jedinstveni smještaj leži u srcu velebitskog masiva i nudi prekrasan pogled na planinu. Unatoč usamljenom planinskom okruženju, objekt je praktično blizu Jadranskog mora — pola sata vožnje dijeli vas od mora i donosi najbolje od planinskog i primorskog života.",
     p1:
-      "Od lokalnog kamena (izmišljeno), kuća je zamišljena kao vikend bijeg za obitelji koje danju planinare, a navečer kuhaju zajedno. Ovdje opišite pravu povijest: kada ste kupili zemlju, što ste renovirali.",
+      "Idealno za ljubitelje prirode, okolica je utočište za planinarenje, penjanje i biciklizam. Napolju gosti mogu uživati u rustičnoj kuhinji s roštiljem te ugodnom vatrom za druženje pod zvijezdama. Odavde se pogled otvara prema planinama i stvara nezaboravnu atmosferu za večeri na otvorenom.",
+    hostsNote:
+      "Pozdrav! Mi smo Marko i Ljiljana, iz Šibenika. Godine 2021. kupili smo malu kolibu u šumi i prihvatili se nagrađujućeg projekta obnove od temelja.",
     p2:
-      "Deset minuta do staze (mock udaljenost), dvadeset do najbliže pekare (također mock), i daleko od stresa pretinca. Ažurirajte udaljenosti, cestu i parking za stvarne goste.",
-    highlights: [
-      "Samostalni check-in s lockboxom (primjer — prilagodite)",
-      "Parking za dva auta na šljunčanom (mock)",
-      "Kućni ljubimci na upit — postavite pravilo",
-      "Starlink / Wi-Fi — navedite samo ako vrijedi",
-    ],
-    highlightsTitle: "Sažeto",
-    sideImageAlt: "Kuća Stars Peak — pogled na objekt i okruženje",
+      "Objekt se nalazi unutar Parka prirode Velebit, blizu Karlobaga i Baških Oštarija. U blizini su brojni velebitski vrhovi, Nacionalni park Sjeverni Velebit i Nacionalni park Paklenica, kao i prekrasni zaljev Zavratnica i otok Pag. Šira okolica prožeta je drugim planinskim domovima i malim kampom, što čini pravo mjesto susreta planinara, penjača i ljubitelja prirode iz cijelog svijeta. Kombinacija planinskog i primorskog okruženja čini lokaciju idealnom za istraživanje raznolikosti hrvatske prirode na jednom mjestu.",
+    sideImageAlt: "Velebit mountain chalet stars peak — smještaj",
   },
   gallery: {
     title: "Galerija",
-    intro:
-      "Fotografije objekta u jednom mozaiku — dodirnite sliku za veći prikaz. Strelicama na tipkovnici ili gumbima listate dalje.",
+    intro: "Pogledajte galeriju naših slika.",
     lightboxClose: "Zatvori galeriju",
     lightboxPrev: "Prethodna slika",
     lightboxNext: "Sljedeća slika",
     lightboxAria: "Povećani prikaz galerije",
     lightboxOpenThumb: "Otvori veći prikaz",
     images: Array.from({ length: 16 }, (_, i) => ({
-      alt: `Kuća za odmor Stars Peak — galerija, fotografija ${i + 1}`,
+      alt: `Velebit mountain chalet stars peak — galerija, fotografija ${i + 1}`,
       caption: `Galerija — ${i + 1}`,
     })),
   },
@@ -422,13 +353,10 @@ const hr: Messages = {
     title: "Kontakt",
     intro: "Javite se telefonom ili e-poštom ili nas posjetite na adresi.",
     nameLabel: "Naziv",
-    contactName: "Velebit Stars Peak",
     addressLabel: "Adresa",
-    addressMock: "Došen Dabar 1, Hrvatska",
+    addressMock: "Došen Dabar 1, Velebit, Karlobag, Hrvatska",
     phoneLabel: "Telefon",
-    phoneMock: "+385 99 000 0000",
     emailLabel: "E-pošta",
-    emailMock: "info@velebit-starspeak.com",
     detailsHeading: "Podaci",
     mapHeading: "Karta",
     mapIframeTitle: "Google karta — Došen Dabar 1, Hrvatska",
@@ -439,9 +367,9 @@ const hr: Messages = {
 
 const de: Messages = {
   meta: {
-    siteName: "Ferienhaus Stars Peak",
+    siteName: "Velebit mountain chalet stars peak – Kroatien",
     siteDescription:
-      "Ruhiger Bergurlaub — Demoseite. Texte und Bilder später austauschen.",
+      "Velebit mountain chalet stars peak — Ferienhaus in Kroatien am Velebit. Im Naturpark Velebit, Došen Dabar — nahe Karlobag und Baške Oštarije.",
   },
   header: {
     bookCta: "Verfügbarkeit prüfen",
@@ -458,19 +386,20 @@ const de: Messages = {
   },
   langSwitcher: { aria: "Sprache" },
   footer: {
-    tagline: "Demo-Ferienhaus-Website — Inhalte und Fotos ersetzen.",
-    rights: "© Stars Peak — Platzhalter",
+    tagline: "Ferienhaus in den kroatischen Bergen",
+    locationLine: "In Kroatien, Velebit-Gebirge — Došen Dabar, Gespanschaft Lika-Senj",
+    rights: "© Velebit mountain chalet stars peak",
     exploreTitle: "Navigation",
     contactTitle: "Kontakt",
   },
   home: {
-    heroBadge: "Velebit · Kroatien (Mock)",
+    heroBadge: "Velebit · Kroatien",
     heroTitle: "Ihr Rückzugsort über den Baumwipfeln",
     heroLead:
       "Wachen Sie auf mit Kiefernduft und weitem Himmel. Diese Demo-Startseite beschreibt eine fiktive Hütte, damit Sie Layout und Navigation testen können.",
-    heroScriptTitle: "Stars Peak",
+    heroScriptTitle: "Velebit mountain chalet stars peak",
     heroCenterLine:
-      "Immer ruhige Wege zum Wandern und ein warmes Haus zum Zurückkehren — Ihre Basis in den Velebit-Hügeln.",
+      "Diese einzigartige Unterkunft liegt im Herzen des Velebit und bietet eine wunderschöne Aussicht auf die Berge.",
     heroCtaPill: "Ab 129 € / Nacht · Platzhalterpreis",
     heroSlideAlts: [
       "Ferienhaus — Foto 3",
@@ -480,14 +409,9 @@ const de: Messages = {
     ],
     heroCarouselPrev: "Vorheriges Bild",
     heroCarouselNext: "Nächstes Bild",
-    heroSubscribeLine: "Spezialangebote direkt in Ihrer E-Mail.",
-    heroEmailPlaceholder: "E-Mail-Adresse eingeben",
-    heroSubscribeButton: "Abonnieren",
-    heroSubscribeNote: "Nur Demo — später mit Newsletter-Tool verbinden.",
-    heroSubscribeThanks: "Danke — nur Demo. Mit Newsletter-Tool verbinden.",
     nearbyTitle: "In der Nähe",
     nearbyLead:
-      "NP Paklenica, Pag, Zavratnica und der Premužić-Weg — Tagesausflüge von Ihrer Basis in den Velebit-Bergen.",
+      "Von Ihrer Bergbasis am Velebit erreichen Sie leicht die schönsten Ziele Norddalmatiens — Nationalparks, Buchten und Adriainseln. Hier einige beliebte Tagesausflüge in der Nähe.",
     itineraryImageAlts: [
       "Nationalpark Paklenica — Felswände und Kiefernwald",
       "Insel Pag — Steinküste und Adria-Panorama",
@@ -503,29 +427,27 @@ const de: Messages = {
         label: "NP Paklenica",
         headline: "SCHLUCHTEN UND WEGE AM FUß DES VELEBIT",
         body:
-          "Paklenica ist einer Kroatiens bekanntesten Nationalparks — enge Schluchten, Felswände und markierte Routen für jedes Niveau. Planen Sie einen halben oder ganzen Tag und prüfen Sie Öffnungszeiten vorab.",
+          "UNESCO-Nationalpark mit Velika und Mala Paklenica — dramatische Schluchten im südlichen Velebit. Beliebt bei Wanderern und Kletterern, mit über 150 km markierter Wege.",
       },
       {
         label: "Insel Pag",
         headline: "INSELTAG — MEER, WIND UND „MOND“-STEIN",
         body:
-          "Pag ist gut erreichbar: Strände, Radfahren und lokale Spezialitäten (Käse, Lamm). Über die Brücke vom Festland oder als Teil einer Küstenfahrt — ideal für einen sonnigen Tag.",
+          "Eine der sonnenreichsten Inseln Kroatiens, bekannt für Steinlandschaften, Strände, Pag-Schafe und Käse. Per Brücke vom Festland — ideal für einen Tag am Meer.",
       },
       {
         label: "Bucht Zavratnica",
         headline: "GESCHÜTZTE BUCHT MIT FJORDARTIGEM CHARAKTER",
         body:
-          "Zavratnica ist eine berühmte, windgeschützte Bucht mit steilen Klippen und ruhigem Wasser — perfekt für eine Bootstour oder einen Fotostopp an der Kvarner-Küste. Bade- und Zutrittsregeln bitte vor Ort beachten.",
+          "Geschützte Landschaft und Bucht an der nördlichen Adria, oft Kroatiens Fjord genannt — steile Klippen, türkisfarbenes Wasser und Bootsausflüge ab Jablanac oder Senj.",
       },
       {
         label: "Premužić-Weg",
         headline: "ANTE PREMUŽIĆS STEINWEG AM KAMM",
         body:
-          "Der Premužić-Weg gehört zu Velebits Klassikern — ein trockenmauerwerkter Höhenweg mit sanften Steigungen und Weitblick auf Meer und Kvarner-Inseln. Wählen Sie eine Etappe passend zu Zeit und Kondition, nehmen Sie Wasser mit und beachten Sie das Bergwetter.",
+          "Wanderroute durch den Naturpark Velebit, Anfang des 20. Jahrhunderts als Trockenmauerweg angelegt — eine der schönsten Touren Kroatiens mit Blick auf Meer und Kvarner-Inseln.",
       },
     ],
-    filmTitle: "Ein Moment auf dem Weg",
-    filmCaption: "Kurzer Clip aus der Umgebung — mit den Player-Steuerungen abspielen.",
     statsLine: "Gesamtes Haus · 6 Gäste · 3 Schlafzimmer · 2 Bäder",
     heroImageAlt: "Platzhalter-Außenfoto des Ferienhauses",
     ctaPrimary: "Zur Galerie",
@@ -540,51 +462,30 @@ const de: Messages = {
     welcomeTitle: "Direkt beim Gastgeber buchen",
     welcomeBody:
       "Oft erhalten Sie persönliche Antworten und klarere Hausregeln, wenn Sie direkt beim Eigentümer anfragen. Ersetzen Sie diesen Text durch Ihre Geschichte, Saisonangebote oder einen Kalender-Link.",
-    featuresSectionLabel: "Das erwartet Sie",
-    features: [
-      {
-        title: "6 Personen (Mock)",
-        body: "Drei Schlafzimmer, zwei Bäder — Platzhalter bis Sie die Kapazität festlegen.",
-      },
-      {
-        title: "Außenterrasse",
-        body: "Kaffee am Morgen mit erfundener Aussicht. Foto folgt.",
-      },
-      {
-        title: "Ruhige Abende",
-        body: "Kamin, Gesellschaftsspiele, kein Plan — Marketingtext zum Überarbeiten.",
-      },
-    ],
-    quote:
-      "„Wir liebten die Stille.“ — Beispielbewertung. Durch echtes Feedback ersetzen.",
+    facilitiesTitle: "Ausstattung & Service",
   },
   about: {
     title: "Über dieses Haus",
-    lead: "Stars Peak ist ein Beispielname. Der folgende Text ist Platzhalter für Ihr Ferienhaus.",
+    lead:
+      "Diese einzigartige Unterkunft liegt im Herzen des Velebit-Gebirges und bietet eine wunderschöne Aussicht auf die Berge. Trotz der abgeschiedenen Lage in den Bergen ist das Haus der Adriaküste praktisch nah — eine halbe Stunde Fahrt bringt Sie ans Meer, das Beste aus Berg und Küste vereint.",
     p1:
-      "Aus regionalem Stein (fiktiv) — gedacht als Wochenendrefugium für Familien, die tags wandern und abends gemeinsam kochen. Ersetzen Sie dies mit Ihrer Geschichte.",
+      "Ideal für Naturliebhaber: Die Umgebung lädt zum Wandern, Klettern und Radfahren ein. Draußen erwarten Gäste eine rustikale Küche mit Grill sowie eine gemütliche Feuerstelle unter dem Sternenhimmel — mit Blick auf die Berge und unvergesslichen Abenden im Freien.",
+    hostsNote:
+      "Hallo! Wir sind Marko und Ljiljana aus Šibenik, Kroatien. 2021 kauften wir eine kleine Hütte im Wald und renovierten sie von Grund auf.",
     p2:
-      "Zehn Minuten zum Wanderparkplatz (Mock), zwanzig zur Bäckerei (Mock), und weit weg vom Posteingang. Entfernungen und Zufahrt real beschreiben.",
-    highlights: [
-      "Self-Check-in mit Schlüsselbox (Beispiel)",
-      "Parkplatz für zwei Autos auf Schotter (Mock)",
-      "Haustiere auf Anfrage — Ihre Regel",
-      "Starlink / WLAN — nur wenn vorhanden",
-    ],
-    highlightsTitle: "Auf einen Blick",
-    sideImageAlt: "Ferienhaus Stars Peak — Haus und Umgebung",
+      "Das Haus liegt im Naturpark Velebit, nahe Karlobag und Baške Oštarije. In der Nähe: zahlreiche Velebit-Gipfel, der Nationalpark Nordlicher Velebit und Paklenica, die Bucht Zavratnica und die Insel Pag. Die Region mit Berghütten und einem kleinen Campingplatz ist ein Treffpunkt für Wanderer, Kletterer und Outdoor-Fans aus aller Welt — ideal, um Kroatiens Naturvielfalt an einem Ort zu entdecken.",
+    sideImageAlt: "Velebit mountain chalet stars peak — Ferienhaus",
   },
   gallery: {
     title: "Galerie",
-    intro:
-      "Fotos vom Objekt in einem nahtlosen Raster — antippen für die Großansicht. Pfeiltasten oder Seitenknöpfe zum Blättern.",
+    intro: "Sehen Sie sich unsere Bildergalerie an.",
     lightboxClose: "Galerie schließen",
     lightboxPrev: "Vorheriges Bild",
     lightboxNext: "Nächstes Bild",
     lightboxAria: "Vergrößerte Galerie",
     lightboxOpenThumb: "Größere Ansicht öffnen",
     images: Array.from({ length: 16 }, (_, i) => ({
-      alt: `Ferienhaus Stars Peak — Galeriefoto ${i + 1}`,
+      alt: `Velebit mountain chalet stars peak — Galeriefoto ${i + 1}`,
       caption: `Galerie — ${i + 1}`,
     })),
   },
@@ -592,13 +493,10 @@ const de: Messages = {
     title: "Kontakt",
     intro: "Erreichen Sie uns telefonisch oder per E-Mail, oder besuchen Sie uns vor Ort.",
     nameLabel: "Name",
-    contactName: "Velebit Stars Peak",
     addressLabel: "Adresse",
-    addressMock: "Došen Dabar 1, Kroatien",
+    addressMock: "Došen Dabar 1, Velebit, Karlobag, Kroatien",
     phoneLabel: "Telefon",
-    phoneMock: "+385 99 000 0000",
     emailLabel: "E-Mail",
-    emailMock: "info@velebit-starspeak.com",
     detailsHeading: "Kontaktdaten",
     mapHeading: "Karte",
     mapIframeTitle: "Google Karte — Došen Dabar 1, Kroatien",

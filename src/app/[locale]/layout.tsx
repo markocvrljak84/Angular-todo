@@ -7,6 +7,8 @@ import { LangHtml } from "@/components/lang-html";
 import { SeoJsonLd } from "@/components/seo-json-ld";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { SITE_CONTACT } from "@/config/site-contact";
+import { SITE_GEO, getGeoMetaOther } from "@/config/site-location";
 import { getSiteUrl } from "@/lib/site-url";
 import { localeToHreflang, localeToOpenGraphLocale } from "@/lib/seo-locale";
 
@@ -35,8 +37,21 @@ export async function generateMetadata({
   }
 
   return {
-    title: { default: m.meta.siteName, template: `%s · ${m.meta.siteName}` },
+    title: { default: m.meta.siteName, template: `%s · ${SITE_GEO.brandName}` },
     description: m.meta.siteDescription,
+    keywords: [
+      SITE_CONTACT.businessName,
+      "Velebit mountain chalet",
+      "Velebit",
+      "Croatia",
+      "Hrvatska",
+      "Karlobag",
+      "Došen Dabar",
+      "Velebit Nature Park",
+      "holiday home",
+      "mountain chalet",
+    ],
+    other: getGeoMetaOther(),
     alternates: {
       canonical: path,
       languages,

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Locale } from "@/i18n/config";
 import type { Messages } from "@/i18n/messages";
+import { SITE_CONTACT, telHref } from "@/config/site-contact";
 
 export function SiteFooter({ t, locale }: { t: Messages; locale: Locale }) {
   const base = `/${locale}`;
@@ -17,8 +18,9 @@ export function SiteFooter({ t, locale }: { t: Messages; locale: Locale }) {
     <footer className="site-footer">
       <div className="site-footer__grid">
         <div>
-          <strong className="site-footer__brand">{t.meta.siteName}</strong>
+          <strong className="site-footer__brand">{SITE_CONTACT.businessName}</strong>
           <p>{t.footer.tagline}</p>
+          <p className="site-footer__location">{t.footer.locationLine}</p>
         </div>
         <div>
           <h2>{t.footer.exploreTitle}</h2>
@@ -32,11 +34,12 @@ export function SiteFooter({ t, locale }: { t: Messages; locale: Locale }) {
         </div>
         <div className="site-footer__contact">
           <h2>{t.footer.contactTitle}</h2>
+          <p>{SITE_CONTACT.businessName}</p>
           <p>
-            <a href={`tel:${t.contact.phoneMock.replace(/\s/g, "")}`}>{t.contact.phoneMock}</a>
+            <a href={telHref()}>{SITE_CONTACT.phone}</a>
           </p>
           <p>
-            <a href={`mailto:${t.contact.emailMock}`}>{t.contact.emailMock}</a>
+            <a href={`mailto:${SITE_CONTACT.email}`}>{SITE_CONTACT.email}</a>
           </p>
         </div>
       </div>

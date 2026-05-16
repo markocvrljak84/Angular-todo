@@ -1,7 +1,7 @@
 {
   "meta": {
-    "siteName": "Casa vacanze Stars Peak",
-    "siteDescription": "Un rifugio di montagna tranquillo — sito dimostrativo. Sostituisci testi e foto quando vuoi."
+    "siteName": "Velebit mountain chalet stars peak – Croazia",
+    "siteDescription": "Velebit mountain chalet stars peak — casa vacanze in Croazia, sul massiccio del Velebit. Nel parco naturale del Velebit, Došen Dabar — vicino a Karlobag e Baške Oštarije."
   },
   "header": {
     "bookCta": "Verifica disponibilità",
@@ -20,24 +20,20 @@
     "aria": "Lingua"
   },
   "footer": {
-    "tagline": "Sito dimostrativo per affitti — sostituisci testi e foto quando sei pronto.",
-    "rights": "© Stars Peak — placeholder",
+    "tagline": "Casa vacanze di montagna in Croazia",
+    "locationLine": "In Croazia, massiccio del Velebit — Došen Dabar, regione di Lika-Senj",
+    "rights": "© Velebit mountain chalet stars peak",
     "exploreTitle": "Esplora",
     "contactTitle": "Contattaci"
   },
   "home": {
-    "heroBadge": "Velebit · Croazia (demo)",
+    "heroBadge": "Velebit · Croazia",
     "heroTitle": "Il tuo rifugio sopra la linea degli alberi",
     "heroLead": "Svegliati con profumo di pino e cieli larghi. Questa homepage dimostrativa descrive una baita fittizia per anteprima di layout e navigazione.",
-    "heroScriptTitle": "Stars Peak",
-    "heroCenterLine": "Avrai sempre sentieri tranquilli da percorrere e una casa calda a cui tornare — la tua base sulle colline del Velebit.",
-    "heroSubscribeLine": "Ricevi le offerte speciali direttamente via e-mail.",
-    "heroEmailPlaceholder": "Indirizzo e-mail",
-    "heroSubscribeButton": "Iscriviti",
-    "heroSubscribeNote": "Solo demo — collega questo campo al tuo strumento newsletter.",
-    "heroSubscribeThanks": "Grazie — solo demo. Collega il tuo strumento newsletter.",
+    "heroScriptTitle": "Velebit mountain chalet stars peak",
+    "heroCenterLine": "Questo alloggio unico si trova nel cuore del Velebit e offre una splendida vista sulla montagna.",
     "nearbyTitle": "Nei dintorni",
-    "nearbyLead": "Paklenica, Pag, Zavratnica e il sentiero Premužić — gite in giornata dalla tua base sul Velebit.",
+    "nearbyLead": "Dalla tua base di montagna sul Velebit raggiungi facilmente le mete più belle della Dalmazia settentrionale — parchi nazionali, baie e isole adriatiche. Ecco alcune gite consigliate nelle vicinanze.",
     "itineraryImageAlts": [
       "Parco nazionale di Paklenica — pareti rocciose e pineta",
       "Isola di Pag — costa di pietra e vista sull’Adriatico",
@@ -52,26 +48,24 @@
       {
         "label": "NP Paklenica",
         "headline": "CANYON E SENTIERI AI PIEDI DEL VELEBIT",
-        "body": "Paklenica è uno dei parchi nazionali simbolo della Croazia — gole strette, pareti rocciose e percorsi segnalati per ogni preparazione. Pianifica mezza o intera giornata e verifica gli orari di apertura."
+        "body": "Parco nazionale UNESCO con Velika e Mala Paklenica — canyon spettacolari sul versante meridionale del Velebit. Meta amata da escursionisti e arrampicatori, con oltre 150 km di sentieri segnalati."
       },
       {
         "label": "Isola di Pag",
         "headline": "GIORNATA IN ISOLA — MARE, VENTO E PIETRA «LUNARE»",
-        "body": "Pag è facile da raggiungere per spiagge, bici e sapori locali (formaggio, agnello). Ponte dalla terraferma o giro in auto sulla costa — ideale in una giornata di sole."
+        "body": "Una delle isole più soleggiate della Croazia, nota per paesaggi di pietra, spiagge, pecore pag e formaggio. Collegata alla terraferma da un ponte — perfetta per una giornata al mare."
       },
       {
         "label": "Baia di Zavratnica",
         "headline": "INSENATURA RIPARATA CON SCOSCESE SPETTACOLARI",
-        "body": "Zavratnica è una baia famosa con scogliere drammatiche e acqua calma — perfetta per un’uscita in barca o una sosta panoramica sull’Adriatico settentrionale. Controlla regole di accesso e balneazione."
+        "body": "Area protetta e baia sull’Adriatico settentrionale, spesso chiamata il fiordo croato — scogliere ripide, acqua turchese e gite in barca da Jablanac o Senj."
       },
       {
         "label": "Sentiero Premužić",
         "headline": "IL PERCORSO IN PIETRA DI ANTE PREMUŽIĆ SULLA CRESTA",
-        "body": "Il sentiero Premužić è un’icona del Velebit — tracciato a secco con pendenze dolci e viste immense sul mare e sulle isole del Quarnaro. Scegli un tratto adatto, porta acqua e controlla il meteo in montagna."
+        "body": "Percorso escursionistico nel parco naturale del Velebit, costruito a secco all’inizio del Novecento — una delle passeggiate più belle della Croazia con vista su mare e isole del Quarnaro."
       }
     ],
-    "filmTitle": "Un attimo sul sentiero",
-    "filmCaption": "Breve clip dalla zona — avvia la riproduzione con i controlli del player.",
     "heroCtaPill": "Da 129 € / notte · tariffa demo",
     "heroSlideAlts": [
       "Casa vacanze — foto 3",
@@ -102,40 +96,19 @@
     ],
     "welcomeTitle": "Perché prenotare direttamente",
     "welcomeBody": "Le case vacanza indipendenti offrono spesso più flessibilità e regole più chiare quando scrivi direttamente al proprietario. Sostituisci questo testo con la tua storia, offerte stagionali o un link al calendario.",
-    "featuresSectionLabel": "Cosa aspettarsi",
-    "features": [
-      {
-        "title": "6 posti (demo)",
-        "body": "Tre camere, due bagni — numeri indicativi fino a conferma capacità."
-      },
-      {
-        "title": "Terrazza esterna",
-        "body": "Caffè al mattino con vista di esempio. Foto in arrivo."
-      },
-      {
-        "title": "Sere lente",
-        "body": "Camino, giochi da tavolo — testo marketing da riscrivere."
-      }
-    ],
-    "quote": "«Abbiamo amato il silenzio.» — Recensione ospite demo. Sostituisci con una testimonianza reale."
+    "facilitiesTitle": "Servizi e dotazioni"
   },
   "about": {
     "title": "Su questo posto",
-    "lead": "Stars Peak è un nome di esempio per la tua casa vacanze. Il testo seguente è dimostrativo.",
-    "p1": "Costruita in pietra locale (fittizio), la casa è pensata come rifugio weekend per famiglie che camminano di giorno e cucinano la sera. Sostituisci con la tua storia.",
-    "p2": "Dieci minuti da un sentiero (distanza demo), venti dal panificio più vicino (demo), lontano dallo stress della posta. Aggiorna distanze e parcheggio per gli ospiti.",
-    "highlights": [
-      "Check-in autonomo con cassetta chiavi (esempio — adatta)",
-      "Parcheggio per due auto su ghiaia (demo)",
-      "Animali su richiesta — imposta la tua policy",
-      "Starlink / Wi-Fi — indica solo se vero"
-    ],
-    "highlightsTitle": "In sintesi",
-    "sideImageAlt": "Casa vacanze Stars Peak — vista della struttura e del contesto"
+    "lead": "Questa proprietà unica si trova nel cuore del massiccio del Velebit e offre una splendida vista sulla montagna. Nonostante l’ambientazione montana appartata, è comodamente vicina alla costa adriatica — mezz’ora di auto e si raggiunge il mare, il meglio di montagna e costa.",
+    "p1": "Perfetta per gli amanti della natura, la zona è un paradiso per escursionismo, arrampicata e ciclismo. All’esterno gli ospiti trovano una cucina rustica con barbecue e un accogliente fuoco per le serate sotto le stelle, con vista sulle montagne.",
+    "hostsNote": "Ciao! Siamo Marko e Ljiljana, da Šibenik in Croazia. Nel 2021 abbiamo acquistato un piccolo cottage nel bosco e lo abbiamo ristrutturato da zero.",
+    "p2": "La casa si trova nel parco naturale del Velebit, vicino a Karlobag e Baške Oštarije. Nelle vicinanze: numerose cime del Velebit, il parco nazionale del Velebit settentrionale e Paklenica, la baia di Zavratnica e l’isola di Pag. Rifugi di montagna e un piccolo campeggio rendono l’area un punto d’incontro per escursionisti e arrampicatori da tutto il mondo — ideale per esplorare la diversità naturale della Croazia in un solo luogo.",
+    "sideImageAlt": "Velebit mountain chalet stars peak — alloggio"
   },
   "gallery": {
     "title": "Galleria",
-    "intro": "Foto della struttura in una griglia continua — tocca per ingrandire. Frecce della tastiera o pulsanti laterali.",
+    "intro": "Sfoglia la nostra galleria fotografica.",
     "lightboxClose": "Chiudi galleria",
     "lightboxPrev": "Immagine precedente",
     "lightboxNext": "Immagine successiva",
@@ -143,67 +116,67 @@
     "lightboxOpenThumb": "Apri vista grande",
     "images": [
       {
-        "alt": "Casa vacanze Stars Peak — foto 1",
+        "alt": "Casa vacanze Velebit mountain chalet stars peak — foto 1",
         "caption": "Galleria — 1"
       },
       {
-        "alt": "Casa vacanze Stars Peak — foto 2",
+        "alt": "Casa vacanze Velebit mountain chalet stars peak — foto 2",
         "caption": "Galleria — 2"
       },
       {
-        "alt": "Casa vacanze Stars Peak — foto 3",
+        "alt": "Casa vacanze Velebit mountain chalet stars peak — foto 3",
         "caption": "Galleria — 3"
       },
       {
-        "alt": "Casa vacanze Stars Peak — foto 4",
+        "alt": "Casa vacanze Velebit mountain chalet stars peak — foto 4",
         "caption": "Galleria — 4"
       },
       {
-        "alt": "Casa vacanze Stars Peak — foto 5",
+        "alt": "Casa vacanze Velebit mountain chalet stars peak — foto 5",
         "caption": "Galleria — 5"
       },
       {
-        "alt": "Casa vacanze Stars Peak — foto 6",
+        "alt": "Casa vacanze Velebit mountain chalet stars peak — foto 6",
         "caption": "Galleria — 6"
       },
       {
-        "alt": "Casa vacanze Stars Peak — foto 7",
+        "alt": "Casa vacanze Velebit mountain chalet stars peak — foto 7",
         "caption": "Galleria — 7"
       },
       {
-        "alt": "Casa vacanze Stars Peak — foto 8",
+        "alt": "Casa vacanze Velebit mountain chalet stars peak — foto 8",
         "caption": "Galleria — 8"
       },
       {
-        "alt": "Casa vacanze Stars Peak — foto 9",
+        "alt": "Casa vacanze Velebit mountain chalet stars peak — foto 9",
         "caption": "Galleria — 9"
       },
       {
-        "alt": "Casa vacanze Stars Peak — foto 10",
+        "alt": "Casa vacanze Velebit mountain chalet stars peak — foto 10",
         "caption": "Galleria — 10"
       },
       {
-        "alt": "Casa vacanze Stars Peak — foto 11",
+        "alt": "Casa vacanze Velebit mountain chalet stars peak — foto 11",
         "caption": "Galleria — 11"
       },
       {
-        "alt": "Casa vacanze Stars Peak — foto 12",
+        "alt": "Casa vacanze Velebit mountain chalet stars peak — foto 12",
         "caption": "Galleria — 12"
       },
       {
-        "alt": "Casa vacanze Stars Peak — foto 13",
+        "alt": "Casa vacanze Velebit mountain chalet stars peak — foto 13",
         "caption": "Galleria — 13"
       },
       {
-        "alt": "Casa vacanze Stars Peak — foto 14",
+        "alt": "Casa vacanze Velebit mountain chalet stars peak — foto 14",
         "caption": "Galleria — 14"
       },
       {
-        "alt": "Casa vacanze Stars Peak — foto 15",
+        "alt": "Casa vacanze Velebit mountain chalet stars peak — foto 15",
         "caption": "Galleria — 15"
       },
       {
-        "alt": "Casa vacanze Stars Peak — foto 16",
+        "alt": "Casa vacanze Velebit mountain chalet stars peak — foto 16",
         "caption": "Galleria — 16"
       }
     ]
@@ -212,13 +185,10 @@
     "title": "Contatti",
     "intro": "Contattaci per telefono o e-mail, oppure visitaci all’indirizzo sotto.",
     "nameLabel": "Nome",
-    "contactName": "Velebit Stars Peak",
     "addressLabel": "Indirizzo",
-    "addressMock": "Došen Dabar 1, Croazia",
+    "addressMock": "Došen Dabar 1, Velebit, Karlobag, Croazia",
     "phoneLabel": "Telefono",
-    "phoneMock": "+385 99 000 0000",
     "emailLabel": "E-mail",
-    "emailMock": "info@velebit-starspeak.com",
     "detailsHeading": "Dettagli",
     "mapHeading": "Mappa",
     "mapIframeTitle": "Google Maps — Došen Dabar 1, Croazia",

@@ -1,29 +1,18 @@
 /**
  * Basic YouTube embed with native player controls (no autoplay tricks).
  */
-export function FilmYoutubeSection({
-  videoId,
-  title,
-  caption,
-}: {
-  videoId: string;
-  title: string;
-  caption: string;
-}) {
+export function FilmYoutubeSection({ videoId }: { videoId: string }) {
   const src = `https://www.youtube.com/embed/${encodeURIComponent(videoId)}?rel=0`;
+  const iframeTitle = "Video — Velebit mountain chalet stars peak";
 
   return (
-    <section id="film" className="film-yt flat-section" aria-labelledby="film-yt-heading">
+    <section id="film" className="film-yt flat-section" aria-label={iframeTitle}>
       <div className="flat-wrap">
-        <h2 id="film-yt-heading" className="film-yt__title">
-          {title}
-        </h2>
-        <p className="film-yt__caption">{caption}</p>
         <div className="film-yt__frame">
           <iframe
             className="film-yt__iframe"
             src={src}
-            title={title}
+            title={iframeTitle}
             loading="eager"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen

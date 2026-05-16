@@ -9,11 +9,7 @@ type Props = {
   slides: HeroSlide[];
   kicker: string;
   scriptTitle: string;
-  subscribeLine: string;
-  emailPlaceholder: string;
-  subscribeButton: string;
-  subscribeNote: string;
-  subscribeThanks: string;
+  centerLine: string;
   carouselPrevLabel: string;
   carouselNextLabel: string;
 };
@@ -22,16 +18,11 @@ export function HeroFullscreenCarousel({
   slides,
   kicker,
   scriptTitle,
-  subscribeLine,
-  emailPlaceholder,
-  subscribeButton,
-  subscribeNote,
-  subscribeThanks,
+  centerLine,
   carouselPrevLabel,
   carouselNextLabel,
 }: Props) {
   const [index, setIndex] = useState(0);
-  const [toast, setToast] = useState<string | null>(null);
 
   const goPrev = useCallback(() => {
     setIndex((i) => (i - 1 + slides.length) % slides.length);
@@ -56,11 +47,6 @@ export function HeroFullscreenCarousel({
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [goPrev, goNext]);
-
-  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setToast(subscribeThanks);
-  }
 
   return (
     <section
@@ -127,27 +113,7 @@ export function HeroFullscreenCarousel({
         <h1 id="hero-fs-title" className="hero-fs__script">
           {scriptTitle}
         </h1>
-        <p className="hero-fs__subscribe-line">{subscribeLine}</p>
-
-        <form className="hero-fs__subscribe" onSubmit={onSubmit}>
-          <input
-            type="email"
-            name="email"
-            className="hero-fs__email"
-            placeholder={emailPlaceholder}
-            autoComplete="email"
-            required
-          />
-          <button type="submit" className="hero-fs__subscribe-btn">
-            {subscribeButton}
-          </button>
-        </form>
-        <p className="hero-fs__subscribe-note">{subscribeNote}</p>
-        {toast ? (
-          <p className="hero-fs__subscribe-toast" role="status">
-            {toast}
-          </p>
-        ) : null}
+        <p className="hero-fs__tagline">{centerLine}</p>
       </div>
     </section>
   );

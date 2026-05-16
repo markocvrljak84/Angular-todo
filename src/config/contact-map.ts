@@ -11,7 +11,10 @@
  *
  * Ako LAT/LNG nisu postavljeni, koristi se tekstualni upit — može pokazati više oznaka u blizini.
  */
-export const CONTACT_MAP_QUERY = "Došen Dabar 1, Croatia";
+import { SITE_CONTACT } from "./site-contact";
+
+/** Matches Google Maps place name for reliable pin lookup. */
+export const CONTACT_MAP_QUERY = `${SITE_CONTACT.businessName}, Došen Dabar, Karlobag, Croatia`;
 
 function normalizeCoord(raw: string | undefined): string | null {
   const s = raw?.trim();

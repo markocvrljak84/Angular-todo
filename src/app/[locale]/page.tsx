@@ -1,11 +1,14 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { isLocale, type Locale } from "@/i18n/config";
+import { getFacilityCategories } from "@/i18n/facility-categories";
 import { getMessages } from "@/i18n/messages";
+import { FacilitiesGrid } from "@/components/facilities-grid";
 import { HeroFullscreenCarousel } from "@/components/hero-fullscreen-carousel";
 import { GalleryGridLightbox } from "@/components/gallery-grid-lightbox";
 import { FilmYoutubeSection } from "@/components/film-youtube-section";
 import { getGoogleMapsUrls } from "@/config/contact-map";
+import { SITE_CONTACT, telHref } from "@/config/site-contact";
 import { ABOUT_US_IMAGE, GALLERY_FILES, NEARBY_GRID_IMAGE_SRCS } from "@/config/site-images";
 
 export const dynamic = "force-static";
@@ -28,6 +31,7 @@ export default async function HomePage({ params }: Props) {
   if (!isLocale(l)) notFound();
   const locale = l as Locale;
   const t = getMessages(locale);
+  const facilities = getFacilityCategories(locale);
 
   if (t.gallery.images.length !== GALLERY_FILES.length) {
     throw new Error(
@@ -55,12 +59,8 @@ export default async function HomePage({ params }: Props) {
       <HeroFullscreenCarousel
         slides={heroSlides}
         kicker={t.home.heroBadge}
-        scriptTitle={t.home.heroScriptTitle}
-        subscribeLine={t.home.heroSubscribeLine}
-        emailPlaceholder={t.home.heroEmailPlaceholder}
-        subscribeButton={t.home.heroSubscribeButton}
-        subscribeNote={t.home.heroSubscribeNote}
-        subscribeThanks={t.home.heroSubscribeThanks}
+        scriptTitle={SITE_CONTACT.businessName}
+        centerLine={t.home.heroCenterLine}
         carouselPrevLabel={t.home.heroCarouselPrev}
         carouselNextLabel={t.home.heroCarouselNext}
       />
@@ -74,18 +74,13 @@ export default async function HomePage({ params }: Props) {
           <h2 id="about-title" className="flat-section__title">
             {t.about.title}
           </h2>
-          <p className="flat-section__intro">{t.about.lead}</p>
+          <p className="flat-section__intro flat-section__intro--lead">{t.about.lead}</p>
 
           <div className="flat-about">
             <div className="flat-about__main">
               <p>{t.about.p1}</p>
+              <p className="flat-about__hosts-note">{t.about.hostsNote}</p>
               <p>{t.about.p2}</p>
-              <h3 className="flat-about__sub">{t.about.highlightsTitle}</h3>
-              <ul className="flat-list">
-                {t.about.highlights.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
             </div>
             <aside className="flat-about__side" aria-label={t.about.sideImageAlt}>
               <div className="flat-about__side-media">
@@ -100,16 +95,8 @@ export default async function HomePage({ params }: Props) {
             </aside>
           </div>
 
-          <div className="flat-tiles">
-            {t.home.features.map((f) => (
-              <div key={f.title} className="flat-tile">
-                <h3 className="flat-tile__h">{f.title}</h3>
-                <p>{f.body}</p>
-              </div>
-            ))}
-          </div>
+          <FacilitiesGrid title={t.home.facilitiesTitle} categories={facilities} />
 
-          <blockquote className="flat-quote">{t.home.quote}</blockquote>
         </div>
       </section>
 
@@ -145,11 +132,7 @@ export default async function HomePage({ params }: Props) {
         </div>
       </section>
 
-      <FilmYoutubeSection
-        videoId={FILM_YOUTUBE_ID}
-        title={t.home.filmTitle}
-        caption={t.home.filmCaption}
-      />
+      <FilmYoutubeSection videoId={FILM_YOUTUBE_ID} />
 
       <section
         id="nearby"
@@ -315,18 +298,14 @@ export default async function HomePage({ params }: Props) {
               <h3 className="flat-contact__h">{t.contact.detailsHeading}</h3>
               <dl className="flat-dl">
                 <dt>{t.contact.nameLabel}</dt>
-                <dd>{t.contact.contactName}</dd>
+                <dd>{SITE_CONTACT.businessName}</dd>
                 <dt>{t.contact.phoneLabel}</dt>
                 <dd>
-                  <a href={`tel:${t.contact.phoneMock.replace(/\s/g, "")}`}>
-                    {t.contact.phoneMock}
-                  </a>
+                  <a href={telHref()}>{SITE_CONTACT.phone}</a>
                 </dd>
                 <dt>{t.contact.emailLabel}</dt>
                 <dd>
-                  <a href={`mailto:${t.contact.emailMock}`}>
-                    {t.contact.emailMock}
-                  </a>
+                  <a href={`mailto:${SITE_CONTACT.email}`}>{SITE_CONTACT.email}</a>
                 </dd>
                 <dt>{t.contact.addressLabel}</dt>
                 <dd>{t.contact.addressMock}</dd>
