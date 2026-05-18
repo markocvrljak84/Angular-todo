@@ -1,7 +1,7 @@
 import type { FacilityCategory, FacilityIcon } from "@/i18n/facility-categories";
 
 function FacilityIconGlyph({ icon }: { icon: FacilityIcon }) {
-  const common = { width: 22, height: 22, "aria-hidden": true as const };
+  const common = { width: 28, height: 28, "aria-hidden": true as const };
 
   switch (icon) {
     case "parking":

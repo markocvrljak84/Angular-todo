@@ -3,6 +3,9 @@
  * @see https://www.google.com/maps — "Velebit mountain chalet stars peak"
  */
 export const SITE_CONTACT = {
+  /** Short brand for header logo and hero headline. */
+  brandMark: "STARS PEAK",
+  heroTitle: "Stars Peak",
   /** Exact name on Google Maps (NAP consistency). */
   businessName: "Velebit mountain chalet stars peak",
   phone: "+385 95 389 9912",

@@ -60,7 +60,7 @@ export default async function HomePage({ params }: Props) {
       <HeroFullscreenCarousel
         slides={heroSlides}
         kicker={t.home.heroBadge}
-        scriptTitle={SITE_CONTACT.businessName}
+        scriptTitle={SITE_CONTACT.heroTitle}
         centerLine={t.home.heroCenterLine}
         carouselPrevLabel={t.home.heroCarouselPrev}
         carouselNextLabel={t.home.heroCarouselNext}
@@ -80,7 +80,6 @@ export default async function HomePage({ params }: Props) {
           <div className="flat-about">
             <div className="flat-about__main">
               <p>{t.about.p1}</p>
-              <p className="flat-about__hosts-note">{t.about.hostsNote}</p>
               <p>{t.about.p2}</p>
             </div>
             <aside className="flat-about__side" aria-label={t.about.sideImageAlt}>
@@ -93,6 +92,7 @@ export default async function HomePage({ params }: Props) {
                   sizes="(max-width: 799px) 100vw, 50vw"
                 />
               </div>
+              <p className="flat-about__hosts-note">{t.about.hostsNote}</p>
             </aside>
           </div>
 
@@ -270,24 +270,30 @@ export default async function HomePage({ params }: Props) {
           </h2>
           <p className="flat-section__intro">{t.contact.intro}</p>
 
-          <div className="flat-contact">
-            <div className="flat-contact__info">
-              <h3 className="flat-contact__h">{t.contact.detailsHeading}</h3>
-              <dl className="flat-dl">
-                <dt>{t.contact.nameLabel}</dt>
-                <dd>{SITE_CONTACT.businessName}</dd>
-                <dt>{t.contact.phoneLabel}</dt>
-                <dd>
-                  <a href={telHref()}>{SITE_CONTACT.phone}</a>
-                </dd>
-                <dt>{t.contact.emailLabel}</dt>
-                <dd>
-                  <a href={`mailto:${SITE_CONTACT.email}`}>{SITE_CONTACT.email}</a>
-                </dd>
-                <dt>{t.contact.addressLabel}</dt>
-                <dd>{t.contact.addressMock}</dd>
-              </dl>
-            </div>
+          <div className="contact-card">
+            <h3 className="contact-card__title">{t.contact.detailsHeading}</h3>
+            <ul className="contact-card__list">
+                <li className="contact-card__item">
+                  <span className="contact-card__label">{t.contact.nameLabel}</span>
+                  <span className="contact-card__value">{SITE_CONTACT.businessName}</span>
+                </li>
+                <li className="contact-card__item">
+                  <span className="contact-card__label">{t.contact.addressLabel}</span>
+                  <span className="contact-card__value">{SITE_CONTACT.address}</span>
+                </li>
+                <li className="contact-card__item">
+                  <span className="contact-card__label">{t.contact.emailLabel}</span>
+                  <a className="contact-card__value contact-card__link" href={`mailto:${SITE_CONTACT.email}`}>
+                    {SITE_CONTACT.email}
+                  </a>
+                </li>
+                <li className="contact-card__item">
+                  <span className="contact-card__label">{t.contact.phoneLabel}</span>
+                  <a className="contact-card__value contact-card__link" href={telHref()}>
+                    {SITE_CONTACT.phone}
+                  </a>
+                </li>
+              </ul>
           </div>
 
           <div className="flat-contact-map" aria-labelledby="contact-map-heading">

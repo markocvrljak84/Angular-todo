@@ -12,26 +12,60 @@ type Props = {
   t: Messages;
 };
 
-const MOBILE_MENU_QUERY = "(max-width: 879px)";
+const MOBILE_MENU_QUERY = "(max-width: 1064px)";
+const DESKTOP_QUERY = "(min-width: 1065px)";
+
+type HeaderTone = "hero" | "glass" | "opaque";
+
+function headerToneClass(tone: HeaderTone, menuOpen: boolean): string {
+  if (menuOpen || tone === "opaque") return "site-header--opaque";
+  if (tone === "glass") return "site-header--glass";
+  return "site-header--over-hero";
+}
 
 export function SiteHeader({ locale, t }: Props) {
   const base = `/${locale}`;
-  const [solid, setSolid] = useState(false);
+  const [tone, setTone] = useState<HeaderTone>("hero");
   const [menuOpen, setMenuOpen] = useState(false);
   const menuBtnRef = useRef<HTMLButtonElement>(null);
 
-  const toneClass = solid || menuOpen ? "site-header--solid" : "site-header--over-hero";
+  const toneClass = headerToneClass(tone, menuOpen);
 
   useEffect(() => {
+    const desktopMq = window.matchMedia(DESKTOP_QUERY);
+
     const onScroll = () => {
       const hero = document.getElementById("top");
-      const h = hero?.offsetHeight ?? window.innerHeight;
-      setSolid(window.scrollY > h - 56);
+      const about = document.getElementById("about");
+      const headerH =
+        parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--header-h")) || 64;
+      const y = window.scrollY;
+      const aboutTop = (about?.offsetTop ?? Number.POSITIVE_INFINITY) - headerH;
+
+      const carouselEl =
+        hero?.querySelector<HTMLElement>(".hero-fs__media") ?? hero;
+      const carouselRect = carouselEl?.getBoundingClientRect();
+      const carouselInView =
+        !!carouselRect &&
+        carouselRect.bottom > headerH + 8 &&
+        carouselRect.top < window.innerHeight * 0.92;
+
+      if (carouselInView) {
+        setTone("hero");
+      } else if (y < aboutTop) {
+        setTone("glass");
+      } else {
+        setTone("opaque");
+      }
     };
 
+    desktopMq.addEventListener("change", onScroll);
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
-    return () => window.removeEventListener("scroll", onScroll);
+    return () => {
+      desktopMq.removeEventListener("change", onScroll);
+      window.removeEventListener("scroll", onScroll);
+    };
   }, []);
 
   useEffect(() => {
@@ -74,7 +108,7 @@ export function SiteHeader({ locale, t }: Props) {
     <header className={`site-header ${toneClass}`}>
       <div className="site-header__inner">
         <Link href={`${base}#top`} className="site-header__brand">
-          {SITE_CONTACT.businessName}
+          {SITE_CONTACT.brandMark}
         </Link>
 
         <div className="site-header__desktop">

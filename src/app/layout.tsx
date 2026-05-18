@@ -1,19 +1,12 @@
 import type { Metadata } from "next";
-import { DM_Sans, Great_Vibes } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import { getGeoMetaOther } from "@/config/site-location";
 import { getMetadataBase } from "@/lib/site-url";
 import "./globals.css";
 
-const sans = DM_Sans({
-  subsets: ["latin"],
+const sans = Plus_Jakarta_Sans({
+  subsets: ["latin", "latin-ext"],
   variable: "--font-sans",
-  display: "swap",
-});
-
-const display = Great_Vibes({
-  weight: "400",
-  subsets: ["latin"],
-  variable: "--font-display",
   display: "swap",
 });
 
@@ -35,7 +28,7 @@ export default function RootLayout({
   const geo = getGeoMetaOther();
 
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className={`${sans.variable} ${sans.className}`} suppressHydrationWarning>
       <head>
         <meta name="geo.region" content={geo["geo.region"]} />
         <meta name="geo.placename" content={geo["geo.placename"]} />
@@ -49,9 +42,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://www.google.com" />
         <link rel="dns-prefetch" href="https://i.ytimg.com" />
       </head>
-      <body className={`${sans.variable} ${display.variable}`}>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

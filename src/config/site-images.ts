@@ -27,20 +27,17 @@ export const GALLERY_IMAGE_COUNT = GALLERY_FILES.length;
 /** Filename in /public/img/about-us */
 export const ABOUT_US_IMAGE = "38410942.jpg" as const;
 
-/** Premužić folder name as on disk (UTF-8) */
-const PREMUZIC_DIR = "premužić" as const;
-
 /**
- * Near places checkerboard + extra photo row — order matches `itineraryImageAlts` in messages.
- * Use ASCII-safe paths only (no encodeURIComponent — breaks Next/Image on deploy).
+ * Near places checkerboard — order matches `itineraryImageAlts` in messages.
+ * ASCII paths only (folder on disk: /public/img/premuzic).
  */
-export const NEARBY_GRID_IMAGE_SRCS: readonly string[] = [
+export const NEARBY_GRID_IMAGE_SRCS = [
   "/img/paklenica/shutterstock_1617270832-scaled.jpg",
   "/img/pag/680708859_122096686946355213_4665446078753106627_n.jpg",
   "/img/zavratnica/681124824_122096686808355213_9208103830857597187_n.jpeg",
-  `/img/${PREMUZIC_DIR}/681316395_122096686874355213_6869570910689081219_n.jpg`,
-  `/img/${PREMUZIC_DIR}/681345586_122096686718355213_276619802998470916_n.jpg`,
+  "/img/premuzic/681316395_122096686874355213_6869570910689081219_n.jpg",
+  "/img/premuzic/681345586_122096686718355213_276619802998470916_n.jpg",
   "/img/pag/681604802_122096686880355213_4265220364878636676_n.jpg",
-  `/img/${PREMUZIC_DIR}/velebit.jpg`,
+  "/img/premuzic/velebit.jpg",
   "/img/paklenica/shutterstock_1617270832-scaled.jpg",
-] satisfies readonly string[];
+] as const;
