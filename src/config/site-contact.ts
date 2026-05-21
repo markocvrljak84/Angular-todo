@@ -7,10 +7,10 @@ export const SITE_CONTACT = {
   brandMark: "STARS PEAK",
   heroTitle: "Stars Peak",
   /** Exact name on Google Maps (NAP consistency). */
-  businessName: "Velebit mountain chalet stars peak",
+  businessName: "Velebit mountain chalet Stars Peak",
   phone: "+385 95 389 9912",
   email: "marko.cvrljak1@gmail.com",
-  address: "Došen Dabar 1, Velebit, Karlobag, Croatia",
+  address: "Došen Dabar 1, Karlobag, Croatia",
 } as const;
 
 export function telHref(phone: string = SITE_CONTACT.phone): string {

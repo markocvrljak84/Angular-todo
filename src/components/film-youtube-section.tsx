@@ -3,7 +3,7 @@
  */
 export function FilmYoutubeSection({ videoId }: { videoId: string }) {
   const src = `https://www.youtube.com/embed/${encodeURIComponent(videoId)}?rel=0`;
-  const iframeTitle = "Video — Velebit mountain chalet stars peak";
+  const iframeTitle = "Video — Velebit mountain chalet Stars Peak";
 
   return (
     <section id="film" className="film-yt flat-section" aria-label={iframeTitle}>

@@ -913,9 +913,8 @@ body {
   margin: 0 0 0.45rem;
   font-family: var(--font);
   font-size: 0.95rem;
-  font-style: italic;
   font-weight: 600;
-  color: #1d4ed8;
+  color: var(--facility-icon);
 }
 
 .itinerary__headline {
@@ -1393,6 +1392,7 @@ body {
   justify-content: center;
   width: 2.25rem;
   height: 2.25rem;
+  margin-top: -5px;
   color: var(--facility-icon);
 }
 
@@ -1405,28 +1405,44 @@ body {
 }
 
 .facilities__intro {
+  position: relative;
   margin: 0;
-  padding-left: 2.75rem;
+  padding: 0 0 0 3.85rem;
   font-size: 1.0625rem;
   line-height: 1.6;
   color: var(--muted);
 }
 
+.facilities__intro::before {
+  content: "•";
+  position: absolute;
+  left: 2.75rem;
+  top: 0.2rem;
+  color: var(--facility-icon);
+  font-weight: 700;
+}
+
 .facilities__list {
   margin: 0.25rem 0 0;
   padding: 0 0 0 2.75rem;
-  list-style: disc;
+  list-style: none;
 }
 
 .facilities__list li {
-  padding: 0.2rem 0;
+  position: relative;
+  padding: 0.2rem 0 0.2rem 1.1rem;
   font-size: 1.0625rem;
   line-height: 1.5;
   color: var(--muted);
 }
 
-.facilities__list li::marker {
+.facilities__list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0.2rem;
   color: var(--facility-icon);
+  font-weight: 700;
 }
 
 .flat-tiles {

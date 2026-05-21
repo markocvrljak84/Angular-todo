@@ -31,8 +31,7 @@ const hr: FacilityCategory[] = [
   {
     icon: "parking",
     title: "Parkiralište",
-    intro:
-      "Besplatno privatno parkiralište dostupno je u okviru objekta i nije potrebna rezervacija.",
+    intro: "Besplatno privatno parkiralište dostupno je u okviru objekta.",
   },
   {
     icon: "wifi",
@@ -55,16 +54,15 @@ const hr: FacilityCategory[] = [
   {
     icon: "bedroom",
     title: "Spavaća soba",
-    items: ["posteljina"],
+    items: ["posteljina", "jedan bračni krevet i dva jednokrevetna"],
   },
   {
     icon: "bathroom",
-    title: "Vlastita kupaonica",
+    title: "Kupaonica",
     items: [
-      "toaletni papir",
       "ručnici",
       "kada ili tuš kabina",
-      "vlastita kupaonica",
+      "kupaonica",
       "WC",
       "besplatan toaletni pribor",
       "tuš kabina",
@@ -78,7 +76,7 @@ const hr: FacilityCategory[] = [
   {
     icon: "media",
     title: "Mediji i tehnologija",
-    items: ["usluge streaminga (kao što je Netflix)"],
+    items: ["Netflix streaming usluge"],
   },
   {
     icon: "room",
@@ -88,8 +86,6 @@ const hr: FacilityCategory[] = [
       "krevet na rasklapanje",
       "stalak za odjeću",
       "mreža protiv komaraca",
-      "drveni ili parketni pod",
-      "zvučna izolacija",
       "privatni ulaz",
       "tepih",
       "grijanje",
@@ -107,13 +103,10 @@ const hr: FacilityCategory[] = [
     items: [
       "vanjski kamin",
       "mjesto za piknik",
-      "vrtni namještaj",
       "vanjska blagovaonica",
       "terasa za sunčanje",
       "roštilj",
       "oprema za roštilj",
-      "balkon",
-      "terasa",
       "vrt",
     ],
   },
@@ -125,26 +118,17 @@ const hr: FacilityCategory[] = [
   {
     icon: "activities",
     title: "Aktivnosti",
-    items: ["razgledavanje pješice", "oprema za badminton", "planinarenje", "pikado"],
+    items: ["oprema za badminton", "planinarenje", "biciklizam", "penjanje"],
   },
   {
     icon: "view",
-    title: "Dvorište i pogled",
-    items: ["pogled na planinu", "pogled na vrt", "pogled"],
+    title: "Dnevni boravak",
+    items: ["pogled na planinu", "pogled na vrt"],
   },
   {
     icon: "building",
     title: "Karakteristike zgrade",
     items: ["zasebna zgrada"],
-  },
-  {
-    icon: "family",
-    title: "Zabava i obiteljski sadržaji",
-    items: [
-      "zaštita za utičnice",
-      "društvene igre/puzle",
-      "knjige, DVD-i ili glazba za djecu",
-    ],
   },
   {
     icon: "misc",
@@ -173,7 +157,7 @@ const en: FacilityCategory[] = [
   {
     icon: "parking",
     title: "Parking",
-    intro: "Free private parking is available on site; reservation is not needed.",
+    intro: "Free private parking is available on site.",
   },
   {
     icon: "wifi",
@@ -196,16 +180,15 @@ const en: FacilityCategory[] = [
   {
     icon: "bedroom",
     title: "Bedroom",
-    items: ["linen"],
+    items: ["linen", "one large bed and two single beds"],
   },
   {
     icon: "bathroom",
-    title: "Private bathroom",
+    title: "Bathroom",
     items: [
-      "toilet paper",
       "towels",
       "bathtub or shower",
-      "private bathroom",
+      "bathroom",
       "toilet",
       "free toiletries",
       "shower",
@@ -219,7 +202,7 @@ const en: FacilityCategory[] = [
   {
     icon: "media",
     title: "Media & technology",
-    items: ["streaming services (such as Netflix)"],
+    items: ["Netflix streaming services"],
   },
   {
     icon: "room",
@@ -229,8 +212,6 @@ const en: FacilityCategory[] = [
       "sofa bed",
       "clothes rack",
       "mosquito net",
-      "wooden or parquet floor",
-      "soundproofing",
       "private entrance",
       "carpet",
       "heating",
@@ -248,13 +229,10 @@ const en: FacilityCategory[] = [
     items: [
       "outdoor fireplace",
       "picnic area",
-      "outdoor furniture",
       "outdoor dining area",
       "sun terrace",
       "barbecue",
       "barbecue equipment",
-      "balcony",
-      "terrace",
       "garden",
     ],
   },
@@ -266,22 +244,17 @@ const en: FacilityCategory[] = [
   {
     icon: "activities",
     title: "Activities",
-    items: ["walking tours", "badminton equipment", "hiking", "darts"],
+    items: ["badminton equipment", "hiking", "cycling", "climbing"],
   },
   {
     icon: "view",
-    title: "Outdoor & views",
-    items: ["mountain view", "garden view", "view"],
+    title: "Lounge area",
+    items: ["mountain view", "garden view"],
   },
   {
     icon: "building",
     title: "Property characteristics",
     items: ["detached building"],
-  },
-  {
-    icon: "family",
-    title: "Entertainment & family",
-    items: ["socket covers", "board games / puzzles", "books, DVDs or music for children"],
   },
   {
     icon: "misc",
@@ -404,11 +377,6 @@ const de: FacilityCategory[] = [
   },
   { icon: "building", title: "Gebäude", items: ["freistehendes Gebäude"] },
   {
-    icon: "family",
-    title: "Unterhaltung & Familie",
-    items: ["Steckdosenschutz", "Brettspiele / Puzzles", "Bücher, DVDs oder Musik für Kinder"],
-  },
-  {
     icon: "misc",
     title: "Sonstiges",
     items: [
@@ -521,15 +489,6 @@ const fr: FacilityCategory[] = [
   },
   { icon: "building", title: "Bâtiment", items: ["bâtiment indépendant"] },
   {
-    icon: "family",
-    title: "Divertissement et famille",
-    items: [
-      "cache-prises",
-      "jeux de société / puzzles",
-      "livres, DVD ou musique pour enfants",
-    ],
-  },
-  {
     icon: "misc",
     title: "Divers",
     items: [
@@ -641,15 +600,6 @@ const it: FacilityCategory[] = [
     items: ["vista montagna", "vista giardino", "vista"],
   },
   { icon: "building", title: "Caratteristiche", items: ["edificio indipendente"] },
-  {
-    icon: "family",
-    title: "Intrattenimento e famiglia",
-    items: [
-      "copriprese",
-      "giochi da tavolo / puzzle",
-      "libri, DVD o musica per bambini",
-    ],
-  },
   {
     icon: "misc",
     title: "Varie",
