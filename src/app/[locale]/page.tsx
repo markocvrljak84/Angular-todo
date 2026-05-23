@@ -9,8 +9,12 @@ import { GalleryGridLightbox } from "@/components/gallery-grid-lightbox";
 import { FilmYoutubeSection } from "@/components/film-youtube-section";
 import { ItineraryImage } from "@/components/itinerary-image";
 import { getGoogleMapsUrls } from "@/config/contact-map";
-import { SITE_CONTACT, telHref } from "@/config/site-contact";
-import { ABOUT_US_IMAGE, GALLERY_FILES, NEARBY_GRID_IMAGE_SRCS } from "@/config/site-images";
+import { BOOKING_URL, SITE_CONTACT, telHref } from "@/config/site-contact";
+import {
+  ABOUT_US_IMAGE,
+  GALLERY_FILES,
+  NEARBY_GRID_IMAGE_SRCS,
+} from "@/config/site-images";
 
 export const dynamic = "force-static";
 
@@ -36,19 +40,28 @@ export default async function HomePage({ params }: Props) {
 
   if (t.gallery.images.length !== GALLERY_FILES.length) {
     throw new Error(
-      "gallery.images length must match GALLERY_FILES in src/config/site-images.ts (and Array.from length in messages.ts).",
+      "gallery.images length must match GALLERY_FILES in src/config/site-images.ts (and Array.from length in messages.ts)."
     );
   }
 
   if (t.home.itineraryImageAlts.length !== NEARBY_GRID_IMAGE_SRCS.length) {
     throw new Error(
-      "home.itineraryImageAlts length must match NEARBY_GRID_IMAGE_SRCS in src/config/site-images.ts.",
+      "home.itineraryImageAlts length must match NEARBY_GRID_IMAGE_SRCS in src/config/site-images.ts."
     );
   }
 
   const mapHl =
-    locale === "hr" ? "hr" : locale === "de" ? "de" : locale === "fr" ? "fr" : locale === "it" ? "it" : "en";
-  const { embedSrc: googleMapEmbedSrc, openHref: googleMapOpenHref } = getGoogleMapsUrls(mapHl);
+    locale === "hr"
+      ? "hr"
+      : locale === "de"
+      ? "de"
+      : locale === "fr"
+      ? "fr"
+      : locale === "it"
+      ? "it"
+      : "en";
+  const { embedSrc: googleMapEmbedSrc, openHref: googleMapOpenHref } =
+    getGoogleMapsUrls(mapHl);
 
   const heroSlides = MAIN_CAROUSEL_IMAGES.map((file, i) => ({
     src: `/img/main-carousel/${file}`,
@@ -75,14 +88,30 @@ export default async function HomePage({ params }: Props) {
           <h2 id="about-title" className="flat-section__title">
             {t.about.title}
           </h2>
-          <p className="flat-section__intro flat-section__intro--lead">{t.about.lead}</p>
+          <p className="flat-section__intro flat-section__intro--lead">
+            {t.about.lead}
+          </p>
 
           <div className="flat-about">
             <div className="flat-about__main">
               <p>{t.about.p1}</p>
               <p>{t.about.p2}</p>
+              <p className="flat-about__booking">
+                {t.about.bookingLine}{" "}
+                <a
+                  href={BOOKING_URL}
+                  className="flat-about__booking-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t.about.bookingLinkLabel}
+                </a>
+              </p>
             </div>
-            <aside className="flat-about__side" aria-label={t.about.sideImageAlt}>
+            <aside
+              className="flat-about__side"
+              aria-label={t.about.sideImageAlt}
+            >
               <div className="flat-about__side-media">
                 <Image
                   src={`/img/about-us/${ABOUT_US_IMAGE}`}
@@ -96,8 +125,10 @@ export default async function HomePage({ params }: Props) {
             </aside>
           </div>
 
-          <FacilitiesGrid title={t.home.facilitiesTitle} categories={facilities} />
-
+          <FacilitiesGrid
+            title={t.home.facilitiesTitle}
+            categories={facilities}
+          />
         </div>
       </section>
 
@@ -135,11 +166,7 @@ export default async function HomePage({ params }: Props) {
 
       <FilmYoutubeSection videoId={FILM_YOUTUBE_ID} />
 
-      <section
-        id="nearby"
-        className="itinerary"
-        aria-labelledby="nearby-title"
-      >
+      <section id="nearby" className="itinerary" aria-labelledby="nearby-title">
         <header className="itinerary__header">
           <h2 id="nearby-title" className="itinerary__title">
             {t.home.nearbyTitle}
@@ -273,30 +300,64 @@ export default async function HomePage({ params }: Props) {
           <div className="contact-card">
             <h3 className="contact-card__title">{t.contact.detailsHeading}</h3>
             <ul className="contact-card__list">
-                <li className="contact-card__item">
-                  <span className="contact-card__label">{t.contact.nameLabel}</span>
-                  <span className="contact-card__value">{SITE_CONTACT.businessName}</span>
-                </li>
-                <li className="contact-card__item">
-                  <span className="contact-card__label">{t.contact.addressLabel}</span>
-                  <span className="contact-card__value">{SITE_CONTACT.address}</span>
-                </li>
-                <li className="contact-card__item">
-                  <span className="contact-card__label">{t.contact.emailLabel}</span>
-                  <a className="contact-card__value contact-card__link" href={`mailto:${SITE_CONTACT.email}`}>
-                    {SITE_CONTACT.email}
-                  </a>
-                </li>
-                <li className="contact-card__item">
-                  <span className="contact-card__label">{t.contact.phoneLabel}</span>
-                  <a className="contact-card__value contact-card__link" href={telHref()}>
-                    {SITE_CONTACT.phone}
-                  </a>
-                </li>
-              </ul>
+              <li className="contact-card__item">
+                <span className="contact-card__label">
+                  {t.contact.nameLabel}
+                </span>
+                <span className="contact-card__value">
+                  {SITE_CONTACT.businessName}
+                </span>
+              </li>
+              <li className="contact-card__item">
+                <span className="contact-card__label">
+                  {t.contact.addressLabel}
+                </span>
+                <span className="contact-card__value">
+                  {SITE_CONTACT.address}
+                </span>
+              </li>
+              <li className="contact-card__item">
+                <span className="contact-card__label">
+                  {t.contact.emailLabel}
+                </span>
+                <a
+                  className="contact-card__value contact-card__link"
+                  href={`mailto:${SITE_CONTACT.email}`}
+                >
+                  {SITE_CONTACT.email}
+                </a>
+              </li>
+              <li className="contact-card__item">
+                <span className="contact-card__label">
+                  {t.contact.phoneLabel}
+                </span>
+                <a
+                  className="contact-card__value contact-card__link"
+                  href={telHref()}
+                >
+                  {SITE_CONTACT.phone}
+                </a>
+              </li>
+              <li className="contact-card__item">
+                <span className="contact-card__label">
+                  {t.contact.bookingLabel}
+                </span>
+                <a
+                  className="contact-card__value contact-card__link"
+                  href={BOOKING_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t.about.bookingLinkLabel}
+                </a>
+              </li>
+            </ul>
           </div>
 
-          <div className="flat-contact-map" aria-labelledby="contact-map-heading">
+          <div
+            className="flat-contact-map"
+            aria-labelledby="contact-map-heading"
+          >
             <h3 id="contact-map-heading" className="flat-contact-map__title">
               {t.contact.mapHeading}
             </h3>

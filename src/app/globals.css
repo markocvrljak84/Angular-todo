@@ -1285,6 +1285,22 @@ body {
   max-width: 40rem;
 }
 
+.flat-about__booking {
+  margin: 0.25rem 0 0;
+  max-width: 40rem;
+  color: var(--muted);
+}
+
+.flat-about__booking-link {
+  font-weight: 700;
+  color: var(--facility-icon);
+  text-decoration: none;
+}
+
+.flat-about__booking-link:hover {
+  text-decoration: underline;
+}
+
 .flat-about__hosts-note {
   margin: 0;
   padding: 0.85rem 1rem;

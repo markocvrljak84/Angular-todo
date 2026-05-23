@@ -2,6 +2,10 @@
  * Single source of truth for contact & business name (must match Google Maps listing).
  * @see https://www.google.com/maps — "Velebit mountain chalet stars peak"
  */
+/** Booking.com listing */
+export const BOOKING_URL =
+  "https://www.booking.com/hotel/hr/chalet-velebit-mountain-retreat.hr.html" as const;
+
 export const SITE_CONTACT = {
   /** Short brand for header logo and hero headline. */
   brandMark: "STARS PEAK",

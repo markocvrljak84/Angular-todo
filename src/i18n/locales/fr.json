@@ -104,6 +104,8 @@
     "p1": "Parfaite pour les amoureux de la nature, la région est un paradis pour la randonnée, l’escalade et le vélo. Dehors, les hôtes profitent d’une cuisine rustique avec barbecue et d’un foyer convivial sous les étoiles, avec vue sur les montagnes.",
     "hostsNote": "Bonjour ! Nous sommes Marko et Ljiljana, de Šibenik en Croatie. En 2021, nous avons acheté un petit chalet dans les bois et l’avons entièrement rénové.",
     "p2": "La maison se situe dans le parc naturel du Velebit, près de Karlobag et Baške Oštarije. À proximité : les sommets du Velebit, le parc national du Velebit septentrional et Paklenica, la baie de Zavratnica et l’île de Pag. Refuges de montagne et petit camping font de la région un rendez-vous pour randonneurs et grimpeurs du monde entier — idéal pour découvrir la diversité naturelle de la Croatie en un seul lieu.",
+    "bookingLine": "La maison peut être réservée via le lien suivant :",
+    "bookingLinkLabel": "Booking.com — Chalet Velebit Mountain Retreat",
     "sideImageAlt": "Velebit mountain chalet stars peak — logement"
   },
   "gallery": {
@@ -188,6 +190,7 @@
     "addressLabel": "Adresse",
     "addressMock": "Došen Dabar 1, Karlobag, Croatie",
     "phoneLabel": "Téléphone",
+    "bookingLabel": "Réservation",
     "emailLabel": "E-mail",
     "detailsHeading": "Coordonnées",
     "mapHeading": "Carte",

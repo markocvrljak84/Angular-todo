@@ -57,6 +57,8 @@ export type Messages = {
     p1: string;
     hostsNote: string;
     p2: string;
+    bookingLine: string;
+    bookingLinkLabel: string;
     sideImageAlt: string;
   };
   gallery: {
@@ -76,6 +78,7 @@ export type Messages = {
     addressLabel: string;
     addressMock: string;
     phoneLabel: string;
+    bookingLabel: string;
     emailLabel: string;
     detailsHeading: string;
     mapHeading: string;
@@ -194,6 +197,8 @@ const en: Messages = {
       "Hello! We are Marko and Ljiljana from Šibenik, Croatia — your hosts at this holiday home, and we are happy to help with any questions you may have before or during your stay.",
     p2:
       "The property is located within the Velebit Nature Park, close to Karlobag and Baške Oštarije. Nearby are numerous Velebit peaks, the Northern Velebit National Park and Paklenica National Park, as well as the stunning Zavratnica Bay and the island of Pag. The wider area is dotted with other mountain lodges and a small campsite, making it a true meeting point for hikers, climbers, and outdoor enthusiasts from all over the world. This combination of mountain and coastal surroundings makes the location ideal for exploring the diversity of Croatia’s natural beauty in one place.",
+    bookingLine: "The house can be booked at the following link:",
+    bookingLinkLabel: "Booking.com — Chalet Velebit Mountain Retreat",
     sideImageAlt: "Velebit mountain chalet Stars Peak — holiday home",
   },
   gallery: {
@@ -216,6 +221,7 @@ const en: Messages = {
     addressLabel: "Address",
     addressMock: "Došen Dabar 1, Karlobag, Croatia",
     phoneLabel: "Phone",
+    bookingLabel: "Booking",
     emailLabel: "Email",
     detailsHeading: "Details",
     mapHeading: "Map",
@@ -334,6 +340,8 @@ const hr: Messages = {
       "Pozdrav! Mi smo Marko i Ljiljana — vaši domaćini te vam stojimo na raspolaganju za sva pitanja prije i tijekom boravka.",
     p2:
       "Objekt se nalazi unutar Parka prirode Velebit, u blizini Karlobaga i Baških Oštarija. U neposrednoj okolici nalaze se brojni velebitski vrhovi, Nacionalni park Sjeverni Velebit i Nacionalni park Paklenica, kao i slikoviti zaljev Zavratnica te otok Pag. U široj okolici je nekoliko planinskih domova i manji kamp, što ovo područje čini okupljalištem planinara, penjača i ljubitelja prirode iz cijeloga svijeta. Kombinacija planinskog i primorskog ambijenta ovu lokaciju čini idealnom za istraživanje raznolikosti hrvatske prirode na jednom mjestu.",
+    bookingLine: "Kuću možete rezervirati na sljedećem linku:",
+    bookingLinkLabel: "Booking.com — Chalet Velebit Mountain Retreat",
     sideImageAlt: "Velebit mountain chalet Stars Peak — smještaj",
   },
   gallery: {
@@ -356,6 +364,7 @@ const hr: Messages = {
     addressLabel: "Adresa",
     addressMock: "Došen Dabar 1, Karlobag, Hrvatska",
     phoneLabel: "Telefon",
+    bookingLabel: "Rezervacija",
     emailLabel: "E-pošta",
     detailsHeading: "Podaci",
     mapHeading: "Karta",
@@ -474,6 +483,8 @@ const de: Messages = {
       "Hallo! Wir sind Marko und Ljiljana aus Šibenik, Kroatien — Ihre Gastgeber in diesem Ferienhaus und gerne für alle Fragen vor und während Ihres Aufenthalts da.",
     p2:
       "Das Haus liegt im Naturpark Velebit, nahe Karlobag und Baške Oštarije. In der Nähe: zahlreiche Velebit-Gipfel, der Nationalpark Nordlicher Velebit und Paklenica, die Bucht Zavratnica und die Insel Pag. Die Region mit Berghütten und einem kleinen Campingplatz ist ein Treffpunkt für Wanderer, Kletterer und Outdoor-Fans aus aller Welt — ideal, um Kroatiens Naturvielfalt an einem Ort zu entdecken.",
+    bookingLine: "Das Haus kann über den folgenden Link gebucht werden:",
+    bookingLinkLabel: "Booking.com — Chalet Velebit Mountain Retreat",
     sideImageAlt: "Velebit mountain chalet Stars Peak — Ferienhaus",
   },
   gallery: {
@@ -496,6 +507,7 @@ const de: Messages = {
     addressLabel: "Adresse",
     addressMock: "Došen Dabar 1, Karlobag, Kroatien",
     phoneLabel: "Telefon",
+    bookingLabel: "Buchung",
     emailLabel: "E-Mail",
     detailsHeading: "Kontaktdaten",
     mapHeading: "Karte",
