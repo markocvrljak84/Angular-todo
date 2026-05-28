@@ -196,7 +196,7 @@ const en: Messages = {
         hostsNote:
             "Hello! We are Marko and Ljiljana from Šibenik, Croatia — your hosts at this holiday home, and we are happy to help with any questions you may have before or during your stay.",
         p2:
-            "The property is located within the Velebit Nature Park, close to Karlobag and Baške Oštarije. Nearby are numerous Velebit peaks, the Northern Velebit National Park and Paklenica National Park, as well as the stunning Zavratnica Bay and the island of Pag. The wider area is dotted with other mountain lodges and a small campsite, making it a true meeting point for hikers, climbers, and outdoor enthusiasts from all over the world. This combination of mountain and coastal surroundings makes the location ideal for exploring the diversity of Croatia’s natural beauty in one place.",
+            "The property is located within the Velebit Nature Park, close to Karlobag and Baške Oštarije. Nearby are numerous Velebit peaks, the Northern Velebit National Park and Paklenica National Park, as well as the stunning Zavratnica Bay and the island of Pag. This combination of mountain and coastal surroundings makes the location ideal for exploring the diversity of Croatia’s natural beauty in one place.",
         bookingLine: "The house can be booked at the following link:",
         bookingLinkLabel: "Booking.com — Velebit Mountain Chalet Stars Peak",
         sideImageAlt: "Velebit mountain chalet Stars Peak — holiday home",
@@ -339,7 +339,7 @@ const hr: Messages = {
         hostsNote:
             "Pozdrav! Mi smo Marko i Ljiljana — vaši domaćini te vam stojimo na raspolaganju za sva pitanja prije i tijekom boravka.",
         p2:
-            "Objekt se nalazi unutar Parka prirode Velebit, u blizini Karlobaga i Baških Oštarija. U neposrednoj okolici nalaze se brojni velebitski vrhovi, Nacionalni park Sjeverni Velebit i Nacionalni park Paklenica, kao i slikoviti zaljev Zavratnica te otok Pag. U široj okolici je nekoliko planinskih domova i manji kamp, što ovo područje čini okupljalištem planinara, penjača i ljubitelja prirode iz cijeloga svijeta. Kombinacija planinskog i primorskog ambijenta ovu lokaciju čini idealnom za istraživanje raznolikosti hrvatske prirode na jednom mjestu.",
+            "Objekt se nalazi unutar Parka prirode Velebit, u blizini Karlobaga i Baških Oštarija. U neposrednoj okolici nalaze se brojni velebitski vrhovi, Nacionalni park Sjeverni Velebit i Nacionalni park Paklenica, kao i slikoviti zaljev Zavratnica te otok Pag. Kombinacija planinskog i primorskog ambijenta ovu lokaciju čini idealnom za istraživanje raznolikosti hrvatske prirode na jednom mjestu.",
         bookingLine: "Kuću možete rezervirati na sljedećem linku:",
         bookingLinkLabel: "Booking.com — Velebit Mountain Chalet Stars Peak",
         sideImageAlt: "Velebit mountain chalet Stars Peak — smještaj",
@@ -482,7 +482,7 @@ const de: Messages = {
         hostsNote:
             "Hallo! Wir sind Marko und Ljiljana aus Šibenik, Kroatien — Ihre Gastgeber in diesem Ferienhaus und gerne für alle Fragen vor und während Ihres Aufenthalts da.",
         p2:
-            "Das Haus liegt im Naturpark Velebit, nahe Karlobag und Baške Oštarije. In der Nähe: zahlreiche Velebit-Gipfel, der Nationalpark Nordlicher Velebit und Paklenica, die Bucht Zavratnica und die Insel Pag. Die Region mit Berghütten und einem kleinen Campingplatz ist ein Treffpunkt für Wanderer, Kletterer und Outdoor-Fans aus aller Welt — ideal, um Kroatiens Naturvielfalt an einem Ort zu entdecken.",
+            "Das Haus liegt im Naturpark Velebit, nahe Karlobag und Baške Oštarije. In der Nähe: zahlreiche Velebit-Gipfel, der Nationalpark Nordlicher Velebit und Paklenica, die Bucht Zavratnica und die Insel Pag. ideal, um Kroatiens Naturvielfalt an einem Ort zu entdecken.",
         bookingLine: "Das Haus kann über den folgenden Link gebucht werden:",
         bookingLinkLabel: "Booking.com — Velebit Mountain Chalet Stars Peak",
         sideImageAlt: "Velebit mountain chalet Stars Peak — Ferienhaus",
