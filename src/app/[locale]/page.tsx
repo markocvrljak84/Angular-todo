@@ -295,7 +295,17 @@ export default async function HomePage({ params }: Props) {
           <h2 id="contact-title" className="flat-section__title">
             {t.contact.title}
           </h2>
-          <p className="flat-section__intro">{t.contact.intro}</p>
+          <p className="flat-section__intro">
+            {t.contact.introPrefix}
+            <a
+              href={BOOKING_URL}
+              className="flat-section__intro-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {t.contact.introBookingLink}
+            </a>
+          </p>
 
           <div className="contact-card">
             <h3 className="contact-card__title">{t.contact.detailsHeading}</h3>

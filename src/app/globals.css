@@ -1048,6 +1048,16 @@ body {
   font-size: 1.0625rem;
 }
 
+.flat-section__intro-link {
+  font-weight: 700;
+  color: var(--facility-icon);
+  text-decoration: none;
+}
+
+.flat-section__intro-link:hover {
+  text-decoration: underline;
+}
+
 .flat-section__intro--lead {
   color: var(--ink);
   font-size: 1.125rem;

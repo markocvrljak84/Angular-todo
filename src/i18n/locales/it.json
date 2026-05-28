@@ -185,7 +185,8 @@
   },
   "contact": {
     "title": "Contatti",
-    "intro": "Contattaci per telefono o e-mail, oppure visitaci all’indirizzo sotto.",
+    "introPrefix": "Contattaci per telefono o e-mail, oppure visita il link per la ",
+    "introBookingLink": "prenotazione",
     "nameLabel": "Nome",
     "addressLabel": "Indirizzo",
     "addressMock": "Došen Dabar 1, Karlobag, Croazia",

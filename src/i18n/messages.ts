@@ -73,7 +73,8 @@ export type Messages = {
     };
     contact: {
         title: string;
-        intro: string;
+        introPrefix: string;
+        introBookingLink: string;
         nameLabel: string;
         addressLabel: string;
         addressMock: string;
@@ -216,7 +217,8 @@ const en: Messages = {
     },
     contact: {
         title: "Contact",
-        intro: "Reach us by phone or email, or visit us at the address below.",
+        introPrefix: "Reach us by phone or email, or visit link for ",
+        introBookingLink: "booking",
         nameLabel: "Name",
         addressLabel: "Address",
         addressMock: "Došen Dabar 1, Karlobag, Croatia",
@@ -359,7 +361,8 @@ const hr: Messages = {
     },
     contact: {
         title: "Kontakt",
-        intro: "Javite se telefonom ili e-poštom ili nas posjetite na adresi.",
+        introPrefix: "Javite nam se telefonom ili e-poštom ili posjetite link za ",
+        introBookingLink: "rezervaciju",
         nameLabel: "Naziv",
         addressLabel: "Adresa",
         addressMock: "Došen Dabar 1, Karlobag, Hrvatska",
@@ -502,7 +505,8 @@ const de: Messages = {
     },
     contact: {
         title: "Kontakt",
-        intro: "Erreichen Sie uns telefonisch oder per E-Mail, oder besuchen Sie uns vor Ort.",
+        introPrefix: "Erreichen Sie uns telefonisch oder per E-Mail, oder besuchen Sie den Link für ",
+        introBookingLink: "Buchung",
         nameLabel: "Name",
         addressLabel: "Adresse",
         addressMock: "Došen Dabar 1, Karlobag, Kroatien",
