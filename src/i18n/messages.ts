@@ -82,6 +82,8 @@ export type Messages = {
         bookingLabel: string;
         emailLabel: string;
         detailsHeading: string;
+        directionsHeading: string;
+        directionsParagraphs: string[];
         mapHeading: string;
         mapIframeTitle: string;
         mapOpenGoogle: string;
@@ -210,7 +212,7 @@ const en: Messages = {
         lightboxNext: "Next image",
         lightboxAria: "Enlarged photo gallery",
         lightboxOpenThumb: "Open larger view",
-        images: Array.from({ length: 16 }, (_, i) => ({
+        images: Array.from({ length: 34 }, (_, i) => ({
             alt: `Velebit mountain chalet Stars Peak — gallery photo ${i + 1}`,
             caption: `Gallery — ${i + 1}`,
         })),
@@ -226,6 +228,13 @@ const en: Messages = {
         bookingLabel: "Booking",
         emailLabel: "Email",
         detailsHeading: "Details",
+        directionsHeading: "Directions",
+        directionsParagraphs: [
+            "The house is at Došen Dabar 1, in Bačić Duliba.",
+            "You can reach the house from two directions — from Karlobag or from Gospić.",
+            "At Hostel Čelina in Šušanj, turn off and follow the signs for Ravni Dabar, then drive on the paved road until the asphalt ends; from there a gravel road leads towards Bačić Duliba. The road is maintained and suitable for passenger cars.",
+            "Shortly after the gravel road begins you will see a turn for Ravni Dabar — do not turn there; continue for about 10 minutes until the turn for Bačić Duliba. Along the way there are also signs for the Stars Peak holiday home, so once you reach Bačić Duliba you can find the exact location more easily.",
+        ],
         mapHeading: "Map",
         mapIframeTitle: "Google Map — Došen Dabar 1, Croatia",
         mapOpenGoogle: "Open in Google Maps to find directions",
@@ -354,7 +363,7 @@ const hr: Messages = {
         lightboxNext: "Sljedeća slika",
         lightboxAria: "Povećani prikaz galerije",
         lightboxOpenThumb: "Otvori veći prikaz",
-        images: Array.from({ length: 16 }, (_, i) => ({
+        images: Array.from({ length: 34 }, (_, i) => ({
             alt: `Velebit mountain chalet Stars Peak — galerija, fotografija ${i + 1}`,
             caption: `Galerija — ${i + 1}`,
         })),
@@ -370,6 +379,13 @@ const hr: Messages = {
         bookingLabel: "Rezervacija",
         emailLabel: "E-pošta",
         detailsHeading: "Podaci",
+        directionsHeading: "Upute",
+        directionsParagraphs: [
+            "Kuća se nalazi na adresi Došen Dabar 1, u mjestu Bačić Duliba.",
+            "Do kuće možete iz dva smjera. Jedan je iz pravca Karlobaga, a drugi iz pravca Gospića.",
+            "Kod hostela Čelina u mjestu Šušanj skrenete i pratite znakove za mjesto Ravni Dabar, te vozite asfaltiranom cestom sve do kraja asfalta, zatim dalje prema Bačić Dulibi vodi makadamska cesta. Cesta je održavana i pogodna za osobne automobile.",
+            "Nedugo nakon što počne makadamska cesta vidjet ćete skretanje za Ravni Dabar — ne skrećite za Ravni Dabar, već nastavite još nekih 10-ak minuta vožnje do skretanja za Bačić Dulibu. Na putu će biti i putokazi za kuću za odmor „Stars Peak“, kako biste jednom kad dođete do Bačić Dulibe lakše pronašli točnu lokaciju.",
+        ],
         mapHeading: "Karta",
         mapIframeTitle: "Google karta — Došen Dabar 1, Hrvatska",
         mapOpenGoogle: "Otvori u Google Kartama za upute do lokacije",
@@ -498,7 +514,7 @@ const de: Messages = {
         lightboxNext: "Nächstes Bild",
         lightboxAria: "Vergrößerte Galerie",
         lightboxOpenThumb: "Größere Ansicht öffnen",
-        images: Array.from({ length: 16 }, (_, i) => ({
+        images: Array.from({ length: 34 }, (_, i) => ({
             alt: `Velebit mountain chalet Stars Peak — Galeriefoto ${i + 1}`,
             caption: `Galerie — ${i + 1}`,
         })),
@@ -514,6 +530,13 @@ const de: Messages = {
         bookingLabel: "Buchung",
         emailLabel: "E-Mail",
         detailsHeading: "Kontaktdaten",
+        directionsHeading: "Anfahrt",
+        directionsParagraphs: [
+            "Das Haus befindet sich unter der Adresse Došen Dabar 1, in Bačić Duliba.",
+            "Sie erreichen das Haus aus zwei Richtungen — von Karlobag oder von Gospić.",
+            "Beim Hostel Čelina in Šušanj biegen Sie ab und folgen den Schildern nach Ravni Dabar. Fahren Sie auf der asphaltierten Straße bis zum Ende des Asphalts; danach führt eine Schotterstraße in Richtung Bačić Duliba. Die Straße ist gepflegt und für Pkw geeignet.",
+            "Kurz nach Beginn der Schotterstraße sehen Sie eine Abzweigung nach Ravni Dabar — biegen Sie dort nicht ab, sondern fahren Sie noch etwa 10 Minuten bis zur Abzweigung nach Bačić Duliba. Unterwegs gibt es auch Hinweisschilder zur Ferienwohnung Stars Peak, damit Sie in Bačić Duliba die genaue Lage leichter finden.",
+        ],
         mapHeading: "Karte",
         mapIframeTitle: "Google Karte — Došen Dabar 1, Kroatien",
         mapOpenGoogle: "In Google Maps öffnen, um die Route zu finden",

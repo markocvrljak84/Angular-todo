@@ -369,6 +369,23 @@ export default async function HomePage({ params }: Props) {
           </div>
 
           <div
+            className="contact-directions"
+            aria-labelledby="contact-directions-heading"
+          >
+            <h3
+              id="contact-directions-heading"
+              className="contact-directions__title"
+            >
+              {t.contact.directionsHeading}
+            </h3>
+            {t.contact.directionsParagraphs.map((paragraph) => (
+              <p key={paragraph} className="contact-directions__text">
+                {paragraph}
+              </p>
+            ))}
+          </div>
+
+          <div
             className="flat-contact-map"
             aria-labelledby="contact-map-heading"
           >

@@ -180,6 +180,78 @@
             {
                 "alt": "Maison de vacances Velebit mountain chalet stars peak — photo 16",
                 "caption": "Galerie — 16"
+            },
+            {
+                "alt": "Maison de vacances Velebit mountain chalet stars peak — photo 17",
+                "caption": "Galerie — 17"
+            },
+            {
+                "alt": "Maison de vacances Velebit mountain chalet stars peak — photo 18",
+                "caption": "Galerie — 18"
+            },
+            {
+                "alt": "Maison de vacances Velebit mountain chalet stars peak — photo 19",
+                "caption": "Galerie — 19"
+            },
+            {
+                "alt": "Maison de vacances Velebit mountain chalet stars peak — photo 20",
+                "caption": "Galerie — 20"
+            },
+            {
+                "alt": "Maison de vacances Velebit mountain chalet stars peak — photo 21",
+                "caption": "Galerie — 21"
+            },
+            {
+                "alt": "Maison de vacances Velebit mountain chalet stars peak — photo 22",
+                "caption": "Galerie — 22"
+            },
+            {
+                "alt": "Maison de vacances Velebit mountain chalet stars peak — photo 23",
+                "caption": "Galerie — 23"
+            },
+            {
+                "alt": "Maison de vacances Velebit mountain chalet stars peak — photo 24",
+                "caption": "Galerie — 24"
+            },
+            {
+                "alt": "Maison de vacances Velebit mountain chalet stars peak — photo 25",
+                "caption": "Galerie — 25"
+            },
+            {
+                "alt": "Maison de vacances Velebit mountain chalet stars peak — photo 26",
+                "caption": "Galerie — 26"
+            },
+            {
+                "alt": "Maison de vacances Velebit mountain chalet stars peak — photo 27",
+                "caption": "Galerie — 27"
+            },
+            {
+                "alt": "Maison de vacances Velebit mountain chalet stars peak — photo 28",
+                "caption": "Galerie — 28"
+            },
+            {
+                "alt": "Maison de vacances Velebit mountain chalet stars peak — photo 29",
+                "caption": "Galerie — 29"
+            },
+            {
+                "alt": "Maison de vacances Velebit mountain chalet stars peak — photo 30",
+                "caption": "Galerie — 30"
+            },
+            {
+                "alt": "Maison de vacances Velebit mountain chalet stars peak — photo 31",
+                "caption": "Galerie — 31"
+            },
+            {
+                "alt": "Maison de vacances Velebit mountain chalet stars peak — photo 32",
+                "caption": "Galerie — 32"
+            },
+            {
+                "alt": "Maison de vacances Velebit mountain chalet stars peak — photo 33",
+                "caption": "Galerie — 33"
+            },
+            {
+                "alt": "Maison de vacances Velebit mountain chalet stars peak — photo 34",
+                "caption": "Galerie — 34"
             }
         ]
     },
@@ -194,6 +266,13 @@
         "bookingLabel": "Réservation",
         "emailLabel": "E-mail",
         "detailsHeading": "Coordonnées",
+        "directionsHeading": "Itinéraire",
+        "directionsParagraphs": [
+            "La maison se trouve au Došen Dabar 1, à Bačić Duliba.",
+            "Vous pouvez y accéder par deux itinéraires — depuis Karlobag ou depuis Gospić.",
+            "À l’hostel Čelina à Šušanj, tournez et suivez les panneaux vers Ravni Dabar, puis roulez sur la route asphaltée jusqu’à la fin de l’asphalte ; ensuite une route en gravier mène vers Bačić Duliba. La route est entretenue et praticable en voiture.",
+            "Peu après le début du gravier, vous verrez un embranchement pour Ravni Dabar — ne tournez pas là ; continuez encore environ 10 minutes jusqu’à l’embranchement pour Bačić Duliba. Des panneaux indiquent aussi la maison de vacances Stars Peak, pour vous aider à trouver l’emplacement exact une fois à Bačić Duliba."
+        ],
         "mapHeading": "Carte",
         "mapIframeTitle": "Google Maps — Došen Dabar 1, Croatie",
         "mapOpenGoogle": "Ouvrir dans Google Maps pour obtenir l’itinéraire"

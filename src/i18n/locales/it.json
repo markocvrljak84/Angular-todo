@@ -180,6 +180,78 @@
       {
         "alt": "Casa vacanze Velebit mountain chalet stars peak — foto 16",
         "caption": "Galleria — 16"
+      },
+      {
+        "alt": "Casa vacanze Velebit mountain chalet stars peak — foto 17",
+        "caption": "Galleria — 17"
+      },
+      {
+        "alt": "Casa vacanze Velebit mountain chalet stars peak — foto 18",
+        "caption": "Galleria — 18"
+      },
+      {
+        "alt": "Casa vacanze Velebit mountain chalet stars peak — foto 19",
+        "caption": "Galleria — 19"
+      },
+      {
+        "alt": "Casa vacanze Velebit mountain chalet stars peak — foto 20",
+        "caption": "Galleria — 20"
+      },
+      {
+        "alt": "Casa vacanze Velebit mountain chalet stars peak — foto 21",
+        "caption": "Galleria — 21"
+      },
+      {
+        "alt": "Casa vacanze Velebit mountain chalet stars peak — foto 22",
+        "caption": "Galleria — 22"
+      },
+      {
+        "alt": "Casa vacanze Velebit mountain chalet stars peak — foto 23",
+        "caption": "Galleria — 23"
+      },
+      {
+        "alt": "Casa vacanze Velebit mountain chalet stars peak — foto 24",
+        "caption": "Galleria — 24"
+      },
+      {
+        "alt": "Casa vacanze Velebit mountain chalet stars peak — foto 25",
+        "caption": "Galleria — 25"
+      },
+      {
+        "alt": "Casa vacanze Velebit mountain chalet stars peak — foto 26",
+        "caption": "Galleria — 26"
+      },
+      {
+        "alt": "Casa vacanze Velebit mountain chalet stars peak — foto 27",
+        "caption": "Galleria — 27"
+      },
+      {
+        "alt": "Casa vacanze Velebit mountain chalet stars peak — foto 28",
+        "caption": "Galleria — 28"
+      },
+      {
+        "alt": "Casa vacanze Velebit mountain chalet stars peak — foto 29",
+        "caption": "Galleria — 29"
+      },
+      {
+        "alt": "Casa vacanze Velebit mountain chalet stars peak — foto 30",
+        "caption": "Galleria — 30"
+      },
+      {
+        "alt": "Casa vacanze Velebit mountain chalet stars peak — foto 31",
+        "caption": "Galleria — 31"
+      },
+      {
+        "alt": "Casa vacanze Velebit mountain chalet stars peak — foto 32",
+        "caption": "Galleria — 32"
+      },
+      {
+        "alt": "Casa vacanze Velebit mountain chalet stars peak — foto 33",
+        "caption": "Galleria — 33"
+      },
+      {
+        "alt": "Casa vacanze Velebit mountain chalet stars peak — foto 34",
+        "caption": "Galleria — 34"
       }
     ]
   },
@@ -194,6 +266,13 @@
     "bookingLabel": "Prenotazione",
     "emailLabel": "E-mail",
     "detailsHeading": "Dettagli",
+    "directionsHeading": "Indicazioni",
+    "directionsParagraphs": [
+      "La casa si trova in Došen Dabar 1, a Bačić Duliba.",
+      "Potete raggiungerla da due direzioni — da Karlobag o da Gospić.",
+      "All’ostello Čelina a Šušanj svoltate e seguite i cartelli per Ravni Dabar, poi percorrete la strada asfaltata fino alla fine dell’asfalto; da lì una strada sterrata conduce verso Bačić Duliba. La strada è mantenuta ed è adatta alle auto.",
+      "Poco dopo l’inizio della strada sterrata vedrete una svolta per Ravni Dabar — non girate lì; proseguite per circa 10 minuti fino alla svolta per Bačić Duliba. Lungo il percorso ci sono anche cartelli per la casa vacanze Stars Peak, così una volta arrivati a Bačić Duliba potrete trovare più facilmente la posizione esatta."
+    ],
     "mapHeading": "Mappa",
     "mapIframeTitle": "Google Maps — Došen Dabar 1, Croazia",
     "mapOpenGoogle": "Apri in Google Maps per le indicazioni stradali"
