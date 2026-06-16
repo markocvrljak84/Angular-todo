@@ -266,13 +266,6 @@
         "bookingLabel": "Réservation",
         "emailLabel": "E-mail",
         "detailsHeading": "Coordonnées",
-        "directionsHeading": "Itinéraire",
-        "directionsParagraphs": [
-            "La maison se trouve au Došen Dabar 1, à Bačić Duliba.",
-            "Vous pouvez y accéder par deux itinéraires — depuis Karlobag ou depuis Gospić.",
-            "À l’hostel Čelina à Šušanj, tournez et suivez les panneaux vers Ravni Dabar, puis roulez sur la route asphaltée jusqu’à la fin de l’asphalte ; ensuite une route en gravier mène vers Bačić Duliba. La route est entretenue et praticable en voiture.",
-            "Peu après le début du gravier, vous verrez un embranchement pour Ravni Dabar — ne tournez pas là ; continuez encore environ 10 minutes jusqu’à l’embranchement pour Bačić Duliba. Des panneaux indiquent aussi la maison de vacances Stars Peak, pour vous aider à trouver l’emplacement exact une fois à Bačić Duliba."
-        ],
         "mapHeading": "Carte",
         "mapIframeTitle": "Google Maps — Došen Dabar 1, Croatie",
         "mapOpenGoogle": "Ouvrir dans Google Maps pour obtenir l’itinéraire"

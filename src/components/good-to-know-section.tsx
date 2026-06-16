@@ -30,7 +30,12 @@ export function GoodToKnowSection({ content }: Props) {
 
         <div className="good-to-know__grid">
           {content.sections.map((section) => (
-            <article key={section.title} className="good-to-know__card">
+            <article
+              key={section.title}
+              className={`good-to-know__card${
+                section.wide ? " good-to-know__card--wide" : ""
+              }`}
+            >
               <h3 className="good-to-know__card-title">{section.title}</h3>
 
               {section.paragraphs?.map((paragraph) => (

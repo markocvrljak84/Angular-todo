@@ -1095,6 +1095,12 @@ body {
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
 }
 
+@media (min-width: 768px) {
+  .good-to-know__card--wide {
+    grid-column: 1 / -1;
+  }
+}
+
 .good-to-know__card-title {
   margin: 0 0 0.85rem;
   font-size: 1.0625rem;
@@ -1684,33 +1690,6 @@ body {
 
 .contact-card__link:hover {
   color: var(--facility-icon);
-}
-
-.contact-directions {
-  max-width: 44rem;
-  margin-top: 2rem;
-  padding-top: 2rem;
-  border-top: 1px solid var(--line);
-}
-
-.contact-directions__title {
-  margin: 0 0 1rem;
-  font-size: 0.6875rem;
-  font-weight: 800;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--line-strong);
-}
-
-.contact-directions__text {
-  margin: 0 0 0.85rem;
-  font-size: 0.9875rem;
-  line-height: 1.65;
-  color: var(--muted);
-}
-
-.contact-directions__text:last-child {
-  margin-bottom: 0;
 }
 
 .flat-contact-map {

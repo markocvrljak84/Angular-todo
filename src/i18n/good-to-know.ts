@@ -2,6 +2,7 @@ import type { Locale } from "./config";
 
 export type GoodToKnowSection = {
   title: string;
+  wide?: boolean;
   paragraphs?: string[];
   paragraphsAfter?: string[];
   listIntro?: string;
@@ -122,6 +123,16 @@ const hr: GoodToKnowContent = {
       title: "Kontakt",
       phoneIntro: "Za sva pitanja dostupni smo putem WhatsAppa:",
     },
+    {
+      title: "Upute za dolazak",
+      wide: true,
+      paragraphs: [
+        "Kuća se nalazi na adresi Došen Dabar 1, u mjestu Bačić Duliba.",
+        "Do kuće možete iz dva smjera. Jedan je iz pravca Karlobaga, a drugi iz pravca Gospića.",
+        "Kod hostela Čelina u mjestu Šušanj skrenete i pratite znakove za mjesto Ravni Dabar, te vozite asfaltiranom cestom sve do kraja asfalta, zatim dalje prema Bačić Dulibi vodi makadamska cesta. Cesta je održavana i pogodna za osobne automobile.",
+        "Nedugo nakon što počne makadamska cesta vidjet ćete skretanje za Ravni Dabar — ne skrećite za Ravni Dabar, već nastavite još nekih 10-ak minuta vožnje do skretanja za Bačić Dulibu. Na putu će biti i putokazi za kuću za odmor „Stars Peak“, kako biste jednom kad dođete do Bačić Dulibe lakše pronašli točnu lokaciju.",
+      ],
+    },
   ],
 };
 
@@ -230,6 +241,16 @@ const en: GoodToKnowContent = {
     {
       title: "Contact",
       phoneIntro: "For any questions, reach us on WhatsApp:",
+    },
+    {
+      title: "Arrival directions",
+      wide: true,
+      paragraphs: [
+        "The house is at Došen Dabar 1, in Bačić Duliba.",
+        "You can reach the house from two directions — from Karlobag or from Gospić.",
+        "At Hostel Čelina in Šušanj, turn off and follow the signs for Ravni Dabar, then drive on the paved road until the asphalt ends; from there a gravel road leads towards Bačić Duliba. The road is maintained and suitable for passenger cars.",
+        "Shortly after the gravel road begins you will see a turn for Ravni Dabar — do not turn there; continue for about 10 minutes until the turn for Bačić Duliba. Along the way there are also signs for the Stars Peak holiday home, so once you reach Bačić Duliba you can find the exact location more easily.",
+      ],
     },
   ],
 };
@@ -340,6 +361,16 @@ const de: GoodToKnowContent = {
       title: "Kontakt",
       phoneIntro: "Bei Fragen erreichen Sie uns per WhatsApp:",
     },
+    {
+      title: "Anfahrt",
+      wide: true,
+      paragraphs: [
+        "Das Haus befindet sich unter der Adresse Došen Dabar 1, in Bačić Duliba.",
+        "Sie erreichen das Haus aus zwei Richtungen — von Karlobag oder von Gospić.",
+        "Beim Hostel Čelina in Šušanj biegen Sie ab und folgen den Schildern nach Ravni Dabar. Fahren Sie auf der asphaltierten Straße bis zum Ende des Asphalts; danach führt eine Schotterstraße in Richtung Bačić Duliba. Die Straße ist gepflegt und für Pkw geeignet.",
+        "Kurz nach Beginn der Schotterstraße sehen Sie eine Abzweigung nach Ravni Dabar — biegen Sie dort nicht ab, sondern fahren Sie noch etwa 10 Minuten bis zur Abzweigung nach Bačić Duliba. Unterwegs gibt es auch Hinweisschilder zur Ferienwohnung Stars Peak, damit Sie in Bačić Duliba die genaue Lage leichter finden.",
+      ],
+    },
   ],
 };
 
@@ -449,6 +480,16 @@ const fr: GoodToKnowContent = {
       title: "Contact",
       phoneIntro: "Pour toute question, contactez-nous sur WhatsApp :",
     },
+    {
+      title: "Itinéraire d’arrivée",
+      wide: true,
+      paragraphs: [
+        "La maison se trouve au Došen Dabar 1, à Bačić Duliba.",
+        "Vous pouvez y accéder par deux itinéraires — depuis Karlobag ou depuis Gospić.",
+        "À l’hostel Čelina à Šušanj, tournez et suivez les panneaux vers Ravni Dabar, puis roulez sur la route asphaltée jusqu’à la fin de l’asphalte ; ensuite une route en gravier mène vers Bačić Duliba. La route est entretenue et praticable en voiture.",
+        "Peu après le début du gravier, vous verrez un embranchement pour Ravni Dabar — ne tournez pas là ; continuez encore environ 10 minutes jusqu’à l’embranchement pour Bačić Duliba. Des panneaux indiquent aussi la maison de vacances Stars Peak, pour vous aider à trouver l’emplacement exact une fois à Bačić Duliba.",
+      ],
+    },
   ],
 };
 
@@ -557,6 +598,16 @@ const it: GoodToKnowContent = {
     {
       title: "Contatto",
       phoneIntro: "Per qualsiasi domanda, siamo disponibili su WhatsApp:",
+    },
+    {
+      title: "Indicazioni per l’arrivo",
+      wide: true,
+      paragraphs: [
+        "La casa si trova in Došen Dabar 1, a Bačić Duliba.",
+        "Potete raggiungerla da due direzioni — da Karlobag o da Gospić.",
+        "All’ostello Čelina a Šušanj svoltate e seguite i cartelli per Ravni Dabar, poi percorrete la strada asfaltata fino alla fine dell’asfalto; da lì una strada sterrata conduce verso Bačić Duliba. La strada è mantenuta ed è adatta alle auto.",
+        "Poco dopo l’inizio della strada sterrata vedrete una svolta per Ravni Dabar — non girate lì; proseguite per circa 10 minuti fino alla svolta per Bačić Duliba. Lungo il percorso ci sono anche cartelli per la casa vacanze Stars Peak, così una volta arrivati a Bačić Duliba potrete trovare più facilmente la posizione esatta.",
+      ],
     },
   ],
 };
