@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { isLocale, type Locale } from "@/i18n/config";
+import { GoodToKnowSection } from "@/components/good-to-know-section";
+import { getGoodToKnow } from "@/i18n/good-to-know";
 import { getFacilityCategories } from "@/i18n/facility-categories";
 import { getMessages } from "@/i18n/messages";
 import { FacilitiesGrid } from "@/components/facilities-grid";
@@ -78,6 +80,8 @@ export default async function HomePage({ params }: Props) {
         carouselPrevLabel={t.home.heroCarouselPrev}
         carouselNextLabel={t.home.heroCarouselNext}
       />
+
+      <GoodToKnowSection content={getGoodToKnow(locale)} />
 
       <section
         id="about"

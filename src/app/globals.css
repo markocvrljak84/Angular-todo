@@ -1065,6 +1065,111 @@ body {
   line-height: 1.65;
 }
 
+/* —— Good to know —— */
+.good-to-know {
+  background: var(--bg);
+}
+
+.good-to-know__intro {
+  margin-bottom: 2.25rem;
+}
+
+.good-to-know__grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .good-to-know__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+.good-to-know__card {
+  margin: 0;
+  padding: 1.35rem 1.4rem 1.45rem;
+  border: 1px solid var(--line);
+  border-radius: 0.65rem;
+  background: var(--bg-tint);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
+}
+
+.good-to-know__card-title {
+  margin: 0 0 0.85rem;
+  font-size: 1.0625rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.good-to-know__text {
+  margin: 0 0 0.75rem;
+  color: var(--muted);
+  font-size: 0.9875rem;
+  line-height: 1.65;
+}
+
+.good-to-know__text:last-child {
+  margin-bottom: 0;
+}
+
+.good-to-know__list,
+.good-to-know__phones {
+  margin: 0 0 0.85rem;
+  padding: 0 0 0 1.15rem;
+  color: var(--muted);
+  font-size: 0.9875rem;
+  line-height: 1.65;
+}
+
+.good-to-know__list li,
+.good-to-know__phones li {
+  margin-bottom: 0.35rem;
+}
+
+.good-to-know__list li::marker {
+  color: var(--facility-icon);
+}
+
+.good-to-know__phones {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.good-to-know__phone-link {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem 0.65rem;
+  padding: 0.55rem 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  background: var(--bg);
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.good-to-know__phone-link:hover {
+  border-color: var(--facility-icon);
+  color: var(--facility-icon);
+}
+
+.good-to-know__phone-label {
+  display: inline-block;
+  padding: 0.12rem 0.45rem;
+  border-radius: 999px;
+  background: #25d366;
+  color: #fff;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
 /* —— Gallery: seamless square mosaic + lightbox carousel —— */
 .gallery-mosaic {
   display: grid;
