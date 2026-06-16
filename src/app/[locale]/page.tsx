@@ -2,6 +2,8 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { isLocale, type Locale } from "@/i18n/config";
 import { GoodToKnowSection } from "@/components/good-to-know-section";
+import { HikingRoutesSection } from "@/components/hiking-routes-section";
+import { getHikingRoutes } from "@/i18n/hiking-routes";
 import { getGoodToKnow } from "@/i18n/good-to-know";
 import { getFacilityCategories } from "@/i18n/facility-categories";
 import { getMessages } from "@/i18n/messages";
@@ -135,6 +137,8 @@ export default async function HomePage({ params }: Props) {
           />
         </div>
       </section>
+
+      <HikingRoutesSection content={getHikingRoutes(locale)} />
 
       <section
         id="gallery"
