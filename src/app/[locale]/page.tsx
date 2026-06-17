@@ -300,6 +300,8 @@ export default async function HomePage({ params }: Props) {
         </div>
       </section>
 
+      <GoodToKnowSection content={getGoodToKnow(locale)} />
+
       <section
         id="contact"
         className="flat-section flat-section--tint"
@@ -406,8 +408,6 @@ export default async function HomePage({ params }: Props) {
           </div>
         </div>
       </section>
-
-      <GoodToKnowSection content={getGoodToKnow(locale)} />
     </>
   );
 }

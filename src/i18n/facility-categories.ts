@@ -76,7 +76,7 @@ const hr: FacilityCategory[] = [
   {
     icon: "media",
     title: "Mediji i tehnologija",
-    items: ["Netflix streaming usluge"],
+    items: ["Netflix streaming usluge", "HBO Max", "PlayStation 5"],
   },
   {
     icon: "room",
@@ -118,7 +118,15 @@ const hr: FacilityCategory[] = [
   {
     icon: "activities",
     title: "Aktivnosti",
-    items: ["oprema za badminton", "planinarenje", "biciklizam", "penjanje"],
+    items: [
+      "oprema za badminton",
+      "planinarenje",
+      "biciklizam",
+      "penjanje",
+      "ljuljačke",
+      "mali nogomet",
+      "pikado",
+    ],
   },
   {
     icon: "view",
@@ -144,7 +152,7 @@ const hr: FacilityCategory[] = [
   {
     icon: "safety",
     title: "Sigurnost i zaštita",
-    items: ["protupožarni aparati"],
+    items: ["protupožarni aparati", "prva pomoć", "sredstva za dezinfekciju"],
   },
   {
     icon: "languages",
@@ -202,7 +210,7 @@ const en: FacilityCategory[] = [
   {
     icon: "media",
     title: "Media & technology",
-    items: ["Netflix streaming services"],
+    items: ["Netflix streaming services", "HBO Max", "PlayStation 5"],
   },
   {
     icon: "room",
@@ -244,7 +252,15 @@ const en: FacilityCategory[] = [
   {
     icon: "activities",
     title: "Activities",
-    items: ["badminton equipment", "hiking", "cycling", "climbing"],
+    items: [
+      "badminton equipment",
+      "hiking",
+      "cycling",
+      "climbing",
+      "swings",
+      "small-sided football",
+      "darts",
+    ],
   },
   {
     icon: "view",
@@ -270,7 +286,7 @@ const en: FacilityCategory[] = [
   {
     icon: "safety",
     title: "Safety & security",
-    items: ["fire extinguishers"],
+    items: ["fire extinguishers", "first aid kit", "disinfectants"],
   },
   {
     icon: "languages",
@@ -325,7 +341,7 @@ const de: FacilityCategory[] = [
   {
     icon: "media",
     title: "Medien & Technik",
-    items: ["Streaming-Dienste (z. B. Netflix)"],
+    items: ["Streaming-Dienste (z. B. Netflix)", "HBO Max", "PlayStation 5"],
   },
   {
     icon: "room",
@@ -368,7 +384,15 @@ const de: FacilityCategory[] = [
   {
     icon: "activities",
     title: "Aktivitäten",
-    items: ["Wanderungen", "Badmintonausrüstung", "Wandern", "Darts"],
+    items: [
+      "Badmintonausrüstung",
+      "Wandern",
+      "Radfahren",
+      "Klettern",
+      "Schaukeln",
+      "Kleinfeld-Fußball",
+      "Darts",
+    ],
   },
   {
     icon: "view",
@@ -387,7 +411,7 @@ const de: FacilityCategory[] = [
       "Nichtraucherzimmer",
     ],
   },
-  { icon: "safety", title: "Sicherheit", items: ["Feuerlöscher"] },
+  { icon: "safety", title: "Sicherheit", items: ["Feuerlöscher", "Erste-Hilfe-Set", "Desinfektionsmittel"] },
   { icon: "languages", title: "Gesprochene Sprachen", items: ["Englisch", "Kroatisch"] },
 ];
 
@@ -437,7 +461,7 @@ const fr: FacilityCategory[] = [
   {
     icon: "media",
     title: "Médias et technologie",
-    items: ["services de streaming (comme Netflix)"],
+    items: ["services de streaming (comme Netflix)", "HBO Max", "PlayStation 5"],
   },
   {
     icon: "room",
@@ -480,7 +504,15 @@ const fr: FacilityCategory[] = [
   {
     icon: "activities",
     title: "Activités",
-    items: ["visites à pied", "équipement de badminton", "randonnée", "fléchettes"],
+    items: [
+      "équipement de badminton",
+      "randonnée",
+      "cyclisme",
+      "escalade",
+      "balançoires",
+      "petit foot",
+      "fléchettes",
+    ],
   },
   {
     icon: "view",
@@ -499,7 +531,7 @@ const fr: FacilityCategory[] = [
       "chambres non-fumeurs",
     ],
   },
-  { icon: "safety", title: "Sécurité", items: ["extincteurs"] },
+  { icon: "safety", title: "Sécurité", items: ["extincteurs", "trousse de premiers secours", "produits désinfectants"] },
   { icon: "languages", title: "Langues parlées", items: ["anglais", "croate"] },
 ];
 
@@ -549,7 +581,7 @@ const it: FacilityCategory[] = [
   {
     icon: "media",
     title: "Media e tecnologia",
-    items: ["servizi di streaming (come Netflix)"],
+    items: ["servizi di streaming (come Netflix)", "HBO Max", "PlayStation 5"],
   },
   {
     icon: "room",
@@ -592,7 +624,15 @@ const it: FacilityCategory[] = [
   {
     icon: "activities",
     title: "Attività",
-    items: ["tour a piedi", "attrezzatura da badminton", "escursionismo", "freccette"],
+    items: [
+      "attrezzatura da badminton",
+      "escursionismo",
+      "ciclismo",
+      "arrampicata",
+      "altalene",
+      "calcetto",
+      "freccette",
+    ],
   },
   {
     icon: "view",
@@ -611,7 +651,7 @@ const it: FacilityCategory[] = [
       "camere non fumatori",
     ],
   },
-  { icon: "safety", title: "Sicurezza", items: ["estintori"] },
+  { icon: "safety", title: "Sicurezza", items: ["estintori", "kit di pronto soccorso", "disinfettanti"] },
   { icon: "languages", title: "Lingue parlate", items: ["inglese", "croato"] },
 ];
 

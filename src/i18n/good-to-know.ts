@@ -614,6 +614,25 @@ const it: GoodToKnowContent = {
 
 const byLocale: Record<Locale, GoodToKnowContent> = { en, hr, de, fr, it };
 
+const DIRECTIONS_SECTION_TITLES = new Set([
+  "Upute za dolazak",
+  "Arrival directions",
+  "Anfahrt",
+  "Itinéraire d’arrivée",
+  "Indicazioni per l’arrivo",
+]);
+
+function withDirectionsFirst(content: GoodToKnowContent): GoodToKnowContent {
+  const index = content.sections.findIndex((section) =>
+    DIRECTIONS_SECTION_TITLES.has(section.title)
+  );
+  if (index <= 0) return content;
+
+  const sections = [...content.sections];
+  const [directions] = sections.splice(index, 1);
+  return { ...content, sections: [directions, ...sections] };
+}
+
 export function getGoodToKnow(locale: Locale): GoodToKnowContent {
-  return byLocale[locale];
+  return withDirectionsFirst(byLocale[locale]);
 }

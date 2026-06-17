@@ -96,8 +96,8 @@ export function SiteHeader({ locale, t }: Props) {
     { href: `${base}#gallery`, label: t.nav.gallery },
     { href: `${base}#hiking`, label: t.nav.hiking },
     { href: `${base}#nearby`, label: t.nav.nearby },
-    { href: `${base}#contact`, label: t.nav.contact },
     { href: `${base}#good-to-know`, label: t.nav.goodToKnow },
+    { href: `${base}#contact`, label: t.nav.contact },
   ];
 
   function closeMenu() {

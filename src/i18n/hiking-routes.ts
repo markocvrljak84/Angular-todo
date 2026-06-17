@@ -22,7 +22,6 @@ export type HikingRoutesContent = {
   mapHeading: string;
   gpxDownloadLabel: string;
   gpxHint: string;
-  routesHint: string;
   expandRouteLabel: string;
   collapseRouteLabel: string;
   statLabels: {
@@ -55,7 +54,6 @@ const hr: HikingRoutesContent = {
   gpxDownloadLabel: "Preuzmi GPX",
   gpxHint:
     "GPX datoteka sadrži zapis staze za navigaciju u aplikacijama poput Gaia GPS, Komoot ili Google Earth.",
-  routesHint: "Odaberite rutu — istovremeno je otvorena samo jedna, kako stranica ne bi bila preduga.",
   expandRouteLabel: "Prikaži detalje staze",
   collapseRouteLabel: "Sakrij detalje staze",
   statLabels: {
@@ -114,8 +112,9 @@ const hr: HikingRoutesContent = {
         "Ovdje nas smjerokaz upućuje ravno prema Budakovu Brdu. Staza nastavlja blago uzbrdo, kroz visoku bukovu šumu Soline. Zatim izlazi na travnatu zaravan, pa na travnati hrbat.",
       ],
       imageAlts: [
-        "Budakovo Brdo — pogled s vrha prema priobalju",
-        "Budakovo Brdo — travnati hrbat i krajolik Velebita",
+        "Budakovo Brdo — pogled s travnatog hrpta",
+        "Budakovo Brdo — krajolik Velebita s uspona",
+        "Budakovo Brdo — panorama prema priobalju",
       ],
       difficulty: "Srednje teška",
       marking: "Dobra",
@@ -137,7 +136,10 @@ const hr: HikingRoutesContent = {
         "Verući se uz kamenu galeriju, te uz nekoliko klinova i sajle za pripomoć, dolazi se na vrh. Ovo je moguće izvesti bez rizika ako je suho vrijeme.",
         "Vrh je označen natpisom imena vrha i istaknutom nadmorskom visinom. S vrha puca pogled u svim smjerovima, a posebno se ističe prema Bačić Kuku i Budakovu Brdu.",
       ],
-      imageAlts: [],
+      imageAlts: [
+        "Kiza — staza i okolni krajolik",
+        "Kiza — pogled s vrha prema Velebitu",
+      ],
       difficulty: "Srednje teška",
       marking: "Dobra",
       activityType: "Planinarenje",
@@ -157,7 +159,6 @@ const en: HikingRoutesContent = {
   gpxDownloadLabel: "Download GPX",
   gpxHint:
     "The GPX file contains the trail track for navigation in apps such as Gaia GPS, Komoot or Google Earth.",
-  routesHint: "Select a route — only one is open at a time to keep the page compact.",
   expandRouteLabel: "Show route details",
   collapseRouteLabel: "Hide route details",
   statLabels: {
@@ -216,8 +217,9 @@ const en: HikingRoutesContent = {
         "Here the signpost points straight towards Budakovo Brdo. The trail continues gently uphill through the tall beech forest of Soline, then emerges onto a grassy plateau and the grassy ridge.",
       ],
       imageAlts: [
-        "Budakovo Brdo — view from the summit towards the coast",
-        "Budakovo Brdo — grassy ridge and Velebit landscape",
+        "Budakovo Brdo — view from the grassy ridge",
+        "Budakovo Brdo — Velebit landscape on the ascent",
+        "Budakovo Brdo — panorama towards the coast",
       ],
       difficulty: "Moderately difficult",
       marking: "Good",
@@ -239,7 +241,10 @@ const en: HikingRoutesContent = {
         "Following the rock gallery, with a few pitons and fixed ropes for assistance, you reach the summit. This can be done safely in dry weather.",
         "The summit is marked with the peak name and elevation. From the top the view opens in all directions, especially towards Bačić Kuk and Budakovo Brdo.",
       ],
-      imageAlts: [],
+      imageAlts: [
+        "Kiza — trail and surrounding landscape",
+        "Kiza — summit view over Velebit",
+      ],
       difficulty: "Moderately difficult",
       marking: "Good",
       activityType: "Hiking",
@@ -259,7 +264,6 @@ const de: HikingRoutesContent = {
   gpxDownloadLabel: "GPX herunterladen",
   gpxHint:
     "Die GPX-Datei enthält den Streckenverlauf zur Navigation in Apps wie Gaia GPS, Komoot oder Google Earth.",
-  routesHint: "Route auswählen — es ist jeweils nur eine geöffnet, damit die Seite kompakt bleibt.",
   expandRouteLabel: "Streckendetails anzeigen",
   collapseRouteLabel: "Streckendetails ausblenden",
   statLabels: {
@@ -318,8 +322,9 @@ const de: HikingRoutesContent = {
         "Hier weist der Wegweiser geradeaus zum Budakovo Brdo. Der Weg führt sanft bergauf durch den hohen Buchenwald von Soline, tritt dann auf eine grasige Hochfläche und den grasigen Grat hinaus.",
       ],
       imageAlts: [
-        "Budakovo Brdo — Blick vom Gipfel Richtung Küste",
-        "Budakovo Brdo — grasiger Grat und Velebit-Landschaft",
+        "Budakovo Brdo — Blick vom grasigen Grat",
+        "Budakovo Brdo — Velebit-Landschaft beim Aufstieg",
+        "Budakovo Brdo — Panorama Richtung Küste",
       ],
       difficulty: "Mittelschwer",
       marking: "Gut",
@@ -341,7 +346,10 @@ const de: HikingRoutesContent = {
         "Entlang der Felsgalerie, mit einigen Haken und Seilsicherungen zur Hilfe, gelangt man zum Gipfel. Bei trockenem Wetter ist dies unbedenklich möglich.",
         "Der Gipfel ist mit Namen und Höhe markiert. Von oben eröffnet sich die Aussicht in alle Richtungen, besonders eindrucksvoll Richtung Bačić Kuk und Budakovo Brdo.",
       ],
-      imageAlts: [],
+      imageAlts: [
+        "Kiza — Weg und Umgebung",
+        "Kiza — Ausblick vom Gipfel über den Velebit",
+      ],
       difficulty: "Mittelschwer",
       marking: "Gut",
       activityType: "Wandern",
@@ -361,7 +369,6 @@ const fr: HikingRoutesContent = {
   gpxDownloadLabel: "Télécharger le GPX",
   gpxHint:
     "Le fichier GPX contient le tracé du sentier pour la navigation dans des applications comme Gaia GPS, Komoot ou Google Earth.",
-  routesHint: "Choisissez un itinéraire — un seul est ouvert à la fois pour limiter le défilement.",
   expandRouteLabel: "Afficher les détails du sentier",
   collapseRouteLabel: "Masquer les détails du sentier",
   statLabels: {
@@ -420,8 +427,9 @@ const fr: HikingRoutesContent = {
         "Le panneau indique alors tout droit vers Budakovo Brdo. Le sentier continue en pente douce à travers la haute futaie de Soline, puis débouche sur un plateau herbeux et le crêtage.",
       ],
       imageAlts: [
-        "Budakovo Brdo — vue depuis le sommet vers le littoral",
-        "Budakovo Brdo — crêtage herbeux et paysage du Velebit",
+        "Budakovo Brdo — vue depuis le crêtage herbeux",
+        "Budakovo Brdo — paysage du Velebit lors de l’ascension",
+        "Budakovo Brdo — panorama vers le littoral",
       ],
       difficulty: "Modérément difficile",
       marking: "Bon",
@@ -443,7 +451,10 @@ const fr: HikingRoutesContent = {
         "En suivant la galerie rocheuse, avec quelques pitons et cordes fixes, on atteint le sommet. C’est faisable sans risque par temps sec.",
         "Le sommet est marqué du nom et de l’altitude. Du haut, la vue s’ouvre dans toutes les directions, notamment vers le Bačić Kuk et le Budakovo Brdo.",
       ],
-      imageAlts: [],
+      imageAlts: [
+        "Kiza — sentier et paysage environnant",
+        "Kiza — vue depuis le sommet sur le Velebit",
+      ],
       difficulty: "Modérément difficile",
       marking: "Bon",
       activityType: "Randonnée",
@@ -463,7 +474,6 @@ const it: HikingRoutesContent = {
   gpxDownloadLabel: "Scarica GPX",
   gpxHint:
     "Il file GPX contiene il tracciato del sentiero per la navigazione in app come Gaia GPS, Komoot o Google Earth.",
-  routesHint: "Seleziona un percorso — ne è aperto uno alla volta per ridurre lo scorrimento.",
   expandRouteLabel: "Mostra dettagli del sentiero",
   collapseRouteLabel: "Nascondi dettagli del sentiero",
   statLabels: {
@@ -522,8 +532,9 @@ const it: HikingRoutesContent = {
         "Qui il cartello indica dritto verso Budakovo Brdo. Il sentiero prosegue dolcemente in salita attraverso l’alta faggeta di Soline, poi esce su un altopiano erboso e sul crinale.",
       ],
       imageAlts: [
-        "Budakovo Brdo — vista dalla vetta verso la costa",
-        "Budakovo Brdo — crinale erboso e paesaggio del Velebit",
+        "Budakovo Brdo — vista dal crinale erboso",
+        "Budakovo Brdo — paesaggio del Velebit durante l’ascesa",
+        "Budakovo Brdo — panorama verso la costa",
       ],
       difficulty: "Moderatamente difficile",
       marking: "Buona",
@@ -545,7 +556,10 @@ const it: HikingRoutesContent = {
         "Seguendo la galleria rocciosa, con alcuni chiodi e corde fisse di aiuto, si raggiunge la vetta. È fattibile senza rischi con tempo asciutto.",
         "La vetta è segnata con nome e quota. Dalla cima la vista si apre in tutte le direzioni, in particolare verso Bačić Kuk e Budakovo Brdo.",
       ],
-      imageAlts: [],
+      imageAlts: [
+        "Kiza — sentiero e paesaggio circostante",
+        "Kiza — vista dalla vetta sul Velebit",
+      ],
       difficulty: "Moderatamente difficile",
       marking: "Buona",
       activityType: "Escursionismo",

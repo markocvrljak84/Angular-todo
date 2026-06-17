@@ -278,7 +278,6 @@ export function HikingRoutesSection({ content }: Props) {
           {content.title}
         </h2>
         <p className="flat-section__intro">{content.intro}</p>
-        <p className="hiking__hint">{content.routesHint}</p>
 
         <div className="hiking__routes">
           {content.routes.map((route) => {

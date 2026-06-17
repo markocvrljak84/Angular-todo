@@ -85,8 +85,13 @@ export const HIKING_ROUTE_IMAGES: Partial<
     "images.jpeg",
   ],
   "budakovo-brdo": [
-    "img_0991.jpg",
+    "velebit-planinarenje-izlet-vikend-putovanje-budakovo-brdo-prikinuto-brdo-visibaba-06.jpg",
+    "velebit-planinarenje-izlet-vikend-putovanje-budakovo-brdo-prikinuto-brdo-visibaba-11.jpg",
     "velebit-planinarenje-izlet-vikend-putovanje-budakovo-brdo-prikinuto-brdo-visibaba-18.jpg",
+  ],
+  kiza: [
+    "kt6_kiza7.jpg",
+    "eyJidWNrZXQiOiJhc3NldHMuYWxsdHJhaWxzLmNvbSIsImtleSI6InVwbG9hZHMvcGhvdG8vaW1hZ2UvMTI2MjY1NDUwL2VjNDRlM2QzMzkwMjQzY2Q5OGJiY2M4ZGNlMTE2YjExLmpwZyIsImVkaXRzIjp7InRvRm9ybWF0Ijoid2VicCIsInJlc2l6ZSI6eyJ3aWR0aCI6IjEwODAiLCJoZWlnaHQiOiI3MDAiLCJmaXQ.webp",
   ],
 };
 
