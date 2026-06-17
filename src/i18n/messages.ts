@@ -9,8 +9,9 @@ export type Messages = {
         home: string;
         about: string;
         gallery: string;
-        film: string;
+        hiking: string;
         nearby: string;
+        goodToKnow: string;
         contact: string;
     };
     langSwitcher: { aria: string };
@@ -104,8 +105,9 @@ const en: Messages = {
         home: "Home",
         about: "About",
         gallery: "Gallery",
-        film: "Video",
+        hiking: "Hiking",
         nearby: "Near places",
+        goodToKnow: "Good to know",
         contact: "Contact",
     },
     langSwitcher: { aria: "Language" },
@@ -248,8 +250,9 @@ const hr: Messages = {
         home: "Početna",
         about: "O nama",
         gallery: "Galerija",
-        film: "Video",
+        hiking: "Planinarenje",
         nearby: "U blizini",
+        goodToKnow: "Dobro za znati",
         contact: "Kontakt",
     },
     langSwitcher: { aria: "Jezik" },
@@ -392,8 +395,9 @@ const de: Messages = {
         home: "Start",
         about: "Über uns",
         gallery: "Galerie",
-        film: "Video",
+        hiking: "Wandern",
         nearby: "In der Nähe",
+        goodToKnow: "Gut zu wissen",
         contact: "Kontakt",
     },
     langSwitcher: { aria: "Sprache" },

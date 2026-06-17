@@ -12,8 +12,9 @@
         "home": "Accueil",
         "about": "À propos",
         "gallery": "Galerie",
-        "film": "Vidéo",
+        "hiking": "Randonnée",
         "nearby": "À proximité",
+        "goodToKnow": "Bon à savoir",
         "contact": "Contact"
     },
     "langSwitcher": {

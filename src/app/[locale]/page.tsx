@@ -83,8 +83,6 @@ export default async function HomePage({ params }: Props) {
         carouselNextLabel={t.home.heroCarouselNext}
       />
 
-      <GoodToKnowSection content={getGoodToKnow(locale)} />
-
       <section
         id="about"
         className="flat-section flat-section--tint"
@@ -130,7 +128,15 @@ export default async function HomePage({ params }: Props) {
               <p className="flat-about__hosts-note">{t.about.hostsNote}</p>
             </aside>
           </div>
+        </div>
+      </section>
 
+      <section
+        id="facilities"
+        className="flat-section"
+        aria-labelledby="facilities-title"
+      >
+        <div className="flat-wrap">
           <FacilitiesGrid
             title={t.home.facilitiesTitle}
             categories={facilities}
@@ -138,11 +144,9 @@ export default async function HomePage({ params }: Props) {
         </div>
       </section>
 
-      <HikingRoutesSection content={getHikingRoutes(locale)} />
-
       <section
         id="gallery"
-        className="flat-section"
+        className="flat-section flat-section--tint"
         aria-labelledby="gallery-title"
       >
         <div className="flat-wrap">
@@ -173,6 +177,8 @@ export default async function HomePage({ params }: Props) {
       </section>
 
       <FilmYoutubeSection videoId={FILM_YOUTUBE_ID} />
+
+      <HikingRoutesSection content={getHikingRoutes(locale)} />
 
       <section id="nearby" className="itinerary" aria-labelledby="nearby-title">
         <header className="itinerary__header">
@@ -400,6 +406,8 @@ export default async function HomePage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      <GoodToKnowSection content={getGoodToKnow(locale)} />
     </>
   );
 }

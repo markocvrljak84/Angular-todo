@@ -94,9 +94,10 @@ export function SiteHeader({ locale, t }: Props) {
     { href: `${base}#top`, label: t.nav.home },
     { href: `${base}#about`, label: t.nav.about },
     { href: `${base}#gallery`, label: t.nav.gallery },
-    { href: `${base}#film`, label: t.nav.film },
+    { href: `${base}#hiking`, label: t.nav.hiking },
     { href: `${base}#nearby`, label: t.nav.nearby },
     { href: `${base}#contact`, label: t.nav.contact },
+    { href: `${base}#good-to-know`, label: t.nav.goodToKnow },
   ];
 
   function closeMenu() {
@@ -123,9 +124,6 @@ export function SiteHeader({ locale, t }: Props) {
               ))}
             </ul>
           </nav>
-          <Link href={`${base}#contact`} className="site-header__cta">
-            {t.header.bookCta}
-          </Link>
         </div>
 
         <div className="site-header__tools">
@@ -168,9 +166,6 @@ export function SiteHeader({ locale, t }: Props) {
               ))}
             </ul>
           </nav>
-          <Link href={`${base}#contact`} className="site-header__mobile-cta" onClick={closeMenu}>
-            {t.header.bookCta}
-          </Link>
         </div>
       </div>
     </header>
