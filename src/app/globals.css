@@ -1168,7 +1168,7 @@ body {
   display: inline-block;
   padding: 0.12rem 0.45rem;
   border-radius: 999px;
-  background: #25d366;
+  background: #388455;
   color: #fff;
   font-size: 0.6875rem;
   font-weight: 800;
@@ -1628,12 +1628,6 @@ body {
 }
 
 /* —— Facilities (booking-style grid) —— */
-.facilities {
-  margin-top: 2.5rem;
-  padding-top: 2rem;
-  border-top: 1px solid var(--line);
-}
-
 .facilities__title {
   margin: 0 0 1.5rem;
   font-size: clamp(1.25rem, 2.5vw, 1.5rem);
