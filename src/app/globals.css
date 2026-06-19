@@ -1422,6 +1422,159 @@ body {
   text-decoration: underline;
 }
 
+.book-cta {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 1.5rem;
+}
+
+.book-cta--compact {
+  margin-top: 1.25rem;
+}
+
+.book-cta--hero {
+  margin-top: 1.35rem;
+  justify-items: start;
+}
+
+.book-cta__lead {
+  margin: 0;
+  max-width: 34rem;
+  color: var(--muted);
+  font-size: 0.9875rem;
+  line-height: 1.6;
+}
+
+.book-cta--hero .book-cta__lead {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.book-cta__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0.85rem 1.35rem;
+  border-radius: 999px;
+  background: var(--facility-icon);
+  color: #fff;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  box-shadow: 0 10px 24px color-mix(in srgb, var(--facility-icon) 28%, transparent);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background 0.15s ease;
+}
+
+.book-cta__btn:hover {
+  transform: translateY(-1px);
+  background: color-mix(in srgb, var(--facility-icon) 88%, #000);
+  box-shadow: 0 14px 28px color-mix(in srgb, var(--facility-icon) 34%, transparent);
+}
+
+.book-cta__btn:focus-visible {
+  outline: 2px solid var(--facility-icon);
+  outline-offset: 3px;
+}
+
+.book-cta--hero .book-cta__btn {
+  background: #fff;
+  color: #18181b;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+}
+
+.book-cta--hero .book-cta__btn:hover {
+  background: #f4f4f5;
+  color: #09090b;
+}
+
+.book-banner {
+  padding: 1.15rem 1.25rem;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--facility-icon) 5%, var(--bg)) 0%,
+    var(--bg-tint) 100%
+  );
+  border-block: 1px solid color-mix(in srgb, var(--facility-icon) 16%, var(--line));
+}
+
+.book-banner__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 1.75rem;
+  max-width: 80rem;
+  margin-inline: auto;
+  padding: 1.2rem 1.85rem;
+  border-radius: 1rem;
+  background: #fff;
+  border: 1px solid color-mix(in srgb, var(--facility-icon) 20%, var(--line));
+  box-shadow:
+    0 1px 2px rgba(9, 9, 11, 0.04),
+    0 10px 28px color-mix(in srgb, var(--facility-icon) 12%, transparent);
+}
+
+.book-banner__text {
+  margin: 0;
+  flex: 1 1 18rem;
+  color: var(--ink);
+  font-size: 1.0125rem;
+  font-weight: 500;
+  line-height: 1.55;
+  letter-spacing: -0.01em;
+}
+
+.book-banner__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  min-height: 2.75rem;
+  padding: 0.75rem 1.45rem;
+  border-radius: 999px;
+  background: var(--facility-icon);
+  color: #fff;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 10px 24px color-mix(in srgb, var(--facility-icon) 28%, transparent);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background 0.15s ease;
+}
+
+.book-banner__btn:hover {
+  transform: translateY(-2px);
+  background: color-mix(in srgb, var(--facility-icon) 88%, #000);
+  box-shadow: 0 14px 32px color-mix(in srgb, var(--facility-icon) 34%, transparent);
+}
+
+.book-banner__btn:focus-visible {
+  outline: 2px solid var(--facility-icon);
+  outline-offset: 3px;
+}
+
+@media (min-width: 768px) {
+  .book-banner {
+    padding: 1.35rem 1.75rem;
+  }
+
+  .book-banner__inner {
+    padding: 1.35rem 2.1rem;
+  }
+
+  .book-banner__text {
+    font-size: 1.0625rem;
+  }
+}
+
 .flat-about__hosts-note {
   margin: 0;
   padding: 0.85rem 1rem;

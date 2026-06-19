@@ -54,19 +54,12 @@ const hr: FacilityCategory[] = [
   {
     icon: "bedroom",
     title: "Spavaća soba",
-    items: ["posteljina", "jedan bračni krevet i dva jednokrevetna"],
+    items: ["jedan bračni krevet i dva jednokrevetna"],
   },
   {
     icon: "bathroom",
     title: "Kupaonica",
-    items: [
-      "ručnici",
-      "kada ili tuš kabina",
-      "kupaonica",
-      "WC",
-      "besplatan toaletni pribor",
-      "tuš kabina",
-    ],
+    items: ["ručnici", "WC", "besplatan toaletni pribor", "tuš kabina"],
   },
   {
     icon: "living",
@@ -86,9 +79,7 @@ const hr: FacilityCategory[] = [
       "krevet na rasklapanje",
       "stalak za odjeću",
       "mreža protiv komaraca",
-      "privatni ulaz",
       "tepih",
-      "grijanje",
       "ventilator",
     ],
   },
@@ -127,16 +118,6 @@ const hr: FacilityCategory[] = [
       "mali nogomet",
       "pikado",
     ],
-  },
-  {
-    icon: "view",
-    title: "Dnevni boravak",
-    items: ["pogled na planinu", "pogled na vrt"],
-  },
-  {
-    icon: "building",
-    title: "Karakteristike zgrade",
-    items: ["zasebna zgrada"],
   },
   {
     icon: "misc",
@@ -188,19 +169,12 @@ const en: FacilityCategory[] = [
   {
     icon: "bedroom",
     title: "Bedroom",
-    items: ["linen", "one large bed and two single beds"],
+    items: ["one large bed and two single beds"],
   },
   {
     icon: "bathroom",
     title: "Bathroom",
-    items: [
-      "towels",
-      "bathtub or shower",
-      "bathroom",
-      "toilet",
-      "free toiletries",
-      "shower",
-    ],
+    items: ["towels", "toilet", "free toiletries", "shower"],
   },
   {
     icon: "living",
@@ -220,9 +194,7 @@ const en: FacilityCategory[] = [
       "sofa bed",
       "clothes rack",
       "mosquito net",
-      "private entrance",
       "carpet",
-      "heating",
       "fan",
     ],
   },
@@ -261,16 +233,6 @@ const en: FacilityCategory[] = [
       "small-sided football",
       "darts",
     ],
-  },
-  {
-    icon: "view",
-    title: "Lounge area",
-    items: ["mountain view", "garden view"],
-  },
-  {
-    icon: "building",
-    title: "Property characteristics",
-    items: ["detached building"],
   },
   {
     icon: "misc",
@@ -319,15 +281,13 @@ const de: FacilityCategory[] = [
       "Kochnische",
     ],
   },
-  { icon: "bedroom", title: "Schlafzimmer", items: ["Bettwäsche"] },
+  { icon: "bedroom", title: "Schlafzimmer", items: ["ein Doppelbett und zwei Einzelbetten"] },
   {
     icon: "bathroom",
     title: "Eigenes Badezimmer",
     items: [
       "Toilettenpapier",
       "Handtücher",
-      "Badewanne oder Dusche",
-      "eigenes Badezimmer",
       "WC",
       "kostenlose Pflegeprodukte",
       "Dusche",
@@ -353,9 +313,7 @@ const de: FacilityCategory[] = [
       "Moskitonetz",
       "Holz- oder Parkettboden",
       "Schallisolierung",
-      "eigener Eingang",
       "Teppichboden",
-      "Heizung",
       "Ventilator",
     ],
   },
@@ -395,12 +353,6 @@ const de: FacilityCategory[] = [
     ],
   },
   {
-    icon: "view",
-    title: "Außenbereich & Ausblick",
-    items: ["Bergblick", "Gartenblick", "Aussicht"],
-  },
-  { icon: "building", title: "Gebäude", items: ["freistehendes Gebäude"] },
-  {
     icon: "misc",
     title: "Sonstiges",
     items: [
@@ -439,15 +391,13 @@ const fr: FacilityCategory[] = [
       "kitchenette",
     ],
   },
-  { icon: "bedroom", title: "Chambre", items: ["linge de lit"] },
+  { icon: "bedroom", title: "Chambre", items: ["un grand lit et deux lits simples"] },
   {
     icon: "bathroom",
     title: "Salle de bain privative",
     items: [
       "papier toilette",
       "serviettes",
-      "baignoire ou douche",
-      "salle de bain privative",
       "toilettes",
       "articles de toilette gratuits",
       "douche",
@@ -473,9 +423,7 @@ const fr: FacilityCategory[] = [
       "moustiquaire",
       "sol en bois ou parquet",
       "insonorisation",
-      "entrée privée",
       "moquette",
-      "chauffage",
       "ventilateur",
     ],
   },
@@ -515,12 +463,6 @@ const fr: FacilityCategory[] = [
     ],
   },
   {
-    icon: "view",
-    title: "Extérieur et vue",
-    items: ["vue sur la montagne", "vue sur le jardin", "vue"],
-  },
-  { icon: "building", title: "Bâtiment", items: ["bâtiment indépendant"] },
-  {
     icon: "misc",
     title: "Divers",
     items: [
@@ -559,15 +501,13 @@ const it: FacilityCategory[] = [
       "angolo cottura",
     ],
   },
-  { icon: "bedroom", title: "Camera da letto", items: ["biancheria da letto"] },
+  { icon: "bedroom", title: "Camera da letto", items: ["un letto matrimoniale e due letti singoli"] },
   {
     icon: "bathroom",
     title: "Bagno privato",
     items: [
       "carta igienica",
       "asciugamani",
-      "vasca o doccia",
-      "bagno privato",
       "WC",
       "set di cortesia gratuito",
       "doccia",
@@ -593,9 +533,7 @@ const it: FacilityCategory[] = [
       "zanzariera",
       "pavimento in legno o parquet",
       "insonorizzazione",
-      "ingresso indipendente",
       "moquette",
-      "riscaldamento",
       "ventilatore",
     ],
   },
@@ -634,12 +572,6 @@ const it: FacilityCategory[] = [
       "freccette",
     ],
   },
-  {
-    icon: "view",
-    title: "Esterni e vista",
-    items: ["vista montagna", "vista giardino", "vista"],
-  },
-  { icon: "building", title: "Caratteristiche", items: ["edificio indipendente"] },
   {
     icon: "misc",
     title: "Varie",

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
+import { BookCta } from "@/components/book-cta";
 
 export type HeroSlide = { src: string; alt: string };
 
@@ -10,6 +11,7 @@ type Props = {
   kicker: string;
   scriptTitle: string;
   centerLine: string;
+  bookCtaLabel: string;
   carouselPrevLabel: string;
   carouselNextLabel: string;
 };
@@ -19,6 +21,7 @@ export function HeroFullscreenCarousel({
   kicker,
   scriptTitle,
   centerLine,
+  bookCtaLabel,
   carouselPrevLabel,
   carouselNextLabel,
 }: Props) {
@@ -116,6 +119,7 @@ export function HeroFullscreenCarousel({
           {scriptTitle}
         </h1>
         <p className="hero-fs__tagline">{centerLine}</p>
+        <BookCta label={bookCtaLabel} variant="hero" />
       </div>
     </section>
   );

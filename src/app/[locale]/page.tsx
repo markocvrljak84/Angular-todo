@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { isLocale, type Locale } from "@/i18n/config";
+import { BookCta } from "@/components/book-cta";
 import { GoodToKnowSection } from "@/components/good-to-know-section";
 import { HikingRoutesSection } from "@/components/hiking-routes-section";
 import { getHikingRoutes } from "@/i18n/hiking-routes";
@@ -79,6 +80,7 @@ export default async function HomePage({ params }: Props) {
         kicker={t.home.heroBadge}
         scriptTitle={SITE_CONTACT.heroTitle}
         centerLine={t.home.heroCenterLine}
+        bookCtaLabel={t.header.bookCta}
         carouselPrevLabel={t.home.heroCarouselPrev}
         carouselNextLabel={t.home.heroCarouselNext}
       />
@@ -100,17 +102,6 @@ export default async function HomePage({ params }: Props) {
             <div className="flat-about__main">
               <p>{t.about.p1}</p>
               <p>{t.about.p2}</p>
-              <p className="flat-about__booking">
-                {t.about.bookingLine}{" "}
-                <a
-                  href={BOOKING_URL}
-                  className="flat-about__booking-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {t.about.bookingLinkLabel}
-                </a>
-              </p>
             </div>
             <aside
               className="flat-about__side"
@@ -130,6 +121,12 @@ export default async function HomePage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      <BookCta
+        variant="banner"
+        label={t.header.bookCta}
+        lead={t.cta.aboutLead}
+      />
 
       <section
         id="facilities"
@@ -176,9 +173,21 @@ export default async function HomePage({ params }: Props) {
         </div>
       </section>
 
+      <BookCta
+        variant="banner"
+        label={t.header.bookCta}
+        lead={t.cta.galleryLead}
+      />
+
       <FilmYoutubeSection videoId={FILM_YOUTUBE_ID} />
 
       <HikingRoutesSection content={getHikingRoutes(locale)} />
+
+      <BookCta
+        variant="banner"
+        label={t.header.bookCta}
+        lead={t.cta.hikingLead}
+      />
 
       <section id="nearby" className="itinerary" aria-labelledby="nearby-title">
         <header className="itinerary__header">
@@ -302,6 +311,12 @@ export default async function HomePage({ params }: Props) {
 
       <GoodToKnowSection content={getGoodToKnow(locale)} />
 
+      <BookCta
+        variant="banner"
+        label={t.header.bookCta}
+        lead={t.cta.goodToKnowLead}
+      />
+
       <section
         id="contact"
         className="flat-section flat-section--tint"
@@ -408,6 +423,12 @@ export default async function HomePage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      <BookCta
+        variant="banner"
+        label={t.header.bookCta}
+        lead={t.cta.contactLead}
+      />
     </>
   );
 }

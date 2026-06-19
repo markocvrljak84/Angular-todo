@@ -4,9 +4,16 @@
         "siteDescription": "Velebit mountain chalet stars peak — maison de vacances en Croatie, sur le massif du Velebit. Située dans le parc naturel du Velebit, Došen Dabar — près de Karlobag et Baške Oštarije."
     },
     "header": {
-        "bookCta": "Voir les disponibilités",
+        "bookCta": "Voir les disponibilités sur Booking.com",
         "menuOpen": "Ouvrir le menu",
         "menuClose": "Fermer le menu"
+    },
+    "cta": {
+        "aboutLead": "Consultez les disponibilités et réservez votre séjour.",
+        "galleryLead": "La nature est encore plus belle sur place ? Vérifiez les dates et réservez votre séjour.",
+        "hikingLead": "Faites de Stars Peak votre base pour randonner — réservez votre logement.",
+        "goodToKnowLead": "Réservez votre séjour sur Booking.com.",
+        "contactLead": "Vous préférez réserver en ligne ? Disponibilités et tarifs à jour."
     },
     "nav": {
         "home": "Accueil",
@@ -32,7 +39,7 @@
         "heroTitle": "Votre refuge au-dessus des cimes",
         "heroLead": "Réveillez-vous avec l’air des pins et un grand ciel. Cette page de démonstration décrit un chalet fictif pour prévisualiser mise en page et navigation.",
         "heroScriptTitle": "Velebit mountain chalet stars peak",
-        "heroCenterLine": "Ce logement unique se trouve au cœur du Velebit et offre une magnifique vue sur la montagne.",
+        "heroCenterLine": "Ce logement unique se trouve au cœur du Velebit.",
         "nearbyTitle": "À proximité",
         "nearbyLead": "Depuis votre base de montagne sur le Velebit, rejoignez facilement les plus beaux sites de Dalmatie du Nord — parcs nationaux, criques et îles adriatiques. Voici quelques excursions à proximité.",
         "itineraryImageAlts": [

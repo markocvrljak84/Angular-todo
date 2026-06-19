@@ -5,6 +5,13 @@ import it from "./locales/it.json";
 export type Messages = {
     meta: { siteName: string; siteDescription: string };
     header: { bookCta: string; menuOpen: string; menuClose: string };
+    cta: {
+        aboutLead: string;
+        galleryLead: string;
+        hikingLead: string;
+        goodToKnowLead: string;
+        contactLead: string;
+    };
     nav: {
         home: string;
         about: string;
@@ -97,9 +104,16 @@ const en: Messages = {
             "Velebit mountain chalet Stars Peak holiday home in Croatia, on the Velebit mountains. Located in Velebit Nature Park, Došen Dabar — near Karlobag and Baške Oštarije.",
     },
     header: {
-        bookCta: "Check availability",
+        bookCta: "Check availability on Booking.com",
         menuOpen: "Open menu",
         menuClose: "Close menu",
+    },
+    cta: {
+        aboutLead: "See live availability and book your stay.",
+        galleryLead: "Nature here is even better live? Check dates and book your mountain stay.",
+        hikingLead: "Use Stars Peak as your base for Velebit trails — book your stay.",
+        goodToKnowLead: "Reserve your stay on Booking.com.",
+        contactLead: "Prefer to book online? Availability and rates are always up to date.",
     },
     nav: {
         home: "Home",
@@ -125,7 +139,7 @@ const en: Messages = {
             "Wake up to pine-scented air and wide skies. This mock homepage describes a fictional cabin so you can preview layout, typography, and navigation before adding your real story.",
         heroScriptTitle: "Velebit mountain chalet Stars Peak",
         heroCenterLine:
-            "This unique property lies in the heart of the Velebit mountain range and offers a beautiful view of the mountain.",
+            "This unique property lies in the heart of the Velebit mountain range.",
         nearbyTitle: "Near places",
         nearbyLead:
             "From Stars Peak on Velebit you can easily reach beautiful destinations of the wider Velebit area — national parks, bays and Adriatic islands. Here are a few favourite day trips nearby.",
@@ -242,9 +256,16 @@ const hr: Messages = {
             "Velebit mountain chalet Stars Peak — planinska kuća za odmor u Hrvatskoj, na Velebitu. Smještaj u Parku prirode Velebit, Došen Dabar — blizu Karlobaga i Baških Oštarija.",
     },
     header: {
-        bookCta: "Provjeri dostupnost",
+        bookCta: "Provjeri dostupnost na Booking.com",
         menuOpen: "Otvori izbornik",
         menuClose: "Zatvori izbornik",
+    },
+    cta: {
+        aboutLead: "Provjerite dostupnost i rezervirajte boravak.",
+        galleryLead: "Priroda ovdje je još ljepša uživo? Provjerite datume i rezervirajte boravak u planinama.",
+        hikingLead: "Krenite u planinarenje s Stars Peaka kao polazištem — rezervirajte smještaj.",
+        goodToKnowLead: "Rezervirajte boravak na Booking.com.",
+        contactLead: "Želite rezervirati online? Dostupnost i cijene su uvijek ažurne.",
     },
     nav: {
         home: "Početna",
@@ -270,7 +291,7 @@ const hr: Messages = {
             "Probudite se uz miris bora i široko nebo. Ovaj mock opisuje izmišljenu kolibu kako biste vidjeli raspored i tipografiju prije pravog sadržaja.",
         heroScriptTitle: "Velebit mountain chalet Stars Peak",
         heroCenterLine:
-            "Ovaj jedinstveni smještaj leži u srcu planine Velebit te nudi prekrasan pogled na planinu.",
+            "Ovaj jedinstveni smještaj leži u srcu planine Velebit.",
         heroCtaPill: "Od 129 € / noć · mock cijena",
         heroSlideAlts: [
             "Kuća za odmor — fotografija 3",
@@ -387,9 +408,16 @@ const de: Messages = {
             "Velebit mountain chalet Stars Peak — Ferienhaus in Kroatien am Velebit. Im Naturpark Velebit, Došen Dabar — nahe Karlobag und Baške Oštarije.",
     },
     header: {
-        bookCta: "Verfügbarkeit prüfen",
+        bookCta: "Verfügbarkeit auf Booking.com prüfen",
         menuOpen: "Menü öffnen",
         menuClose: "Menü schließen",
+    },
+    cta: {
+        aboutLead: "Verfügbarkeit prüfen und Aufenthalt buchen.",
+        galleryLead: "Die Natur ist vor Ort noch schöner? Termine prüfen und Bergurlaub buchen.",
+        hikingLead: "Stars Peak als Ausgangspunkt für Wanderungen — jetzt buchen.",
+        goodToKnowLead: "Reservieren Sie Ihren Aufenthalt auf Booking.com.",
+        contactLead: "Lieber online buchen? Verfügbarkeit und Preise sind stets aktuell.",
     },
     nav: {
         home: "Start",
@@ -415,7 +443,7 @@ const de: Messages = {
             "Wachen Sie auf mit Kiefernduft und weitem Himmel. Diese Demo-Startseite beschreibt eine fiktive Hütte, damit Sie Layout und Navigation testen können.",
         heroScriptTitle: "Velebit mountain chalet Stars Peak",
         heroCenterLine:
-            "Diese einzigartige Unterkunft liegt im Herzen des Velebit und bietet eine wunderschöne Aussicht auf die Berge.",
+            "Diese einzigartige Unterkunft liegt im Herzen des Velebit.",
         heroCtaPill: "Ab 129 € / Nacht · Platzhalterpreis",
         heroSlideAlts: [
             "Ferienhaus — Foto 3",
