@@ -1003,6 +1003,16 @@ body {
   border: 1px solid var(--line);
 }
 
+.film-yt__placeholder {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--facility-icon) 10%, #0a0a0a) 0%,
+    #0a0a0a 100%
+  );
+}
+
 .film-yt__iframe {
   position: absolute;
   inset: 0;

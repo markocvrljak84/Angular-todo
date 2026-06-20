@@ -4,8 +4,10 @@ import { SITE_CONTACT } from "./site-contact";
 export const SITE_GEO = {
   brandName: SITE_CONTACT.businessName,
   regionCode: "HR",
-  placename: "Velebit, Croatia",
-  placenameHr: "Velebit, Hrvatska",
+  /** Hamlet / settlement on Velebit (primary locality for SEO). */
+  settlement: "Bačić Duliba",
+  placename: "Bačić Duliba, Velebit, Croatia",
+  placenameHr: "Bačić Duliba, Velebit, Hrvatska",
   locality: "Karlobag",
   administrativeArea: "Lika-Senj County",
   mountain: "Velebit",
@@ -37,7 +39,7 @@ export function getPostalAddress() {
   return {
     "@type": "PostalAddress" as const,
     streetAddress,
-    addressLocality: SITE_GEO.locality,
+    addressLocality: SITE_GEO.settlement,
     addressRegion: SITE_GEO.administrativeArea,
     addressCountry: SITE_GEO.regionCode,
   };

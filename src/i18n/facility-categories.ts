@@ -46,7 +46,6 @@ const hr: FacilityCategory[] = [
       "sredstva za čišćenje",
       "pećnica",
       "kuhinjski pribor",
-      "kuhinja",
       "hladnjak",
       "čajna kuhinja",
     ],
@@ -54,7 +53,7 @@ const hr: FacilityCategory[] = [
   {
     icon: "bedroom",
     title: "Spavaća soba",
-    items: ["jedan bračni krevet i dva jednokrevetna"],
+    items: ["jedan bračni krevet", "dva jednokrevetna"],
   },
   {
     icon: "bathroom",
@@ -104,7 +103,7 @@ const hr: FacilityCategory[] = [
   {
     icon: "wellness",
     title: "Wellness",
-    items: ["suncobrani", "ležaljke za plažu"],
+    items: ["suncobrani", "ležaljke za plažu", "hamaci"],
   },
   {
     icon: "activities",
@@ -127,7 +126,6 @@ const hr: FacilityCategory[] = [
       "košara za ljubimce",
       "zabranjeno pušenje u cijelom objektu",
       "obiteljske sobe",
-      "sobe za nepušače",
     ],
   },
   {
@@ -161,7 +159,6 @@ const en: FacilityCategory[] = [
       "cleaning products",
       "oven",
       "kitchenware",
-      "kitchen",
       "refrigerator",
       "kitchenette",
     ],
@@ -169,7 +166,7 @@ const en: FacilityCategory[] = [
   {
     icon: "bedroom",
     title: "Bedroom",
-    items: ["one large bed and two single beds"],
+    items: ["one large bed", "two single beds"],
   },
   {
     icon: "bathroom",
@@ -219,7 +216,7 @@ const en: FacilityCategory[] = [
   {
     icon: "wellness",
     title: "Wellness",
-    items: ["sun umbrellas", "beach chairs"],
+    items: ["sun umbrellas", "beach chairs", "hammocks"],
   },
   {
     icon: "activities",
@@ -242,7 +239,6 @@ const en: FacilityCategory[] = [
       "pet basket",
       "non-smoking throughout",
       "family rooms",
-      "non-smoking rooms",
     ],
   },
   {
@@ -276,12 +272,15 @@ const de: FacilityCategory[] = [
       "Reinigungsmittel",
       "Backofen",
       "Küchenutensilien",
-      "Küche",
       "Kühlschrank",
       "Kochnische",
     ],
   },
-  { icon: "bedroom", title: "Schlafzimmer", items: ["ein Doppelbett und zwei Einzelbetten"] },
+  {
+    icon: "bedroom",
+    title: "Schlafzimmer",
+    items: ["ein Doppelbett", "zwei Einzelbetten"],
+  },
   {
     icon: "bathroom",
     title: "Eigenes Badezimmer",
@@ -338,7 +337,7 @@ const de: FacilityCategory[] = [
       "Garten",
     ],
   },
-  { icon: "wellness", title: "Wellness", items: ["Sonnenschirme", "Strandliegen"] },
+  { icon: "wellness", title: "Wellness", items: ["Sonnenschirme", "Strandliegen", "Hängematten"] },
   {
     icon: "activities",
     title: "Aktivitäten",
@@ -360,7 +359,6 @@ const de: FacilityCategory[] = [
       "Körbchen für Haustiere",
       "Nichtraucherunterkunft",
       "Familienzimmer",
-      "Nichtraucherzimmer",
     ],
   },
   { icon: "safety", title: "Sicherheit", items: ["Feuerlöscher", "Erste-Hilfe-Set", "Desinfektionsmittel"] },
@@ -386,12 +384,15 @@ const fr: FacilityCategory[] = [
       "produits ménagers",
       "four",
       "ustensiles de cuisine",
-      "cuisine",
       "réfrigérateur",
       "kitchenette",
     ],
   },
-  { icon: "bedroom", title: "Chambre", items: ["un grand lit et deux lits simples"] },
+  {
+    icon: "bedroom",
+    title: "Chambre",
+    items: ["un grand lit", "deux lits simples"],
+  },
   {
     icon: "bathroom",
     title: "Salle de bain privative",
@@ -448,7 +449,7 @@ const fr: FacilityCategory[] = [
       "jardin",
     ],
   },
-  { icon: "wellness", title: "Bien-être", items: ["parasols", "chaises longues"] },
+  { icon: "wellness", title: "Bien-être", items: ["parasols", "chaises longues", "hamacs"] },
   {
     icon: "activities",
     title: "Activités",
@@ -470,7 +471,6 @@ const fr: FacilityCategory[] = [
       "panier pour animaux",
       "établissement entièrement non-fumeurs",
       "chambres familiales",
-      "chambres non-fumeurs",
     ],
   },
   { icon: "safety", title: "Sécurité", items: ["extincteurs", "trousse de premiers secours", "produits désinfectants"] },
@@ -496,12 +496,15 @@ const it: FacilityCategory[] = [
       "prodotti per le pulizie",
       "forno",
       "stoviglie",
-      "cucina",
       "frigorifero",
       "angolo cottura",
     ],
   },
-  { icon: "bedroom", title: "Camera da letto", items: ["un letto matrimoniale e due letti singoli"] },
+  {
+    icon: "bedroom",
+    title: "Camera da letto",
+    items: ["un letto matrimoniale", "due letti singoli"],
+  },
   {
     icon: "bathroom",
     title: "Bagno privato",
@@ -558,7 +561,7 @@ const it: FacilityCategory[] = [
       "giardino",
     ],
   },
-  { icon: "wellness", title: "Benessere", items: ["ombrelloni", "sedie a sdraio"] },
+  { icon: "wellness", title: "Benessere", items: ["ombrelloni", "sedie a sdraio", "amache"] },
   {
     icon: "activities",
     title: "Attività",
@@ -580,7 +583,6 @@ const it: FacilityCategory[] = [
       "cestino per animali",
       "struttura interamente non fumatori",
       "camere familiari",
-      "camere non fumatori",
     ],
   },
   { icon: "safety", title: "Sicurezza", items: ["estintori", "kit di pronto soccorso", "disinfettanti"] },

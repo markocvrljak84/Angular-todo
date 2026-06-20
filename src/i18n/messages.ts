@@ -101,7 +101,7 @@ const en: Messages = {
     meta: {
         siteName: "Velebit mountain chalet Stars Peak – Croatia",
         siteDescription:
-            "Velebit mountain chalet Stars Peak holiday home in Croatia, on the Velebit mountains. Located in Velebit Nature Park, Došen Dabar — near Karlobag and Baške Oštarije.",
+            "Velebit mountain chalet Stars Peak — mountain holiday home in Bačić Duliba, Velebit Nature Park, Croatia. Hiking, nature and peaceful stays near Karlobag and Baške Oštarije, Došen Dabar.",
     },
     header: {
         bookCta: "Check availability on Booking",
@@ -127,7 +127,7 @@ const en: Messages = {
     langSwitcher: { aria: "Language" },
     footer: {
         tagline: "Mountain holiday home in Croatia",
-        locationLine: "Located in Croatia, Velebit mountains — Došen Dabar, Lika-Senj County",
+        locationLine: "Velebit mountain chalet Stars Peak",
         rights: "© Velebit mountain chalet Stars Peak",
         exploreTitle: "Explore",
         contactTitle: "Contact us",
@@ -211,7 +211,7 @@ const en: Messages = {
         p1:
             "Perfect for nature lovers, the area is a haven for hiking, climbing, and biking. Outside, guests can enjoy a rustic kitchen with a barbecue, along with a cozy fire pit under the stars. From here, the view opens toward the mountains, creating an unforgettable atmosphere for evenings spent outdoors.",
         hostsNote:
-            "Hello! We are Marko and Ljiljana from Šibenik, Croatia — your hosts at this holiday home, and we are happy to help with any questions you may have before or during your stay.",
+            "Hello! We are Marko and Ljiljana — your hosts at this holiday home, and we are happy to help with any questions you may have before or during your stay.",
         p2:
             "The property is located within the Velebit Nature Park, close to Karlobag and Baške Oštarije. Nearby are numerous Velebit peaks, the Northern Velebit National Park and Paklenica National Park, as well as the stunning Zavratnica Bay and the island of Pag. This combination of mountain and coastal surroundings makes the location ideal for exploring the diversity of Croatia’s natural beauty in one place.",
         bookingLine: "The house can be booked at the following link:",
@@ -253,7 +253,7 @@ const hr: Messages = {
     meta: {
         siteName: "Velebit mountain chalet Stars Peak – Hrvatska",
         siteDescription:
-            "Velebit mountain chalet Stars Peak — planinska kuća za odmor u Hrvatskoj, na Velebitu. Smještaj u Parku prirode Velebit, Došen Dabar — blizu Karlobaga i Baških Oštarija.",
+            "Planinska kuća Velebit mountain chalet Stars Peak u Bačić Dulibi, Park prirode Velebit, Hrvatska. Smještaj za planinarenje i odmor na Velebitu blizu Karlobaga i Baških Oštarija — Došen Dabar.",
     },
     header: {
         bookCta: "Provjeri dostupnost na Booking",
@@ -262,7 +262,7 @@ const hr: Messages = {
     },
     cta: {
         aboutLead: "Provjerite dostupnost i rezervirajte boravak.",
-        galleryLead: "Priroda ovdje je još ljepša uživo? Provjerite datume i rezervirajte boravak u planinama.",
+        galleryLead: "Istražite prirodne ljepote Velebita? Provjerite datume i rezervirajte boravak u planinama.",
         hikingLead: "Krenite u planinarenje s Stars Peaka kao polazištem — rezervirajte smještaj.",
         goodToKnowLead: "Rezervirajte boravak na Booking.com.",
         contactLead: "Želite rezervirati online? Dostupnost i cijene su uvijek ažurne.",
@@ -279,7 +279,7 @@ const hr: Messages = {
     langSwitcher: { aria: "Jezik" },
     footer: {
         tagline: "Planinska kuća za odmor u Hrvatskoj",
-        locationLine: "Smještaj u Hrvatskoj, planina Velebit — Došen Dabar, Lika-Senj",
+        locationLine: "Velebit mountain chalet Stars Peak",
         rights: "© Velebit mountain chalet Stars Peak",
         exploreTitle: "Poveznice",
         contactTitle: "Kontakt",
@@ -405,7 +405,7 @@ const de: Messages = {
     meta: {
         siteName: "Velebit mountain chalet Stars Peak – Kroatien",
         siteDescription:
-            "Velebit mountain chalet Stars Peak — Ferienhaus in Kroatien am Velebit. Im Naturpark Velebit, Došen Dabar — nahe Karlobag und Baške Oštarije.",
+            "Velebit mountain chalet Stars Peak — Berghütte und Ferienhaus in Bačić Duliba, Naturpark Velebit, Kroatien. Wandern, Natur und Erholung nahe Karlobag und Baške Oštarije, Došen Dabar.",
     },
     header: {
         bookCta: "Verfügbarkeit auf Booking prüfen",
@@ -431,7 +431,7 @@ const de: Messages = {
     langSwitcher: { aria: "Sprache" },
     footer: {
         tagline: "Ferienhaus in den kroatischen Bergen",
-        locationLine: "In Kroatien, Velebit-Gebirge — Došen Dabar, Gespanschaft Lika-Senj",
+        locationLine: "Velebit mountain chalet Stars Peak",
         rights: "© Velebit mountain chalet Stars Peak",
         exploreTitle: "Navigation",
         contactTitle: "Kontakt",
@@ -515,7 +515,7 @@ const de: Messages = {
         p1:
             "Ideal für Naturliebhaber: Die Umgebung lädt zum Wandern, Klettern und Radfahren ein. Draußen erwarten Gäste eine rustikale Küche mit Grill sowie eine gemütliche Feuerstelle unter dem Sternenhimmel — mit Blick auf die Berge und unvergesslichen Abenden im Freien.",
         hostsNote:
-            "Hallo! Wir sind Marko und Ljiljana aus Šibenik, Kroatien — Ihre Gastgeber in diesem Ferienhaus und gerne für alle Fragen vor und während Ihres Aufenthalts da.",
+            "Hallo! Wir sind Marko und Ljiljana — Ihre Gastgeber in diesem Ferienhaus und gerne für alle Fragen vor und während Ihres Aufenthalts da.",
         p2:
             "Das Haus liegt im Naturpark Velebit, nahe Karlobag und Baške Oštarije. In der Nähe: zahlreiche Velebit-Gipfel, der Nationalpark Nordlicher Velebit und Paklenica, die Bucht Zavratnica und die Insel Pag. ideal, um Kroatiens Naturvielfalt an einem Ort zu entdecken.",
         bookingLine: "Das Haus kann über den folgenden Link gebucht werden:",

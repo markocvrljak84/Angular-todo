@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
+import { HERO_LCP_SRC } from "@/config/site-images";
 import { getGeoMetaOther } from "@/config/site-location";
 import { getMetadataBase } from "@/lib/site-url";
 import "./globals.css";
@@ -38,7 +39,9 @@ export default function RootLayout({
           name="google-site-verification"
           content="5jWshJpXqMtH8plQA-zwKoMh-BbF435MWnOSE49tV2M"
         />
+        <link rel="preload" as="image" href={HERO_LCP_SRC} fetchPriority="high" />
         <link rel="preconnect" href="https://www.youtube.com" />
+        <link rel="preconnect" href="https://www.youtube-nocookie.com" />
         <link rel="preconnect" href="https://www.google.com" />
         <link rel="dns-prefetch" href="https://i.ytimg.com" />
       </head>

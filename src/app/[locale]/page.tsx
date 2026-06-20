@@ -181,6 +181,14 @@ export default async function HomePage({ params }: Props) {
 
       <FilmYoutubeSection videoId={FILM_YOUTUBE_ID} />
 
+      <GoodToKnowSection content={getGoodToKnow(locale)} />
+
+      <BookCta
+        variant="banner"
+        label={t.header.bookCta}
+        lead={t.cta.goodToKnowLead}
+      />
+
       <HikingRoutesSection content={getHikingRoutes(locale)} />
 
       <BookCta
@@ -308,14 +316,6 @@ export default async function HomePage({ params }: Props) {
           </div>
         </div>
       </section>
-
-      <GoodToKnowSection content={getGoodToKnow(locale)} />
-
-      <BookCta
-        variant="banner"
-        label={t.header.bookCta}
-        lead={t.cta.goodToKnowLead}
-      />
 
       <section
         id="contact"

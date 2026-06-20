@@ -95,6 +95,7 @@ export function GalleryGridLightbox({ slides, labels }: Props) {
                 alt={slide.alt}
                 fill
                 sizes="(max-width: 767px) 50vw, 25vw"
+                loading="lazy"
                 className="gallery-mosaic__img"
               />
             </button>

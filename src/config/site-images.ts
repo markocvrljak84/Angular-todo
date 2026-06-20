@@ -42,6 +42,10 @@ export const GALLERY_FILES = [
 
 export const GALLERY_IMAGE_COUNT = GALLERY_FILES.length;
 
+/** First hero carousel slide — LCP candidate; keep in sync with page carousel order. */
+export const HERO_LCP_IMAGE = "581480514_122107015833084437_6966149935686680015_n.jpg" as const;
+export const HERO_LCP_SRC = `/img/main-carousel/${HERO_LCP_IMAGE}` as const;
+
 /** Filename in /public/img/about-us */
 export const ABOUT_US_IMAGE = "38410942.jpg" as const;
 

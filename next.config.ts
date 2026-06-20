@@ -7,7 +7,9 @@ const root = path.dirname(fileURLToPath(import.meta.url));
 const nextConfig: NextConfig = {
   // Avoid picking a parent folder when another lockfile exists above this repo.
   outputFileTracingRoot: root,
+  poweredByHeader: false,
   images: {
+    formats: ["image/avif", "image/webp"],
     remotePatterns: [
       {
         protocol: "https",

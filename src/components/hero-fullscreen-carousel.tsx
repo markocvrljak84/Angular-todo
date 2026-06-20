@@ -71,8 +71,10 @@ export function HeroFullscreenCarousel({
                 alt={i === index ? slide.alt : ""}
                 fill
                 priority={i === 0}
+                fetchPriority={i === 0 ? "high" : "auto"}
+                loading={i === 0 ? "eager" : "lazy"}
                 className="hero-fs__img"
-                sizes="(max-width: 1064px) 100vw, 100vw"
+                sizes="100vw"
               />
             </div>
           ))}
