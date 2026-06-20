@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
-import { HERO_LCP_SRC } from "@/config/site-images";
+import { HERO_LCP_PRELOAD_SRC, HERO_LCP_SRCSET } from "@/config/site-images";
 import { getGeoMetaOther } from "@/config/site-location";
 import { getMetadataBase } from "@/lib/site-url";
 import "./globals.css";
@@ -9,6 +9,8 @@ const sans = Plus_Jakarta_Sans({
   subsets: ["latin", "latin-ext"],
   variable: "--font-sans",
   display: "swap",
+  adjustFontFallback: true,
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -39,7 +41,14 @@ export default function RootLayout({
           name="google-site-verification"
           content="5jWshJpXqMtH8plQA-zwKoMh-BbF435MWnOSE49tV2M"
         />
-        <link rel="preload" as="image" href={HERO_LCP_SRC} fetchPriority="high" />
+        <link
+          rel="preload"
+          as="image"
+          href={HERO_LCP_PRELOAD_SRC}
+          imageSrcSet={HERO_LCP_SRCSET}
+          imageSizes="100vw"
+          fetchPriority="high"
+        />
         <link rel="preconnect" href="https://www.youtube.com" />
         <link rel="preconnect" href="https://www.youtube-nocookie.com" />
         <link rel="preconnect" href="https://www.google.com" />

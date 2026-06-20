@@ -9,7 +9,7 @@ import { getGoodToKnow } from "@/i18n/good-to-know";
 import { getFacilityCategories } from "@/i18n/facility-categories";
 import { getMessages } from "@/i18n/messages";
 import { FacilitiesGrid } from "@/components/facilities-grid";
-import { HeroFullscreenCarousel } from "@/components/hero-fullscreen-carousel";
+import { HeroSection } from "@/components/hero-section";
 import { GalleryGridLightbox } from "@/components/gallery-grid-lightbox";
 import { FilmYoutubeSection } from "@/components/film-youtube-section";
 import { ItineraryImage } from "@/components/itinerary-image";
@@ -18,18 +18,11 @@ import { BOOKING_URL, SITE_CONTACT, telHref } from "@/config/site-contact";
 import {
   ABOUT_US_IMAGE,
   GALLERY_FILES,
+  MAIN_CAROUSEL_IMAGES,
   NEARBY_GRID_IMAGE_SRCS,
 } from "@/config/site-images";
 
 export const dynamic = "force-static";
-
-/** Hero carousel — images in /public/img/main-carousel (first = initial slide) */
-const MAIN_CAROUSEL_IMAGES = [
-  "581480514_122107015833084437_6966149935686680015_n.jpg",
-  "571275863_122102378865084437_4800487342368999167_n.jpg",
-  "578265540_122104807869084437_5111680495021054907_n.jpg",
-  "585009655_122107017075084437_1671659401079838438_n.jpg",
-] as const;
 
 /** YouTube video for #film section */
 const FILM_YOUTUBE_ID = "QNfDBgtFSdc" as const;
@@ -69,13 +62,13 @@ export default async function HomePage({ params }: Props) {
     getGoogleMapsUrls(mapHl);
 
   const heroSlides = MAIN_CAROUSEL_IMAGES.map((file, i) => ({
-    src: `/img/main-carousel/${file}`,
+    file,
     alt: t.home.heroSlideAlts[i] ?? t.home.heroImageAlt,
   }));
 
   return (
     <>
-      <HeroFullscreenCarousel
+      <HeroSection
         slides={heroSlides}
         kicker={t.home.heroBadge}
         scriptTitle={SITE_CONTACT.heroTitle}

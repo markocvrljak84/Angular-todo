@@ -42,9 +42,29 @@ export const GALLERY_FILES = [
 
 export const GALLERY_IMAGE_COUNT = GALLERY_FILES.length;
 
-/** First hero carousel slide — LCP candidate; keep in sync with page carousel order. */
-export const HERO_LCP_IMAGE = "581480514_122107015833084437_6966149935686680015_n.jpg" as const;
-export const HERO_LCP_SRC = `/img/main-carousel/${HERO_LCP_IMAGE}` as const;
+/** Hero carousel — order is the initial slide sequence (first = LCP). */
+export const MAIN_CAROUSEL_IMAGES = [
+  "581480514_122107015833084437_6966149935686680015_n.jpg",
+  "571275863_122102378865084437_4800487342368999167_n.jpg",
+  "578265540_122104807869084437_5111680495021054907_n.jpg",
+  "585009655_122107017075084437_1671659401079838438_n.jpg",
+] as const;
+
+export type MainCarouselFile = (typeof MAIN_CAROUSEL_IMAGES)[number];
+
+/** Pre-generated WebP LCP assets (see scripts/optimize-hero.mjs). */
+export const HERO_LCP_PRELOAD_SRC = "/img/main-carousel/hero-lcp-1280.webp" as const;
+
+export const HERO_LCP_SRCSET =
+  "/img/main-carousel/hero-lcp-640.webp 640w, /img/main-carousel/hero-lcp-1280.webp 1280w, /img/main-carousel/hero-lcp-1920.webp 1920w" as const;
+
+/** @deprecated Use HERO_LCP_PRELOAD_SRC — kept for backwards compatibility. */
+export const HERO_LCP_IMAGE = MAIN_CAROUSEL_IMAGES[0];
+export const HERO_LCP_SRC = HERO_LCP_PRELOAD_SRC;
+
+export function heroSlideWebpSrc(file: MainCarouselFile): string {
+  return `/img/main-carousel/${file.replace(/\.jpg$/i, "-1280.webp")}`;
+}
 
 /** Filename in /public/img/about-us */
 export const ABOUT_US_IMAGE = "38410942.jpg" as const;
