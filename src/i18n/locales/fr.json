@@ -51,10 +51,8 @@
             "Île de Pag — côte pierreuse et vue sur l’Adriatique",
             "Crique de Zavratnica — falaises au-dessus de l’eau calme",
             "Sentier Premužić — chemin en pierre sèche sur la crête",
-            "Sentier Premužić — mer et îles à l’horizon",
-            "Pag — paysage côtier et pierre « lunaire »",
-            "Sentier Premužić — point de vue le long du parcours",
-            "Paklenica — vue large sur les pentes du canyon"
+            "Bačić Kuk — sommet au-dessus de Bačić Duliba",
+            "Karlobag — front de mer sur la côte du Velebit"
         ],
         "itineraryDays": [
             {
@@ -76,6 +74,16 @@
                 "label": "Sentier Premužić",
                 "headline": "LE CHEMIN DE PIERRE D’ANTE PREMUŽIĆ SUR LA CRÊTE",
                 "body": "Itinéraire à travers le parc naturel du Velebit, construit en pierre sèche au début du XXe siècle — l’une des plus belles randonnées de Croatie avec vue sur la mer et les îles du Kvarner."
+            },
+            {
+                "label": "Bačić Kuk",
+                "headline": "SOMMET AU-DESSUS DU CHALET",
+                "body": "Le sommet emblématique qui domine Stars Peak — une ascension classique du Velebit avec vue sur Bačić Duliba, la crête et l’Adriatique par temps clair."
+            },
+            {
+                "label": "Karlobag",
+                "headline": "VILLE CÔTIÈRE À TRENTE MINUTES",
+                "body": "La ville la plus proche de la mer sur la côte du Velebit — plages de galets, cafés en bord de mer et baignade en Adriatique avant le déjeuner, puis retour à la montagne l’après-midi."
             }
         ],
         "heroCtaPill": "À partir de 129 € / nuit · tarif démo",
@@ -269,15 +277,17 @@
     },
     "contact": {
         "title": "Contact",
+        "lead": "Notre équipe se fera un plaisir de vous aider pour la disponibilité, l'accès et l'organisation de votre séjour au Velebit. Contactez-nous par e-mail, téléphone ou WhatsApp — ou réservez directement en ligne.",
         "introPrefix": "Joignez-nous par téléphone ou e-mail, ou consultez le lien pour la ",
         "introBookingLink": "réservation",
         "nameLabel": "Nom",
         "addressLabel": "Adresse",
         "addressMock": "Došen Dabar 1, Karlobag, Croatie",
-        "phoneLabel": "Téléphone",
+        "phoneLabel": "Ligne directe",
         "bookingLabel": "Réservation",
         "emailLabel": "E-mail",
-        "detailsHeading": "Coordonnées",
+        "whatsappLabel": "Contactez-nous via WhatsApp",
+        "detailsHeading": "Réservations & renseignements",
         "mapHeading": "Carte",
         "mapIframeTitle": "Google Maps — Došen Dabar 1, Croatie",
         "mapOpenGoogle": "Ouvrir dans Google Maps pour obtenir l’itinéraire"

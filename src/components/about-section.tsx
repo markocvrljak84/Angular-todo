@@ -11,11 +11,14 @@ export function AboutSection({ t }: Props) {
     <section className="flat-about-block" aria-label={t.about.title}>
       <div className="flat-about-layout flat-about-layout--content">
         <div className="flat-about-layout__body">
-          <p className="flat-section__intro flat-section__intro--lead">{t.about.lead}</p>
           <div className="flat-about__main">
             <p>{t.about.p1}</p>
             <p>{t.about.p2}</p>
           </div>
+
+          <blockquote className="flat-about__quote">
+            <p>{t.about.lead}</p>
+          </blockquote>
         </div>
 
         <aside className="flat-about__side flat-about-layout__media" aria-label={t.about.sideImageAlt}>

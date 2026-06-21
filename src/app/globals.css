@@ -1008,7 +1008,7 @@ body {
 
 .nearby-places__media {
   position: relative;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 4 / 3;
   overflow: hidden;
   background: var(--bg-tint);
 }
@@ -1278,6 +1278,10 @@ body {
 
 .flat-section--page + .flat-section {
   border-top: none;
+}
+
+.flat-section--contact {
+  padding-top: clamp(2rem, 4vw, 3rem);
 }
 
 .page-header {
@@ -1781,10 +1785,6 @@ body {
   grid-area: body;
 }
 
-.flat-about-layout__body .flat-section__intro--lead {
-  margin-top: 0;
-}
-
 .flat-about {
   display: grid;
   gap: 1.5rem;
@@ -1802,6 +1802,34 @@ body {
   margin: 0 0 1rem;
   color: var(--muted);
   max-width: 40rem;
+}
+
+.flat-about__quote {
+  margin: clamp(1.75rem, 3vw, 2.5rem) 0 0;
+  padding: 0;
+  border: none;
+  max-width: 40rem;
+}
+
+.flat-about__quote p {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.125rem, 2vw, 1.35rem);
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.55;
+  letter-spacing: 0.01em;
+  color: var(--muted);
+}
+
+.flat-about__quote p::before {
+  content: "\201C";
+  margin-right: 0.05em;
+}
+
+.flat-about__quote p::after {
+  content: "\201D";
+  margin-left: 0.05em;
 }
 
 .flat-about__booking {
@@ -2449,6 +2477,71 @@ body {
 }
 
 /* —— Contact —— */
+.contact-editorial {
+  display: grid;
+  gap: clamp(2rem, 4vw, 3rem);
+  align-items: start;
+}
+
+@media (min-width: 800px) {
+  .contact-editorial {
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    gap: clamp(2.5rem, 5vw, 4.5rem);
+  }
+}
+
+.contact-editorial__body {
+  max-width: 22rem;
+}
+
+.contact-editorial__heading {
+  margin: 0 0 1rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2.4vw, 1.625rem);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1.35;
+}
+
+.contact-editorial__lead {
+  margin: 0 0 clamp(1.75rem, 3vw, 2.25rem);
+  color: var(--muted);
+  font-size: 0.9375rem;
+  line-height: 1.75;
+}
+
+.contact-editorial__line {
+  margin: 0 0 0.85rem;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--ink);
+}
+
+.contact-editorial__link {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
+  transition: color 0.2s ease;
+}
+
+.contact-editorial__link:hover {
+  color: var(--facility-icon);
+}
+
+.contact-editorial__media {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-tint);
+}
+
+.contact-editorial__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 .contact-card {
   max-width: 36rem;
   padding: 1.75rem 1.5rem;

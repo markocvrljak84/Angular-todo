@@ -1,6 +1,8 @@
+import Image from "next/image";
 import type { Messages } from "@/i18n/messages";
+import { ABOUT_US_IMAGE } from "@/config/site-images";
 import { getGoogleMapsUrls } from "@/config/contact-map";
-import { BOOKING_URL, SITE_CONTACT, telHref } from "@/config/site-contact";
+import { BOOKING_URL, SITE_CONTACT, whatsappHref } from "@/config/site-contact";
 import type { Locale } from "@/i18n/config";
 
 type Props = {
@@ -24,58 +26,57 @@ export function ContactSection({ t, locale }: Props) {
 
   return (
     <>
-      <p className="flat-section__intro">
-        {t.contact.introPrefix}
-        <a
-          href={BOOKING_URL}
-          className="flat-section__intro-link"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {t.contact.introBookingLink}
-        </a>
-      </p>
+      <div className="contact-editorial">
+        <div className="contact-editorial__body">
+          <h2 className="contact-editorial__heading">{t.contact.detailsHeading}</h2>
+          <p className="contact-editorial__lead">{t.contact.lead}</p>
 
-      <div className="contact-card">
-        <h2 className="contact-card__title">{t.contact.detailsHeading}</h2>
-        <ul className="contact-card__list">
-          <li className="contact-card__item">
-            <span className="contact-card__label">{t.contact.nameLabel}</span>
-            <span className="contact-card__value">
-              {SITE_CONTACT.businessName}
-            </span>
-          </li>
-          <li className="contact-card__item">
-            <span className="contact-card__label">{t.contact.addressLabel}</span>
-            <span className="contact-card__value">{SITE_CONTACT.address}</span>
-          </li>
-          <li className="contact-card__item">
-            <span className="contact-card__label">{t.contact.emailLabel}</span>
-            <a
-              className="contact-card__value contact-card__link"
-              href={`mailto:${SITE_CONTACT.email}`}
-            >
+          <p className="contact-editorial__line">
+            {t.contact.emailLabel}:{" "}
+            <a className="contact-editorial__link" href={`mailto:${SITE_CONTACT.email}`}>
               {SITE_CONTACT.email}
             </a>
-          </li>
-          <li className="contact-card__item">
-            <span className="contact-card__label">{t.contact.phoneLabel}</span>
-            <a className="contact-card__value contact-card__link" href={telHref()}>
+          </p>
+
+          <p className="contact-editorial__line">
+            {t.contact.whatsappLabel}:{" "}
+            <a
+              className="contact-editorial__link"
+              href={whatsappHref(SITE_CONTACT.phone)}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {SITE_CONTACT.phone}
             </a>
-          </li>
-          <li className="contact-card__item">
-            <span className="contact-card__label">{t.contact.bookingLabel}</span>
+          </p>
+
+          <p className="contact-editorial__line">
+            {t.contact.bookingLabel}:{" "}
             <a
-              className="contact-card__value contact-card__link"
+              className="contact-editorial__link"
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
             >
               {t.about.bookingLinkLabel}
             </a>
-          </li>
-        </ul>
+          </p>
+
+          <p className="contact-editorial__line">
+            {t.contact.addressLabel}: {SITE_CONTACT.address}
+          </p>
+        </div>
+
+        <aside className="contact-editorial__media" aria-label={t.about.sideImageAlt}>
+          <Image
+            src={`/img/about-us/${ABOUT_US_IMAGE}`}
+            alt={t.about.sideImageAlt}
+            width={1920}
+            height={1802}
+            className="contact-editorial__img"
+            sizes="(max-width: 799px) 100vw, 58vw"
+          />
+        </aside>
       </div>
 
       <div className="flat-contact-map" aria-labelledby="contact-map-heading">

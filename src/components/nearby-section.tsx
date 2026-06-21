@@ -8,7 +8,7 @@ type Props = {
   compact?: boolean;
 };
 
-const PLACE_COUNT = 4;
+const PLACE_COUNT = 6;
 
 export function NearbySection({ t, compact }: Props) {
   if (t.home.itineraryImageAlts.length !== NEARBY_GRID_IMAGE_SRCS.length) {
@@ -35,7 +35,7 @@ export function NearbySection({ t, compact }: Props) {
                     src={NEARBY_GRID_IMAGE_SRCS[i]}
                     alt={t.home.itineraryImageAlts[i] ?? place.label}
                     width={640}
-                    height={800}
+                    height={480}
                     className="nearby-places__img"
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />

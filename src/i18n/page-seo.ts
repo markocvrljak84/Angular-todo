@@ -37,7 +37,7 @@ const en: Record<SitePageKey, PageSeo> = {
   hiking: {
     title: "Hiking routes from Stars Peak",
     description:
-      "Velebit hiking from Bačić Duliba — Bačić Kuk, Budakovo Brdo, Kiza with GPX files, maps and route descriptions from Stars Peak.",
+      "Velebit hiking from Bačić Duliba — Bačić Kuk, Budakovo Brdo, Kiza with GPX files, maps and route descriptions from Stars Peak. More routes coming soon.",
   },
   nearby: {
     title: "Day trips — sea, islands & national parks",
@@ -90,7 +90,7 @@ const hr: Record<SitePageKey, PageSeo> = {
   hiking: {
     title: "Planinarske rute sa Stars Peaka",
     description:
-      "Planinarenje Velebitom iz Bačić Dulibe — Bačić kuk, Budakovo brdo, Kiza s GPX datotekama, kartama i opisima ruta.",
+      "Planinarenje Velebitom iz Bačić Dulibe — Bačić kuk, Budakovo brdo, Kiza s GPX datotekama, kartama i opisima ruta. Uskoro dolaze nove staze.",
   },
   nearby: {
     title: "Izleti u blizini — more, otoci i parkovi",
@@ -143,7 +143,7 @@ const de: Record<SitePageKey, PageSeo> = {
   hiking: {
     title: "Wanderungen ab Stars Peak",
     description:
-      "Velebit-Wanderungen ab Bačić Duliba — Bačić Kuk, Budakovo Brdo, Kiza mit GPX, Karten und Routenbeschreibungen.",
+      "Velebit-Wanderungen ab Bačić Duliba — Bačić Kuk, Budakovo Brdo, Kiza mit GPX, Karten und Routenbeschreibungen. Weitere Routen folgen in Kürze.",
   },
   nearby: {
     title: "Tagesausflüge — Meer, Inseln & Parks",
@@ -196,7 +196,7 @@ const fr: Record<SitePageKey, PageSeo> = {
   hiking: {
     title: "Randonnées depuis Stars Peak",
     description:
-      "Randonnées Velebit depuis Bačić Duliba — Bačić Kuk, Budakovo Brdo, Kiza avec GPX et cartes.",
+      "Randonnées Velebit depuis Bačić Duliba — Bačić Kuk, Budakovo Brdo, Kiza avec GPX et cartes. D'autres itinéraires arrivent bientôt.",
   },
   nearby: {
     title: "Excursions — mer, îles et parcs",
@@ -249,7 +249,7 @@ const it: Record<SitePageKey, PageSeo> = {
   hiking: {
     title: "Escursioni da Stars Peak",
     description:
-      "Escursioni sul Velebit da Bačić Duliba — Bačić Kuk, Budakovo Brdo, Kiza con GPX e mappe.",
+      "Escursioni sul Velebit da Bačić Duliba — Bačić Kuk, Budakovo Brdo, Kiza con GPX e mappe. Altre escursioni in arrivo.",
   },
   nearby: {
     title: "Gite — mare, isole e parchi",

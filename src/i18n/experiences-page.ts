@@ -18,7 +18,7 @@ const en: ExperiencesPageContent = {
     {
       id: "hiking",
       title: "Hiking",
-      intro: "Bačić Kuk, Budakovo Brdo and Kiza — marked trails with maps and GPX from Stars Peak.",
+      intro: "Bačić Kuk, Budakovo Brdo and Kiza — marked trails with maps and GPX from Stars Peak. More routes coming soon.",
     },
     {
       id: "sea",
@@ -46,7 +46,7 @@ const hr: ExperiencesPageContent = {
     {
       id: "hiking",
       title: "Planinarenje",
-      intro: "Bačić kuk, Budakovo brdo i Kiza — označene staze s kartama i GPX datotekama sa Stars Peaka.",
+      intro: "Bačić kuk, Budakovo brdo i Kiza — označene staze s kartama i GPX datotekama sa Stars Peaka. Uskoro dolaze nove staze.",
     },
     {
       id: "sea",
@@ -70,7 +70,7 @@ const de: ExperiencesPageContent = {
   title: "Erlebnisse",
   intro: "Vom Velebit-Gipfel bis zur Adria — alles von Bačić Duliba aus.",
   categories: [
-    { id: "hiking", title: "Wandern", intro: "Bačić Kuk, Budakovo Brdo und Kiza mit Karten und GPX." },
+    { id: "hiking", title: "Wandern", intro: "Bačić Kuk, Budakovo Brdo und Kiza mit Karten und GPX. Weitere Routen folgen in Kürze." },
     { id: "sea", title: "Meer & Strände", intro: "Karlobag, Zavratnica, Pag und Paklenica — Tagesausflüge." },
     { id: "food", title: "Gastronomie", intro: "Pag-Käse, frischer Fisch, Kräuter und Abende am Feuer." },
     { id: "agro", title: "Agrotourismus (bald)", intro: "Bergtees, Honig und Kräuterwanderungen — demnächst." },
@@ -81,7 +81,7 @@ const fr: ExperiencesPageContent = {
   title: "Expériences",
   intro: "Du sommet du Velebit à l'Adriatique — tout depuis Bačić Duliba.",
   categories: [
-    { id: "hiking", title: "Randonnée", intro: "Bačić Kuk, Budakovo Brdo et Kiza avec cartes et GPX." },
+    { id: "hiking", title: "Randonnée", intro: "Bačić Kuk, Budakovo Brdo et Kiza avec cartes et GPX. D'autres itinéraires arrivent bientôt." },
     { id: "sea", title: "Mer & plages", intro: "Karlobag, Zavratnica, Pag et Paklenica — excursions." },
     { id: "food", title: "Gastronomie", intro: "Fromage de Pag, poisson frais, herbes et soirées au feu." },
     { id: "agro", title: "Agrotourisme (bientôt)", intro: "Thés, miel et balades botaniques — prochainement." },
@@ -92,7 +92,7 @@ const it: ExperiencesPageContent = {
   title: "Esperienze",
   intro: "Dalla cima del Velebit all'Adriatico — tutto da Bačić Duliba.",
   categories: [
-    { id: "hiking", title: "Escursionismo", intro: "Bačić Kuk, Budakovo Brdo e Kiza con mappe e GPX." },
+    { id: "hiking", title: "Escursionismo", intro: "Bačić Kuk, Budakovo Brdo e Kiza con mappe e GPX. Altre escursioni in arrivo." },
     { id: "sea", title: "Mare & spiagge", intro: "Karlobag, Zavratnica, Pag e Paklenica — gite giornaliere." },
     { id: "food", title: "Gastronomia", intro: "Formaggio di Pag, pesce fresco, erbe e serate al fuoco." },
     { id: "agro", title: "Agroturismo (presto)", intro: "Tè di montagna, miele e passeggiate botaniche — in arrivo." },

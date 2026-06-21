@@ -85,6 +85,7 @@ export type Messages = {
     };
     contact: {
         title: string;
+        lead: string;
         introPrefix: string;
         introBookingLink: string;
         nameLabel: string;
@@ -93,6 +94,7 @@ export type Messages = {
         phoneLabel: string;
         bookingLabel: string;
         emailLabel: string;
+        whatsappLabel: string;
         detailsHeading: string;
         mapHeading: string;
         mapIframeTitle: string;
@@ -156,10 +158,8 @@ const en: Messages = {
             "Pag island — stone shore and Adriatic view",
             "Zavratnica cove — steep cliffs above calm water",
             "Premužić trail — drystone path along the ridge",
-            "Premužić trail — sea and islands in the distance",
-            "Pag — coastal road and lunar landscape",
-            "Premužić trail — viewpoint along the route",
-            "Paklenica — wide view of the canyon slopes",
+            "Bačić Kuk — summit above Bačić Duliba",
+            "Karlobag — Adriatic waterfront on the Velebit coast",
         ],
         itineraryDays: [
             {
@@ -185,6 +185,18 @@ const en: Messages = {
                 headline: "ANTE PREMUŽIĆ’S STONE PATH ALONG THE RIDGE",
                 body:
                     "A hiking route through Velebit Nature Park, built with dry stone walls in the early 20th century — among Croatia’s finest walks, with views of the sea and Kvarner islands.",
+            },
+            {
+                label: "Bačić Kuk",
+                headline: "SUMMIT ABOVE THE CHALET",
+                body:
+                    "The iconic peak rising directly above Stars Peak — a classic Velebit ascent with wide views over Bačić Duliba, the ridge and the Adriatic on clear days.",
+            },
+            {
+                label: "Karlobag",
+                headline: "ADRIATIC TOWN HALF AN HOUR AWAY",
+                body:
+                    "The nearest seaside town on the Velebit coast — pebble beaches, waterfront cafés and a swim in the Adriatic before lunch, then back to the mountain by afternoon.",
             },
         ],
         heroCtaPill: "From €129 / night · mock rate",
@@ -241,15 +253,18 @@ const en: Messages = {
     },
     contact: {
         title: "Contact",
+        lead:
+            "Our team is happy to help with availability, directions and planning your stay on Velebit. Reach us by email, phone or WhatsApp — or book directly online.",
         introPrefix: "Reach us by phone or email, or visit link for ",
         introBookingLink: "booking",
         nameLabel: "Name",
         addressLabel: "Address",
         addressMock: "Došen Dabar 1, Karlobag, Croatia",
-        phoneLabel: "Phone",
+        phoneLabel: "Direct dial",
         bookingLabel: "Booking",
         emailLabel: "Email",
-        detailsHeading: "Details",
+        whatsappLabel: "Contact us via WhatsApp",
+        detailsHeading: "Reservations & enquiries",
         mapHeading: "Map",
         mapIframeTitle: "Google Map — Došen Dabar 1, Croatia",
         mapOpenGoogle: "Open in Google Maps to find directions",
@@ -321,10 +336,8 @@ const hr: Messages = {
             "Otok Pag — kamena obala i pogled na more",
             "Uvala Zavratnica — litice iznad mirne vode",
             "Premužićeva staza — suhozidni put duž grebena",
-            "Premužićeva staza — more i otočići u daljini",
-            "Pag — obalni krajolik i „mjesečev“ kamen",
-            "Premužićeva staza — vidikovac uz stazu",
-            "Paklenica — širok pogled na kanjonske strmine",
+            "Bačić kuk — vrh iznad Bačić Dulibe",
+            "Karlobag — riva i Jadran na velebitskoj obali",
         ],
         itineraryDays: [
             {
@@ -350,6 +363,18 @@ const hr: Messages = {
                 headline: "KAMENI PUT ANTUNA PREMUŽIĆA DUŽ GREBENA",
                 body:
                     "Pješačka staza kroz Park prirode Velebit, izgrađena suhozidom početkom 20. stoljeća — jedan od najljepših hodova u Hrvatskoj s pogledom na more i Kvarnerske otoke.",
+            },
+            {
+                label: "Bačić kuk",
+                headline: "VRH IZNAD KUĆE",
+                body:
+                    "Ikonični vrh koji se diže iznad Stars Peaka — klasičan uspon Velebitom s širokim pogledom na Bačić Dulibu, greben i Jadran u vedrim danima.",
+            },
+            {
+                label: "Karlobag",
+                headline: "PRIMORSKI GRAD POLA SATA VOŽNJE",
+                body:
+                    "Najbliži grad na moru uz velebitsku obalu — šljunčane plaže, kafići na rivi i kupanje u Jadranu prije ručka, a popodne opet na planini.",
             },
         ],
         statsLine: "Cijela kuća · Do 6 osoba · 3 spavaće sobe · 2 kupaonice",
@@ -397,6 +422,8 @@ const hr: Messages = {
     },
     contact: {
         title: "Kontakt",
+        lead:
+            "Rado ćemo vam pomoći oko dostupnosti, uputa za dolazak i planiranja boravka na Velebitu. Javite nam se e-poštom, telefonom ili WhatsAppom — ili rezervirajte izravno online.",
         introPrefix: "Javite nam se telefonom ili e-poštom ili posjetite link za ",
         introBookingLink: "rezervaciju",
         nameLabel: "Naziv",
@@ -405,7 +432,8 @@ const hr: Messages = {
         phoneLabel: "Telefon",
         bookingLabel: "Rezervacija",
         emailLabel: "E-pošta",
-        detailsHeading: "Podaci",
+        whatsappLabel: "Kontaktirajte nas putem WhatsAppa",
+        detailsHeading: "Rezervacije i upiti",
         mapHeading: "Karta",
         mapIframeTitle: "Google karta — Došen Dabar 1, Hrvatska",
         mapOpenGoogle: "Otvori u Google Kartama za upute do lokacije",
@@ -477,10 +505,8 @@ const de: Messages = {
             "Insel Pag — Steinküste und Adria-Panorama",
             "Bucht Zavratnica — Steilwände über ruhigem Wasser",
             "Premužić-Weg — Trockenmauerweg am Grat",
-            "Premužić-Weg — Meer und Inseln in der Ferne",
-            "Pag — Küstenlandschaft und „Mond“-Stein",
-            "Premužić-Weg — Aussichtspunkt am Weg",
-            "Paklenica — weiter Blick in die Schluchten",
+            "Bačić Kuk — Gipfel über Bačić Duliba",
+            "Karlobag — Adria-Promenade an der Velebit-Küste",
         ],
         itineraryDays: [
             {
@@ -506,6 +532,18 @@ const de: Messages = {
                 headline: "ANTE PREMUŽIĆS STEINWEG AM KAMM",
                 body:
                     "Wanderroute durch den Naturpark Velebit, Anfang des 20. Jahrhunderts als Trockenmauerweg angelegt — eine der schönsten Touren Kroatiens mit Blick auf Meer und Kvarner-Inseln.",
+            },
+            {
+                label: "Bačić Kuk",
+                headline: "GIPFEL ÜBER DER HÜTTE",
+                body:
+                    "Der markante Gipfel direkt über Stars Peak — ein klassischer Velebit-Aufstieg mit weitem Blick über Bačić Duliba, den Kamm und an klaren Tagen die Adria.",
+            },
+            {
+                label: "Karlobag",
+                headline: "KÜSTENORT IN EINER HALBEN STUNDE",
+                body:
+                    "Die nächste Stadt am Meer an der Velebit-Küste — Kiesstrände, Cafés an der Promenade und ein Bad in der Adria vor dem Mittagessen, am Nachmittag zurück in den Bergen.",
             },
         ],
         statsLine: "Gesamtes Haus · 6 Gäste · 3 Schlafzimmer · 2 Bäder",
@@ -553,15 +591,18 @@ const de: Messages = {
     },
     contact: {
         title: "Kontakt",
+        lead:
+            "Wir helfen Ihnen gern bei Verfügbarkeit, Anfahrt und Planung Ihres Aufenthalts am Velebit. Erreichen Sie uns per E-Mail, Telefon oder WhatsApp — oder buchen Sie direkt online.",
         introPrefix: "Erreichen Sie uns telefonisch oder per E-Mail, oder besuchen Sie den Link für ",
         introBookingLink: "Buchung",
         nameLabel: "Name",
         addressLabel: "Adresse",
         addressMock: "Došen Dabar 1, Karlobag, Kroatien",
-        phoneLabel: "Telefon",
+        phoneLabel: "Direktwahl",
         bookingLabel: "Buchung",
         emailLabel: "E-Mail",
-        detailsHeading: "Kontaktdaten",
+        whatsappLabel: "Kontakt per WhatsApp",
+        detailsHeading: "Reservierungen & Anfragen",
         mapHeading: "Karte",
         mapIframeTitle: "Google Karte — Došen Dabar 1, Kroatien",
         mapOpenGoogle: "In Google Maps öffnen, um die Route zu finden",

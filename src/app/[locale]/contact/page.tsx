@@ -36,7 +36,7 @@ export default async function ContactPage({ params }: Props) {
     <>
       <InnerPageHeader {...header} />
 
-      <div className="flat-section flat-section--tint">
+      <div className="flat-section flat-section--tint flat-section--contact">
         <div className="flat-wrap">
           <ContactSection t={t} locale={locale} />
         </div>

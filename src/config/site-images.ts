@@ -111,8 +111,6 @@ export const NEARBY_GRID_IMAGE_SRCS = [
   "/img/pag/680708859_122096686946355213_4665446078753106627_n.jpg",
   "/img/zavratnica/uvala.jpeg",
   "/img/premuzic/681316395_122096686874355213_6869570910689081219_n.jpg",
-  "/img/premuzic/681345586_122096686718355213_276619802998470916_n.jpg",
-  "/img/pag/681604802_122096686880355213_4265220364878636676_n.jpg",
-  "/img/premuzic/velebit.jpg",
-  "/img/paklenica/shutterstock_1617270832-scaled.jpg",
+  "/img/bacic-kuk.jpeg",
+  "/img/karlobag.jpeg",
 ] as const;
