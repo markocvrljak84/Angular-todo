@@ -30,6 +30,7 @@ export type ExperienceContent = {
     title: string;
     intro: string;
     comingSoonLabel: string;
+    viewAllLabel: string;
     articles: ExperienceGuidesArticle[];
   };
   signup: {
@@ -103,26 +104,27 @@ const en: ExperienceContent = {
     intro:
       "Practical know-how from the mountain — written for hikers, slow travellers and anyone planning time on Velebit.",
     comingSoonLabel: "Coming soon",
+    viewAllLabel: "All stories",
     articles: [
       {
         title: "How to reach Bačić Kuk from Stars Peak",
         teaser: "Trailhead, timing and what to expect on the ascent.",
-        href: "/hiking",
+        href: "/experiences#exp-hiking",
       },
       {
         title: "Best trails around Baške Oštarije",
         teaser: "Day hikes and ridge walks within easy reach of the house.",
-        href: "/hiking",
+        href: "/experiences#exp-hiking",
       },
       {
         title: "What to do on Velebit when it rains",
         teaser: "Fireside days, short walks and coastal escapes.",
-        href: "/nearby",
+        href: "/experiences#exp-sea",
       },
       {
         title: "Mountain and sea in one day",
         teaser: "From Bačić Duliba to Karlobag, Pag and Zavratnica.",
-        href: "/nearby",
+        href: "/experiences#exp-sea",
       },
       {
         title: "Stargazing guide on Velebit",
@@ -205,26 +207,27 @@ const hr: ExperienceContent = {
     intro:
       "Praktične informacije s planine — za planinare, sporije putnike i sve koji planiraju boravak na Velebitu.",
     comingSoonLabel: "Uskoro",
+    viewAllLabel: "Sve priče",
     articles: [
       {
         title: "Kako doći do Bačić kuka sa Stars Peaka",
         teaser: "Polaziste, trajanje i što očekivati na usponu.",
-        href: "/hiking",
+        href: "/experiences#exp-hiking",
       },
       {
         title: "Najljepše staze oko Baških Oštarija",
         teaser: "Dnevne šetnje i grebeni u blizini kuće.",
-        href: "/hiking",
+        href: "/experiences#exp-hiking",
       },
       {
         title: "Što raditi na Velebitu kad pada kiša",
         teaser: "Dani uz kamin, kratke šetnje i izleti prema moru.",
-        href: "/nearby",
+        href: "/experiences#exp-sea",
       },
       {
         title: "Planina i more u jednom danu",
         teaser: "Od Bačić Dulibe do Karlobaga, Paga i Zavratnice.",
-        href: "/nearby",
+        href: "/experiences#exp-sea",
       },
       {
         title: "Vodič za promatranje zvijezda na Velebitu",
@@ -307,26 +310,27 @@ const de: ExperienceContent = {
     intro:
       "Praxiswissen vom Berg — für Wanderer, Slow Traveller und alle, die Zeit am Velebit planen.",
     comingSoonLabel: "Demnächst",
+    viewAllLabel: "Alle Beiträge",
     articles: [
       {
         title: "So erreichen Sie Bačić Kuk von Stars Peak",
         teaser: "Startpunkt, Dauer und was Sie auf dem Aufstieg erwartet.",
-        href: "/hiking",
+        href: "/experiences#exp-hiking",
       },
       {
         title: "Die schönsten Wege um Baške Oštarije",
         teaser: "Tageswanderungen und Gratwege in der Nähe des Hauses.",
-        href: "/hiking",
+        href: "/experiences#exp-hiking",
       },
       {
         title: "Velebit bei Regen",
         teaser: "Tage am Kamin, kurze Spaziergänge und Ausflüge ans Meer.",
-        href: "/nearby",
+        href: "/experiences#exp-sea",
       },
       {
         title: "Berg und Meer an einem Tag",
         teaser: "Von Bačić Duliba nach Karlobag, Pag und Zavratnica.",
-        href: "/nearby",
+        href: "/experiences#exp-sea",
       },
       {
         title: "Sternenhimmel-Guide am Velebit",
@@ -380,11 +384,12 @@ const fr: ExperienceContent = {
     title: "Guides & récits",
     intro: "Savoir pratique de la montagne — pour randonneurs et voyageurs lents.",
     comingSoonLabel: "Bientôt",
+    viewAllLabel: "Tous les articles",
     articles: [
-      { title: "Comment atteindre Bačić Kuk depuis Stars Peak", teaser: "Départ, durée et attentes sur l’ascension.", href: "/hiking" },
-      { title: "Plus beaux sentiers autour de Baške Oštarije", teaser: "Randonnées à la journée près de la maison.", href: "/hiking" },
-      { title: "Que faire sur le Velebit quand il pleut", teaser: "Journées au coin du feu et escapades côtières.", href: "/nearby" },
-      { title: "Montagne et mer en une journée", teaser: "De Bačić Duliba à Karlobag, Pag et Zavratnica.", href: "/nearby" },
+      { title: "Comment atteindre Bačić Kuk depuis Stars Peak", teaser: "Départ, durée et attentes sur l’ascension.", href: "/experiences#exp-hiking" },
+      { title: "Plus beaux sentiers autour de Baške Oštarije", teaser: "Randonnées à la journée près de la maison.", href: "/experiences#exp-hiking" },
+      { title: "Que faire sur le Velebit quand il pleut", teaser: "Journées au coin du feu et escapades côtières.", href: "/experiences#exp-sea" },
+      { title: "Montagne et mer en une journée", teaser: "De Bačić Duliba à Karlobag, Pag et Zavratnica.", href: "/experiences#exp-sea" },
       { title: "Guide d’observation des étoiles", teaser: "Ciel noir, saisons idéales et conseils simples.", href: "#experience-day" },
     ],
   },
@@ -433,11 +438,12 @@ const it: ExperienceContent = {
     title: "Guide e storie",
     intro: "Conoscenza pratica dalla montagna — per escursionisti e viaggiatori lenti.",
     comingSoonLabel: "In arrivo",
+    viewAllLabel: "Tutti gli articoli",
     articles: [
-      { title: "Come raggiungere Bačić Kuk da Stars Peak", teaser: "Partenza, tempi e cosa aspettarsi in salita.", href: "/hiking" },
-      { title: "I sentieri più belli intorno a Baške Oštarije", teaser: "Escursioni giornaliere vicino alla casa.", href: "/hiking" },
-      { title: "Cosa fare sul Velebit quando piove", teaser: "Giornate al camino ed escursioni verso il mare.", href: "/nearby" },
-      { title: "Montagna e mare in un giorno", teaser: "Da Bačić Duliba a Karlobag, Pag e Zavratnica.", href: "/nearby" },
+      { title: "Come raggiungere Bačić Kuk da Stars Peak", teaser: "Partenza, tempi e cosa aspettarsi in salita.", href: "/experiences#exp-hiking" },
+      { title: "I sentieri più belli intorno a Baške Oštarije", teaser: "Escursioni giornaliere vicino alla casa.", href: "/experiences#exp-hiking" },
+      { title: "Cosa fare sul Velebit quando piove", teaser: "Giornate al camino ed escursioni verso il mare.", href: "/experiences#exp-sea" },
+      { title: "Montagna e mare in un giorno", teaser: "Da Bačić Duliba a Karlobag, Pag e Zavratnica.", href: "/experiences#exp-sea" },
       { title: "Guida all’osservazione delle stelle", teaser: "Cielo scuro, stagioni migliori e consigli semplici.", href: "#experience-day" },
     ],
   },

@@ -38,7 +38,7 @@ export default async function GuidesPage({ params }: Props) {
 
       <div className="flat-section flat-section--tint">
         <div className="flat-wrap">
-          <GuidesSection content={experience.guides} locale={locale} compact />
+          <GuidesSection content={experience.guides} compact />
         </div>
       </div>
 

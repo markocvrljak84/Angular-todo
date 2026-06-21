@@ -4,6 +4,7 @@ import { ExperienceDaySection } from "@/components/experience-day-section";
 import { ExperienceMapSection } from "@/components/experience-map-section";
 import { FaqSection } from "@/components/faq-section";
 import { FinalCtaSection } from "@/components/final-cta-section";
+import { GuidesSection } from "@/components/guides-section";
 import { HeroSection } from "@/components/hero-section";
 import { HomeEditorialSection } from "@/components/home-editorial-section";
 import { NewsletterSignupSection } from "@/components/newsletter-signup-section";
@@ -84,6 +85,11 @@ export default async function HomePage({ params }: Props) {
       />
 
       <ExperienceMapSection content={home.map} />
+
+      <GuidesSection
+        content={experience.guides}
+        blogHref={localePath(locale, "guides")}
+      />
 
       <FaqSection content={getGoodToKnow(locale)} />
 

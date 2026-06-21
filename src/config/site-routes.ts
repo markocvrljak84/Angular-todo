@@ -23,6 +23,7 @@ export const MAIN_NAV_ITEMS = [
   { kind: "page" as const, page: "accommodation" as const },
   { kind: "page" as const, page: "experiences" as const },
   { kind: "page" as const, page: "gallery" as const },
+  { kind: "page" as const, page: "guides" as const },
   { kind: "page" as const, page: "about" as const },
   { kind: "book" as const },
 ];
