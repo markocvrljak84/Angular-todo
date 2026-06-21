@@ -141,9 +141,9 @@ const en: HomeContent = {
 
 const hr: HomeContent = {
   hero: {
-    headline: "Vrh. More. Zvijezde.",
+    headline: "Planine | More | Zvijezde",
     subline:
-      "Privatna planinska kuća na 900 m nadmorske visine s pogledom na Bačić kuk – samo 30 minuta od Jadranskog mora.",
+      "Planinska kuća na 900 m nadmorske visine s pogledom na Bačić kuk – samo 30 minuta od Jadranskog mora.",
     facts: [
       "900 m nadmorske visine",
       "30 min do mora",

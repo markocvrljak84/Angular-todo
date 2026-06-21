@@ -1,9 +1,70 @@
 /**
  * Static images under /public — single source of truth for About + Gallery sections.
- * Filenames in `img/gallery` (sorted). Add/remove files here when the folder changes.
- * Keep `Array.from({ length: … })` in `src/i18n/messages.ts` gallery.images in sync with this list length.
+ * Gallery files are grouped in `GALLERY_GROUPS`; metadata lives in `src/i18n/gallery-content.ts`.
  */
-export const GALLERY_FILES = [
+export const GALLERY_CATEGORIES = [
+  "exterior",
+  "outdoorLiving",
+  "interior",
+  "nature",
+] as const;
+
+export type GalleryCategoryId = (typeof GALLERY_CATEGORIES)[number];
+
+export const GALLERY_GROUPS: Readonly<
+  Record<GalleryCategoryId, readonly string[]>
+> = {
+  exterior: [
+    "571275863_122102378865084437_4800487342368999167_n.jpg",
+    "865932799.jpg",
+    "669526272.jpg",
+    "20260601_163937.jpg",
+    "20260602_055146.jpg",
+    "20260613_121546.jpg",
+  ],
+  outdoorLiving: [
+    "20260601_161334.jpg",
+    "20260604_131924.jpg",
+    "20260604_132039.jpg",
+    "20260604_173207.jpg",
+    "20260604_132024.jpg",
+    "whatsapp-2026-06-04-084649.jpeg",
+  ],
+  interior: [
+    "581480514_122107015833084437_6966149935686680015_n.jpg",
+    "585009655_122107017075084437_1671659401079838438_n.jpg",
+    "740290390.jpg",
+    "740270926.jpg",
+    "866610628.jpg",
+    "812803341.jpg",
+    "20260601_160317.jpg",
+    "Velebit-11.jpg",
+    "578265540_122104807869084437_5111680495021054907_n.jpg",
+    "812808252.jpg",
+    "812808512.jpg",
+    "812809121.jpg",
+    "812160813.jpg",
+    "Velebit-16.jpg",
+  ],
+  nature: [
+    "738020040.jpg",
+    "20260519_210050.jpeg",
+    "20260615_052145.jpg",
+    "whatsapp-2026-06-04-084518.jpeg",
+    "whatsapp-2026-06-06-182702.jpeg",
+    "whatsapp-2026-06-12-223830.jpeg",
+    "812802667.jpg",
+    "Velebit-15.jpg",
+  ],
+} as const;
+
+/** Flat gallery order (grouped) — used on the gallery page. */
+export const GALLERY_FILES = GALLERY_CATEGORIES.flatMap(
+  (category) => GALLERY_GROUPS[category]
+) as readonly string[];
+
+/** Every gallery file on disk (sorted) — for sync checks when adding files. */
+export const GALLERY_FILES_ON_DISK = [
   "571275863_122102378865084437_4800487342368999167_n.jpg",
   "578265540_122104807869084437_5111680495021054907_n.jpg",
   "581480514_122107015833084437_6966149935686680015_n.jpg",
@@ -92,10 +153,10 @@ export const HOME_IMAGES = {
   },
   editorial: {
     outdoorKitchen: "/img/ljetnja-kuhinja-3.jpg",
-    interior: `/img/gallery/${GALLERY_FILES[7]}`,
+    interior: "/img/gallery/740290390.jpg",
     surroundings: "/img/okoliš-1.jpg",
   },
-  accommodation: `/img/gallery/${GALLERY_FILES[2]}`,
+  accommodation: "/img/gallery/581480514_122107015833084437_6966149935686680015_n.jpg",
   experienceMap: {
     mountain: "/img/velebit.jpg",
     sea: "/img/zavratnica/uvala.jpeg",

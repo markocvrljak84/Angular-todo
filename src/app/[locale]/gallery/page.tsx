@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { BookCta } from "@/components/book-cta";
 import { GalleryGridLightbox } from "@/components/gallery-grid-lightbox";
 import { InnerPageHeader } from "@/components/inner-page-header";
-import { GALLERY_FILES } from "@/config/site-images";
+import { GALLERY_CATEGORIES, GALLERY_GROUPS } from "@/config/site-images";
+import { getGalleryContent } from "@/i18n/gallery-content";
 import { getMessages } from "@/i18n/messages";
 import { getPageHeaderContent } from "@/lib/inner-page-content";
 import {
@@ -31,11 +32,33 @@ type Props = { params: Promise<{ locale: string }> };
 export default async function GalleryPage({ params }: Props) {
   const locale = await resolveLocale(params);
   const t = getMessages(locale);
+  const gallery = getGalleryContent(locale);
   const header = getPageHeaderContent(locale, "gallery");
 
-  if (t.gallery.images.length !== GALLERY_FILES.length) {
-    throw new Error("gallery.images length must match GALLERY_FILES.");
-  }
+  const sections = GALLERY_CATEGORIES.map((categoryId) => {
+    const group = gallery.groups.find((item) => item.id === categoryId);
+    if (!group) {
+      throw new Error(`Missing gallery content for category "${categoryId}".`);
+    }
+
+    return {
+      id: categoryId,
+      title: group.title,
+      slides: GALLERY_GROUPS[categoryId].map((file) => {
+        const meta = group.images[file];
+        if (!meta) {
+          throw new Error(`Missing gallery metadata for "${file}".`);
+        }
+        const base = `/img/gallery/${file}`;
+        return {
+          srcThumb: base,
+          srcLarge: base,
+          alt: meta.alt,
+          caption: meta.caption,
+        };
+      }),
+    };
+  });
 
   return (
     <>
@@ -44,16 +67,7 @@ export default async function GalleryPage({ params }: Props) {
       <div className="flat-section flat-section--tint">
         <div className="flat-wrap">
           <GalleryGridLightbox
-            slides={GALLERY_FILES.map((file, i) => {
-              const meta = t.gallery.images[i];
-              const base = `/img/gallery/${file}`;
-              return {
-                srcThumb: base,
-                srcLarge: base,
-                alt: meta?.alt ?? "",
-                caption: meta?.caption ?? "",
-              };
-            })}
+            sections={sections}
             labels={{
               close: t.gallery.lightboxClose,
               prev: t.gallery.lightboxPrev,

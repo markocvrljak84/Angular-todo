@@ -1,13 +1,19 @@
 "use client";
 
 import Image from "next/image";
-import { useCallback, useEffect, useId, useRef, useState } from "react";
+import { useCallback, useEffect, useId, useMemo, useRef, useState } from "react";
 
 export type GallerySlide = {
   srcThumb: string;
   srcLarge: string;
   alt: string;
   caption: string;
+};
+
+export type GallerySection = {
+  id: string;
+  title: string;
+  slides: GallerySlide[];
 };
 
 export type GalleryLightboxLabels = {
@@ -19,15 +25,20 @@ export type GalleryLightboxLabels = {
 };
 
 type Props = {
-  slides: GallerySlide[];
+  sections: GallerySection[];
   labels: GalleryLightboxLabels;
 };
 
-export function GalleryGridLightbox({ slides, labels }: Props) {
+export function GalleryGridLightbox({ sections, labels }: Props) {
   const dialogTitleId = useId();
   const closeRef = useRef<HTMLButtonElement>(null);
   const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(0);
+
+  const slides = useMemo(
+    () => sections.flatMap((section) => section.slides),
+    [sections]
+  );
 
   const close = useCallback(() => {
     setOpen(false);
@@ -77,30 +88,49 @@ export function GalleryGridLightbox({ slides, labels }: Props) {
   if (slides.length === 0) return null;
 
   const current = slides[index];
+  let slideOffset = 0;
 
   return (
     <>
-      <div className="gallery-mosaic" role="list">
-        {slides.map((slide, i) => (
-          <div className="gallery-mosaic__cell" role="listitem" key={slide.srcThumb}>
-            <button
-              type="button"
-              className="gallery-mosaic__thumb"
-              onClick={() => openAt(i)}
-              aria-haspopup="dialog"
-              aria-label={`${labels.openThumb}: ${slide.caption}`}
+      <div className="gallery-sections">
+        {sections.map((section) => {
+          const sectionStart = slideOffset;
+          slideOffset += section.slides.length;
+
+          return (
+            <section
+              key={section.id}
+              className="gallery-section"
+              aria-labelledby={`${section.id}-title`}
             >
-              <Image
-                src={slide.srcThumb}
-                alt={slide.alt}
-                fill
-                sizes="(max-width: 767px) 50vw, 25vw"
-                loading="lazy"
-                className="gallery-mosaic__img"
-              />
-            </button>
-          </div>
-        ))}
+              <h2 id={`${section.id}-title`} className="gallery-section__title">
+                {section.title}
+              </h2>
+              <div className="gallery-mosaic" role="list">
+                {section.slides.map((slide, i) => (
+                  <div className="gallery-mosaic__cell" role="listitem" key={slide.srcThumb}>
+                    <button
+                      type="button"
+                      className="gallery-mosaic__thumb"
+                      onClick={() => openAt(sectionStart + i)}
+                      aria-haspopup="dialog"
+                      aria-label={`${labels.openThumb}: ${slide.caption}`}
+                    >
+                      <Image
+                        src={slide.srcThumb}
+                        alt={slide.alt}
+                        fill
+                        sizes="(max-width: 767px) 50vw, 25vw"
+                        loading="lazy"
+                        className="gallery-mosaic__img"
+                      />
+                    </button>
+                  </div>
+                ))}
+              </div>
+            </section>
+          );
+        })}
       </div>
 
       {open ? (
