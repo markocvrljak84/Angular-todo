@@ -1,10 +1,17 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import type { Locale } from "@/i18n/config";
 import type { Messages } from "@/i18n/messages";
 import { SITE_CONTACT } from "@/config/site-contact";
+import {
+  isHomePath,
+  localePath,
+  MAIN_NAV_PAGES,
+  SITE_PAGE_NAV_KEYS,
+} from "@/config/site-routes";
 import { LangSwitch } from "./lang-switch";
 
 type Props = {
@@ -24,23 +31,31 @@ function headerToneClass(tone: HeaderTone, menuOpen: boolean): string {
 }
 
 export function SiteHeader({ locale, t }: Props) {
-  const base = `/${locale}`;
-  const [tone, setTone] = useState<HeaderTone>("hero");
+  const pathname = usePathname();
+  const onHome = isHomePath(pathname ?? "", locale);
+  const [tone, setTone] = useState<HeaderTone>(() => (onHome ? "hero" : "opaque"));
   const [menuOpen, setMenuOpen] = useState(false);
   const menuBtnRef = useRef<HTMLButtonElement>(null);
 
-  const toneClass = headerToneClass(tone, menuOpen);
+  const toneClass = onHome ? headerToneClass(tone, menuOpen) : "site-header--opaque";
+
+  const nav = MAIN_NAV_PAGES.map((page) => ({
+    href: localePath(locale, page),
+    label: t.nav[SITE_PAGE_NAV_KEYS[page]],
+  }));
 
   useEffect(() => {
+    if (!onHome) {
+      setTone("opaque");
+      return;
+    }
+
     const desktopMq = window.matchMedia(DESKTOP_QUERY);
 
     const onScroll = () => {
       const hero = document.getElementById("top");
-      const about = document.getElementById("about");
       const headerH =
         parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--header-h")) || 64;
-      const y = window.scrollY;
-      const aboutTop = (about?.offsetTop ?? Number.POSITIVE_INFINITY) - headerH;
 
       const carouselEl =
         hero?.querySelector<HTMLElement>(".hero-fs__media") ?? hero;
@@ -52,7 +67,7 @@ export function SiteHeader({ locale, t }: Props) {
 
       if (carouselInView) {
         setTone("hero");
-      } else if (y < aboutTop) {
+      } else if (window.scrollY < 120) {
         setTone("glass");
       } else {
         setTone("opaque");
@@ -66,7 +81,7 @@ export function SiteHeader({ locale, t }: Props) {
       desktopMq.removeEventListener("change", onScroll);
       window.removeEventListener("scroll", onScroll);
     };
-  }, []);
+  }, [onHome]);
 
   useEffect(() => {
     if (!menuOpen) return;
@@ -90,16 +105,6 @@ export function SiteHeader({ locale, t }: Props) {
     return () => mq.removeEventListener("change", onChange);
   }, []);
 
-  const nav = [
-    { href: `${base}#top`, label: t.nav.home },
-    { href: `${base}#about`, label: t.nav.about },
-    { href: `${base}#gallery`, label: t.nav.gallery },
-    { href: `${base}#good-to-know`, label: t.nav.goodToKnow },
-    { href: `${base}#hiking`, label: t.nav.hiking },
-    { href: `${base}#nearby`, label: t.nav.nearby },
-    { href: `${base}#contact`, label: t.nav.contact },
-  ];
-
   function closeMenu() {
     setMenuOpen(false);
     menuBtnRef.current?.focus();
@@ -108,7 +113,7 @@ export function SiteHeader({ locale, t }: Props) {
   return (
     <header className={`site-header ${toneClass}`}>
       <div className="site-header__inner">
-        <Link href={`${base}#top`} className="site-header__brand">
+        <Link href={localePath(locale, "home")} className="site-header__brand">
           {SITE_CONTACT.brandMark}
         </Link>
 

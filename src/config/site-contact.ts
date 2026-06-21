@@ -18,6 +18,10 @@ export const SITE_CONTACT = {
   address: "Došen Dabar 1, Karlobag, Croatia",
 } as const;
 
+/** Guide signup — FormSubmit forwards to host inbox (activate via confirmation email). */
+export const GUIDE_SIGNUP_FORM_ACTION =
+  `https://formsubmit.co/${encodeURIComponent(SITE_CONTACT.email)}` as const;
+
 export function telHref(phone: string = SITE_CONTACT.phone): string {
   return `tel:${phone.replace(/\s/g, "")}`;
 }

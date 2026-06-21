@@ -2,18 +2,17 @@ import Link from "next/link";
 import type { Locale } from "@/i18n/config";
 import type { Messages } from "@/i18n/messages";
 import { SITE_CONTACT, telHref } from "@/config/site-contact";
+import {
+  localePath,
+  MAIN_NAV_PAGES,
+  SITE_PAGE_NAV_KEYS,
+} from "@/config/site-routes";
 
 export function SiteFooter({ t, locale }: { t: Messages; locale: Locale }) {
-  const base = `/${locale}`;
-  const links = [
-    { href: `${base}#top`, label: t.nav.home },
-    { href: `${base}#about`, label: t.nav.about },
-    { href: `${base}#gallery`, label: t.nav.gallery },
-    { href: `${base}#good-to-know`, label: t.nav.goodToKnow },
-    { href: `${base}#hiking`, label: t.nav.hiking },
-    { href: `${base}#nearby`, label: t.nav.nearby },
-    { href: `${base}#contact`, label: t.nav.contact },
-  ];
+  const links = MAIN_NAV_PAGES.map((page) => ({
+    href: localePath(locale, page),
+    label: t.nav[SITE_PAGE_NAV_KEYS[page]],
+  }));
 
   return (
     <footer className="site-footer">

@@ -69,6 +69,36 @@ export function heroSlideWebpSrc(file: MainCarouselFile): string {
 /** Filename in /public/img/about-us */
 export const ABOUT_US_IMAGE = "38410942.jpg" as const;
 
+import type { SitePageKey } from "@/config/site-routes";
+
+/** Inner-page hero banners (excludes home). */
+export const PAGE_BANNER_IMAGES: Record<
+  Exclude<SitePageKey, "home">,
+  { src: string }
+> = {
+  about: {
+    src: `/img/about-us/${ABOUT_US_IMAGE}`,
+  },
+  gallery: {
+    src: "/img/gallery/Velebit-11.jpg",
+  },
+  goodToKnow: {
+    src: "/img/gallery/812808512.jpg",
+  },
+  hiking: {
+    src: "/img/gallery/Velebit-15.jpg",
+  },
+  nearby: {
+    src: "/img/paklenica/shutterstock_1617270832-scaled.jpg",
+  },
+  guides: {
+    src: "/img/gallery/20260602_055146.jpg",
+  },
+  contact: {
+    src: "/img/main-carousel/581480514_122107015833084437_6966149935686680015_n.jpg",
+  },
+};
+
 /**
  * Near places checkerboard — order matches `itineraryImageAlts` in messages.
  * ASCII paths only (folder on disk: /public/img/premuzic).

@@ -14,10 +14,12 @@ export type Messages = {
     };
     nav: {
         home: string;
+        experience: string;
         about: string;
         gallery: string;
         hiking: string;
         nearby: string;
+        guides: string;
         goodToKnow: string;
         contact: string;
     };
@@ -101,7 +103,7 @@ const en: Messages = {
     meta: {
         siteName: "Velebit mountain chalet Stars Peak – Croatia",
         siteDescription:
-            "Velebit mountain chalet Stars Peak — mountain holiday home in Bačić Duliba, Velebit Nature Park, Croatia. Hiking, nature and peaceful stays near Karlobag and Baške Oštarije, Došen Dabar.",
+            "Wake up beneath Bačić Kuk, swim the Adriatic before lunch, stargaze on Velebit. Stars Peak — mountain experience in Bačić Duliba, Croatia.",
     },
     header: {
         bookCta: "Check availability on Booking",
@@ -109,37 +111,39 @@ const en: Messages = {
         menuClose: "Close menu",
     },
     cta: {
-        aboutLead: "See live availability and book your stay.",
-        galleryLead: "Nature here is even better live? Check dates and book your mountain stay.",
+        aboutLead: "Ready for summit, sea and stars? Check dates and book your stay.",
+        galleryLead: "The feeling is even better in person. Check dates and book your mountain stay.",
         hikingLead: "Use Stars Peak as your base for Velebit trails — book your stay.",
         goodToKnowLead: "Reserve your stay on Booking.com.",
         contactLead: "Prefer to book online? Availability and rates are always up to date.",
     },
     nav: {
         home: "Home",
+        experience: "Your day",
         about: "About",
         gallery: "Gallery",
         hiking: "Hiking",
         nearby: "Near places",
+        guides: "Guides",
         goodToKnow: "Good to know",
         contact: "Contact",
     },
     langSwitcher: { aria: "Language" },
     footer: {
-        tagline: "Mountain holiday home in Croatia",
+        tagline: "Summit · Swim · Stargaze on Velebit",
         locationLine: "Velebit mountain chalet Stars Peak",
         rights: "© Velebit mountain chalet Stars Peak",
         exploreTitle: "Explore",
         contactTitle: "Contact us",
     },
     home: {
-        heroBadge: "Velebit · Croatia",
+        heroBadge: "Summit · Swim · Stargaze",
         heroTitle: "Your hideaway above the treeline",
         heroLead:
             "Wake up to pine-scented air and wide skies. This mock homepage describes a fictional cabin so you can preview layout, typography, and navigation before adding your real story.",
         heroScriptTitle: "Velebit mountain chalet Stars Peak",
         heroCenterLine:
-            "This unique property lies in the heart of the Velebit mountain range.",
+            "Wake up beneath Bačić Kuk. Swim in the Adriatic before lunch.",
         nearbyTitle: "Near places",
         nearbyLead:
             "From Stars Peak on Velebit you can easily reach beautiful destinations of the wider Velebit area — national parks, bays and Adriatic islands. Here are a few favourite day trips nearby.",
@@ -207,9 +211,9 @@ const en: Messages = {
     about: {
         title: "About this place",
         lead:
-            "This unique property lies in the heart of the Velebit mountain range and offers a beautiful view of the mountain. Despite its secluded mountain setting, the property is close to the Adriatic coast — a half-hour drive brings you to the sea, offering the best of both mountain and coastal living.",
+            "Stars Peak sits in Bačić Duliba with Bačić Kuk rising above the valley — a rare place where Velebit wilderness meets the Adriatic half an hour away.",
         p1:
-            "Perfect for nature lovers, the area is a haven for hiking, climbing, and biking. Outside, guests can enjoy a rustic kitchen with a barbecue, along with a cozy fire pit under the stars. From here, the view opens toward the mountains, creating an unforgettable atmosphere for evenings spent outdoors.",
+            "Mornings start with coffee and mountain views. By midday you can stand on a summit; by afternoon swim in Karlobag. Evenings belong to the fire pit, grill and a sky full of stars.",
         hostsNote:
             "Hello! We are Marko and Ljiljana — your hosts at this holiday home, and we are happy to help with any questions you may have before or during your stay.",
         p2:
@@ -220,7 +224,7 @@ const en: Messages = {
     },
     gallery: {
         title: "Gallery",
-        intro: "Browse our photo gallery.",
+        intro: "Moments from the mountain — trails, fireside evenings, sea days and night skies. More emotion shots coming soon.",
         lightboxClose: "Close gallery",
         lightboxPrev: "Previous image",
         lightboxNext: "Next image",
@@ -253,7 +257,7 @@ const hr: Messages = {
     meta: {
         siteName: "Velebit mountain chalet Stars Peak – Hrvatska",
         siteDescription:
-            "Planinska kuća Velebit mountain chalet Stars Peak u Bačić Dulibi, Park prirode Velebit, Hrvatska. Smještaj za planinarenje i odmor na Velebitu blizu Karlobaga i Baških Oštarija — Došen Dabar.",
+            "Probudite se ispod Bačić kuka, kupajte se u Jadranu prije ručka, promatrajte zvijezde na Velebitu. Stars Peak — iskustvo planine u Bačić Dulibi, Hrvatska.",
     },
     header: {
         bookCta: "Provjeri dostupnost na Booking",
@@ -261,37 +265,39 @@ const hr: Messages = {
         menuClose: "Zatvori izbornik",
     },
     cta: {
-        aboutLead: "Provjerite dostupnost i rezervirajte boravak.",
-        galleryLead: "Istražite prirodne ljepote Velebita? Provjerite datume i rezervirajte boravak u planinama.",
+        aboutLead: "Spremni za vrh, more i zvijezde? Provjerite datume i rezervirajte boravak.",
+        galleryLead: "Osjećaj je još jači uživo. Provjerite datume i rezervirajte boravak u planinama.",
         hikingLead: "Krenite u planinarenje s Stars Peaka kao polazištem — rezervirajte smještaj.",
         goodToKnowLead: "Rezervirajte boravak na Booking.com.",
         contactLead: "Želite rezervirati online? Dostupnost i cijene su uvijek ažurne.",
     },
     nav: {
         home: "Početna",
+        experience: "Jedan dan",
         about: "O nama",
         gallery: "Galerija",
         hiking: "Planinarenje",
         nearby: "U blizini",
+        guides: "Vodiči",
         goodToKnow: "Dobro za znati",
         contact: "Kontakt",
     },
     langSwitcher: { aria: "Jezik" },
     footer: {
-        tagline: "Planinska kuća za odmor u Hrvatskoj",
+        tagline: "Vrh · More · Zvijezde na Velebitu",
         locationLine: "Velebit mountain chalet Stars Peak",
         rights: "© Velebit mountain chalet Stars Peak",
         exploreTitle: "Poveznice",
         contactTitle: "Kontakt",
     },
     home: {
-        heroBadge: "Velebit · Hrvatska",
+        heroBadge: "Vrh · More · Zvijezde",
         heroTitle: "Skriveno mjesto iznad krošnji",
         heroLead:
             "Probudite se uz miris bora i široko nebo. Ovaj mock opisuje izmišljenu kolibu kako biste vidjeli raspored i tipografiju prije pravog sadržaja.",
         heroScriptTitle: "Velebit mountain chalet Stars Peak",
         heroCenterLine:
-            "Ovaj jedinstveni smještaj leži u srcu planine Velebit.",
+            "Probudite se ispod Bačić kuka. Prije ručka kupajte se u Jadranu.",
         heroCtaPill: "Od 129 € / noć · mock cijena",
         heroSlideAlts: [
             "Kuća za odmor — fotografija 3",
@@ -359,9 +365,9 @@ const hr: Messages = {
     about: {
         title: "O ovom mjestu",
         lead:
-            "Ovaj jedinstveni smještaj smješten je u srcu Velebita te nudi prekrasan pogled na planinu. Unatoč mirnom i osamljenom planinskom okruženju, objekt je blizu Jadranskog mora — svega pola sata vožnje dijeli vas od obale, čime se spajaju najbolje od planinskog i primorskog ugođaja.",
+            "Stars Peak leži u Bačić Dulibi s Bačić kukom iznad doline — rijetko mjesto gdje se velebitska divljina i Jadran na pola sata vožnje susreću.",
         p1:
-            "Idealan je za ljubitelje prirode, a okolica predstavlja pravo utočište za planinarenje, penjanje i biciklizam. Na otvorenom gosti mogu uživati u rustikalnoj kuhinji s roštiljem te ugodnom prostoru oko vatre, savršenom za druženje pod zvjezdanim nebom. S ovog mjesta pruža se otvoren pogled na Bačić kuk koji stvara nezaboravnu atmosferu večeri na otvorenom.",
+            "Jutro počinje kavom i pogledom na planinu. Do podneva ste na vrhu; do popodneva u moru u Karlobagu. Večeri pripadaju vatri, roštilju i nebu punom zvijezda.",
         hostsNote:
             "Pozdrav! Mi smo Marko i Ljiljana — vaši domaćini te vam stojimo na raspolaganju za sva pitanja prije i tijekom boravka.",
         p2:
@@ -372,7 +378,7 @@ const hr: Messages = {
     },
     gallery: {
         title: "Galerija",
-        intro: "Pogledajte galeriju naših slika.",
+        intro: "Trenuci s planine — staze, večeri uz vatru, dani na moru i noćno nebo. Više emocionalnih fotografija uskoro.",
         lightboxClose: "Zatvori galeriju",
         lightboxPrev: "Prethodna slika",
         lightboxNext: "Sljedeća slika",
@@ -405,7 +411,7 @@ const de: Messages = {
     meta: {
         siteName: "Velebit mountain chalet Stars Peak – Kroatien",
         siteDescription:
-            "Velebit mountain chalet Stars Peak — Berghütte und Ferienhaus in Bačić Duliba, Naturpark Velebit, Kroatien. Wandern, Natur und Erholung nahe Karlobag und Baške Oštarije, Došen Dabar.",
+            "Erwachen Sie unter Bačić Kuk, baden Sie mittags in der Adria, beobachten Sie Sterne am Velebit. Stars Peak — Bergerlebnis in Bačić Duliba, Kroatien.",
     },
     header: {
         bookCta: "Verfügbarkeit auf Booking prüfen",
@@ -413,37 +419,39 @@ const de: Messages = {
         menuClose: "Menü schließen",
     },
     cta: {
-        aboutLead: "Verfügbarkeit prüfen und Aufenthalt buchen.",
-        galleryLead: "Die Natur ist vor Ort noch schöner? Termine prüfen und Bergurlaub buchen.",
+        aboutLead: "Bereit für Gipfel, Meer und Sterne? Termine prüfen und buchen.",
+        galleryLead: "Das Erlebnis ist vor Ort noch stärker. Termine prüfen und Bergurlaub buchen.",
         hikingLead: "Stars Peak als Ausgangspunkt für Wanderungen — jetzt buchen.",
         goodToKnowLead: "Reservieren Sie Ihren Aufenthalt auf Booking.com.",
         contactLead: "Lieber online buchen? Verfügbarkeit und Preise sind stets aktuell.",
     },
     nav: {
         home: "Start",
+        experience: "Ihr Tag",
         about: "Über uns",
         gallery: "Galerie",
         hiking: "Wandern",
         nearby: "In der Nähe",
+        guides: "Guides",
         goodToKnow: "Gut zu wissen",
         contact: "Kontakt",
     },
     langSwitcher: { aria: "Sprache" },
     footer: {
-        tagline: "Ferienhaus in den kroatischen Bergen",
+        tagline: "Gipfel · Meer · Sterne am Velebit",
         locationLine: "Velebit mountain chalet Stars Peak",
         rights: "© Velebit mountain chalet Stars Peak",
         exploreTitle: "Navigation",
         contactTitle: "Kontakt",
     },
     home: {
-        heroBadge: "Velebit · Kroatien",
+        heroBadge: "Gipfel · Meer · Sterne",
         heroTitle: "Ihr Rückzugsort über den Baumwipfeln",
         heroLead:
             "Wachen Sie auf mit Kiefernduft und weitem Himmel. Diese Demo-Startseite beschreibt eine fiktive Hütte, damit Sie Layout und Navigation testen können.",
         heroScriptTitle: "Velebit mountain chalet Stars Peak",
         heroCenterLine:
-            "Diese einzigartige Unterkunft liegt im Herzen des Velebit.",
+            "Erwachen Sie unter Bačić Kuk. Baden Sie mittags in der Adria.",
         heroCtaPill: "Ab 129 € / Nacht · Platzhalterpreis",
         heroSlideAlts: [
             "Ferienhaus — Foto 3",
@@ -511,9 +519,9 @@ const de: Messages = {
     about: {
         title: "Über dieses Haus",
         lead:
-            "Diese einzigartige Unterkunft liegt im Herzen des Velebit-Gebirges und bietet eine wunderschöne Aussicht auf die Berge. Trotz der abgeschiedenen Lage in den Bergen ist das Haus der Adriaküste praktisch nah — eine halbe Stunde Fahrt bringt Sie ans Meer, das Beste aus Berg und Küste vereint.",
+            "Stars Peak liegt in Bačić Duliba mit Bačić Kuk über dem Tal — ein seltener Ort, an dem Velebit-Wildnis und Adria in einer halben Stunde zusammentreffen.",
         p1:
-            "Ideal für Naturliebhaber: Die Umgebung lädt zum Wandern, Klettern und Radfahren ein. Draußen erwarten Gäste eine rustikale Küche mit Grill sowie eine gemütliche Feuerstelle unter dem Sternenhimmel — mit Blick auf die Berge und unvergesslichen Abenden im Freien.",
+            "Der Morgen beginnt mit Kaffee und Bergblick. Mittags stehen Sie auf einem Gipfel; nachmittags baden Sie in Karlobag. Abende gehören Feuerstelle, Grill und Sternenhimmel.",
         hostsNote:
             "Hallo! Wir sind Marko und Ljiljana — Ihre Gastgeber in diesem Ferienhaus und gerne für alle Fragen vor und während Ihres Aufenthalts da.",
         p2:
@@ -524,7 +532,7 @@ const de: Messages = {
     },
     gallery: {
         title: "Galerie",
-        intro: "Sehen Sie sich unsere Bildergalerie an.",
+        intro: "Momente am Berg — Wege, Abende am Feuer, Meerestage und Nachthimmel. Mehr emotionale Fotos folgen.",
         lightboxClose: "Galerie schließen",
         lightboxPrev: "Vorheriges Bild",
         lightboxNext: "Nächstes Bild",

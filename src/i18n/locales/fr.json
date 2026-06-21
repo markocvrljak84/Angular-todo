@@ -1,7 +1,7 @@
 {
     "meta": {
         "siteName": "Velebit mountain chalet Stars Peak – Croatie",
-        "siteDescription": "Velebit mountain chalet Stars Peak — maison de vacances à Bačić Duliba, parc naturel du Velebit, Croatie. Randonnée, nature et séjour montagne près de Karlobag et Baške Oštarije, Došen Dabar."
+        "siteDescription": "Réveillez-vous sous Bačić Kuk, baignez-vous en Adriatique avant le déjeuner, observez les étoiles sur le Velebit. Stars Peak — expérience montagne à Bačić Duliba, Croatie."
     },
     "header": {
         "bookCta": "Voir les disponibilités sur Booking",
@@ -9,18 +9,20 @@
         "menuClose": "Fermer le menu"
     },
     "cta": {
-        "aboutLead": "Consultez les disponibilités et réservez votre séjour.",
-        "galleryLead": "La nature est encore plus belle sur place ? Vérifiez les dates et réservez votre séjour.",
+        "aboutLead": "Prêt pour sommet, mer et étoiles ? Réservez votre séjour.",
+        "galleryLead": "L’expérience est encore plus forte sur place. Vérifiez les dates et réservez.",
         "hikingLead": "Faites de Stars Peak votre base pour randonner — réservez votre logement.",
         "goodToKnowLead": "Réservez votre séjour sur Booking.com.",
         "contactLead": "Vous préférez réserver en ligne ? Disponibilités et tarifs à jour."
     },
     "nav": {
         "home": "Accueil",
+        "experience": "Votre journée",
         "about": "À propos",
         "gallery": "Galerie",
         "hiking": "Randonnée",
         "nearby": "À proximité",
+        "guides": "Guides",
         "goodToKnow": "Bon à savoir",
         "contact": "Contact"
     },
@@ -28,18 +30,18 @@
         "aria": "Langue"
     },
     "footer": {
-        "tagline": "Maison de vacances en montagne en Croatie",
+        "tagline": "Sommet · Mer · Étoiles sur le Velebit",
         "locationLine": "Velebit mountain chalet Stars Peak",
         "rights": "© Velebit mountain chalet stars peak",
         "exploreTitle": "Explorer",
         "contactTitle": "Contactez-nous"
     },
     "home": {
-        "heroBadge": "Velebit · Croatie",
+        "heroBadge": "Sommet · Mer · Étoiles",
         "heroTitle": "Votre refuge au-dessus des cimes",
         "heroLead": "Réveillez-vous avec l’air des pins et un grand ciel. Cette page de démonstration décrit un chalet fictif pour prévisualiser mise en page et navigation.",
-        "heroScriptTitle": "Velebit mountain chalet stars peak",
-        "heroCenterLine": "Ce logement unique se trouve au cœur du Velebit.",
+        "heroScriptTitle": "Velebit mountain chalet Stars Peak",
+        "heroCenterLine": "Réveillez-vous sous Bačić Kuk. Baignez-vous en Adriatique avant le déjeuner.",
         "nearbyTitle": "À proximité",
         "nearbyLead": "Depuis votre base de montagne sur le Velebit, rejoignez facilement les plus beaux sites de Dalmatie du Nord — parcs nationaux, criques et îles adriatiques. Voici quelques excursions à proximité.",
         "itineraryImageAlts": [

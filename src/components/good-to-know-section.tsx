@@ -3,6 +3,7 @@ import {
   whatsappHref,
 } from "@/config/site-contact";
 import type { GoodToKnowContent } from "@/i18n/good-to-know";
+import { PageHeader } from "@/components/page-header";
 
 const WHATSAPP_PHONES = [
   SITE_CONTACT.phone,
@@ -11,22 +12,30 @@ const WHATSAPP_PHONES = [
 
 type Props = {
   content: GoodToKnowContent;
+  showPageHeader?: boolean;
+  /** When true, render only the content grid (page banner supplies h1). */
+  compact?: boolean;
 };
 
-export function GoodToKnowSection({ content }: Props) {
+export function GoodToKnowSection({ content, showPageHeader, compact }: Props) {
   return (
     <section
-      id="good-to-know"
-      className="good-to-know flat-section"
-      aria-labelledby="good-to-know-title"
+      className={`good-to-know flat-section${showPageHeader ? " flat-section--page" : ""}`}
+      aria-label={content.title}
     >
       <div className="flat-wrap">
-        <h2 id="good-to-know-title" className="flat-section__title">
-          {content.title}
-        </h2>
-        <p className="flat-section__intro flat-section__intro--lead good-to-know__intro">
-          {content.intro}
-        </p>
+        {compact ? null : showPageHeader ? (
+          <PageHeader title={content.title} intro={content.intro} id="good-to-know-title" />
+        ) : (
+          <>
+            <h2 id="good-to-know-title" className="flat-section__title">
+              {content.title}
+            </h2>
+            <p className="flat-section__intro flat-section__intro--lead good-to-know__intro">
+              {content.intro}
+            </p>
+          </>
+        )}
 
         <div className="good-to-know__grid">
           {content.sections.map((section) => (

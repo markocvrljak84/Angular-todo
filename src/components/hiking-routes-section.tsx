@@ -11,9 +11,13 @@ import {
 } from "@/config/hiking-routes";
 import type { HikingRouteId } from "@/config/hiking-routes";
 import type { HikingRoutesContent } from "@/i18n/hiking-routes";
+import { PageHeader } from "@/components/page-header";
 
 type Props = {
   content: HikingRoutesContent;
+  showPageHeader?: boolean;
+  /** When true, render only the route list (page banner supplies h1). */
+  compact?: boolean;
 };
 
 function StatItem({ label, value }: { label: string; value: string }) {
@@ -241,7 +245,7 @@ function HikingRouteItem({
   );
 }
 
-export function HikingRoutesSection({ content }: Props) {
+export function HikingRoutesSection({ content, showPageHeader, compact }: Props) {
   const baseId = useId();
   const [openId, setOpenId] = useState<HikingRouteId | null>(
     content.routes[0]?.id ?? null
@@ -269,15 +273,20 @@ export function HikingRoutesSection({ content }: Props) {
 
   return (
     <section
-      id="hiking"
-      className="hiking flat-section flat-section--tint"
-      aria-labelledby="hiking-title"
+      className={`hiking flat-section flat-section--tint${showPageHeader ? " flat-section--page" : ""}`}
+      aria-label={content.title}
     >
       <div className="flat-wrap">
-        <h2 id="hiking-title" className="flat-section__title">
-          {content.title}
-        </h2>
-        <p className="flat-section__intro">{content.intro}</p>
+        {compact ? null : showPageHeader ? (
+          <PageHeader title={content.title} intro={content.intro} id="hiking-title" />
+        ) : (
+          <>
+            <h2 id="hiking-title" className="flat-section__title">
+              {content.title}
+            </h2>
+            <p className="flat-section__intro">{content.intro}</p>
+          </>
+        )}
 
         <div className="hiking__routes">
           {content.routes.map((route) => {
