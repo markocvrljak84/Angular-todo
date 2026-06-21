@@ -92,10 +92,14 @@ export const HOME_IMAGES = {
   },
   editorial: {
     outdoorKitchen: "/img/ljetnja-kuhinja-3.jpg",
-    interior: "/img/kuća-kuhinja.jpg",
+    interior: `/img/gallery/${GALLERY_FILES[7]}`,
     surroundings: "/img/okoliš-1.jpg",
   },
-  accommodation: "/img/ložište.jpg",
+  accommodation: `/img/gallery/${GALLERY_FILES[2]}`,
+  experienceMap: {
+    mountain: "/img/velebit.jpg",
+    sea: "/img/zavratnica/uvala.jpeg",
+  },
 } as const;
 
 /**

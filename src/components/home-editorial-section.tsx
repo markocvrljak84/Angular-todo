@@ -28,7 +28,7 @@ export function HomeEditorialSection({ content, images, galleryHref }: Props) {
                     src={images[i]}
                     alt={block.imageAlt}
                     width={640}
-                    height={800}
+                    height={480}
                     className="home-editorial__img"
                     sizes="(max-width: 768px) 100vw, 33vw"
                     priority={i === 0}

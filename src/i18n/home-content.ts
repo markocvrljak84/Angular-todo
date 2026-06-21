@@ -94,8 +94,8 @@ const en: HomeContent = {
         layout: "split",
         title: "Wood follows the forest",
         body:
-          "Inside, local wood and a fireplace mirror the Velebit outside — a warm retreat after ridge walks and sea swims.",
-        imageAlt: "Wooden interior and kitchen of the mountain chalet",
+          "The living room is the heart of your stay — local wood, a fireplace and soft light from the gallery wall. A calm place to unwind after the trail, plan the next hike or watch Bačić Kuk through the glass.",
+        imageAlt: "Velebit mountain chalet Stars Peak — gallery photo 8",
       },
       {
         layout: "full",
@@ -110,7 +110,7 @@ const en: HomeContent = {
     title: "Your stay at a glance",
     lead:
       "A private wooden chalet for up to four guests — fireplace, outdoor kitchen and views of Bačić Kuk from the terrace.",
-    imageAlt: "Fireplace and living area inside Stars Peak chalet",
+    imageAlt: "Velebit mountain chalet Stars Peak — gallery photo 3",
     items: [
       "Up to 4 guests",
       "Wi‑Fi",
@@ -130,6 +130,7 @@ const en: HomeContent = {
       { name: "Zavratnica", note: "Fjord-like cove" },
       { name: "Premužić trail", note: "Ridge hiking" },
       { name: "Pag", note: "Island day trip" },
+      { name: "Paklenica", note: "Canyon & cliffs" },
     ],
   },
   finalCta: {
@@ -189,8 +190,8 @@ const hr: HomeContent = {
         layout: "split",
         title: "Drvo prati šumu",
         body:
-          "Unutra, lokalno drvo i kamin odražavaju Velebit — toplo utočište nakon grebena i kupanja u moru.",
-        imageAlt: "Drveni interijer i kuhinja planinske kuće",
+          "Dnevni boravak je srce kuće — lokalno drvo, kamin i meka svjetlost s galerije. Mirno mjesto za odmor nakon staze, planiranje sljedećeg uspona ili pogled na Bačić kuk kroz staklo.",
+        imageAlt: "Planinska kuća Stars Peak na Velebitu — galerija fotografija 8",
       },
       {
         layout: "full",
@@ -205,7 +206,7 @@ const hr: HomeContent = {
     title: "Smještaj ukratko",
     lead:
       "Privatna drvena kuća za do četiri gosta — kamin, vanjska kuhinja i pogled na Bačić kuk s terase.",
-    imageAlt: "Kamin i dnevni boravak unutar kuće Stars Peak",
+    imageAlt: "Planinska kuća Stars Peak na Velebitu — galerija fotografija 3",
     items: [
       "Do 4 gosta",
       "Wi‑Fi",
@@ -225,6 +226,7 @@ const hr: HomeContent = {
       { name: "Zavratnica", note: "Uvala poput fjorda" },
       { name: "Premužićeva staza", note: "Hodanje grebenom" },
       { name: "Pag", note: "Izlet na otok" },
+      { name: "Paklenica", note: "Kanjon i litice" },
     ],
   },
   finalCta: {
@@ -280,8 +282,8 @@ const de: HomeContent = {
         layout: "split",
         title: "Holz folgt dem Wald",
         body:
-          "Drinnen spiegeln lokales Holz und Kamin den Velebit — warm nach Grat und Meer.",
-        imageAlt: "Holzinterieur der Berghütte",
+          "Der Wohnbereich ist das Herz des Aufenthalts — lokales Holz, Kamin und sanftes Licht. Ein ruhiger Ort nach der Tour, um zu lesen oder Bačić Kuk durch die Glaswand zu sehen.",
+        imageAlt: "Berghütte Stars Peak am Velebit — Galeriebild 8",
       },
       {
         layout: "full",
@@ -296,7 +298,7 @@ const de: HomeContent = {
     title: "Ihr Aufenthalt auf einen Blick",
     lead:
       "Privates Holzhaus für bis zu vier Gäste — Kamin, Außenküche und Blick auf Bačić Kuk.",
-    imageAlt: "Kamin und Wohnbereich in Stars Peak",
+    imageAlt: "Berghütte Stars Peak am Velebit — Galeriebild 3",
     items: ["Bis 4 Gäste", "WLAN", "Kamin", "Außenküche", "Grill", "Haustiere willkommen"],
     ctaLabel: "Alle Unterkunftsdetails",
   },
@@ -309,6 +311,7 @@ const de: HomeContent = {
       { name: "Zavratnica", note: "Fjordartige Bucht" },
       { name: "Premužić-Weg", note: "Gratwanderung" },
       { name: "Pag", note: "Inselausflug" },
+      { name: "Paklenica", note: "Schlucht & Felswände" },
     ],
   },
   finalCta: { headline: "Berg. Meer. Sterne. An einem Tag.", btnLabel: "Verfügbarkeit prüfen" },
@@ -360,8 +363,8 @@ const fr: HomeContent = {
         layout: "split",
         title: "Le bois suit la forêt",
         body:
-          "À l'intérieur, bois local et cheminée reflètent le Velebit — refuge chaleureux après crête et mer.",
-        imageAlt: "Intérieur en bois du chalet",
+          "Le salon est le cœur du séjour — bois local, cheminée et lumière douce. Un lieu calme après la randonnée, pour lire ou regarder Bačić Kuk à travers la verrière.",
+        imageAlt: "Chalet Stars Peak sur le Velebit — photo galerie 8",
       },
       {
         layout: "full",
@@ -376,7 +379,7 @@ const fr: HomeContent = {
     title: "Votre séjour en bref",
     lead:
       "Chalet en bois privé pour quatre personnes — cheminée, cuisine extérieure et vue sur Bačić Kuk.",
-    imageAlt: "Cheminée et salon à Stars Peak",
+    imageAlt: "Chalet Stars Peak sur le Velebit — photo galerie 3",
     items: ["Jusqu'à 4 personnes", "Wi‑Fi", "Cheminée", "Cuisine extérieure", "Barbecue", "Animaux acceptés"],
     ctaLabel: "Détails du logement",
   },
@@ -389,6 +392,7 @@ const fr: HomeContent = {
       { name: "Zavratnica", note: "Crique fjord" },
       { name: "Sentier Premužić", note: "Randonnée crête" },
       { name: "Pag", note: "Excursion île" },
+      { name: "Paklenica", note: "Canyon & falaises" },
     ],
   },
   finalCta: { headline: "Montagne. Mer. Étoiles. En une journée.", btnLabel: "Vérifier disponibilité" },
@@ -440,8 +444,8 @@ const it: HomeContent = {
         layout: "split",
         title: "Il legno segue la foresta",
         body:
-          "All'interno, legno locale e camino rispecchiano il Velebit — rifugio caldo dopo cresta e mare.",
-        imageAlt: "Interni in legno del chalet",
+          "Il soggiorno è il cuore della casa — legno locale, camino e luce morbida. Un luogo tranquillo dopo l'escursione, per leggere o guardare Bačić Kuk attraverso il vetro.",
+        imageAlt: "Chalet Stars Peak sul Velebit — foto galleria 8",
       },
       {
         layout: "full",
@@ -456,7 +460,7 @@ const it: HomeContent = {
     title: "Il soggiorno in breve",
     lead:
       "Chalet in legno privato per quattro ospiti — camino, cucina esterna e vista su Bačić Kuk.",
-    imageAlt: "Camino e soggiorno a Stars Peak",
+    imageAlt: "Chalet Stars Peak sul Velebit — foto galleria 3",
     items: ["Fino a 4 ospiti", "Wi‑Fi", "Camino", "Cucina esterna", "Barbecue", "Animali ammessi"],
     ctaLabel: "Dettagli alloggio",
   },
@@ -469,6 +473,7 @@ const it: HomeContent = {
       { name: "Zavratnica", note: "Baia fiord" },
       { name: "Sentiero Premužić", note: "Trekking cresta" },
       { name: "Pag", note: "Gita isola" },
+      { name: "Paklenica", note: "Canyon e falesie" },
     ],
   },
   finalCta: { headline: "Montagna. Mare. Stelle. In un giorno.", btnLabel: "Verifica disponibilità" },

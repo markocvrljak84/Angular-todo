@@ -91,11 +91,11 @@ export default async function HomePage({ params }: Props) {
       <ExperienceMapSection
         content={home.map}
         mountainImage={{
-          src: HOME_IMAGES.whySpecial.mountain,
+          src: HOME_IMAGES.experienceMap.mountain,
           alt: home.whySpecial.cards[0].imageAlt,
         }}
         seaImage={{
-          src: HOME_IMAGES.whySpecial.sea,
+          src: HOME_IMAGES.experienceMap.sea,
           alt: home.whySpecial.cards[1].imageAlt,
         }}
       />
