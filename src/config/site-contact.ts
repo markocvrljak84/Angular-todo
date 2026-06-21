@@ -22,6 +22,10 @@ export const SITE_CONTACT = {
 export const GUIDE_SIGNUP_FORM_ACTION =
   `https://formsubmit.co/${encodeURIComponent(SITE_CONTACT.email)}` as const;
 
+/** AJAX endpoint — submit without leaving the site (avoids baked-in _next URLs). */
+export const GUIDE_SIGNUP_FORM_AJAX_ACTION =
+  `${GUIDE_SIGNUP_FORM_ACTION}/ajax` as const;
+
 export function telHref(phone: string = SITE_CONTACT.phone): string {
   return `tel:${phone.replace(/\s/g, "")}`;
 }

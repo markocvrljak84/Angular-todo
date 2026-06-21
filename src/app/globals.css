@@ -2786,12 +2786,27 @@ code {
   justify-content: center;
   min-height: 3rem;
   padding: 0.85rem 1.5rem;
+  border: none;
   border-radius: 999px;
   background: var(--facility-icon);
   color: #fff;
+  font: inherit;
   font-weight: 700;
   text-decoration: none;
+  cursor: pointer;
   transition: background 0.15s ease;
+}
+
+.newsletter-signup__btn:disabled {
+  opacity: 0.72;
+  cursor: wait;
+}
+
+.newsletter-signup__error {
+  margin: 0.75rem 0 0;
+  color: #b42318;
+  font-size: 0.875rem;
+  line-height: 1.5;
 }
 
 .newsletter-signup__download:hover {

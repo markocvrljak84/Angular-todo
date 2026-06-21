@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import {
-  VELEBIT_BROCHURE_DOWNLOAD_NAME,
-  VELEBIT_BROCHURE_PDF,
-} from "@/config/site-brochure";
+import { BrochureDownloadButton } from "@/components/brochure-download-button";
 import { localePath } from "@/config/site-routes";
 import { getExperienceContent } from "@/i18n/experience-content";
 import {
@@ -47,13 +44,7 @@ export default async function NewsletterThankYouPage({ params }: Props) {
           <h1 className="newsletter-signup__title">{content.thankYouTitle}</h1>
           <p className="newsletter-signup__intro">{content.successMessage}</p>
 
-          <a
-            href={VELEBIT_BROCHURE_PDF}
-            download={VELEBIT_BROCHURE_DOWNLOAD_NAME}
-            className="newsletter-signup__download"
-          >
-            {content.downloadLabel}
-          </a>
+          <BrochureDownloadButton label={content.downloadLabel} />
 
           <p className="newsletter-signup__brochure-note">{content.brochureLanguageNote}</p>
 

@@ -38,6 +38,8 @@ export type ExperienceContent = {
     emailLabel: string;
     emailPlaceholder: string;
     submitLabel: string;
+    submittingLabel: string;
+    submitErrorMessage: string;
     privacyNote: string;
     brochureLanguageNote: string;
     thankYouTitle: string;
@@ -136,6 +138,8 @@ const en: ExperienceContent = {
     emailLabel: "Email address",
     emailPlaceholder: "you@example.com",
     submitLabel: "Get the brochure",
+    submittingLabel: "Sending…",
+    submitErrorMessage: "Something went wrong — please try again or contact us directly.",
     privacyNote:
       "We only use your email for the brochure and occasional Stars Peak updates. Unsubscribe anytime.",
     brochureLanguageNote: "PDF brochure is in Croatian.",
@@ -236,6 +240,8 @@ const hr: ExperienceContent = {
     emailLabel: "E-mail adresa",
     emailPlaceholder: "vi@primjer.hr",
     submitLabel: "Preuzmi brošuru",
+    submittingLabel: "Šaljem…",
+    submitErrorMessage: "Nešto nije u redu — pokušajte ponovno ili nas kontaktirajte izravno.",
     privacyNote:
       "E-mail koristimo samo za brošuru i povremene novosti o Stars Peaku. Odjava je uvijek moguća.",
     brochureLanguageNote: "PDF brošura na hrvatskom jeziku.",
@@ -336,6 +342,8 @@ const de: ExperienceContent = {
     emailLabel: "E-Mail-Adresse",
     emailPlaceholder: "sie@beispiel.de",
     submitLabel: "Broschüre erhalten",
+    submittingLabel: "Wird gesendet…",
+    submitErrorMessage: "Etwas ist schiefgelaufen — bitte erneut versuchen oder uns direkt kontaktieren.",
     privacyNote:
       "Wir nutzen Ihre E-Mail nur für die Broschüre und gelegentliche Stars-Peak-Updates. Abmeldung jederzeit möglich.",
     brochureLanguageNote: "PDF-Broschüre auf Kroatisch.",
@@ -387,6 +395,8 @@ const fr: ExperienceContent = {
     emailLabel: "Adresse e-mail",
     emailPlaceholder: "vous@exemple.fr",
     submitLabel: "Recevoir la brochure",
+    submittingLabel: "Envoi…",
+    submitErrorMessage: "Une erreur s'est produite — réessayez ou contactez-nous directement.",
     privacyNote:
       "Votre e-mail sert uniquement à la brochure et aux nouvelles occasionnelles de Stars Peak.",
     brochureLanguageNote: "Brochure PDF en croate.",
@@ -438,6 +448,8 @@ const it: ExperienceContent = {
     emailLabel: "Indirizzo e-mail",
     emailPlaceholder: "tu@esempio.it",
     submitLabel: "Scarica la brochure",
+    submittingLabel: "Invio…",
+    submitErrorMessage: "Qualcosa è andato storto — riprova o contattaci direttamente.",
     privacyNote:
       "Usiamo la tua e-mail solo per la brochure e aggiornamenti occasionali su Stars Peak.",
     brochureLanguageNote: "Brochure PDF in croato.",
