@@ -1,10 +1,12 @@
+import Image from "next/image";
 import type { HomeContent } from "@/i18n/home-content";
 
 type Props = {
   content: HomeContent["whySpecial"];
+  images: readonly [string, string, string];
 };
 
-export function WhySpecialSection({ content }: Props) {
+export function WhySpecialSection({ content, images }: Props) {
   return (
     <section className="flat-section flat-section--tint" aria-labelledby="why-special-title">
       <div className="flat-wrap">
@@ -12,10 +14,22 @@ export function WhySpecialSection({ content }: Props) {
           {content.title}
         </h2>
         <ul className="why-special__grid">
-          {content.cards.map((card) => (
+          {content.cards.map((card, i) => (
             <li key={card.title} className="why-special__card">
-              <h3 className="why-special__card-title">{card.title}</h3>
-              <p className="why-special__card-body">{card.body}</p>
+              <div className="why-special__media">
+                <Image
+                  src={images[i]}
+                  alt={card.imageAlt}
+                  width={960}
+                  height={720}
+                  className="why-special__img"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+              </div>
+              <div className="why-special__body">
+                <h3 className="why-special__card-title">{card.title}</h3>
+                <p className="why-special__card-body">{card.body}</p>
+              </div>
             </li>
           ))}
         </ul>

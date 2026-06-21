@@ -9,7 +9,7 @@ import { HeroSection } from "@/components/hero-section";
 import { HomeEditorialSection } from "@/components/home-editorial-section";
 import { NewsletterSignupSection } from "@/components/newsletter-signup-section";
 import { WhySpecialSection } from "@/components/why-special-section";
-import { GALLERY_FILES, HOME_GALLERY_FILES, MAIN_CAROUSEL_IMAGES } from "@/config/site-images";
+import { HOME_IMAGES, MAIN_CAROUSEL_IMAGES } from "@/config/site-images";
 import { localePath } from "@/config/site-routes";
 import { getExperienceContent } from "@/i18n/experience-content";
 import { getGoodToKnow } from "@/i18n/good-to-know";
@@ -49,14 +49,17 @@ export default async function HomePage({ params }: Props) {
     alt: t.home.heroSlideAlts[i] ?? t.home.heroImageAlt,
   }));
 
-  const gallerySlides = HOME_GALLERY_FILES.map((file) => {
-    const index = GALLERY_FILES.indexOf(file);
-    const meta = index >= 0 ? t.gallery.images[index] : undefined;
-    return {
-      src: `/img/gallery/${file}`,
-      alt: meta?.alt ?? t.gallery.title,
-    };
-  });
+  const whySpecialImages = [
+    HOME_IMAGES.whySpecial.mountain,
+    HOME_IMAGES.whySpecial.sea,
+    HOME_IMAGES.whySpecial.stars,
+  ] as const;
+
+  const editorialImages = [
+    HOME_IMAGES.editorial.outdoorKitchen,
+    HOME_IMAGES.editorial.interior,
+    HOME_IMAGES.editorial.surroundings,
+  ] as const;
 
   return (
     <>
@@ -69,22 +72,33 @@ export default async function HomePage({ params }: Props) {
         carouselNextLabel={t.home.heroCarouselNext}
       />
 
-      <WhySpecialSection content={home.whySpecial} />
+      <WhySpecialSection content={home.whySpecial} images={whySpecialImages} />
 
       <ExperienceDaySection content={experience.day} />
 
       <HomeEditorialSection
-        content={home.gallery}
-        slides={gallerySlides}
+        content={home.editorial}
+        images={editorialImages}
         galleryHref={localePath(locale, "gallery")}
       />
 
       <AccommodationBriefSection
         content={home.accommodation}
+        imageSrc={HOME_IMAGES.accommodation}
         accommodationHref={localePath(locale, "accommodation")}
       />
 
-      <ExperienceMapSection content={home.map} />
+      <ExperienceMapSection
+        content={home.map}
+        mountainImage={{
+          src: HOME_IMAGES.whySpecial.mountain,
+          alt: home.whySpecial.cards[0].imageAlt,
+        }}
+        seaImage={{
+          src: HOME_IMAGES.whySpecial.sea,
+          alt: home.whySpecial.cards[1].imageAlt,
+        }}
+      />
 
       <GuidesSection
         content={experience.guides}

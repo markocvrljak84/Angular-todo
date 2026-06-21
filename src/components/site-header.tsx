@@ -94,6 +94,11 @@ export function SiteHeader({ locale, t }: Props) {
       const headerH =
         parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--header-h")) || 64;
 
+      if (window.scrollY > 4) {
+        setTone("opaque");
+        return;
+      }
+
       const carouselEl =
         hero?.querySelector<HTMLElement>(".hero-fs__media") ?? hero;
       const carouselRect = carouselEl?.getBoundingClientRect();
@@ -102,13 +107,7 @@ export function SiteHeader({ locale, t }: Props) {
         carouselRect.bottom > headerH + 8 &&
         carouselRect.top < window.innerHeight * 0.92;
 
-      if (carouselInView) {
-        setTone("hero");
-      } else if (window.scrollY < 120) {
-        setTone("glass");
-      } else {
-        setTone("opaque");
-      }
+      setTone(carouselInView ? "hero" : "opaque");
     };
 
     desktopMq.addEventListener("change", onScroll);

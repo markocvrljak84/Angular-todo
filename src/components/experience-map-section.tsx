@@ -1,10 +1,18 @@
+import Image from "next/image";
 import type { HomeContent } from "@/i18n/home-content";
+
+type ZoneImage = {
+  src: string;
+  alt: string;
+};
 
 type Props = {
   content: HomeContent["map"];
+  mountainImage: ZoneImage;
+  seaImage: ZoneImage;
 };
 
-export function ExperienceMapSection({ content }: Props) {
+export function ExperienceMapSection({ content, mountainImage, seaImage }: Props) {
   return (
     <section className="flat-section" aria-labelledby="experience-map-title">
       <div className="flat-wrap">
@@ -14,11 +22,29 @@ export function ExperienceMapSection({ content }: Props) {
         <p className="flat-section__intro flat-section__intro--lead">{content.intro}</p>
 
         <div className="experience-map">
-          <div className="experience-map__mountain" aria-hidden="true">
-            <span className="experience-map__zone experience-map__zone--mountain">Velebit</span>
+          <div className="experience-map__mountain">
+            <Image
+              src={mountainImage.src}
+              alt={mountainImage.alt}
+              fill
+              className="experience-map__zone-img"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+            <span className="experience-map__zone experience-map__zone--mountain" aria-hidden="true">
+              Velebit
+            </span>
           </div>
-          <div className="experience-map__sea" aria-hidden="true">
-            <span className="experience-map__zone experience-map__zone--sea">Adriatic</span>
+          <div className="experience-map__sea">
+            <Image
+              src={seaImage.src}
+              alt={seaImage.alt}
+              fill
+              className="experience-map__zone-img"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+            <span className="experience-map__zone experience-map__zone--sea" aria-hidden="true">
+              Adriatic
+            </span>
           </div>
           <ul className="experience-map__points">
             {content.points.map((point, i) => (

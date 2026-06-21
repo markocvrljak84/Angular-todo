@@ -1,5 +1,12 @@
 import type { Locale } from "./config";
 
+export type HomeEditorialBlock = {
+  layout: "full" | "split";
+  title: string;
+  body: string;
+  imageAlt: string;
+};
+
 export type HomeContent = {
   hero: {
     headline: string;
@@ -10,15 +17,18 @@ export type HomeContent = {
   };
   whySpecial: {
     title: string;
-    cards: { title: string; body: string }[];
+    cards: { title: string; body: string; imageAlt: string }[];
   };
-  gallery: {
+  editorial: {
     title: string;
     intro: string;
     ctaLabel: string;
+    blocks: [HomeEditorialBlock, HomeEditorialBlock, HomeEditorialBlock];
   };
   accommodation: {
     title: string;
+    lead: string;
+    imageAlt: string;
     items: string[];
     ctaLabel: string;
   };
@@ -53,25 +63,54 @@ const en: HomeContent = {
       {
         title: "Mountain",
         body: "Bačić Kuk, Premužić trail and Dabarski kukovi — classic Velebit hiking from your door.",
+        imageAlt: "Velebit ridge and forest above Bačić Duliba",
       },
       {
         title: "Sea",
         body: "Karlobag, Zavratnica and Pag are half an hour away — mountain mornings, Adriatic afternoons.",
+        imageAlt: "Zavratnica cove on the Adriatic coast",
       },
       {
         title: "Stars",
         body: "No light pollution — Milky Way nights, hammocks and ridge silence after dark.",
+        imageAlt: "Starry night sky above Velebit",
       },
     ],
   },
-  gallery: {
+  editorial: {
     title: "Experience in photos",
     intro:
-      "Mountain mornings, Adriatic afternoons and starlit evenings — a glimpse of life at Stars Peak.",
+      "Mountain mornings, Adriatic afternoons and evenings by the fire — life at Stars Peak in three moments.",
     ctaLabel: "Full gallery",
+    blocks: [
+      {
+        layout: "full",
+        title: "Outdoor kitchen",
+        body:
+          "The summer kitchen and terrace are where days slow down — grill, pine-scented air and wide views of the valley.",
+        imageAlt: "Outdoor summer kitchen and terrace at Stars Peak",
+      },
+      {
+        layout: "split",
+        title: "Wood follows the forest",
+        body:
+          "Inside, local wood and a fireplace mirror the Velebit outside — a warm retreat after ridge walks and sea swims.",
+        imageAlt: "Wooden interior and kitchen of the mountain chalet",
+      },
+      {
+        layout: "full",
+        title: "Velebit at your doorstep",
+        body:
+          "Forest, wildlife and silence surround the chalet — Bačić Kuk rises above the treeline minutes from the door.",
+        imageAlt: "Forest and mountain landscape around the chalet",
+      },
+    ],
   },
   accommodation: {
     title: "Your stay at a glance",
+    lead:
+      "A private wooden chalet for up to four guests — fireplace, outdoor kitchen and views of Bačić Kuk from the terrace.",
+    imageAlt: "Fireplace and living area inside Stars Peak chalet",
     items: [
       "Up to 4 guests",
       "Wi‑Fi",
@@ -119,25 +158,54 @@ const hr: HomeContent = {
       {
         title: "Planina",
         body: "Bačić kuk, Premužićeva staza i Dabarski kukovi — klasično planinarenje Velebitom odmah iz kuće.",
+        imageAlt: "Velebitski greben i šuma iznad Bačić Dulibe",
       },
       {
         title: "More",
         body: "Karlobag, Zavratnica i Pag udaljeni su pola sata vožnje — jutro na planini, popodne u moru.",
+        imageAlt: "Uvala Zavratnica na jadranskoj obali",
       },
       {
         title: "Zvijezde",
         body: "Bez svjetlosnog onečišćenja — Mliječna staza, hamaci i tišina grebena nakon mraka.",
+        imageAlt: "Zvjezdano noćno nebo iznad Velebita",
       },
     ],
   },
-  gallery: {
+  editorial: {
     title: "Doživljaj u fotografijama",
     intro:
-      "Planinska jutra, jadranska popodneva i večeri pod zvijezdama — pogled na život na Stars Peaku.",
+      "Planinska jutra, jadranska popodneva i večeri uz vatru — tri trenutka života na Stars Peaku.",
     ctaLabel: "Cijela galerija",
+    blocks: [
+      {
+        layout: "full",
+        title: "Ljetnja kuhinja",
+        body:
+          "Ljetnja kuhinja i terasa usporavaju dan — roštilj, miris bora i široki pogled na dolinu.",
+        imageAlt: "Vanjska ljetnja kuhinja i terasa na Stars Peaku",
+      },
+      {
+        layout: "split",
+        title: "Drvo prati šumu",
+        body:
+          "Unutra, lokalno drvo i kamin odražavaju Velebit — toplo utočište nakon grebena i kupanja u moru.",
+        imageAlt: "Drveni interijer i kuhinja planinske kuće",
+      },
+      {
+        layout: "full",
+        title: "Velebit na dohvat ruke",
+        body:
+          "Šuma, divlje životinje i tišina oko kuće — Bačić kuk se diže iznad krošnji minutama od vrata.",
+        imageAlt: "Šuma i planinski krajolik oko kuće",
+      },
+    ],
   },
   accommodation: {
     title: "Smještaj ukratko",
+    lead:
+      "Privatna drvena kuća za do četiri gosta — kamin, vanjska kuhinja i pogled na Bačić kuk s terase.",
+    imageAlt: "Kamin i dnevni boravak unutar kuće Stars Peak",
     items: [
       "Do 4 gosta",
       "Wi‑Fi",
@@ -178,19 +246,57 @@ const de: HomeContent = {
   whySpecial: {
     title: "Warum dieser Ort besonders ist",
     cards: [
-      { title: "Berg", body: "Bačić Kuk, Premužić-Weg und Dabarski kukovi — klassisches Velebit-Wandern ab der Haustür." },
-      { title: "Meer", body: "Karlobag, Zavratnica und Pag in einer halben Stunde — Bergmorgen, Adria-Nachmittag." },
-      { title: "Sterne", body: "Keine Lichtverschmutzung — Milchstraße, Hängematten und Grat-Stille." },
+      {
+        title: "Berg",
+        body: "Bačić Kuk, Premužić-Weg und Dabarski kukovi — klassisches Velebit-Wandern ab der Haustür.",
+        imageAlt: "Velebit-Kamm und Wald über Bačić Duliba",
+      },
+      {
+        title: "Meer",
+        body: "Karlobag, Zavratnica und Pag in einer halben Stunde — Bergmorgen, Adria-Nachmittag.",
+        imageAlt: "Bucht Zavratnica an der Adria",
+      },
+      {
+        title: "Sterne",
+        body: "Keine Lichtverschmutzung — Milchstraße, Hängematten und Grat-Stille.",
+        imageAlt: "Sternenhimmel über dem Velebit",
+      },
     ],
   },
-  gallery: {
+  editorial: {
     title: "Erlebnisse in Bildern",
     intro:
-      "Bergmorgen, Adria-Nachmittage und Sternennächte — ein Einblick in das Leben auf Stars Peak.",
+      "Bergmorgen, Adria-Nachmittage und Abende am Feuer — drei Momente auf Stars Peak.",
     ctaLabel: "Galerie ansehen",
+    blocks: [
+      {
+        layout: "full",
+        title: "Außenküche",
+        body:
+          "Sommerküche und Terrasse — Grill, Pinienduft und weite Talblicke.",
+        imageAlt: "Sommerküche und Terrasse auf Stars Peak",
+      },
+      {
+        layout: "split",
+        title: "Holz folgt dem Wald",
+        body:
+          "Drinnen spiegeln lokales Holz und Kamin den Velebit — warm nach Grat und Meer.",
+        imageAlt: "Holzinterieur der Berghütte",
+      },
+      {
+        layout: "full",
+        title: "Velebit vor der Tür",
+        body:
+          "Wald, Wildnis und Stille — Bačić Kuk ragt Minuten von der Haustür über die Baumgrenze.",
+        imageAlt: "Wald und Berglandschaft um die Hütte",
+      },
+    ],
   },
   accommodation: {
     title: "Ihr Aufenthalt auf einen Blick",
+    lead:
+      "Privates Holzhaus für bis zu vier Gäste — Kamin, Außenküche und Blick auf Bačić Kuk.",
+    imageAlt: "Kamin und Wohnbereich in Stars Peak",
     items: ["Bis 4 Gäste", "WLAN", "Kamin", "Außenküche", "Grill", "Haustiere willkommen"],
     ctaLabel: "Alle Unterkunftsdetails",
   },
@@ -220,19 +326,57 @@ const fr: HomeContent = {
   whySpecial: {
     title: "Pourquoi cet endroit est unique",
     cards: [
-      { title: "Montagne", body: "Bačić Kuk, sentier Premužić et Dabarski kukovi — randonnée classique du Velebit." },
-      { title: "Mer", body: "Karlobag, Zavratnica et Pag à une demi-heure — matin montagne, après-midi mer." },
-      { title: "Étoiles", body: "Pas de pollution lumineuse — Voie lactée et silence des crêtes." },
+      {
+        title: "Montagne",
+        body: "Bačić Kuk, sentier Premužić et Dabarski kukovi — randonnée classique du Velebit.",
+        imageAlt: "Crête du Velebit et forêt au-dessus de Bačić Duliba",
+      },
+      {
+        title: "Mer",
+        body: "Karlobag, Zavratnica et Pag à une demi-heure — matin montagne, après-midi mer.",
+        imageAlt: "Crique de Zavratnica sur l'Adriatique",
+      },
+      {
+        title: "Étoiles",
+        body: "Pas de pollution lumineuse — Voie lactée et silence des crêtes.",
+        imageAlt: "Ciel étoilé au-dessus du Velebit",
+      },
     ],
   },
-  gallery: {
+  editorial: {
     title: "L'expérience en photos",
     intro:
-      "Matins en montagne, après-midis à l'Adriatique et soirées sous les étoiles — la vie à Stars Peak.",
+      "Matins en montagne, après-midis à l'Adriatique et soirées au feu — trois instants à Stars Peak.",
     ctaLabel: "Galerie complète",
+    blocks: [
+      {
+        layout: "full",
+        title: "Cuisine d'été",
+        body:
+          "La cuisine extérieure et la terrasse ralentissent le rythme — grillades, pin et vue sur la vallée.",
+        imageAlt: "Cuisine d'été et terrasse à Stars Peak",
+      },
+      {
+        layout: "split",
+        title: "Le bois suit la forêt",
+        body:
+          "À l'intérieur, bois local et cheminée reflètent le Velebit — refuge chaleureux après crête et mer.",
+        imageAlt: "Intérieur en bois du chalet",
+      },
+      {
+        layout: "full",
+        title: "Le Velebit à vos pieds",
+        body:
+          "Forêt, faune et silence — Bačić Kuk domine la crête à quelques minutes de la porte.",
+        imageAlt: "Forêt et paysage montagneux autour du chalet",
+      },
+    ],
   },
   accommodation: {
     title: "Votre séjour en bref",
+    lead:
+      "Chalet en bois privé pour quatre personnes — cheminée, cuisine extérieure et vue sur Bačić Kuk.",
+    imageAlt: "Cheminée et salon à Stars Peak",
     items: ["Jusqu'à 4 personnes", "Wi‑Fi", "Cheminée", "Cuisine extérieure", "Barbecue", "Animaux acceptés"],
     ctaLabel: "Détails du logement",
   },
@@ -262,19 +406,57 @@ const it: HomeContent = {
   whySpecial: {
     title: "Perché questo posto è speciale",
     cards: [
-      { title: "Montagna", body: "Bačić Kuk, sentiero Premužić e Dabarski kukovi — escursioni classiche del Velebit." },
-      { title: "Mare", body: "Karlobag, Zavratnica e Pag a mezz'ora — mattina in montagna, pomeriggio al mare." },
-      { title: "Stelle", body: "Nessun inquinamento luminoso — Via Lattea e silenzio della cresta." },
+      {
+        title: "Montagna",
+        body: "Bačić Kuk, sentiero Premužić e Dabarski kukovi — escursioni classiche del Velebit.",
+        imageAlt: "Cresta del Velebit e foresta sopra Bačić Duliba",
+      },
+      {
+        title: "Mare",
+        body: "Karlobag, Zavratnica e Pag a mezz'ora — mattina in montagna, pomeriggio al mare.",
+        imageAlt: "Baia di Zavratnica sull'Adriatico",
+      },
+      {
+        title: "Stelle",
+        body: "Nessun inquinamento luminoso — Via Lattea e silenzio della cresta.",
+        imageAlt: "Cielo stellato sopra il Velebit",
+      },
     ],
   },
-  gallery: {
+  editorial: {
     title: "L'esperienza in foto",
     intro:
-      "Mattine in montagna, pomeriggi sull'Adriatico e serate sotto le stelle — la vita a Stars Peak.",
+      "Mattine in montagna, pomeriggi sull'Adriatico e serate al fuoco — tre momenti a Stars Peak.",
     ctaLabel: "Galleria completa",
+    blocks: [
+      {
+        layout: "full",
+        title: "Cucina esterna",
+        body:
+          "La cucina estiva e la terrazza rallentano il ritmo — griglia, pino e vista sulla valle.",
+        imageAlt: "Cucina estiva e terrazza a Stars Peak",
+      },
+      {
+        layout: "split",
+        title: "Il legno segue la foresta",
+        body:
+          "All'interno, legno locale e camino rispecchiano il Velebit — rifugio caldo dopo cresta e mare.",
+        imageAlt: "Interni in legno del chalet",
+      },
+      {
+        layout: "full",
+        title: "Il Velebit a portata di mano",
+        body:
+          "Foresta, fauna e silenzio — Bačić Kuk svetta sopra la linea degli alberi a pochi minuti dalla porta.",
+        imageAlt: "Foresta e paesaggio montano intorno al chalet",
+      },
+    ],
   },
   accommodation: {
     title: "Il soggiorno in breve",
+    lead:
+      "Chalet in legno privato per quattro ospiti — camino, cucina esterna e vista su Bačić Kuk.",
+    imageAlt: "Camino e soggiorno a Stars Peak",
     items: ["Fino a 4 ospiti", "Wi‑Fi", "Camino", "Cucina esterna", "Barbecue", "Animali ammessi"],
     ctaLabel: "Dettagli alloggio",
   },

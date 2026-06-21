@@ -2,42 +2,52 @@ import Image from "next/image";
 import Link from "next/link";
 import type { HomeContent } from "@/i18n/home-content";
 
-type Slide = { src: string; alt: string };
-
 type Props = {
-  content: HomeContent["gallery"];
-  slides: Slide[];
+  content: HomeContent["editorial"];
+  images: readonly [string, string, string];
   galleryHref: string;
 };
 
-export function HomeEditorialSection({ content, slides, galleryHref }: Props) {
+export function HomeEditorialSection({ content, images, galleryHref }: Props) {
   return (
-    <section className="home-gallery flat-section" aria-labelledby="home-gallery-title">
+    <section className="home-editorial flat-section" aria-labelledby="home-editorial-title">
       <div className="flat-wrap">
-        <div className="home-gallery__head">
-          <h2 id="home-gallery-title" className="flat-section__title">
+        <div className="home-editorial__head">
+          <h2 id="home-editorial-title" className="flat-section__title">
             {content.title}
           </h2>
-          <p className="flat-section__intro">{content.intro}</p>
-          <Link href={galleryHref} className="home-gallery__link">
-            {content.ctaLabel}
-          </Link>
+          <p className="flat-section__intro flat-section__intro--lead">{content.intro}</p>
         </div>
 
-        <ul className="home-gallery__grid">
-          {slides.map((slide) => (
-            <li key={slide.src} className="home-gallery__item">
-              <Image
-                src={slide.src}
-                alt={slide.alt}
-                width={640}
-                height={480}
-                className="home-gallery__img"
-                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-              />
+        <ul className="home-editorial__grid">
+          {content.blocks.map((block, i) => (
+            <li key={block.title} className="home-editorial__item">
+              <figure className="home-editorial__figure">
+                <div className="home-editorial__media">
+                  <Image
+                    src={images[i]}
+                    alt={block.imageAlt}
+                    width={640}
+                    height={800}
+                    className="home-editorial__img"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    priority={i === 0}
+                  />
+                </div>
+                <figcaption className="home-editorial__caption">
+                  <h3 className="home-editorial__story-title">{block.title}</h3>
+                  <p className="home-editorial__story-text">{block.body}</p>
+                </figcaption>
+              </figure>
             </li>
           ))}
         </ul>
+
+        <p className="home-editorial__cta">
+          <Link href={galleryHref} className="home-editorial__link">
+            {content.ctaLabel}
+          </Link>
+        </p>
       </div>
     </section>
   );
