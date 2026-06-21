@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Cormorant_Garamond, Plus_Jakarta_Sans } from "next/font/google";
 import { HERO_LCP_PRELOAD_SRC, HERO_LCP_SRCSET } from "@/config/site-images";
 import { getGeoMetaOther } from "@/config/site-location";
 import { getMetadataBase } from "@/lib/site-url";
@@ -11,6 +11,13 @@ const sans = Plus_Jakarta_Sans({
   display: "swap",
   adjustFontFallback: true,
   preload: true,
+});
+
+const serif = Cormorant_Garamond({
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-serif",
+  display: "swap",
+  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
@@ -31,7 +38,11 @@ export default function RootLayout({
   const geo = getGeoMetaOther();
 
   return (
-    <html lang="en" className={`${sans.variable} ${sans.className}`} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${sans.variable} ${serif.variable} ${sans.className}`}
+      suppressHydrationWarning
+    >
       <head>
         <meta name="geo.region" content={geo["geo.region"]} />
         <meta name="geo.placename" content={geo["geo.placename"]} />
@@ -49,10 +60,7 @@ export default function RootLayout({
           imageSizes="100vw"
           fetchPriority="high"
         />
-        <link rel="preconnect" href="https://www.youtube.com" />
-        <link rel="preconnect" href="https://www.youtube-nocookie.com" />
         <link rel="preconnect" href="https://www.google.com" />
-        <link rel="dns-prefetch" href="https://i.ytimg.com" />
       </head>
       <body>{children}</body>
     </html>

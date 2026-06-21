@@ -7,10 +7,12 @@ import type { Locale } from "@/i18n/config";
 import type { Messages } from "@/i18n/messages";
 import { SITE_CONTACT } from "@/config/site-contact";
 import {
+  bookNavHref,
   isHomePath,
   localePath,
-  MAIN_NAV_PAGES,
+  MAIN_NAV_ITEMS,
   SITE_PAGE_NAV_KEYS,
+  type SitePageKey,
 } from "@/config/site-routes";
 import { LangSwitch } from "./lang-switch";
 
@@ -24,10 +26,47 @@ const DESKTOP_QUERY = "(min-width: 1065px)";
 
 type HeaderTone = "hero" | "glass" | "opaque";
 
+type NavItem = {
+  href: string;
+  label: string;
+  external: boolean;
+};
+
+function isNavLinkActive(pathname: string, item: NavItem, locale: Locale): boolean {
+  if (item.external) return false;
+
+  const current = pathname.replace(/\/$/, "") || "/";
+  const target = item.href.replace(/\/$/, "") || "/";
+  const homeTarget = `/${locale}`;
+
+  if (target === homeTarget) {
+    return current === homeTarget;
+  }
+
+  return current === target || current.startsWith(`${target}/`);
+}
+
 function headerToneClass(tone: HeaderTone, menuOpen: boolean): string {
   if (menuOpen || tone === "opaque") return "site-header--opaque";
   if (tone === "glass") return "site-header--glass";
   return "site-header--over-hero";
+}
+
+function navLabel(t: Messages, page: SitePageKey): string {
+  return t.nav[SITE_PAGE_NAV_KEYS[page]];
+}
+
+function buildNav(locale: Locale, t: Messages): NavItem[] {
+  return MAIN_NAV_ITEMS.map((item) => {
+    if (item.kind === "book") {
+      return { href: bookNavHref(), label: t.nav.book, external: true };
+    }
+    return {
+      href: localePath(locale, item.page),
+      label: navLabel(t, item.page),
+      external: false,
+    };
+  });
 }
 
 export function SiteHeader({ locale, t }: Props) {
@@ -38,11 +77,9 @@ export function SiteHeader({ locale, t }: Props) {
   const menuBtnRef = useRef<HTMLButtonElement>(null);
 
   const toneClass = onHome ? headerToneClass(tone, menuOpen) : "site-header--opaque";
-
-  const nav = MAIN_NAV_PAGES.map((page) => ({
-    href: localePath(locale, page),
-    label: t.nav[SITE_PAGE_NAV_KEYS[page]],
-  }));
+  const nav = buildNav(locale, t);
+  const navStart = nav.slice(0, 3);
+  const navEnd = nav.slice(3);
 
   useEffect(() => {
     if (!onHome) {
@@ -110,28 +147,56 @@ export function SiteHeader({ locale, t }: Props) {
     menuBtnRef.current?.focus();
   }
 
+  function navLinkClassName(baseClass: string, item: NavItem): string {
+    const active = isNavLinkActive(pathname ?? "", item, locale);
+    return active ? `${baseClass} ${baseClass}--active` : baseClass;
+  }
+
+  function renderNavLink(item: NavItem, className: string, onClick?: () => void) {
+    const linkClass = navLinkClassName(className, item);
+    const active = isNavLinkActive(pathname ?? "", item, locale);
+
+    if (item.external) {
+      return (
+        <a
+          href={item.href}
+          className={linkClass}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={onClick}
+        >
+          {item.label}
+        </a>
+      );
+    }
+    return (
+      <Link
+        href={item.href}
+        className={linkClass}
+        aria-current={active ? "page" : undefined}
+        onClick={onClick}
+      >
+        {item.label}
+      </Link>
+    );
+  }
+
+  function renderNavList(items: NavItem[], className: string, onClick?: () => void) {
+    return (
+      <ul>
+        {items.map((item) => (
+          <li key={item.href}>
+            {renderNavLink(item, className, onClick)}
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
   return (
     <header className={`site-header ${toneClass}`}>
       <div className="site-header__inner">
-        <Link href={localePath(locale, "home")} className="site-header__brand">
-          {SITE_CONTACT.brandMark}
-        </Link>
-
-        <div className="site-header__desktop">
-          <nav className="site-header__nav" aria-label="Main">
-            <ul>
-              {nav.map(({ href, label }) => (
-                <li key={href}>
-                  <Link href={href} className="site-header__nav-link">
-                    {label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </div>
-
-        <div className="site-header__tools">
+        <div className="site-header__col site-header__col--start">
           <button
             ref={menuBtnRef}
             type="button"
@@ -143,6 +208,20 @@ export function SiteHeader({ locale, t }: Props) {
             <span className="site-header__menu-bars" aria-hidden="true" />
             <span className="sr-only">{menuOpen ? t.header.menuClose : t.header.menuOpen}</span>
           </button>
+
+          <nav className="site-header__nav site-header__nav--start" aria-label="Main">
+            {renderNavList(navStart, "site-header__nav-link")}
+          </nav>
+        </div>
+
+        <Link href={localePath(locale, "home")} className="site-header__brand">
+          {SITE_CONTACT.brandMark}
+        </Link>
+
+        <div className="site-header__col site-header__col--end">
+          <nav className="site-header__nav site-header__nav--end" aria-label="Secondary">
+            {renderNavList(navEnd, "site-header__nav-link")}
+          </nav>
           <LangSwitch currentLocale={locale} aria={t.langSwitcher.aria} />
         </div>
       </div>
@@ -162,11 +241,9 @@ export function SiteHeader({ locale, t }: Props) {
         <div className="site-header__mobile-menu-panel">
           <nav className="site-header__mobile-nav" aria-label="Main">
             <ul>
-              {nav.map(({ href, label }) => (
-                <li key={href}>
-                  <Link href={href} className="site-header__mobile-nav-link" onClick={closeMenu}>
-                    {label}
-                  </Link>
+              {nav.map((item) => (
+                <li key={item.href}>
+                  {renderNavLink(item, "site-header__mobile-nav-link", closeMenu)}
                 </li>
               ))}
             </ul>

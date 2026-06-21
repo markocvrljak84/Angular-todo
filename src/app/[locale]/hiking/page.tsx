@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { BookCta } from "@/components/book-cta";
 import { HikingRoutesSection } from "@/components/hiking-routes-section";
-import { PageBanner } from "@/components/page-banner";
+import { InnerPageHeader } from "@/components/inner-page-header";
 import { TasteOfVelebitSection } from "@/components/taste-of-velebit-section";
 import { getExperienceContent } from "@/i18n/experience-content";
 import { getHikingRoutes } from "@/i18n/hiking-routes";
 import { getMessages } from "@/i18n/messages";
+import { getPageHeaderContent } from "@/lib/inner-page-content";
 import {
   localeStaticParams,
   resolveLocale,
@@ -33,10 +34,11 @@ export default async function HikingPage({ params }: Props) {
   const locale = await resolveLocale(params);
   const t = getMessages(locale);
   const experience = getExperienceContent(locale);
+  const header = getPageHeaderContent(locale, "hiking");
 
   return (
     <>
-      <PageBanner locale={locale} page="hiking" />
+      <InnerPageHeader {...header} />
 
       <HikingRoutesSection content={getHikingRoutes(locale)} compact />
 

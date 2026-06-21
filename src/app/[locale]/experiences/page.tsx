@@ -1,0 +1,96 @@
+import type { Metadata } from "next";
+import { BookCta } from "@/components/book-cta";
+import { HikingRoutesSection } from "@/components/hiking-routes-section";
+import { InnerPageHeader } from "@/components/inner-page-header";
+import { NearbySection } from "@/components/nearby-section";
+import { NewsletterSignupSection } from "@/components/newsletter-signup-section";
+import { TasteOfVelebitSection } from "@/components/taste-of-velebit-section";
+import { getExperienceContent } from "@/i18n/experience-content";
+import { getExperiencesPageContent } from "@/i18n/experiences-page";
+import { getHikingRoutes } from "@/i18n/hiking-routes";
+import { getMessages } from "@/i18n/messages";
+import { getPageHeaderContent } from "@/lib/inner-page-content";
+import {
+  localeStaticParams,
+  resolveLocale,
+} from "@/lib/locale-page";
+import { buildPageMetadata } from "@/lib/page-metadata";
+
+export const dynamic = "force-static";
+
+export function generateStaticParams() {
+  return localeStaticParams();
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const locale = await resolveLocale(params);
+  return buildPageMetadata(locale, "experiences");
+}
+
+type Props = { params: Promise<{ locale: string }> };
+
+export default async function ExperiencesPage({ params }: Props) {
+  const locale = await resolveLocale(params);
+  const t = getMessages(locale);
+  const page = getExperiencesPageContent(locale);
+  const experience = getExperienceContent(locale);
+  const header = getPageHeaderContent(locale, "experiences");
+  const [hiking, sea, food, agro] = page.categories;
+
+  return (
+    <>
+      <InnerPageHeader {...header} />
+
+      <section id={hiking.id} className="flat-section flat-section--tint" aria-labelledby="exp-hiking">
+        <div className="flat-wrap">
+          <h2 id="exp-hiking" className="flat-section__title">{hiking.title}</h2>
+          <p className="flat-section__intro">{hiking.intro}</p>
+        </div>
+        <HikingRoutesSection content={getHikingRoutes(locale)} compact />
+      </section>
+
+      <section id={sea.id} className="flat-section" aria-labelledby="exp-sea">
+        <div className="flat-wrap">
+          <h2 id="exp-sea" className="flat-section__title">{sea.title}</h2>
+          <p className="flat-section__intro">{sea.intro}</p>
+        </div>
+        <NearbySection t={t} compact />
+      </section>
+
+      <section id={food.id} className="flat-section flat-section--tint" aria-labelledby="exp-food">
+        <div className="flat-wrap flat-wrap--narrow">
+          <h2 id="exp-food" className="flat-section__title">{food.title}</h2>
+          <p className="flat-section__intro">{food.intro}</p>
+          <ul className="experiences-food__list">
+            {t.home.itineraryDays.map((day) => (
+              <li key={day.label} className="experiences-food__item">
+                <strong>{day.label}</strong>
+                <span>{day.headline}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section id={agro.id} className="flat-section" aria-labelledby="exp-agro">
+        <div className="flat-wrap">
+          <h2 id="exp-agro" className="flat-section__title">{agro.title}</h2>
+          <p className="flat-section__intro">{agro.intro}</p>
+        </div>
+        <TasteOfVelebitSection content={experience.taste} />
+      </section>
+
+      <NewsletterSignupSection
+        content={experience.signup}
+        locale={locale}
+        source="experiences"
+      />
+
+      <BookCta variant="banner" label={t.header.bookCta} lead={t.cta.hikingLead} />
+    </>
+  );
+}

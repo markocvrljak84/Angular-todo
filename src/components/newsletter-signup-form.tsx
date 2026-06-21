@@ -10,7 +10,7 @@ import { localePath } from "@/config/site-routes";
 type Props = {
   content: ExperienceContent["signup"];
   locale: Locale;
-  source: "home" | "guides";
+  source: "home" | "guides" | "experiences";
 };
 
 export function NewsletterSignupForm({ content, locale, source }: Props) {

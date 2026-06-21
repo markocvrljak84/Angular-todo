@@ -1,8 +1,11 @@
 import type { Locale } from "@/i18n/config";
+import { BOOKING_URL } from "@/config/site-contact";
 
 /** Site page keys — one route per major section. */
 export const SITE_PAGE_KEYS = [
   "home",
+  "accommodation",
+  "experiences",
   "about",
   "gallery",
   "goodToKnow",
@@ -14,13 +17,19 @@ export const SITE_PAGE_KEYS = [
 
 export type SitePageKey = (typeof SITE_PAGE_KEYS)[number];
 
-export const MAIN_NAV_PAGES: SitePageKey[] = [
-  "home",
-  "about",
-  "gallery",
+/** Primary header navigation (Rezerviraj = external booking). */
+export const MAIN_NAV_ITEMS = [
+  { kind: "page" as const, page: "home" as const },
+  { kind: "page" as const, page: "accommodation" as const },
+  { kind: "page" as const, page: "experiences" as const },
+  { kind: "page" as const, page: "gallery" as const },
+  { kind: "page" as const, page: "about" as const },
+  { kind: "book" as const },
+];
+
+/** Secondary links shown in the footer. */
+export const FOOTER_NAV_PAGES: SitePageKey[] = [
   "goodToKnow",
-  "hiking",
-  "nearby",
   "guides",
   "contact",
 ];
@@ -28,6 +37,8 @@ export const MAIN_NAV_PAGES: SitePageKey[] = [
 /** URL segment after /[locale] (empty string = home). */
 export const SITE_PAGE_SEGMENTS: Record<SitePageKey, string> = {
   home: "",
+  accommodation: "accommodation",
+  experiences: "experiences",
   about: "about",
   gallery: "gallery",
   goodToKnow: "good-to-know",
@@ -40,9 +51,20 @@ export const SITE_PAGE_SEGMENTS: Record<SitePageKey, string> = {
 /** Maps nav label keys in messages.ts */
 export const SITE_PAGE_NAV_KEYS: Record<
   SitePageKey,
-  "home" | "about" | "gallery" | "goodToKnow" | "hiking" | "nearby" | "guides" | "contact"
+  | "home"
+  | "accommodation"
+  | "experiences"
+  | "about"
+  | "gallery"
+  | "goodToKnow"
+  | "hiking"
+  | "nearby"
+  | "guides"
+  | "contact"
 > = {
   home: "home",
+  accommodation: "accommodation",
+  experiences: "experiences",
   about: "about",
   gallery: "gallery",
   goodToKnow: "goodToKnow",
@@ -52,6 +74,12 @@ export const SITE_PAGE_NAV_KEYS: Record<
   contact: "contact",
 };
 
+/** Legacy routes → current routes (301). */
+export const LEGACY_ROUTE_REDIRECTS: Record<string, string> = {
+  hiking: "experiences",
+  nearby: "experiences",
+};
+
 export function localePath(locale: Locale, page: SitePageKey): string {
   const segment = SITE_PAGE_SEGMENTS[page];
   return segment ? `/${locale}/${segment}` : `/${locale}`;
@@ -59,4 +87,8 @@ export function localePath(locale: Locale, page: SitePageKey): string {
 
 export function isHomePath(pathname: string, locale: Locale): boolean {
   return pathname === `/${locale}` || pathname === `/${locale}/`;
+}
+
+export function bookNavHref(): string {
+  return BOOKING_URL;
 }

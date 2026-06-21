@@ -20,11 +20,11 @@ export const SITE_CONTACT = {
 
 /** Guide signup — FormSubmit forwards to host inbox (activate via confirmation email). */
 export const GUIDE_SIGNUP_FORM_ACTION =
-  `https://formsubmit.co/${encodeURIComponent(SITE_CONTACT.email)}` as const;
+  `https://formsubmit.co/${SITE_CONTACT.email}` as const;
 
-/** AJAX endpoint — submit without leaving the site (avoids baked-in _next URLs). */
+/** AJAX endpoint — `/ajax/{email}`, not `/{email}/ajax` (see formsubmit.co/ajax-documentation). */
 export const GUIDE_SIGNUP_FORM_AJAX_ACTION =
-  `${GUIDE_SIGNUP_FORM_ACTION}/ajax` as const;
+  `https://formsubmit.co/ajax/${SITE_CONTACT.email}` as const;
 
 export function telHref(phone: string = SITE_CONTACT.phone): string {
   return `tel:${phone.replace(/\s/g, "")}`;

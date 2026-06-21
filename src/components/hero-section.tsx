@@ -1,4 +1,5 @@
-import { BookCta } from "@/components/book-cta";
+import Link from "next/link";
+import { BOOKING_URL } from "@/config/site-contact";
 import { HeroCarouselControls } from "@/components/hero-carousel-controls";
 import {
   HERO_LCP_PRELOAD_SRC,
@@ -6,6 +7,7 @@ import {
   heroSlideWebpSrc,
   type MainCarouselFile,
 } from "@/config/site-images";
+import type { HomeContent } from "@/i18n/home-content";
 
 export type HeroSlideInput = {
   file: MainCarouselFile;
@@ -15,23 +17,17 @@ export type HeroSlideInput = {
 type Props = {
   slides: HeroSlideInput[];
   kicker: string;
-  scriptTitle: string;
-  centerLine: string;
-  bookCtaLabel: string;
+  hero: HomeContent["hero"];
+  experiencesHref: string;
   carouselPrevLabel: string;
   carouselNextLabel: string;
 };
 
-/**
- * Server-rendered hero — LCP image is a native <img> in the initial HTML
- * (no JS / hydration required). Carousel controls hydrate separately.
- */
 export function HeroSection({
   slides,
   kicker,
-  scriptTitle,
-  centerLine,
-  bookCtaLabel,
+  hero,
+  experiencesHref,
   carouselPrevLabel,
   carouselNextLabel,
 }: Props) {
@@ -92,10 +88,29 @@ export function HeroSection({
       <div className="hero-fs__content">
         <p className="hero-fs__kicker">{kicker}</p>
         <h1 id="hero-fs-title" className="hero-fs__title">
-          {scriptTitle}
+          {hero.headline}
         </h1>
-        <p className="hero-fs__tagline">{centerLine}</p>
-        <BookCta label={bookCtaLabel} variant="hero" />
+        <p className="hero-fs__tagline">{hero.subline}</p>
+
+        <ul className="hero-fs__facts">
+          {hero.facts.map((fact) => (
+            <li key={fact}>{fact}</li>
+          ))}
+        </ul>
+
+        <div className="hero-fs__actions">
+          <a
+            href={BOOKING_URL}
+            className="hero-fs__btn hero-fs__btn--primary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {hero.ctaBook}
+          </a>
+          <Link href={experiencesHref} className="hero-fs__btn hero-fs__btn--secondary">
+            {hero.ctaExperiences}
+          </Link>
+        </div>
       </div>
     </section>
   );

@@ -1,20 +1,24 @@
 import type { Metadata } from "next";
-import { BookCta } from "@/components/book-cta";
+import { AccommodationBriefSection } from "@/components/accommodation-brief-section";
 import { ExperienceDaySection } from "@/components/experience-day-section";
+import { ExperienceMapSection } from "@/components/experience-map-section";
+import { FaqSection } from "@/components/faq-section";
+import { FinalCtaSection } from "@/components/final-cta-section";
 import { HeroSection } from "@/components/hero-section";
+import { HomeEditorialSection } from "@/components/home-editorial-section";
 import { NewsletterSignupSection } from "@/components/newsletter-signup-section";
-import { TasteOfVelebitSection } from "@/components/taste-of-velebit-section";
-import { getExperienceContent } from "@/i18n/experience-content";
-import { getMessages } from "@/i18n/messages";
+import { WhySpecialSection } from "@/components/why-special-section";
+import { GALLERY_FILES, HOME_GALLERY_FILES, MAIN_CAROUSEL_IMAGES } from "@/config/site-images";
 import { localePath } from "@/config/site-routes";
-import { SITE_CONTACT } from "@/config/site-contact";
-import { MAIN_CAROUSEL_IMAGES } from "@/config/site-images";
+import { getExperienceContent } from "@/i18n/experience-content";
+import { getGoodToKnow } from "@/i18n/good-to-know";
+import { getHomeContent } from "@/i18n/home-content";
+import { getMessages } from "@/i18n/messages";
 import {
   localeStaticParams,
   resolveLocale,
 } from "@/lib/locale-page";
 import { buildPageMetadata } from "@/lib/page-metadata";
-import Link from "next/link";
 
 export const dynamic = "force-static";
 
@@ -36,6 +40,7 @@ type Props = { params: Promise<{ locale: string }> };
 export default async function HomePage({ params }: Props) {
   const locale = await resolveLocale(params);
   const t = getMessages(locale);
+  const home = getHomeContent(locale);
   const experience = getExperienceContent(locale);
 
   const heroSlides = MAIN_CAROUSEL_IMAGES.map((file, i) => ({
@@ -43,47 +48,44 @@ export default async function HomePage({ params }: Props) {
     alt: t.home.heroSlideAlts[i] ?? t.home.heroImageAlt,
   }));
 
-  const quickLinks = [
-    { page: "about" as const, label: t.nav.about },
-    { page: "gallery" as const, label: t.nav.gallery },
-    { page: "hiking" as const, label: t.nav.hiking },
-    { page: "nearby" as const, label: t.nav.nearby },
-    { page: "guides" as const, label: t.nav.guides },
-    { page: "contact" as const, label: t.nav.contact },
-  ];
+  const gallerySlides = HOME_GALLERY_FILES.map((file) => {
+    const index = GALLERY_FILES.indexOf(file);
+    const meta = index >= 0 ? t.gallery.images[index] : undefined;
+    return {
+      src: `/img/gallery/${file}`,
+      alt: meta?.alt ?? t.gallery.title,
+    };
+  });
 
   return (
     <>
       <HeroSection
         slides={heroSlides}
         kicker={t.home.heroBadge}
-        scriptTitle={SITE_CONTACT.heroTitle}
-        centerLine={t.home.heroCenterLine}
-        bookCtaLabel={t.header.bookCta}
+        hero={home.hero}
+        experiencesHref={localePath(locale, "experiences")}
         carouselPrevLabel={t.home.heroCarouselPrev}
         carouselNextLabel={t.home.heroCarouselNext}
       />
 
+      <WhySpecialSection content={home.whySpecial} />
+
       <ExperienceDaySection content={experience.day} />
 
-      <section className="flat-section" aria-labelledby="explore-title">
-        <div className="flat-wrap">
-          <h2 id="explore-title" className="flat-section__title">
-            {t.footer.exploreTitle}
-          </h2>
-          <ul className="home-quick-links">
-            {quickLinks.map(({ page, label }) => (
-              <li key={page}>
-                <Link href={localePath(locale, page)} className="home-quick-links__card">
-                  {label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
+      <HomeEditorialSection
+        content={home.gallery}
+        slides={gallerySlides}
+        galleryHref={localePath(locale, "gallery")}
+      />
 
-      <TasteOfVelebitSection content={experience.taste} />
+      <AccommodationBriefSection
+        content={home.accommodation}
+        accommodationHref={localePath(locale, "accommodation")}
+      />
+
+      <ExperienceMapSection content={home.map} />
+
+      <FaqSection content={getGoodToKnow(locale)} />
 
       <NewsletterSignupSection
         content={experience.signup}
@@ -92,11 +94,7 @@ export default async function HomePage({ params }: Props) {
         id="newsletter"
       />
 
-      <BookCta
-        variant="banner"
-        label={t.header.bookCta}
-        lead={t.cta.aboutLead}
-      />
+      <FinalCtaSection content={home.finalCta} />
     </>
   );
 }

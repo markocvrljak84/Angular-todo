@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { BookCta } from "@/components/book-cta";
-import { GoodToKnowSection } from "@/components/good-to-know-section";
-import { PageBanner } from "@/components/page-banner";
+import { FaqSection } from "@/components/faq-section";
+import { InnerPageHeader } from "@/components/inner-page-header";
 import { getGoodToKnow } from "@/i18n/good-to-know";
 import { getMessages } from "@/i18n/messages";
+import { getPageHeaderContent } from "@/lib/inner-page-content";
 import {
   localeStaticParams,
   resolveLocale,
@@ -31,12 +32,13 @@ export default async function GoodToKnowPage({ params }: Props) {
   const locale = await resolveLocale(params);
   const t = getMessages(locale);
   const content = getGoodToKnow(locale);
+  const header = getPageHeaderContent(locale, "goodToKnow");
 
   return (
     <>
-      <PageBanner locale={locale} page="goodToKnow" />
+      <InnerPageHeader {...header} />
 
-      <GoodToKnowSection content={content} compact />
+      <FaqSection content={content} compact />
 
       <BookCta
         variant="banner"

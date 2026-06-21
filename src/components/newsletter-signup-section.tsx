@@ -6,7 +6,7 @@ type Props = {
   content: ExperienceContent["signup"];
   locale: Locale;
   /** Where the signup form is shown — forwarded to FormSubmit for inbox context. */
-  source: "home" | "guides";
+  source: "home" | "guides" | "experiences";
   /** Optional section id for in-page anchors. */
   id?: string;
 };

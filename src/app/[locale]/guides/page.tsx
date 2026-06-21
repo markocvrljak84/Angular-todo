@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { GuidesSection } from "@/components/guides-section";
+import { InnerPageHeader } from "@/components/inner-page-header";
 import { NewsletterSignupSection } from "@/components/newsletter-signup-section";
-import { PageBanner } from "@/components/page-banner";
 import { getExperienceContent } from "@/i18n/experience-content";
+import { getPageHeaderContent } from "@/lib/inner-page-content";
 import {
   localeStaticParams,
   resolveLocale,
@@ -29,10 +30,11 @@ type Props = { params: Promise<{ locale: string }> };
 export default async function GuidesPage({ params }: Props) {
   const locale = await resolveLocale(params);
   const experience = getExperienceContent(locale);
+  const header = getPageHeaderContent(locale, "guides");
 
   return (
     <>
-      <PageBanner locale={locale} page="guides" />
+      <InnerPageHeader {...header} />
 
       <div className="flat-section flat-section--tint">
         <div className="flat-wrap">

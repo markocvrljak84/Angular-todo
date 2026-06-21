@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { AboutSection } from "@/components/about-section";
+import { AboutStorySection } from "@/components/about-story-section";
 import { BookCta } from "@/components/book-cta";
-import { FacilitiesGrid } from "@/components/facilities-grid";
-import { PageBanner } from "@/components/page-banner";
-import { getFacilityCategories } from "@/i18n/facility-categories";
+import { InnerPageHeader } from "@/components/inner-page-header";
+import { getAboutStory } from "@/i18n/about-story";
 import { getMessages } from "@/i18n/messages";
+import { getPageHeaderContent } from "@/lib/inner-page-content";
 import {
   localeStaticParams,
   resolveLocale,
@@ -31,11 +32,12 @@ type Props = { params: Promise<{ locale: string }> };
 export default async function AboutPage({ params }: Props) {
   const locale = await resolveLocale(params);
   const t = getMessages(locale);
-  const facilities = getFacilityCategories(locale);
+  const story = getAboutStory(locale);
+  const header = getPageHeaderContent(locale, "about");
 
   return (
     <>
-      <PageBanner locale={locale} page="about" />
+      <InnerPageHeader {...header} />
 
       <div className="flat-section flat-section--tint">
         <div className="flat-wrap">
@@ -43,13 +45,9 @@ export default async function AboutPage({ params }: Props) {
         </div>
       </div>
 
-      <BookCta variant="banner" label={t.header.bookCta} lead={t.cta.aboutLead} />
+      <AboutStorySection content={story} />
 
-      <div className="flat-section">
-        <div className="flat-wrap">
-          <FacilitiesGrid title={t.home.facilitiesTitle} categories={facilities} />
-        </div>
-      </div>
+      <BookCta variant="banner" label={t.header.bookCta} lead={t.cta.aboutLead} />
     </>
   );
 }

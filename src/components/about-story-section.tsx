@@ -1,0 +1,36 @@
+import type { AboutStoryContent } from "@/i18n/about-story";
+
+type Props = {
+  content: AboutStoryContent;
+};
+
+export function AboutStorySection({ content }: Props) {
+  return (
+    <section className="flat-section" aria-label="Hosts story">
+      <div className="flat-wrap flat-wrap--narrow">
+        {content.blocks.map((block) => (
+          <article key={block.title} className="about-story__block">
+            <h2 className="about-story__title">{block.title}</h2>
+            {block.paragraphs.map((p) => (
+              <p key={p.slice(0, 48)} className="about-story__p">
+                {p}
+              </p>
+            ))}
+          </article>
+        ))}
+
+        <aside className="about-story__press">
+          <p className="about-story__press-label">{content.press.label}</p>
+          <a
+            href={content.press.href}
+            className="about-story__press-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {content.press.linkText}
+          </a>
+        </aside>
+      </div>
+    </section>
+  );
+}

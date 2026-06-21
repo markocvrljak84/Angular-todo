@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { BookCta } from "@/components/book-cta";
-import { ContactSection } from "@/components/contact-section";
+import { FacilitiesGrid } from "@/components/facilities-grid";
 import { InnerPageHeader } from "@/components/inner-page-header";
+import { getFacilityCategories } from "@/i18n/facility-categories";
 import { getMessages } from "@/i18n/messages";
 import { getPageHeaderContent } from "@/lib/inner-page-content";
 import {
@@ -22,15 +23,16 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const locale = await resolveLocale(params);
-  return buildPageMetadata(locale, "contact");
+  return buildPageMetadata(locale, "accommodation");
 }
 
 type Props = { params: Promise<{ locale: string }> };
 
-export default async function ContactPage({ params }: Props) {
+export default async function AccommodationPage({ params }: Props) {
   const locale = await resolveLocale(params);
   const t = getMessages(locale);
-  const header = getPageHeaderContent(locale, "contact");
+  const facilities = getFacilityCategories(locale);
+  const header = getPageHeaderContent(locale, "accommodation");
 
   return (
     <>
@@ -38,11 +40,11 @@ export default async function ContactPage({ params }: Props) {
 
       <div className="flat-section flat-section--tint">
         <div className="flat-wrap">
-          <ContactSection t={t} locale={locale} />
+          <FacilitiesGrid title={t.home.facilitiesTitle} categories={facilities} />
         </div>
       </div>
 
-      <BookCta variant="banner" label={t.header.bookCta} lead={t.cta.contactLead} />
+      <BookCta variant="banner" label={t.header.bookCta} lead={t.cta.aboutLead} />
     </>
   );
 }

@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
+import { InnerPageHeader } from "@/components/inner-page-header";
 import { NearbySection } from "@/components/nearby-section";
-import { PageBanner } from "@/components/page-banner";
 import { getMessages } from "@/i18n/messages";
+import { getPageHeaderContent } from "@/lib/inner-page-content";
 import {
   localeStaticParams,
   resolveLocale,
@@ -28,12 +29,13 @@ type Props = { params: Promise<{ locale: string }> };
 export default async function NearbyPage({ params }: Props) {
   const locale = await resolveLocale(params);
   const t = getMessages(locale);
+  const header = getPageHeaderContent(locale, "nearby");
 
   return (
     <>
-      <PageBanner locale={locale} page="nearby" />
+      <InnerPageHeader {...header} />
 
-      <div className="flat-section flat-section--page-nearby">
+      <div className="flat-section">
         <NearbySection t={t} compact />
       </div>
     </>

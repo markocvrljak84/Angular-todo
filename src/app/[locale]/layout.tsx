@@ -6,6 +6,7 @@ import { LangHtml } from "@/components/lang-html";
 import { SeoJsonLd } from "@/components/seo-json-ld";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { ContactStrip } from "@/components/contact-strip";
 import { SITE_GEO } from "@/config/site-location";
 
 export function generateStaticParams() {
@@ -45,6 +46,7 @@ export default async function LocaleLayout({
       <div className="page-shell">
         <SiteHeader locale={locale} t={messages} />
         <main className="page-main">{children}</main>
+        <ContactStrip t={messages} locale={locale} />
         <SiteFooter t={messages} locale={locale} />
       </div>
     </>

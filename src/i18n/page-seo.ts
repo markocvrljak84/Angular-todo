@@ -10,9 +10,19 @@ const en: Record<SitePageKey, PageSeo> = {
       "Wake up beneath Bačić Kuk, swim the Adriatic before lunch, stargaze on Velebit. Stars Peak — mountain experience in Bačić Duliba, Croatia.",
   },
   about: {
-    title: "About Stars Peak — Bačić Duliba mountain chalet",
+    title: "About Marko & Ljiljana — Stars Peak on Velebit",
     description:
-      "Meet Stars Peak in Bačić Duliba — Velebit wilderness, Bačić Kuk views, fireside evenings and the Adriatic 30 minutes away. Facilities and hosts.",
+      "How Marko and Ljiljana rebuilt a wooden chalet into Stars Peak — a minimalist, off-grid mountain home with views of Bačić Kuk, featured in Jutarnji list.",
+  },
+  accommodation: {
+    title: "Accommodation — Stars Peak mountain chalet",
+    description:
+      "Up to 4 guests, Wi‑Fi, fireplace, outdoor kitchen and BBQ. Full facilities, house rules and practical details for your stay.",
+  },
+  experiences: {
+    title: "Experiences — hiking, sea & Velebit",
+    description:
+      "Hiking Bačić Kuk, Adriatic day trips, local food and future agrotourism — mountain and sea from Stars Peak, Bačić Duliba.",
   },
   gallery: {
     title: "Photo gallery — Stars Peak Velebit",
@@ -53,9 +63,19 @@ const hr: Record<SitePageKey, PageSeo> = {
       "Probudite se ispod Bačić kuka, kupajte se u Jadranu prije ručka, promatrajte zvijezde na Velebitu. Iskustvo planine u Bačić Dulibi, Hrvatska.",
   },
   about: {
-    title: "O Stars Peaku — planinska kuća Bačić Duliba",
+    title: "O Marku i Ljiljani — Stars Peak na Velebitu",
     description:
-      "Upoznajte Stars Peak u Bačić Dulibi — velebitska divljina, pogled na Bačić kuk, večeri uz vatru i Jadran na 30 minuta. Sadržaji i domaćini.",
+      "Kako su Marko i Ljiljana pretvorili drvenu kuću u Stars Peak — minimalistički, off-grid dom s pogledom na Bačić kuk, predstavljen u Jutarnjem listu.",
+  },
+  accommodation: {
+    title: "Smještaj — planinska kuća Stars Peak",
+    description:
+      "Do 4 gosta, Wi‑Fi, kamin, vanjska kuhinja i roštilj. Svi sadržaji, kućni red i praktične informacije za boravak.",
+  },
+  experiences: {
+    title: "Doživljaji — planinarenje, more i Velebit",
+    description:
+      "Uspon na Bačić kuk, izleti na Jadran, lokalna gastronomija i budući agroturizam — planina i more sa Stars Peaka.",
   },
   gallery: {
     title: "Galerija fotografija — Stars Peak Velebit",
@@ -96,9 +116,19 @@ const de: Record<SitePageKey, PageSeo> = {
       "Erwachen Sie unter Bačić Kuk, baden Sie mittags in der Adria, beobachten Sie Sterne am Velebit. Bergerlebnis in Bačić Duliba, Kroatien.",
   },
   about: {
-    title: "Über Stars Peak — Berghütte Bačić Duliba",
+    title: "Über Stars Peak — Marko & Ljiljana am Velebit",
     description:
-      "Stars Peak in Bačić Duliba — Velebit-Wildnis, Blick auf Bačić Kuk, Abende am Feuer, Adria in 30 Minuten. Ausstattung und Gastgeber.",
+      "Warum wir den Velebit gewählt haben und welches Berg-und-Meer-Erlebnis wir in Bačić Duliba teilen.",
+  },
+  accommodation: {
+    title: "Unterkunft — Berghaus Stars Peak",
+    description:
+      "Bis 4 Gäste, WLAN, Kamin, Außenküche und Grill. Ausstattung, Hausregeln und praktische Details.",
+  },
+  experiences: {
+    title: "Erlebnisse — Wandern, Meer & Velebit",
+    description:
+      "Wandern, Adria-Ausflüge, lokale Küche und Agrotourismus — Berg und Meer ab Stars Peak.",
   },
   gallery: {
     title: "Fotogalerie — Stars Peak Velebit",
@@ -139,9 +169,19 @@ const fr: Record<SitePageKey, PageSeo> = {
       "Réveillez-vous sous Bačić Kuk, baignez-vous en Adriatique avant le déjeuner. Expérience montagne à Bačić Duliba, Croatie.",
   },
   about: {
-    title: "À propos de Stars Peak — chalet Bačić Duliba",
+    title: "À propos — Marko & Ljiljana au Velebit",
     description:
-      "Stars Peak à Bačić Duliba — nature du Velebit, vue sur Bačić Kuk, soirées au feu, Adriatique à 30 minutes.",
+      "Pourquoi nous avons choisi le Velebit et l'expérience montagne-mer que nous partageons à Bačić Duliba.",
+  },
+  accommodation: {
+    title: "Hébergement — chalet Stars Peak",
+    description:
+      "Jusqu'à 4 personnes, Wi‑Fi, cheminée, cuisine extérieure et barbecue. Équipements et règlement.",
+  },
+  experiences: {
+    title: "Expériences — randonnée, mer & Velebit",
+    description:
+      "Randonnée, excursions en Adriatique, gastronomie locale et agrotourisme — montagne et mer depuis Stars Peak.",
   },
   gallery: {
     title: "Galerie photo — Stars Peak Velebit",
@@ -182,9 +222,19 @@ const it: Record<SitePageKey, PageSeo> = {
       "Svegliati sotto Bačić Kuk, nuota in Adriatico prima di pranzo. Esperienza di montagna a Bačić Duliba, Croazia.",
   },
   about: {
-    title: "Su Stars Peak — chalet Bačić Duliba",
+    title: "Su Stars Peak — Marko e Ljiljana sul Velebit",
     description:
-      "Stars Peak a Bačić Duliba — natura del Velebit, vista su Bačić Kuk, serate al fuoco, Adriatico a 30 minuti.",
+      "Perché abbiamo scelto il Velebit e l'esperienza montagna-mare che condividiamo a Bačić Duliba.",
+  },
+  accommodation: {
+    title: "Alloggio — chalet Stars Peak",
+    description:
+      "Fino a 4 ospiti, Wi‑Fi, camino, cucina esterna e barbecue. Servizi, regole e dettagli pratici.",
+  },
+  experiences: {
+    title: "Esperienze — trekking, mare & Velebit",
+    description:
+      "Escursioni, gite in Adriatico, gastronomia locale e agroturismo — montagna e mare da Stars Peak.",
   },
   gallery: {
     title: "Galleria fotografica — Stars Peak Velebit",

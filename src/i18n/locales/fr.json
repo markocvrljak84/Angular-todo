@@ -17,8 +17,10 @@
     },
     "nav": {
         "home": "Accueil",
-        "experience": "Votre journée",
+        "accommodation": "Hébergement",
+        "experiences": "Expériences",
         "about": "À propos",
+        "book": "Réserver",
         "gallery": "Galerie",
         "hiking": "Randonnée",
         "nearby": "À proximité",
@@ -110,10 +112,10 @@
     },
     "about": {
         "title": "À propos de ce lieu",
-        "lead": "Cette propriété unique se trouve au cœur du massif du Velebit et offre une magnifique vue sur la montagne. Malgré son cadre montagnard isolé, elle est proche de la côte adriatique — une demi-heure de route suffit pour rejoindre la mer, le meilleur de la montagne et de la côte.",
-        "p1": "Parfaite pour les amoureux de la nature, la région est un paradis pour la randonnée, l’escalade et le vélo. Dehors, les hôtes profitent d’une cuisine rustique avec barbecue et d’un foyer convivial sous les étoiles, avec vue sur les montagnes.",
-        "hostsNote": "Bonjour ! Nous sommes Marko et Ljiljana. En 2021, nous avons acheté un petit chalet dans les bois et l’avons entièrement rénové.",
-        "p2": "La maison se situe dans le parc naturel du Velebit, près de Karlobag et Baške Oštarije. À proximité : les sommets du Velebit, le parc national du Velebit septentrional et Paklenica, la baie de Zavratnica et l’île de Pag. idéal pour découvrir la diversité naturelle de la Croatie en un seul lieu.",
+        "lead": "Haut sur le Velebit, Marko et Ljiljana ont transformé un chalet en bois en Stars Peak — un refuge inhabituel et profondément personnel, avec vue sur Bačić Kuk et l'Adriatique à une demi-heure.",
+        "p1": "Un rêve mûri pendant dix ans, puis trois ans de travail de leurs mains : moins d'encombrement, plus de lumière et de bois, un rythme de vie plus lent à la montagne.",
+        "hostsNote": "Nous sommes Marko et Ljiljana — nous avons construit et gérons Stars Peak nous-mêmes ; nous sommes là pour vos questions avant et pendant le séjour.",
+        "p2": "Le chalet se situe dans le parc naturel du Velebit, près de Karlobag et Baške Oštarije — sommets, Paklenica, Zavratnica et Pag à portée de main.",
         "bookingLine": "La maison peut être réservée via le lien suivant :",
         "bookingLinkLabel": "Booking.com — Velebit Mountain Chalet Stars Peak",
         "sideImageAlt": "Velebit mountain chalet stars peak — logement"

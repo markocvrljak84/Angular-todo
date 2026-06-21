@@ -14,8 +14,10 @@ export type Messages = {
     };
     nav: {
         home: string;
-        experience: string;
+        accommodation: string;
+        experiences: string;
         about: string;
+        book: string;
         gallery: string;
         hiking: string;
         nearby: string;
@@ -119,8 +121,10 @@ const en: Messages = {
     },
     nav: {
         home: "Home",
-        experience: "Your day",
+        accommodation: "Accommodation",
+        experiences: "Experiences",
         about: "About",
+        book: "Book",
         gallery: "Gallery",
         hiking: "Hiking",
         nearby: "Near places",
@@ -211,13 +215,13 @@ const en: Messages = {
     about: {
         title: "About this place",
         lead:
-            "Stars Peak sits in Bačić Duliba with Bačić Kuk rising above the valley — a rare place where Velebit wilderness meets the Adriatic half an hour away.",
+            "High on Velebit, Marko and Ljiljana turned a wooden chalet into Stars Peak — an unusual, deeply personal retreat with views of Bačić Kuk and the Adriatic half an hour away.",
         p1:
-            "Mornings start with coffee and mountain views. By midday you can stand on a summit; by afternoon swim in Karlobag. Evenings belong to the fire pit, grill and a sky full of stars.",
+            "What began as a decade-long dream became three years of hands-on work: stripping back clutter, opening the space to light and wood, and shaping a slower rhythm of life on the mountain.",
         hostsNote:
-            "Hello! We are Marko and Ljiljana — your hosts at this holiday home, and we are happy to help with any questions you may have before or during your stay.",
+            "We are Marko and Ljiljana — we built and run Stars Peak ourselves and are here for your questions before and during your stay.",
         p2:
-            "The property is located within the Velebit Nature Park, close to Karlobag and Baške Oštarije. Nearby are numerous Velebit peaks, the Northern Velebit National Park and Paklenica National Park, as well as the stunning Zavratnica Bay and the island of Pag. This combination of mountain and coastal surroundings makes the location ideal for exploring the diversity of Croatia’s natural beauty in one place.",
+            "The chalet sits in Velebit Nature Park, near Karlobag and Baške Oštarije — with peaks, Paklenica, Zavratnica and Pag within easy reach. Mountain mornings and Adriatic afternoons, in one place.",
         bookingLine: "The house can be booked at the following link:",
         bookingLinkLabel: "Booking.com — Velebit Mountain Chalet Stars Peak",
         sideImageAlt: "Velebit mountain chalet Stars Peak — holiday home",
@@ -273,8 +277,10 @@ const hr: Messages = {
     },
     nav: {
         home: "Početna",
-        experience: "Jedan dan",
+        accommodation: "Smještaj",
+        experiences: "Doživljaji",
         about: "O nama",
+        book: "Rezerviraj",
         gallery: "Galerija",
         hiking: "Planinarenje",
         nearby: "U blizini",
@@ -365,13 +371,13 @@ const hr: Messages = {
     about: {
         title: "O ovom mjestu",
         lead:
-            "Stars Peak leži u Bačić Dulibi s Bačić kukom iznad doline — rijetko mjesto gdje se velebitska divljina i Jadran na pola sata vožnje susreću.",
+            "Visoko na Velebitu, Marko i Ljiljana pretvorili su drvenu kuću u Stars Peak — neobično, nesvakidašnje utočište s pogledom na Bačić kuk i Jadran na pola sata vožnje.",
         p1:
-            "Jutro počinje kavom i pogledom na planinu. Do podneva ste na vrhu; do popodneva u moru u Karlobagu. Večeri pripadaju vatri, roštilju i nebu punom zvijezda.",
+            "Ono što je počelo kao san od deset godina postalo je tri godine rada vlastitim rukama: manje suvišnih detalja, više svjetla i drva, sporiji ritam života na planini.",
         hostsNote:
-            "Pozdrav! Mi smo Marko i Ljiljana — vaši domaćini te vam stojimo na raspolaganju za sva pitanja prije i tijekom boravka.",
+            "Mi smo Marko i Ljiljana — Stars Peak smo sami izgradili i vodimo; stojimo vam na raspolaganju prije i tijekom boravka.",
         p2:
-            "Objekt se nalazi unutar Parka prirode Velebit, u blizini Karlobaga i Baških Oštarija. U neposrednoj okolici nalaze se brojni velebitski vrhovi, Nacionalni park Sjeverni Velebit i Nacionalni park Paklenica, kao i slikoviti zaljev Zavratnica te otok Pag. Kombinacija planinskog i primorskog ambijenta ovu lokaciju čini idealnom za istraživanje raznolikosti hrvatske prirode na jednom mjestu.",
+            "Kuća leži u Parku prirode Velebit, blizu Karlobaga i Baških Oštarija — s vrhovima, Paklenicom, Zavratnicom i Pagom na dohvat ruke. Planinsko jutro i jadransko popodne, na jednom mjestu.",
         bookingLine: "Kuću možete rezervirati na sljedećem linku:",
         bookingLinkLabel: "Booking.com — Velebit Mountain Chalet Stars Peak",
         sideImageAlt: "Velebit mountain chalet Stars Peak — smještaj",
@@ -427,8 +433,10 @@ const de: Messages = {
     },
     nav: {
         home: "Start",
-        experience: "Ihr Tag",
+        accommodation: "Unterkunft",
+        experiences: "Erlebnisse",
         about: "Über uns",
+        book: "Buchen",
         gallery: "Galerie",
         hiking: "Wandern",
         nearby: "In der Nähe",
@@ -519,13 +527,13 @@ const de: Messages = {
     about: {
         title: "Über dieses Haus",
         lead:
-            "Stars Peak liegt in Bačić Duliba mit Bačić Kuk über dem Tal — ein seltener Ort, an dem Velebit-Wildnis und Adria in einer halben Stunde zusammentreffen.",
+            "Hoch am Velebit haben Marko und Ljiljana eine Holzhütte in Stars Peak verwandelt — ein ungewöhnliches, persönliches Refugium mit Blick auf Bačić Kuk und Adria in einer halben Stunde.",
         p1:
-            "Der Morgen beginnt mit Kaffee und Bergblick. Mittags stehen Sie auf einem Gipfel; nachmittags baden Sie in Karlobag. Abende gehören Feuerstelle, Grill und Sternenhimmel.",
+            "Aus einem jahrzehntelangen Traum wurden drei Jahre Eigenarbeit: weniger Ballast, mehr Licht und Holz, ein langsamerer Rhythmus am Berg.",
         hostsNote:
-            "Hallo! Wir sind Marko und Ljiljana — Ihre Gastgeber in diesem Ferienhaus und gerne für alle Fragen vor und während Ihres Aufenthalts da.",
+            "Wir sind Marko und Ljiljana — wir haben Stars Peak selbst gebaut und führen es; bei Fragen vor und während Ihres Aufenthalts sind wir da.",
         p2:
-            "Das Haus liegt im Naturpark Velebit, nahe Karlobag und Baške Oštarije. In der Nähe: zahlreiche Velebit-Gipfel, der Nationalpark Nordlicher Velebit und Paklenica, die Bucht Zavratnica und die Insel Pag. ideal, um Kroatiens Naturvielfalt an einem Ort zu entdecken.",
+            "Das Haus liegt im Naturpark Velebit, nahe Karlobag und Baške Oštarije — Gipfel, Paklenica, Zavratnica und Pag in Reichweite.",
         bookingLine: "Das Haus kann über den folgenden Link gebucht werden:",
         bookingLinkLabel: "Booking.com — Velebit Mountain Chalet Stars Peak",
         sideImageAlt: "Velebit mountain chalet Stars Peak — Ferienhaus",

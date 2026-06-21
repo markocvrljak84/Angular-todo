@@ -17,8 +17,10 @@
   },
   "nav": {
     "home": "Home",
-    "experience": "La tua giornata",
+    "accommodation": "Alloggio",
+    "experiences": "Esperienze",
     "about": "Chi siamo",
+    "book": "Prenota",
     "gallery": "Galleria",
     "hiking": "Escursionismo",
     "nearby": "Nei dintorni",
@@ -110,10 +112,10 @@
   },
   "about": {
     "title": "Su questo posto",
-    "lead": "Questa proprietà unica si trova nel cuore del massiccio del Velebit e offre una splendida vista sulla montagna. Nonostante l’ambientazione montana appartata, è comodamente vicina alla costa adriatica — mezz’ora di auto e si raggiunge il mare, il meglio di montagna e costa.",
-    "p1": "Perfetta per gli amanti della natura, la zona è un paradiso per escursionismo, arrampicata e ciclismo. All’esterno gli ospiti trovano una cucina rustica con barbecue e un accogliente fuoco per le serate sotto le stelle, con vista sulle montagne.",
-    "hostsNote": "Ciao! Siamo Marko e Ljiljana. Nel 2021 abbiamo acquistato un piccolo cottage nel bosco e lo abbiamo ristrutturato da zero.",
-    "p2": "La casa si trova nel parco naturale del Velebit, vicino a Karlobag e Baške Oštarije. Nelle vicinanze: numerose cime del Velebit, il parco nazionale del Velebit settentrionale e Paklenica, la baia di Zavratnica e l’isola di Pag. ideale per esplorare la diversità naturale della Croazia in un solo luogo.",
+    "lead": "In cima al Velebit, Marko e Ljiljana hanno trasformato un chalet in legno in Stars Peak — un rifugio insolito e profondamente personale, con vista su Bačić Kuk e l'Adriatico a mezz'ora.",
+    "p1": "Un sogno maturato per dieci anni, poi tre anni di lavoro con le proprie mani: meno disordine, più luce e legno, un ritmo di vita più lento in montagna.",
+    "hostsNote": "Siamo Marko e Ljiljana — abbiamo costruito e gestiamo Stars Peak da soli; siamo a disposizione prima e durante il soggiorno.",
+    "p2": "Il chalet si trova nel parco naturale del Velebit, vicino a Karlobag e Baške Oštarije — cime, Paklenica, Zavratnica e Pag a portata di mano.",
     "bookingLine": "La casa può essere prenotata al seguente link:",
     "bookingLinkLabel": "Booking.com — Velebit Mountain Chalet Stars Peak",
     "sideImageAlt": "Velebit mountain chalet stars peak — alloggio"

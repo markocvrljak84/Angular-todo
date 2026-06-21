@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { BookCta } from "@/components/book-cta";
-import { FilmYoutubeSection } from "@/components/film-youtube-section";
 import { GalleryGridLightbox } from "@/components/gallery-grid-lightbox";
-import { PageBanner } from "@/components/page-banner";
+import { InnerPageHeader } from "@/components/inner-page-header";
 import { GALLERY_FILES } from "@/config/site-images";
 import { getMessages } from "@/i18n/messages";
+import { getPageHeaderContent } from "@/lib/inner-page-content";
 import {
   localeStaticParams,
   resolveLocale,
@@ -12,8 +12,6 @@ import {
 import { buildPageMetadata } from "@/lib/page-metadata";
 
 export const dynamic = "force-static";
-
-const FILM_YOUTUBE_ID = "QNfDBgtFSdc" as const;
 
 export function generateStaticParams() {
   return localeStaticParams();
@@ -33,6 +31,7 @@ type Props = { params: Promise<{ locale: string }> };
 export default async function GalleryPage({ params }: Props) {
   const locale = await resolveLocale(params);
   const t = getMessages(locale);
+  const header = getPageHeaderContent(locale, "gallery");
 
   if (t.gallery.images.length !== GALLERY_FILES.length) {
     throw new Error("gallery.images length must match GALLERY_FILES.");
@@ -40,7 +39,7 @@ export default async function GalleryPage({ params }: Props) {
 
   return (
     <>
-      <PageBanner locale={locale} page="gallery" />
+      <InnerPageHeader {...header} />
 
       <div className="flat-section flat-section--tint">
         <div className="flat-wrap">
@@ -67,8 +66,6 @@ export default async function GalleryPage({ params }: Props) {
       </div>
 
       <BookCta variant="banner" label={t.header.bookCta} lead={t.cta.galleryLead} />
-
-      <FilmYoutubeSection videoId={FILM_YOUTUBE_ID} />
     </>
   );
 }

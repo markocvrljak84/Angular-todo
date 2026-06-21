@@ -3,13 +3,13 @@ import type { Locale } from "@/i18n/config";
 import type { Messages } from "@/i18n/messages";
 import { SITE_CONTACT, telHref } from "@/config/site-contact";
 import {
+  FOOTER_NAV_PAGES,
   localePath,
-  MAIN_NAV_PAGES,
   SITE_PAGE_NAV_KEYS,
 } from "@/config/site-routes";
 
 export function SiteFooter({ t, locale }: { t: Messages; locale: Locale }) {
-  const links = MAIN_NAV_PAGES.map((page) => ({
+  const links = FOOTER_NAV_PAGES.map((page) => ({
     href: localePath(locale, page),
     label: t.nav[SITE_PAGE_NAV_KEYS[page]],
   }));
