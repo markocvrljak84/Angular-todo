@@ -163,27 +163,27 @@ const hr: ExperienceContent = {
       {
         time: "07:00",
         title: "Kava s pogledom na Bačić kuk",
-        body: "Para iz šalice dok jutarnje svjetlo obasjava stijenu iznad doline.",
+        body: "Prva jutarnja kava, dok svjetlo obasjava stijenu iznad doline.",
       },
       {
         time: "09:00",
         title: "Uspon na Bačić kuk",
-        body: "Staza kreće minutama od kuće — klasičan velebitski uspon s širokim pogledom.",
+        body: "Staza započinje nekoliko minuta od kuće. Korak po korak, pogled se otvara prema Velebitu.",
       },
       {
         time: "14:00",
         title: "Kupanje u Karlobagu",
-        body: "Pola sata nizbrdo i već ste u Jadranu — kristalno more prije ručka.",
+        body: "Pola sata vožnje niz prekrasne padine Velebita i već ste na plaži prije ručka.",
       },
       {
         time: "19:00",
         title: "Večera uz vatru",
-        body: "Roštilj na terasi, miris bora i tišina koju prekida samo pucketanje drva.",
+        body: "Povratak na planinu i odmor u hamocima dok se večera krčka na roštilju.",
       },
       {
         time: "22:00",
         title: "Promatranje Mliječne staze",
-        body: "Bez svjetlosnog onečišćenja — samo zvijezde, hamaci i greben u noćnoj tišini.",
+        body: "Bez svjetlosnog onečišćenja — samo zvijezde i bistro noćno nebo.",
       },
     ],
   },

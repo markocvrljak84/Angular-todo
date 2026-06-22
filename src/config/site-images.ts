@@ -153,10 +153,10 @@ export const HOME_IMAGES = {
   },
   editorial: {
     outdoorKitchen: "/img/ljetnja-kuhinja-3.jpg",
-    interior: "/img/gallery/740290390.jpg",
-    surroundings: "/img/okoliš-1.jpg",
+    interior: "/img/gallery/581480514_122107015833084437_6966149935686680015_n.jpg",
+    surroundings: "/img/velebit-na-dohvat-ruku.jpeg",
   },
-  accommodation: "/img/gallery/581480514_122107015833084437_6966149935686680015_n.jpg",
+  accommodation: "/img/gallery/740290390.jpg",
   experienceMap: {
     mountain: "/img/velebit.jpg",
     sea: "/img/zavratnica/uvala.jpeg",
