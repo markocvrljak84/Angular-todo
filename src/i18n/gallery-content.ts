@@ -20,23 +20,35 @@ const en: GalleryContent = {
   groups: [
     {
       id: "exterior",
-      title: "The chalet",
+      title: "Chalet exterior",
       images: {
-        "571275863_122102378865084437_4800487342368999167_n.jpg": {
-          alt: "Wooden chalet in the meadow below Bačić Kuk",
-          caption: "The chalet in Bačić Duliba",
+        "20260601_151354.jpg": {
+          alt: "Wooden chalet with covered porch and limestone peaks behind",
+          caption: "Chalet and ridge",
         },
-        "865932799.jpg": {
-          alt: "Stars Peak chalet on a clear summer day",
-          caption: "Summer at Stars Peak",
+        "20260601_161000.jpg": {
+          alt: "Side of the chalet with chimney, meadow and Velebit peaks",
+          caption: "Meadow and mountains",
         },
-        "669526272.jpg": {
-          alt: "Stars Peak retreat nestled in the Velebit forest",
-          caption: "Forest clearing",
+        "20260601_163522.jpg": {
+          alt: "Chalet in a forest clearing below jagged Velebit peaks",
+          caption: "Clearing and peaks",
+        },
+        "20260601_163627.jpg": {
+          alt: "Chalet and wooden deck with Bačić Kuk in the background",
+          caption: "Deck and peaks",
+        },
+        "20260601_163743.jpg": {
+          alt: "Chalet, terrace fire pit and limestone ridge",
+          caption: "Terrace and ridge",
         },
         "20260601_163937.jpg": {
           alt: "Chalet and terrace with the Velebit ridge behind",
           caption: "Chalet and deck",
+        },
+        "20260602_054801.jpg": {
+          alt: "Golden hour light on the chalet and limestone peaks",
+          caption: "Evening golden hour",
         },
         "20260602_055146.jpg": {
           alt: "Evening light on the chalet and limestone peaks",
@@ -185,23 +197,35 @@ const hr: GalleryContent = {
   groups: [
     {
       id: "exterior",
-      title: "Kuća",
+      title: "Kuća eksterijer",
       images: {
-        "571275863_122102378865084437_4800487342368999167_n.jpg": {
-          alt: "Drvena kuća na livadi ispod Bačić kuka",
-          caption: "Kuća u Bačić Dulibi",
+        "20260601_151354.jpg": {
+          alt: "Drvena kuća s natkrivenom terasom i litičastim vrhovima u pozadini",
+          caption: "Kuća i greben",
         },
-        "865932799.jpg": {
-          alt: "Stars Peak kuća na vedrom ljetnom danu",
-          caption: "Ljeto na Stars Peaku",
+        "20260601_161000.jpg": {
+          alt: "Bočni pogled na kuću s dimnjakom, livada i velebitski vrhovi",
+          caption: "Livada i planine",
         },
-        "669526272.jpg": {
-          alt: "Stars Peak utočište u šumi Velebita",
-          caption: "Šumska čistina",
+        "20260601_163522.jpg": {
+          alt: "Kuća u šumskoj čistini ispod oštrih vrhova Velebita",
+          caption: "Čistina i vrhovi",
+        },
+        "20260601_163627.jpg": {
+          alt: "Kuća i drveni deck s Bačić kukom u pozadini",
+          caption: "Deck i vrhovi",
+        },
+        "20260601_163743.jpg": {
+          alt: "Kuća, ognjište na terasi i litičasti greben",
+          caption: "Terasa i greben",
         },
         "20260601_163937.jpg": {
           alt: "Kuća i terasa s velebitskim grebenom u pozadini",
           caption: "Kuća i deck",
+        },
+        "20260602_054801.jpg": {
+          alt: "Kuća u zlatnom svjetlu s litičastim vrhovima Velebita",
+          caption: "Zlatni sat",
         },
         "20260602_055146.jpg": {
           alt: "Večernje svjetlo na kući i litičastim vrhovima",
@@ -350,23 +374,35 @@ const deProper: GalleryContent = {
   groups: [
     {
       id: "exterior",
-      title: "Die Hütte",
+      title: "Hütte Exterieur",
       images: {
-        "571275863_122102378865084437_4800487342368999167_n.jpg": {
-          alt: "Holzhütte auf der Wiese unterhalb von Bačić Kuk",
-          caption: "Die Hütte in Bačić Duliba",
+        "20260601_151354.jpg": {
+          alt: "Holzhütte mit überdachter Veranda und Kalkgipfeln im Hintergrund",
+          caption: "Hütte und Kamm",
         },
-        "865932799.jpg": {
-          alt: "Stars Peak Hütte an einem klaren Sommertag",
-          caption: "Sommer auf Stars Peak",
+        "20260601_161000.jpg": {
+          alt: "Seitenansicht der Hütte mit Schornstein, Wiese und Velebit-Gipfeln",
+          caption: "Wiese und Berge",
         },
-        "669526272.jpg": {
-          alt: "Stars Peak Rückzugsort im Velebit-Wald",
-          caption: "Waldlichtung",
+        "20260601_163522.jpg": {
+          alt: "Hütte in einer Waldlichtung unterhalb zerklüfteter Velebit-Gipfel",
+          caption: "Lichtung und Gipfel",
+        },
+        "20260601_163627.jpg": {
+          alt: "Hütte und Holzdeck mit Bačić Kuk im Hintergrund",
+          caption: "Deck und Gipfel",
+        },
+        "20260601_163743.jpg": {
+          alt: "Hütte, Feuerstelle auf der Terrasse und Kalkkamm",
+          caption: "Terrasse und Kamm",
         },
         "20260601_163937.jpg": {
           alt: "Hütte und Terrasse mit Velebit-Kamm im Hintergrund",
           caption: "Hütte und Deck",
+        },
+        "20260602_054801.jpg": {
+          alt: "Hütte im goldenen Licht mit Kalkgipfeln des Velebit",
+          caption: "Goldene Stunde",
         },
         "20260602_055146.jpg": {
           alt: "Abendlicht auf der Hütte und den Kalkgipfeln",
@@ -516,7 +552,7 @@ const fr: GalleryContent = {
     ...group,
     title:
       group.id === "exterior"
-        ? "Le chalet"
+        ? "Extérieur du chalet"
         : group.id === "outdoorLiving"
           ? "Vie en plein air"
           : group.id === "interior"
@@ -530,7 +566,7 @@ const it: GalleryContent = {
     ...group,
     title:
       group.id === "exterior"
-        ? "Il chalet"
+        ? "Esterno del chalet"
         : group.id === "outdoorLiving"
           ? "Vita all'aperto"
           : group.id === "interior"
