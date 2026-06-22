@@ -246,7 +246,7 @@ const en: Messages = {
     lightboxNext: "Next image",
     lightboxAria: "Enlarged photo gallery",
     lightboxOpenThumb: "Open larger view",
-    images: Array.from({ length: 37 }, (_, i) => ({
+    images: Array.from({ length: 25 }, (_, i) => ({
       alt: `Velebit mountain chalet Stars Peak — gallery photo ${i + 1}`,
       caption: `Gallery — ${i + 1}`,
     })),
@@ -415,7 +415,7 @@ const hr: Messages = {
     lightboxNext: "Sljedeća slika",
     lightboxAria: "Povećani prikaz galerije",
     lightboxOpenThumb: "Otvori veći prikaz",
-    images: Array.from({ length: 37 }, (_, i) => ({
+    images: Array.from({ length: 25 }, (_, i) => ({
       alt: `Velebit mountain chalet Stars Peak — galerija, fotografija ${i + 1}`,
       caption: `Galerija — ${i + 1}`,
     })),
@@ -584,7 +584,7 @@ const de: Messages = {
     lightboxNext: "Nächstes Bild",
     lightboxAria: "Vergrößerte Galerie",
     lightboxOpenThumb: "Größere Ansicht öffnen",
-    images: Array.from({ length: 37 }, (_, i) => ({
+    images: Array.from({ length: 25 }, (_, i) => ({
       alt: `Velebit mountain chalet Stars Peak — Galeriefoto ${i + 1}`,
       caption: `Galerie — ${i + 1}`,
     })),

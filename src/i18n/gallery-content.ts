@@ -62,11 +62,27 @@ const en: GalleryContent = {
     },
     {
       id: "outdoorLiving",
-      title: "Outdoor living",
+      title: "Outdoor kitchen",
       images: {
-        "20260601_161334.jpg": {
-          alt: "Fire pit on the wooden terrace",
-          caption: "Terrace fire pit",
+        "20260604_131523.jpg": {
+          alt: "Outdoor kitchen with stone hearth and mountain view",
+          caption: "Summer kitchen",
+        },
+        "20260604_131859-1.jpg": {
+          alt: "Table set with caprese salad and fruit at the outdoor kitchen",
+          caption: "Lunch outdoors",
+        },
+        "20260604_131914-1.jpg": {
+          alt: "Outdoor dining with summer kitchen and hillside views",
+          caption: "Al fresco dining",
+        },
+        "20260604_131944.jpg": {
+          alt: "Fresh bread, peaches and caprese on the terrace table",
+          caption: "Terrace spread",
+        },
+        "20260604_173046.jpg": {
+          alt: "Fire burning in the outdoor kitchen fireplace",
+          caption: "Kitchen fireplace",
         },
         "20260604_131924.jpg": {
           alt: "Summer kitchen and outdoor dining area",
@@ -84,15 +100,11 @@ const en: GalleryContent = {
           alt: "Fresh local food on the terrace table",
           caption: "Table on the terrace",
         },
-        "whatsapp-2026-06-04-084649.jpeg": {
-          alt: "Horse passing the outdoor shelter",
-          caption: "Horse by the shelter",
-        },
       },
     },
     {
       id: "interior",
-      title: "Indoor",
+      title: "Chalet interior",
       images: {
         "581480514_122107015833084437_6966149935686680015_n.jpg": {
           alt: "Living room with fireplace and wooden stairs",
@@ -109,14 +121,6 @@ const en: GalleryContent = {
         "740270926.jpg": {
           alt: "Wing chair and books by the forest window",
           caption: "Armchair nook",
-        },
-        "866610628.jpg": {
-          alt: "Cosy corner at dusk with mountain views",
-          caption: "Evening indoors",
-        },
-        "812803341.jpg": {
-          alt: "Armchair facing Bačić Kuk through the glass wall",
-          caption: "View from the armchair",
         },
         "20260601_160317.jpg": {
           alt: "Open-plan living and loft with peak views",
@@ -239,11 +243,27 @@ const hr: GalleryContent = {
     },
     {
       id: "outdoorLiving",
-      title: "Vanjski život",
+      title: "Vanjska kuhinja",
       images: {
-        "20260601_161334.jpg": {
-          alt: "Ognjište na drvenoj terasi",
-          caption: "Ognjište na terasi",
+        "20260604_131523.jpg": {
+          alt: "Vanjska kuhinja s kamenim ognjištem i pogledom na planinu",
+          caption: "Ljetnja kuhinja",
+        },
+        "20260604_131859-1.jpg": {
+          alt: "Stol s caprese salatom i voćem u vanjskoj kuhinji",
+          caption: "Ručak na otvorenom",
+        },
+        "20260604_131914-1.jpg": {
+          alt: "Vanjski blagovanje s ljetnjom kuhinjom i pogledom na brdo",
+          caption: "Blagovanje na otvorenom",
+        },
+        "20260604_131944.jpg": {
+          alt: "Svježi kruh, breskve i caprese na stolu na terasi",
+          caption: "Stol na terasi",
+        },
+        "20260604_173046.jpg": {
+          alt: "Vatra u kaminu vanjske kuhinje",
+          caption: "Kamin vanjske kuhinje",
         },
         "20260604_131924.jpg": {
           alt: "Ljetnja kuhinja i vanjski blagovaonski kutak",
@@ -259,17 +279,13 @@ const hr: GalleryContent = {
         },
         "20260604_132024.jpg": {
           alt: "Svježa hrana na stolu na terasi",
-          caption: "Stol na terasi",
-        },
-        "whatsapp-2026-06-04-084649.jpeg": {
-          alt: "Konj prolazi pored vanjskog sjenika",
-          caption: "Konj kod sjenika",
+          caption: "Hrana na terasi",
         },
       },
     },
     {
       id: "interior",
-      title: "Interijer",
+      title: "Kuća interijer",
       images: {
         "581480514_122107015833084437_6966149935686680015_n.jpg": {
           alt: "Dnevni boravak s kaminom i drvenim stubištem",
@@ -286,14 +302,6 @@ const hr: GalleryContent = {
         "740270926.jpg": {
           alt: "Fotelja i knjige uz prozor s pogledom na šumu",
           caption: "Fotelja uz prozor",
-        },
-        "866610628.jpg": {
-          alt: "Ugodan kutak u sumrak s pogledom na planinu",
-          caption: "Interijer u sumrak",
-        },
-        "812803341.jpg": {
-          alt: "Fotelja s pogledom na Bačić kuk kroz staklenu stijenu",
-          caption: "Pogled iz fotelje",
         },
         "20260601_160317.jpg": {
           alt: "Otvoreni dnevni boravak i galerija s pogledom na vrh",
@@ -416,11 +424,27 @@ const deProper: GalleryContent = {
     },
     {
       id: "outdoorLiving",
-      title: "Draußen leben",
+      title: "Außenküche",
       images: {
-        "20260601_161334.jpg": {
-          alt: "Feuerstelle auf der Holzterrasse",
-          caption: "Feuerstelle auf der Terrasse",
+        "20260604_131523.jpg": {
+          alt: "Außenküche mit Steinkamin und Bergblick",
+          caption: "Sommerküche",
+        },
+        "20260604_131859-1.jpg": {
+          alt: "Gedeckter Tisch mit Caprese und Obst in der Außenküche",
+          caption: "Mittagessen draußen",
+        },
+        "20260604_131914-1.jpg": {
+          alt: "Essen im Freien mit Sommerküche und Hügelblick",
+          caption: "Al fresco",
+        },
+        "20260604_131944.jpg": {
+          alt: "Frisches Brot, Pfirsiche und Caprese auf dem Terrassentisch",
+          caption: "Terrassentisch",
+        },
+        "20260604_173046.jpg": {
+          alt: "Feuer im Kamin der Außenküche",
+          caption: "Küchenkamin",
         },
         "20260604_131924.jpg": {
           alt: "Sommerküche und Essbereich im Freien",
@@ -438,15 +462,11 @@ const deProper: GalleryContent = {
           alt: "Frische lokale Speisen auf dem Terrassentisch",
           caption: "Tisch auf der Terrasse",
         },
-        "whatsapp-2026-06-04-084649.jpeg": {
-          alt: "Pferd am Außenshelter vorbeigehend",
-          caption: "Pferd am Shelter",
-        },
       },
     },
     {
       id: "interior",
-      title: "Innen",
+      title: "Hütte Interieur",
       images: {
         "581480514_122107015833084437_6966149935686680015_n.jpg": {
           alt: "Wohnzimmer mit Kamin und Holztreppe",
@@ -463,14 +483,6 @@ const deProper: GalleryContent = {
         "740270926.jpg": {
           alt: "Sessel und Bücher am Fenster mit Waldblick",
           caption: "Sesselnische",
-        },
-        "866610628.jpg": {
-          alt: "Gemütliche Ecke in der Dämmerung mit Bergblick",
-          caption: "Abend drinnen",
-        },
-        "812803341.jpg": {
-          alt: "Sessel mit Blick auf Bačić Kuk durch die Glaswand",
-          caption: "Blick vom Sessel",
         },
         "20260601_160317.jpg": {
           alt: "Offener Wohnbereich und Galerie mit Gipfelblick",
@@ -554,9 +566,9 @@ const fr: GalleryContent = {
       group.id === "exterior"
         ? "Extérieur du chalet"
         : group.id === "outdoorLiving"
-          ? "Vie en plein air"
+          ? "Cuisine extérieure"
           : group.id === "interior"
-            ? "Intérieur"
+            ? "Intérieur du chalet"
             : "Nature & vues",
   })),
 };
@@ -568,9 +580,9 @@ const it: GalleryContent = {
       group.id === "exterior"
         ? "Esterno del chalet"
         : group.id === "outdoorLiving"
-          ? "Vita all'aperto"
+          ? "Cucina esterna"
           : group.id === "interior"
-            ? "Interni"
+            ? "Interno del chalet"
             : "Natura & panorami",
   })),
 };

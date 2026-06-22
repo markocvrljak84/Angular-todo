@@ -16,30 +16,18 @@ export const GALLERY_GROUPS: Readonly<
 > = {
   exterior: [
     "20260601_151354.jpg",
-    "20260601_161000.jpg",
-    "20260601_163522.jpg",
-    "20260601_163627.jpg",
     "20260601_163743.jpg",
-    "20260601_163937.jpg",
-    "20260602_054801.jpg",
-    "20260602_055146.jpg",
-    "20260613_121546.jpg",
   ],
   outdoorLiving: [
-    "20260601_161334.jpg",
-    "20260604_131924.jpg",
+    "20260604_131914-1.jpg",
     "20260604_132039.jpg",
-    "20260604_173207.jpg",
     "20260604_132024.jpg",
-    "whatsapp-2026-06-04-084649.jpeg",
   ],
   interior: [
     "581480514_122107015833084437_6966149935686680015_n.jpg",
     "585009655_122107017075084437_1671659401079838438_n.jpg",
     "740290390.jpg",
     "740270926.jpg",
-    "866610628.jpg",
-    "812803341.jpg",
     "20260601_160317.jpg",
     "Velebit-11.jpg",
     "578265540_122104807869084437_5111680495021054907_n.jpg",
@@ -95,9 +83,14 @@ export const GALLERY_FILES_ON_DISK = [
   "20260601_163937.jpg",
   "20260602_054801.jpg",
   "20260602_055146.jpg",
+  "20260604_131523.jpg",
+  "20260604_131859-1.jpg",
+  "20260604_131914-1.jpg",
   "20260604_131924.jpg",
+  "20260604_131944.jpg",
   "20260604_132024.jpg",
   "20260604_132039.jpg",
+  "20260604_173046.jpg",
   "20260604_173207.jpg",
   "20260613_121546.jpg",
   "20260615_052145.jpg",
@@ -156,9 +149,9 @@ export const HOME_GALLERY_FILES = [
 /** Homepage editorial photography — paths under /public/img */
 export const HOME_IMAGES = {
   whySpecial: {
-    mountain: "/img/gallery/20260602_055146.jpg",
+    mountain: "/img/velebit-more.jpeg",
     sea: "/img/zavratnica/uvala.jpeg",
-    stars: "/img/zvjezdano-nebo.jpeg",
+    stars: "/img/zvijezdano-nebo.jpg",
   },
   editorial: {
     outdoorKitchen: "/img/ljetnja-kuhinja-3.jpg",
