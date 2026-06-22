@@ -284,8 +284,8 @@ const hr: Messages = {
     menuClose: "Zatvori izbornik",
   },
   cta: {
-    aboutLead: "Spremni za vrh, more i zvijezde? Provjerite datume i rezervirajte boravak.",
-    galleryLead: "Osjećaj je još jači uživo. Provjerite datume i rezervirajte boravak u planinama.",
+    aboutLead: "Posjetite Velebitske vrhove, Jadransko more i čisto zvijezdano nebo? Provjerite datume i rezervirajte boravak.",
+    galleryLead: "Velebit je jedinstvena planina u Hrvatskoj. Provjerite datume i rezervirajte boravak u planinama.",
     hikingLead: "Krenite u planinarenje s Stars Peaka kao polazištem — rezervirajte smještaj.",
     goodToKnowLead: "Rezervirajte boravak na Booking.com.",
     contactLead: "Želite rezervirati online? Dostupnost i cijene su uvijek ažurne.",
@@ -396,7 +396,7 @@ const hr: Messages = {
   about: {
     title: "O ovom mjestu",
     lead:
-      "Visoko na Velebitu, Marko i Ljiljana pretvorili su drvenu kuću u Stars Peak — neobično, nesvakidašnje utočište s pogledom na Bačić kuk i Jadran na pola sata vožnje.",
+      "Visoko na Velebitu, Marko i Ljiljana pretvorili su drvenu kuću u Stars Peak — neobično, nesvakidašnje utočište s pogledom na Bačić kuk.",
     p1:
       "Ono što je počelo kao san od deset godina postalo je tri godine rada vlastitim rukama: manje suvišnih detalja, više svjetla i drva, sporiji ritam života na planini.",
     hostsNote:

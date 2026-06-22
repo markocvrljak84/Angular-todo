@@ -75,8 +75,8 @@ const hr: AboutStoryContent = {
     {
       title: "Zašto smo odabrali Velebit",
       paragraphs: [
-        "Ideja o kući na planini nije došla preko noći. Desetak godina vraćala se — ponekad tiho, ponekad jasno. Planinarenje s Ljiljanom na Velebitu preraslo je u ljubav prema grebenu, vjetru i širokom horizontu.",
-        "Emisije o sporijem, hrabrijem načinu života — među njima i BBC-jev serijal Bena Foglea New Lives in the Wild — otvorile su perspektivu koju nismo mogli zanemariti: dom u kojem priroda nije vikend bijeg, nego dio svakodnevice.",
+        "Ideja o kući na planini nije došla preko noći. Desetak godina je ta ideja dolazila, odlazila, pa se vraćala. Planinarenje na Velebitu preraslo je u ljubav prema toj planini, osjećaju slobode i širokim vidicima i horizontu.",
+        "Emisije o sporijem, održivijem načinu života — među njima i BBC-jev serijal Bena Foglea New Lives in the Wild — otvorile su perspektivu koju nismo mogli zanemariti: dom u kojem priroda nije vikend bijeg, nego dio svakodnevice.",
       ],
     },
     {
@@ -89,29 +89,29 @@ const hr: AboutStoryContent = {
     {
       title: "Gradili smo zajedno, sloj po sloj",
       paragraphs: [
-        "Sve što smo mogli napravili sami — vodovod, WC, kuhinju, dnevni boravak, spavaonicu i potkrovlje — a profesionalcima prepustili električnu instalaciju, solarni sustav, PVC stolariju i stepenice.",
-        "Podjela uloga bila je prirodna: Marko alatima, rezanjem, brušenjem i montažom; Ljiljana financijama, planiranjem troškova i dizajnom. Ono što smo željeli za sebe nudimo i gostima — manje suvišnih detalja, više svjetla, topline i drva.",
+        "Sve što smo mogli napravili sami — vodovodni sistem, WC, kuhinju, dnevni boravak, spavaonicu i potkrovlje — a profesionalcima prepustili električnu instalaciju, solarni sustav, PVC stolariju i stepenice.",
+        "Podjela uloga bila je prirodna: Marko se bavio alatima, rezanjem, brušenjem i montažom; Ljiljana financijama, planiranjem troškova i dizajnom. Ono što smo željeli za sebe nudimo i gostima — manje suvišnih detalja, više svjetla, topline i drva.",
       ],
     },
     {
       title: "Jednostavnost, drvo i pogled na Bačić kuk",
       paragraphs: [
-        "Vodila nas je misao o jednostavnosti koja je rezultat promišljanja, a ne trenda: otvoriti prostor, pustiti svjetlo, a galeriju i staklenu stijenu koristiti kao oslonac za sve ostalo.",
-        "Drvo se nametnulo samo po sebi — okruženi smo prirodom pa i interijer slijedi vanjski svijet. Dnevni boravak je mjesto odmora nakon posla, filmova i planova — uvijek s Bačić kukom u kadru.",
+        "Vodila nas je misao o jednostavnosti koja je rezultat promišljanja, a ne trenda: otvoriti prostor, pustiti svjetlo, a galeriju i staklenu stijenu koristiti kao oslonac za sve buduće ideje.",
+        "Drvo se nametnulo samo po sebi — okruženi smo prirodom pa i interijer slijedi vanjski svijet. Dnevni boravak je mjesto odmora nakon posla.",
       ],
     },
     {
       title: "Održivost na Velebitu",
       paragraphs: [
-        "Na ovoj nadmorskoj visini održivost nije etiketa — jedini je način da moderne pogodnosti dođu na planinu. Kišnica služi za kuhanje, piće i tuširanje kroz filtraciju. Solarni sustav napaja kuću; agregat pokreće bojler i pećnicu kad treba. Satelitski internet osigurava pouzdan Wi‑Fi.",
+        "Na ovoj nadmorskoj visini održivost nije etiketa — jedini je način da moderne pogodnosti dođu na planinu. Kišnica služi za kuhanje, piće i tuširanje. Solarni sustav napaja kuću; agregat pokreće bojler i pećnicu kad treba. Satelitski internet osigurava pouzdan Wi‑Fi.",
         "Drvene površine i krov traže redovitu brigu — planina je velikodušna, ali traži pažnju.",
       ],
     },
     {
       title: "Iskustvo koje dijelimo s vama",
       paragraphs: [
-        "Svaki boravak malo je drugačiji. Ono što ostaje isto jest usredotočenost — sporiji ritam bez gradske buke i rokova. Posebno nije samo veliki uspon, nego kava na izlasku sunca, tišina nakon mraka i Jadran na dohvat ruke.",
-        "Gosti često kažu da su lokacija i kuća neobični i nesvakidašnji — u najboljem smislu. Stars Peak je odluka koja se potvrđuje svakim povratkom.",
+        "Svaki boravak malo je drugačiji. Ono što ostaje isto jest usredotočenost — sporiji ritam bez gradske buke i gužve. Posebnost nije samo impozantna stijena Bačić kuka, nego kava na izlasku sunca, tišina nakon mraka i Jadran na dohvat ruke.",
+        "Prijatelji nam često kažu da su lokacija i kuća neobični i nesvakidašnji — u najboljem smislu. Stars Peak je odluka koja se potvrđuje svakim povratkom.",
         "Savjet onima koji sanjaju dom u prirodi: strpljenje, redoviti odlasci u planinu, jaka odluka — i nikada ne odustajati.",
       ],
     },
@@ -178,50 +178,50 @@ const fr: AboutStoryContent = {
   blocks: en.blocks.map((b, i) =>
     i === 0
       ? {
-          title: "Pourquoi nous avons choisi le Velebit",
-          paragraphs: [
-            "L'idée d'une maison de montagne a mûri une dizaine d'années — randonnées sur le Velebit et envie d'un rythme plus lent.",
-            "Des émissions comme New Lives in the Wild de Ben Fogle ont confirmé notre vision : la nature au quotidien, pas seulement le week-end.",
-          ],
-        }
+        title: "Pourquoi nous avons choisi le Velebit",
+        paragraphs: [
+          "L'idée d'une maison de montagne a mûri une dizaine d'années — randonnées sur le Velebit et envie d'un rythme plus lent.",
+          "Des émissions comme New Lives in the Wild de Ben Fogle ont confirmé notre vision : la nature au quotidien, pas seulement le week-end.",
+        ],
+      }
       : i === 1
         ? {
-            title: "Une maison avec une histoire",
-            paragraphs: [
-              "En 2021, achat d'un chalet en bois solide mais mal aménagé — cuisine encombrée, vieux meubles, douze lits de randonneurs.",
-              "Trois ans de rénovation. Le plus dur : la logistique en montagne.",
-            ],
-          }
+          title: "Une maison avec une histoire",
+          paragraphs: [
+            "En 2021, achat d'un chalet en bois solide mais mal aménagé — cuisine encombrée, vieux meubles, douze lits de randonneurs.",
+            "Trois ans de rénovation. Le plus dur : la logistique en montagne.",
+          ],
+        }
         : i === 2
           ? {
-              title: "Construit ensemble",
-              paragraphs: [
-                "Salle de bain, cuisine et combles faits main ; électricité, solaire et menuiserie par des pros.",
-                "Marko : outils et montage. Ljiljana : finances et design.",
-              ],
-            }
+            title: "Construit ensemble",
+            paragraphs: [
+              "Salle de bain, cuisine et combles faits main ; électricité, solaire et menuiserie par des pros.",
+              "Marko : outils et montage. Ljiljana : finances et design.",
+            ],
+          }
           : i === 3
             ? {
-                title: "Simplicité, bois et vue sur Bačić Kuk",
-                paragraphs: [
-                  "Minimalisme réfléchi — lumière, galerie et mur de verre, bois partout.",
-                  "Le salon face à Bačić Kuk est notre refuge.",
-                ],
-              }
+              title: "Simplicité, bois et vue sur Bačić Kuk",
+              paragraphs: [
+                "Minimalisme réfléchi — lumière, galerie et mur de verre, bois partout.",
+                "Le salon face à Bačić Kuk est notre refuge.",
+              ],
+            }
             : i === 4
               ? {
-                  title: "Vivre off-grid",
-                  paragraphs: [
-                    "Eau de pluie filtrée, solaire, générateur pour le four, internet satellite.",
-                  ],
-                }
+                title: "Vivre off-grid",
+                paragraphs: [
+                  "Eau de pluie filtrée, solaire, générateur pour le four, internet satellite.",
+                ],
+              }
               : {
-                  title: "L'expérience que nous partageons",
-                  paragraphs: [
-                    "Un rythme plus lent, montagne et mer le même jour. Les voyageurs trouvent l'endroit singulier — c'est voulu.",
-                    "Patience, décision ferme — et ne jamais abandonner.",
-                  ],
-                }
+                title: "L'expérience que nous partageons",
+                paragraphs: [
+                  "Un rythme plus lent, montagne et mer le même jour. Les voyageurs trouvent l'endroit singulier — c'est voulu.",
+                  "Patience, décision ferme — et ne jamais abandonner.",
+                ],
+              }
   ),
   press: {
     label: "Dans la presse",
