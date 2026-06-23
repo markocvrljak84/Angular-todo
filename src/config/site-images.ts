@@ -131,11 +131,8 @@ export function heroSlideWebpSrc(file: MainCarouselFile): string {
   return `/img/main-carousel/${file.replace(/\.jpg$/i, "-1280.webp")}`;
 }
 
-/** Filename in /public/img/about-us — host photo (contact page). */
+/** Filename in /public/img/about-us — host photo (About page). */
 export const ABOUT_US_IMAGE = "38410942.jpg" as const;
-
-/** Chalet exterior on the About page sidebar. */
-export const ABOUT_PAGE_IMAGE = "20260602_055146.jpg" as const;
 
 /** Curated gallery for the home page (experience-focused). */
 export const HOME_GALLERY_FILES = [

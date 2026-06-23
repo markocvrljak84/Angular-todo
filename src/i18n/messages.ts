@@ -72,7 +72,6 @@ export type Messages = {
     bookingLine: string;
     bookingLinkLabel: string;
     sideImageAlt: string;
-    sideImageCaption: string;
   };
   gallery: {
     title: string;
@@ -262,9 +261,7 @@ const en: Messages = {
       "The chalet sits in Velebit Nature Park, near Karlobag and Baške Oštarije — with peaks, Paklenica, Zavratnica and Pag within easy reach. Mountain mornings and Adriatic afternoons, in one place.",
     bookingLine: "The house can be booked at the following link:",
     bookingLinkLabel: "Booking.com — Velebit Mountain Chalet Stars Peak",
-    sideImageAlt: "Evening light on the chalet and limestone peaks on Velebit",
-    sideImageCaption:
-      "Stars Peak is a retreat on Velebit — harmony and design in step with the mountain.",
+    sideImageAlt: "Marko and Ljiljana, hosts of Stars Peak on Velebit",
   },
   gallery: {
     title: "Gallery",
@@ -460,9 +457,7 @@ const hr: Messages = {
       "Kuća leži u Parku prirode Velebit, blizu Karlobaga i Baških Oštarija — s vrhovima, Paklenicom, Zavratnicom i Pagom na dohvat ruke. Planinsko jutro i jadransko popodne, na jednom mjestu.",
     bookingLine: "Kuću možete rezervirati na sljedećem linku:",
     bookingLinkLabel: "Booking.com — Velebit Mountain Chalet Stars Peak",
-    sideImageAlt: "Večernje svjetlo na kući i vapnenačkim vrhovima Velebita",
-    sideImageCaption:
-      "Stars Peak je utočište na Velebitu — sklad i dizajn u ritmu planine.",
+    sideImageAlt: "Marko i Ljiljana, domaćini Stars Peaka na Velebitu",
   },
   gallery: {
     title: "Galerija",
@@ -658,9 +653,7 @@ const de: Messages = {
       "Das Haus liegt im Naturpark Velebit, nahe Karlobag und Baške Oštarije — Gipfel, Paklenica, Zavratnica und Pag in Reichweite.",
     bookingLine: "Das Haus kann über den folgenden Link gebucht werden:",
     bookingLinkLabel: "Booking.com — Velebit Mountain Chalet Stars Peak",
-    sideImageAlt: "Abendlicht auf dem Chalet und den Kalksteinspitzen am Velebit",
-    sideImageCaption:
-      "Stars Peak ist ein Refugium am Velebit — Harmonie und Design im Einklang mit dem Berg.",
+    sideImageAlt: "Marko und Ljiljana, Gastgeber von Stars Peak am Velebit",
   },
   gallery: {
     title: "Galerie",

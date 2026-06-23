@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ABOUT_PAGE_IMAGE } from "@/config/site-images";
+import { ABOUT_US_IMAGE } from "@/config/site-images";
 import type { Messages } from "@/i18n/messages";
 
 type Props = {
@@ -24,15 +24,15 @@ export function AboutSection({ t }: Props) {
         <aside className="flat-about__side flat-about-layout__media" aria-label={t.about.sideImageAlt}>
           <div className="flat-about__side-media">
             <Image
-              src={`/img/gallery/${ABOUT_PAGE_IMAGE}`}
+              src={`/img/about-us/${ABOUT_US_IMAGE}`}
               alt={t.about.sideImageAlt}
               width={1920}
-              height={1440}
+              height={1802}
               className="flat-about__side-img"
               sizes="(max-width: 799px) 100vw, 42vw"
             />
           </div>
-          <p className="flat-about__hosts-note">{t.about.sideImageCaption}</p>
+          <p className="flat-about__hosts-note">{t.about.hostsNote}</p>
         </aside>
       </div>
     </section>
