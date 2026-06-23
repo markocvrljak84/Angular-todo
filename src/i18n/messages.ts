@@ -254,7 +254,7 @@ const en: Messages = {
   contact: {
     title: "Contact",
     lead:
-      "Our team is happy to help with availability, directions and planning your stay on Velebit. Reach us by email, phone or WhatsApp — or book directly online.",
+      "We are happy to help with availability, directions and planning your stay on Velebit. Reach us by email, phone or WhatsApp — or book directly online.",
     introPrefix: "Reach us by phone or email, or visit link for ",
     introBookingLink: "booking",
     nameLabel: "Name",
