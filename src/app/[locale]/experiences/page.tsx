@@ -14,6 +14,7 @@ import {
   localeStaticParams,
   resolveLocale,
 } from "@/lib/locale-page";
+import { PageJsonLd } from "@/components/page-json-ld";
 import { buildPageMetadata } from "@/lib/page-metadata";
 
 export const dynamic = "force-static";
@@ -43,6 +44,8 @@ export default async function ExperiencesPage({ params }: Props) {
 
   return (
     <>
+      <PageJsonLd locale={locale} messages={t} page="experiences" />
+
       <InnerPageHeader {...header} />
 
       <section id={hiking.id} className="flat-section flat-section--tint" aria-labelledby="exp-hiking">

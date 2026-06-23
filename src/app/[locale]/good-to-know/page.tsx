@@ -9,6 +9,7 @@ import {
   localeStaticParams,
   resolveLocale,
 } from "@/lib/locale-page";
+import { PageJsonLd } from "@/components/page-json-ld";
 import { buildPageMetadata } from "@/lib/page-metadata";
 
 export const dynamic = "force-static";
@@ -36,6 +37,8 @@ export default async function GoodToKnowPage({ params }: Props) {
 
   return (
     <>
+      <PageJsonLd locale={locale} messages={t} page="goodToKnow" />
+
       <InnerPageHeader {...header} />
 
       <FaqSection content={content} compact />

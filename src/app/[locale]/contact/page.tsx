@@ -8,6 +8,7 @@ import {
   localeStaticParams,
   resolveLocale,
 } from "@/lib/locale-page";
+import { PageJsonLd } from "@/components/page-json-ld";
 import { buildPageMetadata } from "@/lib/page-metadata";
 
 export const dynamic = "force-static";
@@ -34,6 +35,8 @@ export default async function ContactPage({ params }: Props) {
 
   return (
     <>
+      <PageJsonLd locale={locale} messages={t} page="contact" />
+
       <InnerPageHeader {...header} />
 
       <div className="flat-section flat-section--tint flat-section--contact">

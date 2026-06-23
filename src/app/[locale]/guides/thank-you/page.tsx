@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BrochureDownloadButton } from "@/components/brochure-download-button";
+import { PageJsonLd } from "@/components/page-json-ld";
 import { localePath } from "@/config/site-routes";
 import { getExperienceContent } from "@/i18n/experience-content";
+import { getMessages } from "@/i18n/messages";
 import {
   localeStaticParams,
   resolveLocale,
@@ -32,10 +34,23 @@ type Props = { params: Promise<{ locale: string }> };
 
 export default async function NewsletterThankYouPage({ params }: Props) {
   const locale = await resolveLocale(params);
+  const t = getMessages(locale);
   const content = getExperienceContent(locale).signup;
 
   return (
-    <section className="newsletter-thanks flat-section flat-section--page">
+    <>
+      <PageJsonLd
+        locale={locale}
+        messages={t}
+        page="guides"
+        breadcrumbItems={[
+          { name: t.nav.home, page: "home" },
+          { name: t.nav.guides, page: "guides" },
+          { name: content.thankYouTitle },
+        ]}
+      />
+
+      <section className="newsletter-thanks flat-section flat-section--page">
       <div className="flat-wrap flat-wrap--narrow">
         <div className="newsletter-signup__panel newsletter-signup__panel--success">
           <p className="newsletter-thanks__badge" aria-hidden="true">
@@ -56,5 +71,6 @@ export default async function NewsletterThankYouPage({ params }: Props) {
         </div>
       </div>
     </section>
+    </>
   );
 }
