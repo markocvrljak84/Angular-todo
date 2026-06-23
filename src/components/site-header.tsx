@@ -7,7 +7,6 @@ import type { Locale } from "@/i18n/config";
 import type { Messages } from "@/i18n/messages";
 import { SITE_CONTACT } from "@/config/site-contact";
 import {
-  bookNavHref,
   isHomePath,
   localePath,
   MAIN_NAV_ITEMS,
@@ -57,16 +56,11 @@ function navLabel(t: Messages, page: SitePageKey): string {
 }
 
 function buildNav(locale: Locale, t: Messages): NavItem[] {
-  return MAIN_NAV_ITEMS.map((item) => {
-    if (item.kind === "book") {
-      return { href: bookNavHref(), label: t.nav.book, external: true };
-    }
-    return {
-      href: localePath(locale, item.page),
-      label: navLabel(t, item.page),
-      external: false,
-    };
-  });
+  return MAIN_NAV_ITEMS.map((item) => ({
+    href: localePath(locale, item.page),
+    label: navLabel(t, item.page),
+    external: false,
+  }));
 }
 
 export function SiteHeader({ locale, t }: Props) {

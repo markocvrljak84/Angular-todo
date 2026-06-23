@@ -145,9 +145,9 @@ const en: ExperienceContent = {
     privacyNote:
       "We only use your email for the brochure and occasional Stars Peak updates. Unsubscribe anytime.",
     brochureLanguageNote: "PDF brochure is in Croatian.",
-    thankYouTitle: "You're in — enjoy the guide",
+    thankYouTitle: "You're in — thank you",
     successMessage:
-      "Thanks for signing up. Your Velebit brochure is ready — download it below and start planning.",
+      "Thanks for subscribing. Download the Velebit brochure below — we'll also send guides and news by email.",
     downloadLabel: "Download Velebit brochure (PDF)",
     backToGuidesLabel: "Back to guides",
     backToHomeLabel: "Home",
@@ -248,9 +248,9 @@ const hr: ExperienceContent = {
     privacyNote:
       "E-mail koristimo samo za brošuru i povremene novosti o Stars Peaku. Odjava je uvijek moguća.",
     brochureLanguageNote: "PDF brošura na hrvatskom jeziku.",
-    thankYouTitle: "Uspješna prijava — uživajte u vodiču",
+    thankYouTitle: "Uspješna prijava — hvala",
     successMessage:
-      "Hvala na prijavi. Vaša Velebit brošura spremna je za preuzimanje — kliknite gumb ispod i krenite u planiranje.",
+      "Hvala na prijavi. Preuzmite Velebit brošuru gumbom ispod — novosti šaljemo vam i na e-mail.",
     downloadLabel: "Preuzmi Velebit brošuru (PDF)",
     backToGuidesLabel: "Natrag na vodiče",
     backToHomeLabel: "Početna",
@@ -351,9 +351,9 @@ const de: ExperienceContent = {
     privacyNote:
       "Wir nutzen Ihre E-Mail nur für die Broschüre und gelegentliche Stars-Peak-Updates. Abmeldung jederzeit möglich.",
     brochureLanguageNote: "PDF-Broschüre auf Kroatisch.",
-    thankYouTitle: "Geschafft — viel Spaß beim Planen",
+    thankYouTitle: "Geschafft — vielen Dank",
     successMessage:
-      "Danke für Ihre Anmeldung. Die Velebit-Broschüre steht bereit — laden Sie sie unten herunter.",
+      "Danke für Ihre Anmeldung. Laden Sie die Velebit-Broschüre unten herunter — Neuigkeiten senden wir auch per E-Mail.",
     downloadLabel: "Velebit-Broschüre herunterladen (PDF)",
     backToGuidesLabel: "Zurück zu Guides",
     backToHomeLabel: "Startseite",
@@ -405,9 +405,9 @@ const fr: ExperienceContent = {
     privacyNote:
       "Votre e-mail sert uniquement à la brochure et aux nouvelles occasionnelles de Stars Peak.",
     brochureLanguageNote: "Brochure PDF en croate.",
-    thankYouTitle: "Inscription confirmée",
+    thankYouTitle: "Inscription confirmée — merci",
     successMessage:
-      "Merci pour votre inscription. La brochure Velebit est prête — téléchargez-la ci-dessous.",
+      "Merci pour votre inscription. Téléchargez la brochure Velebit ci-dessous — nous vous enverrons aussi des nouvelles par e-mail.",
     downloadLabel: "Télécharger la brochure Velebit (PDF)",
     backToGuidesLabel: "Retour aux guides",
     backToHomeLabel: "Accueil",
@@ -459,9 +459,9 @@ const it: ExperienceContent = {
     privacyNote:
       "Usiamo la tua e-mail solo per la brochure e aggiornamenti occasionali su Stars Peak.",
     brochureLanguageNote: "Brochure PDF in croato.",
-    thankYouTitle: "Iscrizione completata",
+    thankYouTitle: "Iscrizione completata — grazie",
     successMessage:
-      "Grazie per l'iscrizione. La brochure Velebit è pronta — scaricala qui sotto.",
+      "Grazie per l'iscrizione. Scarica la brochure Velebit qui sotto — novità e guide arriveranno anche via e-mail.",
     downloadLabel: "Scarica brochure Velebit (PDF)",
     backToGuidesLabel: "Torna alle guide",
     backToHomeLabel: "Home",

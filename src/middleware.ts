@@ -5,6 +5,12 @@ import { LEGACY_ROUTE_REDIRECTS } from "@/config/site-routes";
 
 export function middleware(request: NextRequest) {
   const path = request.nextUrl.pathname;
+
+  // API and Next internals must not get a locale prefix.
+  if (path.startsWith("/api") || path.startsWith("/_next")) {
+    return NextResponse.next();
+  }
+
   const segments = path.split("/").filter(Boolean);
   const first = segments[0];
 

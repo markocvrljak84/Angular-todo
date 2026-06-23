@@ -1,6 +1,5 @@
-import Image from "next/image";
 import type { Messages } from "@/i18n/messages";
-import { ABOUT_US_IMAGE } from "@/config/site-images";
+import { ContactForm } from "@/components/contact-form";
 import { getGoogleMapsUrls } from "@/config/contact-map";
 import { BOOKING_URL, SITE_CONTACT, whatsappHref } from "@/config/site-contact";
 import type { Locale } from "@/i18n/config";
@@ -67,16 +66,7 @@ export function ContactSection({ t, locale }: Props) {
           </p>
         </div>
 
-        <aside className="contact-editorial__media" aria-label={t.about.sideImageAlt}>
-          <Image
-            src={`/img/about-us/${ABOUT_US_IMAGE}`}
-            alt={t.about.sideImageAlt}
-            width={1920}
-            height={1802}
-            className="contact-editorial__img"
-            sizes="(max-width: 799px) 100vw, 58vw"
-          />
-        </aside>
+        <ContactForm locale={locale} labels={t.forms} contactForm={t.contactForm} />
       </div>
 
       <div className="flat-contact-map" aria-labelledby="contact-map-heading">

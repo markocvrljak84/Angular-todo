@@ -19,10 +19,24 @@ type Props = {
   submittingLabel: string;
   submitErrorMessage: string;
   privacyNote: string;
-  source: "home" | "guides" | "experiences";
 };
 
-export function NewsletterSignupForm({
+async function triggerDownload(downloadUrl: string, downloadName: string) {
+  try {
+    const response = await fetch(downloadUrl);
+    const blob = await response.blob();
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = downloadName;
+    link.click();
+    URL.revokeObjectURL(url);
+  } catch {
+    window.open(downloadUrl, "_blank", "noopener,noreferrer");
+  }
+}
+
+export function BrochureDownloadForm({
   locale,
   labels,
   emailLabel,
@@ -31,10 +45,9 @@ export function NewsletterSignupForm({
   submittingLabel,
   submitErrorMessage,
   privacyNote,
-  source,
 }: Props) {
   const formStartedAt = useMemo(() => Date.now(), []);
-  const [status, setStatus] = useState<"idle" | "submitting" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "submitting" | "error" | "success">("idle");
   const [fieldErrors, setFieldErrors] = useState<EmailFieldErrors>({});
   const [serverError, setServerError] = useState<string | null>(null);
   const [gdprConsent, setGdprConsent] = useState(false);
@@ -71,20 +84,23 @@ export function NewsletterSignupForm({
     setStatus("submitting");
 
     try {
-      const response = await fetch("/api/newsletter", {
+      const response = await fetch("/api/brochure", {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
           email,
           locale,
-          source,
           gdprConsent,
           honeypot: honeypotRef.current?.value ?? "",
           formStartedAt,
         }),
       });
 
-      const payload = (await response.json()) as { error?: string };
+      const payload = (await response.json()) as {
+        error?: string;
+        downloadUrl?: string;
+        downloadName?: string;
+      };
 
       if (!response.ok) {
         const mapped = emailFormServerErrorToFields(payload.error ?? "unknown", labels);
@@ -95,7 +111,15 @@ export function NewsletterSignupForm({
         return;
       }
 
-      window.location.href = `/${locale}/guides/thank-you`;
+      if (!payload.downloadUrl || !payload.downloadName) {
+        setServerError(submitErrorMessage);
+        setStatus("error");
+        return;
+      }
+
+      await triggerDownload(payload.downloadUrl, payload.downloadName);
+      setFieldErrors({});
+      setStatus("success");
     } catch {
       setStatus("error");
       setServerError(submitErrorMessage);
@@ -103,12 +127,12 @@ export function NewsletterSignupForm({
   }
 
   return (
-    <form className="newsletter-signup__form site-form" onSubmit={handleSubmit} noValidate>
+    <form className="site-form site-form--brochure" onSubmit={handleSubmit} noValidate>
       <div className="site-form__honeypot" aria-hidden="true">
-        <label htmlFor={`newsletter-hp-${source}`}>Leave blank</label>
+        <label htmlFor="brochure-hp">Leave blank</label>
         <input
           ref={honeypotRef}
-          id={`newsletter-hp-${source}`}
+          id="brochure-hp"
           type="text"
           name="company"
           tabIndex={-1}
@@ -116,33 +140,24 @@ export function NewsletterSignupForm({
         />
       </div>
 
-      <label className="newsletter-signup__label site-form__label" htmlFor={`newsletter-email-${source}`}>
+      <label className="site-form__label" htmlFor="brochure-email">
         {emailLabel}
       </label>
-      <div className="newsletter-signup__row">
-        <input
-          id={`newsletter-email-${source}`}
-          className="newsletter-signup__input site-form__input"
-          type="email"
-          name="email"
-          required
-          autoComplete="email"
-          placeholder={emailPlaceholder}
-          aria-invalid={fieldErrors.email ? true : undefined}
-          aria-describedby={fieldErrors.email ? `newsletter-email-error-${source}` : undefined}
-          disabled={status === "submitting"}
-          onChange={() => clearFieldError("email")}
-        />
-        <button
-          type="submit"
-          className="newsletter-signup__btn site-form__submit"
-          disabled={status === "submitting"}
-        >
-          {status === "submitting" ? submittingLabel : submitLabel}
-        </button>
-      </div>
+      <input
+        id="brochure-email"
+        className="site-form__input"
+        type="email"
+        name="email"
+        required
+        autoComplete="email"
+        placeholder={emailPlaceholder}
+        aria-invalid={fieldErrors.email ? true : undefined}
+        aria-describedby={fieldErrors.email ? "brochure-email-error" : undefined}
+        disabled={status === "submitting" || status === "success"}
+        onChange={() => clearFieldError("email")}
+      />
       {fieldErrors.email ? (
-        <p id={`newsletter-email-error-${source}`} className="site-form__field-error" role="alert">
+        <p id="brochure-email-error" className="site-form__field-error" role="alert">
           {fieldErrors.email}
         </p>
       ) : null}
@@ -157,24 +172,38 @@ export function NewsletterSignupForm({
           }}
           required
           aria-invalid={fieldErrors.gdpr ? true : undefined}
-          aria-describedby={fieldErrors.gdpr ? `newsletter-gdpr-error-${source}` : undefined}
-          disabled={status === "submitting"}
+          aria-describedby={fieldErrors.gdpr ? "brochure-gdpr-error" : undefined}
+          disabled={status === "submitting" || status === "success"}
         />
         <span>{labels.gdprConsent}</span>
       </label>
       {fieldErrors.gdpr ? (
-        <p id={`newsletter-gdpr-error-${source}`} className="site-form__field-error" role="alert">
+        <p id="brochure-gdpr-error" className="site-form__field-error" role="alert">
           {fieldErrors.gdpr}
         </p>
       ) : null}
 
+      <button
+        type="submit"
+        className="newsletter-signup__download site-form__submit"
+        disabled={status === "submitting" || status === "success"}
+      >
+        {status === "submitting" ? submittingLabel : submitLabel}
+      </button>
+
       {serverError ? (
-        <p className="newsletter-signup__error site-form__error" role="alert">
+        <p className="site-form__error" role="alert">
           {serverError}
         </p>
       ) : null}
 
-      <p className="newsletter-signup__privacy site-form__privacy">{privacyNote}</p>
+      {status === "success" ? (
+        <p className="site-form__success" role="status">
+          {labels.downloadStarted}
+        </p>
+      ) : null}
+
+      <p className="site-form__privacy">{privacyNote}</p>
     </form>
   );
 }

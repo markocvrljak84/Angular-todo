@@ -39,11 +39,17 @@ const MOSAIC_GALLERY_FILES = [
   "20260601_161000.jpg",
   "20260601_163937.jpg",
   "20260601_163743.jpg",
+  "stars-peak-chalet-deck.jpg",
+  "20260604_132039-2.jpg",
+  "20260604_131933.jpg",
   "20260604_173207.jpg",
   "20260604_131859-1.jpg",
   "20260604_132024.jpg",
 ] as const;
 const INTERIOR_MOSAIC_FILES = [
+  "812160813.jpg",
+  "812809121.jpg",
+  "740290390.jpg",
   "812808252.jpg",
   "740270926.jpg",
   "581480514_122107015833084437_6966149935686680015_n.jpg",
@@ -143,6 +149,13 @@ export default async function GalleryPage({ params }: Props) {
             mosaicSlides={mosaicSlides}
             trailingSections={interiorSections}
             trailingMosaicSlides={interiorMosaicSlides}
+            lightboxLabels={{
+              close: t.gallery.lightboxClose,
+              prev: t.gallery.lightboxPrev,
+              next: t.gallery.lightboxNext,
+              aria: t.gallery.lightboxAria,
+              openThumb: t.gallery.lightboxOpenThumb,
+            }}
           />
         </div>
       </div>

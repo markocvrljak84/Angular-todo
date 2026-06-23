@@ -16,7 +16,6 @@ export const GALLERY_GROUPS: Readonly<
 > = {
   exterior: [
     "20260601_151354.jpg",
-    "20260601_163743.jpg",
   ],
   outdoorLiving: [
     "20260604_131914-1.jpg",
@@ -90,6 +89,8 @@ export const GALLERY_FILES_ON_DISK = [
   "20260604_131944.jpg",
   "20260604_132024.jpg",
   "20260604_132039.jpg",
+  "20260604_132039-2.jpg",
+  "20260604_131933.jpg",
   "20260604_173046.jpg",
   "20260604_173207.jpg",
   "20260613_121546.jpg",
@@ -97,6 +98,7 @@ export const GALLERY_FILES_ON_DISK = [
   "Velebit-11.jpg",
   "Velebit-15.jpg",
   "Velebit-16.jpg",
+  "stars-peak-chalet-deck.jpg",
   "whatsapp-2026-06-04-084518.jpeg",
   "whatsapp-2026-06-04-084649.jpeg",
   "whatsapp-2026-06-06-182702.jpeg",
@@ -129,8 +131,11 @@ export function heroSlideWebpSrc(file: MainCarouselFile): string {
   return `/img/main-carousel/${file.replace(/\.jpg$/i, "-1280.webp")}`;
 }
 
-/** Filename in /public/img/about-us */
+/** Filename in /public/img/about-us — host photo (contact page). */
 export const ABOUT_US_IMAGE = "38410942.jpg" as const;
+
+/** Chalet exterior on the About page sidebar. */
+export const ABOUT_PAGE_IMAGE = "20260602_055146.jpg" as const;
 
 /** Curated gallery for the home page (experience-focused). */
 export const HOME_GALLERY_FILES = [

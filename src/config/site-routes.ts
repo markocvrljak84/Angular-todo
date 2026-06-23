@@ -17,7 +17,7 @@ export const SITE_PAGE_KEYS = [
 
 export type SitePageKey = (typeof SITE_PAGE_KEYS)[number];
 
-/** Primary header navigation (Rezerviraj = external booking). */
+/** Primary header navigation. */
 export const MAIN_NAV_ITEMS = [
   { kind: "page" as const, page: "home" as const },
   { kind: "page" as const, page: "accommodation" as const },
@@ -25,7 +25,7 @@ export const MAIN_NAV_ITEMS = [
   { kind: "page" as const, page: "gallery" as const },
   { kind: "page" as const, page: "guides" as const },
   { kind: "page" as const, page: "about" as const },
-  { kind: "book" as const },
+  { kind: "page" as const, page: "contact" as const },
 ];
 
 /** Secondary links shown in the footer. */

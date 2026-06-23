@@ -58,6 +58,18 @@ const en: GalleryContent = {
           alt: "Wild strawberries in the meadow by the chalet",
           caption: "Meadow in June",
         },
+        "stars-peak-chalet-deck.jpg": {
+          alt: "Chalet with wooden deck, fire pit and Velebit peaks behind",
+          caption: "Deck and peaks",
+        },
+        "20260604_132039-2.jpg": {
+          alt: "Outdoor kitchen table with cherries, bread and stone fireplace",
+          caption: "Summer kitchen",
+        },
+        "20260604_131933.jpg": {
+          alt: "Al fresco dining at the outdoor kitchen with mountain views",
+          caption: "Outdoor lunch",
+        },
       },
     },
     {
@@ -239,6 +251,18 @@ const hr: GalleryContent = {
           alt: "Divlje jagode na livadi ispred kuće",
           caption: "Livada u lipnju",
         },
+        "stars-peak-chalet-deck.jpg": {
+          alt: "Kuća s drvenim deckom, ognjištem i vrhovima Velebita u pozadini",
+          caption: "Deck i vrhovi",
+        },
+        "20260604_132039-2.jpg": {
+          alt: "Stol u vanjskoj kuhinji s trešnjama, kruhom i kamenim kaminom",
+          caption: "Ljetna kuhinja",
+        },
+        "20260604_131933.jpg": {
+          alt: "Ručak na otvorenom u vanjskoj kuhinji s pogledom na planinu",
+          caption: "Ručak na otvorenom",
+        },
       },
     },
     {
@@ -419,6 +443,18 @@ const deProper: GalleryContent = {
         "20260613_121546.jpg": {
           alt: "Wald-Erdbeeren auf der Wiese vor der Hütte",
           caption: "Wiese im Juni",
+        },
+        "stars-peak-chalet-deck.jpg": {
+          alt: "Hütte mit Holzdeck, Feuerstelle und Velebit-Gipfeln im Hintergrund",
+          caption: "Deck und Gipfel",
+        },
+        "20260604_132039-2.jpg": {
+          alt: "Tisch in der Außenküche mit Kirschen, Brot und Steinkamin",
+          caption: "Sommerküche",
+        },
+        "20260604_131933.jpg": {
+          alt: "Essen im Freien in der Außenküche mit Bergblick",
+          caption: "Mittagessen draußen",
         },
       },
     },

@@ -126,7 +126,8 @@
         "p2": "Il chalet si trova nel parco naturale del Velebit, vicino a Karlobag e Baške Oštarije — cime, Paklenica, Zavratnica e Pag a portata di mano.",
         "bookingLine": "La casa può essere prenotata al seguente link:",
         "bookingLinkLabel": "Booking.com — Velebit Mountain Chalet Stars Peak",
-        "sideImageAlt": "Velebit mountain chalet stars peak — alloggio"
+        "sideImageAlt": "Luce serale sul chalet e sulle creste calcaree del Velebit",
+        "sideImageCaption": "Stars Peak è un rifugio sul Velebit — armonia e design in sintonia con la montagna."
     },
     "gallery": {
         "title": "Galleria",
@@ -291,6 +292,31 @@
         "mapHeading": "Mappa",
         "mapIframeTitle": "Google Maps — Došen Dabar 1, Croazia",
         "mapOpenGoogle": "Apri in Google Maps per le indicazioni stradali"
+    },
+    "contactForm": {
+        "title": "Inviaci un messaggio",
+        "intro": "Indica date, numero di ospiti o domande — di solito rispondiamo entro un giorno.",
+        "firstNameLabel": "Nome",
+        "lastNameLabel": "Cognome",
+        "emailLabel": "E-mail",
+        "messageLabel": "Messaggio",
+        "messagePlaceholder": "Come possiamo aiutarti per il soggiorno sul Velebit?",
+        "submitLabel": "Invia messaggio",
+        "successMessage": "Grazie — il messaggio è stato inviato. Ti risponderemo presto."
+    },
+    "forms": {
+        "gdprConsent": "Acconsento al trattamento dei miei dati personali da parte di Stars Peak per rispondere a questa richiesta, conformemente al GDPR.",
+        "gdprNotice": "I dati sono usati solo per gestire questa richiesta. Puoi chiederne la cancellazione via e-mail in qualsiasi momento.",
+        "gdprRequired": "Conferma il consenso al trattamento dei dati personali.",
+        "requiredField": "Questo campo è obbligatorio.",
+        "invalidName": "Inserisci un nome valido (solo lettere, 2–80 caratteri).",
+        "invalidEmail": "Inserisci un indirizzo e-mail valido.",
+        "invalidMessage": "Il messaggio deve contenere almeno 10 caratteri.",
+        "humanConfirmLabel": "Confermo di essere una persona e non un bot.",
+        "humanCheckFailed": "Verifica non riuscita. Riprova.",
+        "submitting": "Invio…",
+        "submitError": "Qualcosa è andato storto — riprova o scrivici direttamente.",
+        "downloadStarted": "Il download dovrebbe partire automaticamente."
     },
     "a11y": {
         "scrollToTop": "Torna su"

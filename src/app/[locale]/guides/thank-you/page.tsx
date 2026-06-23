@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { BrochureDownloadButton } from "@/components/brochure-download-button";
 import { PageJsonLd } from "@/components/page-json-ld";
+import {
+  VELEBIT_BROCHURE_DOWNLOAD_NAME,
+  VELEBIT_BROCHURE_PDF,
+} from "@/config/site-brochure";
 import { localePath } from "@/config/site-routes";
 import { getExperienceContent } from "@/i18n/experience-content";
 import { getMessages } from "@/i18n/messages";
@@ -51,26 +54,31 @@ export default async function NewsletterThankYouPage({ params }: Props) {
       />
 
       <section className="newsletter-thanks flat-section flat-section--page">
-      <div className="flat-wrap flat-wrap--narrow">
-        <div className="newsletter-signup__panel newsletter-signup__panel--success">
-          <p className="newsletter-thanks__badge" aria-hidden="true">
-            ✓
-          </p>
-          <h1 className="newsletter-signup__title">{content.thankYouTitle}</h1>
-          <p className="newsletter-signup__intro">{content.successMessage}</p>
+        <div className="flat-wrap flat-wrap--narrow">
+          <div className="newsletter-signup__panel newsletter-signup__panel--success">
+            <p className="newsletter-thanks__badge" aria-hidden="true">
+              ✓
+            </p>
+            <h1 className="newsletter-signup__title">{content.thankYouTitle}</h1>
+            <p className="newsletter-signup__intro">{content.successMessage}</p>
 
-          <BrochureDownloadButton label={content.downloadLabel} />
+            <a
+              href={VELEBIT_BROCHURE_PDF}
+              download={VELEBIT_BROCHURE_DOWNLOAD_NAME}
+              className="newsletter-signup__download site-form__submit"
+            >
+              {content.downloadLabel}
+            </a>
+            <p className="newsletter-signup__brochure-note">{content.brochureLanguageNote}</p>
 
-          <p className="newsletter-signup__brochure-note">{content.brochureLanguageNote}</p>
-
-          <p className="newsletter-thanks__back">
-            <Link href={localePath(locale, "guides")}>{content.backToGuidesLabel}</Link>
-            {" · "}
-            <Link href={localePath(locale, "home")}>{content.backToHomeLabel}</Link>
-          </p>
+            <p className="newsletter-thanks__back">
+              <Link href={localePath(locale, "guides")}>{content.backToGuidesLabel}</Link>
+              {" · "}
+              <Link href={localePath(locale, "home")}>{content.backToHomeLabel}</Link>
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
     </>
   );
 }

@@ -126,7 +126,8 @@
         "p2": "Le chalet se situe dans le parc naturel du Velebit, près de Karlobag et Baške Oštarije — sommets, Paklenica, Zavratnica et Pag à portée de main.",
         "bookingLine": "La maison peut être réservée via le lien suivant :",
         "bookingLinkLabel": "Booking.com — Velebit Mountain Chalet Stars Peak",
-        "sideImageAlt": "Velebit mountain chalet stars peak — logement"
+        "sideImageAlt": "Lumière du soir sur le chalet et les crêtes calcaires du Velebit",
+        "sideImageCaption": "Stars Peak est un refuge sur le Velebit — harmonie et design au rythme de la montagne."
     },
     "gallery": {
         "title": "Galerie",
@@ -291,6 +292,31 @@
         "mapHeading": "Carte",
         "mapIframeTitle": "Google Maps — Došen Dabar 1, Croatie",
         "mapOpenGoogle": "Ouvrir dans Google Maps pour obtenir l’itinéraire"
+    },
+    "contactForm": {
+        "title": "Envoyez-nous un message",
+        "intro": "Indiquez vos dates, le nombre de personnes ou vos questions — nous répondons généralement sous un jour.",
+        "firstNameLabel": "Prénom",
+        "lastNameLabel": "Nom",
+        "emailLabel": "E-mail",
+        "messageLabel": "Message",
+        "messagePlaceholder": "Comment pouvons-nous vous aider pour votre séjour au Velebit ?",
+        "submitLabel": "Envoyer le message",
+        "successMessage": "Merci — votre message a été envoyé. Nous vous répondrons bientôt."
+    },
+    "forms": {
+        "gdprConsent": "J’accepte que Stars Peak traite mes données personnelles pour répondre à cette demande, conformément au RGPD.",
+        "gdprNotice": "Vos données servent uniquement à traiter cette demande. Vous pouvez demander leur suppression par e-mail à tout moment.",
+        "gdprRequired": "Veuillez confirmer votre consentement au traitement des données.",
+        "requiredField": "Ce champ est obligatoire.",
+        "invalidName": "Veuillez saisir un nom valide (lettres uniquement, 2–80 caractères).",
+        "invalidEmail": "Veuillez saisir une adresse e-mail valide.",
+        "invalidMessage": "Le message doit contenir au moins 10 caractères.",
+        "humanConfirmLabel": "Je confirme être une personne et non un robot.",
+        "humanCheckFailed": "La vérification a échoué. Veuillez réessayer.",
+        "submitting": "Envoi…",
+        "submitError": "Une erreur s’est produite — réessayez ou écrivez-nous directement.",
+        "downloadStarted": "Votre téléchargement devrait démarrer automatiquement."
     },
     "a11y": {
         "scrollToTop": "Retour en haut"

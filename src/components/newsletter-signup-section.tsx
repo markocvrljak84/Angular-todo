@@ -1,5 +1,6 @@
 import type { Locale } from "@/i18n/config";
 import type { ExperienceContent } from "@/i18n/experience-content";
+import { getMessages } from "@/i18n/messages";
 import { NewsletterSignupForm } from "@/components/newsletter-signup-form";
 
 type Props = {
@@ -12,6 +13,8 @@ type Props = {
 };
 
 export function NewsletterSignupSection({ content, locale, source, id }: Props) {
+  const forms = getMessages(locale).forms;
+
   return (
     <section
       id={id}
@@ -25,9 +28,18 @@ export function NewsletterSignupSection({ content, locale, source, id }: Props) 
           </h2>
           <p className="newsletter-signup__intro">{content.intro}</p>
 
-          <NewsletterSignupForm content={content} locale={locale} source={source} />
+          <NewsletterSignupForm
+            locale={locale}
+            labels={forms}
+            emailLabel={content.emailLabel}
+            emailPlaceholder={content.emailPlaceholder}
+            submitLabel={content.submitLabel}
+            submittingLabel={content.submittingLabel}
+            submitErrorMessage={content.submitErrorMessage}
+            privacyNote={content.privacyNote}
+            source={source}
+          />
 
-          <p className="newsletter-signup__privacy">{content.privacyNote}</p>
           <p className="newsletter-signup__brochure-note">{content.brochureLanguageNote}</p>
         </div>
       </div>

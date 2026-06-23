@@ -72,6 +72,7 @@ export type Messages = {
     bookingLine: string;
     bookingLinkLabel: string;
     sideImageAlt: string;
+    sideImageCaption: string;
   };
   gallery: {
     title: string;
@@ -99,6 +100,31 @@ export type Messages = {
     mapHeading: string;
     mapIframeTitle: string;
     mapOpenGoogle: string;
+  };
+  contactForm: {
+    title: string;
+    intro: string;
+    firstNameLabel: string;
+    lastNameLabel: string;
+    emailLabel: string;
+    messageLabel: string;
+    messagePlaceholder: string;
+    submitLabel: string;
+    successMessage: string;
+  };
+  forms: {
+    gdprConsent: string;
+    gdprNotice: string;
+    gdprRequired: string;
+    requiredField: string;
+    invalidName: string;
+    invalidEmail: string;
+    invalidMessage: string;
+    humanConfirmLabel: string;
+    humanCheckFailed: string;
+    submitting: string;
+    submitError: string;
+    downloadStarted: string;
   };
   a11y: { scrollToTop: string };
 };
@@ -236,7 +262,9 @@ const en: Messages = {
       "The chalet sits in Velebit Nature Park, near Karlobag and Baške Oštarije — with peaks, Paklenica, Zavratnica and Pag within easy reach. Mountain mornings and Adriatic afternoons, in one place.",
     bookingLine: "The house can be booked at the following link:",
     bookingLinkLabel: "Booking.com — Velebit Mountain Chalet Stars Peak",
-    sideImageAlt: "Velebit mountain chalet Stars Peak — holiday home",
+    sideImageAlt: "Evening light on the chalet and limestone peaks on Velebit",
+    sideImageCaption:
+      "Stars Peak is a retreat on Velebit — harmony and design in step with the mountain.",
   },
   gallery: {
     title: "Gallery",
@@ -268,6 +296,33 @@ const en: Messages = {
     mapHeading: "Map",
     mapIframeTitle: "Google Map — Došen Dabar 1, Croatia",
     mapOpenGoogle: "Open in Google Maps to find directions",
+  },
+  contactForm: {
+    title: "Send us a message",
+    intro: "Tell us about your dates, group size or any questions — we usually reply within one day.",
+    firstNameLabel: "First name",
+    lastNameLabel: "Last name",
+    emailLabel: "Email",
+    messageLabel: "Message",
+    messagePlaceholder: "How can we help with your stay on Velebit?",
+    submitLabel: "Send message",
+    successMessage: "Thank you — your message has been sent. We will get back to you soon.",
+  },
+  forms: {
+    gdprConsent:
+      "I agree that Stars Peak may process my personal data to respond to this request, in line with GDPR.",
+    gdprNotice:
+      "Your data is used only to handle this request. You may ask us to delete it at any time by email.",
+    gdprRequired: "Please confirm consent to process your personal data.",
+    requiredField: "This field is required.",
+    invalidName: "Please enter a valid name (letters only, 2–80 characters).",
+    invalidEmail: "Please enter a valid email address.",
+    invalidMessage: "Please enter a message of at least 10 characters.",
+    humanConfirmLabel: "I confirm I am a human and not an automated bot.",
+    humanCheckFailed: "Human verification failed. Please try again.",
+    submitting: "Sending…",
+    submitError: "Something went wrong — please try again or email us directly.",
+    downloadStarted: "Your download should start automatically.",
   },
   a11y: { scrollToTop: "Back to top" },
 };
@@ -405,7 +460,9 @@ const hr: Messages = {
       "Kuća leži u Parku prirode Velebit, blizu Karlobaga i Baških Oštarija — s vrhovima, Paklenicom, Zavratnicom i Pagom na dohvat ruke. Planinsko jutro i jadransko popodne, na jednom mjestu.",
     bookingLine: "Kuću možete rezervirati na sljedećem linku:",
     bookingLinkLabel: "Booking.com — Velebit Mountain Chalet Stars Peak",
-    sideImageAlt: "Velebit mountain chalet Stars Peak — smještaj",
+    sideImageAlt: "Večernje svjetlo na kući i vapnenačkim vrhovima Velebita",
+    sideImageCaption:
+      "Stars Peak je utočište na Velebitu — sklad i dizajn u ritmu planine.",
   },
   gallery: {
     title: "Galerija",
@@ -437,6 +494,33 @@ const hr: Messages = {
     mapHeading: "Karta",
     mapIframeTitle: "Google karta — Došen Dabar 1, Hrvatska",
     mapOpenGoogle: "Otvori u Google Kartama za upute do lokacije",
+  },
+  contactForm: {
+    title: "Pošaljite nam poruku",
+    intro: "Recite nam datume, broj gostiju ili pitanja — obično odgovaramo u roku od jednog dana.",
+    firstNameLabel: "Ime",
+    lastNameLabel: "Prezime",
+    emailLabel: "E-pošta",
+    messageLabel: "Poruka",
+    messagePlaceholder: "Kako vam možemo pomoći oko boravka na Velebitu?",
+    submitLabel: "Pošalji poruku",
+    successMessage: "Hvala — vaša poruka je poslana. Javit ćemo vam se uskoro.",
+  },
+  forms: {
+    gdprConsent:
+      "Slažem se da Stars Peak smije obrađivati moje osobne podatke radi odgovora na upit, u skladu s GDPR-om.",
+    gdprNotice:
+      "Podatke koristimo samo za obradu ovog upita. Možete zatražiti brisanje u bilo kojem trenutku e-poštom.",
+    gdprRequired: "Molimo potvrdite privolu za obradu osobnih podataka.",
+    requiredField: "Ovo polje je obavezno.",
+    invalidName: "Unesite ispravno ime (samo slova, 2–80 znakova).",
+    invalidEmail: "Unesite ispravnu adresu e-pošte.",
+    invalidMessage: "Poruka mora imati najmanje 10 znakova.",
+    humanConfirmLabel: "Potvrđujem da sam čovjek, a ne automatizirani bot.",
+    humanCheckFailed: "Provjera nije uspjela. Pokušajte ponovno.",
+    submitting: "Slanje…",
+    submitError: "Nešto je pošlo po krivu — pokušajte ponovno ili nam pišite izravno.",
+    downloadStarted: "Preuzimanje bi trebalo početi automatski.",
   },
   a11y: { scrollToTop: "Natrag na vrh" },
 };
@@ -574,7 +658,9 @@ const de: Messages = {
       "Das Haus liegt im Naturpark Velebit, nahe Karlobag und Baške Oštarije — Gipfel, Paklenica, Zavratnica und Pag in Reichweite.",
     bookingLine: "Das Haus kann über den folgenden Link gebucht werden:",
     bookingLinkLabel: "Booking.com — Velebit Mountain Chalet Stars Peak",
-    sideImageAlt: "Velebit mountain chalet Stars Peak — Ferienhaus",
+    sideImageAlt: "Abendlicht auf dem Chalet und den Kalksteinspitzen am Velebit",
+    sideImageCaption:
+      "Stars Peak ist ein Refugium am Velebit — Harmonie und Design im Einklang mit dem Berg.",
   },
   gallery: {
     title: "Galerie",
@@ -606,6 +692,33 @@ const de: Messages = {
     mapHeading: "Karte",
     mapIframeTitle: "Google Karte — Došen Dabar 1, Kroatien",
     mapOpenGoogle: "In Google Maps öffnen, um die Route zu finden",
+  },
+  contactForm: {
+    title: "Nachricht senden",
+    intro: "Nennen Sie uns Termine, Gästezahl oder Fragen — wir antworten in der Regel innerhalb eines Tages.",
+    firstNameLabel: "Vorname",
+    lastNameLabel: "Nachname",
+    emailLabel: "E-Mail",
+    messageLabel: "Nachricht",
+    messagePlaceholder: "Wobei können wir Ihren Aufenthalt am Velebit unterstützen?",
+    submitLabel: "Nachricht senden",
+    successMessage: "Danke — Ihre Nachricht wurde gesendet. Wir melden uns bald.",
+  },
+  forms: {
+    gdprConsent:
+      "Ich stimme zu, dass Stars Peak meine personenbezogenen Daten zur Beantwortung dieser Anfrage gemäß DSGVO verarbeitet.",
+    gdprNotice:
+      "Ihre Daten werden nur für diese Anfrage verwendet. Sie können jederzeit per E-Mail die Löschung verlangen.",
+    gdprRequired: "Bitte bestätigen Sie die Einwilligung zur Datenverarbeitung.",
+    requiredField: "Dieses Feld ist erforderlich.",
+    invalidName: "Bitte geben Sie einen gültigen Namen ein (nur Buchstaben, 2–80 Zeichen).",
+    invalidEmail: "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+    invalidMessage: "Die Nachricht muss mindestens 10 Zeichen lang sein.",
+    humanConfirmLabel: "Ich bestätige, dass ich ein Mensch und kein Bot bin.",
+    humanCheckFailed: "Die Überprüfung ist fehlgeschlagen. Bitte erneut versuchen.",
+    submitting: "Wird gesendet…",
+    submitError: "Etwas ist schiefgelaufen — bitte erneut versuchen oder uns direkt mailen.",
+    downloadStarted: "Ihr Download sollte automatisch starten.",
   },
   a11y: { scrollToTop: "Nach oben" },
 };

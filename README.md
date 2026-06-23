@@ -12,8 +12,16 @@ Copy lives in `src/i18n/messages.ts`. Hero and gallery use Picsum placeholders �
 
 ## Scripts
 
-- `npm run dev` — http://localhost:3000 → `/en`
-- `npm run build` / `npm run start`
+- `npm run dev` — http://localhost:3000 → `/en` (hot reload enabled; polls for file changes)
+- `npm run dev:turbo` — faster builds via Turbopack (use if `dev` feels slow)
+- `npm run build` / `npm run start` — production; **no hot reload** — use only to test production builds
+
+### Hot reload not updating?
+
+1. Run **`npm run dev`**, not `npm run start` (production mode never hot-reloads).
+2. Stop any old server, then start fresh: `npm run dev`.
+3. In VS Code / Cursor: **Terminal → Run Task → Next.js: dev server**.
+4. If changes still do not appear, hard-refresh the browser once (`Cmd+Shift+R`).
 
 ## Vercel
 
