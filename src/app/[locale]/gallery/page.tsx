@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { BookCta } from "@/components/book-cta";
 import { GalleryEditorialGrid } from "@/components/gallery-editorial-grid";
 import { InnerPageHeader } from "@/components/inner-page-header";
-import { GALLERY_GROUPS } from "@/config/site-images";
+import { galleryAssetSrc, GALLERY_GROUPS } from "@/config/site-images";
 import { getGalleryContent } from "@/i18n/gallery-content";
 import { getMessages } from "@/i18n/messages";
 import { getPageHeaderContent } from "@/lib/inner-page-content";
@@ -32,7 +32,7 @@ type Props = { params: Promise<{ locale: string }> };
 
 const FEATURED_GALLERY_CATEGORIES = ["exterior", "outdoorLiving"] as const;
 const INTERIOR_EDITORIAL_FILES = [
-  "581480514_122107015833084437_6966149935686680015_n.jpg",
+  "dnevni-boravak.jpg",
   "585009655_122107017075084437_1671659401079838438_n.jpg",
 ] as const;
 const MOSAIC_GALLERY_FILES = [
@@ -52,7 +52,7 @@ const INTERIOR_MOSAIC_FILES = [
   "740290390.jpg",
   "812808252.jpg",
   "740270926.jpg",
-  "581480514_122107015833084437_6966149935686680015_n.jpg",
+  "dnevni-boravak.jpg",
   "812808512.jpg",
   "585009655_122107017075084437_1671659401079838438_n.jpg",
   "20260601_160317.jpg",
@@ -78,7 +78,7 @@ export default async function GalleryPage({ params }: Props) {
         if (!meta) {
           throw new Error(`Missing gallery metadata for "${file}".`);
         }
-        const base = `/img/gallery/${file}`;
+        const base = galleryAssetSrc(file);
         return {
           srcThumb: base,
           srcLarge: base,
@@ -100,7 +100,7 @@ export default async function GalleryPage({ params }: Props) {
       throw new Error(`Missing gallery metadata for "${file}".`);
     }
 
-    const base = `/img/gallery/${file}`;
+    const base = galleryAssetSrc(file);
     return {
       id: `interior-${index}`,
       title: interiorGroup.title,
@@ -123,7 +123,7 @@ export default async function GalleryPage({ params }: Props) {
       throw new Error(`Missing gallery metadata for "${file}".`);
     }
 
-    const base = `/img/gallery/${file}`;
+    const base = galleryAssetSrc(file);
     return {
       srcThumb: base,
       srcLarge: base,

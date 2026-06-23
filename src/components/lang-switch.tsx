@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { locales, isLocale, type Locale } from "@/i18n/config";
 
-const MOBILE_LANG_QUERY = "(max-width: 1064px)";
+const MOBILE_LANG_QUERY = "(max-width: 1189px)";
 
 const OPTION_LABELS: Record<Locale, string> = {
   en: "English",

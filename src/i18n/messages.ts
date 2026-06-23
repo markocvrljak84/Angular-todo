@@ -252,13 +252,13 @@ const en: Messages = {
   about: {
     title: "About this place",
     lead:
-      "High on Velebit, Marko and Ljiljana turned a wooden chalet into Stars Peak — an unusual, deeply personal retreat with views of Bačić Kuk and the Adriatic half an hour away.",
+      "High on Velebit, Marko and Ljiljana turned a wooden chalet into Stars Peak — an unusual, deeply personal retreat with views of Bačić Kuk ridge and the Adriatic coast is half an hour away.",
     p1:
-      "What began as a decade-long dream became three years of hands-on work: stripping back clutter, opening the space to light and wood, and shaping a slower rhythm of life on the mountain.",
+      "What began as a decade-long dream became three years of hands-on work: stripping back clutter, opening the space to light and wood, and shaping a slower rhythm of life on the Velebit mountain.",
     hostsNote:
       "We are Marko and Ljiljana — we built and run Stars Peak ourselves and are here for your questions before and during your stay.",
     p2:
-      "The chalet sits in Velebit Nature Park, near Karlobag and Baške Oštarije — with peaks, Paklenica, Zavratnica and Pag within easy reach. Mountain mornings and Adriatic afternoons, in one place.",
+      "In the heart of Velebit Nature Park, Stars Peak Holiday House combine the serenity of the mountains with the beauty of the Adriatic coast. Paklenica, Zavratnica, Pag and Velebit's most stunning peaks are all within easy reach.",
     bookingLine: "The house can be booked at the following link:",
     bookingLinkLabel: "Booking.com — Velebit Mountain Chalet Stars Peak",
     sideImageAlt: "Marko and Ljiljana, hosts of Stars Peak on Velebit",
@@ -450,11 +450,11 @@ const hr: Messages = {
     lead:
       "Visoko na Velebitu, Marko i Ljiljana pretvorili su drvenu kuću u Stars Peak — neobično, nesvakidašnje utočište s pogledom na Bačić kuk.",
     p1:
-      "Ono što je počelo kao san od deset godina postalo je tri godine rada vlastitim rukama: manje suvišnih detalja, više svjetla i drva, sporiji ritam života na planini.",
+      "Ono što je započelo kao desetogodišnji san, pretvorilo se u tri godine predanog rada. Korak po korak uklanjali smo suvišno, otvarali prostor svjetlu, drvu i prirodi te stvarali mjesto koje poziva na sporiji, mirniji ritam života u srcu Velebita.",
     hostsNote:
       "Mi smo Marko i Ljiljana — Stars Peak smo sami izgradili i vodimo; stojimo vam na raspolaganju prije i tijekom boravka.",
     p2:
-      "Kuća leži u Parku prirode Velebit, blizu Karlobaga i Baških Oštarija — s vrhovima, Paklenicom, Zavratnicom i Pagom na dohvat ruke. Planinsko jutro i jadransko popodne, na jednom mjestu.",
+      "Smještene u Parku prirode Velebit, kuća za odmor Stars Peak spajaju planinski mir s ljepotom Jadranske obale. Veličanstveni vrhovi Velebita, Nacionalni park Paklenica, uvala Zavratnica i otok Pag nalaze se nadohvat ruke, pružajući jedinstven doživljaj gdje svježa planinska jutra susreću sunčana jadranska poslijepodneva.",
     bookingLine: "Kuću možete rezervirati na sljedećem linku:",
     bookingLinkLabel: "Booking.com — Velebit Mountain Chalet Stars Peak",
     sideImageAlt: "Marko i Ljiljana, domaćini Stars Peaka na Velebitu",

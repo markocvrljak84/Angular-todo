@@ -147,7 +147,7 @@ const hr: HomeContent = {
     facts: [
       "900 m nadmorske visine",
       "30 min do mora",
-      "Pogled na Bačić kuk",
+      "Prekrasan Pogled na Bačić kuk",
       "Unutar Parka prirode Velebit",
     ],
     ctaBook: "Provjeri dostupnost",

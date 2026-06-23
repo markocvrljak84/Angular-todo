@@ -20,8 +20,8 @@ type Props = {
   t: Messages;
 };
 
-const MOBILE_MENU_QUERY = "(max-width: 1064px)";
-const DESKTOP_QUERY = "(min-width: 1065px)";
+const MOBILE_MENU_QUERY = "(max-width: 1189px)";
+const DESKTOP_QUERY = "(min-width: 1190px)";
 
 type HeaderTone = "hero" | "glass" | "opaque";
 

@@ -22,8 +22,8 @@ const en: AboutStoryContent = {
     {
       title: "Why we chose Velebit",
       paragraphs: [
-        "The idea of a mountain retreat did not arrive overnight. For around ten years it kept returning — sometimes quietly in the background, sometimes with full clarity. Hiking on Velebit with Ljiljana grew into a deep love for the ridge, the wind and the wide horizon.",
-        "Shows about slower, braver ways of living — including Ben Fogle’s New Lives in the Wild — opened a perspective we could not ignore: a home where nature is not a weekend escape, but part of everyday rhythm.",
+        "The idea of a mountain retreat did not arrive overnight. For around ten years it kept returning. Hiking on Velebit with grew into a love for the Velebit mountain.",
+        "TVshows about slower, braver ways of living — including Ben Fogle’s New Lives in the Wild — opened a perspective we could not ignore: a home where nature is not a weekend escape, but part of everyday rhythm.",
       ],
     },
     {
@@ -37,14 +37,14 @@ const en: AboutStoryContent = {
       title: "Built together, layer by layer",
       paragraphs: [
         "We did everything we could ourselves — water lines, bathroom, kitchen, living room, bedroom and attic — and called in professionals for electrics, the solar system, PVC joinery and the stairs to the loft.",
-        "The split came naturally: Marko with tools, cutting, sanding and assembly; Ljiljana with finances, cost planning and design. What we wanted for ourselves is what we offer guests — less clutter, more light, warmth and wood throughout.",
+        "The split of chores came naturally: I did everything with tools, cutting, sanding and assembly; and Ljiljana with finances, cost planning and design :). What we wanted for ourselves is what we offer guests — less clutter, more light, warmth and wood throughout.",
       ],
     },
     {
       title: "Simplicity, wood and the view of Bačić Kuk",
       paragraphs: [
         "The guiding idea was minimalism born from thinking, not trend: open the space, let in light, and use the gallery and glass wall as anchors for every other decision.",
-        "Wood was the obvious choice — we are surrounded by forest, so the interior follows the outside. The living room is where we rest after work, watch films and plan what comes next — always with Bačić Kuk in the frame.",
+        "Wood was the obvious choice — we are surrounded by forest, so the interior follows the outside. The living room is where we rest after work, watch films and plan what comes next.",
       ],
     },
     {
@@ -57,8 +57,7 @@ const en: AboutStoryContent = {
     {
       title: "The experience we share with you",
       paragraphs: [
-        "Every stay feels a little different. What stays the same is focus — a slower pace without city noise and deadlines. The magic is not only in big summit days, but in coffee at sunrise, silence after dark and the Adriatic within reach.",
-        "Guests often say the location and the house feel unusual — in the best way. That is fine with us. We built Stars Peak to be a decision confirmed again each time someone returns.",
+        "Every stay feels a little different. What stays the same is focus — a slower pace without city noise and deadlines.",
         "Our advice to anyone dreaming of a home in nature: be patient, keep visiting the mountain, decide firmly — and never give up.",
       ],
     },

@@ -118,7 +118,7 @@ const en: GalleryContent = {
       id: "interior",
       title: "Chalet interior",
       images: {
-        "581480514_122107015833084437_6966149935686680015_n.jpg": {
+        "dnevni-boravak.jpg": {
           alt: "Living room with fireplace and wooden stairs",
           caption: "Living room",
         },
@@ -311,7 +311,7 @@ const hr: GalleryContent = {
       id: "interior",
       title: "Kuća interijer",
       images: {
-        "581480514_122107015833084437_6966149935686680015_n.jpg": {
+        "dnevni-boravak.jpg": {
           alt: "Dnevni boravak s kaminom i drvenim stubištem",
           caption: "Dnevni boravak",
         },
@@ -504,7 +504,7 @@ const deProper: GalleryContent = {
       id: "interior",
       title: "Hütte Interieur",
       images: {
-        "581480514_122107015833084437_6966149935686680015_n.jpg": {
+        "dnevni-boravak.jpg": {
           alt: "Wohnzimmer mit Kamin und Holztreppe",
           caption: "Wohnzimmer",
         },

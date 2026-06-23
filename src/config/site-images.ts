@@ -2,6 +2,17 @@
  * Static images under /public — single source of truth for About + Gallery sections.
  * Gallery files are grouped in `GALLERY_GROUPS`; metadata lives in `src/i18n/gallery-content.ts`.
  */
+/** Paths for assets in /public/img (not under /img/gallery). */
+export const ROOT_IMAGE_PATHS: Readonly<Record<string, string>> = {
+  "dnevni-boravak.jpg": "/img/dnevni-boravak.jpg",
+};
+
+export function galleryAssetSrc(file: string): string {
+  return ROOT_IMAGE_PATHS[file] ?? `/img/gallery/${file}`;
+}
+
+export const DNEVNI_BORAVAK_IMAGE = ROOT_IMAGE_PATHS["dnevni-boravak.jpg"];
+
 export const GALLERY_CATEGORIES = [
   "exterior",
   "outdoorLiving",
@@ -23,7 +34,7 @@ export const GALLERY_GROUPS: Readonly<
     "20260604_132024.jpg",
   ],
   interior: [
-    "581480514_122107015833084437_6966149935686680015_n.jpg",
+    "dnevni-boravak.jpg",
     "585009655_122107017075084437_1671659401079838438_n.jpg",
     "740290390.jpg",
     "740270926.jpg",
@@ -157,7 +168,7 @@ export const HOME_IMAGES = {
   },
   editorial: {
     outdoorKitchen: "/img/ljetnja-kuhinja-3.jpg",
-    interior: "/img/gallery/581480514_122107015833084437_6966149935686680015_n.jpg",
+    interior: DNEVNI_BORAVAK_IMAGE,
     surroundings: "/img/velebit-na-dohvat-ruku.jpeg",
   },
   accommodation: "/img/gallery/740290390.jpg",

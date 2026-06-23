@@ -113,22 +113,22 @@ export function GalleryLightbox({
           <div className="gallery-lightbox__media">
             <Image
               src={slide.srcLarge}
-              alt={slide.alt}
+              alt=""
               fill
               sizes="100vw"
               priority
               className="gallery-lightbox__img"
+              aria-hidden="true"
             />
-          </div>
-          <figcaption className="gallery-lightbox__caption">
-            <p className="gallery-lightbox__caption-title">{slide.caption}</p>
-            <p className="gallery-lightbox__caption-text">{slide.alt}</p>
+            <span className="sr-only">
+              {slide.caption}. {slide.alt}. {index + 1} / {count}
+            </span>
             {count > 1 ? (
               <p className="gallery-lightbox__counter" aria-live="polite">
                 {index + 1} / {count}
               </p>
             ) : null}
-          </figcaption>
+          </div>
         </figure>
 
         {count > 1 ? (
