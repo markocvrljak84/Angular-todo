@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageJsonLd } from "@/components/page-json-ld";
-import {
-  VELEBIT_BROCHURE_DOWNLOAD_NAME,
-  VELEBIT_BROCHURE_PDF,
-} from "@/config/site-brochure";
+import { getVelebitBrochure } from "@/config/site-brochure";
 import { localePath } from "@/config/site-routes";
 import { getExperienceContent } from "@/i18n/experience-content";
 import { getMessages } from "@/i18n/messages";
@@ -39,6 +36,7 @@ export default async function NewsletterThankYouPage({ params }: Props) {
   const locale = await resolveLocale(params);
   const t = getMessages(locale);
   const content = getExperienceContent(locale).signup;
+  const brochure = getVelebitBrochure(locale);
 
   return (
     <>
@@ -63,8 +61,8 @@ export default async function NewsletterThankYouPage({ params }: Props) {
             <p className="newsletter-signup__intro">{content.successMessage}</p>
 
             <a
-              href={VELEBIT_BROCHURE_PDF}
-              download={VELEBIT_BROCHURE_DOWNLOAD_NAME}
+              href={brochure.pdfPath}
+              download={brochure.downloadName}
               className="newsletter-signup__download site-form__submit"
             >
               {content.downloadLabel}

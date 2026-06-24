@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Velebit — travel brochure | Stars Peak</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --forest: #1e3a2f;
+      --forest-light: #2d5a47;
+      --sand: #f4efe6;
+      --cream: #faf7f2;
+      --gold: #c4a35a;
+      --gold-light: #d4bc82;
+      --adriatic: #2a6b7c;
+      --text: #2c2c2c;
+      --text-muted: #5a5a5a;
+      --white: #ffffff;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: "Montserrat", system-ui, sans-serif;
+      font-weight: 300;
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, .display {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-weight: 600;
+      line-height: 1.15;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    .cover__bg img,
+    .hero-band__bg img {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ── Cover ── */
+    .cover {
+      position: relative;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+    }
+
+    .cover__bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .cover__bg::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(30, 58, 47, 0.45) 0%,
+        rgba(30, 58, 47, 0.75) 60%,
+        rgba(30, 58, 47, 0.92) 100%
+      );
+    }
+
+    .cover__content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      color: var(--white);
+      padding: 2rem;
+      max-width: 900px;
+    }
+
+    .cover__eyebrow {
+      font-size: 0.75rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 1.5rem;
+      font-weight: 500;
+    }
+
+    .cover__title {
+      font-size: clamp(2rem, 7vw, 4.5rem);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.5rem;
+    }
+
+    .cover__subtitle {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(1.25rem, 3vw, 1.75rem);
+      font-style: italic;
+      font-weight: 400;
+      opacity: 0.9;
+      margin-bottom: 2rem;
+    }
+
+    .cover__host {
+      margin: 0 auto 2rem;
+      max-width: 520px;
+      padding: 1.25rem 1.5rem;
+      border: 1px solid rgba(196, 163, 90, 0.55);
+      background: rgba(30, 58, 47, 0.35);
+      backdrop-filter: blur(4px);
+    }
+
+    .cover__host-name {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(1.75rem, 4vw, 2.25rem);
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--gold-light);
+      margin-bottom: 0.5rem;
+    }
+
+    .cover__host-desc {
+      font-size: 0.9rem;
+      font-weight: 400;
+      line-height: 1.55;
+      letter-spacing: 0.02em;
+      opacity: 0.95;
+    }
+
+    .cover__tagline {
+      font-size: 0.85rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      border-top: 1px solid rgba(255,255,255,0.3);
+      border-bottom: 1px solid rgba(255,255,255,0.3);
+      padding: 1rem 0;
+      display: inline-block;
+    }
+
+    .cover__scroll {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      color: var(--gold-light);
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      text-decoration: none;
+      opacity: 0.8;
+    }
+
+    /* ── Intro ── */
+    .intro {
+      background: var(--sand);
+      padding: 5rem 2rem;
+    }
+
+    .intro__inner {
+      max-width: 820px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .intro__label {
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+
+    .intro__title {
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: var(--forest);
+      margin-bottom: 1.5rem;
+    }
+
+    .intro__text {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0 auto 2.5rem;
+    }
+
+    .intro__stats {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(30,58,47,0.15);
+    }
+
+    .intro__stat {
+      text-align: center;
+    }
+
+    .intro__stat-value {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--forest);
+      line-height: 1;
+    }
+
+    .intro__stat-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: 0.4rem;
+    }
+
+    /* ── Attraction sections ── */
+    .attraction {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 900px) {
+      .attraction {
+        grid-template-columns: 1fr 1fr;
+        min-height: 520px;
+      }
+      .attraction--reverse .attraction__image { order: 2; }
+      .attraction--reverse .attraction__body { order: 1; }
+    }
+
+    .attraction__image {
+      position: relative;
+      min-height: 360px;
+      height: 360px;
+      overflow: hidden;
+    }
+
+    @media (min-width: 900px) {
+      .attraction__image {
+        min-height: 520px;
+        height: auto;
+      }
+    }
+
+    .attraction__image img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .attraction__image::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(135deg, transparent 60%, rgba(30,58,47,0.15));
+      pointer-events: none;
+    }
+
+    .attraction__body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 3rem 2.5rem;
+      background: var(--white);
+    }
+
+    .attraction--dark .attraction__body {
+      background: var(--forest);
+      color: var(--white);
+    }
+
+    .attraction--sand .attraction__body {
+      background: var(--sand);
+    }
+
+    .attraction__number {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+      opacity: 0.7;
+    }
+
+    .attraction--dark .attraction__number {
+      color: var(--gold-light);
+    }
+
+    .attraction__category {
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--adriatic);
+      margin-bottom: 0.75rem;
+      font-weight: 500;
+    }
+
+    .attraction--dark .attraction__category {
+      color: var(--gold-light);
+    }
+
+    .attraction__title {
+      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+      color: var(--forest);
+      margin-bottom: 1rem;
+    }
+
+    .attraction--dark .attraction__title {
+      color: var(--white);
+    }
+
+    .attraction__text {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .attraction__text + .attraction__text {
+      margin-top: 0;
+    }
+
+    .attraction--dark .attraction__text {
+      color: rgba(255,255,255, 0.92);
+    }
+
+    .attraction__details {
+      margin: 1.25rem 0;
+      padding: 0;
+      list-style: none;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .attraction--dark .attraction__details {
+      color: rgba(255,255,255, 0.88);
+    }
+
+    .attraction__details li {
+      padding: 0.35rem 0 0.35rem 1.1rem;
+      position: relative;
+      border-bottom: 1px solid rgba(30,58,47,0.08);
+    }
+
+    .attraction--dark .attraction__details li {
+      border-bottom-color: rgba(255,255,255,0.12);
+    }
+
+    .attraction__details li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+    }
+
+    .attraction--dark .attraction__details li::before {
+      color: var(--gold-light);
+    }
+
+    .attraction__meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.5rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      color: var(--forest-light);
+      font-weight: 500;
+    }
+
+    .attraction--dark .attraction__meta {
+      color: var(--gold-light);
+    }
+
+    .attraction__meta span::before {
+      content: "◆ ";
+      font-size: 0.5rem;
+      vertical-align: middle;
+      color: var(--gold);
+    }
+
+    /* ── Full-width hero band ── */
+    .hero-band {
+      position: relative;
+      min-height: 420px;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+
+    .hero-band__bg {
+      position: absolute;
+      inset: 0;
+    }
+
+    .hero-band__bg::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(30,58,47,0.88) 0%, rgba(30,58,47,0.3) 100%);
+    }
+
+    .hero-band__content {
+      position: relative;
+      z-index: 1;
+      padding: 3rem 2.5rem;
+      color: var(--white);
+      max-width: 700px;
+    }
+
+    .hero-band__title {
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-band__text {
+      font-size: 1rem;
+      opacity: 0.88;
+      line-height: 1.75;
+    }
+
+    /* ── Grid highlights ── */
+    .highlights {
+      padding: 4rem 2rem;
+      background: var(--forest);
+      color: var(--white);
+    }
+
+    .highlights__inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .highlights__header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .highlights__title {
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      margin-bottom: 0.75rem;
+    }
+
+    .highlights__lead {
+      font-size: 0.95rem;
+      opacity: 0.8;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .highlights__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .highlight-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 1.75rem;
+      transition: background 0.3s;
+    }
+
+    .highlight-card:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    .highlight-card__icon {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 2rem;
+      color: var(--gold-light);
+      margin-bottom: 0.75rem;
+    }
+
+    .highlight-card__title {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .highlight-card__text {
+      font-size: 0.85rem;
+      opacity: 0.78;
+      line-height: 1.65;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      background: var(--sand);
+      padding: 3rem 2rem;
+      text-align: center;
+      border-top: 3px solid var(--gold);
+    }
+
+    .footer__brand {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--forest);
+      margin-bottom: 0.5rem;
+    }
+
+    .footer__tagline {
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .footer__credits {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      max-width: 640px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    .footer__credits a {
+      color: var(--adriatic);
+      text-decoration: none;
+    }
+
+    .footer__credits a:hover {
+      text-decoration: underline;
+    }
+
+    /* ── Print ── */
+    @media print {
+      .cover { min-height: 100vh; page-break-after: always; }
+      .attraction { page-break-inside: avoid; }
+      .cover__scroll { display: none; }
+    }
+  
+  </style>
+</head>
+<body>
+
+  <header class="cover" id="top">
+    <div class="cover__bg">
+      <img src="velebit-brosura-assets/cover.jpg" alt="Aerial view of Velebit — Northern Velebit National Park" />
+    </div>
+    <div class="cover__content">
+      <p class="cover__eyebrow">UNESCO · Nature Park · Two national parks</p>
+      <h1 class="cover__title">Summit. Swim. Stargaze.</h1>
+      <p class="cover__subtitle">A private mountain chalet at 900 m with views of Bačić Kuk — just 30 minutes from the Adriatic.</p>
+      <div class="cover__host">
+        <p class="cover__host-name">Stars Peak</p>
+        <p class="cover__host-desc">Private holiday chalet in Bačić Duliba — at the foot of Dabarski kukovi, inside Velebit Nature Park. Whole-house rental for up to 4 guests.</p>
+      </div>
+      <p class="cover__tagline">Canyons · Ridges · Caves · Sea · Stars</p>
+    </div>
+    <a class="cover__scroll" href="#uvod">Discover Velebit ↓</a>
+  </header>
+
+  <section class="intro" id="uvod">
+    <div class="intro__inner">
+      <p class="intro__label">Welcome</p>
+      <h2 class="intro__title">Croatia's longest mountain range</h2>
+      <p class="intro__text">Velebit stretches 145 km along the Adriatic coast — from Vratnik in the north to the Zrmanja in the south. Its canyons, forest trails, karst fields and ridges form one of Europe's finest hiking landscapes. From Paklenica to Zavižan, from Zavratnica to Dabarski kukovi, along the Premužić trail and in the underground halls of Cerovačke caves — every corner tells a different story of mountain, sea and subterranean world.</p>
+      <div class="intro__stats">
+        <div class="intro__stat">
+          <div class="intro__stat-value">1757 m</div>
+          <div class="intro__stat-label">Vaganski vrh peak</div>
+        </div>
+        <div class="intro__stat">
+          <div class="intro__stat-value">145 km</div>
+          <div class="intro__stat-label">Range length</div>
+        </div>
+        <div class="intro__stat">
+          <div class="intro__stat-value">2</div>
+          <div class="intro__stat-label">National parks</div>
+        </div>
+        <div class="intro__stat">
+          <div class="intro__stat-value">UNESCO</div>
+          <div class="intro__stat-label">World heritage</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <article class="attraction">
+    <div class="attraction__image">
+      <img src="velebit-brosura-assets/paklenica.jpg" alt="Paklenica National Park — cliffs and pine forest" />
+    </div>
+    <div class="attraction__body">
+      <div class="attraction__number">01</div>
+      <p class="attraction__category">National park · UNESCO</p>
+      <h2 class="attraction__title">Paklenica</h2>
+      <p class="attraction__text">A UNESCO-listed national park with Velika and Mala Paklenica — dramatic canyons cut into the southern slopes of Velebit, with cliffs up to 400 m high. Famous among hikers and climbers, with more than 150 km of marked trails and lush pine forest. Easily reached from Starigrad and Zadar — a perfect mountain day with the sea nearby.</p>
+
+<div class="attraction__meta">
+        <span>150+ km of trails</span>
+        <span>Climbing</span>
+        <span>Pine forest</span>
+      </div>
+    </div>
+  </article>
+
+  <article class="attraction attraction--reverse">
+    <div class="attraction__image">
+      <img src="velebit-brosura-assets/zavratnica.jpg" alt="Zavratnica cove — cliffs above calm water" />
+    </div>
+    <div class="attraction__body attraction--sand">
+      <div class="attraction__number">02</div>
+      <p class="attraction__category">Protected landscape · Adriatic</p>
+      <h2 class="attraction__title">Zavratnica Cove</h2>
+      <p class="attraction__text">A protected landscape and bay on the northern Adriatic, often called Croatia's fjord — steep cliffs, calm turquoise water over 900 metres long, reachable by boat from Jablanac or on foot. A perfect blend of mountain and sea.</p>
+
+<div class="attraction__meta">
+        <span>900 m long</span>
+        <span>Boat or trail</span>
+        <span>Swimming & diving</span>
+      </div>
+    </div>
+  </article>
+
+  <article class="attraction">
+    <div class="attraction__image">
+      <img src="velebit-brosura-assets/premuzic.jpg" alt="Premužić trail — dry-stone path along the ridge" style="object-position: center 30%;" />
+    </div>
+    <div class="attraction__body attraction--sand">
+      <div class="attraction__number">03</div>
+      <p class="attraction__category">Hiking trail · Engineering landmark</p>
+      <h2 class="attraction__title">Premužić Trail</h2>
+      <p class="attraction__text">The Premužić trail is one of the best-known hiking routes in Croatia and Europe. About 57 km long, it crosses the heart of Velebit — from Baške Oštarije to Ostarije along the central and northern ridge. Built in the 1930s to the design of Ante Premužić.</p>
+      <p class="attraction__text">What makes it legendary is the dry-stone walling — hand-laid stone walls without mortar that safely guide you through steep terrain and along cliff edges. The trail winds through forest and limestone ridges with constant views of the Adriatic, Pag and Kvarner.</p>
+      <p class="attraction__text">For Stars Peak guests in Bačić Duliba the trail is within easy reach — a shorter day section towards Dabarski kukovi or Alan, or a multi-day traverse with nights in mountain huts.</p>
+<ul class="attraction__details">
+        <li><strong>Length:</strong> about 57 km (several stages, 3–5 days)</li>
+        <li><strong>Difficulty:</strong> moderate — suitable for fit and experienced hikers</li>
+        <li><strong>Direction:</strong> Baške Oštarije → Zavižan → Alan → Ostarije</li>
+        <li><strong>Access from Bačić Duliba:</strong> join the trail towards Alan and Dabarski kukovi</li>
+        <li><strong>Highlights:</strong> Rozanski kukovi, Veliki Lubenovac, Alan</li>
+      </ul>
+<div class="attraction__meta">
+        <span>57 km long</span>
+        <span>Dry-stone walls</span>
+        <span>Sea views</span>
+        <span>Near Bačić Duliba</span>
+      </div>
+    </div>
+  </article>
+
+  <article class="attraction attraction--reverse">
+    <div class="attraction__image">
+      <img src="velebit-brosura-assets/dabarski-kukovi.jpg" alt="Panorama of Dabarski kukovi — limestone peaks and green valley" />
+    </div>
+    <div class="attraction__body">
+      <div class="attraction__number">04</div>
+      <p class="attraction__category">Peaks · Karst · Central Velebit</p>
+      <h2 class="attraction__title">Dabarski kukovi</h2>
+      <p class="attraction__text">Impressive limestone peaks of central Velebit — a group of towers above Bačić Duliba and Starigrad Podravanjski. Trails cross karst with panoramic views over Lika and the Adriatic. A favourite destination for local hikers and Stars Peak guests — ascents start directly from the mountain base.</p>
+
+<div class="attraction__meta">
+        <span>Karst & towers</span>
+        <span>Panoramic views</span>
+        <span>Near Bačić Duliba</span>
+      </div>
+    </div>
+  </article>
+
+  <section class="hero-band">
+    <div class="hero-band__bg">
+      <img src="velebit-brosura-assets/sjeverni-velebit.jpg" alt="Northern Velebit National Park" />
+    </div>
+    <div class="hero-band__content">
+      <p class="attraction__category">National park</p>
+      <h2 class="hero-band__title">Northern Velebit</h2>
+      <p class="hero-band__text">Croatia's youngest national park (1999) protects the highest and wildest parts of Velebit. Rozanski kukovi, Štirovača, Veliki Lubenovac — trails through lush forest, endemic species and untouched landscapes. Part of the UNESCO World Heritage site Ancient and Primeval Beech Forests of the Carpathians and Other Regions of Europe.</p>
+    </div>
+  </section>
+
+  <article class="attraction">
+    <div class="attraction__image">
+      <img src="velebit-brosura-assets/zavizan.jpg" alt="Zavižan mountain hut" />
+    </div>
+    <div class="attraction__body attraction--sand">
+      <div class="attraction__number">05</div>
+      <p class="attraction__category">1594 m a.s.l. · Most visited peak</p>
+      <h2 class="attraction__title">Zavižan</h2>
+      <p class="attraction__text">The Zavižan mountain hut — the highest accommodation in Croatia — stands at 1594 m with views of the Adriatic, Pag and all of northern Velebit. Nearby trails lead to Rozanski kukovi and Veliki Lubenovac. The weather station is known for extreme conditions and snow that can last until May.</p>
+
+<div class="attraction__meta">
+        <span>1594 m a.s.l.</span>
+        <span>Mountain hut</span>
+        <span>Rozanski kukovi</span>
+      </div>
+    </div>
+  </article>
+
+  <article class="attraction attraction--reverse">
+    <div class="attraction__image">
+      <img src="velebit-brosura-assets/tulove-grede.jpg" alt="Tulove grede on Velebit" />
+    </div>
+    <div class="attraction__body">
+      <div class="attraction__number">06</div>
+      <p class="attraction__category">Southern Velebit · Film location</p>
+      <h2 class="attraction__title">Tulove grede</h2>
+      <p class="attraction__text">A spectacular ridge of southern Velebit — a group of limestone crags above Gračac. Famous as a Winnetou filming location and offering some of the most dramatic panoramas on the range. The trail crosses sparse karst with wide views over Lika.</p>
+
+<div class="attraction__meta">
+        <span>Winnetou location</span>
+        <span>Limestone crags</span>
+        <span>Southern Velebit</span>
+      </div>
+    </div>
+  </article>
+
+  <section class="hero-band" id="speleologija">
+    <div class="hero-band__bg">
+      <img src="velebit-brosura-assets/cerovacke-spilje.jpg" alt="Speleology — Cerovačke caves" />
+    </div>
+    <div class="hero-band__content">
+      <p class="attraction__category">Velebit's underground world</p>
+      <h2 class="hero-band__title">Speleology on Velebit</h2>
+      <p class="hero-band__text">Velebit is among the most speleologically rich areas in Europe. The limestone massif hides hundreds of caves, pits and underground channels — some open to visitors, others accessible only to equipped cavers. The underground world preserves cave-bear fossils and Palaeolithic archaeological remains.</p>
+      <p class="hero-band__text" style="margin-top: 1rem;">The best-known sites in southern and central Velebit include Cerovačke caves near Gračac, Modrič cave in Paklenica and Lukina jama in Velebit Nature Park. For Stars Peak guests, Cerovačke caves are an ideal outing — less than an hour's drive.</p>
+    </div>
+  </section>
+
+  <article class="attraction">
+    <div class="attraction__image">
+      <img src="velebit-brosura-assets/cerovacke-spilje.jpg" alt="Cerovačke caves" />
+    </div>
+    <div class="attraction__body">
+      <div class="attraction__number">07</div>
+      <p class="attraction__category">Cerovačke caves · Speleological park</p>
+      <h2 class="attraction__title">Cerovačke Caves</h2>
+      <p class="attraction__text">Cerovačke caves lie in Grab near Gračac, on the edge of southern Velebit. The system comprises three pits — Lower, Upper and New Cave — with more than 7 km of explored underground passages. Lower Cave is open to the public with guided tours.</p>
+      <p class="attraction__text">The caves have yielded cave-bear remains (<em>Ursus spelaeus</em>) and Palaeolithic finds. Stalactites and stalagmites create impressive underground scenery — some chambers are tens of metres high.</p>
+      <p class="attraction__text">Cerovačke caves are one of the few places in Croatia where you can experience the underground world without caving equipment — safely, with expert guiding. A perfect add-on after hiking or swimming in Karlobag.</p>
+<ul class="attraction__details">
+        <li><strong>Location:</strong> Grab, near Gračac — southern Velebit</li>
+        <li><strong>Visits:</strong> guided tours; bring warm clothing (10–12 °C)</li>
+        <li><strong>Duration:</strong> about 60 minutes per cave</li>
+        <li><strong>Season:</strong> spring to autumn (check opening hours)</li>
+        <li><strong>Nearby:</strong> Tulove grede, NP Paklenica, Modrič cave</li>
+      </ul>
+<div class="attraction__meta">
+        <span>7+ km of passages</span>
+        <span>Cave bear</span>
+        <span>Guided tours</span>
+        <span>~60 min from Stars Peak</span>
+      </div>
+    </div>
+  </article>
+
+  <article class="attraction attraction--reverse">
+    <div class="attraction__image">
+      <img src="velebit-brosura-assets/pag.jpg" alt="Pag island — stone shore and Adriatic view" />
+    </div>
+    <div class="attraction__body attraction--sand">
+      <div class="attraction__number">08</div>
+      <p class="attraction__category">Island · Adriatic · Gastronomy</p>
+      <h2 class="attraction__title">Pag Island</h2>
+      <p class="attraction__text">One of Croatia's sunniest islands, known for stone landscapes, beaches, Pag sheep and cheese. Linked to the mainland by bridge — perfect for a day trip from Velebit: mountain morning, beach afternoon.</p>
+
+<div class="attraction__meta">
+        <span>Pag cheese</span>
+        <span>2700+ sunny hours</span>
+        <span>30 min drive</span>
+      </div>
+    </div>
+  </article>
+
+  <article class="attraction">
+    <div class="attraction__image">
+      <img src="velebit-brosura-assets/karlobag.jpg" alt="Karlobag — Adriatic waterfront on the Velebit coast" />
+    </div>
+    <div class="attraction__body">
+      <div class="attraction__number">09</div>
+      <p class="attraction__category">Coast · Swimming · 30 minutes</p>
+      <h2 class="attraction__title">Karlobag</h2>
+      <p class="attraction__text">The nearest seaside town on the Velebit coast — pebble beaches, waterfront cafés and a swim in the Adriatic before lunch. Just 30 minutes from Stars Peak in Bačić Duliba — mountain in the morning, Adriatic in the afternoon.</p>
+
+<div class="attraction__meta">
+        <span>30 min from Velebit</span>
+        <span>Pebble beaches</span>
+        <span>Mountain & sea</span>
+      </div>
+    </div>
+  </article>
+
+  <section class="highlights">
+    <div class="highlights__inner">
+      <header class="highlights__header">
+        <h2 class="highlights__title">Why visit Velebit?</h2>
+        <p class="highlights__lead">A unique blend of alpine hiking and Mediterranean sea — in a single day.</p>
+      </header>
+      <div class="highlights__grid">
+        <div class="highlight-card">
+          <div class="highlight-card__icon">⛰</div>
+          <h3 class="highlight-card__title">Hiking</h3>
+          <p class="highlight-card__text">Trails for every level — from an easy walk in Zavratnica to demanding ascents of Dabarski kukovi and the Premužić trail.</p>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-card__icon">🌊</div>
+          <h3 class="highlight-card__title">Adriatic within reach</h3>
+          <p class="highlight-card__text">Karlobag, Zavratnica and Pag are half an hour away — morning at 900 m, afternoon in crystal-clear sea.</p>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-card__icon">🌲</div>
+          <h3 class="highlight-card__title">Biodiversity</h3>
+          <p class="highlight-card__text">Primeval forests, endemic species, bears and lynx — Velebit is one of Europe's most important habitats.</p>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-card__icon">🕳</div>
+          <h3 class="highlight-card__title">Speleology</h3>
+          <p class="highlight-card__text">Hundreds of caves in the limestone massif — Cerovačke caves, Modrič and Lukina jama. An underground world with cave-bear fossils.</p>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-card__icon">✦</div>
+          <h3 class="highlight-card__title">Stars</h3>
+          <p class="highlight-card__text">No light pollution — Milky Way nights, ridge silence and skies rarely seen elsewhere.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p class="footer__brand">Velebit mountain chalet Stars Peak</p>
+    <p class="footer__tagline">Mountain · Sea · Stars</p>
+    <p class="footer__credits">Travel brochure — Velebit attractions.<br />Photos from <a href="https://commons.wikimedia.org/" target="_blank" rel="noopener">Wikimedia Commons</a> (Creative Commons) and the Stars Peak website.<br />Bačić Duliba · Velebit Nature Park · Croatia</p>
+  </footer>
+
+</body>
+</html>

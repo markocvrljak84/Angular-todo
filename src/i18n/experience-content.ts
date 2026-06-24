@@ -147,7 +147,7 @@ const en: ExperienceContent = {
     submitErrorMessage: "Something went wrong — please try again or contact us directly.",
     privacyNote:
       "We only use your email for the brochure and occasional Stars Peak updates. Unsubscribe anytime.",
-    brochureLanguageNote: "PDF brochure is in Croatian.",
+    brochureLanguageNote: "PDF brochure in English.",
     thankYouTitle: "You're in — thank you",
     successMessage:
       "Thanks for subscribing. Download the Velebit brochure below — we'll also send guides and news by email.",
@@ -357,7 +357,7 @@ const de: ExperienceContent = {
     submitErrorMessage: "Etwas ist schiefgelaufen — bitte erneut versuchen oder uns direkt kontaktieren.",
     privacyNote:
       "Wir nutzen Ihre E-Mail nur für die Broschüre und gelegentliche Stars-Peak-Updates. Abmeldung jederzeit möglich.",
-    brochureLanguageNote: "PDF-Broschüre auf Kroatisch.",
+    brochureLanguageNote: "PDF-Broschüre auf Deutsch.",
     thankYouTitle: "Geschafft — vielen Dank",
     successMessage:
       "Danke für Ihre Anmeldung. Laden Sie die Velebit-Broschüre unten herunter — Neuigkeiten senden wir auch per E-Mail.",
@@ -413,7 +413,7 @@ const fr: ExperienceContent = {
     submitErrorMessage: "Une erreur s'est produite — réessayez ou contactez-nous directement.",
     privacyNote:
       "Votre e-mail sert uniquement à la brochure et aux nouvelles occasionnelles de Stars Peak.",
-    brochureLanguageNote: "Brochure PDF en croate.",
+    brochureLanguageNote: "Brochure PDF en français.",
     thankYouTitle: "Inscription confirmée — merci",
     successMessage:
       "Merci pour votre inscription. Téléchargez la brochure Velebit ci-dessous — nous vous enverrons aussi des nouvelles par e-mail.",
@@ -469,7 +469,7 @@ const it: ExperienceContent = {
     submitErrorMessage: "Qualcosa è andato storto — riprova o contattaci direttamente.",
     privacyNote:
       "Usiamo la tua e-mail solo per la brochure e aggiornamenti occasionali su Stars Peak.",
-    brochureLanguageNote: "Brochure PDF in croato.",
+    brochureLanguageNote: "Brochure PDF in italiano.",
     thankYouTitle: "Iscrizione completata — grazie",
     successMessage:
       "Grazie per l'iscrizione. Scarica la brochure Velebit qui sotto — novità e guide arriveranno anche via e-mail.",

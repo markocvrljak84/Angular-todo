@@ -5,6 +5,9 @@
   "scripts": {
     "dev": "WATCHPACK_POLLING=true next dev",
     "dev:turbo": "next dev --turbo",
+    "generate:brochures": "node scripts/generate-brochure-html.mjs && node scripts/generate-brochure-html-pdf.mjs",
+    "generate:brochure-html": "node scripts/generate-brochure-html.mjs",
+    "generate:brochure-html-pdf": "node scripts/generate-brochure-html-pdf.mjs",
     "build": "next build",
     "start": "next start"
   },
@@ -19,6 +22,8 @@
     "@types/nodemailer": "^8.0.1",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
+    "pdfkit": "^0.19.1",
+    "puppeteer-core": "^24.2.0",
     "typescript": "^5.8.3"
   }
 }

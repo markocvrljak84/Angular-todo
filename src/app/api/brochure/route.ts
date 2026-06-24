@@ -1,8 +1,6 @@
 import { NextResponse } from "next/server";
-import {
-  VELEBIT_BROCHURE_DOWNLOAD_NAME,
-  VELEBIT_BROCHURE_PDF,
-} from "@/config/site-brochure";
+import { getVelebitBrochure } from "@/config/site-brochure";
+import { isLocale } from "@/i18n/config";
 import { deliverFormEmail, verifyFormGuard } from "@/lib/form-api";
 import { isValidEmail, sanitizeText } from "@/lib/form-security";
 
@@ -21,16 +19,20 @@ export async function POST(request: Request) {
   }
 
   const email = sanitizeText(body.email, 254).toLowerCase();
-  const locale = sanitizeText(body.locale, 8);
+  const localeRaw = sanitizeText(body.locale, 8);
+  const locale = isLocale(localeRaw) ? localeRaw : "hr";
 
   if (!isValidEmail(email)) {
     return NextResponse.json({ error: "invalidEmail" }, { status: 400 });
   }
 
+  const brochure = getVelebitBrochure(locale);
+
   const sent = await deliverFormEmail("Stars Peak — brochure download", {
     email,
     locale,
     gdprConsent: "yes",
+    brochureFile: brochure.downloadName,
   });
 
   if (!sent.ok) {
@@ -39,7 +41,7 @@ export async function POST(request: Request) {
 
   return NextResponse.json({
     ok: true,
-    downloadUrl: VELEBIT_BROCHURE_PDF,
-    downloadName: VELEBIT_BROCHURE_DOWNLOAD_NAME,
+    downloadUrl: brochure.pdfPath,
+    downloadName: brochure.downloadName,
   });
 }
