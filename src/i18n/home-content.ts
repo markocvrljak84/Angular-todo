@@ -1,5 +1,13 @@
 import type { Locale } from "./config";
 
+const PAG_OUTDOOR_ARTICLE_URL: Record<Locale, string> = {
+  hr: "https://www.pag-outdoor.com/hr/otok-pag-ili-mjesec-podno-velebita/",
+  en: "https://www.pag-outdoor.com/en/otok-pag-ili-mjesec-podno-velebita/",
+  de: "https://www.pag-outdoor.com/de/otok-pag-ili-mjesec-podno-velebita/",
+  fr: "https://www.pag-outdoor.com/fr/otok-pag-ili-mjesec-podno-velebita/",
+  it: "https://www.pag-outdoor.com/it/otok-pag-ili-mjesec-podno-velebita/",
+};
+
 export type HomeEditorialBlock = {
   layout: "full" | "split";
   title: string;
@@ -35,7 +43,7 @@ export type HomeContent = {
   map: {
     title: string;
     intro: string;
-    points: { name: string; note: string }[];
+    points: { name: string; note: string; link?: { href: string; label: string } }[];
   };
   finalCta: {
     headline: string;
@@ -54,7 +62,7 @@ const en: HomeContent = {
       "Views of Bačić Kuk",
       "Inside Velebit Nature Park",
     ],
-    ctaBook: "Check availability",
+    ctaBook: "Book your stay",
     ctaExperiences: "See experiences",
   },
   whySpecial: {
@@ -80,36 +88,36 @@ const en: HomeContent = {
   editorial: {
     title: "Experience in photos",
     intro:
-      "Mountain mornings, Adriatic afternoons and evenings by the fire — life at Stars Peak in three moments.",
+      "Outdoor kitchen, living room and a stunning view of Bačić Kuk — life at Stars Peak in three moments.",
     ctaLabel: "Full gallery",
     blocks: [
       {
         layout: "full",
         title: "Outdoor kitchen",
         body:
-          "The summer kitchen and terrace are where days slow down — grill, pine-scented air and wide views of the valley.",
+          "The summer kitchen and terrace are where days slow down — grill outdoors, pine-scented air and meals with the mountain close by.",
         imageAlt: "Outdoor summer kitchen and terrace at Stars Peak",
       },
       {
         layout: "split",
-        title: "Wood follows the forest",
+        title: "Living room",
         body:
-          "The living room is the heart of your stay — local wood, a fireplace and soft light from the gallery wall. A calm place to unwind after the trail, plan the next hike or watch Bačić Kuk through the glass.",
+          "The living room is the heart of your stay — local wood, a fireplace and soft light from the gallery. A calm place to unwind after the trail, plan the next hike or watch the peaks through the glass.",
         imageAlt: "Living room with fireplace and wooden stairs",
       },
       {
         layout: "full",
-        title: "Velebit at your doorstep",
+        title: "View of Bačić Kuk",
         body:
-          "Forest, wildlife and silence surround the chalet — Bačić Kuk rises above the treeline minutes from the door.",
-        imageAlt: "Forest and mountain landscape around the chalet",
+          "Bačić Kuk rises above the treeline minutes from the door — forest, silence and a wide view of the summit on Velebit, right from Stars Peak.",
+        imageAlt: "Panoramic view of Bačić Kuk and the Velebit landscape from Stars Peak",
       },
     ],
   },
   accommodation: {
     title: "Your stay at a glance",
     lead:
-      "A private wooden chalet for up to four guests — fireplace, outdoor kitchen and views of Bačić Kuk from the terrace.",
+      "A private wooden chalet for up to four guests — a warm living room with fireplace, an outdoor kitchen and mountain surroundings around Bačić Kuk. Check availability and book your stay online.",
     imageAlt: "Dining table set for breakfast",
     items: [
       "Up to 4 guests",
@@ -119,23 +127,51 @@ const en: HomeContent = {
       "BBQ grill",
       "Pet friendly",
     ],
-    ctaLabel: "All accommodation details",
+    ctaLabel: "Accommodation details & booking",
   },
   map: {
     title: "Mountain and sea in one day",
     intro: "Stars Peak sits between Velebit peaks and the Adriatic — everything below is within easy reach.",
     points: [
-      { name: "Bačić Kuk", note: "Summit above the chalet" },
-      { name: "Karlobag", note: "30 min · Adriatic swim" },
-      { name: "Zavratnica", note: "Fjord-like cove" },
-      { name: "Premužić trail", note: "Ridge hiking" },
-      { name: "Pag", note: "Island day trip" },
-      { name: "Paklenica", note: "Canyon & cliffs" },
+      {
+        name: "Bačić Kuk",
+        note:
+          "At 1,304 m, Bačić Kuk is actually a cluster of bare rocky peaks of varying height and steepness, offering climbing challenges at every difficulty level.",
+      },
+      {
+        name: "Karlobag",
+        note:
+          "Karlobag is a wonderful blend of Mediterranean and mainland life — crystal-clear sea and Croatia's finest mountain, Velebit, just minutes away by car.",
+      },
+      {
+        name: "Zavratnica",
+        note:
+          "A beautiful cove with crystal-clear water. Zavratnica is surely one of the finest bays on the Croatian coast — a protected landscape on the Adriatic.",
+      },
+      {
+        name: "Premužić trail",
+        note:
+          "Hiking Velebit with views of the Adriatic archipelago. The Premužić trail is considered a masterpiece of stonework — built as dry-stone walling and laid out to lead hikers simply into the harshest, most rugged parts of northern Velebit: Hajdučki and Rožanski kukovi.",
+      },
+      {
+        name: "Pag island",
+        note:
+          "As the only Adriatic island with two faces, Pag offers wild scenes of raw stone and blue sky alongside gentler, greener landscapes — raw beauty and calming idyll at once.",
+        link: {
+          href: PAG_OUTDOOR_ARTICLE_URL.en,
+          label: "Pag island in pictures",
+        },
+      },
+      {
+        name: "Paklenica National Park",
+        note:
+          "Paklenica's beauty is best experienced on foot, along more than 150 km of marked hiking trails. Its proximity to the coast adds a special charm — mountain and sea in one place.",
+      },
     ],
   },
   finalCta: {
-    headline: "Mountain. Sea. Stars. In one day.",
-    btnLabel: "Check availability",
+    headline: "Ready for a stay on Velebit? Reserve Stars Peak for your dates.",
+    btnLabel: "Book your stay",
   },
 };
 
@@ -150,7 +186,7 @@ const hr: HomeContent = {
       "Pogled na Bačić kuk",
       "Unutar Parka prirode Velebit",
     ],
-    ctaBook: "Provjeri dostupnost",
+    ctaBook: "Rezervirajte boravak",
     ctaExperiences: "Pogledaj doživljaje",
   },
   whySpecial: {
@@ -163,7 +199,7 @@ const hr: HomeContent = {
       },
       {
         title: "More",
-        body: "Karlobag, Zavratnica i Pag udaljeni su pola sata vožnje — jutro na planini, popodne u moru.",
+        body: "Karlobag, Zavratnica i Pag su poznati po kamenitim krajolicima, plažama, paškoj ovci i siru. Mostom povezan s kopnom — idealno za jednodnevni izlet s Stars Peaka — jutro na planini, popodne u moru.",
         imageAlt: "Uvala Zavratnica na jadranskoj obali",
       },
       {
@@ -176,36 +212,36 @@ const hr: HomeContent = {
   editorial: {
     title: "Doživljaj u fotografijama",
     intro:
-      "Planinska jutra, jadranska popodneva i večeri uz vatru — tri trenutka života na Stars Peaku.",
+      "Ljetnja kuhinja, dnevni boravak i prekrasan pogled na Bačić kuk — tri trenutka života na Stars Peaku.",
     ctaLabel: "Cijela galerija",
     blocks: [
       {
         layout: "full",
         title: "Ljetnja kuhinja",
         body:
-          "Ljetnja kuhinja i terasa usporavaju dan — roštilj, miris bora i pogled na veliki Bačić Kuk.",
+          "Ljetnja kuhinja i terasa usporavaju dan — roštilj na otvorenom, miris bora i obroci uz planinu nadomak.",
         imageAlt: "Vanjska ljetnja kuhinja i terasa na Stars Peaku",
       },
       {
         layout: "split",
-        title: "Drvo prati šumu",
+        title: "Dnevni boravak",
         body:
-          "Dnevni boravak je srce kuće — lokalno drvo, kamin i meka svjetlost s galerije. Mirno mjesto za odmor nakon staze, planiranje sljedećeg uspona ili pogled na Bačić kuk kroz staklo.",
+          "Dnevni boravak je srce kuće — lokalno drvo, kamin i meka svjetlost s galerije. Mirno mjesto za odmor nakon staze, planiranje sljedećeg uspona ili pogled na vrhove kroz staklo.",
         imageAlt: "Dnevni boravak s kaminom i drvenim stubištem",
       },
       {
         layout: "full",
-        title: "Velebit na dohvat ruke",
+        title: "Pogled na Bačić kuk",
         body:
-          "Šuma, divlje životinje i tišina oko kuće — Bačić kuk se diže iznad krošnji minutama od vrata.",
-        imageAlt: "Šuma i planinski krajolik oko kuće",
+          "Bačić kuk se diže iznad krošnji neposredno pred kućom — šuma, Velebit i pogled na kuk.",
+        imageAlt: "Panoramski pogled na Bačić kuk i velebitski krajolik sa Stars Peaka",
       },
     ],
   },
   accommodation: {
     title: "Smještaj ukratko",
     lead:
-      "Privatna drvena kuća za do četiri gosta — kamin, vanjska kuhinja i pogled na Bačić kuk s terase.",
+      "Privatna drvena kuća za do četiri gosta — dnevni boravak s kaminom, vanjska kuhinja i planinska okolica oko Bačić kuka. Provjerite dostupnost i rezervirajte boravak online.",
     imageAlt: "Blagovaonski stol postavljen za doručak",
     items: [
       "Do 4 gosta",
@@ -215,23 +251,30 @@ const hr: HomeContent = {
       "Roštilj",
       "Pet friendly",
     ],
-    ctaLabel: "Svi detalji smještaja",
+    ctaLabel: "Detalji smještaja i rezervacija",
   },
   map: {
     title: "Planina i more u jednom danu",
     intro: "Stars Peak leži između velebitskih vrhova i Jadrana — sve dolje je na dohvat ruke.",
     points: [
-      { name: "Bačić kuk", note: "Vrh iznad kuće" },
-      { name: "Karlobag", note: "30 min · kupanje u moru" },
-      { name: "Zavratnica", note: "Uvala poput fjorda" },
-      { name: "Premužićeva staza", note: "Hodanje grebenom" },
-      { name: "Pag", note: "Izlet na otok" },
-      { name: "Paklenica", note: "Kanjon i litice" },
+      { name: "Bačić kuk", note: "Bačić kuk (1304 m) sastoji se zapravo od skupine golih kamenitih kukova različite visine i strmine, zbog čega pruža mogućnost za penjačke podvige različitih stupnjeva težine." },
+      { name: "Karlobag", note: "Karlobag je čudesan spoj Mediterana i kontinenta, kristalno čistog mora i najljepše hrvatske planine – Velebita, do kojega ima tek nekoliko minuta vožnje." },
+      { name: "Zavratnica", note: "Prekrasna uvala sa kristalno čistim morem. Zavratnica je sigurno jedna od najljepših uvala hrvatske obale i zaštićeni krajolik na Hrvatskom Jadranu." },
+      { name: "Premužićeva staza", note: "Hodanje Velebitom sa pogledom na Jadranski arhipelag. Premužićevu stazu danas smatramo pravim remek-djelom graditeljstva jer je građena u kamenu - suhozidu, te je položena tako da nas na vrlo jednostavan način vodi u najsurovije i najkrševitije dijelove sjevernog Velebita – Hajdučke i Rožanske kukove" },
+      {
+        name: "Otok Pag",
+        note: "Kao jedini jadranski otok s dva lica, Pag pruža divlje prizore surovog kamena i plavetnila neba te nježnije, zelenije i pitomije krajolike, nudeći vam istodobno iskustvo sirove ljepote i smirujuće idile.",
+        link: {
+          href: PAG_OUTDOOR_ARTICLE_URL.hr,
+          label: "Otok Pag u slikama",
+        },
+      },
+      { name: "Nacionalni park Paklenica", note: "Sve ljepote Paklenice moguće je doživjeti jedino pješačenjem, a upravo tome služi preko 150 km uređenih planinarskih staza. Posebnu draž ovom prostoru daje blizina obale koja omogućuje jedinstven doživljaj svih čari planine i mora na jednom mjestu." },
     ],
   },
   finalCta: {
-    headline: "Planina. More. Zvijezde. U jednom danu.",
-    btnLabel: "Provjeri dostupnost",
+    headline: "Spremni za boravak na Velebitu? Rezervirajte Stars Peak za svoje termine.",
+    btnLabel: "Rezervirajte boravak",
   },
 };
 
@@ -242,7 +285,7 @@ const de: HomeContent = {
     subline:
       "Privates Berghaus auf 900 m mit Blick auf Bačić Kuk — nur 30 Minuten zur Adria.",
     facts: ["900 m Höhe", "30 Min zum Meer", "Blick auf Bačić Kuk", "Im Velebit-Naturpark"],
-    ctaBook: "Verfügbarkeit prüfen",
+    ctaBook: "Aufenthalt buchen",
     ctaExperiences: "Erlebnisse ansehen",
   },
   whySpecial: {
@@ -268,53 +311,84 @@ const de: HomeContent = {
   editorial: {
     title: "Erlebnisse in Bildern",
     intro:
-      "Bergmorgen, Adria-Nachmittage und Abende am Feuer — drei Momente auf Stars Peak.",
+      "Außenküche, Wohnzimmer und grandioser Blick auf Bačić Kuk — drei Momente auf Stars Peak.",
     ctaLabel: "Galerie ansehen",
     blocks: [
       {
         layout: "full",
         title: "Außenküche",
         body:
-          "Sommerküche und Terrasse — Grill, Pinienduft und weite Talblicke.",
+          "Sommerküche und Terrasse — draußen grillen, Pinienduft und Mahlzeiten mit dem Berg in der Nähe.",
         imageAlt: "Sommerküche und Terrasse auf Stars Peak",
       },
       {
         layout: "split",
-        title: "Holz folgt dem Wald",
+        title: "Wohnzimmer",
         body:
-          "Der Wohnbereich ist das Herz des Aufenthalts — lokales Holz, Kamin und sanftes Licht. Ein ruhiger Ort nach der Tour, um zu lesen oder Bačić Kuk durch die Glaswand zu sehen.",
+          "Das Wohnzimmer ist das Herz des Aufenthalts — lokales Holz, Kamin und sanftes Licht von der Galerie. Ein ruhiger Ort nach der Tour, um die nächste Wanderung zu planen oder die Gipfel durchs Glas zu sehen.",
         imageAlt: "Wohnzimmer mit Kamin und Holztreppe",
       },
       {
         layout: "full",
-        title: "Velebit vor der Tür",
+        title: "Blick auf Bačić Kuk",
         body:
-          "Wald, Wildnis und Stille — Bačić Kuk ragt Minuten von der Haustür über die Baumgrenze.",
-        imageAlt: "Wald und Berglandschaft um die Hütte",
+          "Bačić Kuk ragt Minuten von der Haustür über die Baumgrenze — Wald, Stille und Blick auf den Velebit, direkt von Stars Peak aus.",
+        imageAlt: "Panoramablick auf Bačić Kuk und die Velebit-Landschaft von Stars Peak",
       },
     ],
   },
   accommodation: {
     title: "Ihr Aufenthalt auf einen Blick",
     lead:
-      "Privates Holzhaus für bis zu vier Gäste — Kamin, Außenküche und Blick auf Bačić Kuk.",
+      "Privates Holzhaus für bis zu vier Gäste — Wohnzimmer mit Kamin, Außenküche und Berglandschaft um Bačić Kuk. Verfügbarkeit prüfen und Ihren Aufenthalt online buchen.",
     imageAlt: "Gedeckter Esstisch zum Frühstück",
     items: ["Bis 4 Gäste", "WLAN", "Kamin", "Außenküche", "Grill", "Haustiere willkommen"],
-    ctaLabel: "Alle Unterkunftsdetails",
+    ctaLabel: "Unterkunft & Buchung",
   },
   map: {
     title: "Berg und Meer an einem Tag",
     intro: "Stars Peak liegt zwischen Velebit-Gipfeln und der Adria.",
     points: [
-      { name: "Bačić Kuk", note: "Gipfel über dem Haus" },
-      { name: "Karlobag", note: "30 Min · Baden" },
-      { name: "Zavratnica", note: "Fjordartige Bucht" },
-      { name: "Premužić-Weg", note: "Gratwanderung" },
-      { name: "Pag", note: "Inselausflug" },
-      { name: "Paklenica", note: "Schlucht & Felswände" },
+      {
+        name: "Bačić Kuk",
+        note:
+          "Bačić Kuk (1.304 m) besteht eigentlich aus einer Gruppe kahler, felsiger Spitzen unterschiedlicher Höhe und Steilheit und bietet Kletterherausforderungen in verschiedenen Schwierigkeitsgraden.",
+      },
+      {
+        name: "Karlobag",
+        note:
+          "Karlobag ist eine wunderbare Verbindung aus Mittelmeer und Festland — kristallklares Meer und Kroatiens schönster Berg, der Velebit, nur wenige Minuten Fahrt entfernt.",
+      },
+      {
+        name: "Zavratnica",
+        note:
+          "Eine wunderschöne Bucht mit kristallklarem Wasser. Zavratnica gehört sicher zu den schönsten Buchten der kroatischen Küste — ein geschütztes Landschaftsgebiet an der Adriaküste.",
+      },
+      {
+        name: "Premužić-Weg",
+        note:
+          "Wandern am Velebit mit Blick auf den Adriatischen Archipel. Der Premužić-Weg gilt heute als echtes Meisterwerk des Steinbaus — als Trockenmauerwerk angelegt führt er auf einfache Weise in die rauhesten und kargsten Teile des nördlichen Velebit: Hajdučki und Rožanski kukovi.",
+      },
+      {
+        name: "Insel Pag",
+        note:
+          "Als einzige Adriainsel mit zwei Gesichtern bietet Pag wilde Bilder aus purem Fels und tiefblauem Himmel sowie sanftere, grünere Landschaften — rohe Schönheit und beruhigende Idylle zugleich.",
+        link: {
+          href: PAG_OUTDOOR_ARTICLE_URL.de,
+          label: "Insel Pag in Bildern",
+        },
+      },
+      {
+        name: "Nationalpark Paklenica",
+        note:
+          "Paklenicas Schönheit lässt sich am besten zu Fuß erleben, auf über 150 km markierter Wanderwege. Die Nähe zur Küste verleiht dem Gebiet besonderen Reiz — Berg und Meer an einem Ort.",
+      },
     ],
   },
-  finalCta: { headline: "Berg. Meer. Sterne. An einem Tag.", btnLabel: "Verfügbarkeit prüfen" },
+  finalCta: {
+    headline: "Bereit für Velebit? Reservieren Sie Stars Peak für Ihre Termine.",
+    btnLabel: "Jetzt buchen",
+  },
 };
 
 const fr: HomeContent = {
@@ -323,7 +397,7 @@ const fr: HomeContent = {
     headline: "Sommet. Mer. Étoiles.",
     subline: "Chalet privé à 900 m avec vue sur Bačić Kuk — à 30 minutes de l'Adriatique.",
     facts: ["900 m d'altitude", "30 min de la mer", "Vue sur Bačić Kuk", "Dans le parc naturel Velebit"],
-    ctaBook: "Vérifier disponibilité",
+    ctaBook: "Réserver votre séjour",
     ctaExperiences: "Voir les expériences",
   },
   whySpecial: {
@@ -349,53 +423,84 @@ const fr: HomeContent = {
   editorial: {
     title: "L'expérience en photos",
     intro:
-      "Matins en montagne, après-midis à l'Adriatique et soirées au feu — trois instants à Stars Peak.",
+      "Cuisine extérieure, salon et vue imprenable sur Bačić Kuk — trois instants à Stars Peak.",
     ctaLabel: "Galerie complète",
     blocks: [
       {
         layout: "full",
         title: "Cuisine d'été",
         body:
-          "La cuisine extérieure et la terrasse ralentissent le rythme — grillades, pin et vue sur la vallée.",
+          "La cuisine extérieure et la terrasse ralentissent le rythme — grillades en plein air, pin et repas avec la montagne tout près.",
         imageAlt: "Cuisine d'été et terrasse à Stars Peak",
       },
       {
         layout: "split",
-        title: "Le bois suit la forêt",
+        title: "Salon",
         body:
-          "Le salon est le cœur du séjour — bois local, cheminée et lumière douce. Un lieu calme après la randonnée, pour lire ou regarder Bačić Kuk à travers la verrière.",
-        imageAlt: "Living room with fireplace and wooden stairs",
+          "Le salon est le cœur du séjour — bois local, cheminée et lumière douce de la mezzanine. Un lieu calme après la randonnée, pour planifier la prochaine ascension ou regarder les sommets à travers la verrière.",
+        imageAlt: "Salon avec cheminée et escalier en bois",
       },
       {
         layout: "full",
-        title: "Le Velebit à vos pieds",
+        title: "Vue sur Bačić Kuk",
         body:
-          "Forêt, faune et silence — Bačić Kuk domine la crête à quelques minutes de la porte.",
-        imageAlt: "Forêt et paysage montagneux autour du chalet",
+          "Bačić Kuk domine la crête à quelques minutes de la porte — forêt, silence et vue sur le Velebit, depuis Stars Peak.",
+        imageAlt: "Vue panoramique sur Bačić Kuk et le paysage du Velebit depuis Stars Peak",
       },
     ],
   },
   accommodation: {
     title: "Votre séjour en bref",
     lead:
-      "Chalet en bois privé pour quatre personnes — cheminée, cuisine extérieure et vue sur Bačić Kuk.",
+      "Chalet en bois privé pour quatre personnes — salon avec cheminée, cuisine extérieure et nature montagneuse autour de Bačić Kuk. Consultez les disponibilités et réservez votre séjour en ligne.",
     imageAlt: "Dining table set for breakfast",
     items: ["Jusqu'à 4 personnes", "Wi‑Fi", "Cheminée", "Cuisine extérieure", "Barbecue", "Animaux acceptés"],
-    ctaLabel: "Détails du logement",
+    ctaLabel: "Logement & réservation",
   },
   map: {
     title: "Montagne et mer en une journée",
     intro: "Stars Peak se situe entre les sommets du Velebit et l'Adriatique.",
     points: [
-      { name: "Bačić Kuk", note: "Sommet au-dessus du chalet" },
-      { name: "Karlobag", note: "30 min · baignade" },
-      { name: "Zavratnica", note: "Crique fjord" },
-      { name: "Sentier Premužić", note: "Randonnée crête" },
-      { name: "Pag", note: "Excursion île" },
-      { name: "Paklenica", note: "Canyon & falaises" },
+      {
+        name: "Bačić Kuk",
+        note:
+          "Bačić Kuk (1 304 m) est en réalité un groupe de sommets rocheux dénudés, de hauteurs et pentes variées, offrant des défis d'escalade à tous les niveaux.",
+      },
+      {
+        name: "Karlobag",
+        note:
+          "Karlobag est un merveilleux mélange de Méditerranée et de continent — mer cristalline et plus belle montagne de Croatie, le Velebit, à quelques minutes en voiture.",
+      },
+      {
+        name: "Zavratnica",
+        note:
+          "Une magnifique crique aux eaux cristallines. Zavratnica compte parmi les plus belles baies de la côte croate — un paysage protégé de l'Adriatique.",
+      },
+      {
+        name: "Sentier Premužić",
+        note:
+          "Randonnée sur le Velebit avec vue sur l'archipel adriatique. Le sentier Premužić est considéré comme un chef-d'œuvre de construction en pierres sèches, tracé pour mener simplement vers les parties les plus sauvages et escarpées du Velebit septentrional — les kukovi de Hajdučki et Rožanski.",
+      },
+      {
+        name: "Île Pag",
+        note:
+          "Seule île adriatique à double visage, Pag offre des paysages sauvages de pierre nue et de ciel bleu, ainsi que des horizons plus doux et verdoyants — beauté brute et idylle apaisante à la fois.",
+        link: {
+          href: PAG_OUTDOOR_ARTICLE_URL.fr,
+          label: "Île Pag en images",
+        },
+      },
+      {
+        name: "Parc national de Paklenica",
+        note:
+          "Les beautés de Paklenica ne se découvrent qu'à pied, sur plus de 150 km de sentiers balisés. La proximité de la côte ajoute un charme unique — montagne et mer au même endroit.",
+      },
     ],
   },
-  finalCta: { headline: "Montagne. Mer. Étoiles. En une journée.", btnLabel: "Vérifier disponibilité" },
+  finalCta: {
+    headline: "Prêt pour le Velebit ? Réservez Stars Peak pour vos dates.",
+    btnLabel: "Réserver votre séjour",
+  },
 };
 
 const it: HomeContent = {
@@ -404,7 +509,7 @@ const it: HomeContent = {
     headline: "Cima. Mare. Stelle.",
     subline: "Chalet privato a 900 m con vista su Bačić Kuk — a 30 minuti dall'Adriatico.",
     facts: ["900 m di quota", "30 min dal mare", "Vista su Bačić Kuk", "Nel parco naturale Velebit"],
-    ctaBook: "Verifica disponibilità",
+    ctaBook: "Prenota il soggiorno",
     ctaExperiences: "Scopri le esperienze",
   },
   whySpecial: {
@@ -430,53 +535,84 @@ const it: HomeContent = {
   editorial: {
     title: "L'esperienza in foto",
     intro:
-      "Mattine in montagna, pomeriggi sull'Adriatico e serate al fuoco — tre momenti a Stars Peak.",
+      "Cucina esterna, soggiorno e vista mozzafiato su Bačić Kuk — tre momenti a Stars Peak.",
     ctaLabel: "Galleria completa",
     blocks: [
       {
         layout: "full",
         title: "Cucina esterna",
         body:
-          "La cucina estiva e la terrazza rallentano il ritmo — griglia, pino e vista sulla valle.",
+          "La cucina estiva e la terrazza rallentano il ritmo — griglia all'aperto, profumo di pino e pasti con la montagna a portata di mano.",
         imageAlt: "Cucina estiva e terrazza a Stars Peak",
       },
       {
         layout: "split",
-        title: "Il legno segue la foresta",
+        title: "Soggiorno",
         body:
-          "Il soggiorno è il cuore della casa — legno locale, camino e luce morbida. Un luogo tranquillo dopo l'escursione, per leggere o guardare Bačić Kuk attraverso il vetro.",
-        imageAlt: "Living room with fireplace and wooden stairs",
+          "Il soggiorno è il cuore della casa — legno locale, camino e luce morbida dalla galleria. Un luogo tranquillo dopo l'escursione, per pianificare la prossima salita o guardare le cime attraverso il vetro.",
+        imageAlt: "Soggiorno con camino e scala in legno",
       },
       {
         layout: "full",
-        title: "Il Velebit a portata di mano",
+        title: "Vista su Bačić Kuk",
         body:
-          "Foresta, fauna e silenzio — Bačić Kuk svetta sopra la linea degli alberi a pochi minuti dalla porta.",
-        imageAlt: "Foresta e paesaggio montano intorno al chalet",
+          "Bačić Kuk svetta sopra la linea degli alberi a pochi minuti dalla porta — foresta, silenzio e vista sul Velebit, direttamente da Stars Peak.",
+        imageAlt: "Vista panoramica su Bačić Kuk e il paesaggio del Velebit da Stars Peak",
       },
     ],
   },
   accommodation: {
     title: "Il soggiorno in breve",
     lead:
-      "Chalet in legno privato per quattro ospiti — camino, cucina esterna e vista su Bačić Kuk.",
+      "Chalet in legno privato per quattro ospiti — soggiorno con camino, cucina esterna e natura montana intorno a Bačić Kuk. Verificate disponibilità e prenotate il soggiorno online.",
     imageAlt: "Dining table set for breakfast",
     items: ["Fino a 4 ospiti", "Wi‑Fi", "Camino", "Cucina esterna", "Barbecue", "Animali ammessi"],
-    ctaLabel: "Dettagli alloggio",
+    ctaLabel: "Alloggio e prenotazione",
   },
   map: {
     title: "Montagna e mare in un giorno",
     intro: "Stars Peak si trova tra le cime del Velebit e l'Adriatico.",
     points: [
-      { name: "Bačić Kuk", note: "Cima sopra il chalet" },
-      { name: "Karlobag", note: "30 min · bagno" },
-      { name: "Zavratnica", note: "Baia fiord" },
-      { name: "Sentiero Premužić", note: "Trekking cresta" },
-      { name: "Pag", note: "Gita isola" },
-      { name: "Paklenica", note: "Canyon e falesie" },
+      {
+        name: "Bačić Kuk",
+        note:
+          "Bačić Kuk (1.304 m) è in realtà un gruppo di torri rocciose spoglie, di altezze e pendenza diverse, che offre sfide d'arrampicata a ogni livello di difficoltà.",
+      },
+      {
+        name: "Karlobag",
+        note:
+          "Karlobag è una meravigliosa fusione tra Mediterraneo e continente — mare cristallino e la più bella montagna croata, il Velebit, a pochi minuti di auto.",
+      },
+      {
+        name: "Zavratnica",
+        note:
+          "Una splendida insenatura con mare cristallino. Zavratnica è senza dubbio una delle baie più belle della costa croata — un paesaggio protetto dell'Adriatico.",
+      },
+      {
+        name: "Sentiero Premužić",
+        note:
+          "Camminare sul Velebit con vista sull'arcipelago adriatico. Il sentiero Premužić è considerato un capolavoro di costruzione in pietra a secco, tracciato per condurci in modo semplice nelle parti più aspre e selvagge del Velebit settentrionale — i kukovi di Hajdučki e Rožanski.",
+      },
+      {
+        name: "Isola Pag",
+        note:
+          "Unica isola adriatica con due volti, Pag offre scenari selvaggi di roccia nuda e cielo azzurro, ma anche paesaggi più dolci e verdi — bellezza cruda e idillio rilassante insieme.",
+        link: {
+          href: PAG_OUTDOOR_ARTICLE_URL.it,
+          label: "Isola Pag in immagini",
+        },
+      },
+      {
+        name: "Parco nazionale Paklenica",
+        note:
+          "Le bellezze di Paklenica si vivono solo a piedi, lungo oltre 150 km di sentieri escursionistici segnalati. La vicinanza alla costa aggiunge un fascino unico — montagna e mare nello stesso luogo.",
+      },
     ],
   },
-  finalCta: { headline: "Montagna. Mare. Stelle. In un giorno.", btnLabel: "Verifica disponibilità" },
+  finalCta: {
+    headline: "Pronti per il Velebit? Prenotate Stars Peak per le vostre date.",
+    btnLabel: "Prenota il soggiorno",
+  },
 };
 
 const byLocale: Record<Locale, HomeContent> = { en, hr, de, fr, it };

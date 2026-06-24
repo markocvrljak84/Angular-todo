@@ -56,7 +56,7 @@ const en: ExperienceContent = {
   day: {
     title: "One day at Stars Peak",
     intro:
-      "Mountain summit, Adriatic swim and starry sky — in one place, in one day. This is what life at Bačić Duliba feels like.",
+      "Mountain summit, Adriatic swim and starry sky — in one place, in one day. This is what life at Stars Peak feels like.",
     imageAlt:
       "A-frame living room with armchair and triangular window framing Velebit peaks at golden hour",
     steps: [
@@ -73,17 +73,17 @@ const en: ExperienceContent = {
       {
         time: "14:00",
         title: "Swim in Karlobag",
-        body: "Half an hour downhill and you are on the Adriatic — crystal water before lunch.",
+        body: "Half an hour downhill and you are on the Adriatic — crystal clear sea before lunch.",
       },
       {
         time: "19:00",
         title: "Dinner by the fire",
-        body: "Grill on the terrace, pine-scented air and silence broken only by the crackle of wood.",
+        body: "Grill on the outdoor kitchen, sunset and a good book.",
       },
       {
         time: "22:00",
         title: "Milky Way above Velebit",
-        body: "No light pollution — just stars, hammocks and the ridge silhouetted against the night sky.",
+        body: "No light pollution — just stars, hammocks and the majestic ridge against the night sky.",
       },
     ],
   },

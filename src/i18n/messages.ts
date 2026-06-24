@@ -135,7 +135,7 @@ const en: Messages = {
       "Wake up beneath Bačić Kuk, swim the Adriatic before lunch, stargaze on Velebit. Stars Peak — mountain experience in Bačić Duliba, Croatia.",
   },
   header: {
-    bookCta: "Check availability on Booking",
+    bookCta: "Book your stay",
     menuOpen: "Open menu",
     menuClose: "Close menu",
   },
@@ -168,7 +168,7 @@ const en: Messages = {
     contactTitle: "Contact us",
   },
   home: {
-    heroBadge: "Summit · Swim · Stargaze",
+    heroBadge: "Velebit mountain chalet Stars Peak",
     heroTitle: "Your hideaway above the treeline",
     heroLead:
       "Wake up to pine-scented air and wide skies. This mock homepage describes a fictional cabin so you can preview layout, typography, and navigation before adding your real story.",
@@ -331,7 +331,7 @@ const hr: Messages = {
       "Probudite se ispod Bačić kuka, kupajte se u Jadranu prije ručka, promatrajte zvijezde na Velebitu. Stars Peak — iskustvo planine u Bačić Dulibi, Hrvatska.",
   },
   header: {
-    bookCta: "Provjeri dostupnost na Booking",
+    bookCta: "Rezervirajte boravak",
     menuOpen: "Otvori izbornik",
     menuClose: "Zatvori izbornik",
   },
@@ -527,7 +527,7 @@ const de: Messages = {
       "Erwachen Sie unter Bačić Kuk, baden Sie mittags in der Adria, beobachten Sie Sterne am Velebit. Stars Peak — Bergerlebnis in Bačić Duliba, Kroatien.",
   },
   header: {
-    bookCta: "Verfügbarkeit auf Booking prüfen",
+    bookCta: "Aufenthalt buchen",
     menuOpen: "Menü öffnen",
     menuClose: "Menü schließen",
   },

@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { BookCta } from "@/components/book-cta";
+import { ClimbingRoutesSection } from "@/components/climbing-routes-section";
 import { HikingRoutesSection } from "@/components/hiking-routes-section";
 import { InnerPageHeader } from "@/components/inner-page-header";
 import { NearbySection } from "@/components/nearby-section";
 import { NewsletterSignupSection } from "@/components/newsletter-signup-section";
 import { TasteOfVelebitSection } from "@/components/taste-of-velebit-section";
+import { getClimbingRoutes } from "@/i18n/climbing-routes";
 import { getExperienceContent } from "@/i18n/experience-content";
 import { getExperiencesPageContent } from "@/i18n/experiences-page";
 import { getHikingRoutes } from "@/i18n/hiking-routes";
@@ -53,7 +55,12 @@ export default async function ExperiencesPage({ params }: Props) {
           <h2 id="exp-hiking" className="flat-section__title">{hiking.title}</h2>
           <p className="flat-section__intro">{hiking.intro}</p>
         </div>
-        <HikingRoutesSection content={getHikingRoutes(locale)} compact />
+        <HikingRoutesSection
+          content={getHikingRoutes(locale)}
+          compact
+          initialOpenId={null}
+        />
+        <ClimbingRoutesSection content={getClimbingRoutes(locale)} />
       </section>
 
       <section id={sea.id} className="flat-section" aria-labelledby="exp-sea">

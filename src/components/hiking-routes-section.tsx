@@ -18,6 +18,8 @@ type Props = {
   showPageHeader?: boolean;
   /** When true, render only the route list (page banner supplies h1). */
   compact?: boolean;
+  /** Route expanded on first render; null keeps all closed. */
+  initialOpenId?: HikingRouteId | null;
 };
 
 function StatItem({ label, value }: { label: string; value: string }) {
@@ -245,10 +247,17 @@ function HikingRouteItem({
   );
 }
 
-export function HikingRoutesSection({ content, showPageHeader, compact }: Props) {
+export function HikingRoutesSection({
+  content,
+  showPageHeader,
+  compact,
+  initialOpenId,
+}: Props) {
   const baseId = useId();
   const [openId, setOpenId] = useState<HikingRouteId | null>(
-    content.routes[0]?.id ?? null
+    initialOpenId === undefined
+      ? (content.routes[0]?.id ?? null)
+      : initialOpenId
   );
   const routeRefs = useRef<Partial<Record<HikingRouteId, HTMLElement>>>({});
 

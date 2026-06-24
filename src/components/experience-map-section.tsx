@@ -54,6 +54,16 @@ export function ExperienceMapSection({ content, mountainImage, seaImage }: Props
               >
                 <strong>{point.name}</strong>
                 <span>{point.note}</span>
+                {point.link ? (
+                  <a
+                    href={point.link.href}
+                    className="experience-map__point-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {point.link.label}
+                  </a>
+                ) : null}
               </li>
             ))}
           </ul>
