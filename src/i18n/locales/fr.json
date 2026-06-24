@@ -301,7 +301,9 @@
         "messageLabel": "Message",
         "messagePlaceholder": "Comment pouvons-nous vous aider pour votre séjour au Velebit ?",
         "submitLabel": "Envoyer le message",
-        "successMessage": "Merci — votre message a été envoyé. Nous vous répondrons bientôt."
+        "successMessage": "Merci — votre message a été envoyé. Nous vous répondrons bientôt.",
+        "successHomeLabel": "Retour à l'accueil",
+        "successCloseLabel": "Fermer"
     },
     "forms": {
         "gdprConsent": "J’accepte que Stars Peak traite mes données personnelles pour répondre à cette demande, conformément au RGPD.",

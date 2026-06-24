@@ -1,6 +1,9 @@
 "use client";
 
 import { useMemo, useRef, useState } from "react";
+import { ContactSuccessModal } from "@/components/contact-success-modal";
+import { FormLoadingOverlay } from "@/components/form-loading-overlay";
+import { localePath } from "@/config/site-routes";
 import type { Locale } from "@/i18n/config";
 import type { Messages } from "@/i18n/messages";
 import {
@@ -20,7 +23,8 @@ const FIELD_ORDER = ["firstName", "lastName", "email", "message"] as const;
 
 export function ContactForm({ locale, labels, contactForm }: Props) {
   const formStartedAt = useMemo(() => Date.now(), []);
-  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "submitting" | "error">("idle");
+  const [successOpen, setSuccessOpen] = useState(false);
   const [fieldErrors, setFieldErrors] = useState<ContactFieldErrors>({});
   const [serverError, setServerError] = useState<string | null>(null);
   const [gdprConsent, setGdprConsent] = useState(false);
@@ -97,7 +101,8 @@ export function ContactForm({ locale, labels, contactForm }: Props) {
       form.reset();
       setGdprConsent(false);
       setFieldErrors({});
-      setStatus("success");
+      setStatus("idle");
+      setSuccessOpen(true);
     } catch {
       setServerError(labels.submitError);
       setStatus("error");
@@ -105,17 +110,25 @@ export function ContactForm({ locale, labels, contactForm }: Props) {
   }
 
   return (
-    <aside className="contact-form-panel" aria-labelledby="contact-form-title">
-      <h2 id="contact-form-title" className="contact-form-panel__title">
-        {contactForm.title}
-      </h2>
-      <p className="contact-form-panel__intro">{contactForm.intro}</p>
+    <>
+      {status === "submitting" ? <FormLoadingOverlay label={labels.submitting} /> : null}
 
-      {status === "success" ? (
-        <p className="site-form__success" role="status">
-          {contactForm.successMessage}
-        </p>
-      ) : (
+      {successOpen ? (
+        <ContactSuccessModal
+          message={contactForm.successMessage}
+          homeHref={localePath(locale, "home")}
+          homeLabel={contactForm.successHomeLabel}
+          closeLabel={contactForm.successCloseLabel}
+          onClose={() => setSuccessOpen(false)}
+        />
+      ) : null}
+
+      <aside className="contact-form-panel" aria-labelledby="contact-form-title">
+        <h2 id="contact-form-title" className="contact-form-panel__title">
+          {contactForm.title}
+        </h2>
+        <p className="contact-form-panel__intro">{contactForm.intro}</p>
+
         <form className="site-form" onSubmit={handleSubmit} noValidate>
           <div className="site-form__honeypot" aria-hidden="true">
             <label htmlFor="contact-hp">Leave blank</label>
@@ -262,7 +275,7 @@ export function ContactForm({ locale, labels, contactForm }: Props) {
 
           <p className="site-form__privacy">{labels.gdprNotice}</p>
         </form>
-      )}
-    </aside>
+      </aside>
+    </>
   );
 }

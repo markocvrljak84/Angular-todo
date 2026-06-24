@@ -110,6 +110,8 @@ export type Messages = {
     messagePlaceholder: string;
     submitLabel: string;
     successMessage: string;
+    successHomeLabel: string;
+    successCloseLabel: string;
   };
   forms: {
     gdprConsent: string;
@@ -304,6 +306,8 @@ const en: Messages = {
     messagePlaceholder: "How can we help with your stay on Velebit?",
     submitLabel: "Send message",
     successMessage: "Thank you — your message has been sent. We will get back to you soon.",
+    successHomeLabel: "Back to home",
+    successCloseLabel: "Close",
   },
   forms: {
     gdprConsent:
@@ -500,6 +504,8 @@ const hr: Messages = {
     messagePlaceholder: "Kako vam možemo pomoći oko boravka na Velebitu?",
     submitLabel: "Pošalji poruku",
     successMessage: "Hvala — vaša poruka je poslana. Javit ćemo vam se uskoro.",
+    successHomeLabel: "Natrag na početnu",
+    successCloseLabel: "Zatvori",
   },
   forms: {
     gdprConsent:
@@ -696,6 +702,8 @@ const de: Messages = {
     messagePlaceholder: "Wobei können wir Ihren Aufenthalt am Velebit unterstützen?",
     submitLabel: "Nachricht senden",
     successMessage: "Danke — Ihre Nachricht wurde gesendet. Wir melden uns bald.",
+    successHomeLabel: "Zur Startseite",
+    successCloseLabel: "Schließen",
   },
   forms: {
     gdprConsent:

@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useRef, useState } from "react";
+import { FormLoadingOverlay } from "@/components/form-loading-overlay";
 import type { Locale } from "@/i18n/config";
 import type { Messages } from "@/i18n/messages";
 import {
@@ -103,7 +104,10 @@ export function NewsletterSignupForm({
   }
 
   return (
-    <form className="newsletter-signup__form site-form" onSubmit={handleSubmit} noValidate>
+    <>
+      {status === "submitting" ? <FormLoadingOverlay label={submittingLabel} /> : null}
+
+      <form className="newsletter-signup__form site-form" onSubmit={handleSubmit} noValidate>
       <div className="site-form__honeypot" aria-hidden="true">
         <label htmlFor={`newsletter-hp-${source}`}>Leave blank</label>
         <input
@@ -176,5 +180,6 @@ export function NewsletterSignupForm({
 
       <p className="newsletter-signup__privacy site-form__privacy">{privacyNote}</p>
     </form>
+    </>
   );
 }
