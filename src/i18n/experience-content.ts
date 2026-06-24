@@ -17,6 +17,7 @@ export type ExperienceContent = {
   day: {
     title: string;
     intro: string;
+    imageAlt: string;
     steps: ExperienceDayStep[];
   };
   taste: {
@@ -56,11 +57,13 @@ const en: ExperienceContent = {
     title: "One day at Stars Peak",
     intro:
       "Mountain summit, Adriatic swim and starry sky — in one place, in one day. This is what life at Bačić Duliba feels like.",
+    imageAlt:
+      "A-frame living room with armchair and triangular window framing Velebit peaks at golden hour",
     steps: [
       {
         time: "07:00",
         title: "Coffee with a view of Bačić Kuk",
-        body: "Steam rises from the cup while the morning light hits the rock face above the valley.",
+        body: "First cup of coffee while the morning light hits the rock face above the valley.",
       },
       {
         time: "09:00",
@@ -159,6 +162,8 @@ const hr: ExperienceContent = {
     title: "Jedan dan na Stars Peaku",
     intro:
       "Planinski vrh, kupanje u Jadranu i zvjezdano nebo — na jednom mjestu, u jednom danu. Tako izgleda život u Bačić Dulibi.",
+    imageAlt:
+      "Dnevni boravak u A-okviru s foteljom i pogledom na vrhove Velebita kroz trokutasti prozor",
     steps: [
       {
         time: "07:00",
@@ -262,6 +267,8 @@ const de: ExperienceContent = {
     title: "Ein Tag auf Stars Peak",
     intro:
       "Gipfel, Adria und Sternenhimmel — an einem Ort, an einem Tag. So fühlt sich Leben in Bačić Duliba an.",
+    imageAlt:
+      "Wohnzimmer im A-Frame mit Sessel und Dreiecksfenster mit Blick auf die Velebit-Gipfel",
     steps: [
       {
         time: "07:00",
@@ -365,6 +372,8 @@ const fr: ExperienceContent = {
     title: "Une journée à Stars Peak",
     intro:
       "Sommet, baignade en Adriatique et ciel étoilé — au même endroit, le même jour. C’est la vie à Bačić Duliba.",
+    imageAlt:
+      "Salon en A-frame avec fauteuil et fenêtre triangulaire sur les sommets du Velebit",
     steps: [
       { time: "07:00", title: "Café face au Bačić Kuk", body: "La vapeur s’élève tandis que la lumière du matin touche la paroi rocheuse." },
       { time: "09:00", title: "Ascension du Bačić Kuk", body: "Le sentier part à quelques minutes — classique du Velebit avec vues ouvertes." },
@@ -419,6 +428,8 @@ const it: ExperienceContent = {
     title: "Un giorno a Stars Peak",
     intro:
       "Cima, bagno in Adriatico e cielo stellato — nello stesso posto, nello stesso giorno. Così è la vita a Bačić Duliba.",
+    imageAlt:
+      "Soggiorno ad A-frame con poltrona e finestra triangolare sulle cime del Velebit",
     steps: [
       { time: "07:00", title: "Caffè con vista su Bačić Kuk", body: "Il vapore sale mentre la luce del mattino colpisce la parete rocciosa." },
       { time: "09:00", title: "Salita al Bačić Kuk", body: "Il sentiero parte a pochi minuti — classico del Velebit con viste ampie." },

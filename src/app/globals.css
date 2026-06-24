@@ -2983,9 +2983,53 @@ code {
 }
 
 /* —— Experience positioning —— */
+.experience-day__layout-wrap {
+  margin-top: 2rem;
+}
+
+.experience-day__layout {
+  display: grid;
+  gap: 1.5rem 2rem;
+  align-items: start;
+}
+
+@media (min-width: 768px) {
+  .experience-day__layout {
+    grid-template-columns: minmax(0, min(100%, 34rem)) minmax(22rem, 1fr);
+    gap: 2rem 3rem;
+    align-items: stretch;
+  }
+}
+
+.experience-day__media {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+}
+
+@media (min-width: 768px) {
+  .experience-day__media {
+    aspect-ratio: auto;
+    height: 100%;
+    min-height: 0;
+  }
+}
+
+.experience-day__img {
+  object-fit: contain;
+  object-position: top center;
+}
+
+@media (min-width: 768px) {
+  .experience-day__img {
+    object-position: top right;
+  }
+}
+
 .experience-day__timeline {
   list-style: none;
-  margin: 2rem 0 0;
+  margin: 0;
   padding: 0;
   display: grid;
   gap: 0;
@@ -3283,6 +3327,10 @@ code {
 }
 
 @media (max-width: 767px) {
+  .experience-day__layout-wrap {
+    margin-top: 1.5rem;
+  }
+
   .experience-day__step {
     grid-template-columns: 1fr;
     gap: 0.35rem;

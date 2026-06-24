@@ -13,6 +13,22 @@ export function galleryAssetSrc(file: string): string {
 
 export const DNEVNI_BORAVAK_IMAGE = ROOT_IMAGE_PATHS["dnevni-boravak.jpg"];
 
+/** Home — “One day at Stars Peak” timeline image.
+ *
+ * Pre-render pipeline (nothing runs at `npm run build` for this file):
+ * 1. Source file — `/public/img/jutarnja-kava-pro.jpg` (4000×3000 JPEG), graded from the uploaded original.
+ * 2. NOT processed by `scripts/optimize-hero.mjs` (that script is main-carousel / LCP only).
+ * 3. `next/image` in `ExperienceDaySection` — browser requests `/_next/image?url=…&w=…&q=…`;
+ *    Next.js resizes to requested width, then encodes AVIF/WebP (`next.config.ts` → `images.formats`,
+ *    quality from `EXPERIENCE_DAY_IMAGE_QUALITY`, default would be 75).
+ * 4. CSS — `object-fit: contain` scales the decoded bitmap inside the grid cell (no crop).
+ */
+export const EXPERIENCE_DAY_IMAGE = "/img/jutarnja-kava-pro.jpg" as const;
+export const EXPERIENCE_DAY_IMAGE_WIDTH = 4000;
+export const EXPERIENCE_DAY_IMAGE_HEIGHT = 3000;
+/** Higher than next/image default (75) — reduces AVIF/WebP compression artifacts. */
+export const EXPERIENCE_DAY_IMAGE_QUALITY = 92;
+
 export const GALLERY_CATEGORIES = [
   "exterior",
   "outdoorLiving",
