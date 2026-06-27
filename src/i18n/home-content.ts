@@ -55,7 +55,7 @@ const en: HomeContent = {
   hero: {
     headline: "Summit. Swim. Stargaze.",
     subline:
-      "A private mountain chalet at 900 m with views of Bačić Kuk — just 30 minutes from the Adriatic.",
+      "Mountain retreat at 900 metres, between the peaks of Velebit and the Adriatic Sea.",
     facts: [
       "900 m elevation",
       "30 min to the sea",
@@ -66,21 +66,21 @@ const en: HomeContent = {
     ctaExperiences: "See experiences",
   },
   whySpecial: {
-    title: "Why this place is special",
+    title: "Three landscapes. One stay. ⭐",
     cards: [
       {
         title: "Mountain",
-        body: "Bačić Kuk, Premužić trail and Dabarski kukovi — classic Velebit hiking from your door.",
+        body: "Wake up under the peaks of Velebit. Trails begin just beyond the doorstep, leading towards Bačić Kuk, the Premužić Trail and Dabarski Kukovi.",
         imageAlt: "Velebit ridge and forest above Bačić Duliba",
       },
       {
         title: "Sea",
-        body: "Karlobag, Zavratnica and Pag are half an hour away — mountain mornings, Adriatic afternoons.",
+        body: "The Adriatic coast is only half an hour away, offering a rare balance of mountain and sea in a single day.",
         imageAlt: "Zavratnica cove on the Adriatic coast",
       },
       {
         title: "Stars",
-        body: "No light pollution — Milky Way nights, hammocks and ridge silence after dark.",
+        body: "After sunset, silence settles across the ridge and moon and the stars becomes the brightest light in the landscape.",
         imageAlt: "Starry night sky above Velebit",
       },
     ],
