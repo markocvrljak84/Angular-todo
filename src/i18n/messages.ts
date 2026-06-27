@@ -267,7 +267,7 @@ const en: Messages = {
   },
   gallery: {
     title: "Gallery",
-    intro: "Moments from the mountain — trails, fireside evenings, sea days and night skies. More emotion shots coming soon.",
+    intro: "Moments from the mountain — trails, days by the sea, fireside evenings and night skies.",
     lightboxClose: "Close gallery",
     lightboxPrev: "Previous image",
     lightboxNext: "Next image",
