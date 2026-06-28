@@ -11,8 +11,10 @@ const WHATSAPP_PHONES = [
 
 type Props = {
   content: GoodToKnowContent;
-  /** When true, page banner supplies the title — render only accordion + intro optional off */
+  /** When true, page banner supplies the title — render only accordion + intro */
   compact?: boolean;
+  /** When true, render accordion body only — no outer section or wrap */
+  embedded?: boolean;
 };
 
 function FaqAccordionPanel({
@@ -70,45 +72,53 @@ function FaqAccordionPanel({
   );
 }
 
-export function FaqSection({ content, compact }: Props) {
+export function FaqSection({ content, compact, embedded }: Props) {
+  const body = (
+    <>
+      {compact ? (
+        <p className="flat-section__intro flat-section__intro--lead faq__intro">
+          {content.intro}
+        </p>
+      ) : (
+        <>
+          <h2 id="good-to-know-title" className="flat-section__title">
+            {content.title}
+          </h2>
+          <p className="flat-section__intro flat-section__intro--lead faq__intro">
+            {content.intro}
+          </p>
+        </>
+      )}
+
+      <div className="faq__accordion">
+        {content.sections.map((section, index) => (
+          <details
+            key={section.title}
+            className="faq__item"
+            open={index === 0}
+          >
+            <summary className="faq__summary">{section.title}</summary>
+            <FaqAccordionPanel
+              section={section}
+              whatsappLinkLabel={content.whatsappLinkLabel}
+            />
+          </details>
+        ))}
+      </div>
+    </>
+  );
+
+  if (embedded) {
+    return body;
+  }
+
   return (
     <section
       id="good-to-know"
       className="faq flat-section"
       aria-labelledby={compact ? undefined : "good-to-know-title"}
     >
-      <div className="flat-wrap flat-wrap--narrow">
-        {compact ? (
-          <p className="flat-section__intro flat-section__intro--lead faq__intro">
-            {content.intro}
-          </p>
-        ) : (
-          <>
-            <h2 id="good-to-know-title" className="flat-section__title">
-              {content.title}
-            </h2>
-            <p className="flat-section__intro flat-section__intro--lead faq__intro">
-              {content.intro}
-            </p>
-          </>
-        )}
-
-        <div className="faq__accordion">
-          {content.sections.map((section, index) => (
-            <details
-              key={section.title}
-              className="faq__item"
-              open={index === 0}
-            >
-              <summary className="faq__summary">{section.title}</summary>
-              <FaqAccordionPanel
-                section={section}
-                whatsappLinkLabel={content.whatsappLinkLabel}
-              />
-            </details>
-          ))}
-        </div>
-      </div>
+      <div className="flat-wrap flat-wrap--narrow">{body}</div>
     </section>
   );
 }

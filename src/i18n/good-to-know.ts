@@ -40,13 +40,6 @@ const hr: GoodToKnowContent = {
       ],
     },
     {
-      title: "Kućni red",
-      paragraphs: [
-        "Molimo vas da poštujete kućni red od 22:00 do 07:00 sati.",
-        "Pušenje u kući nije dopušteno. Za pušenje vas molimo da koristite vanjski prostor.",
-      ],
-    },
-    {
       title: "Zabava i opuštanje",
       paragraphs: [
         "Na televizoru su vam dostupni Netflix i HBO, kao i Sony PlayStation 5 s nekoliko igrica.",
@@ -156,13 +149,6 @@ const en: GoodToKnowContent = {
       paragraphsAfter: [
         "For showering and/or baking, we will reply right away to confirm use.",
         "If we are away, we will show you how to operate these services yourself.",
-      ],
-    },
-    {
-      title: "House rules",
-      paragraphs: [
-        "Please respect quiet hours from 22:00 to 07:00.",
-        "Smoking indoors is not allowed. Please use the outdoor area for smoking.",
       ],
     },
     {
@@ -278,13 +264,6 @@ const de: GoodToKnowContent = {
       ],
     },
     {
-      title: "Hausordnung",
-      paragraphs: [
-        "Bitte beachten Sie die Ruhezeiten von 22:00 bis 07:00 Uhr.",
-        "Rauchen im Haus ist nicht erlaubt. Bitte rauchen Sie im Außenbereich.",
-      ],
-    },
-    {
       title: "Unterhaltung",
       paragraphs: [
         "Am Fernseher stehen Netflix und HBO zur Verfügung, außerdem eine Sony PlayStation 5 mit mehreren Spielen.",
@@ -397,13 +376,6 @@ const fr: GoodToKnowContent = {
       ],
     },
     {
-      title: "Règlement intérieur",
-      paragraphs: [
-        "Merci de respecter le calme entre 22 h 00 et 07 h 00.",
-        "Il est interdit de fumer à l'intérieur. Veuillez fumer à l'extérieur.",
-      ],
-    },
-    {
       title: "Divertissement",
       paragraphs: [
         "Netflix et HBO sont disponibles sur la télévision, ainsi qu'une PlayStation 5 Sony avec plusieurs jeux.",
@@ -513,13 +485,6 @@ const it: GoodToKnowContent = {
       paragraphsAfter: [
         "Per doccia e/o cottura in forno, vi risponderemo subito per confermare l'utilizzo.",
         "Se siamo assenti, vi mostreremo come usare questi servizi in autonomia.",
-      ],
-    },
-    {
-      title: "Regolamento",
-      paragraphs: [
-        "Vi chiediamo di rispettare il silenzio dalle 22:00 alle 07:00.",
-        "È vietato fumare in casa. Per fumare, utilizzate lo spazio esterno.",
       ],
     },
     {

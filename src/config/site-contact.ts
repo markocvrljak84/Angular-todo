@@ -14,7 +14,7 @@ export const SITE_CONTACT = {
   businessName: "Velebit mountain chalet Stars Peak",
   phone: "+385 95 389 9912",
   phoneSecondary: "+385 91 337 7088",
-  email: "marko.cvrljak1@gmail.com",
+  email: "info@velebit-starspeak.com",
   address: "Došen Dabar 1, Karlobag, Croatia",
 } as const;
 

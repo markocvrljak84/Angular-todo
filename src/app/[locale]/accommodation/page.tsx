@@ -1,12 +1,8 @@
 import type { Metadata } from "next";
-import { BookCta } from "@/components/book-cta";
-import { FacilitiesGrid } from "@/components/facilities-grid";
-import { FaqSection } from "@/components/faq-section";
-import { InnerPageHeader } from "@/components/inner-page-header";
-import { getFacilityCategories } from "@/i18n/facility-categories";
+import { StayPage } from "@/components/stay-page";
+import { getAccommodationPageContent } from "@/i18n/accommodation-content";
 import { getGoodToKnow } from "@/i18n/good-to-know";
 import { getMessages } from "@/i18n/messages";
-import { getPageHeaderContent } from "@/lib/inner-page-content";
 import {
   localeStaticParams,
   resolveLocale,
@@ -34,25 +30,14 @@ type Props = { params: Promise<{ locale: string }> };
 export default async function AccommodationPage({ params }: Props) {
   const locale = await resolveLocale(params);
   const t = getMessages(locale);
-  const facilities = getFacilityCategories(locale);
+  const content = getAccommodationPageContent(locale);
   const goodToKnow = getGoodToKnow(locale);
-  const header = getPageHeaderContent(locale, "accommodation");
 
   return (
     <>
       <PageJsonLd locale={locale} messages={t} page="accommodation" />
 
-      <InnerPageHeader {...header} />
-
-      <FaqSection content={goodToKnow} />
-
-      <div className="flat-section flat-section--tint">
-        <div className="flat-wrap">
-          <FacilitiesGrid title={t.home.facilitiesTitle} categories={facilities} />
-        </div>
-      </div>
-
-      <BookCta variant="banner" label={t.header.bookCta} lead={t.cta.aboutLead} />
+      <StayPage content={content} goodToKnow={goodToKnow} />
     </>
   );
 }

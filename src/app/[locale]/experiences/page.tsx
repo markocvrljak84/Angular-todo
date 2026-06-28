@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { BookCta } from "@/components/book-cta";
 import { ClimbingRoutesSection } from "@/components/climbing-routes-section";
 import { ExperienceMapSection } from "@/components/experience-map-section";
+import { HikingRouteMapsPreload } from "@/components/hiking-route-maps-preload";
 import { HikingRoutesSection } from "@/components/hiking-routes-section";
 import { InnerPageHeader } from "@/components/inner-page-header";
 import { NearbySection } from "@/components/nearby-section";
@@ -68,6 +69,7 @@ export default async function ExperiencesPage({ params }: Props) {
       />
 
       <section id={hiking.id} className="flat-section flat-section--tint" aria-labelledby="exp-hiking">
+        <HikingRouteMapsPreload />
         <div className="flat-wrap">
           <h2 id="exp-hiking" className="flat-section__title">{hiking.title}</h2>
           <p className="flat-section__intro">{hiking.intro}</p>
@@ -76,6 +78,7 @@ export default async function ExperiencesPage({ params }: Props) {
           content={getHikingRoutes(locale)}
           compact
           initialOpenId={null}
+          preloadMaps
         />
         <ClimbingRoutesSection content={getClimbingRoutes(locale)} />
       </section>

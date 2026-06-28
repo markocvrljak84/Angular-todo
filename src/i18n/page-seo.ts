@@ -15,9 +15,9 @@ const en: Record<SitePageKey, PageSeo> = {
       "How Marko and Ljiljana rebuilt a wooden chalet into Stars Peak — a minimalist, off-grid mountain home with views of Bačić Kuk, featured in Jutarnji list.",
   },
   accommodation: {
-    title: "Accommodation — Stars Peak mountain chalet",
+    title: "The House — Stars Peak mountain retreat",
     description:
-      "Up to 4 guests, Wi‑Fi, fireplace, outdoor kitchen and BBQ. Full facilities, house rules and practical details for your stay.",
+      "A private mountain retreat for up to four guests on Velebit. Spaces, outdoor living, practical information and house rules for your stay at Stars Peak.",
   },
   experiences: {
     title: "Experiences — hiking, sea & Velebit",
@@ -45,9 +45,9 @@ const en: Record<SitePageKey, PageSeo> = {
       "From Stars Peak reach Paklenica, Pag, Zavratnica and Premužić trail — mountain base, Adriatic adventures within a day.",
   },
   guides: {
-    title: "Stories from Stars Peak — journal & mailing list",
+    title: "Blog — hiking guides & Velebit stories",
     description:
-      "Seasonal stories, hiking inspiration and quiet moments from Velebit. Join the Stars Peak journal mailing list.",
+      "Guides to Bačić Kuk, the Premužić Trail, seasonal hikes, wild herbs and photography on Velebit. New articles coming soon.",
   },
   contact: {
     title: "Contact & booking — Stars Peak",

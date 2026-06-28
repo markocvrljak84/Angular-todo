@@ -20,6 +20,8 @@ type Props = {
   compact?: boolean;
   /** Route expanded on first render; null keeps all closed. */
   initialOpenId?: HikingRouteId | null;
+  /** Eager-load map embeds (use with HikingRouteMapsPreload on the page). */
+  preloadMaps?: boolean;
 };
 
 function StatItem({ label, value }: { label: string; value: string }) {
@@ -79,6 +81,7 @@ function HikingRouteItem({
   panelId,
   triggerId,
   articleRef,
+  preloadMaps,
 }: {
   route: HikingRoutesContent["routes"][number];
   content: HikingRoutesContent;
@@ -87,6 +90,7 @@ function HikingRouteItem({
   panelId: string;
   triggerId: string;
   articleRef: (element: HTMLElement | null) => void;
+  preloadMaps?: boolean;
 }) {
   const stats = HIKING_ROUTE_STATS[route.id];
   const gpxHref = HIKING_GPX[route.id];
@@ -184,7 +188,7 @@ function HikingRouteItem({
                 <iframe
                   src={mapEmbedUrl}
                   title={`${route.title} — ${content.mapHeading}`}
-                  loading="lazy"
+                  loading={preloadMaps ? "eager" : "lazy"}
                   referrerPolicy="no-referrer-when-downgrade"
                   allowFullScreen
                 />
@@ -252,6 +256,7 @@ export function HikingRoutesSection({
   showPageHeader,
   compact,
   initialOpenId,
+  preloadMaps,
 }: Props) {
   const baseId = useId();
   const [openId, setOpenId] = useState<HikingRouteId | null>(
@@ -318,6 +323,7 @@ export function HikingRoutesSection({
                     delete routeRefs.current[route.id];
                   }
                 }}
+                preloadMaps={preloadMaps}
                 onToggle={() => handleToggle(route.id)}
               />
             );

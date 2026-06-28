@@ -195,6 +195,20 @@ export const HOME_IMAGES = {
   },
 } as const;
 
+/** Accommodation page photography — curated from gallery (`gallery-content.ts` alt text). */
+export const ACCOMMODATION_PAGE_IMAGE_SLOTS = ["hero", "theHouse", "outdoors"] as const;
+
+export type AccommodationImageSlot = (typeof ACCOMMODATION_PAGE_IMAGE_SLOTS)[number];
+
+export const ACCOMMODATION_PAGE_IMAGES: Record<AccommodationImageSlot, `/img/${string}` | null> = {
+  /** Chalet and terrace with Velebit ridge — retreat overview. */
+  hero: galleryAssetSrc("20260601_163937.jpg") as `/img/${string}`,
+  /** Living room with fireplace — wood, windows, hearth. */
+  theHouse: galleryAssetSrc("dnevni-boravak.jpg") as `/img/${string}`,
+  /** Outdoor kitchen breakfast — terrace, summer kitchen, life outside. */
+  outdoors: galleryAssetSrc("20260604_132039.jpg") as `/img/${string}`,
+};
+
 /**
  * Near places checkerboard — order matches `itineraryImageAlts` in messages.
  * ASCII paths only (folder on disk: /public/img/premuzic).

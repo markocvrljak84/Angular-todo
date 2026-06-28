@@ -1,0 +1,204 @@
+import Image from "next/image";
+import { BOOKING_URL } from "@/config/site-contact";
+import {
+  ACCOMMODATION_PAGE_IMAGES,
+  type AccommodationImageSlot,
+} from "@/config/site-images";
+import type { AccommodationPageContent } from "@/i18n/accommodation-content";
+import type { GoodToKnowContent } from "@/i18n/good-to-know";
+import { FaqSection } from "@/components/faq-section";
+
+type Props = {
+  content: AccommodationPageContent;
+  goodToKnow: GoodToKnowContent;
+};
+
+function StayPhoto({
+  slot,
+  alt,
+  className,
+  priority,
+  sizes,
+}: {
+  slot: AccommodationImageSlot;
+  alt: string;
+  className?: string;
+  priority?: boolean;
+  sizes?: string;
+}) {
+  const src = ACCOMMODATION_PAGE_IMAGES[slot];
+
+  if (!src) {
+    return (
+      <div
+        className={`stay-photo stay-photo--placeholder${className ? ` ${className}` : ""}`}
+        data-image-slot={slot}
+        role="img"
+        aria-label={alt}
+      />
+    );
+  }
+
+  return (
+    <Image
+      src={src}
+      alt={alt}
+      fill
+      priority={priority}
+      className={`stay-photo__img${className ? ` ${className}` : ""}`}
+      sizes={sizes ?? "100vw"}
+    />
+  );
+}
+
+export function StayPage({ content, goodToKnow }: Props) {
+  return (
+    <>
+      <section className="stay-hero flat-section flat-section--page" aria-labelledby="stay-hero-title">
+        <div className="flat-wrap stay-hero__inner">
+          <div className="stay-hero__copy">
+            <h1 id="stay-hero-title" className="stay-hero__title">
+              {content.hero.title}
+            </h1>
+            <p className="stay-hero__intro">{content.hero.intro}</p>
+          </div>
+          <div className="stay-hero__media">
+            <StayPhoto slot="hero" alt={content.hero.imageAlt} priority sizes="(max-width: 900px) 100vw, 50vw" />
+          </div>
+        </div>
+      </section>
+
+      <section className="flat-section stay-house" aria-labelledby="stay-house-title">
+        <div className="flat-wrap stay-house__grid">
+          <div className="stay-house__media">
+            <StayPhoto slot="theHouse" alt={content.theHouse.imageAlt} sizes="(max-width: 900px) 100vw, 55vw" />
+          </div>
+          <div className="stay-house__copy">
+            <h2 id="stay-house-title" className="stay-section-title">
+              {content.theHouse.title}
+            </h2>
+            {content.theHouse.paragraphs.map((paragraph) => (
+              <p key={paragraph} className="stay-body">
+                {paragraph}
+              </p>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="flat-section flat-section--tint stay-spaces" aria-labelledby="stay-spaces-title">
+        <div className="flat-wrap">
+          <div className="stay-section-head">
+            <p className="stay-eyebrow">{content.spaces.eyebrow}</p>
+            <h2 id="stay-spaces-title" className="stay-section-title">
+              {content.spaces.title}
+            </h2>
+          </div>
+          <ul className="stay-spaces__grid">
+            {content.spaces.items.map((space) => (
+              <li key={space.title}>
+                <article className="stay-spaces__card">
+                  <h3>{space.title}</h3>
+                  <p>{space.body}</p>
+                </article>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section className="flat-section stay-outdoors" aria-labelledby="stay-outdoors-title">
+        <div className="flat-wrap stay-outdoors__grid">
+          <div className="stay-outdoors__media">
+            <StayPhoto slot="outdoors" alt={content.outdoors.imageAlt} sizes="(max-width: 900px) 100vw, 50vw" />
+          </div>
+          <div className="stay-outdoors__copy">
+            <h2 id="stay-outdoors-title" className="stay-section-title">
+              {content.outdoors.title}
+            </h2>
+            <p className="stay-lead">{content.outdoors.lead}</p>
+            <p className="stay-body">{content.outdoors.body}</p>
+            <p className="stay-outdoors__features-label">{content.outdoors.featuresLabel}</p>
+            <ul className="stay-inline-list">
+              {content.outdoors.features.map((feature) => (
+                <li key={feature}>{feature}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="flat-section flat-section--tint stay-included" aria-labelledby="stay-included-title">
+        <div className="flat-wrap stay-included__grid">
+          <div>
+            <p className="stay-eyebrow">{content.included.eyebrow}</p>
+            <h2 id="stay-included-title" className="stay-section-title">
+              {content.included.title}
+            </h2>
+          </div>
+          <ul className="stay-checklist">
+            {content.included.items.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section
+        id="good-to-know"
+        className="flat-section stay-good-to-know"
+        aria-labelledby="stay-good-to-know-title"
+      >
+        <div className="flat-wrap flat-wrap--narrow">
+          <div className="stay-section-head stay-section-head--center">
+            <h2 id="stay-good-to-know-title" className="stay-section-title">
+              {goodToKnow.title}
+            </h2>
+          </div>
+          <FaqSection content={goodToKnow} compact embedded />
+        </div>
+      </section>
+
+      <section className="flat-section flat-section--tint stay-rules" aria-labelledby="stay-rules-title">
+        <div className="flat-wrap stay-rules__inner">
+          <p className="stay-eyebrow">{content.houseRules.eyebrow}</p>
+          <h2 id="stay-rules-title" className="stay-section-title">
+            {content.houseRules.title}
+          </h2>
+          <ul className="stay-rules__list">
+            {content.houseRules.items.map((rule) => (
+              <li key={rule}>{rule}</li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section className="flat-section stay-closing" aria-labelledby="stay-closing-title">
+        <div className="flat-wrap stay-closing__inner">
+          <p className="stay-eyebrow">{content.closing.eyebrow}</p>
+          <h2 id="stay-closing-title" className="stay-closing__title">
+            {content.closing.title}
+          </h2>
+          <p className="stay-closing__body">{content.closing.body}</p>
+        </div>
+      </section>
+
+      <section className="final-cta flat-section flat-section--tint" aria-label={content.cta.headline}>
+        <div className="flat-wrap final-cta__inner">
+          <div className="final-cta__copy">
+            <p className="final-cta__headline">{content.cta.headline}</p>
+            <p className="final-cta__intro">{content.cta.intro}</p>
+          </div>
+          <a
+            href={BOOKING_URL}
+            className="final-cta__btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {content.cta.btnLabel}
+          </a>
+        </div>
+      </section>
+    </>
+  );
+}
