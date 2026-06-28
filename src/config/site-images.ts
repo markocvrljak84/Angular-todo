@@ -178,9 +178,9 @@ export const HOME_GALLERY_FILES = [
 /** Homepage editorial photography — paths under /public/img */
 export const HOME_IMAGES = {
   whySpecial: {
-    mountain: "/img/velebit-more.jpeg",
+    mountain: "/img/why-special-mountain.jpg",
     sea: "/img/zavratnica/uvala.jpeg",
-    stars: "/img/zvijezdano-nebo.jpg",
+    stars: "/img/why-special-stars.jpg",
   },
   editorial: {
     outdoorKitchen: "/img/ljetnja-kuhinja-3.jpg",
@@ -188,6 +188,7 @@ export const HOME_IMAGES = {
     surroundings: "/img/velebit-na-dohvat-ruku.jpeg",
   },
   accommodation: "/img/gallery/740290390.jpg",
+  localFlavours: "/img/home-local-flavours.jpg",
   experienceMap: {
     mountain: "/img/velebit.jpg",
     sea: "/img/zavratnica/uvala.jpeg",

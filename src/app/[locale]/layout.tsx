@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { isLocale, locales, type Locale } from "@/i18n/config";
+import { isActiveLocale, isLocale, type Locale } from "@/i18n/config";
 import { getMessages } from "@/i18n/messages";
 import { LangHtml } from "@/components/lang-html";
 import { SeoJsonLd } from "@/components/seo-json-ld";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import { ContactStrip } from "@/components/contact-strip";
+import { ContactStripGate } from "@/components/contact-strip-gate";
 import { SITE_GEO } from "@/config/site-location";
+import { localeStaticParams } from "@/lib/locale-page";
 
 export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
+  return localeStaticParams();
 }
 
 export async function generateMetadata({
@@ -19,7 +20,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale: l } = await params;
-  if (!isLocale(l)) return {};
+  if (!isLocale(l) || !isActiveLocale(l)) return {};
   const m = getMessages(l as Locale);
 
   return {
@@ -35,7 +36,7 @@ export default async function LocaleLayout({
   params: Promise<{ locale: string }>;
 }) {
   const { locale: l } = await params;
-  if (!isLocale(l)) notFound();
+  if (!isLocale(l) || !isActiveLocale(l)) notFound();
   const locale = l as Locale;
   const messages = getMessages(locale);
 
@@ -46,7 +47,7 @@ export default async function LocaleLayout({
       <div className="page-shell">
         <SiteHeader locale={locale} t={messages} />
         <main className="page-main">{children}</main>
-        <ContactStrip t={messages} locale={locale} />
+        <ContactStripGate t={messages} locale={locale} />
         <SiteFooter t={messages} locale={locale} />
       </div>
     </>

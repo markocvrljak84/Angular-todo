@@ -4,6 +4,7 @@ import { useMemo, useRef, useState } from "react";
 import { FormLoadingOverlay } from "@/components/form-loading-overlay";
 import type { Locale } from "@/i18n/config";
 import type { Messages } from "@/i18n/messages";
+import { localePath } from "@/config/site-routes";
 import {
   type EmailFieldErrors,
   emailFormServerErrorToFields,
@@ -19,6 +20,7 @@ type Props = {
   submitLabel: string;
   submittingLabel: string;
   submitErrorMessage: string;
+  gdprConsentLabel: string;
   privacyNote: string;
   source: "home" | "guides" | "experiences";
 };
@@ -31,6 +33,7 @@ export function NewsletterSignupForm({
   submitLabel,
   submittingLabel,
   submitErrorMessage,
+  gdprConsentLabel,
   privacyNote,
   source,
 }: Props) {
@@ -96,7 +99,7 @@ export function NewsletterSignupForm({
         return;
       }
 
-      window.location.href = `/${locale}/guides/thank-you`;
+      window.location.href = `${localePath(locale, "guides")}/thank-you`;
     } catch {
       setStatus("error");
       setServerError(submitErrorMessage);
@@ -164,7 +167,7 @@ export function NewsletterSignupForm({
           aria-describedby={fieldErrors.gdpr ? `newsletter-gdpr-error-${source}` : undefined}
           disabled={status === "submitting"}
         />
-        <span>{labels.gdprConsent}</span>
+        <span>{gdprConsentLabel}</span>
       </label>
       {fieldErrors.gdpr ? (
         <p id={`newsletter-gdpr-error-${source}`} className="site-form__field-error" role="alert">

@@ -24,7 +24,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "invalidEmail" }, { status: 400 });
   }
 
-  const sent = await deliverFormEmail("Stars Peak — newsletter signup", {
+  const sent = await deliverFormEmail("Stars Peak — journal mailing list", {
     email,
     locale,
     source,

@@ -2,7 +2,13 @@
 
 import { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
-import { locales, isLocale, type Locale } from "@/i18n/config";
+import {
+  activeLocales,
+  defaultLocale,
+  isLocale,
+  localePrefixInUrl,
+  type Locale,
+} from "@/i18n/config";
 
 const MOBILE_LANG_QUERY = "(max-width: 1189px)";
 
@@ -22,6 +28,26 @@ const SHORT_LABELS: Record<Locale, string> = {
   it: "IT",
 };
 
+function pathSuffix(pathname: string): string {
+  const parts = pathname.split("/").filter(Boolean);
+
+  if (localePrefixInUrl) {
+    const maybeLocale = parts[0];
+    const pathAfter =
+      parts.length > 0 && isLocale(maybeLocale) ? parts.slice(1).join("/") : parts.join("/");
+    return pathAfter ? `/${pathAfter}` : "";
+  }
+
+  return pathname === "/" ? "" : pathname;
+}
+
+function localeSwitchHref(loc: Locale, suffix: string): string {
+  if (!localePrefixInUrl && loc === defaultLocale) {
+    return suffix || "/";
+  }
+  return `/${loc}${suffix}`;
+}
+
 export function LangSwitch({
   currentLocale,
   aria,
@@ -32,11 +58,7 @@ export function LangSwitch({
   const pathname = usePathname();
   const router = useRouter();
   const [compact, setCompact] = useState(false);
-  const parts = pathname.split("/").filter(Boolean);
-  const maybeLocale = parts[0];
-  const pathAfter =
-    parts.length > 0 && isLocale(maybeLocale) ? parts.slice(1).join("/") : parts.join("/");
-  const suffix = pathAfter ? `/${pathAfter}` : "";
+  const suffix = pathSuffix(pathname);
 
   useEffect(() => {
     const mq = window.matchMedia(MOBILE_LANG_QUERY);
@@ -48,7 +70,7 @@ export function LangSwitch({
 
   function onChange(e: React.ChangeEvent<HTMLSelectElement>) {
     const loc = e.target.value as Locale;
-    router.push(`/${loc}${suffix}`);
+    router.push(localeSwitchHref(loc, suffix));
     e.target.blur();
   }
 
@@ -62,7 +84,7 @@ export function LangSwitch({
         onChange={onChange}
         aria-label={aria}
       >
-        {locales.map((loc) => (
+        {activeLocales.map((loc) => (
           <option key={loc} value={loc} lang={loc}>
             {labels[loc]}
           </option>

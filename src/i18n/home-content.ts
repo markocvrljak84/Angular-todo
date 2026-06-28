@@ -49,6 +49,12 @@ export type HomeContent = {
     headline: string;
     btnLabel: string;
   };
+  localFlavours: {
+    badge: string;
+    items: [string, string, string];
+    closing: string;
+    imageAlt: string;
+  };
 };
 
 const en: HomeContent = {
@@ -66,12 +72,12 @@ const en: HomeContent = {
     ctaExperiences: "See experiences",
   },
   whySpecial: {
-    title: "Three landscapes. One stay. ⭐",
+    title: "Three landscapes. One stay ⭐",
     cards: [
       {
         title: "Mountain",
         body: "Wake up under the peaks of Velebit. Trails begin just beyond the doorstep, leading towards Bačić Kuk, the Premužić Trail and Dabarski Kukovi.",
-        imageAlt: "Velebit ridge and forest above Bačić Duliba",
+        imageAlt: "Panoramic view from a Velebit summit over forest ridges and the distant Adriatic",
       },
       {
         title: "Sea",
@@ -81,12 +87,12 @@ const en: HomeContent = {
       {
         title: "Stars",
         body: "After sunset, silence settles across the ridge and moon and the stars becomes the brightest light in the landscape.",
-        imageAlt: "Starry night sky above Velebit",
+        imageAlt: "Milky Way above the silhouette of Velebit at night",
       },
     ],
   },
   editorial: {
-    title: "Experience in photos",
+    title: "Life at Stars Peak",
     intro:
       "Outdoor kitchen, living room and a stunning view of Bačić Kuk — life at Stars Peak in three moments.",
     ctaLabel: "Full gallery",
@@ -115,9 +121,9 @@ const en: HomeContent = {
     ],
   },
   accommodation: {
-    title: "Your stay at a glance",
+    title: "Designed for quiet living",
     lead:
-      "A private wooden chalet for up to four guests — a warm living room with fireplace, an outdoor kitchen and mountain surroundings around Bačić Kuk. Check availability and book your stay online.",
+      "Built for slow mornings, long evenings and life outdoors. Everything else is intentionally simple. Check availability and book your stay online.",
     imageAlt: "Dining table set for breakfast",
     items: [
       "Up to 4 guests",
@@ -173,6 +179,13 @@ const en: HomeContent = {
     headline: "Ready for a stay on Velebit? Reserve Stars Peak for your dates.",
     btnLabel: "Book your stay",
   },
+  localFlavours: {
+    badge: "Coming soon",
+    items: ["Wild herbs.", "Mountain honey.", "Local flavours."],
+    closing:
+      "Soon, Stars Peak will grow beyond the house itself — into a place where the landscape is also served at the table.",
+    imageAlt: "Sunlit Velebit meadow with green grass, forest and limestone peaks",
+  },
 };
 
 const hr: HomeContent = {
@@ -195,7 +208,7 @@ const hr: HomeContent = {
       {
         title: "Planina",
         body: "Bačić kuk, Premužićeva staza i Dabarski kukovi — započnite planinarenje Velebitom stazama nadomak kuće.",
-        imageAlt: "Velebitski greben i šuma iznad Bačić Dulibe",
+        imageAlt: "Panoramski pogled s vrha Velebita na zelene grebene i daleki Jadran",
       },
       {
         title: "More",
@@ -205,7 +218,7 @@ const hr: HomeContent = {
       {
         title: "Zvijezde",
         body: "Bez svjetlosnog onečišćenja — Bistro noćno nebo, zvijezde i tišina grebena nakon mraka.",
-        imageAlt: "Zvjezdano noćno nebo iznad Velebita",
+        imageAlt: "Mliječni put iznad siluete Velebita noću",
       },
     ],
   },
@@ -276,6 +289,13 @@ const hr: HomeContent = {
     headline: "Spremni za boravak na Velebitu? Rezervirajte Stars Peak za svoje termine.",
     btnLabel: "Rezervirajte boravak",
   },
+  localFlavours: {
+    badge: "Uskoro",
+    items: ["Divlje bilje.", "Planinski med.", "Lokalni okusi."],
+    closing:
+      "Uskoro će Stars Peak rasti izvan same kuće — u mjesto gdje se krajolik servira i za stolom.",
+    imageAlt: "Sunčana velebitka livada s travom, šumom i vapnenačkim vrhovima",
+  },
 };
 
 const de: HomeContent = {
@@ -294,7 +314,7 @@ const de: HomeContent = {
       {
         title: "Berg",
         body: "Bačić Kuk, Premužić-Weg und Dabarski kukovi — klassisches Velebit-Wandern ab der Haustür.",
-        imageAlt: "Velebit-Kamm und Wald über Bačić Duliba",
+        imageAlt: "Panoramablick vom Velebit-Gipfel über bewaldete Grate und die ferne Adria",
       },
       {
         title: "Meer",
@@ -304,7 +324,7 @@ const de: HomeContent = {
       {
         title: "Sterne",
         body: "Keine Lichtverschmutzung — Milchstraße, Hängematten und Grat-Stille.",
-        imageAlt: "Sternenhimmel über dem Velebit",
+        imageAlt: "Milchstraße über der Silhouette des Velebit bei Nacht",
       },
     ],
   },
@@ -389,6 +409,13 @@ const de: HomeContent = {
     headline: "Bereit für Velebit? Reservieren Sie Stars Peak für Ihre Termine.",
     btnLabel: "Jetzt buchen",
   },
+  localFlavours: {
+    badge: "Demnächst",
+    items: ["Wildkräuter.", "Berghonig.", "Lokale Aromen."],
+    closing:
+      "Bald wächst Stars Peak über das Haus hinaus — zu einem Ort, an dem die Landschaft auch am Tisch serviert wird.",
+    imageAlt: "Sonnige Velebit-Wiese mit Gras, Wald und Kalkstein-Gipfeln",
+  },
 };
 
 const fr: HomeContent = {
@@ -406,7 +433,7 @@ const fr: HomeContent = {
       {
         title: "Montagne",
         body: "Bačić Kuk, sentier Premužić et Dabarski kukovi — randonnée classique du Velebit.",
-        imageAlt: "Crête du Velebit et forêt au-dessus de Bačić Duliba",
+        imageAlt: "Vue panoramique depuis un sommet du Velebit sur les crêtes forestières et l'Adriatique lointaine",
       },
       {
         title: "Mer",
@@ -416,7 +443,7 @@ const fr: HomeContent = {
       {
         title: "Étoiles",
         body: "Pas de pollution lumineuse — Voie lactée et silence des crêtes.",
-        imageAlt: "Ciel étoilé au-dessus du Velebit",
+        imageAlt: "Voie lactée au-dessus de la silhouette du Velebit la nuit",
       },
     ],
   },
@@ -501,6 +528,13 @@ const fr: HomeContent = {
     headline: "Prêt pour le Velebit ? Réservez Stars Peak pour vos dates.",
     btnLabel: "Réserver votre séjour",
   },
+  localFlavours: {
+    badge: "Bientôt",
+    items: ["Herbes sauvages.", "Miel de montagne.", "Saveurs locales."],
+    closing:
+      "Bientôt, Stars Peak ira au-delà de la maison — vers un lieu où le paysage se retrouve aussi à table.",
+    imageAlt: "Prairie ensoleillée du Velebit, herbe, forêt et sommets calcaires",
+  },
 };
 
 const it: HomeContent = {
@@ -518,7 +552,7 @@ const it: HomeContent = {
       {
         title: "Montagna",
         body: "Bačić Kuk, sentiero Premužić e Dabarski kukovi — escursioni classiche del Velebit.",
-        imageAlt: "Cresta del Velebit e foresta sopra Bačić Duliba",
+        imageAlt: "Vista panoramica da una vetta del Velebit sulle creste boschive e l'Adriatico in lontananza",
       },
       {
         title: "Mare",
@@ -528,7 +562,7 @@ const it: HomeContent = {
       {
         title: "Stelle",
         body: "Nessun inquinamento luminoso — Via Lattea e silenzio della cresta.",
-        imageAlt: "Cielo stellato sopra il Velebit",
+        imageAlt: "Via Lattea sopra la silhouette del Velebit di notte",
       },
     ],
   },
@@ -612,6 +646,13 @@ const it: HomeContent = {
   finalCta: {
     headline: "Pronti per il Velebit? Prenotate Stars Peak per le vostre date.",
     btnLabel: "Prenota il soggiorno",
+  },
+  localFlavours: {
+    badge: "In arrivo",
+    items: ["Erbe selvatiche.", "Miele di montagna.", "Sapori locali."],
+    closing:
+      "Presto Stars Peak crescerà oltre la casa — in un luogo dove il paesaggio arriva anche a tavola.",
+    imageAlt: "Prato assolato del Velebit con erba, bosco e cime calcaree",
   },
 };
 

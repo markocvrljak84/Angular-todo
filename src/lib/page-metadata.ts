@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { defaultLocale, locales, type Locale } from "@/i18n/config";
+import { activeLocales, defaultLocale, localePrefixInUrl, type Locale } from "@/i18n/config";
 import {
-  SITE_PAGE_SEGMENTS,
+  localePath,
   type SitePageKey,
 } from "@/config/site-routes";
 import { ABOUT_US_IMAGE } from "@/config/site-images";
@@ -19,21 +19,22 @@ export function buildPageMetadata(
   const seo = getPageSeo(locale, page);
   const m = getMessages(locale);
   const base = getSiteUrl();
-  const segment = SITE_PAGE_SEGMENTS[page];
-  const path = segment ? `/${locale}/${segment}` : `/${locale}`;
-  const pageUrl = `${base}${path}`;
+  const path = localePath(locale, page);
+  const pageUrl = `${base}${path === "/" ? "" : path}`;
 
-  const languages: Record<string, string> = {
-    "x-default": segment
-      ? `${base}/${defaultLocale}/${segment}`
-      : `${base}/${defaultLocale}`,
-  };
-  for (const loc of locales) {
-    const locPath = SITE_PAGE_SEGMENTS[page]
-      ? `/${loc}/${SITE_PAGE_SEGMENTS[page]}`
-      : `/${loc}`;
-    languages[localeToHreflang(loc)] = `${base}${locPath}`;
-  }
+  const multiLocale = activeLocales.length > 1 || localePrefixInUrl;
+
+  const languages: Record<string, string> | undefined = multiLocale
+    ? {
+        "x-default": `${base}${localePath(defaultLocale, page)}`,
+        ...Object.fromEntries(
+          activeLocales.map((loc) => [
+            localeToHreflang(loc),
+            `${base}${localePath(loc, page)}`,
+          ])
+        ),
+      }
+    : undefined;
 
   return {
     title: seo.title,
@@ -44,14 +45,18 @@ export function buildPageMetadata(
     other: getGeoMetaOther(),
     alternates: {
       canonical: path,
-      languages,
+      ...(languages ? { languages } : {}),
     },
     openGraph: {
       type: "website",
       locale: localeToOpenGraphLocale(locale),
-      alternateLocale: locales
-        .filter((loc) => loc !== locale)
-        .map(localeToOpenGraphLocale),
+      ...(multiLocale
+        ? {
+            alternateLocale: activeLocales
+              .filter((loc) => loc !== locale)
+              .map(localeToOpenGraphLocale),
+          }
+        : {}),
       url: pageUrl,
       siteName: m.meta.siteName,
       title: seo.title,

@@ -10,11 +10,12 @@ type Props = {
   content: HomeContent["map"];
   mountainImage: ZoneImage;
   seaImage: ZoneImage;
+  id?: string;
 };
 
-export function ExperienceMapSection({ content, mountainImage, seaImage }: Props) {
+export function ExperienceMapSection({ content, mountainImage, seaImage, id = "experience-map" }: Props) {
   return (
-    <section className="flat-section" aria-labelledby="experience-map-title">
+    <section id={id} className="flat-section" aria-labelledby="experience-map-title">
       <div className="flat-wrap">
         <h2 id="experience-map-title" className="flat-section__title">
           {content.title}

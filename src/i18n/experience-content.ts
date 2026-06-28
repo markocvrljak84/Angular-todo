@@ -37,16 +37,16 @@ export type ExperienceContent = {
   signup: {
     title: string;
     intro: string;
+    detail: string;
     emailLabel: string;
     emailPlaceholder: string;
     submitLabel: string;
     submittingLabel: string;
     submitErrorMessage: string;
+    gdprConsent: string;
     privacyNote: string;
-    brochureLanguageNote: string;
     thankYouTitle: string;
     successMessage: string;
-    downloadLabel: string;
     backToGuidesLabel: string;
     backToHomeLabel: string;
   };
@@ -54,7 +54,7 @@ export type ExperienceContent = {
 
 const en: ExperienceContent = {
   day: {
-    title: "One day at Stars Peak",
+    title: "From first light to nightfall",
     intro:
       "Mountain summit, Adriatic swim and starry sky — in one place, in one day. This is what life at Stars Peak feels like.",
     imageAlt:
@@ -63,7 +63,7 @@ const en: ExperienceContent = {
       {
         time: "07:00",
         title: "Coffee with a view of Bačić Kuk",
-        body: "First cup of coffee while the morning light hits the rock face above the valley.",
+        body: "The day begins slowly. Coffee on the terrace as the first light reaches the peaks of Bačić Kuk.",
       },
       {
         time: "09:00",
@@ -127,7 +127,7 @@ const en: ExperienceContent = {
       {
         title: "Mountain and sea in one day",
         teaser: "From Bačić Duliba to Karlobag, Pag and Zavratnica.",
-        href: "/experiences#exp-sea",
+        href: "/experiences#exp-mountain-sea",
       },
       {
         title: "Stargazing guide on Velebit",
@@ -137,22 +137,23 @@ const en: ExperienceContent = {
     ],
   },
   signup: {
-    title: "5 unforgettable experiences on Velebit",
+    title: "Stories from Stars Peak",
     intro:
-      "Leave your email and download our free Velebit brochure — routes, sea-and-mountain days and stargazing tips from Stars Peak.",
+      "Join our mailing list for seasonal stories, hiking inspiration and quiet moments from Velebit.",
+    detail:
+      "Be the first to hear about new journal entries, favourite trails, stargazing nights and life on the mountain.",
     emailLabel: "Email address",
     emailPlaceholder: "you@example.com",
-    submitLabel: "Get the brochure",
+    submitLabel: "Join the Journal",
     submittingLabel: "Sending…",
     submitErrorMessage: "Something went wrong — please try again or contact us directly.",
-    privacyNote:
-      "We only use your email for the brochure and occasional Stars Peak updates. Unsubscribe anytime.",
-    brochureLanguageNote: "PDF brochure in English.",
-    thankYouTitle: "You're in — thank you",
+    gdprConsent:
+      "I agree that Stars Peak may process my personal data in accordance with GDPR.",
+    privacyNote: "We write only a few times each year. No spam, just stories worth reading.",
+    thankYouTitle: "You're on the list — thank you",
     successMessage:
-      "Thanks for subscribing. Download the Velebit brochure below — we'll also send guides and news by email.",
-    downloadLabel: "Download Velebit brochure (PDF)",
-    backToGuidesLabel: "Back to guides",
+      "The first story will land in your inbox when the next journal entry is ready. Until then, explore the trails and quiet corners of Velebit.",
+    backToGuidesLabel: "Back to stories",
     backToHomeLabel: "Home",
   },
 };
@@ -232,7 +233,7 @@ const hr: ExperienceContent = {
       {
         title: "Planina i more u jednom danu",
         teaser: "Od Bačić Dulibe do Karlobaga, Paga i Zavratnice.",
-        href: "/experiences#exp-sea",
+        href: "/experiences#exp-mountain-sea",
       },
       {
         title: "Vodič za promatranje zvijezda na Velebitu",
@@ -242,22 +243,23 @@ const hr: ExperienceContent = {
     ],
   },
   signup: {
-    title: "5 nezaboravnih iskustava na Velebitu",
+    title: "Priče sa Stars Peaka",
     intro:
-      "Ostavite e-mail i preuzmite besplatnu Velebit brošuru — rute, dani na planini i moru te savjeti za promatranje zvijezda sa Stars Peaka.",
+      "Prijavite se na mailing listu za sezonske priče, planinarsku inspiraciju i tihe trenutke s Velebita.",
+    detail:
+      "Prvi saznajte o novim zapisima u dnevniku, omiljenim stazama, noćima pod zvijezdama i životu na planini.",
     emailLabel: "E-mail adresa",
     emailPlaceholder: "vi@primjer.hr",
-    submitLabel: "Preuzmi brošuru",
+    submitLabel: "Pridruži se dnevniku",
     submittingLabel: "Šaljem…",
     submitErrorMessage: "Nešto nije u redu — pokušajte ponovno ili nas kontaktirajte izravno.",
-    privacyNote:
-      "E-mail koristimo samo za brošuru i povremene novosti o Stars Peaku. Odjava je uvijek moguća.",
-    brochureLanguageNote: "PDF brošura na hrvatskom jeziku.",
+    gdprConsent:
+      "Slažem se da Stars Peak može obrađivati moje osobne podatke u skladu s GDPR-om.",
+    privacyNote: "Pišemo samo nekoliko puta godišnje. Bez spama — samo priče koje vrijede čitanja.",
     thankYouTitle: "Uspješna prijava — hvala",
     successMessage:
-      "Hvala na prijavi. Preuzmite Velebit brošuru gumbom ispod — novosti šaljemo vam i na e-mail.",
-    downloadLabel: "Preuzmi Velebit brošuru (PDF)",
-    backToGuidesLabel: "Natrag na vodiče",
+      "Prva priča stiže u vaš inbox kad bude spreman sljedeći zapis u dnevniku. Do tada istražite staze i tihe kutke Velebita.",
+    backToGuidesLabel: "Natrag na priče",
     backToHomeLabel: "Početna",
   },
 };
@@ -337,7 +339,7 @@ const de: ExperienceContent = {
       {
         title: "Berg und Meer an einem Tag",
         teaser: "Von Bačić Duliba nach Karlobag, Pag und Zavratnica.",
-        href: "/experiences#exp-sea",
+        href: "/experiences#exp-mountain-sea",
       },
       {
         title: "Sternenhimmel-Guide am Velebit",
@@ -347,22 +349,23 @@ const de: ExperienceContent = {
     ],
   },
   signup: {
-    title: "5 unvergessliche Erlebnisse am Velebit",
+    title: "Geschichten von Stars Peak",
     intro:
-      "E-Mail hinterlassen und unsere kostenlose Velebit-Broschüre laden — Routen, Berg-und-Meer-Tage und Sternenhimmel-Tipps von Stars Peak.",
+      "Tragen Sie sich in unsere Mailingliste ein — für saisonale Geschichten, Wanderinspiration und stille Momente am Velebit.",
+    detail:
+      "Erfahren Sie als Erste von neuen Journal-Einträgen, Lieblingswegen, Sternennächten und dem Leben auf dem Berg.",
     emailLabel: "E-Mail-Adresse",
     emailPlaceholder: "sie@beispiel.de",
-    submitLabel: "Broschüre erhalten",
+    submitLabel: "Journal abonnieren",
     submittingLabel: "Wird gesendet…",
     submitErrorMessage: "Etwas ist schiefgelaufen — bitte erneut versuchen oder uns direkt kontaktieren.",
-    privacyNote:
-      "Wir nutzen Ihre E-Mail nur für die Broschüre und gelegentliche Stars-Peak-Updates. Abmeldung jederzeit möglich.",
-    brochureLanguageNote: "PDF-Broschüre auf Deutsch.",
+    gdprConsent:
+      "Ich stimme zu, dass Stars Peak meine personenbezogenen Daten gemäß DSGVO verarbeiten darf.",
+    privacyNote: "Wir schreiben nur wenige Male im Jahr. Kein Spam — nur Geschichten, die sich lohnen.",
     thankYouTitle: "Geschafft — vielen Dank",
     successMessage:
-      "Danke für Ihre Anmeldung. Laden Sie die Velebit-Broschüre unten herunter — Neuigkeiten senden wir auch per E-Mail.",
-    downloadLabel: "Velebit-Broschüre herunterladen (PDF)",
-    backToGuidesLabel: "Zurück zu Guides",
+      "Die erste Geschichte kommt per E-Mail, sobald der nächste Journal-Eintrag bereit ist. Bis dahin: Wege und stille Ecken des Velebit entdecken.",
+    backToGuidesLabel: "Zurück zu den Geschichten",
     backToHomeLabel: "Startseite",
   },
 };
@@ -398,27 +401,28 @@ const fr: ExperienceContent = {
       { title: "Comment atteindre Bačić Kuk depuis Stars Peak", teaser: "Départ, durée et attentes sur l’ascension.", href: "/experiences#exp-hiking" },
       { title: "Plus beaux sentiers autour de Baške Oštarije", teaser: "Randonnées à la journée près de la maison.", href: "/experiences#exp-hiking" },
       { title: "Que faire sur le Velebit quand il pleut", teaser: "Journées au coin du feu et escapades côtières.", href: "/experiences#exp-sea" },
-      { title: "Montagne et mer en une journée", teaser: "De Bačić Duliba à Karlobag, Pag et Zavratnica.", href: "/experiences#exp-sea" },
+      { title: "Montagne et mer en une journée", teaser: "De Bačić Duliba à Karlobag, Pag et Zavratnica.", href: "/experiences#exp-mountain-sea" },
       { title: "Guide d’observation des étoiles", teaser: "Ciel noir, saisons idéales et conseils simples.", href: "#experience-day" },
     ],
   },
   signup: {
-    title: "5 expériences inoubliables sur le Velebit",
+    title: "Récits de Stars Peak",
     intro:
-      "Laissez votre e-mail et téléchargez notre brochure Velebit gratuite — itinéraires, mer et montagne, astrologie depuis Stars Peak.",
+      "Rejoignez notre liste de diffusion pour des récits de saison, de l’inspiration randonnée et des moments calmes du Velebit.",
+    detail:
+      "Soyez les premiers informés des nouveaux articles du journal, des sentiers favoris, des nuits sous les étoiles et de la vie à la montagne.",
     emailLabel: "Adresse e-mail",
     emailPlaceholder: "vous@exemple.fr",
-    submitLabel: "Recevoir la brochure",
+    submitLabel: "Rejoindre le journal",
     submittingLabel: "Envoi…",
     submitErrorMessage: "Une erreur s'est produite — réessayez ou contactez-nous directement.",
-    privacyNote:
-      "Votre e-mail sert uniquement à la brochure et aux nouvelles occasionnelles de Stars Peak.",
-    brochureLanguageNote: "Brochure PDF en français.",
+    gdprConsent:
+      "J’accepte que Stars Peak traite mes données personnelles conformément au RGPD.",
+    privacyNote: "Nous écrivons seulement quelques fois par an. Pas de spam — juste des récits qui valent la lecture.",
     thankYouTitle: "Inscription confirmée — merci",
     successMessage:
-      "Merci pour votre inscription. Téléchargez la brochure Velebit ci-dessous — nous vous enverrons aussi des nouvelles par e-mail.",
-    downloadLabel: "Télécharger la brochure Velebit (PDF)",
-    backToGuidesLabel: "Retour aux guides",
+      "Le premier récit arrivera dans votre boîte mail dès que le prochain article du journal sera prêt. En attendant, explorez les sentiers et les coins tranquilles du Velebit.",
+    backToGuidesLabel: "Retour aux récits",
     backToHomeLabel: "Accueil",
   },
 };
@@ -454,27 +458,28 @@ const it: ExperienceContent = {
       { title: "Come raggiungere Bačić Kuk da Stars Peak", teaser: "Partenza, tempi e cosa aspettarsi in salita.", href: "/experiences#exp-hiking" },
       { title: "I sentieri più belli intorno a Baške Oštarije", teaser: "Escursioni giornaliere vicino alla casa.", href: "/experiences#exp-hiking" },
       { title: "Cosa fare sul Velebit quando piove", teaser: "Giornate al camino ed escursioni verso il mare.", href: "/experiences#exp-sea" },
-      { title: "Montagna e mare in un giorno", teaser: "Da Bačić Duliba a Karlobag, Pag e Zavratnica.", href: "/experiences#exp-sea" },
+      { title: "Montagna e mare in un giorno", teaser: "Da Bačić Duliba a Karlobag, Pag e Zavratnica.", href: "/experiences#exp-mountain-sea" },
       { title: "Guida all’osservazione delle stelle", teaser: "Cielo scuro, stagioni migliori e consigli semplici.", href: "#experience-day" },
     ],
   },
   signup: {
-    title: "5 esperienze indimenticabili sul Velebit",
+    title: "Storie da Stars Peak",
     intro:
-      "Lascia la tua e-mail e scarica la brochure Velebit gratuita — percorsi, mare e montagna, osservazione stelle da Stars Peak.",
+      "Iscriviti alla mailing list per racconti di stagione, ispirazione escursionistica e momenti quieti dal Velebit.",
+    detail:
+      "Scopri per primo i nuovi articoli del journal, i sentieri preferiti, le notti stellate e la vita in montagna.",
     emailLabel: "Indirizzo e-mail",
     emailPlaceholder: "tu@esempio.it",
-    submitLabel: "Scarica la brochure",
+    submitLabel: "Iscriviti al journal",
     submittingLabel: "Invio…",
     submitErrorMessage: "Qualcosa è andato storto — riprova o contattaci direttamente.",
-    privacyNote:
-      "Usiamo la tua e-mail solo per la brochure e aggiornamenti occasionali su Stars Peak.",
-    brochureLanguageNote: "Brochure PDF in italiano.",
+    gdprConsent:
+      "Accetto che Stars Peak tratti i miei dati personali in conformità al GDPR.",
+    privacyNote: "Scriviamo solo poche volte l’anno. Niente spam — solo storie che valgono la pena.",
     thankYouTitle: "Iscrizione completata — grazie",
     successMessage:
-      "Grazie per l'iscrizione. Scarica la brochure Velebit qui sotto — novità e guide arriveranno anche via e-mail.",
-    downloadLabel: "Scarica brochure Velebit (PDF)",
-    backToGuidesLabel: "Torna alle guide",
+      "La prima storia arriverà via e-mail quando sarà pronto il prossimo articolo del journal. Nel frattempo, esplora i sentieri e gli angoli quieti del Velebit.",
+    backToGuidesLabel: "Torna alle storie",
     backToHomeLabel: "Home",
   },
 };

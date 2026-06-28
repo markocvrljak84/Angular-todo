@@ -27,6 +27,7 @@ export function NewsletterSignupSection({ content, locale, source, id }: Props) 
             {content.title}
           </h2>
           <p className="newsletter-signup__intro">{content.intro}</p>
+          <p className="newsletter-signup__detail">{content.detail}</p>
 
           <NewsletterSignupForm
             locale={locale}
@@ -36,11 +37,10 @@ export function NewsletterSignupSection({ content, locale, source, id }: Props) 
             submitLabel={content.submitLabel}
             submittingLabel={content.submittingLabel}
             submitErrorMessage={content.submitErrorMessage}
+            gdprConsentLabel={content.gdprConsent}
             privacyNote={content.privacyNote}
             source={source}
           />
-
-          <p className="newsletter-signup__brochure-note">{content.brochureLanguageNote}</p>
         </div>
       </div>
     </section>

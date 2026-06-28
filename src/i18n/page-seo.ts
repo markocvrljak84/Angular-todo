@@ -45,9 +45,9 @@ const en: Record<SitePageKey, PageSeo> = {
       "From Stars Peak reach Paklenica, Pag, Zavratnica and Premužić trail — mountain base, Adriatic adventures within a day.",
   },
   guides: {
-    title: "Guides & free Velebit experience PDF",
+    title: "Stories from Stars Peak — journal & mailing list",
     description:
-      "Trail guides, stargazing tips and our free PDF — 5 unforgettable experiences on Velebit. Sign up from Stars Peak.",
+      "Seasonal stories, hiking inspiration and quiet moments from Velebit. Join the Stars Peak journal mailing list.",
   },
   contact: {
     title: "Contact & booking — Stars Peak",
@@ -98,9 +98,9 @@ const hr: Record<SitePageKey, PageSeo> = {
       "Sa Stars Peaka do Paklenice, Paga, Zavratnice i Premužićeve staze — baza na planini, jadranske avanture u jednom danu.",
   },
   guides: {
-    title: "Vodiči i besplatan PDF vodič za Velebit",
+    title: "Priče sa Stars Peaka — dnevnik i mailing lista",
     description:
-      "Planinarski vodiči, savjeti za promatranje zvijezda i besplatan PDF — 5 nezaboravnih iskustava na Velebitu.",
+      "Sezonske priče, planinarska inspiracija i tiši trenuci s Velebita. Pridružite se dnevniku Stars Peaka.",
   },
   contact: {
     title: "Kontakt i rezervacija — Stars Peak",
@@ -151,9 +151,9 @@ const de: Record<SitePageKey, PageSeo> = {
       "Von Stars Peak nach Paklenica, Pag, Zavratnica und Premužić-Pfad — Bergbasis, Adriaausflüge an einem Tag.",
   },
   guides: {
-    title: "Guides & kostenloser Velebit-PDF-Guide",
+    title: "Geschichten von Stars Peak — Journal & Mailingliste",
     description:
-      "Wander-Guides, Sternenhimmel-Tipps und kostenloses PDF — 5 unvergessliche Erlebnisse am Velebit.",
+      "Saisonale Geschichten, Wanderinspiration und stille Momente am Velebit. Stars-Peak-Journal abonnieren.",
   },
   contact: {
     title: "Kontakt & Buchung — Stars Peak",
@@ -204,9 +204,9 @@ const fr: Record<SitePageKey, PageSeo> = {
       "Depuis Stars Peak : Paklenica, Pag, Zavratnica et sentier Premužić — base montagne, mer en une journée.",
   },
   guides: {
-    title: "Guides & PDF gratuit Velebit",
+    title: "Récits de Stars Peak — journal & mailing list",
     description:
-      "Guides sentiers, astrologie et PDF gratuit — 5 expériences inoubliables sur le Velebit.",
+      "Récits de saison, inspiration randonnée et moments calmes du Velebit. Rejoignez le journal Stars Peak.",
   },
   contact: {
     title: "Contact & réservation — Stars Peak",
@@ -257,9 +257,9 @@ const it: Record<SitePageKey, PageSeo> = {
       "Da Stars Peak a Paklenica, Pag, Zavratnica e sentiero Premužić — base in montagna, mare in un giorno.",
   },
   guides: {
-    title: "Guide & PDF gratuito sul Velebit",
+    title: "Storie da Stars Peak — journal & mailing list",
     description:
-      "Guide sentieri, osservazione stelle e PDF gratuito — 5 esperienze indimenticabili sul Velebit.",
+      "Racconti di stagione, ispirazione escursionistica e momenti quieti dal Velebit. Iscriviti al journal Stars Peak.",
   },
   contact: {
     title: "Contatti & prenotazione — Stars Peak",

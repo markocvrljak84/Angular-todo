@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageJsonLd } from "@/components/page-json-ld";
-import { getVelebitBrochure } from "@/config/site-brochure";
 import { localePath } from "@/config/site-routes";
 import { getExperienceContent } from "@/i18n/experience-content";
 import { getMessages } from "@/i18n/messages";
@@ -36,7 +35,6 @@ export default async function NewsletterThankYouPage({ params }: Props) {
   const locale = await resolveLocale(params);
   const t = getMessages(locale);
   const content = getExperienceContent(locale).signup;
-  const brochure = getVelebitBrochure(locale);
 
   return (
     <>
@@ -59,15 +57,6 @@ export default async function NewsletterThankYouPage({ params }: Props) {
             </p>
             <h1 className="newsletter-signup__title">{content.thankYouTitle}</h1>
             <p className="newsletter-signup__intro">{content.successMessage}</p>
-
-            <a
-              href={brochure.pdfPath}
-              download={brochure.downloadName}
-              className="newsletter-signup__download site-form__submit"
-            >
-              {content.downloadLabel}
-            </a>
-            <p className="newsletter-signup__brochure-note">{content.brochureLanguageNote}</p>
 
             <p className="newsletter-thanks__back">
               <Link href={localePath(locale, "guides")}>{content.backToGuidesLabel}</Link>

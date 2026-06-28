@@ -64,7 +64,7 @@ export default async function GalleryPage({ params }: Props) {
   const gallery = getGalleryContent(locale);
   const header = getPageHeaderContent(locale, "gallery");
 
-  const sections = FEATURED_GALLERY_CATEGORIES.map((categoryId) => {
+  const outdoorSections = FEATURED_GALLERY_CATEGORIES.map((categoryId) => {
     const group = gallery.groups.find((item) => item.id === categoryId);
     if (!group) {
       throw new Error(`Missing gallery content for category "${categoryId}".`);
@@ -140,23 +140,25 @@ export default async function GalleryPage({ params }: Props) {
     <>
       <PageJsonLd locale={locale} messages={t} page="gallery" />
 
-      <InnerPageHeader {...header} />
+      <div className="gallery-page">
+        <InnerPageHeader {...header} />
 
-      <div className="flat-section flat-section--tint">
-        <div className="flat-wrap">
-          <GalleryEditorialGrid
-            sections={sections}
-            mosaicSlides={mosaicSlides}
-            trailingSections={interiorSections}
-            trailingMosaicSlides={interiorMosaicSlides}
-            lightboxLabels={{
-              close: t.gallery.lightboxClose,
-              prev: t.gallery.lightboxPrev,
-              next: t.gallery.lightboxNext,
-              aria: t.gallery.lightboxAria,
-              openThumb: t.gallery.lightboxOpenThumb,
-            }}
-          />
+        <div className="flat-section flat-section--tint">
+          <div className="flat-wrap">
+            <GalleryEditorialGrid
+              sections={interiorSections}
+              mosaicSlides={interiorMosaicSlides}
+              trailingSections={outdoorSections}
+              trailingMosaicSlides={mosaicSlides}
+              lightboxLabels={{
+                close: t.gallery.lightboxClose,
+                prev: t.gallery.lightboxPrev,
+                next: t.gallery.lightboxNext,
+                aria: t.gallery.lightboxAria,
+                openThumb: t.gallery.lightboxOpenThumb,
+              }}
+            />
+          </div>
         </div>
       </div>
 

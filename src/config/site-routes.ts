@@ -1,4 +1,4 @@
-import type { Locale } from "@/i18n/config";
+import { defaultLocale, localePrefixInUrl, type Locale } from "@/i18n/config";
 import { BOOKING_URL } from "@/config/site-contact";
 
 /** Site page keys — one route per major section. */
@@ -83,11 +83,18 @@ export const LEGACY_ROUTE_REDIRECTS: Record<string, string> = {
 
 export function localePath(locale: Locale, page: SitePageKey): string {
   const segment = SITE_PAGE_SEGMENTS[page];
+  if (!localePrefixInUrl && locale === defaultLocale) {
+    return segment ? `/${segment}` : "/";
+  }
   return segment ? `/${locale}/${segment}` : `/${locale}`;
 }
 
 export function isHomePath(pathname: string, locale: Locale): boolean {
-  return pathname === `/${locale}` || pathname === `/${locale}/`;
+  const normalized = pathname.replace(/\/$/, "") || "/";
+  if (!localePrefixInUrl && locale === defaultLocale) {
+    return normalized === "/";
+  }
+  return normalized === `/${locale}`;
 }
 
 export function bookNavHref(): string {

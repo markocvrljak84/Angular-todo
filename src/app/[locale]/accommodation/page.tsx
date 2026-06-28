@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { BookCta } from "@/components/book-cta";
 import { FacilitiesGrid } from "@/components/facilities-grid";
+import { FaqSection } from "@/components/faq-section";
 import { InnerPageHeader } from "@/components/inner-page-header";
 import { getFacilityCategories } from "@/i18n/facility-categories";
+import { getGoodToKnow } from "@/i18n/good-to-know";
 import { getMessages } from "@/i18n/messages";
 import { getPageHeaderContent } from "@/lib/inner-page-content";
 import {
@@ -33,6 +35,7 @@ export default async function AccommodationPage({ params }: Props) {
   const locale = await resolveLocale(params);
   const t = getMessages(locale);
   const facilities = getFacilityCategories(locale);
+  const goodToKnow = getGoodToKnow(locale);
   const header = getPageHeaderContent(locale, "accommodation");
 
   return (
@@ -40,6 +43,8 @@ export default async function AccommodationPage({ params }: Props) {
       <PageJsonLd locale={locale} messages={t} page="accommodation" />
 
       <InnerPageHeader {...header} />
+
+      <FaqSection content={goodToKnow} />
 
       <div className="flat-section flat-section--tint">
         <div className="flat-wrap">

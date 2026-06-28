@@ -31,7 +31,7 @@ export function PageJsonLd({
     ),
   ];
 
-  if (page === "home" || page === "goodToKnow") {
+  if (page === "goodToKnow" || page === "accommodation") {
     graph.push(buildFaqPageJsonLd(locale, page));
   }
 

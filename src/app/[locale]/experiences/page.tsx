@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { BookCta } from "@/components/book-cta";
 import { ClimbingRoutesSection } from "@/components/climbing-routes-section";
+import { ExperienceMapSection } from "@/components/experience-map-section";
 import { HikingRoutesSection } from "@/components/hiking-routes-section";
 import { InnerPageHeader } from "@/components/inner-page-header";
 import { NearbySection } from "@/components/nearby-section";
@@ -9,8 +10,10 @@ import { TasteOfVelebitSection } from "@/components/taste-of-velebit-section";
 import { getClimbingRoutes } from "@/i18n/climbing-routes";
 import { getExperienceContent } from "@/i18n/experience-content";
 import { getExperiencesPageContent } from "@/i18n/experiences-page";
+import { getHomeContent } from "@/i18n/home-content";
 import { getHikingRoutes } from "@/i18n/hiking-routes";
 import { getMessages } from "@/i18n/messages";
+import { HOME_IMAGES } from "@/config/site-images";
 import { getPageHeaderContent } from "@/lib/inner-page-content";
 import {
   localeStaticParams,
@@ -41,6 +44,7 @@ export default async function ExperiencesPage({ params }: Props) {
   const t = getMessages(locale);
   const page = getExperiencesPageContent(locale);
   const experience = getExperienceContent(locale);
+  const home = getHomeContent(locale);
   const header = getPageHeaderContent(locale, "experiences");
   const [hiking, sea, food, agro] = page.categories;
 
@@ -49,6 +53,19 @@ export default async function ExperiencesPage({ params }: Props) {
       <PageJsonLd locale={locale} messages={t} page="experiences" />
 
       <InnerPageHeader {...header} />
+
+      <ExperienceMapSection
+        id="exp-mountain-sea"
+        content={home.map}
+        mountainImage={{
+          src: HOME_IMAGES.experienceMap.mountain,
+          alt: home.whySpecial.cards[0].imageAlt,
+        }}
+        seaImage={{
+          src: HOME_IMAGES.experienceMap.sea,
+          alt: home.whySpecial.cards[1].imageAlt,
+        }}
+      />
 
       <section id={hiking.id} className="flat-section flat-section--tint" aria-labelledby="exp-hiking">
         <div className="flat-wrap">

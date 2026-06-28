@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import type { Locale } from "@/i18n/config";
+import { showLanguageSwitcher } from "@/i18n/config";
 import type { Messages } from "@/i18n/messages";
 import { SITE_CONTACT } from "@/config/site-contact";
 import {
@@ -36,7 +37,7 @@ function isNavLinkActive(pathname: string, item: NavItem, locale: Locale): boole
 
   const current = pathname.replace(/\/$/, "") || "/";
   const target = item.href.replace(/\/$/, "") || "/";
-  const homeTarget = `/${locale}`;
+  const homeTarget = localePath(locale, "home").replace(/\/$/, "") || "/";
 
   if (target === homeTarget) {
     return current === homeTarget;
@@ -215,7 +216,9 @@ export function SiteHeader({ locale, t }: Props) {
           <nav className="site-header__nav site-header__nav--end" aria-label="Secondary">
             {renderNavList(navEnd, "site-header__nav-link")}
           </nav>
-          <LangSwitch currentLocale={locale} aria={t.langSwitcher.aria} />
+          {showLanguageSwitcher ? (
+            <LangSwitch currentLocale={locale} aria={t.langSwitcher.aria} />
+          ) : null}
         </div>
       </div>
 

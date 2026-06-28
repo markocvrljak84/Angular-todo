@@ -1,6 +1,7 @@
 import type { Locale } from "@/i18n/config";
 import type { Messages } from "@/i18n/messages";
 import { BOOKING_URL, SITE_CONTACT } from "@/config/site-contact";
+import { localePath } from "@/config/site-routes";
 import {
   VACATION_RENTAL_IDENTIFIER,
   VACATION_RENTAL_SCHEMA_IMAGES,
@@ -25,7 +26,7 @@ const HOST_LANGUAGES: Record<Locale, string> = {
 
 export function buildVacationRentalJsonLd(locale: Locale, messages: Messages) {
   const base = getSiteUrl();
-  const pageUrl = `${base}/${locale}`;
+  const pageUrl = `${base}${localePath(locale, "home")}`;
   const { latitude, longitude } = getSiteCoordinates();
   const postalAddress = getPostalAddress();
   const { "@type": _type, ...baseAddress } = postalAddress;

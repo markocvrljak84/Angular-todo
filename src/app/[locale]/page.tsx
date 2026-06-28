@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import { AccommodationBriefSection } from "@/components/accommodation-brief-section";
 import { ExperienceDaySection } from "@/components/experience-day-section";
-import { ExperienceMapSection } from "@/components/experience-map-section";
-import { FaqSection } from "@/components/faq-section";
 import { FinalCtaSection } from "@/components/final-cta-section";
-import { GuidesSection } from "@/components/guides-section";
+import { HomeLocalFlavoursSection } from "@/components/home-local-flavours-section";
 import { HeroSection } from "@/components/hero-section";
 import { HomeEditorialSection } from "@/components/home-editorial-section";
 import { NewsletterSignupSection } from "@/components/newsletter-signup-section";
@@ -12,7 +10,6 @@ import { WhySpecialSection } from "@/components/why-special-section";
 import { HOME_IMAGES, MAIN_CAROUSEL_IMAGES } from "@/config/site-images";
 import { localePath } from "@/config/site-routes";
 import { getExperienceContent } from "@/i18n/experience-content";
-import { getGoodToKnow } from "@/i18n/good-to-know";
 import { getHomeContent } from "@/i18n/home-content";
 import { getMessages } from "@/i18n/messages";
 import {
@@ -91,25 +88,6 @@ export default async function HomePage({ params }: Props) {
         accommodationHref={localePath(locale, "accommodation")}
       />
 
-      <ExperienceMapSection
-        content={home.map}
-        mountainImage={{
-          src: HOME_IMAGES.experienceMap.mountain,
-          alt: home.whySpecial.cards[0].imageAlt,
-        }}
-        seaImage={{
-          src: HOME_IMAGES.experienceMap.sea,
-          alt: home.whySpecial.cards[1].imageAlt,
-        }}
-      />
-
-      <GuidesSection
-        content={experience.guides}
-        blogHref={localePath(locale, "guides")}
-      />
-
-      <FaqSection content={getGoodToKnow(locale)} />
-
       <NewsletterSignupSection
         content={experience.signup}
         locale={locale}
@@ -118,6 +96,11 @@ export default async function HomePage({ params }: Props) {
       />
 
       <FinalCtaSection content={home.finalCta} />
+
+      <HomeLocalFlavoursSection
+        content={home.localFlavours}
+        imageSrc={HOME_IMAGES.localFlavours}
+      />
     </>
   );
 }

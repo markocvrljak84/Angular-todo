@@ -1,8 +1,8 @@
 import type { MetadataRoute } from "next";
-import { locales } from "@/i18n/config";
+import { activeLocales } from "@/i18n/config";
 import {
   SITE_PAGE_KEYS,
-  SITE_PAGE_SEGMENTS,
+  localePath,
 } from "@/config/site-routes";
 import { getSiteUrl } from "@/lib/site-url";
 
@@ -11,16 +11,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   const entries: MetadataRoute.Sitemap = [];
 
-  for (const locale of locales) {
+  for (const locale of activeLocales) {
     for (const page of SITE_PAGE_KEYS) {
-      const segment = SITE_PAGE_SEGMENTS[page];
-      const path = segment ? `/${locale}/${segment}` : `/${locale}`;
+      const path = localePath(locale, page);
       entries.push({
-        url: `${base}${path}`,
+        url: `${base}${path === "/" ? "" : path}`,
         lastModified: now,
         changeFrequency: page === "home" ? "weekly" : "monthly",
-        priority:
-          page === "home" ? (locale === "en" ? 1 : 0.9) : locale === "en" ? 0.85 : 0.8,
+        priority: page === "home" ? 1 : 0.85,
       });
     }
   }
