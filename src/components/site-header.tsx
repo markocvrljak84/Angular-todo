@@ -191,18 +191,6 @@ export function SiteHeader({ locale, t }: Props) {
     <header className={`site-header ${toneClass}`}>
       <div className="site-header__inner">
         <div className="site-header__col site-header__col--start">
-          <button
-            ref={menuBtnRef}
-            type="button"
-            className="site-header__menu-toggle"
-            aria-expanded={menuOpen}
-            aria-controls="site-header-mobile-menu"
-            onClick={() => setMenuOpen((o) => !o)}
-          >
-            <span className="site-header__menu-bars" aria-hidden="true" />
-            <span className="sr-only">{menuOpen ? t.header.menuClose : t.header.menuOpen}</span>
-          </button>
-
           <nav className="site-header__nav site-header__nav--start" aria-label="Main">
             {renderNavList(navStart, "site-header__nav-link")}
           </nav>
@@ -219,6 +207,17 @@ export function SiteHeader({ locale, t }: Props) {
           {showLanguageSwitcher ? (
             <LangSwitch currentLocale={locale} aria={t.langSwitcher.aria} />
           ) : null}
+          <button
+            ref={menuBtnRef}
+            type="button"
+            className="site-header__menu-toggle"
+            aria-expanded={menuOpen}
+            aria-controls="site-header-mobile-menu"
+            onClick={() => setMenuOpen((o) => !o)}
+          >
+            <span className="site-header__menu-bars" aria-hidden="true" />
+            <span className="sr-only">{menuOpen ? t.header.menuClose : t.header.menuOpen}</span>
+          </button>
         </div>
       </div>
 

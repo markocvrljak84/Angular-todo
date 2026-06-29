@@ -17,7 +17,7 @@
   --facility-icon: #8a7d6d;
   --nav-bg: #efede8;
   --header-h: 4.5rem;
-  --section-space: clamp(4rem, 8vw, 6.5rem);
+  --section-space: clamp(2rem, 8vw, 5.5rem);
   --page-gutter: clamp(1.25rem, 4vw, 3rem);
   --font: var(--font-sans), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-display: var(--font-serif), "Times New Roman", Georgia, serif;
@@ -482,6 +482,7 @@ body {
 }
 
 @media (max-width: 1189px) {
+
   .site-header__nav--start,
   .site-header__nav--end {
     display: none;
@@ -655,12 +656,10 @@ body {
   position: absolute;
   inset: 0;
   z-index: 2;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.2) 0%,
-    rgba(0, 0, 0, 0.15) 40%,
-    rgba(0, 0, 0, 0.45) 100%
-  );
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.15) 40%,
+      rgba(0, 0, 0, 0.45) 100%);
   pointer-events: none;
 }
 
@@ -678,7 +677,7 @@ body {
   pointer-events: none;
 }
 
-.hero-fs__nav > * {
+.hero-fs__nav>* {
   pointer-events: auto;
 }
 
@@ -761,7 +760,7 @@ body {
   pointer-events: none;
 }
 
-.hero-fs__content > * {
+.hero-fs__content>* {
   pointer-events: auto;
 }
 
@@ -900,12 +899,10 @@ body {
   }
 
   .hero-fs__scrim {
-    background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.15) 0%,
-      rgba(0, 0, 0, 0.05) 50%,
-      rgba(0, 0, 0, 0.35) 100%
-    );
+    background: linear-gradient(to bottom,
+        rgba(0, 0, 0, 0.15) 0%,
+        rgba(0, 0, 0, 0.05) 50%,
+        rgba(0, 0, 0, 0.35) 100%);
   }
 
   .hero-fs__nav {
@@ -1254,7 +1251,6 @@ body {
 .flat-section {
   scroll-margin-top: calc(var(--header-h) + 0.5rem);
   padding: var(--section-space) 0;
-  border-top: 1px solid var(--line);
 }
 
 .flat-section--tint {
@@ -1273,7 +1269,7 @@ body {
   border-top: none;
 }
 
-.flat-section--page + .flat-section {
+.flat-section--page+.flat-section {
   border-top: none;
 }
 
@@ -1625,7 +1621,7 @@ body {
   margin-top: clamp(3rem, 7vw, 5.5rem);
 }
 
-.gallery-mosaic + .gallery-editorial {
+.gallery-mosaic+.gallery-editorial {
   margin-top: clamp(3rem, 7vw, 5.5rem);
 }
 
@@ -2264,7 +2260,7 @@ body {
   white-space: nowrap;
 }
 
-.hiking-route__pill + .hiking-route__pill::before {
+.hiking-route__pill+.hiking-route__pill::before {
   content: "·";
   margin: 0 0.45rem;
   color: var(--line);
@@ -2340,7 +2336,7 @@ body {
   padding: 1rem 1.25rem 0.25rem;
 }
 
-.hiking-route__block + .hiking-route__block {
+.hiking-route__block+.hiking-route__block {
   padding-top: 0.35rem;
   border-top: 1px solid var(--line);
 }
@@ -3554,7 +3550,7 @@ code {
 }
 
 .home-explore-links {
-  padding-top: 0;
+  padding-top: 25px;
   padding-bottom: clamp(2rem, 4vw, 3rem);
 }
 
@@ -4062,7 +4058,7 @@ code {
   line-height: 1.35;
 }
 
-.stay-body + .stay-body {
+.stay-body+.stay-body {
   margin-top: 1rem;
 }
 
@@ -4141,6 +4137,7 @@ code {
 }
 
 @media (min-width: 900px) {
+
   .stay-house__grid,
   .stay-outdoors__grid,
   .stay-included__grid {
@@ -4413,6 +4410,7 @@ code {
 }
 
 @media (max-width: 767px) {
+
   .stay-hero__media,
   .stay-house__media,
   .stay-outdoors__media {
@@ -4697,7 +4695,7 @@ code {
   letter-spacing: 0.02em;
 }
 
-.local-flavours__line + .local-flavours__line {
+.local-flavours__line+.local-flavours__line {
   margin-top: 0.15rem;
 }
 
@@ -4732,7 +4730,7 @@ code {
   }
 }
 
-.about-story__block + .about-story__block {
+.about-story__block+.about-story__block {
   margin-top: 2rem;
   padding-top: 2rem;
   border-top: 1px solid var(--line);
@@ -4843,6 +4841,22 @@ code {
     margin-right: calc(-1 * var(--page-gutter));
   }
 
+  .why-special__body {
+    background: var(--bg);
+    border-left: none;
+    border-right: none;
+    width: calc(100% + 2 * var(--page-gutter));
+    margin-left: calc(-1 * var(--page-gutter));
+    margin-right: calc(-1 * var(--page-gutter));
+    padding-left: calc(var(--page-gutter) + 1.15rem);
+    padding-right: calc(var(--page-gutter) + 1.15rem);
+  }
+
+  .why-special__grid {
+    border-left: none;
+    border-right: none;
+  }
+
   .experience-map {
     width: calc(100% + 2 * var(--page-gutter));
     margin-left: calc(-1 * var(--page-gutter));
@@ -4861,7 +4875,7 @@ code {
     border-right: none;
   }
 
-  .hiking-route + .hiking-route {
+  .hiking-route+.hiking-route {
     border-top: none;
   }
 
@@ -4894,7 +4908,7 @@ code {
     text-align: left;
   }
 
-  .hiking-route__pill + .hiking-route__pill::before {
+  .hiking-route__pill+.hiking-route__pill::before {
     content: none;
     margin: 0;
   }
