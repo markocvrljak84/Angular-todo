@@ -21,7 +21,7 @@ export type Messages = {
     gallery: string;
     hiking: string;
     nearby: string;
-    guides: string;
+    journal: string;
     goodToKnow: string;
     contact: string;
   };
@@ -157,7 +157,7 @@ const en: Messages = {
     gallery: "Gallery",
     hiking: "Hiking",
     nearby: "Near places",
-    guides: "Blog",
+    journal: "Journal",
     goodToKnow: "Good to know",
     contact: "Contact",
   },
@@ -355,7 +355,7 @@ const hr: Messages = {
     gallery: "Galerija",
     hiking: "Planinarenje",
     nearby: "U blizini",
-    guides: "Blog",
+    journal: "Journal",
     goodToKnow: "Dobro za znati",
     contact: "Kontakt",
   },
@@ -553,7 +553,7 @@ const de: Messages = {
     gallery: "Galerie",
     hiking: "Wandern",
     nearby: "In der Nähe",
-    guides: "Blog",
+    journal: "Journal",
     goodToKnow: "Gut zu wissen",
     contact: "Kontakt",
   },

@@ -1,7 +1,7 @@
 import type { Locale } from "@/i18n/config";
 import type { SitePageKey } from "@/config/site-routes";
-import { getExperienceContent } from "@/i18n/experience-content";
 import { getExperiencesPageContent } from "@/i18n/experiences-page";
+import { getJournalContent } from "@/i18n/journal-content";
 import { getGoodToKnow } from "@/i18n/good-to-know";
 import { getHikingRoutes } from "@/i18n/hiking-routes";
 import { getMessages } from "@/i18n/messages";
@@ -39,10 +39,10 @@ export function getPageHeaderContent(
       return { title: getHikingRoutes(locale).title, intro: seo.description };
     case "nearby":
       return { title: t.home.nearbyTitle, intro: seo.description };
-    case "guides":
+    case "journal":
       return {
-        title: getExperienceContent(locale).guides.title,
-        intro: getExperienceContent(locale).guides.intro,
+        title: getJournalContent(locale).title,
+        intro: getJournalContent(locale).intro,
       };
     case "contact":
       return { title: t.contact.title };

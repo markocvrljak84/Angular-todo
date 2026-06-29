@@ -36,18 +36,18 @@ export default async function NewsletterThankYouPage({ params }: Props) {
   const locale = await resolveLocale(params);
   const t = getMessages(locale);
   const content = getExperienceContent(locale).signup;
-  const thankYouUrl = `${getSiteUrl()}${localePath(locale, "guides")}/thank-you`;
+  const thankYouUrl = `${getSiteUrl()}${localePath(locale, "journal")}/thank-you`;
 
   return (
     <>
       <PageJsonLd
         locale={locale}
         messages={t}
-        page="guides"
+        page="journal"
         pageUrl={thankYouUrl}
         breadcrumbItems={[
           { name: t.nav.home, page: "home" },
-          { name: t.nav.guides, page: "guides" },
+          { name: t.nav.journal, page: "journal" },
           { name: content.thankYouTitle },
         ]}
       />
@@ -62,7 +62,7 @@ export default async function NewsletterThankYouPage({ params }: Props) {
             <p className="newsletter-signup__intro">{content.successMessage}</p>
 
             <p className="newsletter-thanks__back">
-              <Link href={localePath(locale, "guides")}>{content.backToGuidesLabel}</Link>
+              <Link href={localePath(locale, "journal")}>{content.backToJournalLabel}</Link>
               {" · "}
               <Link href={localePath(locale, "home")}>{content.backToHomeLabel}</Link>
             </p>

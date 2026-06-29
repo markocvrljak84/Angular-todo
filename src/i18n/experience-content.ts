@@ -6,87 +6,6 @@ export type ExperienceDayStep = {
   body: string;
 };
 
-export type ExperienceGuidesArticle = {
-  title: string;
-  teaser: string;
-  /** Future blog slug — cards are not linked until published */
-  href: string;
-};
-
-/** Shared blog topics (EN). Replace per locale when multi-language is restored. */
-const BLOG_ARTICLES: ExperienceGuidesArticle[] = [
-  {
-    title: "Complete Guide to Bačić Kuk",
-    teaser: "Trailhead, timing, difficulty and what to expect on Velebit's signature peak.",
-    href: "#",
-  },
-  {
-    title: "Premužić Trail Explained",
-    teaser: "History, access points and the best sections of Croatia's famous ridge path.",
-    href: "#",
-  },
-  {
-    title: "Best Hikes on Velebit",
-    teaser: "Day walks and longer routes starting near Stars Peak and Baške Oštarije.",
-    href: "#",
-  },
-  {
-    title: "Mountain and Sea in One Day",
-    teaser: "From morning on the ridge to an Adriatic swim — a realistic one-day itinerary.",
-    href: "#",
-  },
-  {
-    title: "Best Time to Visit Velebit",
-    teaser: "Seasons, weather patterns and when the trails are at their best.",
-    href: "#",
-  },
-  {
-    title: "Spring on Velebit",
-    teaser: "Wildflowers, lingering snow and quiet trails before the summer crowds.",
-    href: "#",
-  },
-  {
-    title: "Autumn on Velebit",
-    teaser: "Golden larches, crisp air and long light on the limestone ridges.",
-    href: "#",
-  },
-  {
-    title: "Winter on Velebit",
-    teaser: "Snow hiking, safety basics and when the house is at its cosiest.",
-    href: "#",
-  },
-  {
-    title: "Summer Escape from the Adriatic Heat",
-    teaser: "Why 900 m elevation beats the coast in July and August.",
-    href: "#",
-  },
-  {
-    title: "Wild Herbs of Velebit",
-    teaser: "Foraging seasons, edible plants and traditional uses on the mountain.",
-    href: "#",
-  },
-  {
-    title: "48 Hours on Velebit",
-    teaser: "A two-day itinerary: hikes, coast trips and stargazing from Stars Peak.",
-    href: "#",
-  },
-  {
-    title: "Places to Visit near Stars Peak",
-    teaser: "Karlobag, Pag, Paklenica and hidden stops within an hour's drive.",
-    href: "#",
-  },
-  {
-    title: "Hiking Packing List",
-    teaser: "Footwear, layers, water and what locals actually carry on Velebit trails.",
-    href: "#",
-  },
-  {
-    title: "Velebit Photography Guide",
-    teaser: "Golden hour, night skies and framing the karst landscape.",
-    href: "#",
-  },
-];
-
 export type ExperienceContent = {
   day: {
     title: string;
@@ -101,13 +20,6 @@ export type ExperienceContent = {
     items: string[];
     footnote: string;
   };
-  guides: {
-    title: string;
-    intro: string;
-    comingSoonLabel: string;
-    viewAllLabel: string;
-    articles: ExperienceGuidesArticle[];
-  };
   signup: {
     title: string;
     intro: string;
@@ -121,7 +33,7 @@ export type ExperienceContent = {
     privacyNote: string;
     thankYouTitle: string;
     successMessage: string;
-    backToGuidesLabel: string;
+    backToJournalLabel: string;
     backToHomeLabel: string;
   };
 };
@@ -176,14 +88,6 @@ const en: ExperienceContent = {
     footnote:
       "Agrotourism is on the way. Until then, ask us about wild herbs, local producers and seasonal flavours.",
   },
-  guides: {
-    title: "Blog",
-    intro:
-      "Hiking guides, seasonal stories and practical know-how from Velebit — a growing library to help you plan time at Stars Peak.",
-    comingSoonLabel: "Coming soon",
-    viewAllLabel: "All articles",
-    articles: BLOG_ARTICLES,
-  },
   signup: {
     title: "Stories from Stars Peak",
     intro:
@@ -201,7 +105,7 @@ const en: ExperienceContent = {
     thankYouTitle: "You're on the list — thank you",
     successMessage:
       "The first story will land in your inbox when the next journal entry is ready. Until then, explore the trails and quiet corners of Velebit.",
-    backToGuidesLabel: "Back to blog",
+    backToJournalLabel: "Back to Journal",
     backToHomeLabel: "Home",
   },
 };
@@ -256,14 +160,6 @@ const hr: ExperienceContent = {
     footnote:
       "Agroturizam je u pripremi. Do tada pitajte nas o divljem bilju, lokalnim proizvođačima i sezonskim okusima.",
   },
-  guides: {
-    title: "Blog",
-    intro:
-      "Planinarski vodiči, sezonske priče i praktične informacije s Velebita — rastuća biblioteka za planiranje boravka na Stars Peaku.",
-    comingSoonLabel: "Uskoro",
-    viewAllLabel: "Svi članci",
-    articles: BLOG_ARTICLES,
-  },
   signup: {
     title: "Priče sa Stars Peaka",
     intro:
@@ -281,7 +177,7 @@ const hr: ExperienceContent = {
     thankYouTitle: "Uspješna prijava — hvala",
     successMessage:
       "Prva priča stiže u vaš inbox kad bude spreman sljedeći zapis u dnevniku. Do tada istražite staze i tihe kutke Velebita.",
-    backToGuidesLabel: "Natrag na priče",
+    backToJournalLabel: "Natrag na Journal",
     backToHomeLabel: "Početna",
   },
 };
@@ -336,14 +232,6 @@ const de: ExperienceContent = {
     footnote:
       "Agrotourismus ist in Vorbereitung. Fragen Sie uns bis dahin nach Wildkräutern, lokalen Produzenten und saisonalen Aromen.",
   },
-  guides: {
-    title: "Blog",
-    intro:
-      "Wanderführer, saisonale Geschichten und Praxiswissen vom Velebit — eine wachsende Bibliothek für Ihren Aufenthalt auf Stars Peak.",
-    comingSoonLabel: "Demnächst",
-    viewAllLabel: "Alle Artikel",
-    articles: BLOG_ARTICLES,
-  },
   signup: {
     title: "Geschichten von Stars Peak",
     intro:
@@ -361,7 +249,7 @@ const de: ExperienceContent = {
     thankYouTitle: "Geschafft — vielen Dank",
     successMessage:
       "Die erste Geschichte kommt per E-Mail, sobald der nächste Journal-Eintrag bereit ist. Bis dahin: Wege und stille Ecken des Velebit entdecken.",
-    backToGuidesLabel: "Zurück zu den Geschichten",
+    backToJournalLabel: "Zurück zum Journal",
     backToHomeLabel: "Startseite",
   },
 };
@@ -388,14 +276,6 @@ const fr: ExperienceContent = {
     items: ["Thés de montagne", "Miel local", "Plantes médicinales", "Balades botaniques guidées", "Ateliers & dégustations"],
     footnote: "L’agrotourisme arrive bientôt. En attendant, demandez-nous plantes sauvages et producteurs locaux.",
   },
-  guides: {
-    title: "Blog",
-    intro:
-      "Guides de randonnée, récits de saison et conseils pratiques du Velebit — une bibliothèque en croissance pour planifier votre séjour à Stars Peak.",
-    comingSoonLabel: "Bientôt",
-    viewAllLabel: "Tous les articles",
-    articles: BLOG_ARTICLES,
-  },
   signup: {
     title: "Récits de Stars Peak",
     intro:
@@ -413,7 +293,7 @@ const fr: ExperienceContent = {
     thankYouTitle: "Inscription confirmée — merci",
     successMessage:
       "Le premier récit arrivera dans votre boîte mail dès que le prochain article du journal sera prêt. En attendant, explorez les sentiers et les coins tranquilles du Velebit.",
-    backToGuidesLabel: "Retour aux récits",
+    backToJournalLabel: "Retour au journal",
     backToHomeLabel: "Accueil",
   },
 };
@@ -440,14 +320,6 @@ const it: ExperienceContent = {
     items: ["Tè di montagna", "Miele locale", "Erbe medicinali", "Passeggiate botaniche", "Workshop e degustazioni"],
     footnote: "L’agriturismo è in preparazione. Nel frattempo chiedeteci erbe selvatiche e produttori locali.",
   },
-  guides: {
-    title: "Blog",
-    intro:
-      "Guide escursionistiche, storie di stagione e consigli pratici dal Velebit — una biblioteca in crescita per pianificare il soggiorno a Stars Peak.",
-    comingSoonLabel: "In arrivo",
-    viewAllLabel: "Tutti gli articoli",
-    articles: BLOG_ARTICLES,
-  },
   signup: {
     title: "Storie da Stars Peak",
     intro:
@@ -465,7 +337,7 @@ const it: ExperienceContent = {
     thankYouTitle: "Iscrizione completata — grazie",
     successMessage:
       "La prima storia arriverà via e-mail quando sarà pronto il prossimo articolo del journal. Nel frattempo, esplora i sentieri e gli angoli quieti del Velebit.",
-    backToGuidesLabel: "Torna alle storie",
+    backToJournalLabel: "Torna al journal",
     backToHomeLabel: "Home",
   },
 };

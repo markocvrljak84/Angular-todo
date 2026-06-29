@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { AccommodationBriefSection } from "@/components/accommodation-brief-section";
 import { ExperienceDaySection } from "@/components/experience-day-section";
 import { FinalCtaSection } from "@/components/final-cta-section";
+import { HomeExploreLinks } from "@/components/home-explore-links";
 import { HomeLocalFlavoursSection } from "@/components/home-local-flavours-section";
 import { HeroSection } from "@/components/hero-section";
 import { HomeEditorialSection } from "@/components/home-editorial-section";
@@ -75,6 +76,12 @@ export default async function HomePage({ params }: Props) {
       <WhySpecialSection content={home.whySpecial} images={whySpecialImages} />
 
       <ExperienceDaySection content={experience.day} />
+
+      <HomeExploreLinks
+        locale={locale}
+        experiencesLabel="Explore Experiences"
+        journalLabel="Read the Journal"
+      />
 
       <HomeEditorialSection
         content={home.editorial}

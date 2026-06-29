@@ -13,7 +13,8 @@ function absolutePageUrl(locale: Locale, page: SitePageKey): string {
 export function buildWebPageJsonLd(
   locale: Locale,
   page: SitePageKey,
-  pageUrl?: string
+  pageUrl?: string,
+  overrides?: { name?: string; description?: string }
 ) {
   const base = getSiteUrl();
   const resolvedPageUrl = pageUrl ?? absolutePageUrl(locale, page);
@@ -24,8 +25,8 @@ export function buildWebPageJsonLd(
     "@type": "WebPage",
     "@id": `${resolvedPageUrl}#webpage`,
     url: resolvedPageUrl,
-    name: seo.title,
-    description: seo.description,
+    name: overrides?.name ?? seo.title,
+    description: overrides?.description ?? seo.description,
     isPartOf: { "@id": `${base}#website` },
     about: { "@id": `${homeUrl}#vacation-rental` },
     breadcrumb: { "@id": `${resolvedPageUrl}#breadcrumb` },

@@ -22,7 +22,7 @@ type Props = {
   submitErrorMessage: string;
   gdprConsentLabel: string;
   privacyNote: string;
-  source: "home" | "guides" | "experiences";
+  source: "home" | "journal" | "experiences";
 };
 
 export function NewsletterSignupForm({
@@ -99,7 +99,7 @@ export function NewsletterSignupForm({
         return;
       }
 
-      window.location.href = `${localePath(locale, "guides")}/thank-you`;
+      window.location.href = `${localePath(locale, "journal")}/thank-you`;
     } catch {
       setStatus("error");
       setServerError(submitErrorMessage);

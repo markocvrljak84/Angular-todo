@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
   const base = getSiteUrl();
   const host = new URL(base).host;
 
-  const disallow = ["/api/", "/guides/thank-you"];
+  const disallow = ["/api/", "/journal/thank-you"];
 
   if (!localePrefixInUrl) {
     disallow.push("/en", "/en/");

@@ -11,7 +11,7 @@ export const SITE_PAGE_KEYS = [
   "goodToKnow",
   "hiking",
   "nearby",
-  "guides",
+  "journal",
   "contact",
 ] as const;
 
@@ -25,7 +25,7 @@ export const INDEXABLE_PAGE_KEYS = [
   "about",
   "gallery",
   "goodToKnow",
-  "guides",
+  "journal",
   "contact",
 ] as const satisfies readonly SitePageKey[];
 
@@ -37,7 +37,7 @@ export const SITEMAP_PAGE_PRIORITY: Record<IndexablePageKey, number> = {
   accommodation: 0.95,
   experiences: 0.9,
   gallery: 0.85,
-  guides: 0.85,
+  journal: 0.85,
   about: 0.8,
   goodToKnow: 0.8,
   contact: 0.75,
@@ -51,7 +51,7 @@ export const SITEMAP_CHANGE_FREQUENCY: Record<
   accommodation: "weekly",
   experiences: "weekly",
   gallery: "monthly",
-  guides: "monthly",
+  journal: "monthly",
   about: "monthly",
   goodToKnow: "monthly",
   contact: "monthly",
@@ -63,7 +63,7 @@ export const MAIN_NAV_ITEMS = [
   { kind: "page" as const, page: "accommodation" as const },
   { kind: "page" as const, page: "experiences" as const },
   { kind: "page" as const, page: "gallery" as const },
-  { kind: "page" as const, page: "guides" as const },
+  { kind: "page" as const, page: "journal" as const },
   { kind: "page" as const, page: "about" as const },
   { kind: "page" as const, page: "contact" as const },
 ];
@@ -71,7 +71,7 @@ export const MAIN_NAV_ITEMS = [
 /** Secondary links shown in the footer. */
 export const FOOTER_NAV_PAGES: SitePageKey[] = [
   "goodToKnow",
-  "guides",
+  "journal",
   "contact",
 ];
 
@@ -85,7 +85,7 @@ export const SITE_PAGE_SEGMENTS: Record<SitePageKey, string> = {
   goodToKnow: "good-to-know",
   hiking: "hiking",
   nearby: "nearby",
-  guides: "guides",
+  journal: "journal",
   contact: "contact",
 };
 
@@ -100,7 +100,7 @@ export const SITE_PAGE_NAV_KEYS: Record<
   | "goodToKnow"
   | "hiking"
   | "nearby"
-  | "guides"
+  | "journal"
   | "contact"
 > = {
   home: "home",
@@ -111,7 +111,7 @@ export const SITE_PAGE_NAV_KEYS: Record<
   goodToKnow: "goodToKnow",
   hiking: "hiking",
   nearby: "nearby",
-  guides: "guides",
+  journal: "journal",
   contact: "contact",
 };
 

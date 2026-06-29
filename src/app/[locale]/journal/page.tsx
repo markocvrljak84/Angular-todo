@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { GuidesSection } from "@/components/guides-section";
+import { JournalHub } from "@/components/journal-hub";
 import { InnerPageHeader } from "@/components/inner-page-header";
 import { NewsletterSignupSection } from "@/components/newsletter-signup-section";
 import { getExperienceContent } from "@/i18n/experience-content";
+import { getJournalContent } from "@/i18n/journal-content";
 import { getPageHeaderContent } from "@/lib/inner-page-content";
 import {
   localeStaticParams,
@@ -24,33 +25,34 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const locale = await resolveLocale(params);
-  return buildPageMetadata(locale, "guides");
+  return buildPageMetadata(locale, "journal");
 }
 
 type Props = { params: Promise<{ locale: string }> };
 
-export default async function GuidesPage({ params }: Props) {
+export default async function JournalPage({ params }: Props) {
   const locale = await resolveLocale(params);
   const t = getMessages(locale);
   const experience = getExperienceContent(locale);
-  const header = getPageHeaderContent(locale, "guides");
+  const journal = getJournalContent(locale);
+  const header = getPageHeaderContent(locale, "journal");
 
   return (
     <>
-      <PageJsonLd locale={locale} messages={t} page="guides" />
+      <PageJsonLd locale={locale} messages={t} page="journal" />
 
       <InnerPageHeader {...header} />
 
       <div className="flat-section flat-section--tint">
-        <div className="flat-wrap">
-          <GuidesSection content={experience.guides} compact />
+        <div className="flat-wrap flat-wrap--narrow">
+          <JournalHub content={journal} locale={locale} compact />
         </div>
       </div>
 
       <NewsletterSignupSection
         content={experience.signup}
         locale={locale}
-        source="guides"
+        source="journal"
       />
     </>
   );
