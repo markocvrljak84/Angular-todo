@@ -32,7 +32,7 @@ const en: Record<SitePageKey, PageSeo> = {
   goodToKnow: {
     title: "Good to know — practical info for your stay",
     description:
-      "Directions, generator, Wi‑Fi, house rules and local tips for staying at Stars Peak, Bačić Duliba, Velebit.",
+      "Directions, generator, Wi‑Fi, outdoor kitchen and local tips for staying at Stars Peak, Bačić Duliba, Velebit.",
   },
   hiking: {
     title: "Hiking routes from Stars Peak",

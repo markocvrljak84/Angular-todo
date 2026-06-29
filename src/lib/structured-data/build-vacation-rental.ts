@@ -59,7 +59,7 @@ export function buildVacationRentalJsonLd(locale: Locale, messages: Messages) {
     keywords: keywords.join(", "),
     address,
     knowsLanguage: Object.values(HOST_LANGUAGES),
-    sameAs: [BOOKING_URL],
+    sameAs: [BOOKING_URL, getSiteUrl()],
     containsPlace: {
       "@type": "Accommodation",
       additionalType: "EntirePlace",

@@ -8,6 +8,9 @@ import {
   buildBreadcrumbListJsonLd,
 } from "@/lib/structured-data/build-breadcrumb-list";
 import { buildFaqPageJsonLd } from "@/lib/structured-data/build-faq-page";
+import { buildWebPageJsonLd } from "@/lib/structured-data/build-web-page";
+import { localePath } from "@/config/site-routes";
+import { getSiteUrl } from "@/lib/site-url";
 
 type Props = {
   locale: Locale;
@@ -15,20 +18,29 @@ type Props = {
   page: SitePageKey;
   /** Override default Home → page trail (e.g. thank-you subpage). */
   breadcrumbItems?: BreadcrumbItem[];
+  /** Override page URL for WebPage / Breadcrumb @id (e.g. thank-you subpage). */
+  pageUrl?: string;
 };
+
+function absolutePageUrl(locale: Locale, page: SitePageKey): string {
+  const base = getSiteUrl();
+  const path = localePath(locale, page);
+  return `${base}${path === "/" ? "" : path}`;
+}
 
 export function PageJsonLd({
   locale,
   messages,
   page,
   breadcrumbItems,
+  pageUrl,
 }: Props) {
+  const resolvedPageUrl = pageUrl ?? absolutePageUrl(locale, page);
+  const items = breadcrumbItems ?? breadcrumbItemsForPage(page, messages);
+
   const graph: Record<string, unknown>[] = [
-    buildBreadcrumbListJsonLd(
-      locale,
-      messages,
-      breadcrumbItems ?? breadcrumbItemsForPage(page, messages)
-    ),
+    buildWebPageJsonLd(locale, page, resolvedPageUrl),
+    buildBreadcrumbListJsonLd(locale, messages, items, resolvedPageUrl),
   ];
 
   if (page === "goodToKnow" || page === "accommodation") {

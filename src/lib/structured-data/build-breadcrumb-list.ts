@@ -16,12 +16,22 @@ export type BreadcrumbItem = {
 export function buildBreadcrumbListJsonLd(
   locale: Locale,
   messages: Messages,
-  items: BreadcrumbItem[]
+  items: BreadcrumbItem[],
+  pageUrl?: string
 ) {
   const base = getSiteUrl();
+  const resolvedPageUrl =
+    pageUrl ??
+    (() => {
+      const last = [...items].reverse().find((item) => item.page !== undefined);
+      return last?.page !== undefined
+        ? `${base}${localePath(locale, last.page)}`
+        : base;
+    })();
 
   return {
     "@type": "BreadcrumbList",
+    "@id": `${resolvedPageUrl}#breadcrumb`,
     itemListElement: items.map((item, index) => {
       const href =
         item.href ??

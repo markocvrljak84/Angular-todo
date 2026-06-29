@@ -4,6 +4,7 @@ import { PageJsonLd } from "@/components/page-json-ld";
 import { localePath } from "@/config/site-routes";
 import { getExperienceContent } from "@/i18n/experience-content";
 import { getMessages } from "@/i18n/messages";
+import { getSiteUrl } from "@/lib/site-url";
 import {
   localeStaticParams,
   resolveLocale,
@@ -35,6 +36,7 @@ export default async function NewsletterThankYouPage({ params }: Props) {
   const locale = await resolveLocale(params);
   const t = getMessages(locale);
   const content = getExperienceContent(locale).signup;
+  const thankYouUrl = `${getSiteUrl()}${localePath(locale, "guides")}/thank-you`;
 
   return (
     <>
@@ -42,6 +44,7 @@ export default async function NewsletterThankYouPage({ params }: Props) {
         locale={locale}
         messages={t}
         page="guides"
+        pageUrl={thankYouUrl}
         breadcrumbItems={[
           { name: t.nav.home, page: "home" },
           { name: t.nav.guides, page: "guides" },

@@ -12,6 +12,22 @@ const nextConfig: NextConfig = {
   // Avoid picking a parent folder when another lockfile exists above this repo.
   outputFileTracingRoot: root,
   poweredByHeader: false,
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          { key: "X-DNS-Prefetch-Control", value: "on" },
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          {
+            key: "Permissions-Policy",
+            value: "camera=(), microphone=(), geolocation=()",
+          },
+        ],
+      },
+    ];
+  },
   webpack: (config, { dev }) => {
     if (dev && usePolling) {
       config.watchOptions = {

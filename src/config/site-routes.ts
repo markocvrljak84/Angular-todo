@@ -17,6 +17,46 @@ export const SITE_PAGE_KEYS = [
 
 export type SitePageKey = (typeof SITE_PAGE_KEYS)[number];
 
+/** Pages listed in sitemap.xml (excludes legacy redirects). */
+export const INDEXABLE_PAGE_KEYS = [
+  "home",
+  "accommodation",
+  "experiences",
+  "about",
+  "gallery",
+  "goodToKnow",
+  "guides",
+  "contact",
+] as const satisfies readonly SitePageKey[];
+
+export type IndexablePageKey = (typeof INDEXABLE_PAGE_KEYS)[number];
+
+/** Relative priority for sitemap.xml entries. */
+export const SITEMAP_PAGE_PRIORITY: Record<IndexablePageKey, number> = {
+  home: 1,
+  accommodation: 0.95,
+  experiences: 0.9,
+  gallery: 0.85,
+  guides: 0.85,
+  about: 0.8,
+  goodToKnow: 0.8,
+  contact: 0.75,
+};
+
+export const SITEMAP_CHANGE_FREQUENCY: Record<
+  IndexablePageKey,
+  "weekly" | "monthly"
+> = {
+  home: "weekly",
+  accommodation: "weekly",
+  experiences: "weekly",
+  gallery: "monthly",
+  guides: "monthly",
+  about: "monthly",
+  goodToKnow: "monthly",
+  contact: "monthly",
+};
+
 /** Primary header navigation. */
 export const MAIN_NAV_ITEMS = [
   { kind: "page" as const, page: "home" as const },

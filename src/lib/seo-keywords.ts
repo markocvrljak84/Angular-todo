@@ -19,6 +19,8 @@ const byLocale: Record<Locale, readonly string[]> = {
   en: [
     ...shared,
     "Velebit mountain chalet",
+    "Stars Peak Velebit",
+    "velebit-starspeak.com",
     "mountain chalet Croatia",
     "Velebit holiday home",
     "vacation rental Velebit",
