@@ -5,7 +5,7 @@ import {
   localePath,
   type SitePageKey,
 } from "@/config/site-routes";
-import { getSiteUrl } from "@/lib/site-url";
+import { canonicalAbsoluteUrl } from "@/lib/site-url";
 
 export type BreadcrumbItem = {
   name: string;
@@ -19,14 +19,13 @@ export function buildBreadcrumbListJsonLd(
   items: BreadcrumbItem[],
   pageUrl?: string
 ) {
-  const base = getSiteUrl();
   const resolvedPageUrl =
     pageUrl ??
     (() => {
       const last = [...items].reverse().find((item) => item.page !== undefined);
       return last?.page !== undefined
-        ? `${base}${localePath(locale, last.page)}`
-        : base;
+        ? canonicalAbsoluteUrl(localePath(locale, last.page))
+        : canonicalAbsoluteUrl("/");
     })();
 
   return {
@@ -36,7 +35,7 @@ export function buildBreadcrumbListJsonLd(
       const href =
         item.href ??
         (item.page !== undefined
-          ? `${base}${localePath(locale, item.page)}`
+          ? canonicalAbsoluteUrl(localePath(locale, item.page))
           : undefined);
 
       const listItem: Record<string, unknown> = {

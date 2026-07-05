@@ -15,7 +15,7 @@ import { activeLocales } from "@/i18n/config";
 import { resolveLocale } from "@/lib/locale-page";
 import { buildBreadcrumbListJsonLd } from "@/lib/structured-data/build-breadcrumb-list";
 import { buildWebPageJsonLd } from "@/lib/structured-data/build-web-page";
-import { getSiteUrl } from "@/lib/site-url";
+import { canonicalAbsoluteUrl } from "@/lib/site-url";
 
 export const dynamic = "force-static";
 
@@ -43,12 +43,12 @@ export async function generateMetadata({
   const category = getJournalCategory(locale, categoryId);
   if (!category) return {};
 
-  const pageUrl = `${getSiteUrl()}${journalCategoryPath(locale, categoryId)}`;
+  const pageUrl = canonicalAbsoluteUrl(journalCategoryPath(locale, categoryId));
 
   return {
     title: `${category.title} — Journal · Stars Peak`,
     description: category.intro,
-    alternates: { canonical: journalCategoryPath(locale, categoryId) },
+    alternates: { canonical: pageUrl },
     openGraph: {
       title: `${category.title} — Journal`,
       description: category.intro,
@@ -70,7 +70,7 @@ export default async function JournalCategoryRoute({ params }: Props) {
   if (!category) notFound();
 
   const t = getMessages(locale);
-  const pageUrl = `${getSiteUrl()}${journalCategoryPath(locale, categoryId)}`;
+  const pageUrl = canonicalAbsoluteUrl(journalCategoryPath(locale, categoryId));
   const breadcrumbItems = [
     { name: t.nav.home, page: "home" as const },
     { name: journal.title, page: "journal" as const },

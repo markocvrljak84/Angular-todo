@@ -13,17 +13,7 @@ import {
   journalArticlePath,
   journalCategoryPath,
 } from "@/i18n/journal-content";
-import { getSiteUrl } from "@/lib/site-url";
-
-/** Canonical absolute URL — homepage keeps a trailing slash. */
-export function canonicalAbsoluteUrl(path: string): string {
-  const base = getSiteUrl();
-  if (path === "/" || path === "") {
-    return `${base}/`;
-  }
-  const normalized = path.startsWith("/") ? path : `/${path}`;
-  return `${base}${normalized}`;
-}
+import { getSiteUrl, canonicalAbsoluteUrl } from "@/lib/site-url";
 
 export type IndexableUrlEntry = {
   path: string;

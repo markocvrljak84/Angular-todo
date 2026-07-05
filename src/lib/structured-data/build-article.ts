@@ -1,10 +1,12 @@
 import type { Locale } from "@/i18n/config";
 import type { JournalArticle } from "@/i18n/journal-content";
 import { journalArticlePath } from "@/i18n/journal-content";
-import { getSiteUrl } from "@/lib/site-url";
+import { canonicalAbsoluteUrl } from "@/lib/site-url";
 
 export function buildArticleJsonLd(locale: Locale, article: JournalArticle) {
-  const pageUrl = `${getSiteUrl()}${journalArticlePath(locale, article.categoryId, article.slug)}`;
+  const pageUrl = canonicalAbsoluteUrl(
+    journalArticlePath(locale, article.categoryId, article.slug)
+  );
 
   return {
     "@type": "Article",

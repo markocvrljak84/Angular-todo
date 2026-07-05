@@ -13,7 +13,7 @@ import {
   getSiteCoordinates,
 } from "@/config/site-location";
 import { getSeoKeywords } from "@/lib/seo-keywords";
-import { getSiteUrl } from "@/lib/site-url";
+import { getSiteUrl, canonicalAbsoluteUrl } from "@/lib/site-url";
 import { formatSchemaCoordinate } from "./format-coordinates";
 
 const HOST_LANGUAGES: Record<Locale, string> = {
@@ -26,7 +26,7 @@ const HOST_LANGUAGES: Record<Locale, string> = {
 
 export function buildVacationRentalJsonLd(locale: Locale, messages: Messages) {
   const base = getSiteUrl();
-  const pageUrl = `${base}${localePath(locale, "home")}`;
+  const pageUrl = canonicalAbsoluteUrl(localePath(locale, "home"));
   const { latitude, longitude } = getSiteCoordinates();
   const postalAddress = getPostalAddress();
   const { "@type": _type, ...baseAddress } = postalAddress;
@@ -59,7 +59,7 @@ export function buildVacationRentalJsonLd(locale: Locale, messages: Messages) {
     keywords: keywords.join(", "),
     address,
     knowsLanguage: Object.values(HOST_LANGUAGES),
-    sameAs: [BOOKING_URL, getSiteUrl()],
+    sameAs: [BOOKING_URL, canonicalAbsoluteUrl("/")],
     containsPlace: {
       "@type": "Accommodation",
       additionalType: "EntirePlace",

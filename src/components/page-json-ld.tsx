@@ -10,7 +10,7 @@ import {
 import { buildFaqPageJsonLd } from "@/lib/structured-data/build-faq-page";
 import { buildWebPageJsonLd } from "@/lib/structured-data/build-web-page";
 import { localePath } from "@/config/site-routes";
-import { getSiteUrl } from "@/lib/site-url";
+import { canonicalAbsoluteUrl } from "@/lib/site-url";
 
 type Props = {
   locale: Locale;
@@ -22,12 +22,6 @@ type Props = {
   pageUrl?: string;
 };
 
-function absolutePageUrl(locale: Locale, page: SitePageKey): string {
-  const base = getSiteUrl();
-  const path = localePath(locale, page);
-  return `${base}${path === "/" ? "" : path}`;
-}
-
 export function PageJsonLd({
   locale,
   messages,
@@ -35,7 +29,8 @@ export function PageJsonLd({
   breadcrumbItems,
   pageUrl,
 }: Props) {
-  const resolvedPageUrl = pageUrl ?? absolutePageUrl(locale, page);
+  const resolvedPageUrl =
+    pageUrl ?? canonicalAbsoluteUrl(localePath(locale, page));
   const items = breadcrumbItems ?? breadcrumbItemsForPage(page, messages);
 
   const graph: Record<string, unknown>[] = [

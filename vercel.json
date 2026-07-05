@@ -1,4 +1,12 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "framework": "nextjs"
+  "framework": "nextjs",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "velebit-starspeak.com" }],
+      "destination": "https://www.velebit-starspeak.com/:path*",
+      "permanent": true
+    }
+  ]
 }

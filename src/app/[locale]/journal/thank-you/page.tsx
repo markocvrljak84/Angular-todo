@@ -4,7 +4,7 @@ import { PageJsonLd } from "@/components/page-json-ld";
 import { localePath } from "@/config/site-routes";
 import { getExperienceContent } from "@/i18n/experience-content";
 import { getMessages } from "@/i18n/messages";
-import { getSiteUrl } from "@/lib/site-url";
+import { canonicalAbsoluteUrl } from "@/lib/site-url";
 import {
   localeStaticParams,
   resolveLocale,
@@ -36,7 +36,7 @@ export default async function NewsletterThankYouPage({ params }: Props) {
   const locale = await resolveLocale(params);
   const t = getMessages(locale);
   const content = getExperienceContent(locale).signup;
-  const thankYouUrl = `${getSiteUrl()}${localePath(locale, "journal")}/thank-you`;
+  const thankYouUrl = canonicalAbsoluteUrl(`${localePath(locale, "journal")}/thank-you`);
 
   return (
     <>

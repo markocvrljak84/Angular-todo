@@ -18,7 +18,7 @@ import { resolveLocale } from "@/lib/locale-page";
 import { buildArticleJsonLd } from "@/lib/structured-data/build-article";
 import { buildBreadcrumbListJsonLd } from "@/lib/structured-data/build-breadcrumb-list";
 import { buildWebPageJsonLd } from "@/lib/structured-data/build-web-page";
-import { getSiteUrl } from "@/lib/site-url";
+import { canonicalAbsoluteUrl } from "@/lib/site-url";
 
 export const dynamic = "force-static";
 
@@ -52,13 +52,13 @@ export async function generateMetadata({
   const article = getJournalArticle(locale, categoryId, slug);
   if (!article || article.status !== "published") return {};
 
-  const pageUrl = `${getSiteUrl()}${journalArticlePath(locale, categoryId, slug)}`;
+  const pageUrl = canonicalAbsoluteUrl(journalArticlePath(locale, categoryId, slug));
 
   return {
     title: `${article.title} — Journal · Stars Peak`,
     description: article.seoDescription ?? article.teaser,
     alternates: {
-      canonical: journalArticlePath(locale, categoryId, slug),
+      canonical: pageUrl,
     },
     openGraph: {
       type: "article",
@@ -85,13 +85,13 @@ export default async function JournalArticleRoute({ params }: Props) {
   if (!category || !article || article.status !== "published") notFound();
 
   const t = getMessages(locale);
-  const pageUrl = `${getSiteUrl()}${journalArticlePath(locale, categoryId, slug)}`;
+  const pageUrl = canonicalAbsoluteUrl(journalArticlePath(locale, categoryId, slug));
   const crumbs = [
     { name: t.nav.home, page: "home" as const },
     { name: journal.title, page: "journal" as const },
     {
       name: category.title,
-      href: `${getSiteUrl()}${journalCategoryPath(locale, categoryId)}`,
+      href: canonicalAbsoluteUrl(journalCategoryPath(locale, categoryId)),
     },
     { name: article.title },
   ];

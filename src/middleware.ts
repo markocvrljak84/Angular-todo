@@ -6,6 +6,7 @@ import {
   localePrefixInUrl,
 } from "@/i18n/config";
 import { LEGACY_ROUTE_REDIRECTS } from "@/config/site-routes";
+import { CANONICAL_SITE_HOST, isApexHost } from "@/lib/site-url";
 
 function legacyRedirectTarget(segments: string[]): string | undefined {
   if (localePrefixInUrl) {
@@ -40,6 +41,13 @@ export function middleware(request: NextRequest) {
 
   if (path.startsWith("/api") || path.startsWith("/_next")) {
     return NextResponse.next();
+  }
+
+  if (isApexHost(request.nextUrl.hostname)) {
+    const url = request.nextUrl.clone();
+    url.hostname = CANONICAL_SITE_HOST;
+    url.protocol = "https:";
+    return NextResponse.redirect(url, 301);
   }
 
   const segments = path.split("/").filter(Boolean);

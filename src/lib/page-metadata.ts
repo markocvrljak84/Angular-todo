@@ -10,7 +10,7 @@ import { getMessages } from "@/i18n/messages";
 import { getPageSeo } from "@/i18n/page-seo";
 import { getSeoKeywords } from "@/lib/seo-keywords";
 import { localeToHreflang, localeToOpenGraphLocale } from "@/lib/seo-locale";
-import { getSiteUrl } from "@/lib/site-url";
+import { canonicalAbsoluteUrl } from "@/lib/site-url";
 
 export function buildPageMetadata(
   locale: Locale,
@@ -18,19 +18,18 @@ export function buildPageMetadata(
 ): Metadata {
   const seo = getPageSeo(locale, page);
   const m = getMessages(locale);
-  const base = getSiteUrl();
   const path = localePath(locale, page);
-  const pageUrl = `${base}${path === "/" ? "" : path}`;
+  const pageUrl = canonicalAbsoluteUrl(path);
 
   const multiLocale = activeLocales.length > 1 || localePrefixInUrl;
 
   const languages: Record<string, string> | undefined = multiLocale
     ? {
-        "x-default": `${base}${localePath(defaultLocale, page)}`,
+        "x-default": canonicalAbsoluteUrl(localePath(defaultLocale, page)),
         ...Object.fromEntries(
           activeLocales.map((loc) => [
             localeToHreflang(loc),
-            `${base}${localePath(loc, page)}`,
+            canonicalAbsoluteUrl(localePath(loc, page)),
           ])
         ),
       }
@@ -44,7 +43,7 @@ export function buildPageMetadata(
     category: "travel",
     other: getGeoMetaOther(),
     alternates: {
-      canonical: path,
+      canonical: pageUrl,
       ...(languages ? { languages } : {}),
     },
     openGraph: {
