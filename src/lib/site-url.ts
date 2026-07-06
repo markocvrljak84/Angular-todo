@@ -21,6 +21,12 @@ function normalizeSiteOrigin(url: string): string {
 export function getSiteUrl(): string {
   const fromEnv = process.env.NEXT_PUBLIC_SITE_URL?.trim().replace(/\/$/, "");
   if (fromEnv) return normalizeSiteOrigin(fromEnv);
+
+  // Production: always emit www canonicals even if env var is missing on Vercel.
+  if (process.env.VERCEL === "1" || process.env.NODE_ENV === "production") {
+    return CANONICAL_SITE_ORIGIN;
+  }
+
   if (process.env.VERCEL_URL) {
     return normalizeSiteOrigin(`https://${process.env.VERCEL_URL.replace(/\/$/, "")}`);
   }
