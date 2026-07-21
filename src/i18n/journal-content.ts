@@ -108,9 +108,19 @@ const en: JournalContent = {
         {
           slug: "dabarski-kukovi",
           title: "Dabarski Kukovi",
-          teaser: "A dramatic line of limestone peaks above the forest near Stars Peak.",
+          teaser:
+            "The limestone wall above Bačić Duliba — how the ridge shapes our days, which walks suit a quiet stay, and why the view matters even if you never touch the summit.",
           categoryId: "hiking",
-          status: "coming-soon",
+          status: "published",
+          seoDescription:
+            "Dabarski Kukovi on central Velebit from Stars Peak — limestone peaks above Bačić Duliba, walks toward Baške Oštarije, Budakovo Brdo and life under the ridge.",
+          paragraphs: [
+            "From Stars Peak you do not look at a single mountain. You look at a wall. Dabarski Kukovi rise west of Bačić Duliba as a jagged line of bare limestone — peaks of different height and steepness, rooted in forest and running southeast toward Baške Oštarije. On clear mornings the rock turns white; in evening light it softens to grey and gold. Guests often photograph it before they ask its name.",
+            "In Croatian mountain writing the group is described as a series of rocky peaks that protrude from the green forest like a wall. Bačić Kuk (1,304 m) is the highest and northernmost of them, and the one you see most clearly from the house. Beyond it the ridge continues; grassy Budakovo Brdo opens to the west of the kuk, and marked paths link the saddles and valleys below. You do not have to climb every peak to feel the landscape — standing in Bačić Duliba is already standing inside it.",
+            "The valleys under the kukovi are part of the story. Around here lie the dabri — karst hollows and meadows such as Bačić Duliba, Došen Dabar and Ravni Dabar — once among the rare places of lasting settlement on this side of Velebit. Bačić Duliba sits at about 860 metres: open meadows, forested hills on three sides, and the west closed by the wall of Bačić Kuk. Further along, the mountain hut at Ravni Dabar (723 m), beneath the rock of Čelinac, has long been a base for walks around the group. Near Ravni Dabar there is also a sport-climbing area — another reason climbers know these cliffs by name.",
+            "For a stay at Stars Peak we usually suggest reading the ridge in layers. A short walk into the meadows and forest already changes the light and the sound of the wind. A half-day on marked paths toward Ripinovac or Budakovo Brdo gives height without the exposed scramble of Bačić Kuk’s final metres. The full summit of Bačić Kuk remains for guests who want rock under their hands and are comfortable with cables — we wrote that climb in a separate note. Longer days can follow the Velebit Hiking Trail through this section, or simply turn back when the legs say enough. Maps and GPX for the nearby marked routes are on the Experiences page.",
+            "What we love about Dabarski Kukovi is not a checklist of peaks. It is the way the ridge holds the valley: quiet mornings, the smell of pine after rain, the silhouette that stays with you when you drive down to Karlobag for a swim and come home again. Southern and central Velebit here feel less crowded than the famous northern park, yet the stone is the same Velebit — sharp, bright and close. Live under it for a few days and you stop treating it as a backdrop. It becomes the measure of the day.",
+          ],
         },
       ],
     },
