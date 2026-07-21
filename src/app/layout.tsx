@@ -63,6 +63,10 @@ export default function RootLayout({
           name="google-site-verification"
           content="5jWshJpXqMtH8plQA-zwKoMh-BbF435MWnOSE49tV2M"
         />
+        <meta
+          name="p:domain_verify"
+          content="c4e33cac45e978de95e0b9986bf8bf03"
+        />
         <link
           rel="preload"
           as="image"
