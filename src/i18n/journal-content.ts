@@ -83,9 +83,20 @@ const en: JournalContent = {
         {
           slug: "bacic-kuk-hike",
           title: "Bačić Kuk hike",
-          teaser: "The classic summit walk from Bačić Duliba — timing, terrain and views.",
+          teaser:
+            "The summit above the house — how we climb it from Bačić Duliba, what the final rocks ask of you, and why we still go back.",
           categoryId: "hiking",
-          status: "coming-soon",
+          status: "published",
+          seoDescription:
+            "Bačić Kuk hike from Stars Peak in Bačić Duliba — 1,304 m summit of Dabarski Kukovi, timing, approaches and the demanding final section with cables.",
+          paragraphs: [
+            "Most mornings at Stars Peak begin the same way. Coffee on the terrace, and Bačić Kuk already catching the first light. The wall rises west of Bačić Duliba — bare limestone above the forest — and it is hard not to look at it. Sooner or later almost every guest asks the same question: can we go up?",
+            "Bačić Kuk stands at 1,304 metres. It is the highest and northernmost rocky peak in the Dabarski Kukovi group, a sharp line of stone that runs south toward Baške Oštarije. The summit itself is not a wide plateau but a narrow, elongated ridge of rock. On a clear day the view opens over Bačić Duliba, the neighbouring kukovi and, when the air is clean, toward the Adriatic.",
+            "From the house you do not need a long drive. Marked trails leave from Bačić Duliba. One common approach follows the markings toward Došen Dabar, then branches west for Bačić Kuk, climbs toward Bačić Dolac and reaches the Ripinovac saddle. From there a forest path leads to the amphitheatre below the peak — a natural place to leave heavier packs before the final climb. Another, steeper option is the Brđina path, which enters the same amphitheatre from the other side and demands sure footing on scree.",
+            "Plan roughly an hour and a half from Bačić Duliba to the summit in good conditions, longer if you move slowly or wait for weather. The lower part is a proper mountain walk: grassland, forest, then steeper ground. The last minutes are different. Above the amphitheatre the route becomes a short, exposed scramble with fixed cables. It is not a via ferrata in the alpine sense, but it is real climbing terrain. The Croatian Mountaineering Association is clear on this: the ascent to the peak is difficult and not recommended for hikers without climbing experience. We tell guests the same — if heights unsettle you, turn around at the amphitheatre. The view from there is already worth the walk.",
+            "If you want a longer day, the ridge continues beyond Bačić Kuk toward Budakovo Brdo and back to Bačić Duliba — a loop of around nine kilometres and several hours on the mountain. We usually suggest that only when the weather is stable and legs still feel strong after the summit. Otherwise an out-and-back from Duliba is enough: summit, rest, descend the same way, and be home for a late lunch or an early dinner by the outdoor kitchen.",
+            "Water, boots with grip, gloves for the cable section and an early start matter more here than fancy gear. In summer the rock heats quickly; in spring and autumn the wind on the ridge can be sharp. We keep GPX files and route notes on the Experiences page for guests who want the track on their phone. And when you come back down, Bačić Kuk is still there above the house — the same silhouette you woke up to, only now you know how the stone feels under your hands.",
+          ],
         },
         {
           slug: "premuzic-trail-guide",
