@@ -8,6 +8,7 @@
     "generate:brochures": "node scripts/generate-brochure-html.mjs && node scripts/generate-brochure-html-pdf.mjs",
     "generate:brochure-html": "node scripts/generate-brochure-html.mjs",
     "generate:brochure-html-pdf": "node scripts/generate-brochure-html-pdf.mjs",
+    "generate:sitemap": "node scripts/generate-sitemap.mjs",
     "build": "next build",
     "start": "next start"
   },
