@@ -60,8 +60,8 @@ export const GALLERY_GROUPS: Readonly<
     "812808252.jpg",
     "812808512.jpg",
     "812809121.jpg",
-    "812160813.jpg",
     "Velebit-16.jpg",
+    "812160813.jpg",
   ],
   nature: [
     "738020040.jpg",
@@ -137,7 +137,6 @@ export const GALLERY_IMAGE_COUNT = GALLERY_FILES.length;
 /** Hero carousel — order is the initial slide sequence (first = LCP). */
 export const MAIN_CAROUSEL_IMAGES = [
   "581480514_122107015833084437_6966149935686680015_n.jpg",
-  "571275863_122102378865084437_4800487342368999167_n.jpg",
   "578265540_122104807869084437_5111680495021054907_n.jpg",
   "585009655_122107017075084437_1671659401079838438_n.jpg",
 ] as const;

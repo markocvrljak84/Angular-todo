@@ -1,4 +1,4 @@
-/* Luxury hospitality — Stars Peak (Aman-inspired) */
+/* Luxury hospitality — Stars Peak (slow / condensed hospitality rhythm) */
 
 :root {
   --bg: #f7f5f0;
@@ -15,12 +15,17 @@
   --btn-stroke: #6b6259;
   --btn-label: #6b6259;
   --facility-icon: #8a7d6d;
+  --type-accent: #8a6a1a;
   --nav-bg: #efede8;
   --header-h: 4.5rem;
   --section-space: clamp(2rem, 8vw, 5.5rem);
   --page-gutter: clamp(1.20rem, 4vw, 3rem);
   --font: var(--font-sans), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-condensed: var(--font-condensed-face), "Arial Narrow", Helvetica, Arial, sans-serif;
   --font-display: var(--font-serif), "Times New Roman", Georgia, serif;
+  --tracking-label: 0.06em;
+  --tracking-display: -0.03em;
+  --tracking-brand: 0.08em;
 }
 
 *,
@@ -38,9 +43,9 @@ body {
   margin: 0;
   min-height: 100vh;
   font-family: var(--font);
-  font-size: 1rem;
+  font-size: 0.9375rem;
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.45;
   background: var(--bg);
   color: var(--ink);
   -webkit-font-smoothing: antialiased;
@@ -64,10 +69,10 @@ body {
   background: var(--btn-fill);
   border: 1px solid var(--btn-stroke);
   color: var(--btn-label);
-  font-family: inherit;
-  font-size: 0.6875rem;
-  font-weight: 500;
-  letter-spacing: 0.2em;
+  font-family: var(--font-condensed);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
@@ -263,7 +268,7 @@ body {
   font-family: var(--font-display);
   font-weight: 500;
   font-size: clamp(1rem, 2vw, 1.25rem);
-  letter-spacing: 0.16em;
+  letter-spacing: var(--tracking-brand);
   text-transform: uppercase;
   color: var(--ink);
   text-decoration: none;
@@ -310,9 +315,10 @@ body {
   position: relative;
   color: var(--muted);
   text-decoration: none;
-  font-size: 0.6875rem;
-  font-weight: 500;
-  letter-spacing: 0.16em;
+  font-family: var(--font-condensed);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   transition: color 0.2s ease;
 }
@@ -347,7 +353,7 @@ body {
 
 .site-header__cta {
   padding: 0.55rem 1.35rem;
-  letter-spacing: 0.18em;
+  letter-spacing: var(--tracking-label);
 }
 
 .site-header--over-hero .site-header__cta,
@@ -374,7 +380,7 @@ body {
   padding: 0.4rem 2rem 0.4rem 0.65rem;
   font-size: 0.6875rem;
   font-weight: 500;
-  letter-spacing: 0.12em;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--muted);
   background: transparent;
@@ -566,7 +572,7 @@ body {
     border-left: 1px solid transparent;
     font-size: 0.8125rem;
     font-weight: 500;
-    letter-spacing: 0.14em;
+    letter-spacing: var(--tracking-label);
     text-transform: uppercase;
     text-decoration: none;
     color: var(--muted);
@@ -692,7 +698,7 @@ body {
   border-radius: 0;
   font-size: 1.35rem;
   line-height: 1;
-  font-weight: 700;
+  font-weight: 500;
   color: #fff;
   background: rgba(0, 0, 0, 0.35);
   cursor: pointer;
@@ -755,7 +761,7 @@ body {
   justify-content: center;
   text-align: center;
   padding: calc(var(--header-h) + 2rem) 1.5rem 3rem;
-  max-width: 52rem;
+  max-width: 66rem;
   margin: 0 auto;
   pointer-events: none;
 }
@@ -766,9 +772,10 @@ body {
 
 .hero-fs__kicker {
   margin: 0 0 1rem;
-  font-size: 0.6875rem;
-  font-weight: 500;
-  letter-spacing: 0.22em;
+  font-family: var(--font-condensed);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.72);
 }
@@ -778,17 +785,18 @@ body {
   font-family: var(--font-display);
   font-size: clamp(2.75rem, 9vw, 5rem);
   font-weight: 400;
-  letter-spacing: 0.02em;
+  letter-spacing: var(--tracking-display);
   line-height: 1.06;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.85);
   text-shadow: none;
+  text-transform: uppercase;
 }
 
 .hero-fs__tagline {
   margin: 0;
-  font-size: clamp(0.95rem, 2vw, 1.0625rem);
+  font-size: clamp(0.875rem, 2vw, 1rem);
   font-weight: 400;
-  line-height: 1.75;
+  line-height: 1.45;
   color: rgba(255, 255, 255, 0.88);
   max-width: 34rem;
 }
@@ -808,9 +816,10 @@ body {
   border: none;
   border-radius: 0;
   background: transparent;
-  font-size: 0.6875rem;
-  font-weight: 500;
-  letter-spacing: 0.14em;
+  font-family: var(--font-condensed);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.78);
 }
@@ -832,7 +841,7 @@ body {
   border-radius: 0;
   font-size: 0.6875rem;
   font-weight: 500;
-  letter-spacing: 0.18em;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   text-decoration: none;
   transition:
@@ -1020,10 +1029,11 @@ body {
 
 .nearby-places__title {
   margin: 0 0 0.5rem;
-  font-family: var(--font-display);
-  font-size: clamp(1.125rem, 2vw, 1.3125rem);
+  font-family: var(--font-condensed);
+  font-size: clamp(1rem, 2vw, 1.25rem);
   font-weight: 400;
-  letter-spacing: 0.02em;
+  letter-spacing: var(--tracking-display);
+  text-transform: uppercase;
   color: var(--ink);
 }
 
@@ -1031,7 +1041,7 @@ body {
   margin: 0;
   color: var(--muted);
   font-size: 0.875rem;
-  line-height: 1.65;
+  line-height: 1.4;
 }
 
 /* Legacy itinerary checkerboard — kept for reference, unused */
@@ -1049,17 +1059,18 @@ body {
 
 .itinerary__title {
   margin: 0 0 0.65rem;
-  font-family: var(--font);
+  font-family: var(--font-condensed);
   font-size: clamp(1.5rem, 3vw, 2rem);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  color: var(--ink);
+  font-weight: 400;
+  letter-spacing: var(--tracking-display);
+  text-transform: uppercase;
+  color: var(--type-accent);
 }
 
 .itinerary__lead {
   margin: 0;
-  font-size: 1.0625rem;
-  line-height: 1.55;
+  font-size: 0.9375rem;
+  line-height: 1.45;
   color: var(--muted);
 }
 
@@ -1189,8 +1200,8 @@ body {
   margin: 0 0 0.85rem;
   font-family: var(--font);
   font-size: clamp(0.78rem, 2vw, 0.98rem);
-  font-weight: 800;
-  letter-spacing: 0.12em;
+  font-weight: 500;
+  letter-spacing: var(--tracking-label);
   line-height: 1.35;
   color: var(--ink);
   text-transform: uppercase;
@@ -1201,7 +1212,7 @@ body {
   margin: 0;
   font-family: var(--font);
   font-size: 0.875rem;
-  line-height: 1.65;
+  line-height: 1.45;
   color: var(--muted);
   max-width: 34ch;
 }
@@ -1283,10 +1294,12 @@ body {
 
 .page-header__title {
   margin: 0 0 0.75rem;
-  font-family: var(--font-display);
-  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-family: var(--font-condensed);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
   font-weight: 400;
-  letter-spacing: 0.02em;
+  letter-spacing: var(--tracking-display);
+  text-transform: uppercase;
+  line-height: 1.12;
   text-align: center;
 }
 
@@ -1294,8 +1307,8 @@ body {
   margin: 0;
   max-width: 44rem;
   color: var(--muted);
-  font-size: 1.0625rem;
-  line-height: 1.55;
+  font-size: 0.9375rem;
+  line-height: 1.45;
 }
 
 .home-quick-links {
@@ -1312,7 +1325,7 @@ body {
   padding: 1.125rem 1rem;
   border: 1px solid var(--line);
   border-radius: 0;
-  font-weight: 700;
+  font-weight: 500;
   text-decoration: none;
   color: inherit;
   background: var(--bg);
@@ -1336,20 +1349,17 @@ body {
 
 .flat-section__title {
   margin: 0 auto 1rem;
-  max-width: 28rem;
-  font-family: var(--font-display);
-  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  max-width: 36rem;
+  font-family: var(--font-condensed);
+  font-size: clamp(1.5rem, 3.2vw, 2rem);
   font-weight: 400;
-  letter-spacing: 0.02em;
+  letter-spacing: var(--tracking-display);
   line-height: 1.15;
   text-align: center;
+  text-transform: uppercase;
 }
 
 @media (min-width: 768px) {
-  h2 {
-    white-space: nowrap;
-  }
-
   .flat-section__title,
   .guide-signup__title,
   .newsletter-signup__title {
@@ -1361,15 +1371,15 @@ body {
   margin: 0 auto 2.75rem;
   max-width: 38rem;
   color: var(--muted);
-  font-size: 1rem;
-  line-height: 1.75;
+  font-size: 0.9375rem;
+  line-height: 1.45;
   text-align: center;
 }
 
 .flat-section__intro-link {
   font-size: 0.6875rem;
   font-weight: 500;
-  letter-spacing: 0.16em;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--ink);
   text-decoration: none;
@@ -1383,7 +1393,7 @@ body {
   color: var(--muted);
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.75;
+  line-height: 1.45;
 }
 
 /* —— Good to know (FAQ accordion) —— */
@@ -1419,10 +1429,11 @@ body {
   justify-content: space-between;
   gap: 1rem;
   padding: 1.15rem 0;
-  font-family: var(--font-display);
-  font-size: clamp(1.125rem, 2vw, 1.375rem);
+  font-family: var(--font-condensed);
+  font-size: clamp(1rem, 2vw, 1.25rem);
   font-weight: 400;
-  letter-spacing: 0.01em;
+  letter-spacing: var(--tracking-display);
+  text-transform: uppercase;
   color: var(--ink);
   cursor: pointer;
   list-style: none;
@@ -1471,7 +1482,7 @@ body {
   margin: 0.85rem 0 0.75rem;
   color: var(--muted);
   font-size: 0.9875rem;
-  line-height: 1.65;
+  line-height: 1.45;
 }
 
 .faq__text:last-child {
@@ -1484,7 +1495,7 @@ body {
   padding: 0 0 0 1.15rem;
   color: var(--muted);
   font-size: 0.9875rem;
-  line-height: 1.65;
+  line-height: 1.45;
 }
 
 .faq__list li,
@@ -1530,7 +1541,7 @@ body {
   background: transparent;
   color: #388455;
   font-size: 0.6875rem;
-  font-weight: 800;
+  font-weight: 500;
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
@@ -1588,17 +1599,19 @@ body {
 
 .gallery-editorial__eyebrow {
   margin: 0 0 0.55rem;
-  font-family: var(--font);
-  font-size: 0.625rem;
-  font-weight: 500;
-  letter-spacing: 0.2em;
+  font-family: var(--font-condensed);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--muted);
 }
 
 .gallery-editorial__title {
   margin: 0 0 0.65rem;
-  font-family: var(--font-display);
+  font-family: var(--font-condensed);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-display);
   font-size: clamp(1.1rem, 1.6vw, 1.35rem);
   font-weight: 400;
   line-height: 1.35;
@@ -1732,7 +1745,7 @@ body {
   margin: 0;
   padding: 0.35rem 0.55rem;
   font-size: 0.6875rem;
-  letter-spacing: 0.16em;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: rgba(247, 245, 240, 0.9);
   background: rgba(0, 0, 0, 0.45);
@@ -1910,7 +1923,7 @@ body {
 }
 
 .flat-about__booking-link {
-  font-weight: 700;
+  font-weight: 500;
   color: var(--facility-icon);
   text-decoration: none;
 }
@@ -1978,12 +1991,13 @@ body {
   margin: 0;
   flex: 1 1 16rem;
   max-width: 36rem;
-  font-family: var(--font-display);
-  font-size: clamp(1.375rem, 2.5vw, 1.75rem);
+  font-family: var(--font-condensed);
+  font-size: clamp(1.25rem, 2.5vw, 1.65rem);
   font-weight: 400;
-  letter-spacing: 0.02em;
-  line-height: 1.3;
-  color: var(--ink);
+  letter-spacing: var(--tracking-display);
+  text-transform: uppercase;
+  line-height: 1.2;
+  color: var(--type-accent);
 }
 
 .book-banner__btn {
@@ -2011,8 +2025,8 @@ body {
 .flat-about__sub {
   margin: 1.75rem 0 0.65rem;
   font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
+  font-weight: 500;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--ink);
 }
@@ -2051,10 +2065,11 @@ body {
 /* —— Facilities (editorial grid) —— */
 .facilities__title {
   margin: 0 0 clamp(2rem, 4vw, 2.75rem);
-  font-family: var(--font-display);
-  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-family: var(--font-condensed);
+  font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 400;
-  letter-spacing: 0.02em;
+  letter-spacing: var(--tracking-display);
+  text-transform: uppercase;
   text-align: center;
   color: var(--ink);
 }
@@ -2104,7 +2119,9 @@ body {
   margin: 0 0 0.85rem;
   padding-bottom: 0.35rem;
   border-bottom: 1px solid var(--facility-icon);
-  font-family: var(--font-display);
+  font-family: var(--font-condensed);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-display);
   font-size: 1.125rem;
   font-weight: 400;
   line-height: 1.35;
@@ -2116,7 +2133,7 @@ body {
   margin: 0 0 0.75rem;
   padding: 0;
   font-size: 0.875rem;
-  line-height: 1.65;
+  line-height: 1.45;
   color: var(--muted);
 }
 
@@ -2231,7 +2248,9 @@ body {
 
 .hiking-route__title {
   margin: 0;
-  font-family: var(--font-display);
+  font-family: var(--font-condensed);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-display);
   font-size: clamp(1.0625rem, 2vw, 1.25rem);
   font-weight: 400;
   letter-spacing: 0.02em;
@@ -2254,7 +2273,7 @@ body {
   color: var(--muted);
   font-size: 0.6875rem;
   font-weight: 500;
-  letter-spacing: 0.12em;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   line-height: 1.4;
   white-space: nowrap;
@@ -2273,7 +2292,7 @@ body {
   flex-shrink: 0;
   display: none;
   font-size: 0.6875rem;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--facility-icon);
@@ -2305,7 +2324,7 @@ body {
   background: var(--bg);
   color: var(--ink);
   font-size: 0.8125rem;
-  font-weight: 700;
+  font-weight: 500;
   text-decoration: none;
   transition: border-color 0.15s ease, color 0.15s ease;
 }
@@ -2344,8 +2363,8 @@ body {
 .hiking-route__block-title {
   margin: 0 0 0.75rem;
   font-size: 0.6875rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
+  font-weight: 500;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--line-strong);
 }
@@ -2396,8 +2415,8 @@ body {
 .hiking-route__stats-title {
   margin: 0 0 0.85rem;
   font-size: 0.6875rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
+  font-weight: 500;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--line-strong);
 }
@@ -2433,7 +2452,7 @@ body {
 .hiking-route__stat-label {
   margin: 0 0 0.2rem;
   font-size: 0.625rem;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--muted);
@@ -2442,7 +2461,7 @@ body {
 .hiking-route__stat-value {
   margin: 0;
   font-size: 0.9375rem;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.35;
   color: var(--ink);
 }
@@ -2459,7 +2478,7 @@ body {
 
 .hiking-route__seasons-label {
   font-size: 0.625rem;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--muted);
@@ -2481,7 +2500,7 @@ body {
   background: transparent;
   color: var(--facility-icon);
   font-size: 0.6875rem;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0.02em;
 }
 
@@ -2526,7 +2545,9 @@ body {
 
 .climbing-routes__title {
   margin: 0 0 0.75rem;
-  font-family: var(--font-display);
+  font-family: var(--font-condensed);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-display);
   font-size: clamp(1.25rem, 2.5vw, 1.625rem);
   font-weight: 400;
   letter-spacing: 0.02em;
@@ -2537,7 +2558,7 @@ body {
   max-width: 42rem;
   color: var(--muted);
   font-size: 0.9375rem;
-  line-height: 1.65;
+  line-height: 1.45;
   letter-spacing: 0.02em;
 }
 
@@ -2549,7 +2570,7 @@ body {
   display: inline-block;
   font-size: 0.6875rem;
   font-weight: 500;
-  letter-spacing: 0.14em;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--ink);
   text-decoration: none;
@@ -2592,7 +2613,7 @@ body {
 .flat-tile__h {
   margin: 0 0 0.4rem;
   font-size: 1rem;
-  font-weight: 800;
+  font-weight: 500;
 }
 
 .flat-tile p {
@@ -2633,7 +2654,9 @@ body {
 
 .contact-editorial__heading {
   margin: 0 0 1rem;
-  font-family: var(--font-display);
+  font-family: var(--font-condensed);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-display);
   font-size: clamp(1.35rem, 2.4vw, 1.625rem);
   font-weight: 400;
   letter-spacing: 0.02em;
@@ -2644,13 +2667,13 @@ body {
   margin: 0 0 clamp(1.75rem, 3vw, 2.25rem);
   color: var(--muted);
   font-size: 0.9375rem;
-  line-height: 1.75;
+  line-height: 1.45;
 }
 
 .contact-editorial__line {
   margin: 0 0 0.85rem;
   font-size: 0.9375rem;
-  line-height: 1.65;
+  line-height: 1.45;
   color: var(--ink);
 }
 
@@ -2674,7 +2697,9 @@ body {
 
 .contact-form-panel__title {
   margin: 0 0 0.5rem;
-  font-family: var(--font-display);
+  font-family: var(--font-condensed);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-display);
   font-size: clamp(1.15rem, 2vw, 1.35rem);
   font-weight: 400;
   line-height: 1.35;
@@ -2684,7 +2709,7 @@ body {
   margin: 0 0 1.25rem;
   color: var(--muted);
   font-size: 0.9375rem;
-  line-height: 1.65;
+  line-height: 1.45;
 }
 
 .form-overlay {
@@ -2723,7 +2748,7 @@ body {
 .form-overlay__label {
   font-size: 0.6875rem;
   font-weight: 500;
-  letter-spacing: 0.16em;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--muted);
   text-align: center;
@@ -2801,7 +2826,7 @@ body {
   margin: 0 0 1.5rem;
   padding-right: 1.75rem;
   font-size: 1rem;
-  line-height: 1.65;
+  line-height: 1.45;
   color: var(--ink);
 }
 
@@ -2838,7 +2863,7 @@ body {
 .site-form__label {
   font-size: 0.6875rem;
   font-weight: 500;
-  letter-spacing: 0.14em;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--muted);
 }
@@ -2898,7 +2923,7 @@ body {
 .site-form__success {
   margin: 0;
   font-size: 0.9375rem;
-  line-height: 1.65;
+  line-height: 1.45;
   color: var(--ink);
 }
 
@@ -2937,8 +2962,8 @@ body {
 .contact-card__title {
   margin: 0 0 1.25rem;
   font-size: 0.6875rem;
-  font-weight: 800;
-  letter-spacing: 0.14em;
+  font-weight: 500;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--line-strong);
 }
@@ -2967,7 +2992,7 @@ body {
 
 .contact-card__label {
   font-size: 0.6875rem;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--muted);
@@ -2999,8 +3024,8 @@ body {
 .flat-contact-map__title {
   margin: 0 0 1rem;
   font-size: 0.6875rem;
-  font-weight: 800;
-  letter-spacing: 0.14em;
+  font-weight: 500;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--line-strong);
 }
@@ -3072,7 +3097,7 @@ body {
   font-family: var(--font-display);
   font-weight: 400;
   font-size: 1.25rem;
-  letter-spacing: 0.12em;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   margin-bottom: 0.85rem;
   color: var(--ink);
@@ -3095,9 +3120,10 @@ body {
 
 .site-footer__heading {
   margin: 0 0 0.85rem;
-  font-size: 0.6875rem;
-  font-weight: 500;
-  letter-spacing: 0.18em;
+  font-family: var(--font-condensed);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--line-strong);
 }
@@ -3250,7 +3276,7 @@ code {
 
 .experience-day__time {
   font-size: 0.9375rem;
-  font-weight: 800;
+  font-weight: 500;
   letter-spacing: 0.02em;
   color: var(--facility-icon);
   font-variant-numeric: tabular-nums;
@@ -3258,9 +3284,11 @@ code {
 
 .experience-day__step-title {
   margin: 0 0 0.35rem;
-  font-size: 1.0625rem;
-  font-weight: 700;
-  letter-spacing: -0.01em;
+  font-family: var(--font-condensed);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: var(--tracking-display);
+  text-transform: uppercase;
 }
 
 .experience-day__step-text {
@@ -3279,7 +3307,7 @@ code {
   color: var(--muted);
   font-size: 0.6875rem;
   font-weight: 500;
-  letter-spacing: 0.18em;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
 }
 
@@ -3331,7 +3359,9 @@ code {
 
 .journal-category-block__title {
   margin: 0 0 0.45rem;
-  font-family: var(--font-display);
+  font-family: var(--font-condensed);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-display);
   font-size: clamp(1.35rem, 2.5vw, 1.65rem);
   font-weight: 400;
   letter-spacing: 0.02em;
@@ -3397,7 +3427,7 @@ code {
   margin-bottom: 0.65rem;
   font-size: 0.6875rem;
   font-weight: 500;
-  letter-spacing: 0.14em;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--line-strong);
 }
@@ -3405,7 +3435,9 @@ code {
 .journal-card__title {
   display: block;
   margin: 0 0 0.45rem;
-  font-family: var(--font-display);
+  font-family: var(--font-condensed);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-display);
   font-size: 1.0625rem;
   font-weight: 400;
   line-height: 1.35;
@@ -3425,7 +3457,7 @@ code {
   margin-top: 0.85rem;
   font-size: 0.6875rem;
   font-weight: 500;
-  letter-spacing: 0.18em;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--ink);
   border-bottom: 1px solid var(--facility-icon);
@@ -3452,7 +3484,9 @@ code {
 
 .journal-category-page__title {
   margin: 0 0 0.75rem;
-  font-family: var(--font-display);
+  font-family: var(--font-condensed);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-display);
   font-size: clamp(1.75rem, 3.5vw, 2.25rem);
   font-weight: 400;
   letter-spacing: 0.02em;
@@ -3464,7 +3498,7 @@ code {
   max-width: 42rem;
   color: var(--muted);
   font-size: 1rem;
-  line-height: 1.65;
+  line-height: 1.45;
 }
 
 .journal-article__header {
@@ -3473,19 +3507,21 @@ code {
 
 .journal-article__eyebrow {
   margin: 0 0 0.65rem;
-  font-size: 0.6875rem;
-  font-weight: 500;
-  letter-spacing: 0.14em;
+  font-family: var(--font-condensed);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--line-strong);
 }
 
 .journal-article__title {
   margin: 0 0 0.85rem;
-  font-family: var(--font-display);
-  font-size: clamp(1.85rem, 4vw, 2.5rem);
+  font-family: var(--font-condensed);
+  font-size: clamp(1.75rem, 4vw, 2.35rem);
   font-weight: 400;
-  letter-spacing: 0.02em;
+  letter-spacing: var(--tracking-display);
+  text-transform: uppercase;
   line-height: 1.15;
 }
 
@@ -3493,8 +3529,8 @@ code {
   margin: 0;
   max-width: 40rem;
   color: var(--muted);
-  font-size: 1.0625rem;
-  line-height: 1.65;
+  font-size: 0.9375rem;
+  line-height: 1.45;
 }
 
 .journal-article__body {
@@ -3504,7 +3540,7 @@ code {
 .journal-article__paragraph {
   margin: 0 0 1.15rem;
   font-size: 1rem;
-  line-height: 1.75;
+  line-height: 1.45;
 }
 
 .journal-article__paragraph:last-child {
@@ -3521,7 +3557,7 @@ code {
   margin: 0 0 0.85rem;
   font-size: 0.6875rem;
   font-weight: 500;
-  letter-spacing: 0.14em;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--line-strong);
 }
@@ -3565,7 +3601,7 @@ code {
 .home-explore-links__link {
   font-size: 0.6875rem;
   font-weight: 500;
-  letter-spacing: 0.18em;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--ink);
   text-decoration: none;
@@ -3589,9 +3625,10 @@ code {
 
 .journal-teaser__eyebrow {
   margin: 0 0 0.65rem;
-  font-size: 0.6875rem;
-  font-weight: 500;
-  letter-spacing: 0.14em;
+  font-family: var(--font-condensed);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--line-strong);
 }
@@ -3607,14 +3644,16 @@ code {
   margin: 0 0 0.5rem;
   font-size: 0.6875rem;
   font-weight: 500;
-  letter-spacing: 0.14em;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--line-strong);
 }
 
 .journal-teaser__featured-title {
   margin: 0 0 0.65rem;
-  font-family: var(--font-display);
+  font-family: var(--font-condensed);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-display);
   font-size: clamp(1.35rem, 2.5vw, 1.65rem);
   font-weight: 400;
   line-height: 1.3;
@@ -3645,7 +3684,7 @@ code {
   margin-top: 1rem;
   font-size: 0.6875rem;
   font-weight: 500;
-  letter-spacing: 0.18em;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--ink);
   text-decoration: none;
@@ -3689,7 +3728,7 @@ code {
 .journal-teaser__experiences {
   font-size: 0.6875rem;
   font-weight: 500;
-  letter-spacing: 0.18em;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--ink);
   text-decoration: none;
@@ -3717,11 +3756,12 @@ code {
 .guide-signup__title,
 .newsletter-signup__title {
   margin: 0 auto 0.85rem;
-  max-width: 24rem;
-  font-family: var(--font-display);
-  font-size: clamp(1.75rem, 3vw, 2.125rem);
+  max-width: 28rem;
+  font-family: var(--font-condensed);
+  font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 400;
-  letter-spacing: 0.02em;
+  letter-spacing: var(--tracking-display);
+  text-transform: uppercase;
   text-align: center;
 }
 
@@ -3730,7 +3770,7 @@ code {
   margin: 0 auto 1rem;
   max-width: 32rem;
   color: var(--muted);
-  line-height: 1.75;
+  line-height: 1.45;
   text-align: center;
 }
 
@@ -3738,7 +3778,7 @@ code {
   margin: 0 auto 1.75rem;
   max-width: 32rem;
   color: var(--muted);
-  line-height: 1.75;
+  line-height: 1.45;
   text-align: center;
 }
 
@@ -3751,7 +3791,7 @@ code {
   display: block;
   margin-bottom: 0.45rem;
   font-size: 0.8125rem;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--muted);
 }
 
@@ -3830,7 +3870,7 @@ code {
   background: var(--bg-tint);
   color: var(--ink);
   font-size: 1.35rem;
-  font-weight: 800;
+  font-weight: 500;
 }
 
 .newsletter-thanks__back {
@@ -3839,7 +3879,7 @@ code {
 }
 
 .newsletter-thanks__back a {
-  font-weight: 700;
+  font-weight: 500;
   color: var(--facility-icon);
   text-decoration: none;
 }
@@ -3867,12 +3907,12 @@ code {
 /* —— Home conversion sections —— */
 .why-special__grid {
   display: grid;
-  gap: 1px;
-  margin: clamp(2rem, 4vw, 2.75rem) 0 0;
+  gap: clamp(1.75rem, 3.5vw, 2.75rem);
+  margin: clamp(2.5rem, 5vw, 3.5rem) 0 0;
   padding: 0;
   list-style: none;
-  background: var(--line);
-  border: 1px solid var(--line);
+  background: transparent;
+  border: none;
 }
 
 @media (min-width: 768px) {
@@ -3888,13 +3928,13 @@ code {
   padding: 0;
   border: none;
   border-radius: 0;
-  background: var(--bg);
+  background: transparent;
   text-align: left;
 }
 
 .why-special__media {
   position: relative;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
   background: var(--bg-tint);
 }
@@ -3907,22 +3947,23 @@ code {
 }
 
 .why-special__body {
-  padding: 1.25rem 1.15rem 1.5rem;
+  padding: 1.5rem 0 0;
 }
 
 .why-special__card-title {
-  margin: 0 0 0.55rem;
-  font-family: var(--font-display);
-  font-size: 1.25rem;
+  margin: 0 0 0.75rem;
+  font-family: var(--font-condensed);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-display);
+  font-size: clamp(1.125rem, 1.8vw, 1.35rem);
   font-weight: 400;
-  letter-spacing: 0.02em;
 }
 
 .why-special__card-body {
   margin: 0;
   color: var(--muted);
   font-size: 0.9375rem;
-  line-height: 1.65;
+  line-height: 1.45;
 }
 
 .home-editorial__head {
@@ -3932,6 +3973,7 @@ code {
 
 .home-editorial__head .flat-section__title {
   margin-bottom: 1rem;
+  color: var(--type-accent);
 }
 
 .home-editorial__grid {
@@ -3977,7 +4019,9 @@ code {
 
 .home-editorial__story-title {
   margin: 0 0 0.5rem;
-  font-family: var(--font-display);
+  font-family: var(--font-condensed);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-display);
   font-size: clamp(1.125rem, 2vw, 1.3125rem);
   font-weight: 400;
   letter-spacing: 0.02em;
@@ -3987,7 +4031,7 @@ code {
   margin: 0;
   color: var(--muted);
   font-size: 0.875rem;
-  line-height: 1.65;
+  line-height: 1.45;
 }
 
 .home-editorial__cta {
@@ -3999,7 +4043,7 @@ code {
   display: inline-block;
   font-size: 0.6875rem;
   font-weight: 500;
-  letter-spacing: 0.18em;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--ink);
   text-decoration: none;
@@ -4016,19 +4060,21 @@ code {
 .stay-eyebrow {
   margin: 0 0 0.85rem;
   color: var(--muted);
-  font-size: 0.6875rem;
-  font-weight: 500;
-  letter-spacing: 0.18em;
+  font-family: var(--font-condensed);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
 }
 
 .stay-section-title {
   margin: 0;
-  font-family: var(--font-display);
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-family: var(--font-condensed);
+  font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 400;
   line-height: 1.12;
-  letter-spacing: 0.02em;
+  letter-spacing: var(--tracking-display);
+  text-transform: uppercase;
 }
 
 .stay-section-head {
@@ -4046,7 +4092,7 @@ code {
 .stay-lead {
   margin: 0;
   color: var(--muted);
-  line-height: 1.75;
+  line-height: 1.45;
 }
 
 .stay-lead {
@@ -4086,7 +4132,7 @@ code {
   color: var(--line-strong);
   font-size: 0.6875rem;
   font-weight: 500;
-  letter-spacing: 0.14em;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
 }
 
@@ -4108,19 +4154,20 @@ code {
 
 .stay-hero__title {
   margin: 0;
-  font-family: var(--font-display);
-  font-size: clamp(2.75rem, 6vw, 4.75rem);
+  font-family: var(--font-condensed);
+  font-size: clamp(2.25rem, 6vw, 4rem);
   font-weight: 400;
-  line-height: 1.02;
-  letter-spacing: 0.01em;
+  line-height: 1.05;
+  letter-spacing: var(--tracking-display);
+  text-transform: uppercase;
 }
 
 .stay-hero__intro {
   margin: 1.25rem 0 0;
   max-width: 34rem;
   color: var(--muted);
-  font-size: clamp(1rem, 1.6vw, 1.125rem);
-  line-height: 1.75;
+  font-size: clamp(0.875rem, 1.6vw, 1rem);
+  line-height: 1.45;
 }
 
 .stay-hero__media {
@@ -4183,7 +4230,9 @@ code {
 
 .stay-spaces__card h3 {
   margin: 0 0 0.65rem;
-  font-family: var(--font-display);
+  font-family: var(--font-condensed);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-display);
   font-size: clamp(1.25rem, 2vw, 1.5rem);
   font-weight: 400;
   line-height: 1.25;
@@ -4266,7 +4315,9 @@ code {
 
 .stay-practical__card h3 {
   margin: 0 0 0.85rem;
-  font-family: var(--font-display);
+  font-family: var(--font-condensed);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-display);
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.25;
@@ -4280,7 +4331,7 @@ code {
 
 .stay-practical__card li {
   margin-bottom: 0.45rem;
-  line-height: 1.65;
+  line-height: 1.45;
   font-size: 0.9375rem;
 }
 
@@ -4301,7 +4352,7 @@ code {
   border-top: 1px solid var(--line);
   color: var(--muted);
   font-size: 0.9375rem;
-  line-height: 1.65;
+  line-height: 1.45;
 }
 
 .stay-faq__list {
@@ -4321,7 +4372,9 @@ code {
 
 .stay-faq__item h3 {
   margin: 0 0 0.45rem;
-  font-family: var(--font-display);
+  font-family: var(--font-condensed);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-display);
   font-size: 1.125rem;
   font-weight: 400;
   line-height: 1.35;
@@ -4331,7 +4384,7 @@ code {
   margin: 0;
   color: var(--muted);
   font-size: 0.9375rem;
-  line-height: 1.65;
+  line-height: 1.45;
 }
 
 .stay-good-to-know .faq__intro {
@@ -4350,7 +4403,9 @@ code {
 
 .stay-closing__title {
   margin: 0;
-  font-family: var(--font-display);
+  font-family: var(--font-condensed);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-display);
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 400;
   line-height: 1.12;
@@ -4378,7 +4433,9 @@ code {
 
 .final-cta__headline {
   margin: 0;
-  font-family: var(--font-display);
+  font-family: var(--font-condensed);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-display);
   font-size: clamp(1.75rem, 3vw, 2.25rem);
   font-weight: 400;
   letter-spacing: 0.02em;
@@ -4390,7 +4447,7 @@ code {
   max-width: 34rem;
   color: var(--muted);
   font-size: clamp(0.9375rem, 1.6vw, 1.0625rem);
-  line-height: 1.75;
+  line-height: 1.45;
 }
 
 .final-cta__btn {
@@ -4460,7 +4517,9 @@ code {
 
 .accommodation-brief__title {
   margin: 0 0 0.85rem;
-  font-family: var(--font-display);
+  font-family: var(--font-condensed);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-display);
   font-size: clamp(1.75rem, 3vw, 2.25rem);
   font-weight: 400;
   letter-spacing: 0.02em;
@@ -4487,7 +4546,7 @@ code {
   padding: 0;
   font-size: 0.6875rem;
   font-weight: 500;
-  letter-spacing: 0.14em;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--muted);
 }
@@ -4501,7 +4560,7 @@ code {
   display: inline-block;
   font-size: 0.6875rem;
   font-weight: 500;
-  letter-spacing: 0.18em;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--ink);
   text-decoration: none;
@@ -4557,7 +4616,7 @@ code {
   z-index: 1;
   font-size: 0.6875rem;
   font-weight: 500;
-  letter-spacing: 0.18em;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.92);
 }
@@ -4595,7 +4654,9 @@ code {
 .experience-map__point strong {
   display: block;
   margin-bottom: 0.35rem;
-  font-family: var(--font-display);
+  font-family: var(--font-condensed);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-display);
   font-size: 1.125rem;
   font-weight: 400;
   letter-spacing: 0.02em;
@@ -4606,7 +4667,7 @@ code {
   margin-top: 0.65rem;
   font-size: 0.6875rem;
   font-weight: 500;
-  letter-spacing: 0.14em;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--ink);
   text-decoration: none;
@@ -4642,7 +4703,7 @@ code {
   background: var(--bg-tint);
   font-size: 0.6875rem;
   font-weight: 500;
-  letter-spacing: 0.18em;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--ink);
 }
@@ -4677,7 +4738,7 @@ code {
   color: var(--muted);
   font-size: 0.6875rem;
   font-weight: 500;
-  letter-spacing: 0.18em;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
 }
 
@@ -4688,7 +4749,9 @@ code {
 }
 
 .local-flavours__line {
-  font-family: var(--font-display);
+  font-family: var(--font-condensed);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-display);
   font-size: clamp(1.75rem, 3vw, 2.25rem);
   font-weight: 400;
   line-height: 1.2;
@@ -4704,7 +4767,7 @@ code {
   max-width: 26rem;
   color: var(--muted);
   font-size: 0.9375rem;
-  line-height: 1.65;
+  line-height: 1.45;
 }
 
 .local-flavours__media {
@@ -4738,7 +4801,9 @@ code {
 
 .about-story__title {
   margin: 0 0 0.75rem;
-  font-family: var(--font-display);
+  font-family: var(--font-condensed);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-display);
   font-size: clamp(1.375rem, 2.5vw, 1.625rem);
   font-weight: 400;
   letter-spacing: 0.02em;
@@ -4747,7 +4812,7 @@ code {
 .about-story__p {
   margin: 0 0 0.75rem;
   color: var(--muted);
-  line-height: 1.65;
+  line-height: 1.45;
 }
 
 .about-story__press {
@@ -4759,14 +4824,14 @@ code {
 .about-story__press-label {
   margin: 0 0 0.45rem;
   font-size: 0.8125rem;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--muted);
 }
 
 .about-story__press-link {
-  font-weight: 700;
+  font-weight: 500;
   color: var(--facility-icon);
   text-decoration: none;
 }
@@ -4841,20 +4906,27 @@ code {
     margin-right: calc(-1 * var(--page-gutter));
   }
 
+  .why-special__media {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   .why-special__body {
-    background: var(--bg);
+    background: transparent;
     border-left: none;
     border-right: none;
-    width: calc(100% + 2 * var(--page-gutter));
-    margin-left: calc(-1 * var(--page-gutter));
-    margin-right: calc(-1 * var(--page-gutter));
-    padding-left: calc(var(--page-gutter) + 1.15rem);
-    padding-right: calc(var(--page-gutter) + 1.15rem);
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .why-special__grid {
     border-left: none;
     border-right: none;
+    gap: 2.25rem;
   }
 
   .experience-map {

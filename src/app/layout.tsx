@@ -1,5 +1,9 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, Plus_Jakarta_Sans } from "next/font/google";
+import {
+  Barlow_Condensed,
+  Cormorant_Garamond,
+  Plus_Jakarta_Sans,
+} from "next/font/google";
 import { HERO_LCP_PRELOAD_SRC, HERO_LCP_SRCSET } from "@/config/site-images";
 import { getGeoMetaOther } from "@/config/site-location";
 import { getMetadataBase } from "@/lib/site-url";
@@ -11,6 +15,13 @@ const sans = Plus_Jakarta_Sans({
   display: "swap",
   adjustFontFallback: true,
   preload: true,
+});
+
+const condensed = Barlow_Condensed({
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-condensed-face",
+  display: "swap",
+  weight: ["400", "500", "600"],
 });
 
 const serif = Cormorant_Garamond({
@@ -51,7 +62,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${sans.variable} ${serif.variable} ${sans.className}`}
+      className={`${sans.variable} ${condensed.variable} ${serif.variable} ${sans.className}`}
       suppressHydrationWarning
     >
       <head>

@@ -23,7 +23,7 @@ export function WhySpecialSection({ content, images }: Props) {
                   width={960}
                   height={720}
                   className="why-special__img"
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  sizes="(max-width: 768px) 100vw, 34vw"
                 />
               </div>
               <div className="why-special__body">

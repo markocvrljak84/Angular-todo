@@ -47,7 +47,6 @@ const MOSAIC_GALLERY_FILES = [
   "20260604_132024.jpg",
 ] as const;
 const INTERIOR_MOSAIC_FILES = [
-  "812160813.jpg",
   "812809121.jpg",
   "740290390.jpg",
   "812808252.jpg",
@@ -56,6 +55,7 @@ const INTERIOR_MOSAIC_FILES = [
   "812808512.jpg",
   "585009655_122107017075084437_1671659401079838438_n.jpg",
   "20260601_160317.jpg",
+  "812160813.jpg",
 ] as const;
 
 export default async function GalleryPage({ params }: Props) {

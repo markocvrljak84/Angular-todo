@@ -229,7 +229,6 @@ const en: Messages = {
     heroCtaPill: "From €129 / night · mock rate",
     heroSlideAlts: [
       "Holiday home — photo 3",
-      "Holiday home — photo 1",
       "Holiday home — photo 2",
       "Holiday home — photo 4",
     ],
@@ -378,7 +377,6 @@ const hr: Messages = {
     heroCtaPill: "Od 129 € / noć · mock cijena",
     heroSlideAlts: [
       "Kuća za odmor — fotografija 3",
-      "Kuća za odmor — fotografija 1",
       "Kuća za odmor — fotografija 2",
       "Kuća za odmor — fotografija 4",
     ],
@@ -576,7 +574,6 @@ const de: Messages = {
     heroCtaPill: "Ab 129 € / Nacht · Platzhalterpreis",
     heroSlideAlts: [
       "Ferienhaus — Foto 3",
-      "Ferienhaus — Foto 1",
       "Ferienhaus — Foto 2",
       "Ferienhaus — Foto 4",
     ],
