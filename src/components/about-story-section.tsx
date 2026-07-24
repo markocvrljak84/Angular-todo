@@ -10,7 +10,7 @@ export function AboutStorySection({ content }: Props) {
       <div className="flat-wrap flat-wrap--narrow">
         {content.blocks.map((block) => (
           <article key={block.title} className="about-story__block">
-            <h2 className="about-story__title">{block.title}</h2>
+            <h2 className="flat-section__title flat-section__title--start">{block.title}</h2>
             {block.paragraphs.map((p) => (
               <p key={p.slice(0, 48)} className="about-story__p">
                 {p}

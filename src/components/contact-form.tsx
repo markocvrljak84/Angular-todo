@@ -124,7 +124,7 @@ export function ContactForm({ locale, labels, contactForm }: Props) {
       ) : null}
 
       <aside className="contact-form-panel" aria-labelledby="contact-form-title">
-        <h2 id="contact-form-title" className="contact-form-panel__title">
+        <h2 id="contact-form-title" className="flat-section__title flat-section__title--start">
           {contactForm.title}
         </h2>
         <p className="contact-form-panel__intro">{contactForm.intro}</p>

@@ -267,7 +267,7 @@ body {
   text-align: center;
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-size: clamp(1rem, 2vw, 1.6rem);
   letter-spacing: var(--tracking-brand);
   text-transform: uppercase;
   color: var(--ink);
@@ -316,7 +316,6 @@ body {
   color: var(--muted);
   text-decoration: none;
   font-family: var(--font-condensed);
-  font-size: 0.8125rem;
   font-weight: 400;
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
@@ -1290,17 +1289,27 @@ body {
 
 .page-header {
   margin-bottom: 2rem;
+  margin-top: 4.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .page-header__title {
   margin: 0 0 0.75rem;
   font-family: var(--font-condensed);
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
-  font-weight: 400;
+  font-size: clamp(1.85rem, 4.2vw, 2.65rem);
+  font-weight: 500;
   letter-spacing: var(--tracking-display);
   text-transform: uppercase;
   line-height: 1.12;
   text-align: center;
+  color: var(--ink);
+}
+
+.page-header__title--start {
+  text-align: left;
 }
 
 .page-header__intro {
@@ -1338,7 +1347,7 @@ body {
 }
 
 .flat-wrap {
-  max-width: 80rem;
+  max-width: 97rem;
   margin: 0 auto;
   padding: 0 var(--page-gutter);
 }
@@ -1347,19 +1356,36 @@ body {
   max-width: 52rem;
 }
 
-.flat-section__title {
+.flat-wrap--wide {
+  max-width: 78rem;
+}
+
+.flat-section__title,
+.guide-signup__title,
+.newsletter-signup__title,
+.facilities__title,
+.itinerary__title {
   margin: 0 auto 1rem;
   max-width: 36rem;
   font-family: var(--font-condensed);
-  font-size: clamp(1.5rem, 3.2vw, 2rem);
+  font-size: clamp(1.35rem, 2.9vw, 2.05rem);
   font-weight: 400;
   letter-spacing: var(--tracking-display);
   line-height: 1.15;
   text-align: center;
   text-transform: uppercase;
+  color: var(--ink);
+}
+
+.flat-section__title--start {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: none;
+  text-align: left;
 }
 
 @media (min-width: 768px) {
+
   .flat-section__title,
   .guide-signup__title,
   .newsletter-signup__title {
@@ -1548,7 +1574,7 @@ body {
 
 /* —— Gallery: editorial sections (Aman-style) —— */
 .gallery-page p {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .gallery-sections {
@@ -1843,6 +1869,11 @@ body {
     grid-template-areas: "body media";
     gap: 1.5rem 2rem;
   }
+
+  .flat-about-layout--content {
+    grid-template-columns: 1fr min(48%, 32rem);
+    gap: 1.25rem 1.1rem;
+  }
 }
 
 .flat-about-layout--content {
@@ -1992,12 +2023,11 @@ body {
   flex: 1 1 16rem;
   max-width: 36rem;
   font-family: var(--font-condensed);
-  font-size: clamp(1.25rem, 2.5vw, 1.65rem);
+  font-size: clamp(1.25rem, 2.5vw, 2.15rem);
   font-weight: 400;
   letter-spacing: var(--tracking-display);
   text-transform: uppercase;
   line-height: 1.2;
-  color: var(--type-accent);
 }
 
 .book-banner__btn {
@@ -2065,12 +2095,6 @@ body {
 /* —— Facilities (editorial grid) —— */
 .facilities__title {
   margin: 0 0 clamp(2rem, 4vw, 2.75rem);
-  font-family: var(--font-condensed);
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  font-weight: 400;
-  letter-spacing: var(--tracking-display);
-  text-transform: uppercase;
-  text-align: center;
   color: var(--ink);
 }
 
@@ -2637,30 +2661,19 @@ body {
 /* —— Contact —— */
 .contact-editorial {
   display: grid;
-  gap: clamp(2rem, 4vw, 3rem);
+  gap: 1.25rem;
   align-items: start;
 }
 
 @media (min-width: 800px) {
   .contact-editorial {
-    grid-template-columns: 1fr min(42%, 26rem);
-    gap: 1.5rem 2rem;
+    grid-template-columns: 1fr min(100%, 42rem);
+    gap: 1.25rem 1.1rem;
   }
 }
 
 .contact-editorial__body {
-  max-width: 22rem;
-}
-
-.contact-editorial__heading {
-  margin: 0 0 1rem;
-  font-family: var(--font-condensed);
-  text-transform: uppercase;
-  letter-spacing: var(--tracking-display);
-  font-size: clamp(1.35rem, 2.4vw, 1.625rem);
-  font-weight: 400;
-  letter-spacing: 0.02em;
-  line-height: 1.35;
+  max-width: 28rem;
 }
 
 .contact-editorial__lead {
@@ -2693,16 +2706,6 @@ body {
   padding: 1.25rem;
   border: 1px solid var(--line);
   background: var(--bg);
-}
-
-.contact-form-panel__title {
-  margin: 0 0 0.5rem;
-  font-family: var(--font-condensed);
-  text-transform: uppercase;
-  letter-spacing: var(--tracking-display);
-  font-size: clamp(1.15rem, 2vw, 1.35rem);
-  font-weight: 400;
-  line-height: 1.35;
 }
 
 .contact-form-panel__intro {
@@ -3017,17 +3020,7 @@ body {
 
 .flat-contact-map {
   margin-top: 2rem;
-  padding-top: 2rem;
-  border-top: 1px solid var(--line);
-}
-
-.flat-contact-map__title {
-  margin: 0 0 1rem;
-  font-size: 0.6875rem;
-  font-weight: 500;
-  letter-spacing: var(--tracking-label);
-  text-transform: uppercase;
-  color: var(--line-strong);
+  padding-top: 7rem;
 }
 
 .flat-contact-map__frame {
@@ -3286,9 +3279,10 @@ code {
   margin: 0 0 0.35rem;
   font-family: var(--font-condensed);
   font-size: 1rem;
-  font-weight: 400;
   letter-spacing: var(--tracking-display);
   text-transform: uppercase;
+  position: relative;
+  top: -2px;
 }
 
 .experience-day__step-text {
@@ -3393,14 +3387,14 @@ code {
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 26rem), 1fr));
+  gap: 1.5rem;
 }
 
 .journal-card {
   display: block;
   height: 100%;
-  padding: 1.15rem 1.2rem;
+  padding: 1.65rem 1.75rem;
   border-radius: 0;
   background: var(--bg);
   border: 1px solid var(--line);
@@ -3434,28 +3428,27 @@ code {
 
 .journal-card__title {
   display: block;
-  margin: 0 0 0.45rem;
+  margin: 0 0 0.6rem;
   font-family: var(--font-condensed);
   text-transform: uppercase;
   letter-spacing: var(--tracking-display);
-  font-size: 1.0625rem;
+  font-size: clamp(1.2rem, 2vw, 1.4rem);
   font-weight: 400;
-  line-height: 1.35;
-  letter-spacing: 0.02em;
+  line-height: 1.3;
 }
 
 .journal-card__teaser {
   display: block;
   margin: 0;
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.975rem;
   line-height: 1.55;
 }
 
 .journal-card__action {
   display: inline-block;
-  margin-top: 0.85rem;
-  font-size: 0.6875rem;
+  margin-top: 1.1rem;
+  font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
@@ -3482,17 +3475,6 @@ code {
   border-color: var(--line-strong);
 }
 
-.journal-category-page__title {
-  margin: 0 0 0.75rem;
-  font-family: var(--font-condensed);
-  text-transform: uppercase;
-  letter-spacing: var(--tracking-display);
-  font-size: clamp(1.75rem, 3.5vw, 2.25rem);
-  font-weight: 400;
-  letter-spacing: 0.02em;
-  line-height: 1.2;
-}
-
 .journal-category-page__intro {
   margin: 0 0 1.75rem;
   max-width: 42rem;
@@ -3513,16 +3495,6 @@ code {
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--line-strong);
-}
-
-.journal-article__title {
-  margin: 0 0 0.85rem;
-  font-family: var(--font-condensed);
-  font-size: clamp(1.75rem, 4vw, 2.35rem);
-  font-weight: 400;
-  letter-spacing: var(--tracking-display);
-  text-transform: uppercase;
-  line-height: 1.15;
 }
 
 .journal-article__teaser {
@@ -3753,18 +3725,6 @@ code {
   text-align: center;
 }
 
-.guide-signup__title,
-.newsletter-signup__title {
-  margin: 0 auto 0.85rem;
-  max-width: 28rem;
-  font-family: var(--font-condensed);
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  font-weight: 400;
-  letter-spacing: var(--tracking-display);
-  text-transform: uppercase;
-  text-align: center;
-}
-
 .guide-signup__intro,
 .newsletter-signup__intro {
   margin: 0 auto 1rem;
@@ -3908,7 +3868,7 @@ code {
 .why-special__grid {
   display: grid;
   gap: clamp(1.75rem, 3.5vw, 2.75rem);
-  margin: clamp(2.5rem, 5vw, 3.5rem) 0 0;
+  margin: 0;
   padding: 0;
   list-style: none;
   background: transparent;
@@ -3941,13 +3901,15 @@ code {
 
 .why-special__img {
   width: 100%;
-  height: 100%;
+  height: 90%;
   object-fit: cover;
   display: block;
 }
 
 .why-special__body {
   padding: 1.5rem 0 0;
+  position: relative;
+  top: -45px;
 }
 
 .why-special__card-title {
@@ -3973,7 +3935,6 @@ code {
 
 .home-editorial__head .flat-section__title {
   margin-bottom: 1rem;
-  color: var(--type-accent);
 }
 
 .home-editorial__grid {
@@ -4067,16 +4028,6 @@ code {
   text-transform: uppercase;
 }
 
-.stay-section-title {
-  margin: 0;
-  font-family: var(--font-condensed);
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  font-weight: 400;
-  line-height: 1.12;
-  letter-spacing: var(--tracking-display);
-  text-transform: uppercase;
-}
-
 .stay-section-head {
   max-width: 40rem;
   margin-bottom: clamp(1.75rem, 4vw, 2.75rem);
@@ -4152,16 +4103,6 @@ code {
   }
 }
 
-.stay-hero__title {
-  margin: 0;
-  font-family: var(--font-condensed);
-  font-size: clamp(2.25rem, 6vw, 4rem);
-  font-weight: 400;
-  line-height: 1.05;
-  letter-spacing: var(--tracking-display);
-  text-transform: uppercase;
-}
-
 .stay-hero__intro {
   margin: 1.25rem 0 0;
   max-width: 34rem;
@@ -4172,7 +4113,6 @@ code {
 
 .stay-hero__media {
   position: relative;
-  aspect-ratio: 4 / 3;
 }
 
 .stay-house__grid,
@@ -4401,16 +4341,6 @@ code {
   text-align: center;
 }
 
-.stay-closing__title {
-  margin: 0;
-  font-family: var(--font-condensed);
-  text-transform: uppercase;
-  letter-spacing: var(--tracking-display);
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 400;
-  line-height: 1.12;
-}
-
 .stay-closing__body {
   margin: 1.25rem 0 0;
   color: var(--muted);
@@ -4513,17 +4443,6 @@ code {
   .accommodation-brief__body {
     justify-self: end;
   }
-}
-
-.accommodation-brief__title {
-  margin: 0 0 0.85rem;
-  font-family: var(--font-condensed);
-  text-transform: uppercase;
-  letter-spacing: var(--tracking-display);
-  font-size: clamp(1.75rem, 3vw, 2.25rem);
-  font-weight: 400;
-  letter-spacing: 0.02em;
-  text-align: left;
 }
 
 .accommodation-brief__lead {
@@ -4645,7 +4564,7 @@ code {
 }
 
 .experience-map__point {
-  padding: 1rem 1.1rem;
+  padding: 2rem 1.9rem;
   border: none;
   border-radius: 0;
   background: var(--bg);
@@ -4797,16 +4716,6 @@ code {
   margin-top: 2rem;
   padding-top: 2rem;
   border-top: 1px solid var(--line);
-}
-
-.about-story__title {
-  margin: 0 0 0.75rem;
-  font-family: var(--font-condensed);
-  text-transform: uppercase;
-  letter-spacing: var(--tracking-display);
-  font-size: clamp(1.375rem, 2.5vw, 1.625rem);
-  font-weight: 400;
-  letter-spacing: 0.02em;
 }
 
 .about-story__p {

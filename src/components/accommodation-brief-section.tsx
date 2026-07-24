@@ -23,7 +23,7 @@ export function AccommodationBriefSection({ content, imageSrc, accommodationHref
           />
         </div>
         <div className="accommodation-brief__body">
-          <h2 id="accommodation-brief-title" className="accommodation-brief__title">
+          <h2 id="accommodation-brief-title" className="flat-section__title flat-section__title--start">
             {content.title}
           </h2>
           <p className="accommodation-brief__lead">{content.lead}</p>

@@ -91,7 +91,7 @@ export default async function JournalCategoryRoute({ params }: Props) {
       <JsonLdScript id={`journal-category-json-ld-${categoryId}`} data={graph} />
 
       <div className="flat-section flat-section--page">
-        <div className="flat-wrap flat-wrap--narrow">
+        <div className="flat-wrap flat-wrap--wide">
           <JournalCategoryPage content={journal} category={category} locale={locale} />
         </div>
       </div>

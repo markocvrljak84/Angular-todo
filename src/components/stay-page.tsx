@@ -57,7 +57,7 @@ export function StayPage({ content, goodToKnow }: Props) {
       <section className="stay-hero flat-section flat-section--page" aria-labelledby="stay-hero-title">
         <div className="flat-wrap stay-hero__inner">
           <div className="stay-hero__copy">
-            <h1 id="stay-hero-title" className="stay-hero__title">
+            <h1 id="stay-hero-title" className="page-header__title page-header__title--start">
               {content.hero.title}
             </h1>
             <p className="stay-hero__intro">{content.hero.intro}</p>
@@ -74,7 +74,7 @@ export function StayPage({ content, goodToKnow }: Props) {
             <StayPhoto slot="theHouse" alt={content.theHouse.imageAlt} sizes="(max-width: 900px) 100vw, 55vw" />
           </div>
           <div className="stay-house__copy">
-            <h2 id="stay-house-title" className="stay-section-title">
+            <h2 id="stay-house-title" className="flat-section__title flat-section__title--start">
               {content.theHouse.title}
             </h2>
             {content.theHouse.paragraphs.map((paragraph) => (
@@ -90,7 +90,7 @@ export function StayPage({ content, goodToKnow }: Props) {
         <div className="flat-wrap">
           <div className="stay-section-head">
             <p className="stay-eyebrow">{content.spaces.eyebrow}</p>
-            <h2 id="stay-spaces-title" className="stay-section-title">
+            <h2 id="stay-spaces-title" className="flat-section__title flat-section__title--start">
               {content.spaces.title}
             </h2>
           </div>
@@ -113,7 +113,7 @@ export function StayPage({ content, goodToKnow }: Props) {
             <StayPhoto slot="outdoors" alt={content.outdoors.imageAlt} sizes="(max-width: 900px) 100vw, 50vw" />
           </div>
           <div className="stay-outdoors__copy">
-            <h2 id="stay-outdoors-title" className="stay-section-title">
+            <h2 id="stay-outdoors-title" className="flat-section__title flat-section__title--start">
               {content.outdoors.title}
             </h2>
             <p className="stay-lead">{content.outdoors.lead}</p>
@@ -132,7 +132,7 @@ export function StayPage({ content, goodToKnow }: Props) {
         <div className="flat-wrap stay-included__grid">
           <div>
             <p className="stay-eyebrow">{content.included.eyebrow}</p>
-            <h2 id="stay-included-title" className="stay-section-title">
+            <h2 id="stay-included-title" className="flat-section__title flat-section__title--start">
               {content.included.title}
             </h2>
           </div>
@@ -151,7 +151,7 @@ export function StayPage({ content, goodToKnow }: Props) {
       >
         <div className="flat-wrap flat-wrap--narrow">
           <div className="stay-section-head stay-section-head--center">
-            <h2 id="stay-good-to-know-title" className="stay-section-title">
+            <h2 id="stay-good-to-know-title" className="flat-section__title">
               {goodToKnow.title}
             </h2>
           </div>
@@ -162,7 +162,7 @@ export function StayPage({ content, goodToKnow }: Props) {
       <section className="flat-section flat-section--tint stay-rules" aria-labelledby="stay-rules-title">
         <div className="flat-wrap stay-rules__inner">
           <p className="stay-eyebrow">{content.houseRules.eyebrow}</p>
-          <h2 id="stay-rules-title" className="stay-section-title">
+          <h2 id="stay-rules-title" className="flat-section__title flat-section__title--start">
             {content.houseRules.title}
           </h2>
           <ul className="stay-rules__list">
@@ -176,7 +176,7 @@ export function StayPage({ content, goodToKnow }: Props) {
       <section className="flat-section stay-closing" aria-labelledby="stay-closing-title">
         <div className="flat-wrap stay-closing__inner">
           <p className="stay-eyebrow">{content.closing.eyebrow}</p>
-          <h2 id="stay-closing-title" className="stay-closing__title">
+          <h2 id="stay-closing-title" className="flat-section__title">
             {content.closing.title}
           </h2>
           <p className="stay-closing__body">{content.closing.body}</p>

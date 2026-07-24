@@ -14,12 +14,12 @@ export function ContactSection({ t, locale }: Props) {
     locale === "hr"
       ? "hr"
       : locale === "de"
-        ? "de"
-        : locale === "fr"
-          ? "fr"
-          : locale === "it"
-            ? "it"
-            : "en";
+      ? "de"
+      : locale === "fr"
+      ? "fr"
+      : locale === "it"
+      ? "it"
+      : "en";
   const { embedSrc: googleMapEmbedSrc, openHref: googleMapOpenHref } =
     getGoogleMapsUrls(mapHl);
 
@@ -27,12 +27,17 @@ export function ContactSection({ t, locale }: Props) {
     <>
       <div className="contact-editorial">
         <div className="contact-editorial__body">
-          <h2 className="contact-editorial__heading">{t.contact.detailsHeading}</h2>
+          <h2 className="flat-section__title flat-section__title--start">
+            {t.contact.detailsHeading}
+          </h2>
           <p className="contact-editorial__lead">{t.contact.lead}</p>
 
           <p className="contact-editorial__line">
             {t.contact.emailLabel}:{" "}
-            <a className="contact-editorial__link" href={`mailto:${SITE_CONTACT.email}`}>
+            <a
+              className="contact-editorial__link"
+              href={`mailto:${SITE_CONTACT.email}`}
+            >
               {SITE_CONTACT.email}
             </a>
           </p>
@@ -66,13 +71,14 @@ export function ContactSection({ t, locale }: Props) {
           </p>
         </div>
 
-        <ContactForm locale={locale} labels={t.forms} contactForm={t.contactForm} />
+        <ContactForm
+          locale={locale}
+          labels={t.forms}
+          contactForm={t.contactForm}
+        />
       </div>
 
       <div className="flat-contact-map" aria-labelledby="contact-map-heading">
-        <h2 id="contact-map-heading" className="flat-contact-map__title">
-          {t.contact.mapHeading}
-        </h2>
         <div className="flat-contact-map__frame">
           <iframe
             title={t.contact.mapIframeTitle}

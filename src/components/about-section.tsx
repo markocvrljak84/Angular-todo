@@ -29,7 +29,7 @@ export function AboutSection({ t }: Props) {
               width={1920}
               height={1802}
               className="flat-about__side-img"
-              sizes="(max-width: 799px) 100vw, 42vw"
+              sizes="(max-width: 799px) 100vw, 48vw"
             />
           </div>
           <p className="flat-about__hosts-note">{t.about.hostsNote}</p>

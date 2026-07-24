@@ -31,8 +31,8 @@ export function HomeLocalFlavoursSection({ content, imageSrc }: Props) {
           <Image
             src={imageSrc}
             alt={content.imageAlt}
-            width={1024}
-            height={757}
+            width={640}
+            height={427}
             className="local-flavours__img"
             sizes="(max-width: 900px) 100vw, 55vw"
           />

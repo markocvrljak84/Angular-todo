@@ -23,7 +23,7 @@ export function NewsletterSignupSection({ content, locale, source, id }: Props) 
     >
       <div className="flat-wrap flat-wrap--narrow">
         <div className="newsletter-signup__panel">
-          <h2 id="newsletter-signup-title" className="newsletter-signup__title">
+          <h2 id="newsletter-signup-title" className="flat-section__title">
             {content.title}
           </h2>
           <p className="newsletter-signup__intro">{content.intro}</p>

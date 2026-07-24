@@ -44,7 +44,7 @@ export default async function JournalPage({ params }: Props) {
       <InnerPageHeader {...header} />
 
       <div className="flat-section flat-section--tint">
-        <div className="flat-wrap flat-wrap--narrow">
+        <div className="flat-wrap flat-wrap--wide">
           <JournalHub content={journal} locale={locale} compact />
         </div>
       </div>

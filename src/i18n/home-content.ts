@@ -25,6 +25,7 @@ export type HomeContent = {
   };
   whySpecial: {
     title: string;
+    intro: string;
     cards: { title: string; body: string; imageAlt: string }[];
   };
   editorial: {
@@ -72,7 +73,9 @@ const en: HomeContent = {
     ctaExperiences: "See experiences",
   },
   whySpecial: {
-    title: "Three landscapes. One stay ⭐",
+    title: "Three landscapes. One stay",
+    intro:
+      "Mountain mornings, Adriatic afternoons and quiet nights under the stars — three landscapes in a single day from Stars Peak.",
     cards: [
       {
         title: "Mountain",
@@ -184,7 +187,7 @@ const en: HomeContent = {
     items: ["Wild herbs.", "Mountain honey.", "Local flavours."],
     closing:
       "Soon, Stars Peak will grow beyond the house itself — into a place where the landscape is also served at the table.",
-    imageAlt: "Sunlit Velebit meadow with green grass, forest and limestone peaks",
+    imageAlt: "Purple wild heather in bloom on Velebit with a bee on the flowers",
   },
 };
 
@@ -204,6 +207,8 @@ const hr: HomeContent = {
   },
   whySpecial: {
     title: "Zašto je ovo mjesto posebno",
+    intro:
+      "Planinska jutra, jadranska popodneva i tihe noći pod zvijezdama — tri krajolika u jednom danu sa Stars Peaka.",
     cards: [
       {
         title: "Planina",
@@ -294,7 +299,7 @@ const hr: HomeContent = {
     items: ["Divlje bilje.", "Planinski med.", "Lokalni okusi."],
     closing:
       "Uskoro će Stars Peak rasti izvan same kuće — u mjesto gdje se krajolik servira i za stolom.",
-    imageAlt: "Sunčana velebitka livada s travom, šumom i vapnenačkim vrhovima",
+    imageAlt: "Ljubičasta vrijesovina u cvatu na Velebitu s pčelom na cvjetovima",
   },
 };
 
@@ -310,6 +315,8 @@ const de: HomeContent = {
   },
   whySpecial: {
     title: "Warum dieser Ort besonders ist",
+    intro:
+      "Bergmorgen, Adria-Nachmittage und stille Nächte unter den Sternen — drei Landschaften an einem Tag von Stars Peak.",
     cards: [
       {
         title: "Berg",
@@ -414,7 +421,7 @@ const de: HomeContent = {
     items: ["Wildkräuter.", "Berghonig.", "Lokale Aromen."],
     closing:
       "Bald wächst Stars Peak über das Haus hinaus — zu einem Ort, an dem die Landschaft auch am Tisch serviert wird.",
-    imageAlt: "Sonnige Velebit-Wiese mit Gras, Wald und Kalkstein-Gipfeln",
+    imageAlt: "Lila Heidekraut in Blüte am Velebit mit einer Biene an den Blüten",
   },
 };
 
@@ -429,6 +436,8 @@ const fr: HomeContent = {
   },
   whySpecial: {
     title: "Pourquoi cet endroit est unique",
+    intro:
+      "Matins en montagne, après-midis adriatiques et nuits calmes sous les étoiles — trois paysages en une journée depuis Stars Peak.",
     cards: [
       {
         title: "Montagne",
@@ -533,7 +542,7 @@ const fr: HomeContent = {
     items: ["Herbes sauvages.", "Miel de montagne.", "Saveurs locales."],
     closing:
       "Bientôt, Stars Peak ira au-delà de la maison — vers un lieu où le paysage se retrouve aussi à table.",
-    imageAlt: "Prairie ensoleillée du Velebit, herbe, forêt et sommets calcaires",
+    imageAlt: "Bruyère pourpre en fleurs sur le Velebit avec une abeille sur les fleurs",
   },
 };
 
@@ -548,6 +557,8 @@ const it: HomeContent = {
   },
   whySpecial: {
     title: "Perché questo posto è speciale",
+    intro:
+      "Mattine in montagna, pomeriggi adriatici e notti quiete sotto le stelle — tre paesaggi in un solo giorno da Stars Peak.",
     cards: [
       {
         title: "Montagna",
@@ -652,7 +663,7 @@ const it: HomeContent = {
     items: ["Erbe selvatiche.", "Miele di montagna.", "Sapori locali."],
     closing:
       "Presto Stars Peak crescerà oltre la casa — in un luogo dove il paesaggio arriva anche a tavola.",
-    imageAlt: "Prato assolato del Velebit con erba, bosco e cime calcaree",
+    imageAlt: "Erica viola in fiore sul Velebit con un'ape sui fiori",
   },
 };
 
