@@ -13,6 +13,7 @@ export function WhySpecialSection({ content, images }: Props) {
         <h2 id="why-special-title" className="flat-section__title">
           {content.title}
         </h2>
+        <p className="flat-section__intro">{content.intro}</p>
         <ul className="why-special__grid">
           {content.cards.map((card, i) => (
             <li key={card.title} className="why-special__card">
