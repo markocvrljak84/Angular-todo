@@ -1,10 +1,12 @@
+import Link from "next/link";
 import type { AboutStoryContent } from "@/i18n/about-story";
 
 type Props = {
   content: AboutStoryContent;
+  pressKitHref: string;
 };
 
-export function AboutStorySection({ content }: Props) {
+export function AboutStorySection({ content, pressKitHref }: Props) {
   return (
     <section className="flat-section" aria-label="Hosts story">
       <div className="flat-wrap flat-wrap--narrow">
@@ -29,6 +31,9 @@ export function AboutStorySection({ content }: Props) {
           >
             {content.press.linkText}
           </a>
+          <p className="about-story__press-more">
+            <Link href={pressKitHref}>{content.press.kitLabel}</Link>
+          </p>
         </aside>
       </div>
     </section>

@@ -12,6 +12,7 @@ import {
 } from "@/lib/locale-page";
 import { PageJsonLd } from "@/components/page-json-ld";
 import { buildPageMetadata } from "@/lib/page-metadata";
+import { localePath } from "@/config/site-routes";
 
 export const dynamic = "force-static";
 
@@ -48,7 +49,7 @@ export default async function AboutPage({ params }: Props) {
         </div>
       </div>
 
-      <AboutStorySection content={story} />
+      <AboutStorySection content={story} pressKitHref={localePath(locale, "press")} />
 
       <BookCta variant="banner" label={t.header.bookCta} lead={t.cta.aboutLead} />
     </>

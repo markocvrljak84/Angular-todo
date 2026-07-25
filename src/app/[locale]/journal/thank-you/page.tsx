@@ -25,7 +25,7 @@ export async function generateMetadata({
   const content = getExperienceContent(locale).signup;
 
   return {
-    title: content.thankYouTitle,
+    title: { absolute: content.thankYouTitle },
     robots: { index: false, follow: false },
   };
 }

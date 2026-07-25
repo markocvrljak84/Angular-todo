@@ -6,6 +6,14 @@ import { getGoodToKnow } from "@/i18n/good-to-know";
 import { getHikingRoutes } from "@/i18n/hiking-routes";
 import { getMessages } from "@/i18n/messages";
 import { getPageSeo } from "@/i18n/page-seo";
+import {
+  getDarkSkyStargazingPageContent,
+  getOffGridMountainCabinPageContent,
+  getPhotographyRetreatPageContent,
+  getRemoteWorkPageContent,
+  getVelebitHikingRetreatPageContent,
+} from "@/i18n/topic-pages";
+import { getPressPageContent } from "@/i18n/press-content";
 
 export type InnerPageKey = Exclude<SitePageKey, "home">;
 
@@ -43,6 +51,36 @@ export function getPageHeaderContent(
       return {
         title: getJournalContent(locale).title,
         intro: getJournalContent(locale).intro,
+      };
+    case "darkSkyStargazing":
+      return {
+        title: getDarkSkyStargazingPageContent(locale).title,
+        intro: getDarkSkyStargazingPageContent(locale).intro,
+      };
+    case "velebitHikingRetreat":
+      return {
+        title: getVelebitHikingRetreatPageContent(locale).title,
+        intro: getVelebitHikingRetreatPageContent(locale).intro,
+      };
+    case "offGridMountainCabin":
+      return {
+        title: getOffGridMountainCabinPageContent(locale).title,
+        intro: getOffGridMountainCabinPageContent(locale).intro,
+      };
+    case "remoteWork":
+      return {
+        title: getRemoteWorkPageContent(locale).title,
+        intro: getRemoteWorkPageContent(locale).intro,
+      };
+    case "photographyRetreat":
+      return {
+        title: getPhotographyRetreatPageContent(locale).title,
+        intro: getPhotographyRetreatPageContent(locale).intro,
+      };
+    case "press":
+      return {
+        title: getPressPageContent(locale).title,
+        intro: getPressPageContent(locale).intro,
       };
     case "contact":
       return { title: t.contact.title };

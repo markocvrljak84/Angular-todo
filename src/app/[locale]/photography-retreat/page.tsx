@@ -1,0 +1,41 @@
+import type { Metadata } from "next";
+import { InnerPageHeader } from "@/components/inner-page-header";
+import { PageJsonLd } from "@/components/page-json-ld";
+import { TopicPageSections } from "@/components/topic-page-sections";
+import { getMessages } from "@/i18n/messages";
+import { getPhotographyRetreatPageContent } from "@/i18n/topic-pages";
+import { getPageHeaderContent } from "@/lib/inner-page-content";
+import { buildPageMetadata } from "@/lib/page-metadata";
+import { localeStaticParams, resolveLocale } from "@/lib/locale-page";
+
+export const dynamic = "force-static";
+
+export function generateStaticParams() {
+  return localeStaticParams();
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const locale = await resolveLocale(params);
+  return buildPageMetadata(locale, "photographyRetreat");
+}
+
+type Props = { params: Promise<{ locale: string }> };
+
+export default async function PhotographyRetreatPage({ params }: Props) {
+  const locale = await resolveLocale(params);
+  const t = getMessages(locale);
+  const content = getPhotographyRetreatPageContent(locale);
+  const header = getPageHeaderContent(locale, "photographyRetreat");
+
+  return (
+    <>
+      <PageJsonLd locale={locale} messages={t} page="photographyRetreat" />
+      <InnerPageHeader {...header} />
+      <TopicPageSections content={content} bookLabel={t.header.bookCta} />
+    </>
+  );
+}

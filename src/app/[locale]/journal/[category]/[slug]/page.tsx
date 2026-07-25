@@ -55,7 +55,7 @@ export async function generateMetadata({
   const pageUrl = canonicalAbsoluteUrl(journalArticlePath(locale, categoryId, slug));
 
   return {
-    title: `${article.title} — Journal · Stars Peak`,
+    title: { absolute: `${article.title} — Journal · Stars Peak` },
     description: article.seoDescription ?? article.teaser,
     alternates: {
       canonical: pageUrl,

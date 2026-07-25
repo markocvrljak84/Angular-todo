@@ -1,6 +1,9 @@
 import type { Locale } from "@/i18n/config";
 import type { Messages } from "@/i18n/messages";
-import type { SitePageKey } from "@/config/site-routes";
+import {
+  isSeoTopicPageKey,
+  type SitePageKey,
+} from "@/config/site-routes";
 import { JsonLdScript } from "@/components/json-ld-script";
 import {
   type BreadcrumbItem,
@@ -8,17 +11,17 @@ import {
   buildBreadcrumbListJsonLd,
 } from "@/lib/structured-data/build-breadcrumb-list";
 import { buildFaqPageJsonLd } from "@/lib/structured-data/build-faq-page";
+import { buildTopicFaqJsonLd } from "@/lib/structured-data/build-topic-faq";
 import { buildWebPageJsonLd } from "@/lib/structured-data/build-web-page";
 import { localePath } from "@/config/site-routes";
+import { getTopicPageContent } from "@/i18n/topic-pages";
 import { canonicalAbsoluteUrl } from "@/lib/site-url";
 
 type Props = {
   locale: Locale;
   messages: Messages;
   page: SitePageKey;
-  /** Override default Home → page trail (e.g. thank-you subpage). */
   breadcrumbItems?: BreadcrumbItem[];
-  /** Override page URL for WebPage / Breadcrumb @id (e.g. thank-you subpage). */
   pageUrl?: string;
 };
 
@@ -40,6 +43,12 @@ export function PageJsonLd({
 
   if (page === "goodToKnow" || page === "accommodation") {
     graph.push(buildFaqPageJsonLd(locale, page));
+  }
+
+  if (isSeoTopicPageKey(page)) {
+    graph.push(
+      buildTopicFaqJsonLd(resolvedPageUrl, getTopicPageContent(locale, page).faqs),
+    );
   }
 
   return <JsonLdScript id={`page-json-ld-${page}`} data={graph} />;

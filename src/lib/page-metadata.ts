@@ -36,7 +36,7 @@ export function buildPageMetadata(
     : undefined;
 
   return {
-    title: seo.title,
+    title: { absolute: seo.title },
     description: seo.description,
     keywords: getSeoKeywords(locale),
     applicationName: SITE_GEO.brandName,

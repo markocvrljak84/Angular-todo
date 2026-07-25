@@ -12,16 +12,43 @@ export const SITE_PAGE_KEYS = [
   "hiking",
   "nearby",
   "journal",
+  "darkSkyStargazing",
+  "velebitHikingRetreat",
+  "offGridMountainCabin",
+  "remoteWork",
+  "photographyRetreat",
+  "press",
   "contact",
 ] as const;
 
 export type SitePageKey = (typeof SITE_PAGE_KEYS)[number];
+
+/** SEO topic landings with dedicated FAQ content. */
+export const SEO_TOPIC_PAGE_KEYS = [
+  "darkSkyStargazing",
+  "velebitHikingRetreat",
+  "offGridMountainCabin",
+  "remoteWork",
+  "photographyRetreat",
+] as const satisfies readonly SitePageKey[];
+
+export type SeoTopicPageKey = (typeof SEO_TOPIC_PAGE_KEYS)[number];
+
+export function isSeoTopicPageKey(page: SitePageKey): page is SeoTopicPageKey {
+  return (SEO_TOPIC_PAGE_KEYS as readonly string[]).includes(page);
+}
 
 /** Pages listed in sitemap.xml (excludes legacy redirects). */
 export const INDEXABLE_PAGE_KEYS = [
   "home",
   "accommodation",
   "experiences",
+  "velebitHikingRetreat",
+  "darkSkyStargazing",
+  "offGridMountainCabin",
+  "remoteWork",
+  "photographyRetreat",
+  "press",
   "about",
   "gallery",
   "goodToKnow",
@@ -36,6 +63,12 @@ export const SITEMAP_PAGE_PRIORITY: Record<IndexablePageKey, number> = {
   home: 1,
   accommodation: 0.95,
   experiences: 0.9,
+  velebitHikingRetreat: 0.9,
+  darkSkyStargazing: 0.9,
+  offGridMountainCabin: 0.9,
+  remoteWork: 0.88,
+  photographyRetreat: 0.88,
+  press: 0.7,
   gallery: 0.85,
   journal: 0.85,
   about: 0.8,
@@ -50,6 +83,12 @@ export const SITEMAP_CHANGE_FREQUENCY: Record<
   home: "weekly",
   accommodation: "weekly",
   experiences: "weekly",
+  velebitHikingRetreat: "monthly",
+  darkSkyStargazing: "monthly",
+  offGridMountainCabin: "monthly",
+  remoteWork: "monthly",
+  photographyRetreat: "monthly",
+  press: "monthly",
   gallery: "monthly",
   journal: "monthly",
   about: "monthly",
@@ -71,6 +110,12 @@ export const MAIN_NAV_ITEMS = [
 /** Secondary links shown in the footer. */
 export const FOOTER_NAV_PAGES: SitePageKey[] = [
   "goodToKnow",
+  "velebitHikingRetreat",
+  "darkSkyStargazing",
+  "offGridMountainCabin",
+  "remoteWork",
+  "photographyRetreat",
+  "press",
   "journal",
   "contact",
 ];
@@ -86,22 +131,19 @@ export const SITE_PAGE_SEGMENTS: Record<SitePageKey, string> = {
   hiking: "hiking",
   nearby: "nearby",
   journal: "journal",
+  darkSkyStargazing: "stargazing",
+  velebitHikingRetreat: "velebit-hiking-retreat",
+  offGridMountainCabin: "off-grid-mountain-cabin",
+  remoteWork: "remote-work",
+  photographyRetreat: "photography-retreat",
+  press: "press",
   contact: "contact",
 };
 
 /** Maps nav label keys in messages.ts */
 export const SITE_PAGE_NAV_KEYS: Record<
   SitePageKey,
-  | "home"
-  | "accommodation"
-  | "experiences"
-  | "about"
-  | "gallery"
-  | "goodToKnow"
-  | "hiking"
-  | "nearby"
-  | "journal"
-  | "contact"
+  keyof import("@/i18n/messages").Messages["nav"]
 > = {
   home: "home",
   accommodation: "accommodation",
@@ -112,6 +154,12 @@ export const SITE_PAGE_NAV_KEYS: Record<
   hiking: "hiking",
   nearby: "nearby",
   journal: "journal",
+  darkSkyStargazing: "darkSkyStargazing",
+  velebitHikingRetreat: "velebitHikingRetreat",
+  offGridMountainCabin: "offGridMountainCabin",
+  remoteWork: "remoteWork",
+  photographyRetreat: "photographyRetreat",
+  press: "press",
   contact: "contact",
 };
 
@@ -119,6 +167,7 @@ export const SITE_PAGE_NAV_KEYS: Record<
 export const LEGACY_ROUTE_REDIRECTS: Record<string, string> = {
   hiking: "experiences",
   nearby: "experiences",
+  "dark-sky-stargazing": "stargazing",
 };
 
 export function localePath(locale: Locale, page: SitePageKey): string {

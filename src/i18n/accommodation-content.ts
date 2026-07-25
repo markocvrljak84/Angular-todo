@@ -14,6 +14,8 @@ export type AccommodationPageContent = {
   theHouse: {
     title: string;
     paragraphs: [string, string];
+    featuresLabel: string;
+    features: string[];
     imageAlt: string;
   };
   spaces: {
@@ -44,6 +46,10 @@ export type AccommodationPageContent = {
     title: string;
     body: string;
   };
+  seoFaq: {
+    title: string;
+    items: { question: string; answer: string }[];
+  };
   cta: {
     headline: string;
     intro: string;
@@ -63,6 +69,15 @@ const en: AccommodationPageContent = {
     paragraphs: [
       "Built from local wood and surrounded by the landscapes of Velebit, Stars Peak is designed for a slower rhythm of life. Large windows frame the mountains, the fireplace becomes the heart of cooler evenings, and the outdoor kitchen invites you to spend most of the day outside.",
       "Rather than offering luxury through excess, the house focuses on comfort, simplicity and a close connection to nature.",
+    ],
+    featuresLabel: "In the house",
+    features: [
+      "Local wood throughout",
+      "Large windows to the mountains",
+      "Fireplace for cooler evenings",
+      "Outdoor kitchen for long days outside",
+      "Simple, uncluttered spaces",
+      "Private retreat for up to four",
     ],
     imageAlt: "Living room with fireplace and wooden stairs at Stars Peak",
   },
@@ -131,6 +146,31 @@ const en: AccommodationPageContent = {
     eyebrow: "A slower way to stay",
     title: "A slower way to stay",
     body: "There are no crowds here. No traffic. No noise. Only changing light, mountain air and enough time to enjoy both the peaks of Velebit and the Adriatic coast in a single day.",
+  },
+  seoFaq: {
+    title: "Frequently asked questions",
+    items: [
+      {
+        question: "How far is Stars Peak from the sea?",
+        answer:
+          "About a 30-minute drive to the Adriatic coast near Karlobag — mountain mornings and sea afternoons in the same day.",
+      },
+      {
+        question: "Can I hike directly from the cabin?",
+        answer:
+          "Yes. Several trails start nearby, including routes toward Bačić Kuk and forest paths around Bačić Duliba. GPX files and maps are available on the hiking pages.",
+      },
+      {
+        question: "Is Stars Peak suitable for stargazing?",
+        answer:
+          "Yes. Low light pollution above Bačić Duliba makes Stars Peak a strong dark-sky base for naked-eye stars and Milky Way nights on clear evenings.",
+      },
+      {
+        question: "Is Stars Peak an off-grid mountain cabin?",
+        answer:
+          "Yes. Solar power and rainwater systems support a comfortable off-grid stay, with modern essentials including reliable Wi‑Fi for remote work when needed.",
+      },
+    ],
   },
   cta: {
     headline: "Your stay begins here.",

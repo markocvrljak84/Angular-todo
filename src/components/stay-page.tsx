@@ -82,6 +82,12 @@ export function StayPage({ content, goodToKnow }: Props) {
                 {paragraph}
               </p>
             ))}
+            <p className="stay-house__features-label">{content.theHouse.featuresLabel}</p>
+            <ul className="stay-checklist">
+              {content.theHouse.features.map((feature) => (
+                <li key={feature}>{feature}</li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
@@ -180,6 +186,24 @@ export function StayPage({ content, goodToKnow }: Props) {
             {content.closing.title}
           </h2>
           <p className="stay-closing__body">{content.closing.body}</p>
+        </div>
+      </section>
+
+      <section className="flat-section flat-section--tint" aria-labelledby="stay-seo-faq-title">
+        <div className="flat-wrap flat-wrap--narrow">
+          <h2 id="stay-seo-faq-title" className="flat-section__title">
+            {content.seoFaq.title}
+          </h2>
+          <div className="faq__accordion">
+            {content.seoFaq.items.map((faq) => (
+              <details key={faq.question} className="faq__item">
+                <summary className="faq__summary">{faq.question}</summary>
+                <div className="faq__panel">
+                  <p className="faq__text">{faq.answer}</p>
+                </div>
+              </details>
+            ))}
+          </div>
         </div>
       </section>
 

@@ -46,7 +46,7 @@ export async function generateMetadata({
   const pageUrl = canonicalAbsoluteUrl(journalCategoryPath(locale, categoryId));
 
   return {
-    title: `${category.title} — Journal · Stars Peak`,
+    title: { absolute: `${category.title} — Journal · Stars Peak` },
     description: category.intro,
     alternates: { canonical: pageUrl },
     openGraph: {

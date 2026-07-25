@@ -14,6 +14,7 @@ export type AboutStoryContent = {
     label: string;
     linkText: string;
     href: string;
+    kitLabel: string;
   };
 };
 
@@ -66,6 +67,7 @@ const en: AboutStoryContent = {
     label: "Featured in the press",
     linkText: "Jutarnji list — Marko and Ljiljana’s Stars Peak story",
     href: JUTARNJI_ABOUT_ARTICLE_URL,
+    kitLabel: "Press kit & partnerships",
   },
 };
 
@@ -119,6 +121,7 @@ const hr: AboutStoryContent = {
     label: "U medijima",
     linkText: "Jutarnji list — Marko i Ljiljana stvorili dom iz snova na Velebitu",
     href: JUTARNJI_ABOUT_ARTICLE_URL,
+    kitLabel: "Press kit i partnerstva",
   },
 };
 
@@ -170,6 +173,7 @@ const de: AboutStoryContent = {
     label: "In den Medien",
     linkText: "Jutarnji list — Stars Peak auf dem Velebit",
     href: JUTARNJI_ABOUT_ARTICLE_URL,
+    kitLabel: "Presskit & Partnerschaften",
   },
 };
 
@@ -226,6 +230,7 @@ const fr: AboutStoryContent = {
     label: "Dans la presse",
     linkText: "Jutarnji list — l'histoire de Stars Peak",
     href: JUTARNJI_ABOUT_ARTICLE_URL,
+    kitLabel: "Kit presse & partenariats",
   },
 };
 
@@ -277,6 +282,7 @@ const it: AboutStoryContent = {
     label: "Sui media",
     linkText: "Jutarnji list — la storia di Stars Peak",
     href: JUTARNJI_ABOUT_ARTICLE_URL,
+    kitLabel: "Media kit e partnership",
   },
 };
 

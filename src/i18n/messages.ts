@@ -22,6 +22,12 @@ export type Messages = {
     hiking: string;
     nearby: string;
     journal: string;
+    darkSkyStargazing: string;
+    velebitHikingRetreat: string;
+    offGridMountainCabin: string;
+    remoteWork: string;
+    photographyRetreat: string;
+    press: string;
     goodToKnow: string;
     contact: string;
   };
@@ -132,9 +138,9 @@ export type Messages = {
 
 const en: Messages = {
   meta: {
-    siteName: "Velebit mountain chalet Stars Peak – Croatia",
+    siteName: "Stars Peak — Mountain Retreat on Velebit, Croatia",
     siteDescription:
-      "Wake up beneath Bačić Kuk, swim the Adriatic before lunch, stargaze on Velebit. Stars Peak — mountain experience in Bačić Duliba, Croatia.",
+      "Private mountain cabin in Bačić Duliba on Velebit. Hiking, Adriatic day trips and stargazing from Stars Peak, Croatia.",
   },
   header: {
     bookCta: "Book your stay",
@@ -158,6 +164,12 @@ const en: Messages = {
     hiking: "Hiking",
     nearby: "Near places",
     journal: "Journal",
+    darkSkyStargazing: "Stargazing",
+    velebitHikingRetreat: "Hiking retreat",
+    offGridMountainCabin: "Off-grid cabin",
+    remoteWork: "Remote work",
+    photographyRetreat: "Photography",
+    press: "Press",
     goodToKnow: "Good to know",
     contact: "Contact",
   },
@@ -355,6 +367,12 @@ const hr: Messages = {
     hiking: "Planinarenje",
     nearby: "U blizini",
     journal: "Journal",
+    darkSkyStargazing: "Zvijezde",
+    velebitHikingRetreat: "Hiking retreat",
+    offGridMountainCabin: "Off-grid kuća",
+    remoteWork: "Remote work",
+    photographyRetreat: "Fotografija",
+    press: "Press",
     goodToKnow: "Dobro za znati",
     contact: "Kontakt",
   },
@@ -552,6 +570,12 @@ const de: Messages = {
     hiking: "Wandern",
     nearby: "In der Nähe",
     journal: "Journal",
+    darkSkyStargazing: "Sterne",
+    velebitHikingRetreat: "Wanderretreat",
+    offGridMountainCabin: "Off-Grid Hütte",
+    remoteWork: "Remote Work",
+    photographyRetreat: "Fotografie",
+    press: "Presse",
     goodToKnow: "Gut zu wissen",
     contact: "Kontakt",
   },
