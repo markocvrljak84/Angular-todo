@@ -3111,6 +3111,48 @@ body {
   color: var(--muted);
 }
 
+.site-footer__social {
+  margin-top: 1.25rem;
+}
+
+.social-links__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1.15rem;
+}
+
+.social-links__link {
+  font-family: var(--font-condensed);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--facility-icon);
+  padding-bottom: 0.1rem;
+}
+
+.social-links__link:hover {
+  color: var(--facility-icon);
+}
+
+.contact-editorial__social {
+  margin-top: 1.5rem;
+}
+
+.contact-editorial__social-label {
+  margin: 0 0 0.65rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--line-strong);
+}
+
 .site-footer__heading {
   margin: 0 0 0.85rem;
   font-family: var(--font-condensed);
@@ -4886,9 +4928,74 @@ code {
   color: var(--line-strong);
 }
 
-.press-page__email {
+.not-found__code {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-condensed);
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-weight: 400;
+  letter-spacing: var(--tracking-display);
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--line-strong);
+}
+
+.not-found__links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.not-found__links a {
+  font-family: var(--font-condensed);
+  font-size: clamp(1.15rem, 2.5vw, 1.35rem);
+  font-weight: 500;
+  letter-spacing: var(--tracking-display);
+  text-transform: uppercase;
   color: var(--ink);
-  font-size: 1.05rem;
+  text-decoration: none;
+  border-bottom: 1px solid var(--facility-icon);
+  padding-bottom: 0.2rem;
+}
+
+.not-found__links a:hover {
+  color: var(--facility-icon);
+}
+
+.html-sitemap__group + .html-sitemap__group {
+  margin-top: clamp(2.5rem, 5vw, 3.5rem);
+  padding-top: clamp(2rem, 4vw, 2.75rem);
+  border-top: 1px solid var(--line);
+}
+
+.html-sitemap__list {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.html-sitemap__list a {
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 0.975rem;
+  line-height: 1.45;
+  border-bottom: 1px solid transparent;
+}
+
+.html-sitemap__list a:hover {
+  color: var(--facility-icon);
+  border-bottom-color: var(--facility-icon);
+}
+
+.page-header--start {
+  text-align: left;
+}
+
+.page-header--start .page-header__intro {
+  margin-left: 0;
 }
 
 .experiences-food__list {

@@ -28,6 +28,7 @@ export type Messages = {
     remoteWork: string;
     photographyRetreat: string;
     press: string;
+    htmlSitemap: string;
     goodToKnow: string;
     contact: string;
   };
@@ -38,6 +39,7 @@ export type Messages = {
     rights: string;
     exploreTitle: string;
     contactTitle: string;
+    socialTitle: string;
   };
   home: {
     heroBadge: string;
@@ -105,6 +107,7 @@ export type Messages = {
     mapHeading: string;
     mapIframeTitle: string;
     mapOpenGoogle: string;
+    socialLabel: string;
   };
   contactForm: {
     title: string;
@@ -170,6 +173,7 @@ const en: Messages = {
     remoteWork: "Remote work",
     photographyRetreat: "Photography",
     press: "Press",
+    htmlSitemap: "Site map",
     goodToKnow: "Good to know",
     contact: "Contact",
   },
@@ -180,6 +184,7 @@ const en: Messages = {
     rights: "© Velebit mountain chalet Stars Peak",
     exploreTitle: "Explore",
     contactTitle: "Contact us",
+    socialTitle: "Follow Stars Peak",
   },
   home: {
     heroBadge: "Velebit mountain chalet Stars Peak",
@@ -306,6 +311,7 @@ const en: Messages = {
     mapHeading: "Map",
     mapIframeTitle: "Google Map — Došen Dabar 1, Croatia",
     mapOpenGoogle: "Open in Google Maps to find directions",
+    socialLabel: "Social",
   },
   contactForm: {
     title: "Send us a message",
@@ -373,6 +379,7 @@ const hr: Messages = {
     remoteWork: "Remote work",
     photographyRetreat: "Fotografija",
     press: "Press",
+    htmlSitemap: "Mapa stranica",
     goodToKnow: "Dobro za znati",
     contact: "Kontakt",
   },
@@ -383,6 +390,7 @@ const hr: Messages = {
     rights: "© Velebit mountain chalet Stars Peak",
     exploreTitle: "Poveznice",
     contactTitle: "Kontakt",
+    socialTitle: "Pratite Stars Peak",
   },
   home: {
     heroBadge: "Vrh · More · Zvijezde",
@@ -509,6 +517,7 @@ const hr: Messages = {
     mapHeading: "Karta",
     mapIframeTitle: "Google karta — Došen Dabar 1, Hrvatska",
     mapOpenGoogle: "Otvori u Google Kartama za upute do lokacije",
+    socialLabel: "Društvene mreže",
   },
   contactForm: {
     title: "Pošaljite nam poruku",
@@ -576,6 +585,7 @@ const de: Messages = {
     remoteWork: "Remote Work",
     photographyRetreat: "Fotografie",
     press: "Presse",
+    htmlSitemap: "Sitemap",
     goodToKnow: "Gut zu wissen",
     contact: "Kontakt",
   },
@@ -586,6 +596,7 @@ const de: Messages = {
     rights: "© Velebit mountain chalet Stars Peak",
     exploreTitle: "Navigation",
     contactTitle: "Kontakt",
+    socialTitle: "Stars Peak folgen",
   },
   home: {
     heroBadge: "Gipfel · Meer · Sterne",
@@ -712,6 +723,7 @@ const de: Messages = {
     mapHeading: "Karte",
     mapIframeTitle: "Google Karte — Došen Dabar 1, Kroatien",
     mapOpenGoogle: "In Google Maps öffnen, um die Route zu finden",
+    socialLabel: "Social Media",
   },
   contactForm: {
     title: "Nachricht senden",

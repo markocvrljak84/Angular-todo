@@ -6,6 +6,7 @@ import {
 } from "next/font/google";
 import { HERO_LCP_PRELOAD_SRC, HERO_LCP_SRCSET } from "@/config/site-images";
 import { getGeoMetaOther } from "@/config/site-location";
+import { SITE_SOCIAL_PROFILES } from "@/config/site-social";
 import { getMetadataBase } from "@/lib/site-url";
 import "./globals.css";
 
@@ -87,6 +88,9 @@ export default function RootLayout({
           fetchPriority="high"
         />
         <link rel="preconnect" href="https://www.google.com" />
+        {SITE_SOCIAL_PROFILES.map((profile) => (
+          <link key={profile.id} rel="me" href={profile.href} />
+        ))}
       </head>
       <body>{children}</body>
     </html>

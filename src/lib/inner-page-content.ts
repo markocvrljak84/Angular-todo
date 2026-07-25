@@ -14,6 +14,7 @@ import {
   getVelebitHikingRetreatPageContent,
 } from "@/i18n/topic-pages";
 import { getPressPageContent } from "@/i18n/press-content";
+import { getUtilityPagesContent } from "@/i18n/utility-pages";
 
 export type InnerPageKey = Exclude<SitePageKey, "home">;
 
@@ -81,6 +82,11 @@ export function getPageHeaderContent(
       return {
         title: getPressPageContent(locale).title,
         intro: getPressPageContent(locale).intro,
+      };
+    case "htmlSitemap":
+      return {
+        title: getUtilityPagesContent(locale).htmlSitemap.title,
+        intro: getUtilityPagesContent(locale).htmlSitemap.intro,
       };
     case "contact":
       return { title: t.contact.title };

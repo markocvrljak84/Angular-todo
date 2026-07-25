@@ -31,6 +31,7 @@
         "remoteWork": "Remote work",
         "photographyRetreat": "Fotografia",
         "press": "Press",
+        "htmlSitemap": "Mappa del sito",
         "goodToKnow": "Da sapere",
         "contact": "Contatti"
     },
@@ -42,7 +43,8 @@
         "locationLine": "Velebit mountain chalet Stars Peak",
         "rights": "© Velebit mountain chalet stars peak",
         "exploreTitle": "Esplora",
-        "contactTitle": "Contattaci"
+        "contactTitle": "Contattaci",
+        "socialTitle": "Segui Stars Peak"
     },
     "home": {
         "heroBadge": "Cima · Mare · Stelle",
@@ -295,7 +297,8 @@
         "detailsHeading": "Prenotazioni e informazioni",
         "mapHeading": "Mappa",
         "mapIframeTitle": "Google Maps — Došen Dabar 1, Croazia",
-        "mapOpenGoogle": "Apri in Google Maps per le indicazioni stradali"
+        "mapOpenGoogle": "Apri in Google Maps per le indicazioni stradali",
+        "socialLabel": "Social"
     },
     "contactForm": {
         "title": "Inviaci un messaggio",

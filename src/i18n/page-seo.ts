@@ -94,6 +94,11 @@ const en: Record<SitePageKey, PageSeo> = {
     description:
       "Press kit for Stars Peak on Velebit: Jutarnji feature, facts for editors, and collaboration notes for hiking blogs, photographers and outdoor media.",
   },
+  htmlSitemap: {
+    title: "Site Map | Stars Peak Mountain Cabin on Velebit",
+    description:
+      "Browse all Stars Peak pages — accommodation, hiking retreat, stargazing, journal, press and practical information for your Velebit stay.",
+  },
   contact: {
     title:
       "Book Stars Peak | Contact & Mountain Cabin Booking in Croatia",
@@ -192,6 +197,11 @@ const hr: Record<SitePageKey, PageSeo> = {
       "Press i partneri | Stars Peak na Velebitu – media kit i suradnje",
     description:
       "Press kit za Stars Peak: Jutarnji, činjenice za urednike i suradnja s planinarskim blogovima, fotografima i outdoor medijima.",
+  },
+  htmlSitemap: {
+    title: "Mapa stranica | Stars Peak planinska kuća na Velebitu",
+    description:
+      "Pregled svih stranica Stars Peaka — smještaj, hiking retreat, zvijezde, journal, press i praktične informacije.",
   },
   contact: {
     title:
@@ -292,6 +302,11 @@ const de: Record<SitePageKey, PageSeo> = {
     description:
       "Presskit für Stars Peak: Jutarnji-Beitrag, Fakten für Redaktionen und Kooperationen mit Wanderblogs, Fotografen und Outdoor-Medien.",
   },
+  htmlSitemap: {
+    title: "Sitemap | Stars Peak Berghütte am Velebit",
+    description:
+      "Alle Stars-Peak-Seiten — Unterkunft, Wanderretreat, Sterne, Journal, Presse und praktische Infos.",
+  },
   contact: {
     title:
       "Stars Peak buchen | Kontakt & Ferienhaus-Buchung in Kroatien",
@@ -391,6 +406,11 @@ const fr: Record<SitePageKey, PageSeo> = {
     description:
       "Kit presse Stars Peak : article Jutarnji, faits pour rédactions et collaborations blogs randonnée, photographes et médias outdoor.",
   },
+  htmlSitemap: {
+    title: "Plan du site | Chalet Stars Peak sur le Velebit",
+    description:
+      "Toutes les pages Stars Peak — hébergement, randonnée, étoiles, journal, presse et infos pratiques.",
+  },
   contact: {
     title:
       "Réserver Stars Peak | Contact & réservation chalet en Croatie",
@@ -489,6 +509,11 @@ const it: Record<SitePageKey, PageSeo> = {
       "Press & partner | Stars Peak sul Velebit – media kit e collaborazioni",
     description:
       "Media kit Stars Peak: articolo Jutarnji, fatti per redazioni e collaborazioni con blog di trekking, fotografi e media outdoor.",
+  },
+  htmlSitemap: {
+    title: "Mappa del sito | Chalet Stars Peak sul Velebit",
+    description:
+      "Tutte le pagine Stars Peak — alloggio, hiking retreat, stelle, journal, press e info pratiche.",
   },
   contact: {
     title:

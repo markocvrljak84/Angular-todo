@@ -1,6 +1,7 @@
 import type { Locale } from "@/i18n/config";
 import type { Messages } from "@/i18n/messages";
 import { BOOKING_URL, SITE_CONTACT } from "@/config/site-contact";
+import { getSocialSameAsUrls } from "@/config/site-social";
 import { localePath } from "@/config/site-routes";
 import {
   VACATION_RENTAL_IDENTIFIER,
@@ -59,7 +60,11 @@ export function buildVacationRentalJsonLd(locale: Locale, messages: Messages) {
     keywords: keywords.join(", "),
     address,
     knowsLanguage: Object.values(HOST_LANGUAGES),
-    sameAs: [BOOKING_URL, canonicalAbsoluteUrl("/")],
+    sameAs: [
+      BOOKING_URL,
+      canonicalAbsoluteUrl("/"),
+      ...getSocialSameAsUrls(),
+    ],
     containsPlace: {
       "@type": "Accommodation",
       additionalType: "EntirePlace",

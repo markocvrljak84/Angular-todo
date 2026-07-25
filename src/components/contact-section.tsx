@@ -1,5 +1,6 @@
 import type { Messages } from "@/i18n/messages";
 import { ContactForm } from "@/components/contact-form";
+import { SocialLinks } from "@/components/social-links";
 import { getGoogleMapsUrls } from "@/config/contact-map";
 import { BOOKING_URL, SITE_CONTACT, whatsappHref } from "@/config/site-contact";
 import type { Locale } from "@/i18n/config";
@@ -69,6 +70,11 @@ export function ContactSection({ t, locale }: Props) {
           <p className="contact-editorial__line">
             {t.contact.addressLabel}: {SITE_CONTACT.address}
           </p>
+
+          <div className="contact-editorial__social">
+            <p className="contact-editorial__social-label">{t.contact.socialLabel}</p>
+            <SocialLinks ariaLabel={t.footer.socialTitle} />
+          </div>
         </div>
 
         <ContactForm

@@ -18,6 +18,7 @@ export const SITE_PAGE_KEYS = [
   "remoteWork",
   "photographyRetreat",
   "press",
+  "htmlSitemap",
   "contact",
 ] as const;
 
@@ -49,6 +50,7 @@ export const INDEXABLE_PAGE_KEYS = [
   "remoteWork",
   "photographyRetreat",
   "press",
+  "htmlSitemap",
   "about",
   "gallery",
   "goodToKnow",
@@ -69,6 +71,7 @@ export const SITEMAP_PAGE_PRIORITY: Record<IndexablePageKey, number> = {
   remoteWork: 0.88,
   photographyRetreat: 0.88,
   press: 0.7,
+  htmlSitemap: 0.4,
   gallery: 0.85,
   journal: 0.85,
   about: 0.8,
@@ -89,6 +92,7 @@ export const SITEMAP_CHANGE_FREQUENCY: Record<
   remoteWork: "monthly",
   photographyRetreat: "monthly",
   press: "monthly",
+  htmlSitemap: "monthly",
   gallery: "monthly",
   journal: "monthly",
   about: "monthly",
@@ -116,6 +120,7 @@ export const FOOTER_NAV_PAGES: SitePageKey[] = [
   "remoteWork",
   "photographyRetreat",
   "press",
+  "htmlSitemap",
   "journal",
   "contact",
 ];
@@ -137,6 +142,7 @@ export const SITE_PAGE_SEGMENTS: Record<SitePageKey, string> = {
   remoteWork: "remote-work",
   photographyRetreat: "photography-retreat",
   press: "press",
+  htmlSitemap: "sitemap",
   contact: "contact",
 };
 
@@ -160,6 +166,7 @@ export const SITE_PAGE_NAV_KEYS: Record<
   remoteWork: "remoteWork",
   photographyRetreat: "photographyRetreat",
   press: "press",
+  htmlSitemap: "htmlSitemap",
   contact: "contact",
 };
 

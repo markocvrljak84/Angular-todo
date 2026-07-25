@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Locale } from "@/i18n/config";
 import type { Messages } from "@/i18n/messages";
+import { SocialLinks } from "@/components/social-links";
 import { SITE_CONTACT, telHref } from "@/config/site-contact";
 import {
   FOOTER_NAV_PAGES,
@@ -22,6 +23,10 @@ export function SiteFooter({ t, locale }: { t: Messages; locale: Locale }) {
             <strong className="site-footer__brand">{SITE_CONTACT.brandMark}</strong>
             <p className="site-footer__tagline">{t.footer.tagline}</p>
             <p className="site-footer__location">{t.footer.locationLine}</p>
+            <SocialLinks
+              ariaLabel={t.footer.socialTitle}
+              className="site-footer__social"
+            />
           </div>
           <div className="site-footer__nav-col">
             <h2 className="site-footer__heading">{t.footer.exploreTitle}</h2>

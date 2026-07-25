@@ -110,6 +110,9 @@ const byLocale: Record<Locale, PressPageContent> = {
       "Capacity: up to 4 guests",
       "Themes: hiking, dark skies, off-grid living, remote work, photography",
       `Contact: ${SITE_CONTACT.email} · ${SITE_CONTACT.phone}`,
+      "Instagram: https://www.instagram.com/stars.peak/",
+      "Facebook: https://www.facebook.com/profile.php?id=61560656405912",
+      "Pinterest: https://www.pinterest.com/velebitstarspeak/",
     ],
     outreachTitle: "Request a mention or visit",
     outreachBody:
@@ -188,6 +191,9 @@ const byLocale: Record<Locale, PressPageContent> = {
       "Kapacitet: do 4 gosta",
       "Teme: planinarenje, zvijezde, off-grid, remote work, fotografija",
       `Kontakt: ${SITE_CONTACT.email} · ${SITE_CONTACT.phone}`,
+      "Instagram: https://www.instagram.com/stars.peak/",
+      "Facebook: https://www.facebook.com/profile.php?id=61560656405912",
+      "Pinterest: https://www.pinterest.com/velebitstarspeak/",
     ],
     outreachTitle: "Zahtjev za objavu ili posjet",
     outreachBody:
@@ -266,6 +272,9 @@ const byLocale: Record<Locale, PressPageContent> = {
       "Kapazität: bis 4 Gäste",
       "Themen: Wandern, Sterne, Off-Grid, Remote Work, Fotografie",
       `Kontakt: ${SITE_CONTACT.email} · ${SITE_CONTACT.phone}`,
+      "Instagram: https://www.instagram.com/stars.peak/",
+      "Facebook: https://www.facebook.com/profile.php?id=61560656405912",
+      "Pinterest: https://www.pinterest.com/velebitstarspeak/",
     ],
     outreachTitle: "Erwähnung oder Besuch anfragen",
     outreachBody:
@@ -344,6 +353,9 @@ const byLocale: Record<Locale, PressPageContent> = {
       "Capacité : jusqu’à 4 personnes",
       "Thèmes : randonnée, étoiles, off-grid, télétravail, photo",
       `Contact : ${SITE_CONTACT.email} · ${SITE_CONTACT.phone}`,
+      "Instagram: https://www.instagram.com/stars.peak/",
+      "Facebook: https://www.facebook.com/profile.php?id=61560656405912",
+      "Pinterest: https://www.pinterest.com/velebitstarspeak/",
     ],
     outreachTitle: "Demander une mention ou une visite",
     outreachBody:
@@ -422,6 +434,9 @@ const byLocale: Record<Locale, PressPageContent> = {
       "Capacità: fino a 4 ospiti",
       "Temi: trekking, stelle, off-grid, remote work, fotografia",
       `Contatto: ${SITE_CONTACT.email} · ${SITE_CONTACT.phone}`,
+      "Instagram: https://www.instagram.com/stars.peak/",
+      "Facebook: https://www.facebook.com/profile.php?id=61560656405912",
+      "Pinterest: https://www.pinterest.com/velebitstarspeak/",
     ],
     outreachTitle: "Richiedere una menzione o una visita",
     outreachBody:

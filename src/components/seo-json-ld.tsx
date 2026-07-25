@@ -2,6 +2,7 @@ import type { Locale } from "@/i18n/config";
 import type { Messages } from "@/i18n/messages";
 import { JsonLdScript } from "@/components/json-ld-script";
 import { localePath } from "@/config/site-routes";
+import { getSocialSameAsUrls } from "@/config/site-social";
 import { buildVacationRentalJsonLd } from "@/lib/structured-data/build-vacation-rental";
 import { canonicalAbsoluteUrl } from "@/lib/site-url";
 
@@ -22,6 +23,7 @@ export function SeoJsonLd({ locale, messages: m }: Props) {
       description: m.meta.siteDescription,
       inLanguage: "en-US",
       publisher: { "@id": `${homeUrl}#vacation-rental` },
+      sameAs: getSocialSameAsUrls(),
     },
     buildVacationRentalJsonLd(locale, m),
   ];
