@@ -74,6 +74,7 @@ export type Messages = {
   about: {
     title: string;
     lead: string;
+    p1Heading: string;
     p1: string;
     hostsNote: string;
     p2: string;
@@ -93,6 +94,7 @@ export type Messages = {
   };
   contact: {
     title: string;
+    headerIntro: string;
     lead: string;
     introPrefix: string;
     introBookingLink: string;
@@ -271,6 +273,7 @@ const en: Messages = {
     title: "About this place",
     lead:
       "High on Velebit, Marko and Ljiljana turned a wooden chalet into Stars Peak — an unusual, deeply personal retreat with views of Bačić Kuk ridge and the Adriatic coast is half an hour away.",
+    p1Heading: "From dream to mountain home",
     p1:
       "What began as a decade-long dream became three years of hands-on work: stripping back clutter, opening the space to light and wood, and shaping a slower rhythm of life on the Velebit mountain.",
     hostsNote:
@@ -296,6 +299,8 @@ const en: Messages = {
   },
   contact: {
     title: "Contact",
+    headerIntro:
+      "First contact often begins with a simple question: what lies behind the Velebit peaks and forests?",
     lead:
       "We are happy to help with availability, directions and planning your stay on Velebit. Reach us by email, phone or WhatsApp — or book directly online.",
     introPrefix: "Reach us by phone or email, or visit link for ",
@@ -477,6 +482,7 @@ const hr: Messages = {
     title: "O ovom mjestu",
     lead:
       "Visoko na Velebitu, Marko i Ljiljana pretvorili su drvenu kuću u Stars Peak — neobično, nesvakidašnje utočište s pogledom na Bačić kuk.",
+    p1Heading: "Od sna do planinske kuće",
     p1:
       "Ono što je započelo kao desetogodišnji san, pretvorilo se u tri godine predanog rada. Korak po korak uklanjali smo suvišno, otvarali prostor svjetlu, drvu i prirodi te stvarali mjesto koje poziva na sporiji, mirniji ritam života u srcu Velebita.",
     hostsNote:
@@ -502,6 +508,8 @@ const hr: Messages = {
   },
   contact: {
     title: "Kontakt",
+    headerIntro:
+      "Prvi kontakt često počinje jednostavnim pitanjem: što se krije iza velebitskih vrhova i šuma?",
     lead:
       "Rado ćemo vam pomoći oko dostupnosti, uputa za dolazak i planiranja boravka na Velebitu. Javite nam se e-poštom, telefonom ili WhatsAppom — ili rezervirajte izravno online.",
     introPrefix: "Javite nam se telefonom ili e-poštom ili posjetite link za ",
@@ -683,6 +691,7 @@ const de: Messages = {
     title: "Über dieses Haus",
     lead:
       "Hoch am Velebit haben Marko und Ljiljana eine Holzhütte in Stars Peak verwandelt — ein ungewöhnliches, persönliches Refugium mit Blick auf Bačić Kuk und Adria in einer halben Stunde.",
+    p1Heading: "Vom Traum zum Berghaus",
     p1:
       "Aus einem jahrzehntelangen Traum wurden drei Jahre Eigenarbeit: weniger Ballast, mehr Licht und Holz, ein langsamerer Rhythmus am Berg.",
     hostsNote:
@@ -708,6 +717,8 @@ const de: Messages = {
   },
   contact: {
     title: "Kontakt",
+    headerIntro:
+      "Der erste Kontakt beginnt oft mit einer einfachen Frage: was liegt hinter den Gipfeln und Wäldern des Velebit?",
     lead:
       "Wir helfen Ihnen gern bei Verfügbarkeit, Anfahrt und Planung Ihres Aufenthalts am Velebit. Erreichen Sie uns per E-Mail, Telefon oder WhatsApp — oder buchen Sie direkt online.",
     introPrefix: "Erreichen Sie uns telefonisch oder per E-Mail, oder besuchen Sie den Link für ",

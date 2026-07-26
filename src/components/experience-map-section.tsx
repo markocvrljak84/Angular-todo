@@ -15,7 +15,7 @@ type Props = {
 
 export function ExperienceMapSection({ content, mountainImage, seaImage, id = "experience-map" }: Props) {
   return (
-    <section id={id} className="flat-section" aria-labelledby="experience-map-title">
+    <section id={id} className="flat-section flat-section--under-header" aria-labelledby="experience-map-title">
       <div className="flat-wrap">
         <h2 id="experience-map-title" className="flat-section__title">
           {content.title}

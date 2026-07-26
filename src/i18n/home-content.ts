@@ -23,10 +23,15 @@ export type HomeContent = {
     ctaBook: string;
     ctaExperiences: string;
   };
+  welcome: {
+    title: string;
+    line: string;
+    artLabel: string;
+  };
   whySpecial: {
     title: string;
     intro: string;
-    cards: { title: string; body: string; imageAlt: string }[];
+    cards: { title: string; body: string; imageAlt: string; ctaLabel: string }[];
   };
   editorial: {
     title: string;
@@ -36,6 +41,7 @@ export type HomeContent = {
   };
   accommodation: {
     title: string;
+    eyebrow: string;
     lead: string;
     imageAlt: string;
     items: string[];
@@ -72,6 +78,11 @@ const en: HomeContent = {
     ctaBook: "Book your stay",
     ctaExperiences: "See experiences",
   },
+  welcome: {
+    title: "Into Velebit wilderness",
+    line: "A quiet house between peaks and sky",
+    artLabel: "Etching-style illustration of a Velebit brown bear",
+  },
   whySpecial: {
     title: "Three landscapes. One stay",
     intro:
@@ -79,18 +90,21 @@ const en: HomeContent = {
     cards: [
       {
         title: "Mountain",
-        body: "Wake up under the peaks of Velebit. Trails begin just beyond the doorstep, leading towards Bačić Kuk, the Premužić Trail and Dabarski Kukovi.",
+        body: "Wake up under the peaks of Velebit. Trails begin just from the doorstep, leading towards your next adventure.",
         imageAlt: "Panoramic view from a Velebit summit over forest ridges and the distant Adriatic",
+        ctaLabel: "Hiking on Velebit",
       },
       {
         title: "Sea",
         body: "The Adriatic coast is only half an hour away, offering a rare balance of mountain and sea in a single day.",
         imageAlt: "Zavratnica cove on the Adriatic coast",
+        ctaLabel: "Sea & nearby",
       },
       {
         title: "Stars",
         body: "After sunset, silence settles across the ridge and moon and the stars becomes the brightest light in the landscape.",
         imageAlt: "Milky Way above the silhouette of Velebit at night",
+        ctaLabel: "Stargazing",
       },
     ],
   },
@@ -125,6 +139,7 @@ const en: HomeContent = {
   },
   accommodation: {
     title: "Designed for quiet living",
+    eyebrow: "The chalet",
     lead:
       "Built for slow mornings, long evenings and life outdoors. Everything else is intentionally simple. Check availability and book your stay online.",
     imageAlt: "Dining table set for breakfast",
@@ -205,6 +220,11 @@ const hr: HomeContent = {
     ctaBook: "Rezervirajte boravak",
     ctaExperiences: "Pogledaj doživljaje",
   },
+  welcome: {
+    title: "U divljinu Velebita",
+    line: "Tiha kuća između vrhova i neba",
+    artLabel: "Ilustracija velebitskog mrkog medvjeda u stilu bakropisa",
+  },
   whySpecial: {
     title: "Zašto je ovo mjesto posebno",
     intro:
@@ -214,16 +234,19 @@ const hr: HomeContent = {
         title: "Planina",
         body: "Bačić kuk, Premužićeva staza i Dabarski kukovi — započnite planinarenje Velebitom stazama nadomak kuće.",
         imageAlt: "Panoramski pogled s vrha Velebita na zelene grebene i daleki Jadran",
+        ctaLabel: "Planinarenje Velebitom",
       },
       {
         title: "More",
         body: "Karlobag, Zavratnica i Pag su poznati po kamenitim krajolicima, plažama, paškoj ovci i siru. Mostom povezan s kopnom — idealno za jednodnevni izlet s Stars Peaka — jutro na planini, popodne u moru.",
         imageAlt: "Uvala Zavratnica na jadranskoj obali",
+        ctaLabel: "More i okolica",
       },
       {
         title: "Zvijezde",
         body: "Bez svjetlosnog onečišćenja — Bistro noćno nebo, zvijezde i tišina grebena nakon mraka.",
         imageAlt: "Mliječni put iznad siluete Velebita noću",
+        ctaLabel: "Zvjezdano nebo",
       },
     ],
   },
@@ -258,6 +281,7 @@ const hr: HomeContent = {
   },
   accommodation: {
     title: "Smještaj ukratko",
+    eyebrow: "Kuća",
     lead:
       "Privatna drvena kuća za do četiri gosta — dnevni boravak s kaminom, vanjska kuhinja i planinska okolica oko Bačić kuka. Provjerite dostupnost i rezervirajte boravak online.",
     imageAlt: "Blagovaonski stol postavljen za doručak",
@@ -313,6 +337,11 @@ const de: HomeContent = {
     ctaBook: "Aufenthalt buchen",
     ctaExperiences: "Erlebnisse ansehen",
   },
+  welcome: {
+    title: "In die Wildnis des Velebit",
+    line: "Ein stilles Haus zwischen Gipfeln und Himmel",
+    artLabel: "Radierung eines Velebit-Braunbären",
+  },
   whySpecial: {
     title: "Warum dieser Ort besonders ist",
     intro:
@@ -322,16 +351,19 @@ const de: HomeContent = {
         title: "Berg",
         body: "Bačić Kuk, Premužić-Weg und Dabarski kukovi — klassisches Velebit-Wandern ab der Haustür.",
         imageAlt: "Panoramablick vom Velebit-Gipfel über bewaldete Grate und die ferne Adria",
+        ctaLabel: "Wandern am Velebit",
       },
       {
         title: "Meer",
         body: "Karlobag, Zavratnica und Pag in einer halben Stunde — Bergmorgen, Adria-Nachmittag.",
         imageAlt: "Bucht Zavratnica an der Adria",
+        ctaLabel: "Meer & Umgebung",
       },
       {
         title: "Sterne",
         body: "Keine Lichtverschmutzung — Milchstraße, Hängematten und Grat-Stille.",
         imageAlt: "Milchstraße über der Silhouette des Velebit bei Nacht",
+        ctaLabel: "Sternenhimmel",
       },
     ],
   },
@@ -366,6 +398,7 @@ const de: HomeContent = {
   },
   accommodation: {
     title: "Ihr Aufenthalt auf einen Blick",
+    eyebrow: "Die Hütte",
     lead:
       "Privates Holzhaus für bis zu vier Gäste — Wohnzimmer mit Kamin, Außenküche und Berglandschaft um Bačić Kuk. Verfügbarkeit prüfen und Ihren Aufenthalt online buchen.",
     imageAlt: "Gedeckter Esstisch zum Frühstück",
@@ -434,6 +467,11 @@ const fr: HomeContent = {
     ctaBook: "Réserver votre séjour",
     ctaExperiences: "Voir les expériences",
   },
+  welcome: {
+    title: "Dans la nature sauvage du Velebit",
+    line: "Une maison tranquille entre sommets et ciel",
+    artLabel: "Gravure d'un ours brun du Velebit",
+  },
   whySpecial: {
     title: "Pourquoi cet endroit est unique",
     intro:
@@ -443,16 +481,19 @@ const fr: HomeContent = {
         title: "Montagne",
         body: "Bačić Kuk, sentier Premužić et Dabarski kukovi — randonnée classique du Velebit.",
         imageAlt: "Vue panoramique depuis un sommet du Velebit sur les crêtes forestières et l'Adriatique lointaine",
+        ctaLabel: "Randonnée sur le Velebit",
       },
       {
         title: "Mer",
         body: "Karlobag, Zavratnica et Pag à une demi-heure — matin montagne, après-midi mer.",
         imageAlt: "Crique de Zavratnica sur l'Adriatique",
+        ctaLabel: "Mer & environs",
       },
       {
         title: "Étoiles",
         body: "Pas de pollution lumineuse — Voie lactée et silence des crêtes.",
         imageAlt: "Voie lactée au-dessus de la silhouette du Velebit la nuit",
+        ctaLabel: "Ciel étoilé",
       },
     ],
   },
@@ -487,6 +528,7 @@ const fr: HomeContent = {
   },
   accommodation: {
     title: "Votre séjour en bref",
+    eyebrow: "Le chalet",
     lead:
       "Chalet en bois privé pour quatre personnes — salon avec cheminée, cuisine extérieure et nature montagneuse autour de Bačić Kuk. Consultez les disponibilités et réservez votre séjour en ligne.",
     imageAlt: "Dining table set for breakfast",
@@ -555,6 +597,11 @@ const it: HomeContent = {
     ctaBook: "Prenota il soggiorno",
     ctaExperiences: "Scopri le esperienze",
   },
+  welcome: {
+    title: "Nella natura selvaggia del Velebit",
+    line: "Una casa quieta tra cime e cielo",
+    artLabel: "Incisione di un orso bruno del Velebit",
+  },
   whySpecial: {
     title: "Perché questo posto è speciale",
     intro:
@@ -564,16 +611,19 @@ const it: HomeContent = {
         title: "Montagna",
         body: "Bačić Kuk, sentiero Premužić e Dabarski kukovi — escursioni classiche del Velebit.",
         imageAlt: "Vista panoramica da una vetta del Velebit sulle creste boschive e l'Adriatico in lontananza",
+        ctaLabel: "Escursioni sul Velebit",
       },
       {
         title: "Mare",
         body: "Karlobag, Zavratnica e Pag a mezz'ora — mattina in montagna, pomeriggio al mare.",
         imageAlt: "Baia di Zavratnica sull'Adriatico",
+        ctaLabel: "Mare e dintorni",
       },
       {
         title: "Stelle",
         body: "Nessun inquinamento luminoso — Via Lattea e silenzio della cresta.",
         imageAlt: "Via Lattea sopra la silhouette del Velebit di notte",
+        ctaLabel: "Cielo stellato",
       },
     ],
   },
@@ -608,6 +658,7 @@ const it: HomeContent = {
   },
   accommodation: {
     title: "Il soggiorno in breve",
+    eyebrow: "Il chalet",
     lead:
       "Chalet in legno privato per quattro ospiti — soggiorno con camino, cucina esterna e natura montana intorno a Bačić Kuk. Verificate disponibilità e prenotate il soggiorno online.",
     imageAlt: "Dining table set for breakfast",

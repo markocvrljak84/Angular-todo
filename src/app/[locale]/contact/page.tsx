@@ -37,7 +37,15 @@ export default async function ContactPage({ params }: Props) {
     <>
       <PageJsonLd locale={locale} messages={t} page="contact" />
 
-      <InnerPageHeader {...header} />
+      <InnerPageHeader
+        {...header}
+        className="home-welcome--contact"
+        motif={{
+          src: "/img/illustrations/header-connection-touch.webp",
+          alt: "Etching-style illustration of two index fingers touching",
+          className: "home-welcome__art--connection",
+        }}
+      />
 
       <div className="flat-section flat-section--tint flat-section--contact">
         <div className="flat-wrap">

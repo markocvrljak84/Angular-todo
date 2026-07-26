@@ -4,7 +4,6 @@ import { ClimbingRoutesSection } from "@/components/climbing-routes-section";
 import { ExperienceMapSection } from "@/components/experience-map-section";
 import { HikingRouteMapsPreload } from "@/components/hiking-route-maps-preload";
 import { HikingRoutesSection } from "@/components/hiking-routes-section";
-import { InnerPageHeader } from "@/components/inner-page-header";
 import { JournalTeaserSection } from "@/components/journal-teaser-section";
 import { NearbySection } from "@/components/nearby-section";
 import { NewsletterSignupSection } from "@/components/newsletter-signup-section";
@@ -18,7 +17,6 @@ import { getHikingRoutes } from "@/i18n/hiking-routes";
 import { getMessages } from "@/i18n/messages";
 import { HOME_IMAGES } from "@/config/site-images";
 import { localePath } from "@/config/site-routes";
-import { getPageHeaderContent } from "@/lib/inner-page-content";
 import {
   localeStaticParams,
   resolveLocale,
@@ -50,14 +48,11 @@ export default async function ExperiencesPage({ params }: Props) {
   const experience = getExperienceContent(locale);
   const journal = getJournalContent(locale);
   const home = getHomeContent(locale);
-  const header = getPageHeaderContent(locale, "experiences");
   const [hiking, sea, food, agro] = page.categories;
 
   return (
     <>
       <PageJsonLd locale={locale} messages={t} page="experiences" />
-
-      <InnerPageHeader {...header} />
 
       <ExperienceMapSection
         id="exp-mountain-sea"

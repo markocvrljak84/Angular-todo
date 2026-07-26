@@ -41,7 +41,13 @@ export default async function JournalPage({ params }: Props) {
     <>
       <PageJsonLd locale={locale} messages={t} page="journal" />
 
-      <InnerPageHeader {...header} />
+      <InnerPageHeader
+        {...header}
+        motif={{
+          src: "/img/illustrations/header-wild-strawberry.webp",
+          alt: "Etching-style illustration of a wild strawberry",
+        }}
+      />
 
       <div className="flat-section flat-section--tint">
         <div className="flat-wrap flat-wrap--wide">

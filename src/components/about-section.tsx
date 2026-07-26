@@ -12,6 +12,7 @@ export function AboutSection({ t }: Props) {
       <div className="flat-about-layout flat-about-layout--content">
         <div className="flat-about-layout__body">
           <div className="flat-about__main">
+            <h2 className="flat-about__p1-heading">{t.about.p1Heading}</h2>
             <p>{t.about.p1}</p>
             <p>{t.about.p2}</p>
           </div>

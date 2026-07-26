@@ -58,7 +58,7 @@ export default async function NewsletterThankYouPage({ params }: Props) {
             <p className="newsletter-thanks__badge" aria-hidden="true">
               ✓
             </p>
-            <h1 className="page-header__title">{content.thankYouTitle}</h1>
+            <h1 className="flat-section__title">{content.thankYouTitle}</h1>
             <p className="newsletter-signup__intro">{content.successMessage}</p>
 
             <p className="newsletter-thanks__back">

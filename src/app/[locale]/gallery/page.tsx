@@ -1,11 +1,8 @@
 import type { Metadata } from "next";
 import { BookCta } from "@/components/book-cta";
-import { GalleryEditorialGrid } from "@/components/gallery-editorial-grid";
-import { InnerPageHeader } from "@/components/inner-page-header";
-import { galleryAssetSrc, GALLERY_GROUPS } from "@/config/site-images";
-import { getGalleryContent } from "@/i18n/gallery-content";
+import { GalleryStorySections } from "@/components/gallery-story-sections";
+import { getGalleryStoryContent } from "@/i18n/gallery-story";
 import { getMessages } from "@/i18n/messages";
-import { getPageHeaderContent } from "@/lib/inner-page-content";
 import {
   localeStaticParams,
   resolveLocale,
@@ -30,137 +27,16 @@ export async function generateMetadata({
 
 type Props = { params: Promise<{ locale: string }> };
 
-const FEATURED_GALLERY_CATEGORIES = ["exterior", "outdoorLiving"] as const;
-const INTERIOR_EDITORIAL_FILES = [
-  "dnevni-boravak.jpg",
-  "585009655_122107017075084437_1671659401079838438_n.jpg",
-] as const;
-const MOSAIC_GALLERY_FILES = [
-  "20260601_161000.jpg",
-  "20260601_163937.jpg",
-  "20260601_163743.jpg",
-  "stars-peak-chalet-deck.jpg",
-  "20260604_132039-2.jpg",
-  "20260604_131933.jpg",
-  "20260604_173207.jpg",
-  "20260604_131859-1.jpg",
-  "20260604_132024.jpg",
-] as const;
-const INTERIOR_MOSAIC_FILES = [
-  "812809121.jpg",
-  "740290390.jpg",
-  "812808252.jpg",
-  "740270926.jpg",
-  "dnevni-boravak.jpg",
-  "812808512.jpg",
-  "585009655_122107017075084437_1671659401079838438_n.jpg",
-  "20260601_160317.jpg",
-  "812160813.jpg",
-] as const;
-
 export default async function GalleryPage({ params }: Props) {
   const locale = await resolveLocale(params);
   const t = getMessages(locale);
-  const gallery = getGalleryContent(locale);
-  const header = getPageHeaderContent(locale, "gallery");
-
-  const outdoorSections = FEATURED_GALLERY_CATEGORIES.map((categoryId) => {
-    const group = gallery.groups.find((item) => item.id === categoryId);
-    if (!group) {
-      throw new Error(`Missing gallery content for category "${categoryId}".`);
-    }
-
-    return {
-      id: categoryId,
-      title: group.title,
-      slides: GALLERY_GROUPS[categoryId].map((file) => {
-        const meta = group.images[file];
-        if (!meta) {
-          throw new Error(`Missing gallery metadata for "${file}".`);
-        }
-        const base = galleryAssetSrc(file);
-        return {
-          srcThumb: base,
-          srcLarge: base,
-          alt: meta.alt,
-          caption: meta.caption,
-        };
-      }),
-    };
-  });
-
-  const interiorGroup = gallery.groups.find((item) => item.id === "interior");
-  if (!interiorGroup) {
-    throw new Error('Missing gallery content for category "interior".');
-  }
-
-  const interiorSections = INTERIOR_EDITORIAL_FILES.map((file, index) => {
-    const meta = interiorGroup.images[file];
-    if (!meta) {
-      throw new Error(`Missing gallery metadata for "${file}".`);
-    }
-
-    const base = galleryAssetSrc(file);
-    return {
-      id: `interior-${index}`,
-      title: interiorGroup.title,
-      slides: [
-        {
-          srcThumb: base,
-          srcLarge: base,
-          alt: meta.alt,
-          caption: meta.caption,
-        },
-      ],
-    };
-  });
-
-  const slideFromGalleryFile = (file: string) => {
-    const group = gallery.groups.find((item) => file in item.images);
-    const meta = group?.images[file];
-
-    if (!meta) {
-      throw new Error(`Missing gallery metadata for "${file}".`);
-    }
-
-    const base = galleryAssetSrc(file);
-    return {
-      srcThumb: base,
-      srcLarge: base,
-      alt: meta.alt,
-      caption: meta.caption,
-    };
-  };
-
-  const mosaicSlides = MOSAIC_GALLERY_FILES.map(slideFromGalleryFile);
-  const interiorMosaicSlides =
-    INTERIOR_MOSAIC_FILES.map(slideFromGalleryFile);
+  const story = getGalleryStoryContent(locale);
 
   return (
     <>
       <PageJsonLd locale={locale} messages={t} page="gallery" />
 
-      <div className="gallery-page">
-        <InnerPageHeader {...header} />
-
-        <div className="flat-section flat-section--tint">
-          <div className="flat-wrap">
-            <GalleryEditorialGrid
-              sections={interiorSections}
-              mosaicSlides={interiorMosaicSlides}
-              trailingSections={outdoorSections}
-              trailingMosaicSlides={mosaicSlides}
-              lightboxLabels={{
-                close: t.gallery.lightboxClose,
-                prev: t.gallery.lightboxPrev,
-                next: t.gallery.lightboxNext,
-                aria: t.gallery.lightboxAria,
-                openThumb: t.gallery.lightboxOpenThumb,
-              }}
-            />
-          </div>
-        </div>
-      </div>
+      <GalleryStorySections content={story} />
 
       <BookCta variant="banner" label={t.header.bookCta} lead={t.cta.galleryLead} />
     </>

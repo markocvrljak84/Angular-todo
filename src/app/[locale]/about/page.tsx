@@ -2,10 +2,8 @@ import type { Metadata } from "next";
 import { AboutSection } from "@/components/about-section";
 import { AboutStorySection } from "@/components/about-story-section";
 import { BookCta } from "@/components/book-cta";
-import { InnerPageHeader } from "@/components/inner-page-header";
 import { getAboutStory } from "@/i18n/about-story";
 import { getMessages } from "@/i18n/messages";
-import { getPageHeaderContent } from "@/lib/inner-page-content";
 import {
   localeStaticParams,
   resolveLocale,
@@ -35,15 +33,12 @@ export default async function AboutPage({ params }: Props) {
   const locale = await resolveLocale(params);
   const t = getMessages(locale);
   const story = getAboutStory(locale);
-  const header = getPageHeaderContent(locale, "about");
 
   return (
     <>
       <PageJsonLd locale={locale} messages={t} page="about" />
 
-      <InnerPageHeader {...header} />
-
-      <div className="flat-section flat-section--tint">
+      <div className="flat-section flat-section--tint flat-section--under-header">
         <div className="flat-wrap">
           <AboutSection t={t} />
         </div>

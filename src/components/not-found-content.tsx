@@ -11,15 +11,15 @@ type Props = {
 export function NotFoundContent({ content, locale }: Props) {
   return (
     <>
-      <div className="flat-section flat-section--page">
+      <div className="flat-section flat-section--under-header">
         <div className="flat-wrap flat-wrap--narrow">
-          <header className="page-header page-header--start">
-            <p className="not-found__code" aria-hidden="true">
-              404
-            </p>
-            <h1 className="page-header__title page-header__title--start">{content.title}</h1>
-            <p className="page-header__intro">{content.intro}</p>
-          </header>
+          <p className="not-found__code" aria-hidden="true">
+            404
+          </p>
+          <h1 className="flat-section__title flat-section__title--start">{content.title}</h1>
+          <p className="flat-section__intro flat-section__intro--lead flat-section__intro--start">
+            {content.intro}
+          </p>
         </div>
       </div>
 

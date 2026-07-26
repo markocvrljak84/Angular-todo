@@ -105,7 +105,7 @@ const en: AccommodationPageContent = {
   },
   outdoors: {
     title: "Outdoors",
-    lead: "Most days are spent outside.",
+    lead: "",
     body: "Prepare breakfast on the terrace, light the barbecue in the evening, relax in a hammock beneath the trees or simply enjoy the silence between mountain walks.",
     featuresLabel: "Features include",
     features: [

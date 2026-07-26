@@ -89,6 +89,6 @@ export function getPageHeaderContent(
         intro: getUtilityPagesContent(locale).htmlSitemap.intro,
       };
     case "contact":
-      return { title: t.contact.title };
+      return { title: t.contact.title, intro: t.contact.headerIntro };
   }
 }

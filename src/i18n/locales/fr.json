@@ -128,6 +128,7 @@
     "about": {
         "title": "À propos de ce lieu",
         "lead": "Haut sur le Velebit, Marko et Ljiljana ont transformé un chalet en bois en Stars Peak — un refuge inhabituel et profondément personnel, avec vue sur Bačić Kuk et l'Adriatique à une demi-heure.",
+        "p1Heading": "Du rêve à la maison de montagne",
         "p1": "Un rêve mûri pendant dix ans, puis trois ans de travail de leurs mains : moins d'encombrement, plus de lumière et de bois, un rythme de vie plus lent à la montagne.",
         "hostsNote": "Nous sommes Marko et Ljiljana — nous avons construit et gérons Stars Peak nous-mêmes ; nous sommes là pour vos questions avant et pendant le séjour.",
         "p2": "Le chalet se situe dans le parc naturel du Velebit, près de Karlobag et Baške Oštarije — sommets, Paklenica, Zavratnica et Pag à portée de main.",
@@ -284,6 +285,7 @@
     },
     "contact": {
         "title": "Contact",
+        "headerIntro": "Le premier contact commence souvent par une question simple : que se cache-t-il derrière les sommets et les forêts du Velebit ?",
         "lead": "Notre équipe se fera un plaisir de vous aider pour la disponibilité, l'accès et l'organisation de votre séjour au Velebit. Contactez-nous par e-mail, téléphone ou WhatsApp — ou réservez directement en ligne.",
         "introPrefix": "Joignez-nous par téléphone ou e-mail, ou consultez le lien pour la ",
         "introBookingLink": "réservation",

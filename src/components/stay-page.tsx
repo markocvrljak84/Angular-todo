@@ -54,16 +54,25 @@ function StayPhoto({
 export function StayPage({ content, goodToKnow }: Props) {
   return (
     <>
-      <section className="stay-hero flat-section flat-section--page" aria-labelledby="stay-hero-title">
-        <div className="flat-wrap stay-hero__inner">
-          <div className="stay-hero__copy">
-            <h1 id="stay-hero-title" className="page-header__title page-header__title--start">
+      <section className="home-welcome home-welcome--page stay-hero-welcome" aria-labelledby="stay-hero-title">
+        <div className="home-welcome__inner">
+          <div className="home-welcome__copy home-welcome__copy--page">
+            <h1 id="stay-hero-title" className="home-welcome__title">
               {content.hero.title}
             </h1>
-            <p className="stay-hero__intro">{content.hero.intro}</p>
+            <p className="home-welcome__intro">{content.hero.intro}</p>
           </div>
-          <div className="stay-hero__media">
-            <StayPhoto slot="hero" alt={content.hero.imageAlt} priority sizes="(max-width: 900px) 100vw, 50vw" />
+          <div className="home-welcome__rule" aria-hidden="true" />
+          <div className="home-welcome__visual">
+            <Image
+              className="home-welcome__art"
+              src="/img/illustrations/header-raspberry.webp"
+              alt="Etching-style illustration of a forest raspberry"
+              width={800}
+              height={800}
+              sizes="(min-width: 768px) 15.5rem, 13.5rem"
+              priority
+            />
           </div>
         </div>
       </section>
@@ -207,7 +216,7 @@ export function StayPage({ content, goodToKnow }: Props) {
         </div>
       </section>
 
-      <section className="final-cta flat-section flat-section--tint" aria-label={content.cta.headline}>
+      <section className="final-cta flat-section" aria-label={content.cta.headline}>
         <div className="flat-wrap final-cta__inner">
           <div className="final-cta__copy">
             <p className="final-cta__headline">{content.cta.headline}</p>

@@ -23,7 +23,7 @@ export function JournalCategoryPage({ content, category, locale }: Props) {
         <span>{category.title}</span>
       </nav>
 
-      <h1 className="page-header__title page-header__title--start">{category.title}</h1>
+      <h1 className="flat-section__title flat-section__title--start">{category.title}</h1>
       <p className="journal-category-page__intro">{category.intro}</p>
 
       <ul className="journal-hub__grid">

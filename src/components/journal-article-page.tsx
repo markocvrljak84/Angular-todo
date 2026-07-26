@@ -34,7 +34,7 @@ export function JournalArticlePage({
 
       <header className="journal-article__header">
         <p className="journal-article__eyebrow">{category.title}</p>
-        <h1 className="page-header__title page-header__title--start">{article.title}</h1>
+        <h1 className="flat-section__title flat-section__title--start">{article.title}</h1>
         <p className="journal-article__teaser">{article.teaser}</p>
       </header>
 

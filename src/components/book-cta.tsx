@@ -9,7 +9,7 @@ type Props = {
 export function BookCta({ label, lead, variant = "default" }: Props) {
   if (variant === "banner") {
     return (
-      <aside className="book-banner flat-section flat-section--tint" aria-label={label}>
+      <aside className="book-banner flat-section" aria-label={label}>
         <div className="flat-wrap book-banner__inner">
           {lead ? <p className="book-banner__text">{lead}</p> : null}
           <a
