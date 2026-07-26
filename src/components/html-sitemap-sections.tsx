@@ -21,7 +21,7 @@ function pageLabel(t: Messages, page: SitePageKey): string {
 export function HtmlSitemapSections({ content, locale, t }: Props) {
   return (
     <section className="flat-section flat-section--tint" aria-label={content.title}>
-      <div className="flat-wrap flat-wrap--narrow html-sitemap">
+      <div className="flat-wrap html-sitemap">
         {content.groups.map((group) => (
           <div key={group.title} className="html-sitemap__group">
             <h2 className="flat-section__title flat-section__title--start">

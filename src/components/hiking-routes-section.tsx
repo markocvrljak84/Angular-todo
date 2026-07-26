@@ -120,9 +120,13 @@ function HikingRouteItem({
           <span className="hiking-route__trigger-main">
             <span className="hiking-route__title">{route.title}</span>
             <span className="hiking-route__summary">
-              <span className="hiking-route__pill">{stats.duration}</span>
-              <span className="hiking-route__pill">{stats.length}</span>
-              <span className="hiking-route__pill">{route.difficulty}</span>
+              <span className="hiking-route__meta">
+                <span className="hiking-route__pill">{stats.duration}</span>
+                <span className="hiking-route__pill">{stats.length}</span>
+              </span>
+              <span className="hiking-route__pill hiking-route__pill--difficulty">
+                {route.difficulty}
+              </span>
             </span>
           </span>
           <span className="hiking-route__toggle-label">{toggleLabel}</span>

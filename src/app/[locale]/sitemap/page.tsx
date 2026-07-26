@@ -34,7 +34,14 @@ export default async function HtmlSitemapPage({ params }: Props) {
   return (
     <>
       <PageJsonLd locale={locale} messages={t} page="htmlSitemap" />
-      <InnerPageHeader {...header} />
+      <InnerPageHeader
+        {...header}
+        motif={{
+          src: "/img/illustrations/header-trail-mark-fade.webp",
+          alt: "Etching of a hiking trail blaze painted on tree bark",
+          className: "home-welcome__art--trail-mark",
+        }}
+      />
       <HtmlSitemapSections content={content} locale={locale} t={t} />
     </>
   );

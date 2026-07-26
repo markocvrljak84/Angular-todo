@@ -50,6 +50,7 @@ export type HomeContent = {
   map: {
     title: string;
     intro: string;
+    homeNote: string;
     points: { name: string; note: string; link?: { href: string; label: string } }[];
   };
   finalCta: {
@@ -111,15 +112,15 @@ const en: HomeContent = {
   editorial: {
     title: "Life at Stars Peak",
     intro:
-      "Outdoor kitchen, living room and a stunning view of Bačić Kuk — life at Stars Peak in three moments.",
+      "Bačić Kuk outside the door, a quiet living room, and evenings in the outdoor kitchen — life at Stars Peak in three moments.",
     ctaLabel: "Full gallery",
     blocks: [
       {
         layout: "full",
-        title: "Outdoor kitchen",
+        title: "View of Bačić Kuk",
         body:
-          "The summer kitchen and terrace are where days slow down — grill outdoors, pine-scented air and meals with the mountain close by.",
-        imageAlt: "Outdoor summer kitchen and terrace at Stars Peak",
+          "Bačić Kuk rises above the treeline minutes from the door — forest, silence and a wide view of the summit on Velebit, right from Stars Peak.",
+        imageAlt: "Stars Peak wooden cabin with Bačić Kuk rising above the forest",
       },
       {
         layout: "split",
@@ -130,10 +131,10 @@ const en: HomeContent = {
       },
       {
         layout: "full",
-        title: "View of Bačić Kuk",
+        title: "Outdoor kitchen",
         body:
-          "Bačić Kuk rises above the treeline minutes from the door — forest, silence and a wide view of the summit on Velebit, right from Stars Peak.",
-        imageAlt: "Panoramic view of Bačić Kuk and the Velebit landscape from Stars Peak",
+          "The summer kitchen and terrace are where days slow down — grill outdoors, pine-scented air and meals with the mountain close by.",
+        imageAlt: "Outdoor summer kitchen and terrace at Stars Peak",
       },
     ],
   },
@@ -156,6 +157,8 @@ const en: HomeContent = {
   map: {
     title: "Mountain and sea in one day",
     intro: "Stars Peak sits between Velebit peaks and the Adriatic — everything below is within easy reach.",
+    homeNote:
+      "Stars Peak is your base for the day: peaks, coves and island roads all within about an hour’s drive — some of Croatia’s finest nature, reached at an easy pace.",
     points: [
       {
         name: "Bačić Kuk",
@@ -258,10 +261,10 @@ const hr: HomeContent = {
     blocks: [
       {
         layout: "full",
-        title: "Ljetnja kuhinja",
+        title: "Pogled na Bačić kuk",
         body:
-          "Ljetnja kuhinja i terasa usporavaju dan — roštilj na otvorenom, miris bora i obroci uz planinu nadomak.",
-        imageAlt: "Vanjska ljetnja kuhinja i terasa na Stars Peaku",
+          "Bačić kuk se diže iznad krošnji neposredno pred kućom — šuma, Velebit i pogled na kuk.",
+        imageAlt: "Drvena kuća Stars Peak s Bačić kukom iznad šume",
       },
       {
         layout: "split",
@@ -272,10 +275,10 @@ const hr: HomeContent = {
       },
       {
         layout: "full",
-        title: "Pogled na Bačić kuk",
+        title: "Ljetnja kuhinja",
         body:
-          "Bačić kuk se diže iznad krošnji neposredno pred kućom — šuma, Velebit i pogled na kuk.",
-        imageAlt: "Panoramski pogled na Bačić kuk i velebitski krajolik sa Stars Peaka",
+          "Ljetnja kuhinja i terasa usporavaju dan — roštilj na otvorenom, miris bora i obroci uz planinu nadomak.",
+        imageAlt: "Vanjska ljetnja kuhinja i terasa na Stars Peaku",
       },
     ],
   },
@@ -298,6 +301,8 @@ const hr: HomeContent = {
   map: {
     title: "Planina i more u jednom danu",
     intro: "Stars Peak leži između velebitskih vrhova i Jadrana — sve dolje je na dohvat ruke.",
+    homeNote:
+      "Stars Peak je baza za dan: vrhovi, uvale i otok na oko sat vožnje — jedna od najljepših prirodnih scena Hrvatske, dostupna bez žurbe.",
     points: [
       { name: "Bačić kuk", note: "Bačić kuk (1304 m) sastoji se zapravo od skupine golih kamenitih kukova različite visine i strmine, zbog čega pruža mogućnost za penjačke podvige različitih stupnjeva težine." },
       { name: "Karlobag", note: "Karlobag je čudesan spoj Mediterana i kontinenta, kristalno čistog mora i najljepše hrvatske planine – Velebita, do kojega ima tek nekoliko minuta vožnje." },
@@ -375,10 +380,10 @@ const de: HomeContent = {
     blocks: [
       {
         layout: "full",
-        title: "Außenküche",
+        title: "Blick auf Bačić Kuk",
         body:
-          "Sommerküche und Terrasse — draußen grillen, Pinienduft und Mahlzeiten mit dem Berg in der Nähe.",
-        imageAlt: "Sommerküche und Terrasse auf Stars Peak",
+          "Bačić Kuk ragt Minuten von der Haustür über die Baumgrenze — Wald, Stille und Blick auf den Velebit, direkt von Stars Peak aus.",
+        imageAlt: "Holzhütte Stars Peak mit Bačić Kuk über dem Wald",
       },
       {
         layout: "split",
@@ -389,10 +394,10 @@ const de: HomeContent = {
       },
       {
         layout: "full",
-        title: "Blick auf Bačić Kuk",
+        title: "Außenküche",
         body:
-          "Bačić Kuk ragt Minuten von der Haustür über die Baumgrenze — Wald, Stille und Blick auf den Velebit, direkt von Stars Peak aus.",
-        imageAlt: "Panoramablick auf Bačić Kuk und die Velebit-Landschaft von Stars Peak",
+          "Sommerküche und Terrasse — draußen grillen, Pinienduft und Mahlzeiten mit dem Berg in der Nähe.",
+        imageAlt: "Sommerküche und Terrasse auf Stars Peak",
       },
     ],
   },
@@ -408,6 +413,8 @@ const de: HomeContent = {
   map: {
     title: "Berg und Meer an einem Tag",
     intro: "Stars Peak liegt zwischen Velebit-Gipfeln und der Adria.",
+    homeNote:
+      "Stars Peak ist Ihre Basis für den Tag: Gipfel, Buchten und Inselstraßen in etwa einer Autostunde — einige der schönsten Naturkulissen Kroatiens, in ruhigem Tempo.",
     points: [
       {
         name: "Bačić Kuk",
@@ -505,10 +512,10 @@ const fr: HomeContent = {
     blocks: [
       {
         layout: "full",
-        title: "Cuisine d'été",
+        title: "Vue sur Bačić Kuk",
         body:
-          "La cuisine extérieure et la terrasse ralentissent le rythme — grillades en plein air, pin et repas avec la montagne tout près.",
-        imageAlt: "Cuisine d'été et terrasse à Stars Peak",
+          "Bačić Kuk domine la crête à quelques minutes de la porte — forêt, silence et vue sur le Velebit, depuis Stars Peak.",
+        imageAlt: "Chalet en bois Stars Peak avec Bačić Kuk au-dessus de la forêt",
       },
       {
         layout: "split",
@@ -519,10 +526,10 @@ const fr: HomeContent = {
       },
       {
         layout: "full",
-        title: "Vue sur Bačić Kuk",
+        title: "Cuisine d'été",
         body:
-          "Bačić Kuk domine la crête à quelques minutes de la porte — forêt, silence et vue sur le Velebit, depuis Stars Peak.",
-        imageAlt: "Vue panoramique sur Bačić Kuk et le paysage du Velebit depuis Stars Peak",
+          "La cuisine extérieure et la terrasse ralentissent le rythme — grillades en plein air, pin et repas avec la montagne tout près.",
+        imageAlt: "Cuisine d'été et terrasse à Stars Peak",
       },
     ],
   },
@@ -538,6 +545,8 @@ const fr: HomeContent = {
   map: {
     title: "Montagne et mer en une journée",
     intro: "Stars Peak se situe entre les sommets du Velebit et l'Adriatique.",
+    homeNote:
+      "Stars Peak est votre base pour la journée : sommets, criques et routes d’île à environ une heure de route — parmi les plus beaux paysages de Croatie, à un rythme doux.",
     points: [
       {
         name: "Bačić Kuk",
@@ -635,10 +644,10 @@ const it: HomeContent = {
     blocks: [
       {
         layout: "full",
-        title: "Cucina esterna",
+        title: "Vista su Bačić Kuk",
         body:
-          "La cucina estiva e la terrazza rallentano il ritmo — griglia all'aperto, profumo di pino e pasti con la montagna a portata di mano.",
-        imageAlt: "Cucina estiva e terrazza a Stars Peak",
+          "Bačić Kuk svetta sopra la linea degli alberi a pochi minuti dalla porta — foresta, silenzio e vista sul Velebit, direttamente da Stars Peak.",
+        imageAlt: "Chalet in legno Stars Peak con Bačić Kuk sopra il bosco",
       },
       {
         layout: "split",
@@ -649,10 +658,10 @@ const it: HomeContent = {
       },
       {
         layout: "full",
-        title: "Vista su Bačić Kuk",
+        title: "Cucina esterna",
         body:
-          "Bačić Kuk svetta sopra la linea degli alberi a pochi minuti dalla porta — foresta, silenzio e vista sul Velebit, direttamente da Stars Peak.",
-        imageAlt: "Vista panoramica su Bačić Kuk e il paesaggio del Velebit da Stars Peak",
+          "La cucina estiva e la terrazza rallentano il ritmo — griglia all'aperto, profumo di pino e pasti con la montagna a portata di mano.",
+        imageAlt: "Cucina estiva e terrazza a Stars Peak",
       },
     ],
   },
@@ -668,6 +677,8 @@ const it: HomeContent = {
   map: {
     title: "Montagna e mare in un giorno",
     intro: "Stars Peak si trova tra le cime del Velebit e l'Adriatico.",
+    homeNote:
+      "Stars Peak è la base per la giornata: cime, calette e strade dell’isola a circa un’ora di auto — tra le più belle scene naturali della Croazia, senza fretta.",
     points: [
       {
         name: "Bačić Kuk",

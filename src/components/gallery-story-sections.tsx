@@ -1,6 +1,9 @@
 import Image from "next/image";
 import { galleryAssetSrc } from "@/config/site-images";
-import type { GalleryStoryContent, GalleryStoryPair } from "@/i18n/gallery-story";
+import type {
+  GalleryStoryContent,
+  GalleryStoryPair,
+} from "@/i18n/gallery-story";
 
 type Props = {
   content: GalleryStoryContent;
@@ -36,7 +39,10 @@ export function GalleryStorySections({ content }: Props) {
 
   return (
     <div className="gallery-story">
-      <section className="flat-section flat-section--under-header" aria-labelledby="gallery-interior-title">
+      <section
+        className="flat-section flat-section--under-header"
+        aria-labelledby="gallery-interior-title"
+      >
         <div className="flat-wrap">
           <h2 id="gallery-interior-title" className="flat-section__title">
             {content.interiorLabel}
@@ -54,7 +60,10 @@ export function GalleryStorySections({ content }: Props) {
         </div>
       </section>
 
-      <section className="flat-section flat-section--tint" aria-labelledby="gallery-exterior-title">
+      <section
+        className="flat-section flat-section--tint"
+        aria-labelledby="gallery-exterior-title"
+      >
         <div className="flat-wrap">
           <h2 id="gallery-exterior-title" className="flat-section__title">
             {content.exteriorLabel}

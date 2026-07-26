@@ -46,7 +46,7 @@ export function AboutStorySection({ content, pressKitHref }: Props) {
             alt=""
             width={800}
             height={800}
-            sizes="(min-width: 900px) 14rem, 11rem"
+            sizes="(min-width: 900px) 14rem, 6.5rem"
           />
         </div>
       </div>

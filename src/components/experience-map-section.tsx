@@ -68,8 +68,9 @@ export function ExperienceMapSection({ content, mountainImage, seaImage, id = "e
               </li>
             ))}
           </ul>
-          <div className="experience-map__home" aria-hidden="true">
-            <span>Stars Peak</span>
+          <div className="experience-map__home">
+            <p className="experience-map__home-label">Stars Peak</p>
+            <p className="experience-map__home-note">{content.homeNote}</p>
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { BookCta } from "@/components/book-cta";
 import { ClimbingRoutesSection } from "@/components/climbing-routes-section";
 import { ExperienceMapSection } from "@/components/experience-map-section";
@@ -69,9 +70,23 @@ export default async function ExperiencesPage({ params }: Props) {
 
       <section id={hiking.id} className="flat-section flat-section--tint" aria-labelledby="exp-hiking">
         <HikingRouteMapsPreload />
-        <div className="flat-wrap">
-          <h2 id="exp-hiking" className="flat-section__title">{hiking.title}</h2>
-          <p className="flat-section__intro">{hiking.intro}</p>
+        <div className="flat-wrap experiences-hiking__head">
+          <div className="experiences-hiking__copy">
+            <h2 id="exp-hiking" className="flat-section__title">
+              {hiking.title}
+            </h2>
+            <p className="flat-section__intro">{hiking.intro}</p>
+          </div>
+          <div className="experiences-hiking__motif" aria-hidden="true">
+            <Image
+              className="experiences-hiking__motif-img"
+              src="/img/illustrations/header-hare.webp"
+              alt=""
+              width={800}
+              height={800}
+              sizes="(min-width: 768px) 8.5rem, 7.5rem"
+            />
+          </div>
         </div>
         <HikingRoutesSection
           content={getHikingRoutes(locale)}
@@ -105,18 +120,19 @@ export default async function ExperiencesPage({ params }: Props) {
         </div>
       </section>
 
-      <section id={agro.id} className="flat-section" aria-labelledby="exp-agro">
-        <div className="flat-wrap">
+      <section id={agro.id} className="flat-section experiences-agro" aria-labelledby="exp-agro">
+        <div className="flat-wrap experiences-agro__head">
           <h2 id="exp-agro" className="flat-section__title">{agro.title}</h2>
           <p className="flat-section__intro">{agro.intro}</p>
         </div>
-        <TasteOfVelebitSection content={experience.taste} />
+        <TasteOfVelebitSection content={experience.taste} embedded />
       </section>
 
       <JournalTeaserSection
         content={journal}
         locale={locale}
         experiencesHref={localePath(locale, "experiences")}
+        compact
       />
 
       <NewsletterSignupSection

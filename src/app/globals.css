@@ -272,14 +272,14 @@ body {
 .site-header__brand {
   justify-self: center;
   text-align: center;
-  font-family: var(--font-display);
+  font-family: var(--font-condensed);
   font-weight: 500;
-  font-size: clamp(1rem, 2vw, 1.6rem);
-  letter-spacing: var(--tracking-brand);
+  font-size: clamp(0.8125rem, 1.35vw, 1.05rem);
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--ink);
   text-decoration: none;
-  line-height: 1.2;
+  line-height: 1;
   white-space: nowrap;
 }
 
@@ -2356,7 +2356,7 @@ body {
 .hiking-route__trigger {
   flex: 1 1 14rem;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.75rem;
   min-width: 0;
   margin: 0;
@@ -2381,18 +2381,18 @@ body {
 
 .hiking-route__chevron {
   flex-shrink: 0;
-  width: 0.55rem;
-  height: 0.55rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-top: 0.52em;
   border-right: 2px solid var(--facility-icon);
   border-bottom: 2px solid var(--facility-icon);
   transform: rotate(-45deg);
   transition: transform 0.2s ease;
-  margin-top: -0.15rem;
 }
 
 .hiking-route--open .hiking-route__chevron {
   transform: rotate(45deg);
-  margin-top: 0.1rem;
+  margin-top: 0.52em;
 }
 
 .hiking-route__trigger-main {
@@ -2416,8 +2416,16 @@ body {
 
 .hiking-route__summary {
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+}
+
+.hiking-route__meta {
+  display: flex;
   flex-wrap: wrap;
-  gap: 0.35rem;
+  align-items: baseline;
+  gap: 0;
 }
 
 .hiking-route__pill {
@@ -2435,13 +2443,17 @@ body {
   white-space: nowrap;
 }
 
-.hiking-route__pill+.hiking-route__pill::before {
+.hiking-route__meta .hiking-route__pill+.hiking-route__pill::before {
   content: "·";
   margin: 0 0.45rem;
   color: var(--line);
   font-weight: 400;
   letter-spacing: 0;
   text-transform: none;
+}
+
+.hiking-route__pill--difficulty {
+  display: block;
 }
 
 .hiking-route__toggle-label {
@@ -3233,22 +3245,28 @@ body {
 }
 
 .site-footer__motif {
-  display: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.25rem;
 }
 
 .site-footer__motif-img {
   display: block;
-  width: 9rem;
+  width: 5.25rem;
   height: auto;
   object-fit: contain;
 }
 
 @media (min-width: 720px) {
   .site-footer__motif {
-    display: flex;
     justify-content: flex-end;
     align-self: end;
+    margin-top: 0;
     margin-left: auto;
+  }
+
+  .site-footer__motif-img {
+    width: 9rem;
   }
 }
 
@@ -3519,7 +3537,7 @@ code {
 
 .taste-velebit__badge {
   display: inline-block;
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.4rem;
   padding: 0;
   border-radius: 0;
   background: transparent;
@@ -3529,6 +3547,12 @@ code {
   font-weight: 500;
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+}
+
+.press-page__email {
+  color: #957d51;
 }
 
 .taste-velebit__intro {
@@ -3573,7 +3597,7 @@ code {
   gap: clamp(3.5rem, 7vw, 5.5rem);
 }
 
-.journal-category-block + .journal-category-block {
+.journal-category-block+.journal-category-block {
   padding-top: clamp(2rem, 4vw, 3rem);
   margin-top: 0.25rem;
   border-top: 1px solid var(--line);
@@ -3834,6 +3858,19 @@ code {
 
 .journal-teaser__head {
   max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.journal-teaser__head .flat-section__title {
+  text-align: center;
+}
+
+.journal-teaser__head .flat-section__intro {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 .journal-teaser__eyebrow {
@@ -4163,27 +4200,42 @@ code {
 
 /* —— Home welcome strip (below hero) —— */
 .home-welcome {
-  --welcome-art-size: 13.5rem;
-  --welcome-gap: clamp(2.25rem, 5vw, 4rem);
-  padding: clamp(3.25rem, 8vw, 5.5rem) 0;
+  --welcome-art-size: 9.5rem;
+  --welcome-gap: clamp(1.25rem, 3vw, 2rem);
+  padding: clamp(2rem, 5vw, 3.25rem) 0;
   background: #fff;
   color: #1a1a1a;
 }
 
 .home-welcome--page {
-  padding-top: calc(var(--header-h) + clamp(2.5rem, 6vw, 4rem));
-  padding-bottom: clamp(2.75rem, 7vw, 4.5rem);
+  padding-top: calc(var(--header-h) + clamp(1.5rem, 4vw, 2.75rem));
+  padding-bottom: clamp(1.75rem, 4.5vw, 3rem);
 }
 
 .stay-hero-welcome.home-welcome--page {
-  padding-top: calc(var(--header-h) + clamp(3.25rem, 7vw, 5.25rem));
+  padding-top: calc(var(--header-h) + clamp(2.25rem, 5.5vw, 4rem));
 }
 
 .home-welcome--contact {
-  --welcome-art-size: 15.5rem;
+  --welcome-art-size: 10.5rem;
 }
 
 @media (min-width: 768px) {
+  .home-welcome {
+    --welcome-art-size: 15.5rem;
+    --welcome-gap: clamp(2.25rem, 5vw, 4rem);
+    padding: clamp(3.25rem, 8vw, 5.5rem) 0;
+  }
+
+  .home-welcome--page {
+    padding-top: calc(var(--header-h) + clamp(2.5rem, 6vw, 4rem));
+    padding-bottom: clamp(2.75rem, 7vw, 4.5rem);
+  }
+
+  .stay-hero-welcome.home-welcome--page {
+    padding-top: calc(var(--header-h) + clamp(3.25rem, 7vw, 5.25rem));
+  }
+
   .home-welcome--contact {
     --welcome-art-size: 18.5rem;
   }
@@ -4193,8 +4245,21 @@ code {
   max-width: none;
   width: auto;
   height: 100%;
-  transform: scale(1.12);
-  transform-origin: center left;
+  transform: scale(1.05);
+  transform-origin: center center;
+}
+
+.home-welcome__art--trail-mark {
+  max-width: none;
+  width: auto;
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .home-welcome__art--connection {
+    transform: scale(1.12);
+    transform-origin: center left;
+  }
 }
 
 .home-welcome__inner {
@@ -4202,7 +4267,7 @@ code {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.15rem;
   max-width: 97rem;
   margin: 0 auto;
   padding: 0 var(--page-gutter);
@@ -4267,6 +4332,7 @@ code {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
   height: var(--welcome-art-size);
 }
 
@@ -4276,19 +4342,24 @@ code {
   height: 100%;
   max-width: 100%;
   object-fit: contain;
+  margin-inline: auto;
 }
 
 @media (min-width: 768px) {
-  .home-welcome {
-    --welcome-art-size: 15.5rem;
-  }
-
   .home-welcome__inner {
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 0;
     text-align: left;
+  }
+
+  .home-welcome__visual {
+    width: auto;
+  }
+
+  .home-welcome__art {
+    margin-inline: 0;
   }
 
   .home-welcome__copy {
@@ -4655,7 +4726,7 @@ code {
     justify-items: stretch;
   }
 
-  .stay-included__grid > :first-child {
+  .stay-included__grid> :first-child {
     justify-self: end;
     max-width: 22rem;
     padding-right: 0.5rem;
@@ -5115,6 +5186,7 @@ code {
   aspect-ratio: 16 / 10;
   min-height: clamp(140px, 22vw, 220px);
   overflow: hidden;
+  background: var(--bg-tint);
 }
 
 .experience-map__zone-img {
@@ -5122,6 +5194,20 @@ code {
   height: 100%;
   object-fit: cover;
   display: block;
+  filter:
+    saturate(var(--photo-saturate)) contrast(var(--photo-contrast)) brightness(var(--photo-brightness));
+}
+
+.experience-map__mountain::before,
+.experience-map__sea::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: var(--bg-tint);
+  mix-blend-mode: soft-light;
+  opacity: var(--photo-veil-opacity);
+  pointer-events: none;
 }
 
 .experience-map__mountain::after,
@@ -5129,6 +5215,7 @@ code {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 2;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.42) 0%, rgba(0, 0, 0, 0.08) 55%, transparent 100%);
   pointer-events: none;
 }
@@ -5137,7 +5224,7 @@ code {
   position: absolute;
   left: 1rem;
   bottom: 1rem;
-  z-index: 1;
+  z-index: 3;
   font-size: 0.6875rem;
   font-weight: 500;
   letter-spacing: var(--tracking-label);
@@ -5221,15 +5308,104 @@ code {
 .experience-map__home {
   grid-column: 1 / -1;
   text-align: center;
-  padding: 0.85rem 1rem;
+  padding: 1rem 1.15rem 1.15rem;
   border-radius: 0;
   border-top: 1px solid var(--line);
-  background: var(--bg-tint);
-  font-size: 0.6875rem;
+  color: var(--ink);
+  margin: 20px;
+}
+
+.experience-map__home-label {
+  margin: 0 0 0.45rem;
+  font-size: 1.075rem;
   font-weight: 500;
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
-  color: var(--ink);
+}
+
+.experience-map__home-note {
+  margin: 0 auto;
+  max-width: 40rem;
+  color: var(--muted);
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  line-height: 1.55;
+  font-family: var(--font);
+}
+
+.experiences-hiking__head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  text-align: center;
+}
+
+.experiences-hiking__copy {
+  max-width: 42rem;
+}
+
+.experiences-hiking__copy .flat-section__title {
+  margin-bottom: 0.85rem;
+  text-align: center;
+}
+
+.experiences-hiking__copy .flat-section__intro {
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.experiences-hiking__motif {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.35rem;
+}
+
+.experiences-hiking__motif-img {
+  display: block;
+  width: 5.5rem;
+  max-width: 5.5rem;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (min-width: 768px) {
+  .experiences-hiking__motif {
+    margin-top: 0.75rem;
+  }
+
+  .experiences-hiking__motif-img {
+    width: 8.5rem;
+    max-width: 8.5rem;
+  }
+}
+
+.experiences-agro {
+  padding-bottom: 0.5rem;
+}
+
+.experiences-agro__head .flat-section__intro {
+  margin-bottom: 0;
+}
+
+.taste-velebit--embedded {
+  padding-top: 1rem;
+}
+
+.taste-velebit--embedded .taste-velebit__badge {
+  margin-bottom: 0.4rem;
+}
+
+.taste-velebit--embedded .flat-section__title {
+  margin-top: 0;
+}
+
+.journal-teaser--compact {
+  padding-top: clamp(1.75rem, 4vw, 2.75rem);
 }
 
 .local-flavours__grid {
@@ -5345,7 +5521,7 @@ code {
 
 .about-story__layout {
   display: grid;
-  gap: 2rem;
+  gap: 1.25rem;
   align-items: start;
 }
 
@@ -5357,14 +5533,16 @@ code {
 }
 
 .about-story__motif {
-  display: none;
+  display: flex;
+  justify-content: center;
+  padding-top: 0;
 }
 
 .about-story__motif-img {
   display: block;
   width: 100%;
   height: auto;
-  max-width: 14rem;
+  max-width: 6.5rem;
   object-fit: contain;
 }
 
@@ -5385,13 +5563,16 @@ code {
   }
 
   .about-story__motif {
-    display: flex;
     justify-content: flex-end;
     justify-self: end;
     margin-inline-start: auto;
     position: sticky;
     top: calc(var(--header-h) + 1.5rem);
     padding-top: 0.25rem;
+  }
+
+  .about-story__motif-img {
+    max-width: 14rem;
   }
 }
 
@@ -5603,10 +5784,22 @@ code {
   color: var(--facility-icon);
 }
 
-.html-sitemap__group+.html-sitemap__group {
-  margin-top: clamp(2.5rem, 5vw, 3.5rem);
-  padding-top: clamp(2rem, 4vw, 2.75rem);
-  border-top: 1px solid var(--line);
+.html-sitemap {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2rem, 4vw, 2.75rem);
+}
+
+@media (min-width: 768px) {
+  .html-sitemap {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(1.75rem, 3vw, 2.75rem);
+    align-items: start;
+  }
+}
+
+.html-sitemap__group {
+  min-width: 0;
 }
 
 .html-sitemap__list {
@@ -5756,7 +5949,7 @@ code {
   }
 
   .hiking-route__chevron {
-    margin-top: 0.35rem;
+    margin-top: 0.52em;
   }
 
   .hiking-route__summary {
@@ -5770,7 +5963,7 @@ code {
     text-align: left;
   }
 
-  .hiking-route__pill+.hiking-route__pill::before {
+  .hiking-route__meta .hiking-route__pill+.hiking-route__pill::before {
     content: none;
     margin: 0;
   }

@@ -55,9 +55,9 @@ export default async function HomePage({ params }: Props) {
   ] as const;
 
   const editorialImages = [
-    HOME_IMAGES.editorial.outdoorKitchen,
-    HOME_IMAGES.editorial.interior,
     HOME_IMAGES.editorial.surroundings,
+    HOME_IMAGES.editorial.interior,
+    HOME_IMAGES.editorial.outdoorKitchen,
   ] as const;
 
   return (

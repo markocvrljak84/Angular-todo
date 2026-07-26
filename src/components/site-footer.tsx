@@ -61,7 +61,7 @@ export function SiteFooter({ t, locale }: { t: Messages; locale: Locale }) {
               alt=""
               width={640}
               height={640}
-              sizes="9rem"
+              sizes="(min-width: 720px) 9rem, 5.25rem"
             />
           </div>
         </div>

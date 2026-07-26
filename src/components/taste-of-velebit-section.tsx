@@ -2,13 +2,15 @@ import type { ExperienceContent } from "@/i18n/experience-content";
 
 type Props = {
   content: ExperienceContent["taste"];
+  /** Nested inside another section — skip full section padding. */
+  embedded?: boolean;
 };
 
-export function TasteOfVelebitSection({ content }: Props) {
+export function TasteOfVelebitSection({ content, embedded }: Props) {
   return (
     <section
       id="taste"
-      className="taste-velebit flat-section"
+      className={`taste-velebit${embedded ? " taste-velebit--embedded" : " flat-section"}`}
       aria-labelledby="taste-title"
     >
       <div className="flat-wrap">

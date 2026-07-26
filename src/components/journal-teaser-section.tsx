@@ -11,9 +11,11 @@ type Props = {
   content: JournalContent;
   locale: Locale;
   experiencesHref: string;
+  /** Tighter vertical padding when stacked under another section. */
+  compact?: boolean;
 };
 
-export function JournalTeaserSection({ content, locale, experiencesHref }: Props) {
+export function JournalTeaserSection({ content, locale, experiencesHref, compact }: Props) {
   const featured = content.categories
     .flatMap((category) => category.articles)
     .find((article) => article.status === "published");
@@ -21,7 +23,7 @@ export function JournalTeaserSection({ content, locale, experiencesHref }: Props
   return (
     <section
       id="journal"
-      className="flat-section journal-teaser"
+      className={`flat-section journal-teaser${compact ? " journal-teaser--compact" : ""}`}
       aria-labelledby="journal-teaser-title"
     >
       <div className="flat-wrap">
