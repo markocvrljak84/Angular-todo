@@ -1,18 +1,41 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Locale } from "@/i18n/config";
 import type { HomeContent } from "@/i18n/home-content";
+import { localePath } from "@/config/site-routes";
 
 type Props = {
   content: HomeContent["editorial"];
   images: readonly [string, string, string];
   galleryHref: string;
+  locale: Locale;
+  experiencesLabel: string;
+  journalLabel: string;
 };
 
-export function HomeEditorialSection({ content, images, galleryHref }: Props) {
+export function HomeEditorialSection({
+  content,
+  images,
+  galleryHref,
+  locale,
+  experiencesLabel,
+  journalLabel,
+}: Props) {
   return (
     <section className="home-editorial flat-section" aria-labelledby="home-editorial-title">
       <div className="flat-wrap">
         <div className="home-editorial__head">
+          <nav className="home-explore-links home-explore-links--inline" aria-label="Explore Stars Peak">
+            <Link href={localePath(locale, "experiences")} className="home-explore-links__link">
+              {experiencesLabel}
+            </Link>
+            <span className="home-explore-links__sep" aria-hidden="true">
+              ·
+            </span>
+            <Link href={localePath(locale, "journal")} className="home-explore-links__link">
+              {journalLabel}
+            </Link>
+          </nav>
           <h2 id="home-editorial-title" className="flat-section__title">
             {content.title}
           </h2>

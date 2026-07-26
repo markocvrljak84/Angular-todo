@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import { AccommodationBriefSection } from "@/components/accommodation-brief-section";
 import { ExperienceDaySection } from "@/components/experience-day-section";
 import { FinalCtaSection } from "@/components/final-cta-section";
-import { HomeExploreLinks } from "@/components/home-explore-links";
 import { HomeLocalFlavoursSection } from "@/components/home-local-flavours-section";
 import { HeroSection } from "@/components/hero-section";
 import { HomeEditorialSection } from "@/components/home-editorial-section";
+import { HomeWelcomeStrip } from "@/components/home-welcome-strip";
 import { NewsletterSignupSection } from "@/components/newsletter-signup-section";
 import { WhySpecialSection } from "@/components/why-special-section";
 import { HOME_IMAGES, MAIN_CAROUSEL_IMAGES } from "@/config/site-images";
@@ -73,20 +73,31 @@ export default async function HomePage({ params }: Props) {
         carouselNextLabel={t.home.heroCarouselNext}
       />
 
-      <WhySpecialSection content={home.whySpecial} images={whySpecialImages} />
+      <WhySpecialSection
+        content={home.whySpecial}
+        images={whySpecialImages}
+        hrefs={[
+          localePath(locale, "velebitHikingRetreat"),
+          localePath(locale, "nearby"),
+          localePath(locale, "darkSkyStargazing"),
+        ]}
+      />
+
+      <HomeWelcomeStrip
+        title={home.welcome.title}
+        line={home.welcome.line}
+        artLabel={home.welcome.artLabel}
+      />
 
       <ExperienceDaySection content={experience.day} />
-
-      <HomeExploreLinks
-        locale={locale}
-        experiencesLabel="Explore Experiences"
-        journalLabel="Read the Journal"
-      />
 
       <HomeEditorialSection
         content={home.editorial}
         images={editorialImages}
         galleryHref={localePath(locale, "gallery")}
+        locale={locale}
+        experiencesLabel="Explore Experiences"
+        journalLabel="Read the Journal"
       />
 
       <AccommodationBriefSection

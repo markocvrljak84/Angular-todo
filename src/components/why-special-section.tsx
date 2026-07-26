@@ -1,12 +1,14 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { HomeContent } from "@/i18n/home-content";
 
 type Props = {
   content: HomeContent["whySpecial"];
   images: readonly [string, string, string];
+  hrefs: readonly [string, string, string];
 };
 
-export function WhySpecialSection({ content, images }: Props) {
+export function WhySpecialSection({ content, images, hrefs }: Props) {
   return (
     <section className="flat-section flat-section--tint" aria-labelledby="why-special-title">
       <div className="flat-wrap">
@@ -30,6 +32,11 @@ export function WhySpecialSection({ content, images }: Props) {
               <div className="why-special__body">
                 <h3 className="why-special__card-title">{card.title}</h3>
                 <p className="why-special__card-body">{card.body}</p>
+                <p className="why-special__cta">
+                  <Link href={hrefs[i]} className="why-special__btn">
+                    {card.ctaLabel}
+                  </Link>
+                </p>
               </div>
             </li>
           ))}
