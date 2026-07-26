@@ -189,12 +189,24 @@ export function StayPage({ content, goodToKnow }: Props) {
       </section>
 
       <section className="flat-section stay-closing" aria-labelledby="stay-closing-title">
-        <div className="flat-wrap stay-closing__inner">
-          <p className="stay-eyebrow">{content.closing.eyebrow}</p>
-          <h2 id="stay-closing-title" className="flat-section__title">
-            {content.closing.title}
-          </h2>
-          <p className="stay-closing__body">{content.closing.body}</p>
+        <div className="flat-wrap stay-closing__layout">
+          <div className="stay-closing__copy">
+            <p className="stay-eyebrow">{content.closing.eyebrow}</p>
+            <h2 id="stay-closing-title" className="flat-section__title flat-section__title--start">
+              {content.closing.title}
+            </h2>
+            <p className="stay-closing__body">{content.closing.body}</p>
+          </div>
+          <div className="stay-closing__motif" aria-hidden="true">
+            <Image
+              className="stay-closing__motif-img"
+              src="/img/illustrations/header-mountain-fir.webp"
+              alt=""
+              width={800}
+              height={800}
+              sizes="(min-width: 900px) 15rem, 12rem"
+            />
+          </div>
         </div>
       </section>
 
@@ -204,8 +216,12 @@ export function StayPage({ content, goodToKnow }: Props) {
             {content.seoFaq.title}
           </h2>
           <div className="faq__accordion">
-            {content.seoFaq.items.map((faq) => (
-              <details key={faq.question} className="faq__item">
+            {content.seoFaq.items.map((faq, index) => (
+              <details
+                key={faq.question}
+                className="faq__item"
+                {...(index === 0 ? { open: true } : {})}
+              >
                 <summary className="faq__summary">{faq.question}</summary>
                 <div className="faq__panel">
                   <p className="faq__text">{faq.answer}</p>

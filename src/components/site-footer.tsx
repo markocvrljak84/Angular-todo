@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Locale } from "@/i18n/config";
 import type { Messages } from "@/i18n/messages";
@@ -52,6 +53,16 @@ export function SiteFooter({ t, locale }: { t: Messages; locale: Locale }) {
                 <a href={telHref()}>{SITE_CONTACT.phone}</a>
               </p>
             </address>
+          </div>
+          <div className="site-footer__motif" aria-hidden="true">
+            <Image
+              className="site-footer__motif-img"
+              src="/img/illustrations/header-porcini.webp"
+              alt=""
+              width={640}
+              height={640}
+              sizes="9rem"
+            />
           </div>
         </div>
         <p className="site-footer__rights">{t.footer.rights}</p>

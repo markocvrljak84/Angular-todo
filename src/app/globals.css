@@ -666,9 +666,7 @@ body {
 .hero-fs__img {
   object-fit: cover;
   filter:
-    saturate(var(--photo-saturate, 0.92))
-    contrast(var(--photo-contrast, 0.89))
-    brightness(var(--photo-brightness, 1.05));
+    saturate(var(--photo-saturate, 0.92)) contrast(var(--photo-contrast, 0.89)) brightness(var(--photo-brightness, 1.05));
 }
 
 .hero-fs__img--native {
@@ -1054,9 +1052,7 @@ body {
   object-fit: cover;
   display: block;
   filter:
-    saturate(var(--photo-saturate))
-    contrast(var(--photo-contrast))
-    brightness(var(--photo-brightness));
+    saturate(var(--photo-saturate)) contrast(var(--photo-contrast)) brightness(var(--photo-brightness));
 }
 
 .nearby-places__caption {
@@ -1361,7 +1357,7 @@ body {
 .flat-wrap {
   max-width: 97rem;
   margin: 0 auto;
-  padding: 0 var(--page-gutter);
+  padding: var(--page-gutter) var(--page-gutter);
 }
 
 .flat-wrap--narrow {
@@ -1803,9 +1799,7 @@ body {
   object-fit: cover;
   transition: transform 0.35s ease, opacity 0.35s ease;
   filter:
-    saturate(var(--photo-saturate))
-    contrast(var(--photo-contrast))
-    brightness(var(--photo-brightness));
+    saturate(var(--photo-saturate)) contrast(var(--photo-contrast)) brightness(var(--photo-brightness));
 }
 
 .gallery-thumb:hover .gallery-thumb__img,
@@ -1878,9 +1872,7 @@ body {
 .gallery-lightbox__img {
   object-fit: contain;
   filter:
-    saturate(var(--photo-saturate))
-    contrast(var(--photo-contrast))
-    brightness(var(--photo-brightness));
+    saturate(var(--photo-saturate)) contrast(var(--photo-contrast)) brightness(var(--photo-brightness));
 }
 
 .gallery-lightbox__counter {
@@ -2230,9 +2222,7 @@ body {
   height: auto;
   object-fit: contain;
   filter:
-    saturate(var(--photo-saturate))
-    contrast(var(--photo-contrast))
-    brightness(var(--photo-brightness));
+    saturate(var(--photo-saturate)) contrast(var(--photo-contrast)) brightness(var(--photo-brightness));
 }
 
 /* —— Facilities (editorial grid) —— */
@@ -2584,9 +2574,7 @@ body {
   aspect-ratio: 4 / 3;
   object-fit: cover;
   filter:
-    saturate(var(--photo-saturate))
-    contrast(var(--photo-contrast))
-    brightness(var(--photo-brightness));
+    saturate(var(--photo-saturate)) contrast(var(--photo-contrast)) brightness(var(--photo-brightness));
 }
 
 .hiking-route__stats-wrap {
@@ -3238,8 +3226,29 @@ body {
 
 @media (min-width: 720px) {
   .site-footer__grid {
-    grid-template-columns: 1.35fr 0.85fr 1.1fr;
+    grid-template-columns: 1.35fr 0.85fr 1.1fr auto;
     gap: 2.5rem;
+    align-items: start;
+  }
+}
+
+.site-footer__motif {
+  display: none;
+}
+
+.site-footer__motif-img {
+  display: block;
+  width: 9rem;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (min-width: 720px) {
+  .site-footer__motif {
+    display: flex;
+    justify-content: flex-end;
+    align-self: end;
+    margin-left: auto;
   }
 }
 
@@ -3452,9 +3461,7 @@ code {
   object-fit: contain;
   object-position: top center;
   filter:
-    saturate(var(--photo-saturate))
-    contrast(var(--photo-contrast))
-    brightness(var(--photo-brightness));
+    saturate(var(--photo-saturate)) contrast(var(--photo-contrast)) brightness(var(--photo-brightness));
 }
 
 @media (min-width: 768px) {
@@ -3563,7 +3570,13 @@ code {
 .journal-hub__categories {
   display: flex;
   flex-direction: column;
-  gap: clamp(2.5rem, 5vw, 3.5rem);
+  gap: clamp(3.5rem, 7vw, 5.5rem);
+}
+
+.journal-category-block + .journal-category-block {
+  padding-top: clamp(2rem, 4vw, 3rem);
+  margin-top: 0.25rem;
+  border-top: 1px solid var(--line);
 }
 
 .journal-category-block__head {
@@ -4590,9 +4603,7 @@ code {
 .stay-photo__img {
   object-fit: cover;
   filter:
-    saturate(var(--photo-saturate))
-    contrast(var(--photo-contrast))
-    brightness(var(--photo-brightness));
+    saturate(var(--photo-saturate)) contrast(var(--photo-contrast)) brightness(var(--photo-brightness));
 }
 
 .stay-hero__inner {
@@ -4637,6 +4648,17 @@ code {
 
   .stay-outdoors__grid {
     grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  }
+
+  .stay-included__grid {
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    justify-items: stretch;
+  }
+
+  .stay-included__grid > :first-child {
+    justify-self: end;
+    max-width: 22rem;
+    padding-right: 0.5rem;
   }
 }
 
@@ -4854,10 +4876,15 @@ code {
   margin-top: 1.75rem;
 }
 
-.stay-closing__inner {
-  max-width: 44rem;
-  margin: 0 auto;
-  text-align: center;
+.stay-closing__layout {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+}
+
+.stay-closing__copy {
+  max-width: 38rem;
+  text-align: left;
 }
 
 .stay-closing__body {
@@ -4865,6 +4892,39 @@ code {
   color: var(--muted);
   font-size: 1rem;
   line-height: 1.8;
+}
+
+.stay-closing__motif {
+  display: none;
+}
+
+.stay-closing__motif-img {
+  display: block;
+  width: 100%;
+  max-width: 15rem;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (min-width: 900px) {
+  .stay-closing__layout {
+    grid-template-columns: minmax(0, 1fr) minmax(13rem, 16rem);
+    gap: clamp(2rem, 5vw, 4rem);
+    justify-items: stretch;
+  }
+
+  .stay-closing__copy {
+    justify-self: start;
+    max-width: 36rem;
+    margin-left: 0;
+    padding-right: 1rem;
+  }
+
+  .stay-closing__motif {
+    display: flex;
+    justify-content: flex-end;
+    justify-self: end;
+  }
 }
 
 .final-cta__inner {
@@ -4963,9 +5023,7 @@ code {
   object-fit: cover;
   display: block;
   filter:
-    saturate(var(--photo-saturate))
-    contrast(var(--photo-contrast))
-    brightness(var(--photo-brightness));
+    saturate(var(--photo-saturate)) contrast(var(--photo-contrast)) brightness(var(--photo-brightness));
 }
 
 .accommodation-brief__body {
@@ -5273,9 +5331,7 @@ code {
   object-fit: cover;
   display: block;
   filter:
-    saturate(var(--photo-saturate))
-    contrast(var(--photo-contrast))
-    brightness(var(--photo-brightness));
+    saturate(var(--photo-saturate)) contrast(var(--photo-contrast)) brightness(var(--photo-brightness));
 }
 
 @media (max-width: 899px) {
