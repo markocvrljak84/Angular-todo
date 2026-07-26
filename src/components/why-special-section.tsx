@@ -27,6 +27,10 @@ export function WhySpecialSection({ content, images, hrefs }: Props) {
                   height={720}
                   className="why-special__img"
                   sizes="(max-width: 768px) 100vw, 34vw"
+                  decoding="async"
+                  {...(i === 0
+                    ? { priority: true, fetchPriority: "high" as const }
+                    : { loading: "lazy" as const })}
                 />
               </div>
               <div className="why-special__body">

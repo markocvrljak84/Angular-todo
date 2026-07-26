@@ -22,8 +22,9 @@ const en: ExperiencesPageContent = {
     },
     {
       id: "sea",
-      title: "Sea & beaches",
-      intro: "Karlobag, Zavratnica, Pag and Paklenica — Adriatic day trips within 30–60 minutes.",
+      title: "Coast & landscapes",
+      intro:
+        "Karlobag, Zavratnica, Pag and Paklenica — sea, islands and canyons within about an hour of Stars Peak.",
     },
     {
       id: "food",
@@ -50,8 +51,9 @@ const hr: ExperiencesPageContent = {
     },
     {
       id: "sea",
-      title: "More i plaže",
-      intro: "Karlobag, Zavratnica, Pag i Paklenica — jadranski izleti u 30–60 minuta vožnje.",
+      title: "More i krajolici",
+      intro:
+        "Karlobag, Zavratnica, Pag i Paklenica — more, otoci i kanjoni unutar otprilike sat vremena od Stars Peaka.",
     },
     {
       id: "food",
@@ -71,7 +73,7 @@ const de: ExperiencesPageContent = {
   intro: "Vom Velebit-Gipfel bis zur Adria — alles von Bačić Duliba aus.",
   categories: [
     { id: "hiking", title: "Wandern", intro: "Bačić Kuk, Budakovo Brdo und Kiza mit Karten und GPX — plus Alpin- und Kletterrouten am Velebit." },
-    { id: "sea", title: "Meer & Strände", intro: "Karlobag, Zavratnica, Pag und Paklenica — Tagesausflüge." },
+    { id: "sea", title: "Küste & Landschaften", intro: "Karlobag, Zavratnica, Pag und Paklenica — Meer, Inseln und Schluchten." },
     { id: "food", title: "Gastronomie", intro: "Pag-Käse, frischer Fisch, Kräuter und Abende am Feuer." },
     { id: "agro", title: "Agrotourismus (bald)", intro: "Bergtees, Honig und Kräuterwanderungen — demnächst." },
   ],
@@ -82,7 +84,7 @@ const fr: ExperiencesPageContent = {
   intro: "Du sommet du Velebit à l'Adriatique — tout depuis Bačić Duliba.",
   categories: [
     { id: "hiking", title: "Randonnée", intro: "Bačić Kuk, Budakovo Brdo et Kiza avec cartes et GPX — plus les voies d’alpinisme du Velebit." },
-    { id: "sea", title: "Mer & plages", intro: "Karlobag, Zavratnica, Pag et Paklenica — excursions." },
+    { id: "sea", title: "Côte et paysages", intro: "Karlobag, Zavratnica, Pag et Paklenica — mer, îles et canyons." },
     { id: "food", title: "Gastronomie", intro: "Fromage de Pag, poisson frais, herbes et soirées au feu." },
     { id: "agro", title: "Agrotourisme (bientôt)", intro: "Thés, miel et balades botaniques — prochainement." },
   ],
@@ -93,7 +95,7 @@ const it: ExperiencesPageContent = {
   intro: "Dalla cima del Velebit all'Adriatico — tutto da Bačić Duliba.",
   categories: [
     { id: "hiking", title: "Escursionismo", intro: "Bačić Kuk, Budakovo Brdo e Kiza con mappe e GPX — più le vie alpinistiche del Velebit." },
-    { id: "sea", title: "Mare & spiagge", intro: "Karlobag, Zavratnica, Pag e Paklenica — gite giornaliere." },
+    { id: "sea", title: "Costa e paesaggi", intro: "Karlobag, Zavratnica, Pag e Paklenica — mare, isole e canyon." },
     { id: "food", title: "Gastronomia", intro: "Formaggio di Pag, pesce fresco, erbe e serate al fuoco." },
     { id: "agro", title: "Agroturismo (presto)", intro: "Tè di montagna, miele e passeggiate botaniche — in arrivo." },
   ],

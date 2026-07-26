@@ -49,6 +49,8 @@ export function ExperienceDaySection({ content }: Props) {
               quality={EXPERIENCE_DAY_IMAGE_QUALITY}
               sizes="(max-width: 767px) 100vw, min(680px, 50vw)"
               className="experience-day__img"
+              loading="lazy"
+              decoding="async"
             />
           </figure>
         </div>

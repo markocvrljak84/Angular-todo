@@ -38,6 +38,8 @@ export function NearbySection({ t, compact }: Props) {
                     height={480}
                     className="nearby-places__img"
                     sizes="(max-width: 768px) 100vw, 50vw"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <figcaption className="nearby-places__caption">

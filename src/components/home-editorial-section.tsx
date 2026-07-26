@@ -54,7 +54,8 @@ export function HomeEditorialSection({
                     height={480}
                     className="home-editorial__img"
                     sizes="(max-width: 768px) 100vw, 33vw"
-                    priority={i === 0}
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <figcaption className="home-editorial__caption">

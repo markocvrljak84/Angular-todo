@@ -184,7 +184,7 @@ export const HOME_IMAGES = {
   editorial: {
     outdoorKitchen: "/img/ljetnja-kuhinja-3.jpg",
     interior: DNEVNI_BORAVAK_IMAGE,
-    surroundings: "/img/velebit-na-dohvat-ruku.jpeg",
+    surroundings: "/img/life-bacic-kuk-cabin.jpg",
   },
   accommodation: "/img/gallery/740290390.jpg",
   localFlavours: "/img/home-local-flavours.jpg",

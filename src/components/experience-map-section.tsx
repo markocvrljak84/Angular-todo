@@ -30,6 +30,8 @@ export function ExperienceMapSection({ content, mountainImage, seaImage, id = "e
               fill
               className="experience-map__zone-img"
               sizes="(max-width: 768px) 100vw, 50vw"
+              priority
+              decoding="async"
             />
             <span className="experience-map__zone experience-map__zone--mountain" aria-hidden="true">
               Velebit
@@ -42,6 +44,8 @@ export function ExperienceMapSection({ content, mountainImage, seaImage, id = "e
               fill
               className="experience-map__zone-img"
               sizes="(max-width: 768px) 100vw, 50vw"
+              loading="lazy"
+              decoding="async"
             />
             <span className="experience-map__zone experience-map__zone--sea" aria-hidden="true">
               Adriatic

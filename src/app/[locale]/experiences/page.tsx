@@ -85,6 +85,8 @@ export default async function ExperiencesPage({ params }: Props) {
               width={800}
               height={800}
               sizes="(min-width: 768px) 8.5rem, 7.5rem"
+              loading="lazy"
+              decoding="async"
             />
           </div>
         </div>

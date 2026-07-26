@@ -13,14 +13,16 @@ export function AccommodationBriefSection({ content, imageSrc, accommodationHref
     <section className="flat-section flat-section--tint" aria-labelledby="accommodation-brief-title">
       <div className="flat-wrap accommodation-brief">
         <div className="accommodation-brief__media">
-          <Image
-            src={imageSrc}
-            alt={content.imageAlt}
-            width={1200}
-            height={800}
-            className="accommodation-brief__img"
-            sizes="(max-width: 900px) 100vw, 50vw"
-          />
+            <Image
+              src={imageSrc}
+              alt={content.imageAlt}
+              width={1200}
+              height={800}
+              className="accommodation-brief__img"
+              sizes="(max-width: 900px) 100vw, 50vw"
+              loading="lazy"
+              decoding="async"
+            />
         </div>
         <div className="accommodation-brief__body">
           <p className="accommodation-brief__eyebrow">{content.eyebrow}</p>

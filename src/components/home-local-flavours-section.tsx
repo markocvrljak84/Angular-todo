@@ -35,6 +35,8 @@ export function HomeLocalFlavoursSection({ content, imageSrc }: Props) {
             height={427}
             className="local-flavours__img"
             sizes="(max-width: 900px) 100vw, 55vw"
+            loading="lazy"
+            decoding="async"
           />
         </div>
       </div>

@@ -994,7 +994,7 @@ body {
   }
 }
 
-/* —— Nearby / Sea & beaches (Aman-style editorial grid) —— */
+/* —— Nearby places (editorial grid: coast, islands, parks) —— */
 .nearby-places {
   padding-bottom: clamp(2rem, 4vw, 3rem);
 }
@@ -5880,8 +5880,6 @@ code {
   }
 
   .why-special__media,
-  .home-editorial__media,
-  .nearby-places__media,
   .accommodation-brief__media {
     width: calc(100% + 2 * var(--page-gutter));
     max-width: none;
