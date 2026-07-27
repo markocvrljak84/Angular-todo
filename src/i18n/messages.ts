@@ -182,18 +182,18 @@ const en: Messages = {
   langSwitcher: { aria: "Language" },
   footer: {
     tagline: "Summit · Swim · Stargaze on Velebit",
-    locationLine: "Velebit mountain chalet Stars Peak",
-    rights: "© Velebit mountain chalet Stars Peak",
+    locationLine: "Velebit mountain retreat Stars Peak",
+    rights: "© Velebit mountain retreat Stars Peak",
     exploreTitle: "Explore",
     contactTitle: "Contact us",
     socialTitle: "Follow Stars Peak",
   },
   home: {
-    heroBadge: "Velebit mountain chalet Stars Peak",
+    heroBadge: "Velebit mountain retreat Stars Peak",
     heroTitle: "Your hideaway above the treeline",
     heroLead:
       "Wake up to pine-scented air and wide skies. This mock homepage describes a fictional cabin so you can preview layout, typography, and navigation before adding your real story.",
-    heroScriptTitle: "Velebit mountain chalet Stars Peak",
+    heroScriptTitle: "Velebit mountain retreat Stars Peak",
     heroCenterLine:
       "Wake up beneath Bačić Kuk. Swim in the Adriatic before lunch.",
     nearbyTitle: "Near places",
@@ -272,7 +272,7 @@ const en: Messages = {
   about: {
     title: "About this place",
     lead:
-      "High on Velebit, Marko and Ljiljana turned a wooden chalet into Stars Peak — an unusual, deeply personal retreat with views of Bačić Kuk ridge and the Adriatic coast is half an hour away.",
+      "High on Velebit, Marko and Ljiljana turned a wooden chalet into Stars Peak — an unusual, deeply personal retreat with views of mountain ridge and the Adriatic coast is half an hour away.",
     p1Heading: "From dream to mountain home",
     p1:
       "What began as a decade-long dream became three years of hands-on work: stripping back clutter, opening the space to light and wood, and shaping a slower rhythm of life on the Velebit mountain.",
@@ -281,7 +281,7 @@ const en: Messages = {
     p2:
       "In the heart of Velebit Nature Park, Stars Peak Holiday House combine the serenity of the mountains with the beauty of the Adriatic coast. Paklenica, Zavratnica, Pag and Velebit's most stunning peaks are all within easy reach.",
     bookingLine: "The house can be booked at the following link:",
-    bookingLinkLabel: "Booking.com — Velebit Mountain Chalet Stars Peak",
+    bookingLinkLabel: "Booking.com — Velebit mountain retreat Stars Peak",
     sideImageAlt: "Marko and Ljiljana, hosts of Stars Peak on Velebit",
   },
   gallery: {
@@ -293,7 +293,7 @@ const en: Messages = {
     lightboxAria: "Enlarged photo gallery",
     lightboxOpenThumb: "Open larger view",
     images: Array.from({ length: 25 }, (_, i) => ({
-      alt: `Velebit mountain chalet Stars Peak — gallery photo ${i + 1}`,
+      alt: `Velebit mountain retreat Stars Peak — gallery photo ${i + 1}`,
       caption: `Gallery — ${i + 1}`,
     })),
   },
@@ -352,7 +352,7 @@ const en: Messages = {
 
 const hr: Messages = {
   meta: {
-    siteName: "Velebit mountain chalet Stars Peak – Hrvatska",
+    siteName: "Velebit mountain retreat Stars Peak – Hrvatska",
     siteDescription:
       "Probudite se ispod Bačić kuka, kupajte se u Jadranu prije ručka, promatrajte zvijezde na Velebitu. Stars Peak — iskustvo planine u Bačić Dulibi, Hrvatska.",
   },
@@ -391,8 +391,8 @@ const hr: Messages = {
   langSwitcher: { aria: "Jezik" },
   footer: {
     tagline: "Vrh · More · Zvijezde na Velebitu",
-    locationLine: "Velebit mountain chalet Stars Peak",
-    rights: "© Velebit mountain chalet Stars Peak",
+    locationLine: "Velebit mountain retreat Stars Peak",
+    rights: "© Velebit mountain retreat Stars Peak",
     exploreTitle: "Poveznice",
     contactTitle: "Kontakt",
     socialTitle: "Pratite Stars Peak",
@@ -402,7 +402,7 @@ const hr: Messages = {
     heroTitle: "Skriveno mjesto iznad krošnji",
     heroLead:
       "Probudite se uz miris bora i široko nebo. Ovaj mock opisuje izmišljenu kolibu kako biste vidjeli raspored i tipografiju prije pravog sadržaja.",
-    heroScriptTitle: "Velebit mountain chalet Stars Peak",
+    heroScriptTitle: "Velebit mountain retreat Stars Peak",
     heroCenterLine:
       "Probudite se ispod Bačić kuka. Prije ručka kupajte se u Jadranu.",
     heroCtaPill: "Od 129 € / noć · mock cijena",
@@ -490,7 +490,7 @@ const hr: Messages = {
     p2:
       "Smještene u Parku prirode Velebit, kuća za odmor Stars Peak spajaju planinski mir s ljepotom Jadranske obale. Veličanstveni vrhovi Velebita, Nacionalni park Paklenica, uvala Zavratnica i otok Pag nalaze se nadohvat ruke, pružajući jedinstven doživljaj gdje svježa planinska jutra susreću sunčana jadranska poslijepodneva.",
     bookingLine: "Kuću možete rezervirati na sljedećem linku:",
-    bookingLinkLabel: "Booking.com — Velebit Mountain Chalet Stars Peak",
+    bookingLinkLabel: "Booking.com — Velebit mountain retreat Stars Peak",
     sideImageAlt: "Marko i Ljiljana, domaćini Stars Peaka na Velebitu",
   },
   gallery: {
@@ -502,7 +502,7 @@ const hr: Messages = {
     lightboxAria: "Povećani prikaz galerije",
     lightboxOpenThumb: "Otvori veći prikaz",
     images: Array.from({ length: 25 }, (_, i) => ({
-      alt: `Velebit mountain chalet Stars Peak — galerija, fotografija ${i + 1}`,
+      alt: `Velebit mountain retreat Stars Peak — galerija, fotografija ${i + 1}`,
       caption: `Galerija — ${i + 1}`,
     })),
   },
@@ -561,7 +561,7 @@ const hr: Messages = {
 
 const de: Messages = {
   meta: {
-    siteName: "Velebit mountain chalet Stars Peak – Kroatien",
+    siteName: "Velebit mountain retreat Stars Peak – Kroatien",
     siteDescription:
       "Erwachen Sie unter Bačić Kuk, baden Sie mittags in der Adria, beobachten Sie Sterne am Velebit. Stars Peak — Bergerlebnis in Bačić Duliba, Kroatien.",
   },
@@ -600,8 +600,8 @@ const de: Messages = {
   langSwitcher: { aria: "Sprache" },
   footer: {
     tagline: "Gipfel · Meer · Sterne am Velebit",
-    locationLine: "Velebit mountain chalet Stars Peak",
-    rights: "© Velebit mountain chalet Stars Peak",
+    locationLine: "Velebit mountain retreat Stars Peak",
+    rights: "© Velebit mountain retreat Stars Peak",
     exploreTitle: "Navigation",
     contactTitle: "Kontakt",
     socialTitle: "Stars Peak folgen",
@@ -611,7 +611,7 @@ const de: Messages = {
     heroTitle: "Ihr Rückzugsort über den Baumwipfeln",
     heroLead:
       "Wachen Sie auf mit Kiefernduft und weitem Himmel. Diese Demo-Startseite beschreibt eine fiktive Hütte, damit Sie Layout und Navigation testen können.",
-    heroScriptTitle: "Velebit mountain chalet Stars Peak",
+    heroScriptTitle: "Velebit mountain retreat Stars Peak",
     heroCenterLine:
       "Erwachen Sie unter Bačić Kuk. Baden Sie mittags in der Adria.",
     heroCtaPill: "Ab 129 € / Nacht · Platzhalterpreis",
@@ -699,7 +699,7 @@ const de: Messages = {
     p2:
       "Das Haus liegt im Naturpark Velebit, nahe Karlobag und Baške Oštarije — Gipfel, Paklenica, Zavratnica und Pag in Reichweite.",
     bookingLine: "Das Haus kann über den folgenden Link gebucht werden:",
-    bookingLinkLabel: "Booking.com — Velebit Mountain Chalet Stars Peak",
+    bookingLinkLabel: "Booking.com — Velebit mountain retreat Stars Peak",
     sideImageAlt: "Marko und Ljiljana, Gastgeber von Stars Peak am Velebit",
   },
   gallery: {
@@ -711,7 +711,7 @@ const de: Messages = {
     lightboxAria: "Vergrößerte Galerie",
     lightboxOpenThumb: "Größere Ansicht öffnen",
     images: Array.from({ length: 25 }, (_, i) => ({
-      alt: `Velebit mountain chalet Stars Peak — Galeriefoto ${i + 1}`,
+      alt: `Velebit mountain retreat Stars Peak — Galeriefoto ${i + 1}`,
       caption: `Galerie — ${i + 1}`,
     })),
   },

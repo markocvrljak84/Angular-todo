@@ -54,8 +54,10 @@ export function HomeEditorialSection({
                     height={480}
                     className="home-editorial__img"
                     sizes="(max-width: 768px) 100vw, 33vw"
-                    loading="lazy"
                     decoding="async"
+                    {...(i === 0
+                      ? { priority: true }
+                      : { loading: "lazy" as const })}
                   />
                 </div>
                 <figcaption className="home-editorial__caption">

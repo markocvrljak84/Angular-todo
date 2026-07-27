@@ -96,7 +96,7 @@ const byLocale: Record<Locale, PressPageContent> = {
         bullets: [
           "Off-grid solar and rainwater systems",
           "Up to four guests, fireplace and outdoor kitchen",
-          "900 m elevation, ~30 min to the Adriatic",
+          "900 meters elevation, ~30 min to the Adriatic",
         ],
         relatedHref: "/about",
         relatedLabel: "About the hosts",

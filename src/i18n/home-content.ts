@@ -71,9 +71,9 @@ const en: HomeContent = {
     subline:
       "Mountain retreat at 900 metres, between the peaks of Velebit and the Adriatic Sea.",
     facts: [
-      "900 m elevation",
+      "900 meters elevation",
       "30 min to the sea",
-      "Views of Bačić Kuk",
+      "Beautiful view of the mountain",
       "Inside Velebit Nature Park",
     ],
     ctaBook: "Book your stay",
@@ -91,8 +91,8 @@ const en: HomeContent = {
     cards: [
       {
         title: "Mountain",
-        body: "Wake up under the peaks of Velebit. Trails begin just from the doorstep, leading towards your next adventure.",
-        imageAlt: "Panoramic view from a Velebit summit over forest ridges and the distant Adriatic",
+        body: "Wake up under the peaks of Velebit. Trails begin just from the Stars Peak doorstep exploring the Velebit mountain.",
+        imageAlt: "Stars Peak cabin beside a meadow with Bačić Kuk peaks beyond the forest",
         ctaLabel: "Hiking on Velebit",
       },
       {
@@ -236,7 +236,7 @@ const hr: HomeContent = {
       {
         title: "Planina",
         body: "Bačić kuk, Premužićeva staza i Dabarski kukovi — započnite planinarenje Velebitom stazama nadomak kuće.",
-        imageAlt: "Panoramski pogled s vrha Velebita na zelene grebene i daleki Jadran",
+        imageAlt: "Kuća Stars Peak uz livadu s vrhovima Bačić kuka iza šume",
         ctaLabel: "Planinarenje Velebitom",
       },
       {
@@ -355,7 +355,7 @@ const de: HomeContent = {
       {
         title: "Berg",
         body: "Bačić Kuk, Premužić-Weg und Dabarski kukovi — klassisches Velebit-Wandern ab der Haustür.",
-        imageAlt: "Panoramablick vom Velebit-Gipfel über bewaldete Grate und die ferne Adria",
+        imageAlt: "Stars-Peak-Hütte an einer Wiese mit Bačić-Kuk-Gipfeln hinter dem Wald",
         ctaLabel: "Wandern am Velebit",
       },
       {
@@ -487,7 +487,7 @@ const fr: HomeContent = {
       {
         title: "Montagne",
         body: "Bačić Kuk, sentier Premužić et Dabarski kukovi — randonnée classique du Velebit.",
-        imageAlt: "Vue panoramique depuis un sommet du Velebit sur les crêtes forestières et l'Adriatique lointaine",
+        imageAlt: "Chalet Stars Peak près d’une prairie avec les sommets de Bačić Kuk derrière la forêt",
         ctaLabel: "Randonnée sur le Velebit",
       },
       {
@@ -619,7 +619,7 @@ const it: HomeContent = {
       {
         title: "Montagna",
         body: "Bačić Kuk, sentiero Premužić e Dabarski kukovi — escursioni classiche del Velebit.",
-        imageAlt: "Vista panoramica da una vetta del Velebit sulle creste boschive e l'Adriatico in lontananza",
+        imageAlt: "Chalet Stars Peak accanto a un prato con le cime di Bačić Kuk oltre il bosco",
         ctaLabel: "Escursioni sul Velebit",
       },
       {

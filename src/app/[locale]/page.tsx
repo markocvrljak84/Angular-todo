@@ -83,14 +83,6 @@ export default async function HomePage({ params }: Props) {
         ]}
       />
 
-      <HomeWelcomeStrip
-        title={home.welcome.title}
-        line={home.welcome.line}
-        artLabel={home.welcome.artLabel}
-      />
-
-      <ExperienceDaySection content={experience.day} />
-
       <HomeEditorialSection
         content={home.editorial}
         images={editorialImages}
@@ -98,6 +90,14 @@ export default async function HomePage({ params }: Props) {
         locale={locale}
         experiencesLabel="Explore Experiences"
         journalLabel="Read the Journal"
+      />
+
+      <ExperienceDaySection content={experience.day} />
+
+      <HomeWelcomeStrip
+        title={home.welcome.title}
+        line={home.welcome.line}
+        artLabel={home.welcome.artLabel}
       />
 
       <AccommodationBriefSection
