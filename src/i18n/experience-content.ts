@@ -54,7 +54,7 @@ const en: ExperienceContent = {
       {
         time: "09:00",
         title: "Hike to Bačić Kuk",
-        body: "The trail starts minutes from the door — a classic Velebit ascent with wide views.",
+        body: "The trail starts minutes from the door — a classic Velebit ascent with wildernes around.",
       },
       {
         time: "14:00",

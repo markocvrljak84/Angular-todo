@@ -21,6 +21,7 @@ export type JournalArticle = {
   status: JournalArticleStatus;
   seoDescription?: string;
   paragraphs?: string[];
+  externalLinks?: { href: string; label: string }[];
 };
 
 export type JournalCategory = {
@@ -96,6 +97,12 @@ const en: JournalContent = {
             "Plan roughly an hour and a half from Bačić Duliba to the summit in good conditions, longer if you move slowly or wait for weather. The lower part is a proper mountain walk: grassland, forest, then steeper ground. The last minutes are different. Above the amphitheatre the route becomes a short, exposed scramble with fixed cables. It is not a via ferrata in the alpine sense, but it is real climbing terrain. The Croatian Mountaineering Association is clear on this: the ascent to the peak is difficult and not recommended for hikers without climbing experience. We tell guests the same — if heights unsettle you, turn around at the amphitheatre. The view from there is already worth the walk.",
             "If you want a longer day, the ridge continues beyond Bačić Kuk toward Budakovo Brdo and back to Bačić Duliba — a loop of around nine kilometres and several hours on the mountain. We usually suggest that only when the weather is stable and legs still feel strong after the summit. Otherwise an out-and-back from Duliba is enough: summit, rest, descend the same way, and be home for a late lunch or an early dinner by the outdoor kitchen.",
             "Water, boots with grip, gloves for the cable section and an early start matter more here than fancy gear. In summer the rock heats quickly; in spring and autumn the wind on the ridge can be sharp. We keep GPX files and route notes on the Experiences page for guests who want the track on their phone. And when you come back down, Bačić Kuk is still there above the house — the same silhouette you woke up to, only now you know how the stone feels under your hands.",
+          ],
+          externalLinks: [
+            {
+              href: "https://www.hps.hr/info/hrvatski-vrhovi/bacic-kuk-vrh/",
+              label: "Croatian Mountaineering Association: Bačić Kuk",
+            },
           ],
         },
         {
@@ -200,6 +207,12 @@ const en: JournalContent = {
             "For swimming we like Tatinja for a scenic pebble cove north of the centre, the town beach along the promenade when you want to stay close, and quieter stretches toward Ribarica and Cesarica when the day feels slower. None of these need a complicated plan: park, walk, swim, coffee, drive home. In summer start earlier if you want shade and an easier parking spot; in shoulder season the waterfront is quieter and the mountain air meets the sea without the heat.",
             "We treat Karlobag as the practical door to the Adriatic — shops when the fridge runs low, a swim when the ridge is too hot, a late lunch before the climb back to Bačić Duliba. The road up is the same gravel and asphalt you arrived on. By evening you are under the stars again, with salt still on your skin and the peaks of Velebit closing the horizon.",
           ],
+          externalLinks: [
+            {
+              href: "https://www.tz-karlobag.hr/?lang=en-GB",
+              label: "Tourist Board of Karlobag",
+            },
+          ],
         },
         {
           slug: "zavratnica",
@@ -216,6 +229,12 @@ const en: JournalContent = {
             "Because of its landscape value, Zavratnica was declared a protected landscape in 1964 and has been part of Velebit Nature Park since 1981. It also belongs to the Natura 2000 network. The official park guidance is simple: reach the cove on foot along the sea from Jablanac in about twenty minutes, or descend by hiking trail from the village of Zavratnica if you want a steeper approach. Treat it as a natural site, not a beach club — water, shoes with grip, and time for the walk in and out.",
             "We suggest Zavratnica when guests want something between a mountain day and a town swim: dramatic rock, clear water, and a short coastal path instead of a long ferry plan. Go early in high season if you can. Swim, look back at the Velebit wall above the inlet, then return to Stars Peak with the feeling that mountain and sea really do share the same day.",
           ],
+          externalLinks: [
+            {
+              href: "https://pp-velebit.hr/en/plan-your-visit/zavratnica-cove",
+              label: "Velebit Nature Park: Zavratnica Cove",
+            },
+          ],
         },
         {
           slug: "pag",
@@ -231,6 +250,12 @@ const en: JournalContent = {
             "Paški most opened in 1968. The bridge is about 301 metres long and carries the D106 across the Ljubačka Vrata strait. It is also famous for the bura — the strong wind that funnels along Velebit. On calm days the crossing is part of the view; on windy days you check conditions before you go. Once on the island the landscape shifts: bare karst and salt air on one side, softer green pockets on the other. Pag is often described as an island with two faces, and that is how it feels after a week in the mountain woods.",
             "What guests usually come for is the atmosphere as much as a single beach. Sheep graze herbs salted by sea spray; Paški sir — Pag cheese — is the flavour most people want to taste. Salt pans, lace and stone towns sit in the same open light. We do not try to pack the whole island into one visit. A loop through the rocky north or a stop in Pag town, a swim where the shore opens, cheese or lunch, and time to drive home before dark is enough.",
             "From Stars Peak, Pag works best as a full day with an early start. Pair it with Karlobag only if you keep both stops short. When the bura is strong, stay on the mainland coast or on the mountain — the ridge will still be there tomorrow. When the air is clear, the drive back up to Bačić Duliba, with Pag fading behind you and Velebit rising ahead, is half the pleasure of the trip.",
+          ],
+          externalLinks: [
+            {
+              href: "https://www.pag-outdoor.com/en/otok-pag-ili-mjesec-podno-velebita/",
+              label: "Pag Outdoor: Pag island in pictures",
+            },
           ],
         },
         {

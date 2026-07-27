@@ -121,7 +121,7 @@ const byLocale: Record<Locale, Record<SeoTopicPageKey, TopicPageContent>> = {
     offGridMountainCabin: {
       title: "Off-grid mountain cabin",
       intro:
-        "Stars Peak is an off grid cabin Croatia guests choose when they want real mountain quiet without giving up everyday comfort. Solar power, rainwater and thoughtful systems keep this remote cabin Croatia stay warm, bright and practical high on Velebit.",
+        "Stars Peak is an off grid cabin guests choose when they want real mountain quiet without giving up everyday comfort. Solar power, rainwater and thoughtful systems keep this remote cabin stay warm, bright and practical high on Velebit.",
       blocks: [
         {
           title: "Solar-powered mountain living",

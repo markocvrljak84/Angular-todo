@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { HomeContent } from "@/i18n/home-content";
 
 type ZoneImage = {
@@ -13,9 +14,41 @@ type Props = {
   id?: string;
 };
 
-export function ExperienceMapSection({ content, mountainImage, seaImage, id = "experience-map" }: Props) {
+function PointLink({ href, label }: { href: string; label: string }) {
+  const external = /^https?:\/\//i.test(href);
+
+  if (external) {
+    return (
+      <a
+        href={href}
+        className="experience-map__point-link"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {label}
+      </a>
+    );
+  }
+
   return (
-    <section id={id} className="flat-section flat-section--under-header" aria-labelledby="experience-map-title">
+    <Link href={href} className="experience-map__point-link">
+      {label}
+    </Link>
+  );
+}
+
+export function ExperienceMapSection({
+  content,
+  mountainImage,
+  seaImage,
+  id = "experience-map",
+}: Props) {
+  return (
+    <section
+      id={id}
+      className="flat-section flat-section--under-header"
+      aria-labelledby="experience-map-title"
+    >
       <div className="flat-wrap">
         <h2 id="experience-map-title" className="flat-section__title">
           {content.title}
@@ -60,14 +93,7 @@ export function ExperienceMapSection({ content, mountainImage, seaImage, id = "e
                 <strong>{point.name}</strong>
                 <span>{point.note}</span>
                 {point.link ? (
-                  <a
-                    href={point.link.href}
-                    className="experience-map__point-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {point.link.label}
-                  </a>
+                  <PointLink href={point.link.href} label={point.link.label} />
                 ) : null}
               </li>
             ))}

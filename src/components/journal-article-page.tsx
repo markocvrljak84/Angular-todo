@@ -46,6 +46,21 @@ export function JournalArticlePage({
         ))}
       </div>
 
+      {article.externalLinks?.length ? (
+        <aside className="journal-article__external">
+          <p className="journal-article__related-label">External links</p>
+          <ul className="journal-article__related-links">
+            {article.externalLinks.map((link) => (
+              <li key={link.href}>
+                <a href={link.href} target="_blank" rel="noopener noreferrer">
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </aside>
+      ) : null}
+
       <aside className="journal-article__related">
         <p className="journal-article__related-label">Continue exploring</p>
         <ul className="journal-article__related-links">

@@ -234,7 +234,7 @@ const en: Messages = {
       },
       {
         label: "Bačić Kuk",
-        headline: "SUMMIT ABOVE THE CHALET",
+        headline: "SUMMIT ABOVE THE STARS PEAK",
         body:
           "The iconic peak rising directly above Stars Peak — a classic Velebit ascent with wide views over Bačić Duliba, the ridge and the Adriatic on clear days.",
       },
@@ -279,7 +279,7 @@ const en: Messages = {
     hostsNote:
       "We are Marko and Ljiljana — we built and run Stars Peak ourselves and are here for your questions before and during your stay.",
     p2:
-      "In the heart of Velebit Nature Park, Stars Peak Holiday House combine the serenity of the mountains with the beauty of the Adriatic coast. Paklenica, Zavratnica, Pag and Velebit's most stunning peaks are all within easy reach.",
+      "In the heart of Velebit Nature Park, Stars Peak mountain retreat combine the serenity of the mountains with the beauty of the Adriatic coast. Paklenica, Zavratnica, Pag and Velebit's most stunning peaks are all within easy reach.",
     bookingLine: "The house can be booked at the following link:",
     bookingLinkLabel: "Booking.com — Velebit mountain retreat Stars Peak",
     sideImageAlt: "Marko and Ljiljana, hosts of Stars Peak on Velebit",

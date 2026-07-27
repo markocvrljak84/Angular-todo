@@ -1,4 +1,5 @@
 import type { Locale } from "./config";
+import { journalArticlePath } from "./journal-content";
 
 const PAG_OUTDOOR_ARTICLE_URL: Record<Locale, string> = {
   hr: "https://www.pag-outdoor.com/hr/otok-pag-ili-mjesec-podno-velebita/",
@@ -6,6 +7,22 @@ const PAG_OUTDOOR_ARTICLE_URL: Record<Locale, string> = {
   de: "https://www.pag-outdoor.com/de/otok-pag-ili-mjesec-podno-velebita/",
   fr: "https://www.pag-outdoor.com/fr/otok-pag-ili-mjesec-podno-velebita/",
   it: "https://www.pag-outdoor.com/it/otok-pag-ili-mjesec-podno-velebita/",
+};
+
+const PREMUZIC_TRAIL_URL: Record<Locale, string> = {
+  hr: "https://np-sjeverni-velebit.hr/www/hr/park/premuziceva-staza",
+  en: "https://np-sjeverni-velebit.hr/www/en/park-en/premuzic-trail",
+  de: "https://np-sjeverni-velebit.hr/www/en/park-en/premuzic-trail",
+  fr: "https://np-sjeverni-velebit.hr/www/en/park-en/premuzic-trail",
+  it: "https://np-sjeverni-velebit.hr/www/en/park-en/premuzic-trail",
+};
+
+const PAKLENICA_URL: Record<Locale, string> = {
+  hr: "https://np-paklenica.hr/hr/",
+  en: "https://np-paklenica.hr/en/",
+  de: "https://np-paklenica.hr/de/",
+  fr: "https://np-paklenica.hr/en/",
+  it: "https://np-paklenica.hr/en/",
 };
 
 export type HomeEditorialBlock = {
@@ -80,8 +97,8 @@ const en: HomeContent = {
     ctaExperiences: "See experiences",
   },
   welcome: {
-    title: "Into Velebit wilderness",
-    line: "A quiet house between peaks and sky",
+    title: "Into Croatia wilderness",
+    line: "Velebit retreat between peaks and the stars",
     artLabel: "Etching-style illustration of a Velebit brown bear",
   },
   whySpecial: {
@@ -91,7 +108,7 @@ const en: HomeContent = {
     cards: [
       {
         title: "Mountain",
-        body: "Wake up under the peaks of Velebit. Trails begin just from the Stars Peak doorstep exploring the Velebit mountain.",
+        body: "Wake up under the peaks of Velebit. Trail begins from the Stars Peak doorstep, exploring the Velebit mountain.",
         imageAlt: "Stars Peak cabin beside a meadow with Bačić Kuk peaks beyond the forest",
         ctaLabel: "Hiking on Velebit",
       },
@@ -103,7 +120,7 @@ const en: HomeContent = {
       },
       {
         title: "Stars",
-        body: "After sunset, silence settles across the ridge and moon and the stars becomes the brightest light in the landscape.",
+        body: "After sunset, silence settles across the ridge and moon and the stars becomes the brightest light in the sky.",
         imageAlt: "Crescent moon above the Velebit ridge at dusk",
         ctaLabel: "Stargazing",
       },
@@ -112,7 +129,7 @@ const en: HomeContent = {
   editorial: {
     title: "Life at Stars Peak",
     intro:
-      "Bačić Kuk outside the door, a quiet living room, and evenings in the outdoor kitchen — life at Stars Peak in three moments.",
+      "Mountain ridge in the window, a quiet living room, and evenings in the outdoor kitchen — life at Stars Peak in three moments.",
     ctaLabel: "Full gallery",
     blocks: [
       {
@@ -164,21 +181,37 @@ const en: HomeContent = {
         name: "Bačić Kuk",
         note:
           "At 1,304 m, Bačić Kuk is actually a cluster of bare rocky peaks of varying height and steepness, offering climbing challenges at every difficulty level.",
+        link: {
+          href: journalArticlePath("en", "hiking", "bacic-kuk-hike"),
+          label: "Bačić Kuk hike",
+        },
       },
       {
         name: "Karlobag",
         note:
           "Karlobag is a wonderful blend of Mediterranean and mainland life — crystal-clear sea and Croatia's finest mountain, Velebit, just minutes away by car.",
+        link: {
+          href: journalArticlePath("en", "places", "karlobag"),
+          label: "Karlobag day trip",
+        },
       },
       {
         name: "Zavratnica",
         note:
           "A beautiful cove with crystal-clear water. Zavratnica is surely one of the finest bays on the Croatian coast — a protected landscape on the Adriatic.",
+        link: {
+          href: journalArticlePath("en", "places", "zavratnica"),
+          label: "Zavratnica cove",
+        },
       },
       {
         name: "Premužić trail",
         note:
           "Hiking Velebit with views of the Adriatic archipelago. The Premužić trail is considered a masterpiece of stonework — built as dry-stone walling and laid out to lead hikers simply into the harshest, most rugged parts of northern Velebit: Hajdučki and Rožanski kukovi.",
+        link: {
+          href: PREMUZIC_TRAIL_URL.en,
+          label: "Premužić trail guide",
+        },
       },
       {
         name: "Pag island",
@@ -193,6 +226,10 @@ const en: HomeContent = {
         name: "Paklenica National Park",
         note:
           "Paklenica's beauty is best experienced on foot, along more than 150 km of marked hiking trails. Its proximity to the coast adds a special charm — mountain and sea in one place.",
+        link: {
+          href: PAKLENICA_URL.en,
+          label: "Paklenica National Park",
+        },
       },
     ],
   },
@@ -304,19 +341,60 @@ const hr: HomeContent = {
     homeNote:
       "Stars Peak je baza za dan: vrhovi, uvale i otok na oko sat vožnje — jedna od najljepših prirodnih scena Hrvatske, dostupna bez žurbe.",
     points: [
-      { name: "Bačić kuk", note: "Bačić kuk (1304 m) sastoji se zapravo od skupine golih kamenitih kukova različite visine i strmine, zbog čega pruža mogućnost za penjačke podvige različitih stupnjeva težine." },
-      { name: "Karlobag", note: "Karlobag je čudesan spoj Mediterana i kontinenta, kristalno čistog mora i najljepše hrvatske planine – Velebita, do kojega ima tek nekoliko minuta vožnje." },
-      { name: "Zavratnica", note: "Prekrasna uvala sa kristalno čistim morem. Zavratnica je sigurno jedna od najljepših uvala hrvatske obale i zaštićeni krajolik na Hrvatskom Jadranu." },
-      { name: "Premužićeva staza", note: "Hodanje Velebitom sa pogledom na Jadranski arhipelag. Premužićevu stazu danas smatramo pravim remek-djelom graditeljstva jer je građena u kamenu - suhozidu, te je položena tako da nas na vrlo jednostavan način vodi u najsurovije i najkrševitije dijelove sjevernog Velebita – Hajdučke i Rožanske kukove" },
+      {
+        name: "Bačić kuk",
+        note:
+          "Bačić kuk (1304 m) sastoji se zapravo od skupine golih kamenitih kukova različite visine i strmine, zbog čega pruža mogućnost za penjačke podvige različitih stupnjeva težine.",
+        link: {
+          href: journalArticlePath("hr", "hiking", "bacic-kuk-hike"),
+          label: "Uspon na Bačić kuk",
+        },
+      },
+      {
+        name: "Karlobag",
+        note:
+          "Karlobag je čudesan spoj Mediterana i kontinenta, kristalno čistog mora i najljepše hrvatske planine – Velebita, do kojega ima tek nekoliko minuta vožnje.",
+        link: {
+          href: journalArticlePath("hr", "places", "karlobag"),
+          label: "Izlet u Karlobag",
+        },
+      },
+      {
+        name: "Zavratnica",
+        note:
+          "Prekrasna uvala sa kristalno čistim morem. Zavratnica je sigurno jedna od najljepših uvala hrvatske obale i zaštićeni krajolik na Hrvatskom Jadranu.",
+        link: {
+          href: journalArticlePath("hr", "places", "zavratnica"),
+          label: "Uvala Zavratnica",
+        },
+      },
+      {
+        name: "Premužićeva staza",
+        note:
+          "Hodanje Velebitom sa pogledom na Jadranski arhipelag. Premužićevu stazu danas smatramo pravim remek-djelom graditeljstva jer je građena u kamenu - suhozidu, te je položena tako da nas na vrlo jednostavan način vodi u najsurovije i najkrševitije dijelove sjevernog Velebita – Hajdučke i Rožanske kukove",
+        link: {
+          href: PREMUZIC_TRAIL_URL.hr,
+          label: "Premužićeva staza",
+        },
+      },
       {
         name: "Otok Pag",
-        note: "Kao jedini jadranski otok s dva lica, Pag pruža divlje prizore surovog kamena i plavetnila neba te nježnije, zelenije i pitomije krajolike, nudeći vam istodobno iskustvo sirove ljepote i smirujuće idile.",
+        note:
+          "Kao jedini jadranski otok s dva lica, Pag pruža divlje prizore surovog kamena i plavetnila neba te nježnije, zelenije i pitomije krajolike, nudeći vam istodobno iskustvo sirove ljepote i smirujuće idile.",
         link: {
           href: PAG_OUTDOOR_ARTICLE_URL.hr,
           label: "Otok Pag u slikama",
         },
       },
-      { name: "Nacionalni park Paklenica", note: "Sve ljepote Paklenice moguće je doživjeti jedino pješačenjem, a upravo tome služi preko 150 km uređenih planinarskih staza. Posebnu draž ovom prostoru daje blizina obale koja omogućuje jedinstven doživljaj svih čari planine i mora na jednom mjestu." },
+      {
+        name: "Nacionalni park Paklenica",
+        note:
+          "Sve ljepote Paklenice moguće je doživjeti jedino pješačenjem, a upravo tome služi preko 150 km uređenih planinarskih staza. Posebnu draž ovom prostoru daje blizina obale koja omogućuje jedinstven doživljaj svih čari planine i mora na jednom mjestu.",
+        link: {
+          href: PAKLENICA_URL.hr,
+          label: "Nacionalni park Paklenica",
+        },
+      },
     ],
   },
   finalCta: {
@@ -420,21 +498,37 @@ const de: HomeContent = {
         name: "Bačić Kuk",
         note:
           "Bačić Kuk (1.304 m) besteht eigentlich aus einer Gruppe kahler, felsiger Spitzen unterschiedlicher Höhe und Steilheit und bietet Kletterherausforderungen in verschiedenen Schwierigkeitsgraden.",
+        link: {
+          href: journalArticlePath("de", "hiking", "bacic-kuk-hike"),
+          label: "Aufstieg zum Bačić Kuk",
+        },
       },
       {
         name: "Karlobag",
         note:
           "Karlobag ist eine wunderbare Verbindung aus Mittelmeer und Festland — kristallklares Meer und Kroatiens schönster Berg, der Velebit, nur wenige Minuten Fahrt entfernt.",
+        link: {
+          href: journalArticlePath("de", "places", "karlobag"),
+          label: "Tagesausflug nach Karlobag",
+        },
       },
       {
         name: "Zavratnica",
         note:
           "Eine wunderschöne Bucht mit kristallklarem Wasser. Zavratnica gehört sicher zu den schönsten Buchten der kroatischen Küste — ein geschütztes Landschaftsgebiet an der Adriaküste.",
+        link: {
+          href: journalArticlePath("de", "places", "zavratnica"),
+          label: "Bucht Zavratnica",
+        },
       },
       {
         name: "Premužić-Weg",
         note:
           "Wandern am Velebit mit Blick auf den Adriatischen Archipel. Der Premužić-Weg gilt heute als echtes Meisterwerk des Steinbaus — als Trockenmauerwerk angelegt führt er auf einfache Weise in die rauhesten und kargsten Teile des nördlichen Velebit: Hajdučki und Rožanski kukovi.",
+        link: {
+          href: PREMUZIC_TRAIL_URL.de,
+          label: "Premužić-Weg",
+        },
       },
       {
         name: "Insel Pag",
@@ -449,6 +543,10 @@ const de: HomeContent = {
         name: "Nationalpark Paklenica",
         note:
           "Paklenicas Schönheit lässt sich am besten zu Fuß erleben, auf über 150 km markierter Wanderwege. Die Nähe zur Küste verleiht dem Gebiet besonderen Reiz — Berg und Meer an einem Ort.",
+        link: {
+          href: PAKLENICA_URL.de,
+          label: "Nationalpark Paklenica",
+        },
       },
     ],
   },
@@ -552,21 +650,37 @@ const fr: HomeContent = {
         name: "Bačić Kuk",
         note:
           "Bačić Kuk (1 304 m) est en réalité un groupe de sommets rocheux dénudés, de hauteurs et pentes variées, offrant des défis d'escalade à tous les niveaux.",
+        link: {
+          href: journalArticlePath("fr", "hiking", "bacic-kuk-hike"),
+          label: "Ascension du Bačić Kuk",
+        },
       },
       {
         name: "Karlobag",
         note:
           "Karlobag est un merveilleux mélange de Méditerranée et de continent — mer cristalline et plus belle montagne de Croatie, le Velebit, à quelques minutes en voiture.",
+        link: {
+          href: journalArticlePath("fr", "places", "karlobag"),
+          label: "Excursion à Karlobag",
+        },
       },
       {
         name: "Zavratnica",
         note:
           "Une magnifique crique aux eaux cristallines. Zavratnica compte parmi les plus belles baies de la côte croate — un paysage protégé de l'Adriatique.",
+        link: {
+          href: journalArticlePath("fr", "places", "zavratnica"),
+          label: "Crique de Zavratnica",
+        },
       },
       {
         name: "Sentier Premužić",
         note:
           "Randonnée sur le Velebit avec vue sur l'archipel adriatique. Le sentier Premužić est considéré comme un chef-d'œuvre de construction en pierres sèches, tracé pour mener simplement vers les parties les plus sauvages et escarpées du Velebit septentrional — les kukovi de Hajdučki et Rožanski.",
+        link: {
+          href: PREMUZIC_TRAIL_URL.fr,
+          label: "Sentier Premužić",
+        },
       },
       {
         name: "Île Pag",
@@ -581,6 +695,10 @@ const fr: HomeContent = {
         name: "Parc national de Paklenica",
         note:
           "Les beautés de Paklenica ne se découvrent qu'à pied, sur plus de 150 km de sentiers balisés. La proximité de la côte ajoute un charme unique — montagne et mer au même endroit.",
+        link: {
+          href: PAKLENICA_URL.fr,
+          label: "Parc national de Paklenica",
+        },
       },
     ],
   },
@@ -684,21 +802,37 @@ const it: HomeContent = {
         name: "Bačić Kuk",
         note:
           "Bačić Kuk (1.304 m) è in realtà un gruppo di torri rocciose spoglie, di altezze e pendenza diverse, che offre sfide d'arrampicata a ogni livello di difficoltà.",
+        link: {
+          href: journalArticlePath("it", "hiking", "bacic-kuk-hike"),
+          label: "Salita al Bačić Kuk",
+        },
       },
       {
         name: "Karlobag",
         note:
           "Karlobag è una meravigliosa fusione tra Mediterraneo e continente — mare cristallino e la più bella montagna croata, il Velebit, a pochi minuti di auto.",
+        link: {
+          href: journalArticlePath("it", "places", "karlobag"),
+          label: "Gita a Karlobag",
+        },
       },
       {
         name: "Zavratnica",
         note:
           "Una splendida insenatura con mare cristallino. Zavratnica è senza dubbio una delle baie più belle della costa croata — un paesaggio protetto dell'Adriatico.",
+        link: {
+          href: journalArticlePath("it", "places", "zavratnica"),
+          label: "Baia di Zavratnica",
+        },
       },
       {
         name: "Sentiero Premužić",
         note:
           "Camminare sul Velebit con vista sull'arcipelago adriatico. Il sentiero Premužić è considerato un capolavoro di costruzione in pietra a secco, tracciato per condurci in modo semplice nelle parti più aspre e selvagge del Velebit settentrionale — i kukovi di Hajdučki e Rožanski.",
+        link: {
+          href: PREMUZIC_TRAIL_URL.it,
+          label: "Sentiero Premužić",
+        },
       },
       {
         name: "Isola Pag",
@@ -713,6 +847,10 @@ const it: HomeContent = {
         name: "Parco nazionale Paklenica",
         note:
           "Le bellezze di Paklenica si vivono solo a piedi, lungo oltre 150 km di sentieri escursionistici segnalati. La vicinanza alla costa aggiunge un fascino unico — montagna e mare nello stesso luogo.",
+        link: {
+          href: PAKLENICA_URL.it,
+          label: "Parco nazionale Paklenica",
+        },
       },
     ],
   },
