@@ -67,7 +67,7 @@ const en: JournalContent = {
           seoDescription:
             "An introduction to hiking on Velebit from Stars Peak — southern trails, Bačić Kuk, Dabarski Kukovi and the Premužić ridge path.",
           paragraphs: [
-            "Velebit is not a single peak but a long limestone world of ridges, forests and empty plateaus above the Adriatic. From Stars Peak in Bačić Duliba you are already inside that landscape. Marked trails leave almost from the doorstep, and within a few hours you can stand on open karst with views toward the sea.",
+            "Velebit is not a single peak but a long limestone world of ridges, forests and empty plateaus above the Adriatic. From Stars Peak in Bačić Duliba you are already inside that landscape. Marked trails leave almost from the doorstep, and within an half an hour you can stand on open karst with views toward the sea.",
             "Southern Velebit around Bačić Duliba is quieter than the famous northern national park, but no less rewarding. Paths climb through beech and pine toward Bačić Kuk, cross the rocky Dabarski Kukovi group, and connect to longer routes such as the Premužić Trail along the main ridge.",
             "What makes hiking here special is the rhythm of the day. Mornings often begin in cool forest air. By midday the limestone glows white against deep blue sky. In the evening the ridge softens — and on clear nights the stars return before you are back at the house.",
             "You do not need extreme equipment for most day hikes: good boots, water, layers and time are enough. Some routes are steep and exposed; others are gentle forest walks. Detailed trail notes, maps and GPX files are on our Experiences page so you can choose according to mood and weather.",

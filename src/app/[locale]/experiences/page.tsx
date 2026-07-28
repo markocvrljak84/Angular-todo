@@ -8,7 +8,7 @@ import { HikingRoutesSection } from "@/components/hiking-routes-section";
 import { JournalTeaserSection } from "@/components/journal-teaser-section";
 import { NearbySection } from "@/components/nearby-section";
 import { NewsletterSignupSection } from "@/components/newsletter-signup-section";
-import { TasteOfVelebitSection } from "@/components/taste-of-velebit-section";
+import { ExperiencesAgroSection } from "@/components/taste-of-velebit-section";
 import { getClimbingRoutes } from "@/i18n/climbing-routes";
 import { getExperienceContent } from "@/i18n/experience-content";
 import { getExperiencesPageContent } from "@/i18n/experiences-page";
@@ -122,13 +122,11 @@ export default async function ExperiencesPage({ params }: Props) {
         </div>
       </section>
 
-      <section id={agro.id} className="flat-section experiences-agro" aria-labelledby="exp-agro">
-        <div className="flat-wrap experiences-agro__head">
-          <h2 id="exp-agro" className="flat-section__title">{agro.title}</h2>
-          <p className="flat-section__intro">{agro.intro}</p>
-        </div>
-        <TasteOfVelebitSection content={experience.taste} embedded />
-      </section>
+      <ExperiencesAgroSection
+        title={agro.title}
+        intro={agro.intro}
+        taste={experience.taste}
+      />
 
       <JournalTeaserSection
         content={journal}

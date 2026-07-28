@@ -178,7 +178,7 @@ export const HOME_GALLERY_FILES = [
 export const HOME_IMAGES = {
   whySpecial: {
     mountain: "/img/why-special-mountain.jpg",
-    sea: "/img/zavratnica/uvala.jpeg",
+    sea: "/img/why-special-sea.jpg",
     stars: "/img/why-special-stars.jpg",
   },
   editorial: {

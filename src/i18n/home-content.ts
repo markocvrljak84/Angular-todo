@@ -114,8 +114,8 @@ const en: HomeContent = {
       },
       {
         title: "Sea",
-        body: "The Adriatic coast is only half an hour away, offering a rare balance of mountain and sea in a single day.",
-        imageAlt: "Zavratnica cove on the Adriatic coast",
+        body: "Tatinja — just half an hour from the house. Clear water, a quiet cove, and the Velebit coast within easy reach.",
+        imageAlt: "Tatinja cove near Karlobag — pebble beach and Adriatic view, half an hour from Stars Peak",
         ctaLabel: "Coast & landscapes",
       },
       {
@@ -278,8 +278,8 @@ const hr: HomeContent = {
       },
       {
         title: "More",
-        body: "Karlobag, Zavratnica i Pag su poznati po kamenitim krajolicima, plažama, paškoj ovci i siru. Mostom povezan s kopnom — idealno za jednodnevni izlet s Stars Peaka — jutro na planini, popodne u moru.",
-        imageAlt: "Uvala Zavratnica na jadranskoj obali",
+        body: "Tatinja — samo pola sata od kuće. Bistra voda, mirna uvala i velebitska obala nadomak Stars Peaka.",
+        imageAlt: "Uvala Tatinja kod Karlobaga — šljunčana plaža i Jadran, pola sata od Stars Peaka",
         ctaLabel: "More i krajolici",
       },
       {
@@ -438,8 +438,8 @@ const de: HomeContent = {
       },
       {
         title: "Meer",
-        body: "Karlobag, Zavratnica und Pag in einer halben Stunde — Bergmorgen, Adria-Nachmittag.",
-        imageAlt: "Bucht Zavratnica an der Adria",
+        body: "Tatinja — nur eine halbe Stunde vom Haus. Klares Wasser, eine ruhige Bucht und die Velebit-Küste in greifbarer Nähe.",
+        imageAlt: "Bucht Tatinja bei Karlobag — Kieselstrand und Adria, eine halbe Stunde von Stars Peak",
         ctaLabel: "Küste & Landschaften",
       },
       {
@@ -590,8 +590,8 @@ const fr: HomeContent = {
       },
       {
         title: "Mer",
-        body: "Karlobag, Zavratnica et Pag à une demi-heure — matin montagne, après-midi mer.",
-        imageAlt: "Crique de Zavratnica sur l'Adriatique",
+        body: "Tatinja — à seulement une demi-heure de la maison. Eau claire, crique calme et côte du Velebit à portée de main.",
+        imageAlt: "Crique de Tatinja près de Karlobag — plage de galets et Adriatique, une demi-heure de Stars Peak",
         ctaLabel: "Côte et paysages",
       },
       {
@@ -742,8 +742,8 @@ const it: HomeContent = {
       },
       {
         title: "Mare",
-        body: "Karlobag, Zavratnica e Pag a mezz'ora — mattina in montagna, pomeriggio al mare.",
-        imageAlt: "Baia di Zavratnica sull'Adriatico",
+        body: "Tatinja — a soli mezz’ora dalla casa. Acqua limpida, caletta quieta e costa del Velebit a portata di mano.",
+        imageAlt: "Baia di Tatinja vicino a Karlobag — spiaggia di ciottoli e Adriatico, mezz’ora da Stars Peak",
         ctaLabel: "Costa e paesaggi",
       },
       {

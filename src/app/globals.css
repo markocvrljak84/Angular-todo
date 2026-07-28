@@ -29,7 +29,7 @@
   --heading-h1-size: clamp(1.55rem, 3.2vw, 2.15rem);
   --heading-h2-size: clamp(1.35rem, 2.8vw, 1.85rem);
   --heading-h3-size: clamp(1.05rem, 2vw, 1.3rem);
-  --photo-saturate: 0.92;
+  --photo-saturate: 0.75;
   --photo-contrast: 0.89;
   --photo-brightness: 1.05;
   --photo-veil-opacity: 0.28;
@@ -3536,8 +3536,9 @@ code {
 }
 
 .taste-velebit__badge {
-  display: inline-block;
-  margin: 0 0 0.4rem;
+  display: flex;
+  justify-content: center;
+  margin: 0 0 0.55rem;
   padding: 0;
   border-radius: 0;
   background: transparent;
@@ -3547,25 +3548,40 @@ code {
   font-weight: 500;
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
-  display: flex;
-  justify-content: center;
 }
 
 .press-page__email {
   color: #957d51;
 }
 
+.taste-velebit__title {
+  margin: 0 0 0.85rem;
+  font-family: var(--font-condensed);
+  font-size: clamp(1.15rem, 2.4vw, 1.45rem);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1.35;
+  color: var(--ink);
+  text-align: center;
+}
+
 .taste-velebit__intro {
-  max-width: 40rem;
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 .taste-velebit__grid {
   list-style: none;
-  margin: 1.75rem 0 0;
+  margin: 1.75rem auto 0;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
   gap: 0.75rem;
+  max-width: 42rem;
+  justify-content: center;
 }
 
 .taste-velebit__card {
@@ -3576,14 +3592,20 @@ code {
   font-weight: 600;
   font-size: 0.9375rem;
   line-height: 1.45;
+  text-align: center;
 }
 
 .taste-velebit__footnote {
-  margin: 1.35rem 0 0;
-  max-width: 42rem;
+  margin: 1.35rem auto 0;
+  max-width: 38rem;
   color: var(--muted);
   font-size: 0.9375rem;
   line-height: 1.6;
+  text-align: center;
+}
+
+.taste-velebit__inner {
+  width: 100%;
 }
 
 /* Journal hub, category pages and articles */
@@ -5391,22 +5413,68 @@ code {
 }
 
 .experiences-agro {
-  padding-bottom: 0.5rem;
+  padding-bottom: clamp(2.5rem, 5vw, 3.5rem);
 }
 
-.experiences-agro__head .flat-section__intro {
-  margin-bottom: 0;
+.experiences-agro__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 44rem;
+}
+
+.experiences-agro__title {
+  margin: 0 0 0.85rem;
+  font-family: var(--font-condensed);
+  font-size: var(--heading-h2-size);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1.35;
+  color: var(--ink);
+}
+
+.experiences-agro__intro {
+  margin: 0;
+  max-width: 34rem;
+  color: var(--muted);
+  font-size: 0.975rem;
+  line-height: 1.55;
+}
+
+.experiences-agro__motif {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.25rem;
+  margin-bottom: 0.35rem;
+}
+
+.experiences-agro__motif-img {
+  display: block;
+  width: 6.5rem;
+  max-width: 6.5rem;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (min-width: 768px) {
+  .experiences-agro__motif-img {
+    width: 8rem;
+    max-width: 8rem;
+  }
 }
 
 .taste-velebit--embedded {
-  padding-top: 1rem;
+  padding-top: 1.5rem;
+  width: 100%;
 }
 
 .taste-velebit--embedded .taste-velebit__badge {
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.55rem;
 }
 
-.taste-velebit--embedded .flat-section__title {
+.taste-velebit--embedded .taste-velebit__title {
   margin-top: 0;
 }
 
