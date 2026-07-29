@@ -12,7 +12,7 @@ export type GalleryStoryContent = {
   interiorIntro: string;
   exteriorLabel: string;
   interior: [GalleryStoryPair, GalleryStoryPair, GalleryStoryPair, GalleryStoryPair];
-  exterior: [GalleryStoryPair, GalleryStoryPair];
+  exterior: [GalleryStoryPair, GalleryStoryPair, GalleryStoryPair, GalleryStoryPair];
 };
 
 const en: GalleryStoryContent = {
@@ -42,22 +42,37 @@ const en: GalleryStoryContent = {
     {
       image: "812808512.jpg",
       title: "From the bed",
-      body: "Books on the tray, forest in the window — mornings that begin without leaving the covers.",
-      imageAlt: "View from the loft bed toward the forest window with books on a tray",
+      body: "Tray on the covers, blue chair and forest in the gable window — mornings that begin without leaving the loft.",
+      imageAlt:
+        "View from the loft bed toward the sitting area and triangular forest window",
     },
   ],
   exterior: [
     {
-      image: "20260604_173207.jpg",
+      image: "ljetnja-kuhinja-3.jpg",
       title: "Outdoor kitchen",
-      body: "Fire in the hearth, a pot on the stove, and Bačić Kuk on the horizon — cooking with the mountain open.",
-      imageAlt: "Outdoor kitchen with wood fire and view of Bačić Kuk",
+      body: "The summer kitchen under the trees — wood stacked for the fire, a stove ready to cook, and the table already set with the mountain just beyond.",
+      imageAlt:
+        "Outdoor kitchen and dining table set for lunch with forest and mountain peaks at Stars Peak",
+    },
+    {
+      image: "outdoor-kitchen-table-set.jpg",
+      title: "Lunch outdoors",
+      body: "Caprese, cherries, bread and peaches on the round table — a long outdoor lunch with the kitchen open behind you.",
+      imageAlt:
+        "Round outdoor table set with Caprese, cherries, bread and peaches at the Stars Peak summer kitchen",
+    },
+    {
+      image: "20260604_173207.jpg",
+      title: "Fire in the hearth",
+      body: "When the evening cools, the outdoor fireplace takes over — wood fire, a pot on the stove, and Bačić Kuk still on the horizon.",
+      imageAlt: "Outdoor kitchen with wood fire burning and Bačić Kuk on the horizon",
     },
     {
       image: "20260604_132024.jpg",
-      title: "Table on the terrace",
-      body: "Caprese, peaches and mountain air — lunch that belongs outdoors under the trees.",
-      imageAlt: "Outdoor table set with Caprese, bread, peaches and cherries",
+      title: "Table under the trees",
+      body: "Fresh tomatoes, mozzarella and fruit in the shade — simple food that tastes better outside.",
+      imageAlt: "Outdoor table set with Caprese, bread, peaches and cherries under the trees",
     },
   ],
 };
@@ -78,33 +93,48 @@ const hr: GalleryStoryContent = {
       image: "585009655_122107017075084437_1671659401079838438_n.jpg",
       title: "Dnevni boravak",
       body: "Nakon ručka kuća omekša — mirno sjedalo, toplina drveta i vrijeme koje ne traži planove.",
-      imageAlt: "Dnevni boravak na Stars Peaku nakon obroka",
+      imageAlt: "Sjedeći kutak dnevnog boravka na Stars Peaku nakon obroka",
     },
     {
       image: "812808252.jpg",
       title: "Galerija",
-      body: "Gornja soba iz daljine — krevet pod vrhom krova, fotelja za čitanje, medeno drvo posvuda.",
-      imageAlt: "Galerija A-okvira s krevetom i sjedalom iz daljine",
+      body: "Gornja soba izdaleka — krevet pod vrhom krova, stolica za čitanje, medeno drvo svuda oko vas.",
+      imageAlt: "A-frame galerija s krevetom i sjedećim kutom izdaleka",
     },
     {
       image: "812808512.jpg",
       title: "Iz kreveta",
-      body: "Knjige na pladnju, šuma u prozoru — jutra koja počinju bez ustajanja.",
-      imageAlt: "Pogled iz kreveta u galeriji prema šumi s knjigama na pladnju",
+      body: "Pladanj na pokrivaču, plava stolica i šuma u trokutastom prozoru — jutra koja počinju bez ustajanja iz galerije.",
+      imageAlt:
+        "Pogled iz kreveta u galeriji prema sjedećem kutu i šumi u trokutastom prozoru",
     },
   ],
   exterior: [
     {
+      image: "ljetnja-kuhinja-3.jpg",
+      title: "Ljetnja kuhinja",
+      body: "Kuhinja pod drvećem — drva spremna za vatru, štednjak za kuhanje i stol već postavljen, s planinom nadomak.",
+      imageAlt:
+        "Ljetnja kuhinja i blagovaonski stol postavljen za ručak, sa šumom i kukovima na Stars Peaku",
+    },
+    {
+      image: "outdoor-kitchen-table-set.jpg",
+      title: "Ručak vani",
+      body: "Caprese, trešnje, kruh i breskve na okruglom stolu — dug vanjski ručak uz otvorenu kuhinju iza leđa.",
+      imageAlt:
+        "Okrugli vanjski stol s capreseom, trešnjama, kruhom i breskvama uz ljetnju kuhinju Stars Peaka",
+    },
+    {
       image: "20260604_173207.jpg",
-      title: "Vanjska kuhinja",
-      body: "Vatra u ognjištu, lonac na štednjaku i Bačić kuk na horizontu — kuhanje s planinom otvorenom pred vama.",
-      imageAlt: "Vanjska kuhinja s vatrom i pogledom na Bačić kuk",
+      title: "Vatra u ognjištu",
+      body: "Kad se večer ohladi, vanjsko ognjište preuzima — vatra, lonac na štednjaku i Bačić kuk još na horizontu.",
+      imageAlt: "Vanjska kuhinja s vatrom i Bačić kukom na horizontu",
     },
     {
       image: "20260604_132024.jpg",
-      title: "Stol na terasi",
-      body: "Caprese, breskve i planinski zrak — ručak koji pripada vani pod drvećem.",
-      imageAlt: "Vanjski stol s capreseom, kruhom, breskvama i trešnjama",
+      title: "Stol pod drvećem",
+      body: "Svježi rajčice, mozzarella i voće u hladu — jednostavna hrana koja vani ima bolji okus.",
+      imageAlt: "Vanjski stol s capreseom, kruhom, breskvama i trešnjama pod drvećem",
     },
   ],
 };
@@ -137,22 +167,37 @@ const de: GalleryStoryContent = {
     {
       image: "812808512.jpg",
       title: "Vom Bett aus",
-      body: "Bücher auf dem Tablett, Wald im Fenster — Morgen, die ohne Aufstehen beginnen.",
-      imageAlt: "Blick vom Bett der Galerie zum Wald mit Büchern auf dem Tablett",
+      body: "Tablett auf der Decke, blauer Sessel und Wald im Giebelfenster — Morgen, die in der Galerie beginnen.",
+      imageAlt:
+        "Blick vom Bett der Galerie zur Sitzecke und zum dreieckigen Waldfenster",
     },
   ],
   exterior: [
     {
-      image: "20260604_173207.jpg",
+      image: "ljetnja-kuhinja-3.jpg",
       title: "Außenküche",
-      body: "Feuer im Herd, Topf auf dem Herd und Bačić Kuk am Horizont — kochen mit offenem Bergblick.",
-      imageAlt: "Außenküche mit Holzfeuer und Blick auf Bačić Kuk",
+      body: "Die Sommerküche unter den Bäumen — Holz fürs Feuer, Herd zum Kochen und der Tisch schon gedeckt, mit dem Berg ganz nah.",
+      imageAlt:
+        "Außenküche und gedeckter Esstisch mit Wald und Berggipfeln auf Stars Peak",
+    },
+    {
+      image: "outdoor-kitchen-table-set.jpg",
+      title: "Mittagessen draußen",
+      body: "Caprese, Kirschen, Brot und Pfirsiche auf dem runden Tisch — ein langes Outdoor-Mittagessen mit offener Küche hinter Ihnen.",
+      imageAlt:
+        "Runder Outdoor-Tisch mit Caprese, Kirschen, Brot und Pfirsichen an der Stars-Peak-Sommerküche",
+    },
+    {
+      image: "20260604_173207.jpg",
+      title: "Feuer im Herd",
+      body: "Wenn der Abend kühlt, übernimmt der Außenkamin — Holzfeuer, Topf auf dem Herd und Bačić Kuk noch am Horizont.",
+      imageAlt: "Außenküche mit Holzfeuer und Bačić Kuk am Horizont",
     },
     {
       image: "20260604_132024.jpg",
-      title: "Tisch auf der Terrasse",
-      body: "Caprese, Pfirsiche und Bergluft — Mittagessen, das nach draußen unter die Bäume gehört.",
-      imageAlt: "Outdoor-Tisch mit Caprese, Brot, Pfirsichen und Kirschen",
+      title: "Tisch unter den Bäumen",
+      body: "Frische Tomaten, Mozzarella und Obst im Schatten — einfaches Essen, das draußen besser schmeckt.",
+      imageAlt: "Outdoor-Tisch mit Caprese, Brot, Pfirsichen und Kirschen unter Bäumen",
     },
   ],
 };
@@ -185,22 +230,37 @@ const fr: GalleryStoryContent = {
     {
       image: "812808512.jpg",
       title: "Depuis le lit",
-      body: "Livres sur le plateau, forêt à la fenêtre — des matins qui commencent sans se lever.",
-      imageAlt: "Vue depuis le lit de la mezzanine vers la forêt avec des livres",
+      body: "Plateau sur la couette, fauteuil bleu et forêt dans la fenêtre en pignon — des matins qui commencent sans quitter la mezzanine.",
+      imageAlt:
+        "Vue depuis le lit de la mezzanine vers le coin salon et la fenêtre triangulaire sur la forêt",
     },
   ],
   exterior: [
     {
+      image: "ljetnja-kuhinja-3.jpg",
+      title: "Cuisine d'été",
+      body: "La cuisine sous les arbres — bois prêt pour le feu, plaque pour cuisiner, et la table déjà dressée, la montagne tout près.",
+      imageAlt:
+        "Cuisine d'été et table dressée pour le déjeuner avec forêt et sommets à Stars Peak",
+    },
+    {
+      image: "outdoor-kitchen-table-set.jpg",
+      title: "Déjeuner dehors",
+      body: "Caprese, cerises, pain et pêches sur la table ronde — un long déjeuner dehors, cuisine ouverte derrière vous.",
+      imageAlt:
+        "Table ronde extérieure avec caprese, cerises, pain et pêches près de la cuisine d'été Stars Peak",
+    },
+    {
       image: "20260604_173207.jpg",
-      title: "Cuisine extérieure",
-      body: "Feu dans l'âtre, casserole sur le feu, et Bačić Kuk à l'horizon — cuisiner face à la montagne.",
-      imageAlt: "Cuisine extérieure avec feu de bois et vue sur Bačić Kuk",
+      title: "Feu dans l'âtre",
+      body: "Quand le soir fraîchit, le foyer extérieur prend le relais — feu de bois, casserole sur le feu, et Bačić Kuk encore à l'horizon.",
+      imageAlt: "Cuisine extérieure avec feu de bois et Bačić Kuk à l'horizon",
     },
     {
       image: "20260604_132024.jpg",
-      title: "Table en terrasse",
-      body: "Caprese, pêches et air de montagne — un déjeuner qui appartient dehors sous les arbres.",
-      imageAlt: "Table extérieure avec caprese, pain, pêches et cerises",
+      title: "Table sous les arbres",
+      body: "Tomates fraîches, mozzarella et fruits à l'ombre — une cuisine simple qui a meilleur goût dehors.",
+      imageAlt: "Table extérieure avec caprese, pain, pêches et cerises sous les arbres",
     },
   ],
 };
@@ -233,22 +293,37 @@ const it: GalleryStoryContent = {
     {
       image: "812808512.jpg",
       title: "Dal letto",
-      body: "Libri sul vassoio, bosco alla finestra — mattine che iniziano senza alzarsi.",
-      imageAlt: "Vista dal letto del loft verso il bosco con libri sul vassoio",
+      body: "Vassoio sulla coperta, poltrona blu e bosco nella finestra a timpano — mattine che iniziano senza lasciare il loft.",
+      imageAlt:
+        "Vista dal letto del loft verso l'angolo salotto e la finestra triangolare sul bosco",
     },
   ],
   exterior: [
     {
+      image: "ljetnja-kuhinja-3.jpg",
+      title: "Cucina estiva",
+      body: "La cucina sotto gli alberi — legna pronta per il fuoco, fornello per cucinare e tavolo già apparecchiato, con la montagna vicina.",
+      imageAlt:
+        "Cucina estiva e tavolo apparecchiato per il pranzo con bosco e cime a Stars Peak",
+    },
+    {
+      image: "outdoor-kitchen-table-set.jpg",
+      title: "Pranzo all'aperto",
+      body: "Caprese, ciliegie, pane e pesche sul tavolo rotondo — un lungo pranzo fuori, con la cucina aperta alle spalle.",
+      imageAlt:
+        "Tavolo rotondo all'aperto con caprese, ciliegie, pane e pesche presso la cucina estiva Stars Peak",
+    },
+    {
       image: "20260604_173207.jpg",
-      title: "Cucina esterna",
-      body: "Fuoco nel focolare, pentola sul fornello e Bačić Kuk all'orizzonte — cucinare con la montagna aperta.",
-      imageAlt: "Cucina esterna con fuoco e vista su Bačić Kuk",
+      title: "Fuoco nel focolare",
+      body: "Quando la sera si raffredda, il focolare esterno prende il posto — fuoco di legna, pentola sul fornello e Bačić Kuk ancora all'orizzonte.",
+      imageAlt: "Cucina esterna con fuoco e Bačić Kuk all'orizzonte",
     },
     {
       image: "20260604_132024.jpg",
-      title: "Tavolo in terrazza",
-      body: "Caprese, pesche e aria di montagna — un pranzo che appartiene fuori sotto gli alberi.",
-      imageAlt: "Tavolo all'aperto con caprese, pane, pesche e ciliegie",
+      title: "Tavolo sotto gli alberi",
+      body: "Pomodori freschi, mozzarella e frutta all'ombra — cibo semplice che fuori ha un sapore migliore.",
+      imageAlt: "Tavolo all'aperto con caprese, pane, pesche e ciliegie sotto gli alberi",
     },
   ],
 };

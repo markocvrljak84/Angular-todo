@@ -8,7 +8,7 @@ import { HomeEditorialSection } from "@/components/home-editorial-section";
 import { HomeWelcomeStrip } from "@/components/home-welcome-strip";
 import { NewsletterSignupSection } from "@/components/newsletter-signup-section";
 import { WhySpecialSection } from "@/components/why-special-section";
-import { HOME_IMAGES, MAIN_CAROUSEL_IMAGES } from "@/config/site-images";
+import { HOME_IMAGES } from "@/config/site-images";
 import { localePath } from "@/config/site-routes";
 import { getExperienceContent } from "@/i18n/experience-content";
 import { getHomeContent } from "@/i18n/home-content";
@@ -43,11 +43,6 @@ export default async function HomePage({ params }: Props) {
   const home = getHomeContent(locale);
   const experience = getExperienceContent(locale);
 
-  const heroSlides = MAIN_CAROUSEL_IMAGES.map((file, i) => ({
-    file,
-    alt: t.home.heroSlideAlts[i] ?? t.home.heroImageAlt,
-  }));
-
   const whySpecialImages = [
     HOME_IMAGES.whySpecial.mountain,
     HOME_IMAGES.whySpecial.sea,
@@ -65,12 +60,10 @@ export default async function HomePage({ params }: Props) {
       <PageJsonLd locale={locale} messages={t} page="home" />
 
       <HeroSection
-        slides={heroSlides}
         kicker={t.home.heroBadge}
         hero={home.hero}
         experiencesHref={localePath(locale, "experiences")}
-        carouselPrevLabel={t.home.heroCarouselPrev}
-        carouselNextLabel={t.home.heroCarouselNext}
+        videoAlt={t.home.heroImageAlt}
       />
 
       <WhySpecialSection

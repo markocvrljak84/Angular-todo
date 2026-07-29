@@ -44,8 +44,8 @@ export default async function JournalPage({ params }: Props) {
       <InnerPageHeader
         {...header}
         motif={{
-          src: "/img/illustrations/header-journal-diary.webp",
-          alt: "Etching-style illustration of an open diary",
+          src: "/img/illustrations/header-badger.webp",
+          alt: "Etching-style illustration of a European badger",
         }}
       />
 

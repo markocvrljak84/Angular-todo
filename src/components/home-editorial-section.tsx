@@ -23,7 +23,7 @@ export function HomeEditorialSection({
 }: Props) {
   return (
     <section className="home-editorial flat-section" aria-labelledby="home-editorial-title">
-      <div className="flat-wrap">
+      <div className="flat-wrap flat-wrap--xl">
         <div className="home-editorial__head">
           <nav className="home-explore-links home-explore-links--inline" aria-label="Explore Stars Peak">
             <Link href={localePath(locale, "experiences")} className="home-explore-links__link">

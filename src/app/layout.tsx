@@ -82,6 +82,7 @@ export default function RootLayout({
         <link
           rel="preload"
           as="image"
+          type="image/webp"
           href={HERO_LCP_PRELOAD_SRC}
           imageSrcSet={HERO_LCP_SRCSET}
           imageSizes="100vw"

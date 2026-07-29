@@ -151,7 +151,7 @@ const en: GalleryContent = {
           caption: "Loft at dusk",
         },
         "812808512.jpg": {
-          alt: "View from the loft bed",
+          alt: "View from the loft bed toward the sitting area and forest window",
           caption: "From the bed",
         },
         "812809121.jpg": {
@@ -344,7 +344,7 @@ const hr: GalleryContent = {
           caption: "Potkrovlje u sumrak",
         },
         "812808512.jpg": {
-          alt: "Pogled s kreveta u potkrovlju",
+          alt: "Pogled iz kreveta u galeriji prema sjedećem kutu i šumi",
           caption: "S kreveta",
         },
         "812809121.jpg": {
@@ -537,7 +537,7 @@ const deProper: GalleryContent = {
           caption: "Galerie in der Dämmerung",
         },
         "812808512.jpg": {
-          alt: "Blick vom Bett in der Galerie",
+          alt: "Blick vom Bett der Galerie zur Sitzecke und zum Waldfenster",
           caption: "Vom Bett aus",
         },
         "812809121.jpg": {

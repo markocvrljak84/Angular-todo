@@ -151,7 +151,7 @@ const en: HomeContent = {
         title: "Outdoor kitchen",
         body:
           "The summer kitchen and terrace are where days slow down — grill outdoors, pine-scented air and meals with the mountain close by.",
-        imageAlt: "Outdoor summer kitchen and terrace at Stars Peak",
+        imageAlt: "Outdoor kitchen table set for lunch with forest and mountain view at Stars Peak",
       },
     ],
   },
@@ -315,7 +315,7 @@ const hr: HomeContent = {
         title: "Ljetnja kuhinja",
         body:
           "Ljetnja kuhinja i terasa usporavaju dan — roštilj na otvorenom, miris bora i obroci uz planinu nadomak.",
-        imageAlt: "Vanjska ljetnja kuhinja i terasa na Stars Peaku",
+        imageAlt: "Ljetnja kuhinja s postavljenim stolom, šumom i planinom na Stars Peaku",
       },
     ],
   },
@@ -475,7 +475,7 @@ const de: HomeContent = {
         title: "Außenküche",
         body:
           "Sommerküche und Terrasse — draußen grillen, Pinienduft und Mahlzeiten mit dem Berg in der Nähe.",
-        imageAlt: "Sommerküche und Terrasse auf Stars Peak",
+        imageAlt: "Gedeckter Tisch in der Außenküche mit Wald- und Bergblick auf Stars Peak",
       },
     ],
   },
@@ -627,7 +627,7 @@ const fr: HomeContent = {
         title: "Cuisine d'été",
         body:
           "La cuisine extérieure et la terrasse ralentissent le rythme — grillades en plein air, pin et repas avec la montagne tout près.",
-        imageAlt: "Cuisine d'été et terrasse à Stars Peak",
+        imageAlt: "Table dressée dans la cuisine d'été avec vue sur la forêt et la montagne à Stars Peak",
       },
     ],
   },
@@ -779,7 +779,7 @@ const it: HomeContent = {
         title: "Cucina esterna",
         body:
           "La cucina estiva e la terrazza rallentano il ritmo — griglia all'aperto, profumo di pino e pasti con la montagna a portata di mano.",
-        imageAlt: "Cucina estiva e terrazza a Stars Peak",
+        imageAlt: "Tavolo apparecchiato nella cucina esterna con bosco e montagna a Stars Peak",
       },
     ],
   },

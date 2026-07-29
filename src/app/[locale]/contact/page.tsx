@@ -41,9 +41,8 @@ export default async function ContactPage({ params }: Props) {
         {...header}
         className="home-welcome--contact"
         motif={{
-          src: "/img/illustrations/header-connection-touch.webp",
-          alt: "Etching-style illustration of two index fingers touching",
-          className: "home-welcome__art--connection",
+          src: "/img/illustrations/header-cardinal-butterfly.webp",
+          alt: "Etching-style illustration of a butterfly on a flower",
         }}
       />
 

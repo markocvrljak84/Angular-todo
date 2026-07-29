@@ -35,7 +35,10 @@ export function GalleryStorySections({ content }: Props) {
     content.interior.slice(0, 2),
     content.interior.slice(2, 4),
   ] as const;
-  const exteriorRow = content.exterior;
+  const exteriorRows = [
+    content.exterior.slice(0, 2),
+    content.exterior.slice(2, 4),
+  ] as const;
 
   return (
     <div className="gallery-story">
@@ -68,11 +71,13 @@ export function GalleryStorySections({ content }: Props) {
           <h2 id="gallery-exterior-title" className="flat-section__title">
             {content.exteriorLabel}
           </h2>
-          <div className="gallery-story__row">
-            {exteriorRow.map((pair) => (
-              <StoryPair key={pair.image} pair={pair} />
-            ))}
-          </div>
+          {exteriorRows.map((row, rowIndex) => (
+            <div key={`exterior-${rowIndex}`} className="gallery-story__row">
+              {row.map((pair) => (
+                <StoryPair key={pair.image} pair={pair} />
+              ))}
+            </div>
+          ))}
         </div>
       </section>
     </div>

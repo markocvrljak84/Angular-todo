@@ -4,7 +4,7 @@ import {
   localePath,
   type SitePageKey,
 } from "@/config/site-routes";
-import { ABOUT_US_IMAGE, HERO_LCP_PRELOAD_SRC } from "@/config/site-images";
+import { ABOUT_US_IMAGE, HERO_VIDEO_POSTER } from "@/config/site-images";
 import { SITE_GEO, getGeoMetaOther } from "@/config/site-location";
 import { getMessages } from "@/i18n/messages";
 import { getPageSeo } from "@/i18n/page-seo";
@@ -62,9 +62,9 @@ export function buildPageMetadata(
       description: seo.description,
       images: [
         {
-          url: HERO_LCP_PRELOAD_SRC,
-          width: 1280,
-          height: 853,
+          url: HERO_VIDEO_POSTER,
+          width: 1920,
+          height: 1080,
           alt: m.about.sideImageAlt,
         },
         {
@@ -77,7 +77,7 @@ export function buildPageMetadata(
       card: "summary_large_image",
       title: seo.title,
       description: seo.description,
-      images: [HERO_LCP_PRELOAD_SRC],
+      images: [HERO_VIDEO_POSTER],
     },
     robots: {
       index: true,

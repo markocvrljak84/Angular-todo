@@ -1,88 +1,46 @@
 import Link from "next/link";
 import { BOOKING_URL } from "@/config/site-contact";
-import { HeroCarouselControls } from "@/components/hero-carousel-controls";
+import { HeroVideo } from "@/components/hero-video";
 import {
-  HERO_LCP_PRELOAD_SRC,
   HERO_LCP_SRCSET,
-  heroSlideWebpSrc,
-  type MainCarouselFile,
+  HERO_VIDEO_POSTER,
 } from "@/config/site-images";
 import type { HomeContent } from "@/i18n/home-content";
 
-export type HeroSlideInput = {
-  file: MainCarouselFile;
-  alt: string;
-};
-
 type Props = {
-  slides: HeroSlideInput[];
   kicker: string;
   hero: HomeContent["hero"];
   experiencesHref: string;
-  carouselPrevLabel: string;
-  carouselNextLabel: string;
+  videoAlt: string;
 };
 
-export function HeroSection({
-  slides,
-  kicker,
-  hero,
-  experiencesHref,
-  carouselPrevLabel,
-  carouselNextLabel,
-}: Props) {
-  const slideAlts = slides.map((slide) => slide.alt);
-
+export function HeroSection({ kicker, hero, experiencesHref, videoAlt }: Props) {
   return (
-    <section
-      id="top"
-      className="hero-fs"
-      aria-labelledby="hero-fs-title"
-      aria-roledescription="carousel"
-    >
+    <section id="top" className="hero-fs" aria-labelledby="hero-fs-title">
       <div className="hero-fs__media">
-        <div className="hero-fs__slides" aria-live="polite" aria-atomic="true">
-          {slides.map((slide, i) => (
-            <div
-              key={slide.file}
-              data-hero-slide={i}
-              className={`hero-fs__slide${i === 0 ? " hero-fs__slide--active" : ""}`}
-              aria-hidden={i !== 0}
-            >
-              {i === 0 ? (
-                <img
-                  src={HERO_LCP_PRELOAD_SRC}
-                  srcSet={HERO_LCP_SRCSET}
-                  sizes="100vw"
-                  alt={slide.alt}
-                  width={1280}
-                  height={853}
-                  fetchPriority="high"
-                  decoding="async"
-                  className="hero-fs__img hero-fs__img--native"
-                />
-              ) : (
-                <img
-                  src={heroSlideWebpSrc(slide.file)}
-                  alt=""
-                  width={1280}
-                  height={853}
-                  loading="lazy"
-                  decoding="async"
-                  className="hero-fs__img hero-fs__img--native"
-                />
-              )}
-            </div>
-          ))}
+        <div className="hero-fs__slides">
+          <div className="hero-fs__slide hero-fs__slide--active">
+            {/* Poster is the LCP element — video loads after idle. */}
+            <picture>
+              <source
+                type="image/webp"
+                srcSet={HERO_LCP_SRCSET}
+                sizes="100vw"
+              />
+              <img
+                className="hero-fs__poster hero-fs__img--native"
+                src={HERO_VIDEO_POSTER}
+                alt=""
+                width={1920}
+                height={1080}
+                fetchPriority="high"
+                decoding="async"
+              />
+            </picture>
+            <HeroVideo alt={videoAlt} />
+          </div>
           <div className="hero-fs__scrim" aria-hidden="true" />
         </div>
-
-        <HeroCarouselControls
-          slideCount={slides.length}
-          slideAlts={slideAlts}
-          prevLabel={carouselPrevLabel}
-          nextLabel={carouselNextLabel}
-        />
       </div>
 
       <div className="hero-fs__content">

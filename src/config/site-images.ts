@@ -134,7 +134,7 @@ export const GALLERY_FILES_ON_DISK = [
 
 export const GALLERY_IMAGE_COUNT = GALLERY_FILES.length;
 
-/** Hero carousel — order is the initial slide sequence (first = LCP). */
+/** Hero carousel stills — kept for fallback / scripts; hero UI uses video. */
 export const MAIN_CAROUSEL_IMAGES = [
   "581480514_122107015833084437_6966149935686680015_n.jpg",
   "578265540_122104807869084437_5111680495021054907_n.jpg",
@@ -143,11 +143,19 @@ export const MAIN_CAROUSEL_IMAGES = [
 
 export type MainCarouselFile = (typeof MAIN_CAROUSEL_IMAGES)[number];
 
-/** Pre-generated WebP LCP assets (see scripts/optimize-hero.mjs). */
-export const HERO_LCP_PRELOAD_SRC = "/img/main-carousel/hero-lcp-1280.webp" as const;
+/** Fullscreen hero background video (muted autoplay loop, deferred for LCP). */
+export const HERO_VIDEO_SRC = "/video/hero.mp4" as const;
+export const HERO_VIDEO_SRC_720 = "/video/hero-720p.mp4" as const;
+export const HERO_VIDEO_POSTER = "/video/hero-poster.jpg" as const;
+export const HERO_VIDEO_POSTER_WEBP = "/video/hero-poster.webp" as const;
+export const HERO_VIDEO_POSTER_WEBP_1280 = "/video/hero-poster-1280.webp" as const;
+export const HERO_VIDEO_POSTER_WEBP_640 = "/video/hero-poster-640.webp" as const;
+
+/** LCP poster for hero (WebP preferred). */
+export const HERO_LCP_PRELOAD_SRC = HERO_VIDEO_POSTER_WEBP_1280;
 
 export const HERO_LCP_SRCSET =
-  "/img/main-carousel/hero-lcp-640.webp 640w, /img/main-carousel/hero-lcp-1280.webp 1280w, /img/main-carousel/hero-lcp-1920.webp 1920w" as const;
+  `${HERO_VIDEO_POSTER_WEBP_640} 640w, ${HERO_VIDEO_POSTER_WEBP_1280} 1280w, ${HERO_VIDEO_POSTER_WEBP} 1920w` as const;
 
 /** @deprecated Use HERO_LCP_PRELOAD_SRC — kept for backwards compatibility. */
 export const HERO_LCP_IMAGE = MAIN_CAROUSEL_IMAGES[0];

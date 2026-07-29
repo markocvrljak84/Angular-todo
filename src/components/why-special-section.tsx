@@ -11,7 +11,7 @@ type Props = {
 export function WhySpecialSection({ content, images, hrefs }: Props) {
   return (
     <section className="flat-section flat-section--tint" aria-labelledby="why-special-title">
-      <div className="flat-wrap">
+      <div className="flat-wrap flat-wrap--xl">
         <h2 id="why-special-title" className="flat-section__title">
           {content.title}
         </h2>
