@@ -7,6 +7,7 @@ export const JOURNAL_CATEGORY_IDS = [
   "stargazing",
   "places",
   "seasons",
+  "stars-peak",
 ] as const;
 
 export type JournalCategoryId = (typeof JOURNAL_CATEGORY_IDS)[number];
@@ -20,6 +21,7 @@ export type JournalArticle = {
   categoryId: JournalCategoryId;
   status: JournalArticleStatus;
   seoDescription?: string;
+  image?: { src: string; alt: string };
   paragraphs?: string[];
   externalLinks?: { href: string; label: string }[];
 };
@@ -259,6 +261,52 @@ const en: JournalContent = {
           ],
         },
         {
+          slug: "northern-velebit-national-park",
+          title: "Northern Velebit National Park",
+          teaser:
+            "Old-growth forest, the Lukina Jama abyss and the Velebit Botanical Garden — the wilder, quieter northern massif within a half-day's drive.",
+          categoryId: "places",
+          status: "published",
+          seoDescription:
+            "Northern Velebit National Park from Stars Peak — Hajdučki Kukovi, Rožanski Kukovi, Lukina Jama pit, Velebit Botanical Garden and Zavižan summit.",
+          paragraphs: [
+            "Northern Velebit National Park is the part of the mountain that most people mean when they picture Velebit as wild and untouched. Declared a national park in 1999 and a UNESCO World Biosphere Reserve the year before, it covers the northern massif with old beech and fir forest, open karst plateaus and a sky that darkens to almost no light at night. From Stars Peak it is roughly a ninety-minute drive through Gospić and toward Krasno — a long day trip or a reason to plan two nights in the area.",
+            "The landscape is built around two famous groups of stone towers: Hajdučki Kukovi in the west and Rožanski Kukovi in the east. They are not easy summits — the routes demand experience, good conditions and early starts — but even seen from a distance they give the plateau an edge that is unlike anything on the gentler mountain roads. Between the rock groups, marked paths cross subalpine meadows and high peat bogs that hold water and rare plant communities.",
+            "Below the surface, Lukina Jama is the park's hidden depth. Once measured as the deepest pit in Croatia and for a time among the deepest in the world, it drops more than 1,400 metres under Hajdučki Kukovi. Visits require caving experience and equipment — this is not a show cave — but simply knowing it is there adds to the sense of the mountain above you when you walk.",
+            "For guests who want something more accessible, the Velebit Botanical Garden on the Zavižan plateau is a half-day destination in itself. Founded in 1967, it holds hundreds of species native to the Velebit massif and the wider Dinaric range, displayed in open beds among the karst. The Zavižan meteorological station nearby is one of the oldest staffed stations in Croatia. From the plateau the view toward the sea and the islands of Kvarner is one of the cleaner panoramas on the whole mountain.",
+            "We suggest Northern Velebit when guests have already walked the routes near Bačić Duliba and want to feel a different scale of the same mountain — or when they come from a botanical or caving interest and the south alone is not enough. Plan the drive carefully: roads into the park can be rough in sections, and the gate times and entry rules follow the national park regulations, which change between seasons. The park's own website keeps the most current information on access and guided visits.",
+          ],
+          externalLinks: [
+            {
+              href: "https://np-sjeverni-velebit.hr/www/en/",
+              label: "Northern Velebit National Park — official site",
+            },
+          ],
+        },
+        {
+          slug: "paklenica-national-park",
+          title: "Paklenica National Park",
+          teaser:
+            "Two dramatic gorges, Croatia's most popular rock-climbing wall and a cave at canyon level — all within reach on a long day from Bačić Duliba.",
+          categoryId: "places",
+          status: "published",
+          seoDescription:
+            "Paklenica National Park from Stars Peak — Velika Paklenica gorge, Manita Peć cave, climbing routes on Anića Kuk and day hike options from southern Velebit.",
+          paragraphs: [
+            "Paklenica National Park lies on the southern edge of Velebit, above Starigrad-Paklenica on the Zadar Riviera. From Stars Peak the drive takes roughly two hours along the coast road — south through Karlobag, past Starigrad — and the entrance to Velika Paklenica canyon is straightforward to find. It is a long day trip, and the distance is part of what makes it worth planning: a different chapter of the same mountain, seen from the sea side.",
+            "The park was declared in 1949 and is the oldest national park on the Croatian mainland. It protects two canyon systems: Velika Paklenica, wider and more visited, and Mala Paklenica to the south, narrower and wilder. Velika Paklenica canyon is carved by the Paklenica stream through limestone over millions of years; the walls rise several hundred metres in places, and the walk from the entrance to Lugarnica and beyond follows the stream bed through beech and black pine forest into open karst. Even without a summit plan, the canyon floor is worth several hours.",
+            "Anića Kuk, the vertical limestone face above the canyon, is the most famous sport-climbing wall in Croatia. Hundreds of routes of all grades draw climbers from across Europe in spring and autumn. For guests who climb, a day at Paklenica alongside walking guests at Starigrad is a natural split — the climbers go up, the walkers go in. For non-climbers, watching routes on the wall from below is its own kind of spectacle.",
+            "Manita Peć is the cave accessible to park visitors with a guide. It opens in the rock wall about two kilometres into the canyon, requiring a short steep path to reach the entrance. Inside, a sequence of halls and stalactite formations runs for around 175 metres. Tours run in season at set times; the national park website has current schedules. It is one of the better show caves on the Adriatic side of the Dinaric range, and because access is controlled, it remains genuinely impressive rather than over-lit.",
+            "We suggest Paklenica for guests who want to see how the mountain looks from the sea, who have a climbing interest, or who have already covered the Bačić Duliba routes and want something different before or after. Combine it with a swim at Starigrad if the summer heat calls for it. The drive back to Stars Peak along the Velebit coast, with the mountain on one side and the open Adriatic on the other, is a good end to a long southern day.",
+          ],
+          externalLinks: [
+            {
+              href: "https://www.np-paklenica.hr/en/",
+              label: "Paklenica National Park — official site",
+            },
+          ],
+        },
+        {
           slug: "baske-ostarije",
           title: "Baške Oštarije",
           teaser:
@@ -290,6 +338,10 @@ const en: JournalContent = {
           status: "published",
           seoDescription:
             "Spring at Stars Peak on Velebit — lingering snow, wildflowers, quiet trails from Bačić Duliba and early Adriatic days before summer heat.",
+          image: {
+            src: "/img/journal-spring.jpg",
+            alt: "Wild orchid in the meadow below Dabarski Kukovi at sunset, Bačić Duliba, Velebit",
+          },
           paragraphs: [
             "Spring on Velebit does not arrive all at once. In Bačić Duliba the meadows can already smell of green while higher ridges still hold snow in the hollows. From Stars Peak you watch the change day by day: longer light on Bačić Kuk, softer mornings, and the first guests who want to walk before the summer heat. It is one of our favourite times to host — quiet roads, cool air, and a mountain that feels newly awake.",
             "For hiking, the broad season on Velebit is generally May to October. Earlier in spring, shaded slopes and higher ground can still be icy or blocked; by late spring the marked paths around Bačić Duliba and Dabarski Kukovi open more reliably. We always tell guests to check conditions before a summit day — spring weather here can turn quickly, with wind, fog and cold even when Karlobag already feels mild. Layers matter more than a big backpack.",
@@ -306,6 +358,10 @@ const en: JournalContent = {
           status: "published",
           seoDescription:
             "Summer at Stars Peak on Velebit — mountain mornings, Karlobag swims, outdoor kitchen evenings and stargazing above Bačić Duliba.",
+          image: {
+            src: "/img/journal-summer.jpg",
+            alt: "Young fir tree in the sunlit meadow below Dabarski Kukovi, Bačić Duliba, Velebit — summer morning",
+          },
           paragraphs: [
             "Summer is when the Stars Peak idea becomes obvious in a single day. Coffee with a view of Bačić Kuk, a hike while the air is still cool, then half an hour downhill to Karlobag for a swim before lunch. By evening you are back on the terrace — grill in the outdoor kitchen, pine scent, and a sky dark enough for stars. Summit, swim, stargaze is not a slogan here; it is a timetable that works.",
             "On Velebit, summer usually brings the most stable stretch for longer walks, which is why mountain guides often prefer May to October and call summer the surest window. Even then the mountain keeps its rules. Bare coastal approaches can be punishing in midday heat, and sudden wind or rain is still possible — so we start early, carry water, and keep a layer for the ridge. Around the house the upper floor can warm in the hottest hours; a fan and a slower afternoon indoors are part of an honest summer stay.",
@@ -322,6 +378,10 @@ const en: JournalContent = {
           status: "published",
           seoDescription:
             "Autumn at Stars Peak on Velebit — clear views, quieter trails, fireplace evenings and mountain-to-sea days before winter.",
+          image: {
+            src: "/img/journal-autumn.jpg",
+            alt: "Autumn view of the Velebit massif above coloured forest under dramatic clouds",
+          },
           paragraphs: [
             "Autumn may be the season that suits Stars Peak best. The crowds thin, the light sharpens, and Velebit shows its colours — beech and mixed forest turning while the limestone of Dabarski Kukovi stays pale against blue sky. Mornings are crisp; afternoons can still hold enough warmth for a walk without summer haste. From the terrace, Bačić Kuk looks closer somehow, as if the air itself had been cleaned.",
             "Hiking remains strong into early autumn within the usual May–October window, though days grow shorter and higher ground can see early snow or ice as the season advances. We favour clear September and October days for ridge views toward the Adriatic and Pag — visibility is often excellent. Start earlier than in June; finish earlier too. A flask of tea and a careful eye on the forecast matter more than speed.",
@@ -338,12 +398,48 @@ const en: JournalContent = {
           status: "published",
           seoDescription:
             "Winter at Stars Peak on Velebit — snow and silence in Bačić Duliba, fireplace stays, and why high ridge hiking waits for better conditions.",
+          image: {
+            src: "/img/journal-winter.jpg",
+            alt: "Snowy forest road below Dabarski Kukovi in winter sun, Bačić Duliba, Velebit",
+          },
           paragraphs: [
             "Winter changes the sound of Bačić Duliba. Snow can lie on Bačić Kuk and the higher kukovi while the valley holds a deep quiet — fewer engines, longer nights, stars that feel closer above white ground. Inside Stars Peak the fireplace earns its place. This is when the house feels most like what we hoped it would be: wood, warmth, and a mountain just beyond the glass.",
             "We are honest about winter walking. The Velebit Hiking Trail and high ridge routes are not recommended in winter months for ordinary guests — deep snow, fog, ice, low temperatures and harsh wind are common on the mountain. Higher park roads and trails further north often close or stay difficult under snow. Around the house, short walks in settled weather can still be beautiful, but summit days with cables and exposure wait for spring. If you are not an experienced winter mountaineer, treat this season as a stay, not a peak-bagging trip.",
             "Access still matters. The gravel road to Bačić Duliba is maintained for passenger cars, yet snow and ice ask for caution, good tyres and daylight driving. We share conditions when guests book, and we keep the practical side of the house clear — generator for oven and hot water when needed, quiet evenings, and no pressure to fill the day with kilometres. Netflix by the fire, a book, a slow breakfast with the ridge in cloud — that is a good winter day here.",
             "Come in winter for stillness. Come if you want Velebit without the summer timetable of swim-and-summit. The Adriatic is close when the road allows, but the real gift is the silence after dark and the glow of the fire while snow holds the peaks. That is Stars Peak in its quietest season — and for some guests, its truest one.",
           ],
+        },
+      ],
+    },
+    {
+      id: "stars-peak",
+      title: "Stars Peak",
+      intro:
+        "The story of the cabin — how it started, what we are learning along the way, and where we hope it goes.",
+      articles: [
+        {
+          slug: "from-ruin-to-retreat",
+          title: "From Old Cabin to Mountain Retreat",
+          teaser:
+            "What we found when we first walked through the door, why we stayed, and the long road from point A to point B, that is to the place Stars Peak is today.",
+          categoryId: "stars-peak",
+          status: "coming-soon",
+        },
+        {
+          slug: "building-on-velebit",
+          title: "What the Mountain Teaches You About Patience",
+          teaser:
+            "Permits, weather, roads, builders, plans that changed and plans that held — the honest side of renovating on a remote Velebit ridge.",
+          categoryId: "stars-peak",
+          status: "coming-soon",
+        },
+        {
+          slug: "ideas-and-plans",
+          title: "What We Are Building Next",
+          teaser:
+            "Agrotourism, mountain teas, guided walks, a small herb garden — the ideas we are slowly turning into something real.",
+          categoryId: "stars-peak",
+          status: "coming-soon",
         },
       ],
     },

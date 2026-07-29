@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Locale } from "@/i18n/config";
 import { localePath } from "@/config/site-routes";
@@ -38,12 +39,28 @@ export function JournalArticlePage({
         <p className="journal-article__teaser">{article.teaser}</p>
       </header>
 
-      <div className="journal-article__body">
-        {article.paragraphs?.map((paragraph) => (
-          <p key={paragraph} className="journal-article__paragraph">
-            {paragraph}
-          </p>
-        ))}
+      <div className={`journal-article__content${article.image ? " journal-article__content--with-image" : ""}`}>
+        <div className="journal-article__body">
+          {article.paragraphs?.map((paragraph) => (
+            <p key={paragraph} className="journal-article__paragraph">
+              {paragraph}
+            </p>
+          ))}
+        </div>
+
+        {article.image && (
+          <div className="journal-article__image">
+            <Image
+              src={article.image.src}
+              alt={article.image.alt}
+              width={1200}
+              height={900}
+              className="journal-article__image-img"
+              sizes="(min-width: 1100px) 46vw, (min-width: 860px) 52vw, 100vw"
+              priority
+            />
+          </div>
+        )}
       </div>
 
       {article.externalLinks?.length ? (

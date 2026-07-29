@@ -110,7 +110,7 @@ export default async function JournalArticleRoute({ params }: Props) {
       <JsonLdScript id={`journal-article-json-ld-${slug}`} data={graph} />
 
       <div className="flat-section flat-section--page">
-        <div className="flat-wrap flat-wrap--narrow">
+        <div className={article.image ? "flat-wrap flat-wrap--article" : "flat-wrap flat-wrap--narrow"}>
           <JournalArticlePage
             category={category}
             article={article}

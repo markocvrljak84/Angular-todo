@@ -114,7 +114,7 @@ const en: HomeContent = {
       },
       {
         title: "Sea",
-        body: "Tatinja — just half an hour from the house. Clear water, a quiet cove, and the Velebit coast within easy reach.",
+        body: "Tatinja beach — just half an hour from the house. Clear water, a quiet cove, and the Velebit peaks within easy reach.",
         imageAlt: "Tatinja cove near Karlobag — pebble beach and Adriatic view, half an hour from Stars Peak",
         ctaLabel: "Coast & landscapes",
       },
