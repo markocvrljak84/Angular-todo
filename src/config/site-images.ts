@@ -143,7 +143,7 @@ export const MAIN_CAROUSEL_IMAGES = [
 
 export type MainCarouselFile = (typeof MAIN_CAROUSEL_IMAGES)[number];
 
-/** Fullscreen hero background video (muted autoplay loop, deferred for LCP). */
+/** Fullscreen hero background video (muted autoplay loop). Uses 720p for fast start. */
 export const HERO_VIDEO_SRC = "/video/hero.mp4" as const;
 export const HERO_VIDEO_SRC_720 = "/video/hero-720p.mp4" as const;
 export const HERO_VIDEO_POSTER = "/video/hero-poster.jpg" as const;

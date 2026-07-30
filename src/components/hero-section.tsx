@@ -20,7 +20,7 @@ export function HeroSection({ kicker, hero, experiencesHref, videoAlt }: Props) 
       <div className="hero-fs__media">
         <div className="hero-fs__slides">
           <div className="hero-fs__slide hero-fs__slide--active">
-            {/* Poster is the LCP element — video loads after idle. */}
+            {/* Poster is LCP; video preloads at low priority and plays ASAP. */}
             <picture>
               <source
                 type="image/webp"
