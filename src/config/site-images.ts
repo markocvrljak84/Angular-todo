@@ -197,7 +197,7 @@ export const HOME_IMAGES = {
   accommodation: "/img/gallery/740290390.jpg",
   localFlavours: "/img/home-local-flavours.jpg",
   experienceMap: {
-    mountain: "/img/velebit.jpg",
+    mountain: "/img/velebit-1280.webp",
     sea: "/img/zavratnica/uvala.jpeg",
   },
 } as const;

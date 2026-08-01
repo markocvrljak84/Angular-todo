@@ -4,7 +4,6 @@ import {
   Cormorant_Garamond,
   Plus_Jakarta_Sans,
 } from "next/font/google";
-import { HERO_LCP_PRELOAD_SRC, HERO_LCP_SRCSET } from "@/config/site-images";
 import { getGeoMetaOther } from "@/config/site-location";
 import { SITE_SOCIAL_PROFILES } from "@/config/site-social";
 import { getMetadataBase } from "@/lib/site-url";
@@ -79,16 +78,6 @@ export default function RootLayout({
           name="p:domain_verify"
           content="c4e33cac45e978de95e0b9986bf8bf03"
         />
-        <link
-          rel="preload"
-          as="image"
-          type="image/webp"
-          href={HERO_LCP_PRELOAD_SRC}
-          imageSrcSet={HERO_LCP_SRCSET}
-          imageSizes="100vw"
-          fetchPriority="high"
-        />
-        <link rel="preconnect" href="https://www.google.com" />
         {SITE_SOCIAL_PROFILES.map((profile) => (
           <link key={profile.id} rel="me" href={profile.href} />
         ))}

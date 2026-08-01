@@ -8,7 +8,11 @@ import { HomeEditorialSection } from "@/components/home-editorial-section";
 import { HomeWelcomeStrip } from "@/components/home-welcome-strip";
 import { NewsletterSignupSection } from "@/components/newsletter-signup-section";
 import { WhySpecialSection } from "@/components/why-special-section";
-import { HOME_IMAGES } from "@/config/site-images";
+import {
+  HERO_LCP_PRELOAD_SRC,
+  HERO_LCP_SRCSET,
+  HOME_IMAGES,
+} from "@/config/site-images";
 import { localePath } from "@/config/site-routes";
 import { getExperienceContent } from "@/i18n/experience-content";
 import { getHomeContent } from "@/i18n/home-content";
@@ -58,6 +62,16 @@ export default async function HomePage({ params }: Props) {
   return (
     <>
       <PageJsonLd locale={locale} messages={t} page="home" />
+
+      <link
+        rel="preload"
+        as="image"
+        type="image/webp"
+        href={HERO_LCP_PRELOAD_SRC}
+        imageSrcSet={HERO_LCP_SRCSET}
+        imageSizes="100vw"
+        fetchPriority="high"
+      />
 
       <HeroSection
         kicker={t.home.heroBadge}

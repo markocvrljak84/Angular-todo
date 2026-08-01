@@ -3,7 +3,6 @@ import Image from "next/image";
 import { BookCta } from "@/components/book-cta";
 import { ClimbingRoutesSection } from "@/components/climbing-routes-section";
 import { ExperienceMapSection } from "@/components/experience-map-section";
-import { HikingRouteMapsPreload } from "@/components/hiking-route-maps-preload";
 import { HikingRoutesSection } from "@/components/hiking-routes-section";
 import { JournalTeaserSection } from "@/components/journal-teaser-section";
 import { NearbySection } from "@/components/nearby-section";
@@ -55,6 +54,15 @@ export default async function ExperiencesPage({ params }: Props) {
     <>
       <PageJsonLd locale={locale} messages={t} page="experiences" />
 
+      {/* LCP: mountain zone image — do not compete with Google Maps embeds. */}
+      <link
+        rel="preload"
+        as="image"
+        type="image/webp"
+        href={HOME_IMAGES.experienceMap.mountain}
+        fetchPriority="high"
+      />
+
       <ExperienceMapSection
         id="exp-mountain-sea"
         content={home.map}
@@ -69,7 +77,6 @@ export default async function ExperiencesPage({ params }: Props) {
       />
 
       <section id={hiking.id} className="flat-section flat-section--tint" aria-labelledby="exp-hiking">
-        <HikingRouteMapsPreload />
         <div className="flat-wrap experiences-hiking__head">
           <div className="experiences-hiking__copy">
             <h2 id="exp-hiking" className="flat-section__title">
@@ -94,7 +101,6 @@ export default async function ExperiencesPage({ params }: Props) {
           content={getHikingRoutes(locale)}
           compact
           initialOpenId={null}
-          preloadMaps
         />
         <ClimbingRoutesSection content={getClimbingRoutes(locale)} />
       </section>

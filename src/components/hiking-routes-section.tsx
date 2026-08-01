@@ -12,6 +12,7 @@ import {
 import type { HikingRouteId } from "@/config/hiking-routes";
 import type { HikingRoutesContent } from "@/i18n/hiking-routes";
 import { PageHeader } from "@/components/page-header";
+import { warmHikingMapConnections } from "@/components/hiking-route-maps-preload";
 
 type Props = {
   content: HikingRoutesContent;
@@ -20,8 +21,6 @@ type Props = {
   compact?: boolean;
   /** Route expanded on first render; null keeps all closed. */
   initialOpenId?: HikingRouteId | null;
-  /** Eager-load map embeds (use with HikingRouteMapsPreload on the page). */
-  preloadMaps?: boolean;
 };
 
 function StatItem({ label, value }: { label: string; value: string }) {
@@ -46,11 +45,7 @@ function GpxDownload({
 }) {
   return (
     <div className="hiking-route__gpx-wrap">
-      <a
-        href={href}
-        download={fileName}
-        className="hiking-route__gpx"
-      >
+      <a href={href} download={fileName} className="hiking-route__gpx">
         <svg
           width="18"
           height="18"
@@ -81,7 +76,6 @@ function HikingRouteItem({
   panelId,
   triggerId,
   articleRef,
-  preloadMaps,
 }: {
   route: HikingRoutesContent["routes"][number];
   content: HikingRoutesContent;
@@ -90,7 +84,6 @@ function HikingRouteItem({
   panelId: string;
   triggerId: string;
   articleRef: (element: HTMLElement | null) => void;
-  preloadMaps?: boolean;
 }) {
   const stats = HIKING_ROUTE_STATS[route.id];
   const gpxHref = HIKING_GPX[route.id];
@@ -146,110 +139,115 @@ function HikingRouteItem({
         className="hiking-route__panel"
         hidden={!isOpen}
       >
-        <div className="hiking-route__panel-inner">
-          <div className="hiking-route__block">
-            <h4 className="hiking-route__block-title">
-              {content.destinationHeading}
-            </h4>
-            {route.aboutParagraphs.map((paragraph) => (
-              <p key={paragraph} className="hiking-route__text">
-                {paragraph}
-              </p>
-            ))}
-            {imageFiles.length > 0 ? (
-              <ul className="hiking-route__photos">
-                {imageFiles.map((file, index) => (
-                  <li key={file} className="hiking-route__photo">
-                    <Image
-                      src={hikingRouteImageSrc(route.id, file)}
-                      alt={route.imageAlts[index] ?? route.title}
-                      width={1200}
-                      height={800}
-                      className="hiking-route__photo-img"
-                      sizes="(max-width: 640px) 100vw, (max-width: 960px) 50vw, 33vw"
-                    />
-                  </li>
-                ))}
-              </ul>
-            ) : null}
-          </div>
-
-          <div className="hiking-route__block">
-            <h4 className="hiking-route__block-title">
-              {content.trailHeading}
-            </h4>
-            {route.paragraphs.map((paragraph) => (
-              <p key={paragraph} className="hiking-route__text">
-                {paragraph}
-              </p>
-            ))}
-          </div>
-
-          {mapEmbedUrl ? (
+        {/* Mount heavy media only when open — hidden iframes still download otherwise. */}
+        {isOpen ? (
+          <div className="hiking-route__panel-inner">
             <div className="hiking-route__block">
-              <h4 className="hiking-route__block-title">{content.mapHeading}</h4>
-              <div className="hiking-route__map">
-                <iframe
-                  src={mapEmbedUrl}
-                  title={`${route.title} — ${content.mapHeading}`}
-                  loading={preloadMaps ? "eager" : "lazy"}
-                  referrerPolicy="no-referrer-when-downgrade"
-                  allowFullScreen
+              <h4 className="hiking-route__block-title">
+                {content.destinationHeading}
+              </h4>
+              {route.aboutParagraphs.map((paragraph) => (
+                <p key={paragraph} className="hiking-route__text">
+                  {paragraph}
+                </p>
+              ))}
+              {imageFiles.length > 0 ? (
+                <ul className="hiking-route__photos">
+                  {imageFiles.map((file, index) => (
+                    <li key={file} className="hiking-route__photo">
+                      <Image
+                        src={hikingRouteImageSrc(route.id, file)}
+                        alt={route.imageAlts[index] ?? route.title}
+                        width={1200}
+                        height={800}
+                        className="hiking-route__photo-img"
+                        sizes="(max-width: 640px) 100vw, (max-width: 960px) 50vw, 33vw"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
+            </div>
+
+            <div className="hiking-route__block">
+              <h4 className="hiking-route__block-title">
+                {content.trailHeading}
+              </h4>
+              {route.paragraphs.map((paragraph) => (
+                <p key={paragraph} className="hiking-route__text">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+
+            {mapEmbedUrl ? (
+              <div className="hiking-route__block">
+                <h4 className="hiking-route__block-title">{content.mapHeading}</h4>
+                <div className="hiking-route__map">
+                  <iframe
+                    src={mapEmbedUrl}
+                    title={`${route.title} — ${content.mapHeading}`}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+            ) : null}
+
+            <div className="hiking-route__stats-wrap">
+              <h4 className="hiking-route__stats-title">{content.statsHeading}</h4>
+              <dl className="hiking-route__stats">
+                <StatItem label={statLabels.duration} value={stats.duration} />
+                <StatItem
+                  label={statLabels.startElevation}
+                  value={stats.startElevation}
                 />
+                <StatItem
+                  label={statLabels.endElevation}
+                  value={stats.endElevation}
+                />
+                <StatItem
+                  label={statLabels.minElevation}
+                  value={stats.minElevation}
+                />
+                <StatItem
+                  label={statLabels.maxElevation}
+                  value={stats.maxElevation}
+                />
+                <StatItem label={statLabels.ascent} value={stats.ascent} />
+                <StatItem label={statLabels.descent} value={stats.descent} />
+                <StatItem label={statLabels.length} value={stats.length} />
+                <StatItem label={statLabels.avgGrade} value={stats.avgGrade} />
+                <StatItem label={statLabels.energy} value={stats.energy} />
+                <StatItem
+                  label={statLabels.difficulty}
+                  value={route.difficulty}
+                />
+                <StatItem label={statLabels.marking} value={route.marking} />
+                <StatItem
+                  label={statLabels.activityType}
+                  value={route.activityType}
+                />
+              </dl>
+
+              <div className="hiking-route__seasons">
+                <span className="hiking-route__seasons-label">
+                  {statLabels.seasons}
+                </span>
+                <ul className="hiking-route__seasons-list">
+                  {route.seasons.map((season) => (
+                    <li key={season} className="hiking-route__season">
+                      {season}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
-          ) : null}
-
-          <div className="hiking-route__stats-wrap">
-            <h4 className="hiking-route__stats-title">{content.statsHeading}</h4>
-            <dl className="hiking-route__stats">
-              <StatItem label={statLabels.duration} value={stats.duration} />
-              <StatItem
-                label={statLabels.startElevation}
-                value={stats.startElevation}
-              />
-              <StatItem
-                label={statLabels.endElevation}
-                value={stats.endElevation}
-              />
-              <StatItem
-                label={statLabels.minElevation}
-                value={stats.minElevation}
-              />
-              <StatItem
-                label={statLabels.maxElevation}
-                value={stats.maxElevation}
-              />
-              <StatItem label={statLabels.ascent} value={stats.ascent} />
-              <StatItem label={statLabels.descent} value={stats.descent} />
-              <StatItem label={statLabels.length} value={stats.length} />
-              <StatItem label={statLabels.avgGrade} value={stats.avgGrade} />
-              <StatItem label={statLabels.energy} value={stats.energy} />
-              <StatItem
-                label={statLabels.difficulty}
-                value={route.difficulty}
-              />
-              <StatItem label={statLabels.marking} value={route.marking} />
-              <StatItem
-                label={statLabels.activityType}
-                value={route.activityType}
-              />
-            </dl>
-
-            <div className="hiking-route__seasons">
-              <span className="hiking-route__seasons-label">
-                {statLabels.seasons}
-              </span>
-              <ul className="hiking-route__seasons-list">
-                {route.seasons.map((season) => (
-                  <li key={season} className="hiking-route__season">
-                    {season}
-                  </li>
-                ))}
-              </ul>
-            </div>
           </div>
-        </div>
+        ) : null}
       </div>
     </article>
   );
@@ -260,7 +258,6 @@ export function HikingRoutesSection({
   showPageHeader,
   compact,
   initialOpenId,
-  preloadMaps,
 }: Props) {
   const baseId = useId();
   const [openId, setOpenId] = useState<HikingRouteId | null>(
@@ -283,6 +280,9 @@ export function HikingRoutesSection({
 
   const handleToggle = (routeId: HikingRouteId) => {
     const willOpen = openId !== routeId;
+    if (willOpen && HIKING_ROUTE_MAPS[routeId]) {
+      warmHikingMapConnections();
+    }
     setOpenId((current) => (current === routeId ? null : routeId));
     if (willOpen) {
       scrollRouteIntoView(routeId);
@@ -327,7 +327,6 @@ export function HikingRoutesSection({
                     delete routeRefs.current[route.id];
                   }
                 }}
-                preloadMaps={preloadMaps}
                 onToggle={() => handleToggle(route.id)}
               />
             );

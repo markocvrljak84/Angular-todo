@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect } from "react";
-import { HIKING_ROUTE_MAPS, type HikingRouteId } from "@/config/hiking-routes";
 
 const PRECONNECT_ORIGINS = [
   "https://www.google.com",
@@ -9,52 +8,32 @@ const PRECONNECT_ORIGINS = [
   "https://maps.gstatic.com",
 ] as const;
 
-const MAP_ENTRIES = Object.entries(HIKING_ROUTE_MAPS).filter(
-  (entry): entry is [HikingRouteId, string] => entry[1] != null
-);
+/**
+ * Optional DNS/TLS warm-up for Google Maps embeds.
+ * Do NOT iframe-preload maps — that destroys FCP/LCP on /experiences.
+ * Call only when a route panel with a map is about to open.
+ */
+export function warmHikingMapConnections() {
+  if (typeof document === "undefined") return;
 
+  for (const href of PRECONNECT_ORIGINS) {
+    if (document.querySelector(`link[rel="preconnect"][href="${href}"]`)) {
+      continue;
+    }
+    const link = document.createElement("link");
+    link.rel = "preconnect";
+    link.href = href;
+    if (href !== "https://www.google.com") {
+      link.crossOrigin = "";
+    }
+    document.head.appendChild(link);
+  }
+}
+
+/** @deprecated Prefer warmHikingMapConnections(); kept for import compatibility. */
 export function HikingRouteMapsPreload() {
   useEffect(() => {
-    const links: HTMLLinkElement[] = [];
-
-    for (const href of PRECONNECT_ORIGINS) {
-      if (document.querySelector(`link[rel="preconnect"][href="${href}"]`)) {
-        continue;
-      }
-
-      const link = document.createElement("link");
-      link.rel = "preconnect";
-      link.href = href;
-      if (href !== "https://www.google.com") {
-        link.crossOrigin = "";
-      }
-      document.head.appendChild(link);
-      links.push(link);
-    }
-
-    return () => {
-      for (const link of links) {
-        link.remove();
-      }
-    };
+    /* No-op: eager map iframes were removed for CWV. */
   }, []);
-
-  if (MAP_ENTRIES.length === 0) {
-    return null;
-  }
-
-  return (
-    <div className="hiking-maps-preload" aria-hidden="true">
-      {MAP_ENTRIES.map(([routeId, url]) => (
-        <iframe
-          key={routeId}
-          src={url}
-          title=""
-          tabIndex={-1}
-          loading="eager"
-          referrerPolicy="no-referrer-when-downgrade"
-        />
-      ))}
-    </div>
-  );
+  return null;
 }
