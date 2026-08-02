@@ -66,11 +66,6 @@ const hr: FacilityCategory[] = [
     items: ["blagovaonica", "kauč", "kamin", "prostor za sjedenje"],
   },
   {
-    icon: "media",
-    title: "Mediji i tehnologija",
-    items: ["Netflix streaming usluge", "HBO Max", "PlayStation 5"],
-  },
-  {
     icon: "room",
     title: "Sadržaji sobe",
     items: [
@@ -177,11 +172,6 @@ const en: FacilityCategory[] = [
     icon: "living",
     title: "Living room",
     items: ["dining area", "sofa", "fireplace", "seating area"],
-  },
-  {
-    icon: "media",
-    title: "Media & technology",
-    items: ["Netflix streaming services", "HBO Max", "PlayStation 5"],
   },
   {
     icon: "room",
@@ -298,11 +288,6 @@ const de: FacilityCategory[] = [
     items: ["Essbereich", "Sofa", "Kamin", "Sitzbereich"],
   },
   {
-    icon: "media",
-    title: "Medien & Technik",
-    items: ["Streaming-Dienste (z. B. Netflix)", "HBO Max", "PlayStation 5"],
-  },
-  {
     icon: "room",
     title: "Zimmerausstattung",
     items: [
@@ -410,11 +395,6 @@ const fr: FacilityCategory[] = [
     items: ["coin repas", "canapé", "cheminée", "coin salon"],
   },
   {
-    icon: "media",
-    title: "Médias et technologie",
-    items: ["services de streaming (comme Netflix)", "HBO Max", "PlayStation 5"],
-  },
-  {
     icon: "room",
     title: "Équipements de la chambre",
     items: [
@@ -520,11 +500,6 @@ const it: FacilityCategory[] = [
     icon: "living",
     title: "Soggiorno",
     items: ["zona pranzo", "divano", "camino", "zona soggiorno"],
-  },
-  {
-    icon: "media",
-    title: "Media e tecnologia",
-    items: ["servizi di streaming (come Netflix)", "HBO Max", "PlayStation 5"],
   },
   {
     icon: "room",

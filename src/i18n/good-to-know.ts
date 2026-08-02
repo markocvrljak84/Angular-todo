@@ -40,9 +40,8 @@ const hr: GoodToKnowContent = {
       ],
     },
     {
-      title: "Zabava i opuštanje",
+      title: "Internet",
       paragraphs: [
-        "Na televizoru su vam dostupni Netflix i HBO, kao i Sony PlayStation 5 s nekoliko igrica.",
         "Lozinka za Wi-Fi bit će vam dostavljena kada se vidimo po dolasku.",
       ],
     },
@@ -59,28 +58,11 @@ const hr: GoodToKnowContent = {
       ],
     },
     {
-      title: "Rashlađivanje tijekom ljeta",
-      paragraphs: [
-        "Tijekom ljetnih mjeseci na gornjem katu može biti vruće u najtoplijem dijelu dana. Zato je na raspolaganju ventilator u koji se umeću ulošci s ledom iz zamrzivača kako bi puhao hladan zrak i rashladio prostoriju.",
-      ],
-    },
-    {
       title: "Što trebate ponijeti",
       paragraphs: [
         "Potrebno je ponijeti samo odjeću i hranu. Sve ostalo dočekat će vas u kući.",
         "U hladnjaku će vas po dolasku čekati ohlađeno piće kako biste se mogli osvježiti.",
       ],
-    },
-    {
-      title: "Aktivnosti i sadržaji",
-      listIntro: "Na otvorenom su vam dostupni:",
-      listItems: [
-        "pikado",
-        "badminton",
-        "ljuljačke za djecu",
-        "mali golovi za nogomet",
-      ],
-      paragraphsAfter: ["U kući se nalaze i neke društvene igre te puzzle."],
     },
     {
       title: "Dodatni ležajevi",
@@ -152,9 +134,8 @@ const en: GoodToKnowContent = {
       ],
     },
     {
-      title: "Entertainment",
+      title: "Internet",
       paragraphs: [
-        "Netflix and HBO are available on the TV, along with a Sony PlayStation 5 and several games.",
         "The Wi-Fi password will be provided when we meet on your arrival.",
       ],
     },
@@ -171,28 +152,11 @@ const en: GoodToKnowContent = {
       ],
     },
     {
-      title: "Cooling in summer",
-      paragraphs: [
-        "During summer months the upper floor can get warm at the hottest time of day. A fan with freezer ice packs is available to blow cool air and lower the room temperature.",
-      ],
-    },
-    {
       title: "What to bring",
       paragraphs: [
         "You only need to bring clothes and food. Everything else awaits you in the house.",
         "Chilled drinks will be waiting in the fridge when you arrive so you can refresh yourself.",
       ],
-    },
-    {
-      title: "Activities",
-      listIntro: "Outdoors you will find:",
-      listItems: [
-        "darts",
-        "badminton",
-        "children's swings",
-        "small football goals",
-      ],
-      paragraphsAfter: ["Indoors there are also board games and puzzles."],
     },
     {
       title: "Extra beds",
@@ -264,9 +228,8 @@ const de: GoodToKnowContent = {
       ],
     },
     {
-      title: "Unterhaltung",
+      title: "Internet",
       paragraphs: [
-        "Am Fernseher stehen Netflix und HBO zur Verfügung, außerdem eine Sony PlayStation 5 mit mehreren Spielen.",
         "Das WLAN-Passwort erhalten Sie bei unserem Treffen nach Ihrer Ankunft.",
       ],
     },
@@ -283,28 +246,11 @@ const de: GoodToKnowContent = {
       ],
     },
     {
-      title: "Abkühlung im Sommer",
-      paragraphs: [
-        "In den Sommermonaten kann es im Obergeschoss zur wärmsten Tageszeit heiß werden. Ein Ventilator mit Eispacks aus dem Gefrierschrank bläst kühle Luft und kühlt den Raum.",
-      ],
-    },
-    {
       title: "Was Sie mitbringen sollten",
       paragraphs: [
         "Bringen Sie nur Kleidung und Lebensmittel mit. Alles andere erwartet Sie im Haus.",
         "Gekühlte Getränke im Kühlschrank begrüßen Sie bei der Ankunft.",
       ],
-    },
-    {
-      title: "Aktivitäten",
-      listIntro: "Im Freien stehen zur Verfügung:",
-      listItems: [
-        "Darts",
-        "Badminton",
-        "Kinderschaukeln",
-        "kleine Fußballtore",
-      ],
-      paragraphsAfter: ["Im Haus finden Sie außerdem Gesellschaftsspiele und Puzzles."],
     },
     {
       title: "Zusätzliche Betten",
@@ -376,9 +322,8 @@ const fr: GoodToKnowContent = {
       ],
     },
     {
-      title: "Divertissement",
+      title: "Internet",
       paragraphs: [
-        "Netflix et HBO sont disponibles sur la télévision, ainsi qu'une PlayStation 5 Sony avec plusieurs jeux.",
         "Le mot de passe Wi-Fi vous sera communiqué lors de notre rencontre à votre arrivée.",
       ],
     },
@@ -395,28 +340,11 @@ const fr: GoodToKnowContent = {
       ],
     },
     {
-      title: "Rafraîchissement en été",
-      paragraphs: [
-        "En été, l'étage peut être chaud aux heures les plus chaudes. Un ventilateur avec des packs de glace du congélateur diffuse de l'air frais pour rafraîchir la pièce.",
-      ],
-    },
-    {
       title: "Ce qu'il faut apporter",
       paragraphs: [
         "Apportez uniquement vos vêtements et votre nourriture. Tout le reste vous attend dans la maison.",
         "Des boissons fraîches vous accueilleront dans le réfrigérateur à votre arrivée.",
       ],
-    },
-    {
-      title: "Activités",
-      listIntro: "À l'extérieur, vous trouverez :",
-      listItems: [
-        "fléchettes",
-        "badminton",
-        "balançoires pour enfants",
-        "petits buts de football",
-      ],
-      paragraphsAfter: ["À l'intérieur, des jeux de société et des puzzles sont également disponibles."],
     },
     {
       title: "Lits supplémentaires",
@@ -488,9 +416,8 @@ const it: GoodToKnowContent = {
       ],
     },
     {
-      title: "Intrattenimento",
+      title: "Internet",
       paragraphs: [
-        "Sulla TV sono disponibili Netflix e HBO, oltre a una Sony PlayStation 5 con diversi giochi.",
         "La password Wi-Fi vi sarà fornita quando ci incontriamo al vostro arrivo.",
       ],
     },
@@ -507,28 +434,11 @@ const it: GoodToKnowContent = {
       ],
     },
     {
-      title: "Raffrescamento in estate",
-      paragraphs: [
-        "Nei mesi estivi il piano superiore può essere caldo nelle ore più calde. Un ventilatore con inserti di ghiaccio dal congelatore soffia aria fresca per raffreddare la stanza.",
-      ],
-    },
-    {
       title: "Cosa portare",
       paragraphs: [
         "Portate solo abiti e cibo. Tutto il resto vi aspetta in casa.",
         "Bevande fresche vi accoglieranno in frigorifero all'arrivo.",
       ],
-    },
-    {
-      title: "Attività",
-      listIntro: "All'aperto troverete:",
-      listItems: [
-        "freccette",
-        "badminton",
-        "altalene per bambini",
-        "porticine da calcio",
-      ],
-      paragraphsAfter: ["In casa ci sono anche giochi da tavolo e puzzle."],
     },
     {
       title: "Letti aggiuntivi",

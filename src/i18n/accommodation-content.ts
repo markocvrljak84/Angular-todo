@@ -87,7 +87,7 @@ const en: AccommodationPageContent = {
     items: [
       {
         title: "Living Room",
-        body: "A warm space centred around the fireplace, with comfortable seating, mountain views and access to streaming services for quiet evenings indoors.",
+        body: "A warm space centred around the fireplace, with comfortable seating and mountain views for quiet evenings indoors.",
       },
       {
         title: "Bedrooms",
@@ -145,7 +145,7 @@ const en: AccommodationPageContent = {
   closing: {
     eyebrow: "A slower way to stay",
     title: "A slower way to stay",
-    body: "There are no crowds here. No traffic. No noise. Only changing light, mountain air and enough time to enjoy both the peaks of Velebit and the Adriatic coast in a single day.",
+    body: "There are no traffic here. No noise. Only changing light, mountain air and enough time to enjoy both the peaks of Velebit and the Adriatic coast in a single day.",
   },
   seoFaq: {
     title: "Frequently asked questions",
