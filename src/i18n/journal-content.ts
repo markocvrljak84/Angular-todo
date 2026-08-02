@@ -21,7 +21,7 @@ export type JournalArticle = {
   categoryId: JournalCategoryId;
   status: JournalArticleStatus;
   seoDescription?: string;
-  image?: { src: string; alt: string };
+  image?: { src: string; alt: string; width?: number; height?: number };
   paragraphs?: string[];
   externalLinks?: { href: string; label: string }[];
 };
@@ -135,8 +135,9 @@ const en: JournalContent = {
     },
     {
       id: "nature",
-      title: "Nature",
-      intro: "Wild herbs, alpine flowers and the quiet life of the mountain.",
+      title: "Nature & wildlife",
+      intro:
+        "Wild herbs, alpine flowers and the animals that move quietly through the forests and clearings around Stars Peak.",
       articles: [
         {
           slug: "wild-herbs-of-velebit",
@@ -155,9 +156,23 @@ const en: JournalContent = {
         {
           slug: "wildlife",
           title: "Wildlife",
-          teaser: "Hares, horses, birds and the animals that share the high pastures.",
+          teaser:
+            "A quiet morning visitor at Stars Peak — a košuta and her fawn at the forest edge, and a few notes on the species that share this mountain.",
           categoryId: "nature",
-          status: "coming-soon",
+          status: "published",
+          seoDescription:
+            "A doe (košuta) and fawn at dawn near Stars Peak on Velebit — a short wildlife note on red deer habitat in the forests around Bačić Duliba.",
+          image: {
+            src: "/img/journal-kosuta-dawn.jpg",
+            alt: "A doe and her spotted fawn standing at the forest edge near Stars Peak, Velebit",
+            width: 768,
+            height: 1024,
+          },
+          paragraphs: [
+            "It was still early — the kind of light that arrives before the house is fully awake. Outside Stars Peak, at the edge of the grass and the trees, a doe stood still. Beside her, a little farther back, a fawn watched the same direction. They did not hurry. For a moment the clearing belonged to them, and we were only quiet witnesses at the window.",
+            "In Croatian she is called a košuta — the female of the red deer (Cervus elaphus). With her young she moves most often at dawn and dusk, when the mountain is cooler and the forest edge feels safer. Velebit’s mixed woods, meadows and karst clearings are classic ground for this species: cover to hide in, open ground to graze, and enough quiet that a calf can grow through its first spotted months.",
+            "Sightings like this are part of why the stay here feels different from a busy coastal resort. You do not schedule wildlife. You leave space for it — and sometimes, just before breakfast, the mountain answers.",
+          ],
         },
       ],
     },

@@ -3810,16 +3810,16 @@ code {
 
 @media (min-width: 860px) {
   .journal-article__content--with-image {
-    grid-template-columns: 1fr 52%;
-    gap: 4.5rem;
+    grid-template-columns: 1fr 42%;
+    gap: 3.5rem;
     align-items: start;
   }
 }
 
 @media (min-width: 1100px) {
   .journal-article__content--with-image {
-    grid-template-columns: 1fr 56%;
-    gap: 5rem;
+    grid-template-columns: 1fr 44%;
+    gap: 4rem;
   }
 }
 
@@ -3835,9 +3835,9 @@ code {
 }
 
 .journal-article__image-img {
+  display: block;
   width: 100%;
   height: auto;
-  display: block;
   border-radius: 0.375rem;
   filter: var(--photo-grade);
 }

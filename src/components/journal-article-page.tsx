@@ -53,10 +53,10 @@ export function JournalArticlePage({
             <Image
               src={article.image.src}
               alt={article.image.alt}
-              width={1200}
-              height={900}
+              width={article.image.width ?? 1200}
+              height={article.image.height ?? 900}
               className="journal-article__image-img"
-              sizes="(min-width: 1100px) 46vw, (min-width: 860px) 52vw, 100vw"
+              sizes="(min-width: 1100px) 40vw, (min-width: 860px) 38vw, 100vw"
               priority
             />
           </div>
