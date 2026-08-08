@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { AccommodationBriefSection } from "@/components/accommodation-brief-section";
+import { BookingReviewsSection } from "@/components/booking-reviews-section";
 import { ExperienceDaySection } from "@/components/experience-day-section";
 import { FinalCtaSection } from "@/components/final-cta-section";
 import { HomeLocalFlavoursSection } from "@/components/home-local-flavours-section";
@@ -14,6 +15,7 @@ import {
   HOME_IMAGES,
 } from "@/config/site-images";
 import { localePath } from "@/config/site-routes";
+import { getBookingReviews } from "@/i18n/booking-reviews";
 import { getExperienceContent } from "@/i18n/experience-content";
 import { getHomeContent } from "@/i18n/home-content";
 import { getMessages } from "@/i18n/messages";
@@ -46,6 +48,7 @@ export default async function HomePage({ params }: Props) {
   const t = getMessages(locale);
   const home = getHomeContent(locale);
   const experience = getExperienceContent(locale);
+  const bookingReviews = getBookingReviews(locale);
 
   const whySpecialImages = [
     HOME_IMAGES.whySpecial.mountain,
@@ -119,6 +122,8 @@ export default async function HomePage({ params }: Props) {
         source="home"
         id="newsletter"
       />
+
+      <BookingReviewsSection content={bookingReviews} tint />
 
       <FinalCtaSection content={home.finalCta} />
 

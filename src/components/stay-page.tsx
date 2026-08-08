@@ -5,12 +5,15 @@ import {
   type AccommodationImageSlot,
 } from "@/config/site-images";
 import type { AccommodationPageContent } from "@/i18n/accommodation-content";
+import type { BookingReviewsContent } from "@/i18n/booking-reviews";
 import type { GoodToKnowContent } from "@/i18n/good-to-know";
+import { BookingReviewsSection } from "@/components/booking-reviews-section";
 import { FaqSection } from "@/components/faq-section";
 
 type Props = {
   content: AccommodationPageContent;
   goodToKnow: GoodToKnowContent;
+  bookingReviews: BookingReviewsContent;
 };
 
 function StayPhoto({
@@ -51,7 +54,7 @@ function StayPhoto({
   );
 }
 
-export function StayPage({ content, goodToKnow }: Props) {
+export function StayPage({ content, goodToKnow, bookingReviews }: Props) {
   return (
     <>
       <section className="home-welcome home-welcome--page stay-hero-welcome" aria-labelledby="stay-hero-title">
@@ -231,6 +234,8 @@ export function StayPage({ content, goodToKnow }: Props) {
           </div>
         </div>
       </section>
+
+      <BookingReviewsSection content={bookingReviews} tint topRule />
 
       <section className="final-cta flat-section" aria-label={content.cta.headline}>
         <div className="flat-wrap final-cta__inner">

@@ -7,7 +7,7 @@ type Props = {
 
 export function FinalCtaSection({ content }: Props) {
   return (
-    <section className="final-cta flat-section flat-section--tint" aria-label={content.headline}>
+    <section className="final-cta flat-section" aria-label={content.headline}>
       <div className="flat-wrap final-cta__inner">
         <p className="final-cta__headline">{content.headline}</p>
         <a
