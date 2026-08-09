@@ -22,6 +22,7 @@ type Props = {
 };
 
 const MOBILE_MENU_QUERY = "(max-width: 1189px)";
+const SCROLL_OPAQUE_AT = 8;
 
 type HeaderTone = "hero" | "glass" | "opaque";
 
@@ -39,7 +40,7 @@ function isNavLinkActive(pathname: string, item: NavItem, locale: Locale): boole
   const homeTarget = localePath(locale, "home").replace(/\/$/, "") || "/";
 
   if (target === homeTarget) {
-    return current === homeTarget;
+    return current === homeTarget || current === `/${locale}` || current === "/";
   }
 
   return current === target || current.startsWith(`${target}/`);
@@ -63,10 +64,16 @@ function buildNav(locale: Locale, t: Messages): NavItem[] {
   }));
 }
 
+function hasHomeHero(): boolean {
+  return !!document.getElementById("top")?.classList.contains("hero-fs");
+}
+
 export function SiteHeader({ locale, t }: Props) {
   const pathname = usePathname();
-  const onHome = isHomePath(pathname ?? "", locale);
-  const [tone, setTone] = useState<HeaderTone>(() => (onHome ? "hero" : "opaque"));
+  const pathIsHome = isHomePath(pathname ?? "", locale);
+  // Start transparent on presumed home; confirm after mount via hero presence.
+  const [onHome, setOnHome] = useState(pathIsHome);
+  const [tone, setTone] = useState<HeaderTone>(() => (pathIsHome ? "hero" : "opaque"));
   const [menuOpen, setMenuOpen] = useState(false);
   const menuBtnRef = useRef<HTMLButtonElement>(null);
 
@@ -76,23 +83,27 @@ export function SiteHeader({ locale, t }: Props) {
   const navEnd = nav.slice(3);
 
   useEffect(() => {
-    if (!onHome) {
+    const home = pathIsHome || hasHomeHero();
+    setOnHome(home);
+
+    if (!home) {
       setTone("opaque");
       return;
     }
 
     const updateTone = () => {
-      // At the top of the homepage the bar must stay transparent so the hero
-      // video shows through (esp. on mobile). Background only after scroll.
-      setTone(window.scrollY > 8 ? "opaque" : "hero");
+      setTone(window.scrollY > SCROLL_OPAQUE_AT ? "opaque" : "hero");
     };
 
+    // Force transparent first paint on home, then sync to actual scroll.
+    setTone("hero");
     updateTone();
+
     window.addEventListener("scroll", updateTone, { passive: true });
     return () => {
       window.removeEventListener("scroll", updateTone);
     };
-  }, [onHome]);
+  }, [pathIsHome, pathname]);
 
   useEffect(() => {
     if (!menuOpen) return;

@@ -187,8 +187,9 @@ export function localePath(locale: Locale, page: SitePageKey): string {
 
 export function isHomePath(pathname: string, locale: Locale): boolean {
   const normalized = pathname.replace(/\/$/, "") || "/";
+  // With rewrite (no locale prefix in URL), Next may report either "/" or "/en".
   if (!localePrefixInUrl && locale === defaultLocale) {
-    return normalized === "/";
+    return normalized === "/" || normalized === `/${locale}`;
   }
   return normalized === `/${locale}`;
 }
