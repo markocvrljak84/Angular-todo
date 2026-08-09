@@ -22,7 +22,6 @@ type Props = {
 };
 
 const MOBILE_MENU_QUERY = "(max-width: 1189px)";
-const DESKTOP_QUERY = "(min-width: 1190px)";
 
 type HeaderTone = "hero" | "glass" | "opaque";
 
@@ -82,35 +81,16 @@ export function SiteHeader({ locale, t }: Props) {
       return;
     }
 
-    const desktopMq = window.matchMedia(DESKTOP_QUERY);
-
-    const onScroll = () => {
-      const hero = document.getElementById("top");
-      const headerH =
-        parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--header-h")) || 64;
-
-      if (window.scrollY > 4) {
-        setTone("opaque");
-        return;
-      }
-
-      const carouselEl =
-        hero?.querySelector<HTMLElement>(".hero-fs__media") ?? hero;
-      const carouselRect = carouselEl?.getBoundingClientRect();
-      const carouselInView =
-        !!carouselRect &&
-        carouselRect.bottom > headerH + 8 &&
-        carouselRect.top < window.innerHeight * 0.92;
-
-      setTone(carouselInView ? "hero" : "opaque");
+    const updateTone = () => {
+      // At the top of the homepage the bar must stay transparent so the hero
+      // video shows through (esp. on mobile). Background only after scroll.
+      setTone(window.scrollY > 8 ? "opaque" : "hero");
     };
 
-    desktopMq.addEventListener("change", onScroll);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
+    updateTone();
+    window.addEventListener("scroll", updateTone, { passive: true });
     return () => {
-      desktopMq.removeEventListener("change", onScroll);
-      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("scroll", updateTone);
     };
   }, [onHome]);
 
