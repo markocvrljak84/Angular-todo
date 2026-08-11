@@ -3,6 +3,8 @@ import {
   whatsappHref,
 } from "@/config/site-contact";
 import type { GoodToKnowContent, GoodToKnowSection } from "@/i18n/good-to-know";
+import type { OffGridMindfulContent } from "@/i18n/off-grid-mindful";
+import { OffGridMindfulNotice } from "@/components/off-grid-mindful-notice";
 
 const WHATSAPP_PHONES = [
   SITE_CONTACT.phone,
@@ -15,6 +17,8 @@ type Props = {
   compact?: boolean;
   /** When true, render accordion body only — no outer section or wrap */
   embedded?: boolean;
+  /** Important note shown directly under the Good to know title */
+  mindfulNotice?: OffGridMindfulContent;
 };
 
 function FaqAccordionPanel({
@@ -72,18 +76,26 @@ function FaqAccordionPanel({
   );
 }
 
-export function FaqSection({ content, compact, embedded }: Props) {
+export function FaqSection({ content, compact, embedded, mindfulNotice }: Props) {
   const body = (
     <>
       {compact ? (
-        <p className="flat-section__intro flat-section__intro--lead faq__intro">
-          {content.intro}
-        </p>
+        <>
+          {mindfulNotice ? (
+            <OffGridMindfulNotice content={mindfulNotice} compact />
+          ) : null}
+          <p className="flat-section__intro flat-section__intro--lead faq__intro">
+            {content.intro}
+          </p>
+        </>
       ) : (
         <>
           <h2 id="good-to-know-title" className="flat-section__title">
             {content.title}
           </h2>
+          {mindfulNotice ? (
+            <OffGridMindfulNotice content={mindfulNotice} compact />
+          ) : null}
           <p className="flat-section__intro flat-section__intro--lead faq__intro">
             {content.intro}
           </p>

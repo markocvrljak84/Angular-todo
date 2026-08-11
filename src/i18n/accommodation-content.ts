@@ -140,6 +140,7 @@ const en: AccommodationPageContent = {
       "Quiet hours from 22:00 to 07:00",
       "No smoking indoors — please use the outdoor area",
       "Pets welcome — bowls and basket available",
+      "Please use water and electricity thoughtfully — Stars Peak is completely off-grid",
     ],
   },
   closing: {

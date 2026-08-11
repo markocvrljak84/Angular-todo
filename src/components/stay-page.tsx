@@ -7,13 +7,16 @@ import {
 import type { AccommodationPageContent } from "@/i18n/accommodation-content";
 import type { BookingReviewsContent } from "@/i18n/booking-reviews";
 import type { GoodToKnowContent } from "@/i18n/good-to-know";
+import type { OffGridMindfulContent } from "@/i18n/off-grid-mindful";
 import { BookingReviewsSection } from "@/components/booking-reviews-section";
 import { FaqSection } from "@/components/faq-section";
+import { OffGridMindfulNotice } from "@/components/off-grid-mindful-notice";
 
 type Props = {
   content: AccommodationPageContent;
   goodToKnow: GoodToKnowContent;
   bookingReviews: BookingReviewsContent;
+  offGridMindful: OffGridMindfulContent;
 };
 
 function StayPhoto({
@@ -54,7 +57,12 @@ function StayPhoto({
   );
 }
 
-export function StayPage({ content, goodToKnow, bookingReviews }: Props) {
+export function StayPage({
+  content,
+  goodToKnow,
+  bookingReviews,
+  offGridMindful,
+}: Props) {
   return (
     <>
       <section className="home-welcome home-welcome--page stay-hero-welcome" aria-labelledby="stay-hero-title">
@@ -168,11 +176,12 @@ export function StayPage({ content, goodToKnow, bookingReviews }: Props) {
         aria-labelledby="stay-good-to-know-title"
       >
         <div className="flat-wrap flat-wrap--narrow">
-          <div className="stay-section-head stay-section-head--center">
+          <div className="stay-section-head stay-section-head--center stay-section-head--with-note">
             <h2 id="stay-good-to-know-title" className="flat-section__title">
               {goodToKnow.title}
             </h2>
           </div>
+          <OffGridMindfulNotice content={offGridMindful} compact />
           <FaqSection content={goodToKnow} compact embedded />
         </div>
       </section>

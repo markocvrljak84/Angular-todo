@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import Image from "next/image";
 import type { PageHeaderContent } from "@/lib/inner-page-content";
 
@@ -10,9 +11,17 @@ type Motif = {
 type Props = PageHeaderContent & {
   motif?: Motif;
   className?: string;
+  /** Rendered directly under the page title (e.g. important note) */
+  afterTitle?: ReactNode;
 };
 
-export function InnerPageHeader({ title, intro, motif, className }: Props) {
+export function InnerPageHeader({
+  title,
+  intro,
+  motif,
+  className,
+  afterTitle,
+}: Props) {
   if (motif) {
     const sectionClass = ["home-welcome", "home-welcome--page", className]
       .filter(Boolean)
@@ -24,6 +33,7 @@ export function InnerPageHeader({ title, intro, motif, className }: Props) {
         <div className="home-welcome__inner">
           <div className="home-welcome__copy home-welcome__copy--page">
             <h1 className="home-welcome__title">{title}</h1>
+            {afterTitle}
             {intro ? <p className="home-welcome__intro">{intro}</p> : null}
           </div>
           <div className="home-welcome__rule" aria-hidden="true" />
@@ -44,9 +54,12 @@ export function InnerPageHeader({ title, intro, motif, className }: Props) {
   }
 
   return (
-    <div className="flat-section flat-section--under-header">
-      <div className="flat-wrap">
+    <div
+      className={`flat-section flat-section--under-header${afterTitle ? " flat-section--under-header-note" : ""}`}
+    >
+      <div className={`flat-wrap${afterTitle ? " flat-wrap--narrow" : ""}`}>
         <h1 className="flat-section__title">{title}</h1>
+        {afterTitle}
         {intro ? (
           <p className="flat-section__intro flat-section__intro--lead">{intro}</p>
         ) : null}

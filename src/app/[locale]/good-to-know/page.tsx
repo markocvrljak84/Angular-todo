@@ -4,6 +4,7 @@ import { FaqSection } from "@/components/faq-section";
 import { InnerPageHeader } from "@/components/inner-page-header";
 import { getGoodToKnow } from "@/i18n/good-to-know";
 import { getMessages } from "@/i18n/messages";
+import { getOffGridMindful } from "@/i18n/off-grid-mindful";
 import { getPageHeaderContent } from "@/lib/inner-page-content";
 import {
   localeStaticParams,
@@ -34,6 +35,7 @@ export default async function GoodToKnowPage({ params }: Props) {
   const t = getMessages(locale);
   const content = getGoodToKnow(locale);
   const header = getPageHeaderContent(locale, "goodToKnow");
+  const offGridMindful = getOffGridMindful(locale);
 
   return (
     <>
@@ -41,7 +43,7 @@ export default async function GoodToKnowPage({ params }: Props) {
 
       <InnerPageHeader {...header} />
 
-      <FaqSection content={content} compact />
+      <FaqSection content={content} compact mindfulNotice={offGridMindful} />
 
       <BookCta
         variant="banner"

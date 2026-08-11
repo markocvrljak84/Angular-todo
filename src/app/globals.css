@@ -1372,6 +1372,26 @@ body {
   border-top: none;
 }
 
+.flat-section--under-header-note {
+  padding-bottom: clamp(1.5rem, 3.5vw, 2.5rem);
+}
+
+.flat-section--under-header-note .flat-section__title {
+  margin-bottom: 1rem;
+}
+
+.flat-section--under-header-note .off-grid-mindful--compact {
+  margin: 0 0 1.25rem;
+}
+
+.flat-section--under-header-note .flat-section__intro {
+  margin-top: 0;
+}
+
+.flat-section--under-header-note + .flat-section {
+  padding-top: clamp(1.5rem, 3.5vw, 2.5rem);
+}
+
 .flat-section--contact {
   padding-top: clamp(2rem, 4vw, 3rem);
 }
@@ -5183,6 +5203,94 @@ code {
   border-top: 3px solid var(--line-strong);
 }
 
+.off-grid-mindful {
+  padding-block: clamp(1.75rem, 4vw, 2.75rem);
+}
+
+/* Home: equal gap from gallery link above and next section below */
+.home-editorial:has(+ .off-grid-mindful--wide) {
+  padding-bottom: 0;
+}
+
+.off-grid-mindful--wide {
+  padding-block: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.off-grid-mindful--wide + .flat-section {
+  padding-top: 0;
+}
+
+.off-grid-mindful__wrap--wide {
+  max-width: 68rem;
+}
+
+.off-grid-mindful--wide .off-grid-mindful__body {
+  max-width: 52rem;
+}
+
+.off-grid-mindful--compact {
+  margin: 0 0 1.5rem;
+  padding: 0;
+}
+
+.stay-section-head--with-note {
+  margin-bottom: 1rem;
+}
+
+.stay-good-to-know .off-grid-mindful--compact {
+  margin-bottom: 1.75rem;
+}
+
+.faq .off-grid-mindful--compact {
+  margin: 0.35rem 0 1.5rem;
+}
+
+.faq.flat-section:has(.off-grid-mindful--compact) {
+  padding-top: clamp(1.25rem, 3vw, 2rem);
+}
+
+.off-grid-mindful__panel {
+  margin: 0;
+  padding: clamp(1.35rem, 3vw, 1.85rem) clamp(1.25rem, 3vw, 1.75rem);
+  border-left: 4px solid var(--type-accent);
+  border-top: 1px solid var(--line-strong);
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(138, 106, 26, 0.08), rgba(138, 106, 26, 0.03)),
+    var(--bg-tint);
+}
+
+.off-grid-mindful__label {
+  margin: 0 0 0.55rem;
+  font-family: var(--font-condensed);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--type-accent);
+}
+
+.off-grid-mindful__title {
+  margin: 0 0 0.85rem;
+  font-family: var(--font-condensed);
+  font-size: clamp(1.2rem, 2.4vw, 1.45rem);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.25;
+  color: var(--ink);
+}
+
+.off-grid-mindful__body {
+  margin: 0;
+  max-width: 40rem;
+  color: var(--ink);
+  font-size: clamp(1.02rem, 1.7vw, 1.12rem);
+  font-weight: 500;
+  line-height: 1.65;
+}
+
 .booking-reviews__carousel {
   position: relative;
 }
@@ -5299,6 +5407,10 @@ code {
 .booking-reviews + .final-cta {
   border-top: 1px solid var(--line);
   background: #fff;
+}
+
+.flat-section--tint + .booking-reviews {
+  border-top: 1px solid var(--line-strong);
 }
 
 @media (max-width: 640px) {

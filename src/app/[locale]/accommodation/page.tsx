@@ -4,6 +4,7 @@ import { getAccommodationPageContent } from "@/i18n/accommodation-content";
 import { getBookingReviews } from "@/i18n/booking-reviews";
 import { getGoodToKnow } from "@/i18n/good-to-know";
 import { getMessages } from "@/i18n/messages";
+import { getOffGridMindful } from "@/i18n/off-grid-mindful";
 import {
   localeStaticParams,
   resolveLocale,
@@ -34,6 +35,7 @@ export default async function AccommodationPage({ params }: Props) {
   const content = getAccommodationPageContent(locale);
   const goodToKnow = getGoodToKnow(locale);
   const bookingReviews = getBookingReviews(locale);
+  const offGridMindful = getOffGridMindful(locale);
 
   return (
     <>
@@ -43,6 +45,7 @@ export default async function AccommodationPage({ params }: Props) {
         content={content}
         goodToKnow={goodToKnow}
         bookingReviews={bookingReviews}
+        offGridMindful={offGridMindful}
       />
     </>
   );

@@ -8,6 +8,7 @@ import { HeroSection } from "@/components/hero-section";
 import { HomeEditorialSection } from "@/components/home-editorial-section";
 import { HomeWelcomeStrip } from "@/components/home-welcome-strip";
 import { NewsletterSignupSection } from "@/components/newsletter-signup-section";
+import { OffGridMindfulNotice } from "@/components/off-grid-mindful-notice";
 import { WhySpecialSection } from "@/components/why-special-section";
 import {
   HERO_LCP_PRELOAD_SRC,
@@ -19,6 +20,7 @@ import { getBookingReviews } from "@/i18n/booking-reviews";
 import { getExperienceContent } from "@/i18n/experience-content";
 import { getHomeContent } from "@/i18n/home-content";
 import { getMessages } from "@/i18n/messages";
+import { getOffGridMindful } from "@/i18n/off-grid-mindful";
 import {
   localeStaticParams,
   resolveLocale,
@@ -49,6 +51,7 @@ export default async function HomePage({ params }: Props) {
   const home = getHomeContent(locale);
   const experience = getExperienceContent(locale);
   const bookingReviews = getBookingReviews(locale);
+  const offGridMindful = getOffGridMindful(locale);
 
   const whySpecialImages = [
     HOME_IMAGES.whySpecial.mountain,
@@ -101,6 +104,8 @@ export default async function HomePage({ params }: Props) {
         experiencesLabel="Explore Experiences"
         journalLabel="Read the Journal"
       />
+
+      <OffGridMindfulNotice content={offGridMindful} wide />
 
       <ExperienceDaySection content={experience.day} />
 

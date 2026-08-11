@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { InnerPageHeader } from "@/components/inner-page-header";
+import { OffGridMindfulNotice } from "@/components/off-grid-mindful-notice";
 import { PageJsonLd } from "@/components/page-json-ld";
 import { TopicPageSections } from "@/components/topic-page-sections";
 import { getMessages } from "@/i18n/messages";
+import { getOffGridMindful } from "@/i18n/off-grid-mindful";
 import { getOffGridMountainCabinPageContent } from "@/i18n/topic-pages";
 import { getPageHeaderContent } from "@/lib/inner-page-content";
 import { buildPageMetadata } from "@/lib/page-metadata";
@@ -30,11 +32,15 @@ export default async function OffGridMountainCabinPage({ params }: Props) {
   const t = getMessages(locale);
   const content = getOffGridMountainCabinPageContent(locale);
   const header = getPageHeaderContent(locale, "offGridMountainCabin");
+  const offGridMindful = getOffGridMindful(locale);
 
   return (
     <>
       <PageJsonLd locale={locale} messages={t} page="offGridMountainCabin" />
-      <InnerPageHeader {...header} />
+      <InnerPageHeader
+        {...header}
+        afterTitle={<OffGridMindfulNotice content={offGridMindful} compact />}
+      />
       <TopicPageSections content={content} bookLabel={t.header.bookCta} />
     </>
   );
