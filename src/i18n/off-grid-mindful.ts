@@ -9,7 +9,7 @@ export type OffGridMindfulContent = {
 const en: OffGridMindfulContent = {
   label: "Important note",
   title: "Living lightly at Stars Peak",
-  body: "As Stars Peak is completely off-grid, we kindly ask our guests to use water and electricity thoughtfully and sparingly. Every little bit helps us preserve this special place and keep it running sustainably. Thank you so much for being mindful and for helping us take care of Stars Peak — we truly appreciate it.",
+  body: "As Stars Peak is completely off-grid, we kindly ask our guests to use water and electricity thoughtfully. Every little bit helps us preserve this special place and keep it running sustainably. Thank you so much for being mindful and for helping us take care of Stars Peak — we truly appreciate it.",
 };
 
 const hr: OffGridMindfulContent = {
